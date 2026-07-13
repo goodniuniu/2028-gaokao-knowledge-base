@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2028高考英语词汇假期复习总入口</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: "Microsoft YaHei", "SimSun", sans-serif; margin: 0; padding: 0; background: #f5f7fa; color: #333; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+  .header { text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px; margin-bottom: 25px; }
+  .header h1 { margin: 0; font-size: 28pt; }
+  .header p { margin: 10px 0 0; font-size: 14pt; opacity: 0.9; }
+  .stats { display: flex; justify-content: center; gap: 30px; margin: 20px 0; flex-wrap: wrap; }
+  .stat-box { background: white; padding: 15px 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
+  .stat-box .num { font-size: 24pt; font-weight: bold; color: #667eea; }
+  .stat-box .label { font-size: 11pt; color: #666; }
+  .progress-bar { background: #e0e0e0; border-radius: 20px; height: 24px; margin: 15px auto; max-width: 600px; overflow: hidden; }
+  .progress-fill { background: linear-gradient(90deg, #667eea, #764ba2); height: 100%; width: 0%; border-radius: 20px; transition: width 0.5s; text-align: center; color: white; line-height: 24px; font-size: 11pt; }
+  .calendar { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-top: 20px; }
+  .day-card { background: white; border-radius: 10px; padding: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); transition: transform 0.2s; }
+  .day-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  .day-header { font-weight: bold; font-size: 13pt; color: #2c3e50; text-align: center; }
+  .day-num { font-size: 10pt; color: #888; text-align: center; margin: 4px 0; }
+  .day-links { display: flex; flex-direction: column; gap: 4px; margin: 8px 0; }
+  .day-links a { text-decoration: none; padding: 5px 8px; border-radius: 5px; font-size: 10pt; text-align: center; }
+  .link-vocab { background: #e3f2fd; color: #1976d2; }
+  .link-quiz { background: #fff3e0; color: #f57c00; }
+  .link-ans { background: #e8f5e9; color: #388e3c; }
+  .day-check { text-align: center; margin-top: 6px; font-size: 10pt; }
+  .day-check input { cursor: pointer; }
+  .btn-bar { text-align: center; margin: 20px 0; }
+  .btn-bar button { background: #667eea; color: white; border: none; padding: 12px 30px; font-size: 13pt; border-radius: 6px; cursor: pointer; margin: 5px; }
+  .btn-bar button:hover { background: #5a6fd6; }
+  .footer { text-align: center; margin-top: 30px; padding: 15px; color: #888; font-size: 10pt; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📚 2028高考英语词汇假期复习</h1>
+    <p>假期：2025年7月13日 ~ 8月30日 | 共49天 | 6008词</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box">
+      <div class="num" id="totalDays">49</div>
+      <div class="label">总天数</div>
+    </div>
+    <div class="stat-box">
+      <div class="num" id="completedDays">0</div>
+      <div class="label">已完成</div>
+    </div>
+    <div class="stat-box">
+      <div class="num" id="remainingDays">49</div>
+      <div class="label">剩余天数</div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill">0%</div>
+  </div>
+
+  <div class="btn-bar">
+    <button onclick="window.print()">🖨️ 打印计划表</button>
+    <button onclick="resetProgress()">🔄 重置进度</button>
+  </div>
+
+  <div class="calendar">
+    <div class="day-card">
+      <div class="day-header">07月13日</div>
+      <div class="day-num">第1天</div>
+      <div class="day-links">
+        <a href="日期词表/07月13日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月13日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月13日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check1" onchange="updateProgress()">
+        <label for="check1">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月14日</div>
+      <div class="day-num">第2天</div>
+      <div class="day-links">
+        <a href="日期词表/07月14日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月14日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月14日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check2" onchange="updateProgress()">
+        <label for="check2">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月15日</div>
+      <div class="day-num">第3天</div>
+      <div class="day-links">
+        <a href="日期词表/07月15日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月15日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月15日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check3" onchange="updateProgress()">
+        <label for="check3">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月16日</div>
+      <div class="day-num">第4天</div>
+      <div class="day-links">
+        <a href="日期词表/07月16日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月16日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月16日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check4" onchange="updateProgress()">
+        <label for="check4">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月17日</div>
+      <div class="day-num">第5天</div>
+      <div class="day-links">
+        <a href="日期词表/07月17日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月17日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月17日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check5" onchange="updateProgress()">
+        <label for="check5">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月18日</div>
+      <div class="day-num">第6天</div>
+      <div class="day-links">
+        <a href="日期词表/07月18日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月18日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月18日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check6" onchange="updateProgress()">
+        <label for="check6">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月19日</div>
+      <div class="day-num">第7天</div>
+      <div class="day-links">
+        <a href="日期词表/07月19日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月19日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月19日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check7" onchange="updateProgress()">
+        <label for="check7">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月20日</div>
+      <div class="day-num">第8天</div>
+      <div class="day-links">
+        <a href="日期词表/07月20日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月20日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月20日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check8" onchange="updateProgress()">
+        <label for="check8">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月21日</div>
+      <div class="day-num">第9天</div>
+      <div class="day-links">
+        <a href="日期词表/07月21日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月21日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月21日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check9" onchange="updateProgress()">
+        <label for="check9">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月22日</div>
+      <div class="day-num">第10天</div>
+      <div class="day-links">
+        <a href="日期词表/07月22日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月22日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月22日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check10" onchange="updateProgress()">
+        <label for="check10">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月23日</div>
+      <div class="day-num">第11天</div>
+      <div class="day-links">
+        <a href="日期词表/07月23日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月23日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月23日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check11" onchange="updateProgress()">
+        <label for="check11">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月24日</div>
+      <div class="day-num">第12天</div>
+      <div class="day-links">
+        <a href="日期词表/07月24日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月24日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月24日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check12" onchange="updateProgress()">
+        <label for="check12">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月25日</div>
+      <div class="day-num">第13天</div>
+      <div class="day-links">
+        <a href="日期词表/07月25日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月25日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月25日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check13" onchange="updateProgress()">
+        <label for="check13">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月26日</div>
+      <div class="day-num">第14天</div>
+      <div class="day-links">
+        <a href="日期词表/07月26日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月26日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月26日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check14" onchange="updateProgress()">
+        <label for="check14">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月27日</div>
+      <div class="day-num">第15天</div>
+      <div class="day-links">
+        <a href="日期词表/07月27日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月27日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月27日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check15" onchange="updateProgress()">
+        <label for="check15">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月28日</div>
+      <div class="day-num">第16天</div>
+      <div class="day-links">
+        <a href="日期词表/07月28日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月28日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月28日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check16" onchange="updateProgress()">
+        <label for="check16">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月29日</div>
+      <div class="day-num">第17天</div>
+      <div class="day-links">
+        <a href="日期词表/07月29日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月29日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月29日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check17" onchange="updateProgress()">
+        <label for="check17">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月30日</div>
+      <div class="day-num">第18天</div>
+      <div class="day-links">
+        <a href="日期词表/07月30日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月30日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月30日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check18" onchange="updateProgress()">
+        <label for="check18">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">07月31日</div>
+      <div class="day-num">第19天</div>
+      <div class="day-links">
+        <a href="日期词表/07月31日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/07月31日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/07月31日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check19" onchange="updateProgress()">
+        <label for="check19">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月01日</div>
+      <div class="day-num">第20天</div>
+      <div class="day-links">
+        <a href="日期词表/08月01日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月01日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月01日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check20" onchange="updateProgress()">
+        <label for="check20">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月02日</div>
+      <div class="day-num">第21天</div>
+      <div class="day-links">
+        <a href="日期词表/08月02日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月02日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月02日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check21" onchange="updateProgress()">
+        <label for="check21">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月03日</div>
+      <div class="day-num">第22天</div>
+      <div class="day-links">
+        <a href="日期词表/08月03日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月03日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月03日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check22" onchange="updateProgress()">
+        <label for="check22">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月04日</div>
+      <div class="day-num">第23天</div>
+      <div class="day-links">
+        <a href="日期词表/08月04日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月04日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月04日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check23" onchange="updateProgress()">
+        <label for="check23">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月05日</div>
+      <div class="day-num">第24天</div>
+      <div class="day-links">
+        <a href="日期词表/08月05日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月05日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月05日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check24" onchange="updateProgress()">
+        <label for="check24">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月06日</div>
+      <div class="day-num">第25天</div>
+      <div class="day-links">
+        <a href="日期词表/08月06日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月06日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月06日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check25" onchange="updateProgress()">
+        <label for="check25">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月07日</div>
+      <div class="day-num">第26天</div>
+      <div class="day-links">
+        <a href="日期词表/08月07日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月07日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月07日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check26" onchange="updateProgress()">
+        <label for="check26">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月08日</div>
+      <div class="day-num">第27天</div>
+      <div class="day-links">
+        <a href="日期词表/08月08日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月08日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月08日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check27" onchange="updateProgress()">
+        <label for="check27">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月09日</div>
+      <div class="day-num">第28天</div>
+      <div class="day-links">
+        <a href="日期词表/08月09日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月09日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月09日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check28" onchange="updateProgress()">
+        <label for="check28">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月10日</div>
+      <div class="day-num">第29天</div>
+      <div class="day-links">
+        <a href="日期词表/08月10日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月10日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月10日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check29" onchange="updateProgress()">
+        <label for="check29">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月11日</div>
+      <div class="day-num">第30天</div>
+      <div class="day-links">
+        <a href="日期词表/08月11日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月11日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月11日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check30" onchange="updateProgress()">
+        <label for="check30">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月12日</div>
+      <div class="day-num">第31天</div>
+      <div class="day-links">
+        <a href="日期词表/08月12日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月12日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月12日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check31" onchange="updateProgress()">
+        <label for="check31">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月13日</div>
+      <div class="day-num">第32天</div>
+      <div class="day-links">
+        <a href="日期词表/08月13日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月13日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月13日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check32" onchange="updateProgress()">
+        <label for="check32">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月14日</div>
+      <div class="day-num">第33天</div>
+      <div class="day-links">
+        <a href="日期词表/08月14日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月14日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月14日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check33" onchange="updateProgress()">
+        <label for="check33">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月15日</div>
+      <div class="day-num">第34天</div>
+      <div class="day-links">
+        <a href="日期词表/08月15日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月15日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月15日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check34" onchange="updateProgress()">
+        <label for="check34">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月16日</div>
+      <div class="day-num">第35天</div>
+      <div class="day-links">
+        <a href="日期词表/08月16日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月16日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月16日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check35" onchange="updateProgress()">
+        <label for="check35">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月17日</div>
+      <div class="day-num">第36天</div>
+      <div class="day-links">
+        <a href="日期词表/08月17日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月17日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月17日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check36" onchange="updateProgress()">
+        <label for="check36">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月18日</div>
+      <div class="day-num">第37天</div>
+      <div class="day-links">
+        <a href="日期词表/08月18日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月18日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月18日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check37" onchange="updateProgress()">
+        <label for="check37">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月19日</div>
+      <div class="day-num">第38天</div>
+      <div class="day-links">
+        <a href="日期词表/08月19日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月19日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月19日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check38" onchange="updateProgress()">
+        <label for="check38">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月20日</div>
+      <div class="day-num">第39天</div>
+      <div class="day-links">
+        <a href="日期词表/08月20日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月20日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月20日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check39" onchange="updateProgress()">
+        <label for="check39">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月21日</div>
+      <div class="day-num">第40天</div>
+      <div class="day-links">
+        <a href="日期词表/08月21日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月21日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月21日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check40" onchange="updateProgress()">
+        <label for="check40">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月22日</div>
+      <div class="day-num">第41天</div>
+      <div class="day-links">
+        <a href="日期词表/08月22日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月22日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月22日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check41" onchange="updateProgress()">
+        <label for="check41">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月23日</div>
+      <div class="day-num">第42天</div>
+      <div class="day-links">
+        <a href="日期词表/08月23日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月23日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月23日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check42" onchange="updateProgress()">
+        <label for="check42">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月24日</div>
+      <div class="day-num">第43天</div>
+      <div class="day-links">
+        <a href="日期词表/08月24日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月24日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月24日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check43" onchange="updateProgress()">
+        <label for="check43">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月25日</div>
+      <div class="day-num">第44天</div>
+      <div class="day-links">
+        <a href="日期词表/08月25日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月25日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月25日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check44" onchange="updateProgress()">
+        <label for="check44">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月26日</div>
+      <div class="day-num">第45天</div>
+      <div class="day-links">
+        <a href="日期词表/08月26日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月26日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月26日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check45" onchange="updateProgress()">
+        <label for="check45">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月27日</div>
+      <div class="day-num">第46天</div>
+      <div class="day-links">
+        <a href="日期词表/08月27日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月27日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月27日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check46" onchange="updateProgress()">
+        <label for="check46">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月28日</div>
+      <div class="day-num">第47天</div>
+      <div class="day-links">
+        <a href="日期词表/08月28日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月28日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月28日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check47" onchange="updateProgress()">
+        <label for="check47">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月29日</div>
+      <div class="day-num">第48天</div>
+      <div class="day-links">
+        <a href="日期词表/08月29日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月29日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月29日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check48" onchange="updateProgress()">
+        <label for="check48">已完成</label>
+      </div>
+    </div>
+    <div class="day-card">
+      <div class="day-header">08月30日</div>
+      <div class="day-num">第49天</div>
+      <div class="day-links">
+        <a href="日期词表/08月30日.md" class="link-vocab">📖 词表</a>
+        <a href="可打印小测卷/08月30日_小测.html" class="link-quiz">📝 小测</a>
+        <a href="可打印小测卷/08月30日_答案.html" class="link-ans">📋 答案</a>
+      </div>
+      <div class="day-check">
+        <input type="checkbox" id="check49" onchange="updateProgress()">
+        <label for="check49">已完成</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    2028高考英语词汇假期复习 | 广东新高考 | 打印建议使用Chrome浏览器
+  </div>
+</div>
+
+<script>
+function updateProgress() {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+  const completed = checked.length;
+  const total = checkboxes.length;
+  const percent = Math.round((completed / total) * 100);
+
+  document.getElementById('completedDays').textContent = completed;
+  document.getElementById('remainingDays').textContent = total - completed;
+  const fill = document.getElementById('progressFill');
+  fill.style.width = percent + '%';
+  fill.textContent = percent + '%';
+
+  // 保存到localStorage
+  const saved = [];
+  checkboxes.forEach((cb, idx) => { if (cb.checked) saved.push(idx); });
+  localStorage.setItem('vocab_progress', JSON.stringify(saved));
+}
+
+function resetProgress() {
+  if (!confirm('确定要重置所有进度吗？')) return;
+  document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+  updateProgress();
+}
+
+function loadProgress() {
+  const saved = localStorage.getItem('vocab_progress');
+  if (saved) {
+    const indices = JSON.parse(saved);
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    indices.forEach(i => { if (checkboxes[i]) checkboxes[i].checked = true; });
+    updateProgress();
+  }
+}
+
+window.onload = loadProgress;
+</script>
+</body>
+</html>
