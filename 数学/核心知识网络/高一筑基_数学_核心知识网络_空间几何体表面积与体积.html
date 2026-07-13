@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>空间几何体表面积与体积（柱·锥·台·球公式体系） | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>空间几何体表面积与体积（柱·锥·台·球公式体系）</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>人教A版必修第二册第八章 / 2024~2025学年广州各区高一下期末试卷（单选第3-6题、填空第13-14题）</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高一筑基</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期末、九区联考、三校/五校联考）</td></tr>
+<tr><td><strong>广东考情</strong></td><td>高一下期末<strong>选填中档题高频考点</strong>。广州各区期末卷中，空间几何体表面积与体积通常占1-2道选填（5-10分），偶尔在解答题中结合证明考查体积计算。2024-2025学年广州番禺区期末第3题考查圆台侧面展开，越秀区第14题考查圆锥与球的组合体，说明广东卷对<strong>旋转体（圆柱、圆锥、圆台、球）</strong>的考查力度大于多面体。</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<blockquote>
+<strong>本质理解</strong>：表面积是"各面面积之和"，体积是"空间占据大小"。核心思想：<strong>分解法</strong>（将复杂体分解为简单体）和<strong>等积变换</strong>（换底换高求体积）。
+</blockquote>
+
+<hr>
+
+<h3>一、多面体（柱、锥）</h3>
+
+<p>#### 1. 棱柱（以直棱柱为例）</p>
+
+<table>
+<tr><th>项目</th><th>公式</th><th>说明</th></tr>
+<tr><td><strong>侧面积</strong></td><td>$S_{侧} = C_{底} \cdot h$（$C_{底}$为底面周长）</td><td>侧面展开为矩形</td></tr>
+<tr><td><strong>表面积</strong></td><td>$S_{表} = S_{侧} + 2S_{底}$</td><td>上下底+侧面</td></tr>
+<tr><td><strong>体积</strong></td><td>$V = S_{底} \cdot h$</td><td>底面积×高</td></tr>
+</table>
+
+<p>#### 2. 棱锥（以正棱锥为例）</p>
+
+<table>
+<tr><th>项目</th><th>公式</th><th>说明</th></tr>
+<tr><td><strong>侧面积</strong></td><td>$S_{侧} = \frac{1}{2}C_{底} \cdot h'$（$h'$为斜高）</td><td>侧面展开为全等三角形</td></tr>
+<tr><td><strong>表面积</strong></td><td>$S_{表} = S_{侧} + S_{底}$</td><td>底+侧面</td></tr>
+<tr><td><strong>体积</strong></td><td>$V = \frac{1}{3}S_{底} \cdot h$</td><td><strong>等底等高时，锥体体积是柱体的1/3</strong></td></tr>
+</table>
+
+<blockquote>
+<strong>关键记忆</strong>：锥体体积$\frac{1}{3}$的系数，来源于积分或祖暅原理。
+</blockquote>
+
+<hr>
+
+<h3>二、旋转体（圆柱、圆锥、圆台、球）—— 广东卷重点</h3>
+
+<p>#### 1. 圆柱</p>
+
+<table>
+<tr><th>项目</th><th>公式</th><th>说明</th></tr>
+<tr><td><strong>侧面积</strong></td><td>$S_{侧} = 2\pi r \cdot l = 2\pi r h$</td><td>侧面展开为矩形，长=底面周长，宽=母线长</td></tr>
+<tr><td><strong>表面积</strong></td><td>$S_{表} = 2\pi r^2 + 2\pi r h$</td><td>两个底+侧面</td></tr>
+<tr><td><strong>体积</strong></td><td>$V = \pi r^2 h$</td><td>底圆面积×高</td></tr>
+</table>
+
+<p>#### 2. 圆锥</p>
+
+<table>
+<tr><th>项目</th><th>公式</th><th>说明</th></tr>
+<tr><td><strong>侧面积</strong></td><td>$S_{侧} = \pi r \cdot l$</td><td>侧面展开为扇形，半径=母线$l$，弧长=底面周长$2\pi r$</td></tr>
+<tr><td><strong>表面积</strong></td><td>$S_{表} = \pi r^2 + \pi r l$</td><td>底+侧面</td></tr>
+<tr><td><strong>体积</strong></td><td>$V = \frac{1}{3}\pi r^2 h$</td><td><strong>注意：$h$是锥高，不是母线$l$</strong></td></tr>
+<tr><td><strong>核心关系</strong></td><td>$l^2 = r^2 + h^2$</td><td>母线、半径、锥高构成直角三角形</td></tr>
+</table>
+
+<blockquote>
+<strong>展开图关键</strong>：圆锥侧面展开扇形的圆心角$\theta = \frac{r}{l} \times 360° = \frac{2\pi r}{l}$（弧度制$\frac{2\pi r}{l}$）
+</blockquote>
+
+<p>#### 3. 圆台（广东卷高频！）</p>
+
+<table>
+<tr><th>项目</th><th>公式</th><th>说明</th></tr>
+<tr><td><strong>侧面积</strong></td><td>$S_{侧} = \pi(r_1 + r_2) \cdot l$</td><td>侧面展开为扇环</td></tr>
+<tr><td><strong>表面积</strong></td><td>$S_{表} = \pi(r_1^2 + r_2^2) + \pi(r_1+r_2)l$</td><td>上下底+侧面</td></tr>
+<tr><td><strong>体积</strong></td><td>$V = \frac{1}{3}\pi h(r_1^2 + r_1r_2 + r_2^2)$</td><td>注意中间项$r_1r_2$！</td></tr>
+<tr><td><strong>核心关系</strong></td><td>$l^2 = h^2 + (r_1-r_2)^2$</td><td>母线、高、半径差构成直角三角形</td></tr>
+</table>
+
+<blockquote>
+<strong>圆台体积记忆</strong>：$\frac{1}{3}h(S_{上} + \sqrt{S_{上}S_{下}} + S_{下})$，其中$\sqrt{S_{上}S_{下}}$是等比中项。
+</blockquote>
+
+<p>#### 4. 球（广东卷常考组合体！）</p>
+
+<table>
+<tr><th>项目</th><th>公式</th><th>说明</th></tr>
+<tr><td><strong>表面积</strong></td><td>$S = 4\pi R^2$</td><td>等于大圆面积的4倍</td></tr>
+<tr><td><strong>体积</strong></td><td>$V = \frac{4}{3}\pi R^3$</td><td>系数$\frac{4}{3}$</td></tr>
+</table>
+
+<blockquote>
+<strong>球的截面</strong>：球心到截面距离$d$，截面半径$r$，则$r^2 + d^2 = R^2$。
+</blockquote>
+
+<hr>
+
+<h3>三、组合体与等积法</h3>
+
+<p>#### 1. 组合体处理策略</p>
+
+<table>
+<tr><th>类型</th><th>处理方法</th><th>示例</th></tr>
+<tr><td><strong>拼接体</strong></td><td>体积相加，表面积注意重叠面</td><td>正方体+半球</td></tr>
+<tr><td><strong>挖去体</strong></td><td>体积相减，表面积增加内壁</td><td>正方体挖去圆柱</td></tr>
+<tr><td><strong>外接球</strong></td><td>找几何体中心对称点，$R$为到顶点距离</td><td>正方体外接球$R = \frac{\sqrt{3}}{2}a$</td></tr>
+<tr><td><strong>内切球</strong></td><td>找与所有面/棱相切的球</td><td>正方体内切球$R = \frac{a}{2}$</td></tr>
+</table>
+
+<blockquote>
+<strong>2024-2025广州越秀区期末第14题</strong>：圆锥内切球问题，利用轴截面三角形+内切圆半径公式。
+</blockquote>
+
+<p>#### 2. 等积法（换底换高求体积）</p>
+
+<p><strong>原理</strong>：$V = \frac{1}{3}S_{底} \cdot h = \frac{1}{3}S_{另一底} \cdot h'$</p>
+
+<p>当直接求某锥体的高困难时，换一个底面，使高容易求。</p>
+
+<blockquote>
+<strong>典型应用</strong>：三棱锥$P-ABC$中，若$PA \perp$底面$ABC$，则$V = \frac{1}{3}S_{\triangle ABC} \cdot PA$；若$BC \perp$面$PAB$，则$V = \frac{1}{3}S_{\triangle PAB} \cdot BC$。
+</blockquote>
+
+<hr>
+
+<h3>四、高频陷阱与公式记忆表</h3>
+
+<table>
+<tr><th>陷阱</th><th>正确做法</th><th>常见错误</th></tr>
+<tr><td><strong>混淆母线与高</strong></td><td>圆锥中$l$是母线，$h$是高，$l^2 = r^2 + h^2$</td><td>误把母线当高代入体积公式</td></tr>
+<tr><td><strong>圆台体积漏中项</strong></td><td>$V = \frac{1}{3}\pi h(r_1^2 + r_1r_2 + r_2^2)$</td><td>漏写$r_1r_2$项</td></tr>
+<tr><td><strong>表面积vs侧面积</strong></td><td>审题区分"表面积"（含底）和"侧面积"（不含底）</td><td>求表面积时忘加底面积</td></tr>
+<tr><td><strong>单位换算</strong></td><td>统一单位后再计算</td><td>厘米与米混用</td></tr>
+<tr><td><strong>球的直径当半径</strong></td><td>题目给直径$d$，先转半径$R = d/2$</td><td>直接用$d$代入$R$的公式</td></tr>
+</table>
+
+<hr>
+
+<h3>五、记忆口诀</h3>
+
+<blockquote>
+<strong>公式口诀</strong>：
+- "柱体体积底乘高，锥体体积三分之一"
+- "圆柱侧面矩形长，圆锥侧面扇形弧"
+- "圆台体积三兄弟，上下平方加乘积"
+- "球表四倍大圆面，球体积三分之四派立方"
+- "母线高，勾股连，圆锥圆台别搞混"
+</blockquote>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_空间点线面位置关系.html">高一筑基_数学_核心知识网络_空间点线面位置关系</a> — 空间几何体的结构基础（点线面关系）</li>
+<li><a href="高一筑基_数学_典型题型与方法_立体几何证明题标准步骤.html">高一筑基_数学_典型题型与方法_立体几何证明题标准步骤</a> — 证明题中常结合体积计算</li>
+<li><a href="高一筑基_数学_易错警示与辨析_立体几何证明与计算失误高发区.html">高一筑基_数学_易错警示与辨析_立体几何证明与计算失误高发区</a> — 表面积与体积计算的常见错误</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+
+<ul>
+<li><strong>广东高一下期末命题规律</strong>：旋转体（圆柱、圆锥、圆台）的考查频率高于多面体，尤其是<strong>圆台的侧面展开图和体积公式</strong>、<strong>圆锥的内切球/外接球</strong>、<strong>组合体的表面积</strong>是三大热点。</li>
+<li><strong>2024-2025学年广州番禺区期末第3题</strong>：圆台侧面展开图，已知上下底半径和母线，求展开扇环的圆心角。这是广东卷对"旋转体展开"的典型考查。</li>
+<li><strong>训练建议</strong>：先默写所有公式（每天1遍），再做10道基础计算题，重点练圆台和球的组合体。</li>
+<li><strong>高考衔接</strong>：新高考Ⅰ卷中立体几何大题（第17-18题）的第2问常考查空间角或体积，高一下打好基础，高二学空间向量后直接建系。</li>
+</ul>
+
+<hr>
+
+<blockquote>
+🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度3</code> <code>#立体几何</code> <code>#圆柱</code> <code>#圆锥</code> <code>#圆台</code> <code>#球</code> <code>#表面积</code> <code>#体积</code> <code>#组合体</code> <code>#广东名校模拟</code>
+</blockquote>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>

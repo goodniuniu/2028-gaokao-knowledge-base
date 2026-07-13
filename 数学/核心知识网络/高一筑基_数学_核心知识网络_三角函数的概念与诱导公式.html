@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三角函数的概念与诱导公式 | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>三角函数的概念与诱导公式</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第一册第五章</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高一筑基</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
+<tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：基础~中档；诱导公式与三角函数定义是三角大题的第一问基础，必须熟练</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>一、任意角与弧度制</h3>
+<ul>
+<li><strong>终边相同角</strong>：$S = \{\beta \mid \beta = \alpha + k \cdot 360°\}$ 或 $\beta = \alpha + 2k\pi$（$k \in \mathbb{Z}$）</li>
+<li><strong>弧度制</strong>：$|\alpha| = \frac{l}{r}$，$1 \text{ rad} \approx 57.3°$</li>
+<li><strong>换算</strong>：$\pi = 180°$，$1° = \frac{\pi}{180} \text{ rad}$</li>
+</ul>
+
+<h3>二、三角函数定义</h3>
+<p><strong>单位圆定义</strong>：设角 $\alpha$ 终边与单位圆交于点 $P(x, y)$，则</p>
+<ul>
+<li>$\sin\alpha = y$，$\cos\alpha = x$，$\tan\alpha = \frac{y}{x}$（$x \neq 0$）</li>
+</ul>
+
+<p><strong>一般定义</strong>：终边上一点 $P(x, y)$，$r = \sqrt{x^2 + y^2}$，则</p>
+<ul>
+<li>$\sin\alpha = \frac{y}{r}$，$\cos\alpha = \frac{x}{r}$，$\tan\alpha = \frac{y}{x}$</li>
+</ul>
+
+<h3>三、三角函数值在各象限的符号</h3>
+<blockquote>
+<strong>口诀</strong>：一全正，二正弦，三正切，四余弦
+</blockquote>
+
+<h3>四、同角三角函数的基本关系式</h3>
+<p>$$\sin^2\alpha + \cos^2\alpha = 1, \quad \tan\alpha = \frac{\sin\alpha}{\cos\alpha}\quad(\alpha \neq k\pi + \frac{\pi}{2})$$</p>
+<ul>
+<li><strong>应用</strong>：求值、化简、证明（知一求二）</li>
+</ul>
+
+<h3>五、诱导公式</h3>
+<table>
+<tr><th>公式</th><th>正弦</th><th>余弦</th><th>正切</th><th>记忆口诀</th></tr>
+<tr><td>公式一：$2k\pi + \alpha$</td><td>$\sin\alpha$</td><td>$\cos\alpha$</td><td>$\tan\alpha$</td><td>周期不变</td></tr>
+<tr><td>公式二：$\pi + \alpha$</td><td>$-\sin\alpha$</td><td>$-\cos\alpha$</td><td>$\tan\alpha$</td><td>同名</td></tr>
+<tr><td>公式三：$-\alpha$</td><td>$-\sin\alpha$</td><td>$\cos\alpha$</td><td>$-\tan\alpha$</td><td>同名</td></tr>
+<tr><td>公式四：$\pi - \alpha$</td><td>$\sin\alpha$</td><td>$-\cos\alpha$</td><td>$-\tan\alpha$</td><td>同名</td></tr>
+<tr><td>公式五：$\frac{\pi}{2} - \alpha$</td><td>$\cos\alpha$</td><td>$\sin\alpha$</td><td>$\cot\alpha$</td><td>互余互换</td></tr>
+<tr><td>公式六：$\frac{\pi}{2} + \alpha$</td><td>$\cos\alpha$</td><td>$-\sin\alpha$</td><td>$-\cot\alpha$</td><td>互余互换</td></tr>
+</table>
+
+<p><strong>统一口诀</strong>：奇变偶不变，符号看象限</p>
+<ul>
+<li>"奇偶"：指 $\frac{\pi}{2}$ 的奇数倍或偶数倍</li>
+<li>"变"：函数名改变（正弦 $\leftrightarrow$ 余弦，正切 $\leftrightarrow$ 余切）</li>
+<li>"符号"：把 $\alpha$ 看成锐角，判断原函数在相应象限的符号</li>
+</ul>
+
+<p><strong>终边对称关系</strong>：</p>
+<ul>
+<li>$\pi - \alpha$ 与 $\alpha$：终边关于 $y$ 轴对称</li>
+<li>$\pi + \alpha$ 与 $\alpha$：终边关于原点对称</li>
+<li>$2\pi - \alpha$ 与 $\alpha$：终边关于 $x$ 轴对称</li>
+</ul>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_三角函数的图象与性质.html">三角函数的图象与性质</a> — 诱导公式是图象分析的基础</li>
+<li><a href="高一筑基_数学_核心知识网络_三角恒等变换与yAsinwxφ.html">三角恒等变换与y=Asin(ωx+φ)</a> — 诱导公式是恒等变换的入门工具</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+<ul>
+<li>易错点：诱导公式使用时"符号看象限"容易记错，建议用单位圆辅助判断</li>
+<li>给值求角问题时注意角的范围讨论，这是广东卷三角大题的第一问常考点</li>
+<li>化简原则：负化正、大化小、化到锐角</li>
+</ul>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>

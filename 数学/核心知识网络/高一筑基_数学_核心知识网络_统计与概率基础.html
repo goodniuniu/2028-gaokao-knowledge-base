@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>统计与概率基础（抽样·分布·概率计算） | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>统计与概率基础（抽样·分布·概率计算）</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>人教A版必修第二册第九章（统计）+第十章（概率） / 2024~2025学年广州各区高一下期末试卷（单选第7-8题、多选第10-11题、解答第17题）</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高一筑基</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期末、九区联考）</td></tr>
+<tr><td><strong>广东考情</strong></td><td>高一下期末<strong>解答题固定板块</strong>。广州各区期末卷解答题第17题（12-14分）几乎固定考查统计与概率的综合应用，通常是"频率分布直方图 + 概率计算"或"分层抽样 + 古典概型"的组合。选填中也有1-2道基础题（互斥事件、独立事件、抽样方法）。难度定位<strong>中档</strong>，核心在于准确读取图表信息和规范的概率计算步骤。</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<blockquote>
+<strong>本质理解</strong>：统计是"由样本推断总体"，概率是"随机事件发生的可能性度量"。核心思想：用数据说话，用频率估计概率。
+</blockquote>
+
+<hr>
+
+<h3>一、统计基础：三种抽样方法</h3>
+
+<table>
+<tr><th>方法</th><th>特点</th><th>适用场景</th><th>操作步骤</th><th>广东卷考法</th></tr>
+<tr><td><strong>简单随机抽样</strong></td><td>每个个体等可能入选</td><td>总体容量小</td><td>抽签法/随机数法</td><td>直接概念判断</td></tr>
+<tr><td><strong>分层抽样</strong></td><td>按层按比例抽取</td><td>总体有明显分层</td><td>各层抽样比 = 总体抽样比</td><td><strong>高频！</strong>计算各层样本数</td></tr>
+<tr><td><strong>系统抽样</strong></td><td>等间隔抽取</td><td>总体容量大且有序</td><td>编号→分段→定起点→等距抽取</td><td>概念判断+计算</td></tr>
+</table>
+
+<blockquote>
+<strong>分层抽样公式</strong>：某层样本数 = 该层个体数 × 总体抽样比
+
+<strong>示例</strong>：某校高一800人，高二700人，高三500人，共抽取100人。则高一抽取 $800 \times \frac{100}{2000} = 40$ 人。
+</blockquote>
+
+<hr>
+
+<h3>二、频率分布直方图（解答题核心！）</h3>
+
+<p>#### 1. 读图三要素</p>
+
+<table>
+<tr><th>要素</th><th>含义</th><th>公式</th></tr>
+<tr><td><strong>纵坐标</strong></td><td>频率/组距</td><td>$\frac{频率}{组距}$，不是频率！</td></tr>
+<tr><td><strong>矩形面积</strong></td><td>频率</td><td>$面积 = \frac{频率}{组距} \times 组距 = 频率$</td></tr>
+<tr><td><strong>总面积</strong></td><td>1</td><td>所有矩形面积之和 = 1</td></tr>
+</table>
+
+<blockquote>
+<strong>关键提醒</strong>：频率分布直方图的纵坐标是<strong>频率/组距</strong>，不是频率！计算频率必须乘以组距。
+</blockquote>
+
+<p>#### 2. 由图计算数字特征</p>
+
+<table>
+<tr><th>特征</th><th>计算方法</th></tr>
+<tr><td><strong>频率</strong></td><td>矩形面积 = 纵坐标 × 组距</td></tr>
+<tr><td><strong>频数</strong></td><td>频率 × 样本容量</td></tr>
+<tr><td><strong>众数</strong></td><td>最高矩形中点的横坐标</td></tr>
+<tr><td><strong>中位数</strong></td><td>左右面积各为0.5时的横坐标（需插值）</td></tr>
+<tr><td><strong>平均数</strong></td><td>各矩形中点 × 对应频率，再求和</td></tr>
+<tr><td><strong>方差</strong></td><td>各矩形中点与平均数差的平方 × 频率，再求和</td></tr>
+</table>
+
+<blockquote>
+<strong>中位数计算步骤</strong>：
+1. 从左到右累加频率，找到中位数所在组
+2. 设中位数为$x$，利用比例关系：$\frac{x - 组下限}{组距} = \frac{0.5 - 前面积}{该组频率}$
+</blockquote>
+
+<hr>
+
+<h3>三、概率基础：事件关系与运算</h3>
+
+<p>#### 1. 事件关系</p>
+
+<table>
+<tr><th>关系</th><th>定义</th><th>符号</th><th>概率公式</th></tr>
+<tr><td><strong>包含</strong></td><td>A发生则B必发生</td><td>$A \subseteq B$</td><td>$P(A) \leq P(B)$</td></tr>
+<tr><td><strong>相等</strong></td><td>A、B同时发生或不发生</td><td>$A = B$</td><td>$P(A) = P(B)$</td></tr>
+<tr><td><strong>并事件</strong></td><td>A或B发生</td><td>$A \cup B$</td><td>$P(A \cup B) = P(A) + P(B) - P(A \cap B)$</td></tr>
+<tr><td><strong>交事件</strong></td><td>A且B发生</td><td>$A \cap B$</td><td>—</td></tr>
+<tr><td><strong>互斥</strong></td><td>A、B不能同时发生</td><td>$A \cap B = \varnothing$</td><td>$P(A \cup B) = P(A) + P(B)$</td></tr>
+<tr><td><strong>对立</strong></td><td>互斥且必有一个发生</td><td>$\bar{A}$</td><td>$P(A) + P(\bar{A}) = 1$</td></tr>
+</table>
+
+<blockquote>
+<strong>关键区分</strong>：互斥 ≠ 对立。对立一定互斥，互斥不一定对立。
+</blockquote>
+
+<p>#### 2. 概率基本性质</p>
+
+<table>
+<tr><th>性质</th><th>内容</th><th>说明</th></tr>
+<tr><td><strong>非负性</strong></td><td>$P(A) \geq 0$</td><td>概率不可能为负</td></tr>
+<tr><td><strong>规范性</strong></td><td>$P(\Omega) = 1$</td><td>必然事件概率为1</td></tr>
+<tr><td><strong>可加性</strong></td><td>互斥事件：$P(A_1 \cup A_2 \cup ... \cup A_n) = P(A_1) + ... + P(A_n)$</td><td>互斥才能直接相加</td></tr>
+<tr><td><strong>对立公式</strong></td><td>$P(\bar{A}) = 1 - P(A)$</td><td><strong>正难则反</strong>的数学思想</td></tr>
+</table>
+
+<hr>
+
+<h3>四、古典概型（广东卷解答题核心！）</h3>
+
+<p>#### 1. 定义与公式</p>
+
+<p>$$P(A) = \frac{事件A包含的基本事件数}{样本空间的基本事件总数} = \frac{n(A)}{n(\Omega)}$$</p>
+
+<blockquote>
+<strong>适用条件</strong>：① 有限个基本事件；② 每个基本事件等可能发生。
+</blockquote>
+
+<p>#### 2. 常用计数方法</p>
+
+<table>
+<tr><th>方法</th><th>适用场景</th><th>公式</th></tr>
+<tr><td><strong>列举法</strong></td><td>基本事件数少（≤20）</td><td>一一列出</td></tr>
+<tr><td><strong>排列数</strong></td><td>有序选取</td><td>$A_n^m = n(n-1)...(n-m+1)$</td></tr>
+<tr><td><strong>组合数</strong></td><td>无序选取</td><td>$C_n^m = \frac{n!}{m!(n-m)!}$</td></tr>
+<tr><td><strong>分步乘法</strong></td><td>分步完成</td><td>各步方法数相乘</td></tr>
+<tr><td><strong>分类加法</strong></td><td>分类完成</td><td>各类方法数相加</td></tr>
+</table>
+
+<blockquote>
+<strong>广东卷特点</strong>：古典概型题常与频率分布直方图结合，先由直方图得频率，再用频率估计概率，最后计算复合事件概率。
+</blockquote>
+
+<hr>
+
+<h3>五、事件独立性（高频！）</h3>
+
+<p>#### 1. 定义</p>
+
+<p>$$A, B 独立 \Leftrightarrow P(A \cap B) = P(A) \cdot P(B)$$</p>
+
+<p>#### 2. 独立事件的性质</p>
+
+<table>
+<tr><th>性质</th><th>内容</th></tr>
+<tr><td><strong>对称性</strong></td><td>A与B独立 ⟺ B与A独立</td></tr>
+<tr><td><strong>与对立独立</strong></td><td>A与B独立 ⟺ A与$\bar{B}$独立 ⟺ $\bar{A}$与B独立 ⟺ $\bar{A}$与$\bar{B}$独立</td></tr>
+<tr><td><strong>乘法公式</strong></td><td>$P(A_1 \cap A_2 \cap ... \cap A_n) = P(A_1)P(A_2)...P(A_n)$（各事件独立）</td></tr>
+</table>
+
+<blockquote>
+<strong>与互斥的区别</strong>：
+- 互斥：$A \cap B = \varnothing$，$P(A \cup B) = P(A) + P(B)$
+- 独立：$P(A \cap B) = P(A)P(B)$，$A$发生不影响$B$的概率
+- <strong>互斥与独立一般不共存</strong>（除非其中一个概率为0）
+</blockquote>
+
+<hr>
+
+<h3>六、频率估计概率（大题答题规范）</h3>
+
+<p><strong>标准表述</strong>：</p>
+<blockquote>
+"由频率分布直方图可知，事件A的频率为$\frac{频数}{样本容量} = 0.XX$，故用频率估计概率，得$P(A) \approx 0.XX$。"
+</blockquote>
+
+<blockquote>
+<strong>广东卷评分要点</strong>：必须写明"用频率估计概率"这句话，不能直接写$P(A) = 频率$！
+</blockquote>
+
+<hr>
+
+<h3>七、记忆口诀</h3>
+
+<blockquote>
+<strong>统计口诀</strong>：
+- "频率分布直方图，纵轴频率除以距"
+- "面积才是频率值，总面积必等于一"
+- "中位数找左右半，平均数用中点乘"
+- "分层按比例，系统按间隔"
+</blockquote>
+
+<blockquote>
+<strong>概率口诀</strong>：
+- "古典概型两条件：有限等可能"
+- "互斥加，独立乘，对立用一减"
+- "正难则反是良策，对立事件来帮忙"
+</blockquote>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_数学_典型题型与方法_频率分布直方图与概率计算.html">高一筑基_数学_典型题型与方法_频率分布直方图与概率计算</a> — 统计大题的详细解题模板</li>
+<li><a href="高一筑基_数学_易错警示与辨析_平面向量与解三角形常见陷阱.html">高一筑基_数学_易错警示与辨析_平面向量与解三角形常见陷阱</a> — 概率计算与统计图表的易错点</li>
+<li><a href="高一筑基_数学_核心知识网络_复数概念与运算.html">高一筑基_数学_核心知识网络_复数概念与运算</a> — 复数与概率统计同为高一下基础计算板块</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+
+<ul>
+<li><strong>广东高一下期末命题规律</strong>：解答题第17题固定是统计与概率综合，通常分为两问：第1问求频率分布直方图中的参数（如$X$的值）、中位数或平均数；第2问用频率估计概率，计算某复合事件的概率（如"至少有一人合格"）。</li>
+<li><strong>2024-2025学年广州越秀区期末第17题</strong>：频率分布直方图 + 古典概型 + 独立事件，是广东卷"统计与概率融合"的典型考法。</li>
+<li><strong>书写规范</strong>：概率计算必须写清基本事件总数和事件包含的基本事件数，再写$P(A) = \frac{n(A)}{n(\Omega)}$。</li>
+<li><strong>训练建议</strong>：先练熟频率分布直方图的读图计算（10题），再练古典概型与独立事件的综合计算（10题），最后做5套完整统计大题限时训练。</li>
+</ul>
+
+<hr>
+
+<blockquote>
+🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度3</code> <code>#统计</code> <code>#概率</code> <code>#频率分布直方图</code> <code>#古典概型</code> <code>#独立事件</code> <code>#分层抽样</code> <code>#广东名校模拟</code>
+</blockquote>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>

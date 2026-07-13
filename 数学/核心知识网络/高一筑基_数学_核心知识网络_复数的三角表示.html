@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复数的三角表示 | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>复数的三角表示</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第二册第七章</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高一筑基</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
+<tr><td><strong>广东考情</strong></td><td>考查频率：低频；难度：基础；选填基础题，主要考查三角形式与代数形式的互化及几何意义</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>一、复数的三角形式</h3>
+<p>设 $z = a + bi$（$a, b \in \mathbb{R}$），则 $a = r\cos\theta$，$b = r\sin\theta$，$r = \sqrt{a^2 + b^2}$。</p>
+
+<p>$$z = r(\cos\theta + i\sin\theta)$$</p>
+
+<p>其中：</p>
+<ul>
+<li>$r = |z| = \sqrt{a^2 + b^2}$：复数的模</li>
+<li>$\theta$：辐角，满足 $\tan\theta = \frac{b}{a}$</li>
+<li><strong>辐角主值</strong>：$0 \leq \theta < 2\pi$</li>
+</ul>
+
+<h3>二、代数形式与三角形式的互化</h3>
+<ul>
+<li><strong>代数 $\rightarrow$ 三角</strong>：求模 $r = \sqrt{a^2 + b^2}$，求辐角 $\tan\theta = \frac{b}{a}$（根据象限确定）</li>
+<li><strong>三角 $\rightarrow$ 代数</strong>：$a = r\cos\theta$，$b = r\sin\theta$</li>
+</ul>
+
+<h3>三、复数乘除法的三角表示</h3>
+<p>设 $z_1 = r_1(\cos\theta_1 + i\sin\theta_1)$，$z_2 = r_2(\cos\theta_2 + i\sin\theta_2)$：</p>
+
+<ul>
+<li><strong>乘法</strong>：$z_1 z_2 = r_1 r_2[\cos(\theta_1 + \theta_2) + i\sin(\theta_1 + \theta_2)]$</li>
+<li>模相乘，辐角相加</li>
+<li><strong>除法</strong>：$\frac{z_1}{z_2} = \frac{r_1}{r_2}[\cos(\theta_1 - \theta_2) + i\sin(\theta_1 - \theta_2)]$</li>
+<li>模相除，辐角相减</li>
+</ul>
+
+<h3>四、几何意义</h3>
+<ul>
+<li>复数乘法：对应向量旋转和伸缩</li>
+<li>复数除法：对应向量反向旋转和伸缩</li>
+<li>乘以 $i$：逆时针旋转 $90°$</li>
+<li>乘以 $-i$：顺时针旋转 $90°$</li>
+</ul>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_复数的概念与运算.html">复数概念与运算</a> — 代数形式基础（如存在则链接）</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+<ul>
+<li>易错点：求辐角时必须结合复数所在象限，不能仅由 $\tan\theta = \frac{b}{a}$ 确定</li>
+<li>复数三角形式的标准形式：$r(\cos\theta + i\sin\theta)$，注意中间是 "$+$"，不是 "$-$"</li>
+<li>新教材新增内容，广东卷目前考查较基础，以概念理解和简单计算为主</li>
+</ul>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>

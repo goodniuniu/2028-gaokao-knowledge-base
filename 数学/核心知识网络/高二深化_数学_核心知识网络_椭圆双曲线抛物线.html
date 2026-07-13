@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>椭圆、双曲线与抛物线 | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>椭圆、双曲线与抛物线</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版选择性必修第一册第三章</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
+<tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：中高档~压轴；解析几何是广东卷大题压轴位置的重要候选，椭圆综合题计算量大，对运算能力要求极高</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>一、椭圆（以焦点在 $x$ 轴上为例）</h3>
+<ul>
+<li><strong>定义</strong>：$|MF_1| + |MF_2| = 2a$（$2a > |F_1 F_2|$）</li>
+<li><strong>标准方程</strong>：$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$（$a > b > 0$）</li>
+<li><strong>几何性质</strong>：</li>
+<li>范围：$x \in [-a, a]$，$y \in [-b, b]$</li>
+<li>对称性：关于 $x$ 轴、$y$ 轴、原点对称</li>
+<li>顶点：$(\pm a, 0)$，$(0, \pm b)$</li>
+<li>焦点：$(\pm c, 0)$，其中 $c^2 = a^2 - b^2$</li>
+<li>离心率：$e = \frac{c}{a}$，$e \in (0, 1)$</li>
+</ul>
+
+<h3>二、双曲线（以焦点在 $x$ 轴上为例）</h3>
+<ul>
+<li><strong>定义</strong>：$||MF_1| - |MF_2|| = 2a$（$0 < 2a < |F_1 F_2|$）</li>
+<li><strong>标准方程</strong>：$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$（$a > 0, b > 0$）</li>
+<li><strong>几何性质</strong>：</li>
+<li>范围：$x \leq -a$ 或 $x \geq a$，$y \in \mathbb{R}$</li>
+<li>对称性：关于 $x$ 轴、$y$ 轴、原点对称</li>
+<li>顶点：$(\pm a, 0)$</li>
+<li>焦点：$(\pm c, 0)$，其中 $c^2 = a^2 + b^2$</li>
+<li>渐近线：$y = \pm \frac{b}{a}x$</li>
+<li>离心率：$e = \frac{c}{a}$，$e \in (1, +\infty)$</li>
+</ul>
+
+<h3>三、抛物线（以焦点在 $x$ 轴上，开口向右为例）</h3>
+<ul>
+<li><strong>定义</strong>：$|MF| = d$（到定点距离等于到定直线距离）</li>
+<li><strong>标准方程</strong>：$y^2 = 2px$（$p > 0$）</li>
+<li><strong>几何性质</strong>：</li>
+<li>范围：$x \geq 0$，$y \in \mathbb{R}$</li>
+<li>对称轴：$x$ 轴</li>
+<li>顶点：$(0, 0)$</li>
+<li>焦点：$(\frac{p}{2}, 0)$</li>
+<li>准线：$x = -\frac{p}{2}$</li>
+<li>离心率：$e = 1$</li>
+</ul>
+
+<h3>四、圆锥曲线弦长公式</h3>
+<p>设直线 $AB$ 斜率为 $k$，与圆锥曲线交于 $A(x_1, y_1), B(x_2, y_2)$：</p>
+<p>$$|AB| = \sqrt{1 + k^2} |x_1 - x_2| = \sqrt{1 + \frac{1}{k^2}} |y_1 - y_2|\quad(k \neq 0)$$</p>
+
+<h3>五、点差法结论（弦中点问题）</h3>
+<p>设 $AB$ 为圆锥曲线的弦，$M$ 为弦 $AB$ 中点：</p>
+<ul>
+<li>椭圆（焦点在 $x$ 轴）：$k_{AB} \cdot k_{OM} = -\frac{b^2}{a^2}$</li>
+<li>双曲线（焦点在 $x$ 轴）：$k_{AB} \cdot k_{OM} = \frac{b^2}{a^2}$</li>
+<li>抛物线（焦点在 $x$ 轴）：$k_{AB} = \frac{p}{y_0}$（$y_0$ 为中点 $M$ 的纵坐标）</li>
+</ul>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高二深化_数学_核心知识网络_直线与圆的方程.html">直线与圆的方程</a> — 解析几何基础</li>
+<li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_恒成立与存在性问题通法.html">恒成立与存在性问题通法</a> — 圆锥曲线中的范围问题</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+<ul>
+<li>易错点：椭圆中 $a > b$，双曲线中 $a, b$ 大小不确定；焦点位置不确定时要分类讨论</li>
+<li>抛物线标准方程有四种形式：$y^2 = 2px, y^2 = -2px, x^2 = 2py, x^2 = -2py$，注意开口方向</li>
+<li>广东卷解析几何大题：韦达定理联立是标准路径，注意计算准确性和分类讨论完备性</li>
+<li>离心率求法：构造 $a, b, c$ 的齐次方程，转化为关于 $e$ 的方程</li>
+</ul>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>

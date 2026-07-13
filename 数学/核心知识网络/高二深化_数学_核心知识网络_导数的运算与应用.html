@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>导数的运算与应用 | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>导数的运算与应用</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版选择性必修第二册第五章</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★★★</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
+<tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：中高档~压轴；导数是广东卷大题压轴的核心模块，含参讨论、极值点偏移、隐零点是高频难点</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>一、基本初等函数的导数公式</h3>
+<table>
+<tr><th>函数</th><th>导数</th></tr>
+<tr><td>$C$（常数）</td><td>$0$</td></tr>
+<tr><td>$x^\alpha$（$\alpha \in \mathbb{Q}, \alpha \neq 0$）</td><td>$\alpha x^{\alpha - 1}$</td></tr>
+<tr><td>$\sin x$</td><td>$\cos x$</td></tr>
+<tr><td>$\cos x$</td><td>$-\sin x$</td></tr>
+<tr><td>$a^x$（$a > 0, a \neq 1$）</td><td>$a^x \ln a$</td></tr>
+<tr><td>$e^x$</td><td>$e^x$</td></tr>
+<tr><td>$\log_a x$（$a > 0, a \neq 1$）</td><td>$\frac{1}{x \ln a}$</td></tr>
+<tr><td>$\ln x$</td><td>$\frac{1}{x}$</td></tr>
+</table>
+
+<h3>二、导数的四则运算法则</h3>
+<ul>
+<li>$[f(x) \pm g(x)]' = f'(x) \pm g'(x)$</li>
+<li>$[f(x) \cdot g(x)]' = f'(x)g(x) + f(x)g'(x)$</li>
+<li>$\left[\frac{f(x)}{g(x)}\right]' = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$（$g(x) \neq 0$）</li>
+<li>$[cf(x)]' = cf'(x)$</li>
+</ul>
+
+<h3>三、复合函数求导（链式法则）</h3>
+<p>由 $y = f(u)$ 与 $u = g(x)$ 复合而成的函数 $y = f(g(x))$：</p>
+<p>$$y'_x = y'_u \cdot u'_x$$</p>
+
+<h3>四、导数在研究函数中的应用</h3>
+
+<p>#### 1. 函数的单调性</p>
+<ul>
+<li>$\forall x \in (a, b)$，$f'(x) > 0$ $\Rightarrow$ $f(x)$ 在 $(a, b)$ 上单调递增</li>
+<li>$\forall x \in (a, b)$，$f'(x) < 0$ $\Rightarrow$ $f(x)$ 在 $(a, b)$ 上单调递减</li>
+</ul>
+
+<p>#### 2. 函数的极值</p>
+<ul>
+<li><strong>极大值点</strong>：左侧 $f'(x) > 0$，右侧 $f'(x) < 0$（先增后减）</li>
+<li><strong>极小值点</strong>：左侧 $f'(x) < 0$，右侧 $f'(x) > 0$（先减后增）</li>
+<li><strong>必要条件</strong>：$f'(x_0) = 0$ 是极值点的必要条件（不是充分条件）</li>
+</ul>
+
+<p>#### 3. 函数的最值</p>
+<ul>
+<li>闭区间上的连续函数，最值在极值点或区间端点处取得</li>
+<li>比较 $f(x_0)$（极值）与 $f(a), f(b)$（端点值）</li>
+</ul>
+
+<h3>五、解决实际问题</h3>
+<ul>
+<li>最优化问题：建立目标函数，求导找极值点，验证最值</li>
+</ul>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_恒成立与存在性问题通法.html">恒成立与存在性问题通法</a> — 导数与不等式综合</li>
+<li><a href="../素材与拓展/高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向.html">2024-2025新高考Ⅰ卷导数压轴题新动向</a> — 导数压轴趋势</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+<ul>
+<li>求导前先化简函数表达式，可减少计算量</li>
+<li>含参函数单调性讨论：求导后分析 $f'(x) = 0$ 的根与定义域、参数的关系</li>
+<li>极值点与导数零点的关系：$f'(x_0) = 0$ 且 $f'(x)$ 在 $x_0$ 两侧变号</li>
+<li>广东卷导数压轴：关注跨模块综合、新定义题型、反套路化趋势</li>
+</ul>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>

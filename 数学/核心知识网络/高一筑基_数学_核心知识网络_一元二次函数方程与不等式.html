@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一元二次函数、方程与不等式 | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>一元二次函数、方程与不等式</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第一册第二章</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高一筑基</td></tr>
+<tr><td><strong>难度</strong></td><td>★★☆☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
+<tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：基础~中档；基本不等式常与最值问题结合，是广东卷多选和填空压轴的常见考点</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>一、不等式性质</h3>
+<table>
+<tr><th>性质</th><th>内容</th></tr>
+<tr><td>对称性</td><td>$a > b \Leftrightarrow b < a$</td></tr>
+<tr><td>传递性</td><td>$a > b, b > c \Rightarrow a > c$</td></tr>
+<tr><td>可加性</td><td>$a > b \Rightarrow a + c > b + c$</td></tr>
+<tr><td>可乘性</td><td>$a > b, c > 0 \Rightarrow ac > bc$；$a > b, c < 0 \Rightarrow ac < bc$</td></tr>
+<tr><td>同向可加性</td><td>$a > b, c > d \Rightarrow a + c > b + d$</td></tr>
+<tr><td>同向同正可乘性</td><td>$a > b > 0, c > d > 0 \Rightarrow ac > bd$</td></tr>
+<tr><td>可乘方性</td><td>$a > b > 0 \Rightarrow a^n > b^n$（$n \in \mathbb{N}, n \geq 2$）</td></tr>
+</table>
+
+<h3>二、基本不等式</h3>
+<p>$$\sqrt{ab} \leq \frac{a+b}{2} \quad (a > 0, b > 0)$$</p>
+<blockquote>
+当且仅当 $a = b$ 时取等号
+</blockquote>
+
+<p><strong>重要变形</strong>：</p>
+<ul>
+<li>$a^2 + b^2 \geq 2ab$（$a, b \in \mathbb{R}$）</li>
+<li>$\frac{a^2 + b^2}{2} \geq \left(\frac{a+b}{2}\right)^2$</li>
+<li>$\left(\frac{a+b}{2}\right)^2 \geq ab$</li>
+<li>$a + b \geq 2\sqrt{ab}$（$a, b > 0$）</li>
+<li>$ab \leq \left(\frac{a+b}{2}\right)^2$（$a, b > 0$）</li>
+</ul>
+
+<p><strong>应用条件（一正二定三相等）</strong>：</p>
+<ol>
+<li>一正：各项均为正</li>
+<li>二定：和或积为定值</li>
+<li>三相等：能取到等号</li>
+</ol>
+
+<h3>三、一元二次不等式解法（三步法）</h3>
+<ol>
+<li><strong>第一步</strong>：求对应方程 $ax^2 + bx + c = 0$（$a > 0$）的根 $x_1, x_2$</li>
+<li><strong>第二步</strong>：画出 $y = ax^2 + bx + c$ 的抛物线图象</li>
+<li><strong>第三步</strong>：由图象写出解集</li>
+</ol>
+<ul>
+<li>$ax^2 + bx + c > 0$：取两边（$x < x_1$ 或 $x > x_2$）</li>
+<li>$ax^2 + bx + c < 0$：取中间（$x_1 < x < x_2$）</li>
+</ul>
+
+<h3>四、一元二次不等式恒成立问题</h3>
+<table>
+<tr><th>条件</th><th>等价转化</th></tr>
+<tr><td>$ax^2 + bx + c > 0$ 在 $\mathbb{R}$ 上恒成立</td><td>$a > 0$ 且 $\Delta < 0$</td></tr>
+<tr><td>$ax^2 + bx + c < 0$ 在 $\mathbb{R}$ 上恒成立</td><td>$a < 0$ 且 $\Delta < 0$</td></tr>
+<tr><td>在某区间上恒成立</td><td>分离参数求最值，或端点效应分析</td></tr>
+</table>
+
+<h3>五、根的分布问题</h3>
+<p>影响二次函数根分布的因素：</p>
+<ul>
+<li>图象开口方向（$a$ 的符号）</li>
+<li>判别式 $\Delta = b^2 - 4ac$</li>
+<li>对称轴位置 $x = -\frac{b}{2a}$</li>
+<li>端点处的函数值</li>
+</ul>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_集合与常用逻辑用语.html">集合与常用逻辑用语</a> — 不等式解集与集合运算综合</li>
+<li><a href="高一筑基_数学_核心知识网络_函数的定义与三要素.html">函数的定义与三要素</a> — 定义域求解常涉及不等式</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+<ul>
+<li>易错点：使用基本不等式时忽略"一正二定三相等"条件，特别是等号能否取到</li>
+<li>广东卷特色：基本不等式常与多选题结合，考查变形技巧和取等条件</li>
+<li>含参二次不等式注意 $a = 0$ 的情况（退化为一元一次不等式）</li>
+</ul>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>

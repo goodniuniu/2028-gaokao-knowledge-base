@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复数概念与运算（概念·几何意义·四则运算） | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>复数概念与运算（概念·几何意义·四则运算）</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>人教A版必修第二册第七章 / 2024~2025学年广州各区高一下期末试卷（单选第1-3题、填空第12题）</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高一筑基</td></tr>
+<tr><td><strong>难度</strong></td><td>★★☆☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州天河/越秀/白云/番禺区期末、九区联考）</td></tr>
+<tr><td><strong>广东考情</strong></td><td>高一下期末<strong>必考基础题</strong>，考查频率<strong>极高</strong>。广州各区期末卷中复数通常占1道单选（5分）或1道填空（5分），总分5分左右。难度定位<strong>基础</strong>，以复数运算、共轭复数、模长计算、几何意义为主。2024-2025学年广州九区联考第1题、越秀区第12题均考查复数，说明广东卷对复数基础概念的重视。</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<blockquote>
+<strong>本质理解</strong>：复数$a+bi$是实数系的自然扩充，$i$是方程$x^2+1=0$的根。复数集$\mathbb{C}$与复平面上的点/向量一一对应，实现了"数"与"形"的统一。
+</blockquote>
+
+<hr>
+
+<h3>一、关键概念体系</h3>
+
+<table>
+<tr><th>概念</th><th>定义</th><th>几何意义</th><th>易错点</th></tr>
+<tr><td><strong>复数</strong></td><td>$z = a + bi$（$a,b \in \mathbb{R}$）</td><td>复平面上的点$(a,b)$</td><td>实部是$a$，不是$bi$；虚部是$b$，不是$bi$</td></tr>
+<tr><td><strong>实部</strong></td><td>$\text{Re}(z) = a$</td><td>横坐标</td><td>虚部是$b$（不含$i$）！</td></tr>
+<tr><td><strong>虚部</strong></td><td>$\text{Im}(z) = b$</td><td>纵坐标</td><td>不是$bi$！</td></tr>
+<tr><td><strong>纯虚数</strong></td><td>$a=0$且$b \neq 0$</td><td>虚轴上除原点外的点</td><td>$a=0$是必要但不充分条件（$b=0$时$z=0$是实数）</td></tr>
+<tr><td><strong>共轭复数</strong></td><td>$\bar{z} = a - bi$</td><td>关于实轴对称的点</td><td>$\overline{z_1 \cdot z_2} = \bar{z}_1 \cdot \bar{z}_2$；$z \cdot \bar{z} =</td><td>z</td><td>^2$</td></tr>
+<tr><td><strong>复数模</strong></td><td>$</td><td>z</td><td>= \sqrt{a^2+b^2}$</td><td>点到原点的距离</td><td>$</td><td>z_1 \cdot z_2</td><td>=</td><td>z_1</td><td>\cdot</td><td>z_2</td><td>$；$</td><td>z_1 + z_2</td><td>\leq</td><td>z_1</td><td>+</td><td>z_2</td><td>$</td></tr>
+<tr><td><strong>复数相等</strong></td><td>$a+bi = c+di \Leftrightarrow a=c, b=d$</td><td>两点重合</td><td>实部相等且虚部相等</td></tr>
+</table>
+
+<blockquote>
+<strong>高频考点</strong>：已知$z = a + (a-1)i$为纯虚数，求$a$。——答案：$a=0$（注意$a=0$且$a-1 \neq 0$）。
+</blockquote>
+
+<hr>
+
+<h3>二、核心运算公式</h3>
+
+<p>设$z_1 = a+bi$, $z_2 = c+di$</p>
+
+<table>
+<tr><th>运算</th><th>公式</th><th>结果形式</th><th>记忆要点</th></tr>
+<tr><td><strong>加法</strong></td><td>$z_1 + z_2 = (a+c) + (b+d)i$</td><td>实部+实部，虚部+虚部</td><td>对应相加</td></tr>
+<tr><td><strong>减法</strong></td><td>$z_1 - z_2 = (a-c) + (b-d)i$</td><td>实部-实部，虚部-虚部</td><td>对应相减</td></tr>
+<tr><td><strong>乘法</strong></td><td>$z_1 \cdot z_2 = (ac-bd) + (ad+bc)i$</td><td>展开后$i^2=-1$</td><td>多项式乘法，$i^2 \to -1$</td></tr>
+<tr><td><strong>除法</strong></td><td>$\frac{z_1}{z_2} = \frac{z_1 \cdot \bar{z}_2}{z_2 \cdot \bar{z}_2} = \frac{(a+bi)(c-di)}{c^2+d^2}$</td><td>分母实数化</td><td><strong>分子分母同乘分母的共轭</strong></td></tr>
+</table>
+
+<blockquote>
+<strong>可直接使用</strong>：上述四则运算公式在解答题中可直接使用，无需推导。
+</blockquote>
+
+<hr>
+
+<h3>三、高频运算技巧</h3>
+
+<p>#### 技巧1：$i$的幂次周期性</p>
+
+<p>$$i^1 = i, \quad i^2 = -1, \quad i^3 = -i, \quad i^4 = 1$$</p>
+
+<p>周期为4：$i^{4n} = 1$, $i^{4n+1} = i$, $i^{4n+2} = -1$, $i^{4n+3} = -i$</p>
+
+<blockquote>
+<strong>速算</strong>：$i^{2025} = i^{4 \times 506 + 1} = i$
+</blockquote>
+
+<p>#### 技巧2：$(1 \pm i)^2 = \pm 2i$</p>
+
+<p>$$(1+i)^2 = 2i, \quad (1-i)^2 = -2i$$</p>
+
+<blockquote>
+<strong>应用</strong>：$\frac{1}{1+i} = \frac{1-i}{(1+i)(1-i)} = \frac{1-i}{2} = \frac{1}{2} - \frac{1}{2}i$
+</blockquote>
+
+<p>#### 技巧3：$\omega = -\frac{1}{2} + \frac{\sqrt{3}}{2}i$的性质</p>
+
+<p>$$\omega^3 = 1, \quad 1 + \omega + \omega^2 = 0, \quad \omega^2 = \bar{\omega}$$</p>
+
+<blockquote>
+<strong>立方单位根</strong>：$\omega$和$\omega^2$是$x^3=1$的另外两个根（除1外）。
+</blockquote>
+
+<hr>
+
+<h3>四、复数的几何意义（与平面向量的联系）</h3>
+
+<table>
+<tr><th>几何操作</th><th>代数对应</th><th>说明</th></tr>
+<tr><td>复平面上点$Z(a,b)$</td><td>复数$z = a+bi$</td><td>一一对应</td></tr>
+<tr><td>向量$\vec{OZ}$</td><td>复数$z = a+bi$</td><td>复数即向量</td></tr>
+<tr><td>$</td><td>z_1 - z_2</td><td>$</td><td>两点$Z_1, Z_2$之间的距离</td><td>距离公式</td></tr>
+<tr><td>$</td><td>z - z_0</td><td>= r$</td><td>以$Z_0$为圆心、$r$为半径的圆</td><td>圆的复数方程</td></tr>
+<tr><td>复数乘法$z_1 \cdot z_2$</td><td>模相乘，角相加</td><td>旋转+伸缩变换</td></tr>
+</table>
+
+<blockquote>
+<strong>广东卷常考</strong>：已知$|z - (1+i)| = 2$，求$|z|$的最大值。——圆心到原点距离$\sqrt{2}$，半径2，最大值$\sqrt{2}+2$。
+</blockquote>
+
+<hr>
+
+<h3>五、记忆口诀</h3>
+
+<blockquote>
+<strong>复数运算口诀</strong>：
+- "加减对实虚，乘除用分配，除法要共轭"
+- "$i$平方是负一，幂次周期为四"
+- "模长勾股算，共轭变符号"
+</blockquote>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_平面向量体系.html">高一筑基_数学_核心知识网络_平面向量体系</a> — 复数的几何表示与向量一一对应</li>
+<li><a href="高一筑基_数学_易错警示与辨析_平面向量与解三角形常见陷阱.html">高一筑基_数学_易错警示与辨析_平面向量与解三角形常见陷阱</a> — 复数与向量的交叉易错点（如虚部定义、模长计算）</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+
+<ul>
+<li><strong>广东高一下期末命题规律</strong>：复数题位置固定在前3道单选或第12题填空，属于"送分题"，但必须确保100%正确。广州九区联考、各区统考每年必考1道复数题。</li>
+<li><strong>2024-2025学年广州越秀区期末第12题</strong>：考查共轭复数与模长运算，属于基础但需细心计算的题型。</li>
+<li><strong>训练建议</strong>：每天5道复数运算题（限时3分钟），重点练除法（分母实数化）和$i$幂次周期。</li>
+<li><strong>高三衔接</strong>：复数在高三新高考Ⅰ卷中仍是送分题，位置通常在第1-2题，5分必拿。</li>
+</ul>
+
+<hr>
+
+<blockquote>
+🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度2</code> <code>#复数</code> <code>#共轭复数</code> <code>#模长</code> <code>#几何意义</code> <code>#i的幂次</code> <code>#广东名校模拟</code>
+</blockquote>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>

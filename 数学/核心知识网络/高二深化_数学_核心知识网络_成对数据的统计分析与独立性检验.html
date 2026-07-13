@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>成对数据的统计分析与独立性检验 | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>成对数据的统计分析与独立性检验</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版选择性必修第三册第八章</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
+<tr><td><strong>广东考情</strong></td><td>考查频率：中频；难度：中档；回归分析和独立性检验是概率统计大题的另一大方向，近年广东卷中交替出现，计算量大但套路固定</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>一、成对数据的统计相关性</h3>
+<ul>
+<li><strong>变量的相关关系</strong>：正相关（$r > 0$）、负相关（$r < 0$）</li>
+<li><strong>样本相关系数</strong>：</li>
+</ul>
+<p>$$r = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^n (x_i - \bar{x})^2} \sqrt{\sum_{i=1}^n (y_i - \bar{y})^2}}$$</p>
+<ul>
+<li>$|r| \in [0, 1]$：$|r|$ 越接近1，线性相关程度越强；越接近0，越弱</li>
+</ul>
+
+<h3>二、一元线性回归模型及其应用</h3>
+<ul>
+<li><strong>模型</strong>：$Y = bx + a + e$，其中 $E(e) = 0$，$D(e) = \sigma^2$</li>
+<li><strong>最小二乘估计</strong>（经验回归方程 $\hat{y} = \hat{b}x + \hat{a}$）：</li>
+</ul>
+<p>$$\hat{b} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2}, \quad \hat{a} = \bar{y} - \hat{b}\bar{x}$$</p>
+<ul>
+<li><strong>拟合效果评价</strong>：</li>
+<li>残差平方和：越小越好</li>
+<li>决定系数：$R^2 = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{\sum_{i=1}^n (y_i - \bar{y})^2}$，$R^2$ 越接近1，拟合效果越好</li>
+</ul>
+
+<h3>三、列联表与独立性检验</h3>
+<p>#### $2 \times 2$ 列联表</p>
+<table>
+<tr><th>$Y = 0$</th><th>$Y = 1$</th><th>合计</th></tr>
+<tr><td>$X = 0$</td><td>$a$</td><td>$b$</td><td>$a + b$</td></tr>
+<tr><td>$X = 1$</td><td>$c$</td><td>$d$</td><td>$c + d$</td></tr>
+<tr><td>合计</td><td>$a + c$</td><td>$b + d$</td><td>$n = a + b + c + d$</td></tr>
+</table>
+
+<p>#### 独立性检验（$\chi^2$ 检验）</p>
+<p>$$\chi^2 = \frac{n(ad - bc)^2}{(a+b)(c+d)(a+c)(b+d)}$$</p>
+
+<ul>
+<li>将计算得到的 $\chi^2$ 与临界值比较，判断独立性</li>
+<li>等高堆积条形图：直观判断两个分类变量是否相关</li>
+</ul>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_统计与概率基础.html">统计与概率基础</a> — 统计基础概念</li>
+<li><a href="../典型题型与方法/高一筑基_数学_典型题型与方法_频率分布直方图与概率计算.html">频率分布直方图与概率计算</a> — 统计大题答题规范</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+<ul>
+<li>回归分析计算：注意公式中分子分母的对应关系，计算 $\hat{b}$ 后再算 $\hat{a} = \bar{y} - \hat{b}\bar{x}$</li>
+<li>独立性检验：注意 $\chi^2$ 公式中 $n$ 是总样本量，不是自由度</li>
+<li>广东卷统计大题：常结合实际问题背景，注意单位、精确度要求和文字表述规范</li>
+</ul>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>

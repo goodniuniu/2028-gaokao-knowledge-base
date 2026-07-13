@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>等差数列与等比数列 | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>等差数列与等比数列</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版选择性必修第二册第四章</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
+<tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：中档~中高档；数列是广东卷大题的重要考点，常与函数、不等式综合，错位相减和裂项相消是必会技能</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>一、等差数列</h3>
+<table>
+<tr><th>项目</th><th>公式/性质</th></tr>
+<tr><td>定义</td><td>$a_n - a_{n-1} = d$（$n \geq 2, n \in \mathbb{N}^*$）</td></tr>
+<tr><td>等差中项</td><td>$2A = a + b$（$A$ 为 $a, b$ 的等差中项）</td></tr>
+<tr><td>通项公式</td><td>$a_n = a_1 + (n-1)d$</td></tr>
+<tr><td>前 $n$ 项和</td><td>$S_n = \frac{(a_1 + a_n)n}{2} = na_1 + \frac{n(n-1)}{2}d = \frac{d}{2}n^2 + (a_1 - \frac{d}{2})n$</td></tr>
+<tr><td>单调性</td><td>$d > 0$ 递增；$d = 0$ 常数列；$d < 0$ 递减</td></tr>
+</table>
+
+<p><strong>重要性质</strong>：</p>
+<ul>
+<li>若 $m + n = p + q$（$m, n, p, q \in \mathbb{N}^*$），则 $a_m + a_n = a_p + a_q$</li>
+<li>性质1：$S_k, S_{2k} - S_k, S_{3k} - S_{2k}, \dots$ 组成公差为 $k^2 d$ 的等差数列</li>
+<li>性质2：项数为 $2n$ 时，$S_{2n} = n(a_n + a_{n+1})$，$S_{偶} - S_{奇} = nd$，$\frac{S_{偶}}{S_{奇}} = \frac{a_{n+1}}{a_n}$</li>
+<li>性质3：$\{a_n\}$ 为等差数列 $\Rightarrow \left\{\frac{S_n}{n}\right\}$ 为等差数列</li>
+<li>性质4：若 $\{a_n\}, \{b_n\}$ 都为等差数列，前 $n$ 项和分别为 $S_n, T_n$，则 $\frac{a_m}{b_m} = \frac{S_{2m-1}}{T_{2m-1}}$</li>
+</ul>
+
+<h3>二、等比数列</h3>
+<table>
+<tr><th>项目</th><th>公式/性质</th></tr>
+<tr><td>定义</td><td>$\frac{a_n}{a_{n-1}} = q$（$n \geq 2, n \in \mathbb{N}^*$）</td></tr>
+<tr><td>等比中项</td><td>$G^2 = ab$（$G = \pm\sqrt{ab}$，等比中项有两个）</td></tr>
+<tr><td>通项公式</td><td>$a_n = a_1 q^{n-1}$（$a_1, q \neq 0$）</td></tr>
+<tr><td>前 $n$ 项和</td><td>$S_n = \begin{cases} na_1 & (q = 1) \\ \frac{a_1(1 - q^n)}{1 - q} = \frac{a_1 - a_n q}{1 - q} & (q \neq 1) \end{cases}$</td></tr>
+<tr><td>单调性</td><td>$a_1 > 0, q > 1$ 或 $a_1 < 0, 0 < q < 1$ 时递增；$a_1 > 0, 0 < q < 1$ 或 $a_1 < 0, q > 1$ 时递减</td></tr>
+</table>
+
+<p><strong>重要性质</strong>：</p>
+<ul>
+<li>若 $m + n = p + q$（$m, n, p, q \in \mathbb{N}^*$），则 $a_m \cdot a_n = a_p \cdot a_q$</li>
+<li>性质1：$S_{m+n} = S_n + q^n S_m$</li>
+<li>性质2：$S_k, S_{2k} - S_k, S_{3k} - S_{2k}, \dots$（均不为0）成等比数列，公比为 $q^k$</li>
+<li>性质3：项数为 $2n$ 时，$\frac{S_{偶}}{S_{奇}} = q$；项数为 $2n+1$ 时，$\frac{S_{奇} - a_1}{S_{偶}} = q$</li>
+</ul>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_函数零点与函数模型.html">函数零点与函数模型</a> — 数列与函数的联系（$S_n$ 是 $n$ 的二次函数）</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+<ul>
+<li>易错点：等比数列求和时必须讨论 $q = 1$ 的情况！$q = 1$ 时 $S_n = na_1$</li>
+<li>等差数列前 $n$ 项和 $S_n = An^2 + Bn$ 是无常数项的二次函数，对称轴 $n = \frac{1 - 2a_1}{2d}$，可用于求最值</li>
+<li>广东卷数列大题：常考递推公式求通项、裂项相消求和、错位相减求和、放缩证明</li>
+</ul>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>

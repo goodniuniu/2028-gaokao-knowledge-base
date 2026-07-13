@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>条件概率与离散型随机变量 | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>条件概率与离散型随机变量</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版选择性必修第三册第七章</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
+<tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：中档~中高档；概率统计大题是广东卷必考题型，条件概率和全概率公式近年考查力度加大</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>一、条件概率与全概率公式</h3>
+<ul>
+<li><strong>条件概率</strong>：$P(B|A) = \frac{P(AB)}{P(A)}$（$P(A) > 0$）</li>
+<li><strong>乘法公式</strong>：$P(AB) = P(A)P(B|A)$</li>
+<li><strong>全概率公式</strong>：$P(B) = \sum_{i=1}^n P(A_i)P(B|A_i)$（$A_1, A_2, \dots, A_n$ 为样本空间的一个划分）</li>
+<li><strong>贝叶斯公式</strong>：$P(A_i|B) = \frac{P(A_i)P(B|A_i)}{P(B)} = \frac{P(A_i)P(B|A_i)}{\sum_{k=1}^n P(A_k)P(B|A_k)}$</li>
+</ul>
+
+<h3>二、离散型随机变量</h3>
+<ul>
+<li><strong>定义</strong>：可能取值为有限个或可以一一列举的随机变量</li>
+<li><strong>分布列</strong>：$P(X = x_i) = p_i$（$i = 1, 2, \dots, n$），满足 $p_i \geq 0$ 且 $\sum p_i = 1$</li>
+</ul>
+
+<p>#### 1. 均值（数学期望）</p>
+<p>$$E(X) = x_1 p_1 + x_2 p_2 + \cdots + x_n p_n = \sum_{i=1}^n x_i p_i$$</p>
+<ul>
+<li>线性性质：$E(aX + b) = aE(X) + b$</li>
+</ul>
+
+<p>#### 2. 方差</p>
+<p>$$D(X) = \sum_{i=1}^n (x_i - E(X))^2 p_i$$</p>
+<ul>
+<li>线性性质：$D(aX + b) = a^2 D(X)$</li>
+</ul>
+
+<h3>三、两点分布（0-1分布）</h3>
+<table>
+<tr><th>$X$</th><th>$0$</th><th>$1$</th></tr>
+<tr><td>$P$</td><td>$1-p$</td><td>$p$</td></tr>
+</table>
+
+<ul>
+<li>$E(X) = p$，$D(X) = p(1-p)$</li>
+</ul>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高二深化_数学_核心知识网络_计数原理与二项式定理.html">计数原理与二项式定理</a> — 概率计算中的计数基础</li>
+<li><a href="高二深化_数学_核心知识网络_二项分布超几何分布与正态分布.html">二项分布超几何分布与正态分布</a> — 特殊分布的期望方差</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+<ul>
+<li>条件概率计算关键：正确识别条件和事件，画树状图辅助分析</li>
+<li>全概率公式适用场景：事件 $B$ 的发生有多个互斥的原因 $A_i$</li>
+<li>广东卷概率大题：注意审题中"有放回"和"无放回"的区别，这决定了用二项分布还是超几何分布</li>
+</ul>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>

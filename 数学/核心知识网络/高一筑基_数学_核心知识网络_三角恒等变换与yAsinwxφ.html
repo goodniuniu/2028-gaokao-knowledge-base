@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三角恒等变换与 $y = A\sin(\omega x + \varphi)$ | 2028高考数学</title>
+<!-- MathJax 配置 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>三角恒等变换与 $y = A\sin(\omega x + \varphi)$</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第一册第五章</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高一筑基</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
+<tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：中档~中高档；三角恒等变换是三角大题第一问的标配，辅助角公式是化简的核心工具</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>一、两角和与差的三角函数公式</h3>
+<ul>
+<li>$\sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta$（$S_{(\alpha+\beta)}$）</li>
+<li>$\sin(\alpha - \beta) = \sin\alpha\cos\beta - \cos\alpha\sin\beta$（$S_{(\alpha-\beta)}$）</li>
+<li>$\cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$（$C_{(\alpha+\beta)}$）</li>
+<li>$\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta$（$C_{(\alpha-\beta)}$）</li>
+<li>$\tan(\alpha + \beta) = \frac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta}$（$T_{(\alpha+\beta)}$）</li>
+<li>$\tan(\alpha - \beta) = \frac{\tan\alpha - \tan\beta}{1 + \tan\alpha\tan\beta}$（$T_{(\alpha-\beta)}$）</li>
+</ul>
+
+<h3>二、二倍角公式</h3>
+<ul>
+<li>$\sin 2\alpha = 2\sin\alpha\cos\alpha = \frac{2\tan\alpha}{1 + \tan^2\alpha}$</li>
+<li>$\cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha$</li>
+<li>$\tan 2\alpha = \frac{2\tan\alpha}{1 - \tan^2\alpha}$</li>
+</ul>
+
+<h3>三、降幂公式（升角公式）</h3>
+<ul>
+<li>$\sin^2\alpha = \frac{1 - \cos 2\alpha}{2}$</li>
+<li>$\cos^2\alpha = \frac{1 + \cos 2\alpha}{2}$</li>
+</ul>
+
+<h3>四、辅助角公式</h3>
+<p>$$a\sin x + b\cos x = \sqrt{a^2 + b^2}\sin(x + \varphi)$$</p>
+<p>其中 $\tan\varphi = \frac{b}{a}$（注意 $a, b$ 符号决定 $\varphi$ 所在象限）</p>
+
+<p><strong>常见形式</strong>：</p>
+<ul>
+<li>$\sin x \pm \cos x = \sqrt{2}\sin(x \pm \frac{\pi}{4})$</li>
+<li>$\sqrt{3}\sin x \pm \cos x = 2\sin(x \pm \frac{\pi}{6})$</li>
+<li>$\sin x \pm \sqrt{3}\cos x = 2\sin(x \pm \frac{\pi}{3})$</li>
+</ul>
+
+<h3>五、三角恒等变换策略</h3>
+<ol>
+<li><strong>角的关系</strong>：拆角、凑角、倍角、半角</li>
+<li><strong>名的关系</strong>：弦化切、切化弦（齐次式）</li>
+<li><strong>式的关系</strong>：降幂、升幂、辅助角公式统一</li>
+<li><strong>"1"的代换</strong>：$1 = \sin^2\alpha + \cos^2\alpha = \tan\frac{\pi}{4}$</li>
+</ol>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_三角函数的概念与诱导公式.html">三角函数的概念与诱导公式</a> — 恒等变换的基础工具</li>
+<li><a href="高一筑基_数学_核心知识网络_三角函数的图象与性质.html">三角函数的图象与性质</a> — 化简后分析图象性质</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+<ul>
+<li>易错点：辅助角公式中 $\tan\varphi = \frac{b}{a}$，注意 $\varphi$ 的象限由 $a, b$ 共同决定，不是仅由 $\frac{b}{a}$ 决定</li>
+<li>三角大题化简的标准路径：诱导公式 $\rightarrow$ 和差/倍角展开 $\rightarrow$ 降幂 $\rightarrow$ 辅助角公式 $\rightarrow$ $y = A\sin(\omega x + \varphi)$ 形式</li>
+<li>广东卷常考：给定三角函数式化简后求周期、单调区间、最值</li>
+</ul>
+
+  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+</body>
+</html>
