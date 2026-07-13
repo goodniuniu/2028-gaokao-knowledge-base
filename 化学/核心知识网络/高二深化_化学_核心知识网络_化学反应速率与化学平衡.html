@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>化学反应速率与化学平衡 | 2028高考化学</title>
+<!-- MathJax 3 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\(', '\)']],
+    displayMath: [['$$', '$$'], ['\[', '\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  h4 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .back:hover { background: #2980b9; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; border-radius: 4px; }
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>化学反应速率与化学平衡</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>人教版选择性必修第一册 / 2023-2025广东选择性考试·化学速率平衡专题</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>关键概念</h3>
+
+<ul>
+<li><strong>反应速率</strong>：单位时间内反应物或生成物浓度的变化量，$v = \Delta c / \Delta t$</li>
+<li><strong>化学平衡</strong>：可逆反应中正逆反应速率相等，各组分浓度保持不变的状态</li>
+<li><strong>平衡常数K</strong>：平衡时生成物浓度幂之积与反应物浓度幂之积的比值</li>
+<li><strong>转化率</strong>：已转化的反应物占起始反应物的百分比</li>
+<li><strong>勒夏特列原理</strong>：改变影响平衡的一个条件，平衡向减弱这种改变的方向移动</li>
+<li><strong>等效平衡</strong>：不同起始状态达到相同平衡状态（各组分百分含量相同）</li>
+</ul>
+
+<h3>核心公式/定理</h3>
+
+<h4>1. 反应速率计算</h4>
+
+<pre><code>v = Δc/Δt（单位：mol·L⁻¹·s⁻¹ 或 mol·L⁻¹·min⁻¹）
+同一反应：v(A):v(B):v(C):v(D) = m:n:p:q（化学计量数之比）</code></pre>
+
+<blockquote>
+注意事项：速率取正值；固体和纯液体浓度视为常数，不代入速率表达式；v表示的是平均速率，非瞬时速率
+</blockquote>
+
+<h4>2. 平衡常数K</h4>
+
+<pre><code>一般表达式：mA(g) + nB(g) ⇌ pC(g) + qD(g)
+K = [C]^p[D]^q / ([A]^m[B]^n)</code></pre>
+
+<blockquote>
+适用条件：只与温度有关，与浓度、压强、催化剂无关</p>
+
+<p>注意事项：</p>
+
+<ul>
+<li>纯固体和纯液体不写入表达式</li>
+<li>K值越大，反应进行程度越大</li>
+<li>正反应K与逆反应K'互为倒数：K_正 = 1/K_逆</li>
+<li>反应相加，K相乘；反应乘以系数n，K变为n次方</li>
+</ul>
+</blockquote>
+
+<h4>3. 平衡转化率</h4>
+
+<pre><code>α = (已转化的浓度/起始浓度) × 100%</code></pre>
+
+<blockquote>
+注意事项：多反应物时，增加一种反应物浓度，可提高另一种反应物的转化率，但自身转化率降低
+</blockquote>
+
+<h4>4. 勒夏特列原理速判表</h4>
+
+<table>
+<tr><th>改变条件</th><th>平衡移动方向</th><th>对速率的影响</th><th>K值变化</th></tr>
+<tr><td>增大反应物浓度</td><td>正向移动</td><td>v_正突增，v_逆渐变</td><td>不变</td></tr>
+<tr><td>减小生成物浓度</td><td>正向移动</td><td>v_逆突减</td><td>不变</td></tr>
+<tr><td>增大压强（缩体）</td><td>向气体分子数减小方向</td><td>均增大</td><td>不变</td></tr>
+<tr><td>减小压强（扩体）</td><td>向气体分子数增大方向</td><td>均减小</td><td>不变</td></tr>
+<tr><td>升高温度</td><td>向吸热方向</td><td>均增大</td><td>吸热反应K增大</td></tr>
+<tr><td>降低温度</td><td>向放热方向</td><td>均减小</td><td>放热反应K增大</td></tr>
+<tr><td>加入催化剂</td><td>不移动</td><td>同等倍数增大</td><td>不变</td></tr>
+</table>
+
+<blockquote>
+压强只对气体分子数有变化的反应有影响；恒容充惰性气体，各组分浓度不变，平衡不移动
+</blockquote>
+
+<h4>5. 平衡状态判断标志</h4>
+
+<pre><code>本质标志：v_正 = v_逆 ≠ 0
+宏观标志：各组分浓度/百分含量保持不变</code></pre>
+
+<table>
+<tr><th>条件</th><th>判断是否平衡</th></tr>
+<tr><td>各组分浓度不变</td><td>是（本质标志）</td></tr>
+<tr><td>混合气体总压不变（Δn≠0）</td><td>是</td></tr>
+<tr><td>混合气体平均摩尔质量不变（Δn≠0或全气体）</td><td>是</td></tr>
+<tr><td>混合气体密度不变（恒容/恒压需具体分析）</td><td>不一定</td></tr>
+<tr><td>颜色不变（有有色物质）</td><td>是</td></tr>
+<tr><td>温度不变（绝热体系）</td><td>是</td></tr>
+</table>
+
+<h3>方法步骤</h3>
+
+<h4>三段式计算法（核心工具）</h4>
+
+<pre><code>         mA(g) + nB(g) ⇌ pC(g) + qD(g)
+起始     a        b        0        0
+转化     mx       nx       px       qx
+平衡     a-mx     b-nx     px       qx</code></pre>
+
+<blockquote>
+步骤：</p>
+
+<ol>
+<li>列出起始浓度（mol/L）</li>
+<li>设转化量为x，按比例写出转化量和平衡量</li>
+<li>根据已知条件列方程（如转化率、K值、压强比）</li>
+<li>求解x，进而求K、转化率、平衡浓度</li>
+</ol>
+</blockquote>
+
+<h4>等效平衡判断</h4>
+
+<table>
+<tr><th>条件</th><th>等效平衡类型</th><th>判断标准</th></tr>
+<tr><td>恒温恒容</td><td>完全等效</td><td>起始投料换算成同侧后完全相同</td></tr>
+<tr><td>恒温恒容</td><td>比例等效（Δn=0）</td><td>起始投料换算成同侧后成比例</td></tr>
+<tr><td>恒温恒压</td><td>比例等效</td><td>起始投料换算成同侧后成比例</td></tr>
+</table>
+
+<blockquote>
+换算方法：一边倒法——将生成物全部转化为反应物，看是否相同/成比例
+</blockquote>
+
+<h3>记忆口诀/技巧</h3>
+
+<blockquote>
+<strong>勒夏特列原理口诀</strong>："增谁减谁，减谁增谁；升温向吸，降温向放；加压向少，减压向多。"</p>
+
+<p><strong>K值温度关系</strong>：吸热升温K增大，放热升温K减小——与平衡移动方向一致。</p>
+
+<p><strong>等效平衡速记</strong>：恒温恒容要相同，恒温恒压成比例；一边倒法是通法。</p>
+
+<p><strong>广东情境提示</strong>：广东卷速率平衡题常以广东本地化工为情境（如茂名石化裂化、珠海盐化工、锂电池生产），注意从情境中提取反应方程式和条件变化。
+</blockquote>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_化学_核心知识网络_元素周期律与位构性.md">元素周期律与位构性</a> — 反应速率与元素性质关联</li>
+<li><a href="高二深化_化学_核心知识网络_电化学体系.md">电化学体系</a> — 电极电势与氧化还原平衡</li>
+<li>[水溶液中的离子平衡] — 弱电解质平衡、水解平衡（待补充）</li>
+<li><a href="../典型题型与方法/高二深化_化学_典型题型与方法_广东化学工艺流程题通用框架.md">广东化学工艺流程题通用框架</a> — 工艺流程中涉及速率与平衡条件控制</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+
+<ul>
+<li>平衡图像分析是广东卷高频考点，注意：</li>
+<li>v-t图：突变点分析条件变化（浓度突变、压强渐变、温度影响两条曲线）</li>
+<li>c-t图：拐点即平衡，斜率即速率</li>
+<li>转化率-温度/压强图：先找最佳条件，再判断ΔH和Δn</li>
+<li>平衡计算注意：K的单位有时需写出（取决于表达式）；若题目给的是分压，则用Kp计算</li>
+<li>多平衡体系中，注意联立关系（如CO₂溶于水，涉及溶解平衡、电离平衡、水解平衡）</li>
+<li>催化剂只改变速率，不改变平衡，不能提高转化率，只能缩短达到平衡的时间</li>
+</ul>
+  <div class="footer">2028高考知识库 | 广东新高考化学</div>
+</body>
+</html>

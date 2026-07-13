@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>匀变速直线运动公式体系 | 2028高考物理</title>
+<!-- MathJax 3 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\(', '\)']],
+    displayMath: [['$$', '$$'], ['\[', '\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  h4 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .back:hover { background: #2980b9; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; border-radius: 4px; }
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>匀变速直线运动公式体系</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>人教版必修第一册第二章 / 广东选择性考试高频考点</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高一筑基</td></tr>
+<tr><td><strong>难度</strong></td><td>★★☆☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
+<tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷均考查）。基础题为主，常以"广东交通""大湾区基建"为情境（如港珠澳大桥上的汽车运动、高铁加速度）。考查频率：选择题中1-2道+计算题第一问。难度定位：基础，但需注意刹车陷阱和往返运动的边界条件。赋分提示：基础题必须满分，原始分差距在赋分后会被放大。</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>关键概念</h3>
+
+<ul>
+<li><strong>匀变速直线运动</strong>：加速度恒定的直线运动，a = 常量，方向与速度同向（加速）或反向（减速）</li>
+<li><strong>v-t图</strong>：斜率=加速度，面积=位移，纵截距=初速度</li>
+<li><strong>x-t图</strong>：斜率=速度，抛物线表示匀变速</li>
+<li><strong>追及相遇</strong>：两物体位移关系决定相遇条件；临界条件：速度相等时距离最大/最小</li>
+<li><strong>刹车陷阱</strong>：刹车至停止后不再反向运动，需判断刹车时间是否超出给定时间</li>
+</ul>
+
+<h3>核心公式/定理</h3>
+
+<h4>五大基本公式</h4>
+
+<pre><code>① v = v₀ + at                          （速度公式）
+② x = v₀t + ½at²                       （位移公式）
+③ v² - v₀² = 2ax                       （不含时公式）
+④ x = (v₀ + v)t / 2 = v̄t              （平均速度公式）
+⑤ Δx = aT²                              （位移差公式，连续相等时间间隔）</code></pre>
+
+<blockquote>
+<strong>适用条件</strong>：匀变速直线运动（a恒定）</p>
+
+<p><strong>注意事项</strong>：公式为矢量式，需先规定正方向；减速时a取负值；刹车问题需检验速度是否已减为零
+</blockquote>
+
+<h4>中间时刻速度公式</h4>
+
+<pre><code>v_(t/2) = v̄ = (v₀ + v) / 2</code></pre>
+
+<blockquote>
+适用：匀变速直线运动中，某段时间内的平均速度等于该段时间中间时刻的瞬时速度
+</blockquote>
+
+<h4>初速度为零的特殊比例（自由落体/静止起加速）</h4>
+
+<pre><code>① 1T末、2T末、3T末…速度之比：v₁:v₂:v₃… = 1:2:3…
+② 1T内、2T内、3T内…位移之比：x₁:x₂:x₃… = 1:4:9…
+③ 第1T内、第2T内、第3T内…位移之比：xⅠ:xⅡ:xⅢ… = 1:3:5…
+④ 通过连续相等位移所用时间之比：t₁:t₂:t₃… = 1:(√2-1):(√3-√2)…</code></pre>
+
+<h3>方法步骤</h3>
+
+<h4>v-t图分析四步法</h4>
+
+<ol>
+<li><strong>看轴</strong>：确认横纵轴物理量及单位</li>
+<li><strong>看线</strong>：直线→匀变速；斜率→加速度（正负表示方向）</li>
+<li><strong>看面积</strong>：面积→位移（横轴上方面积为正，下方为负）</li>
+<li><strong>看交点</strong>：交点表示速度相同，往往是追及问题的临界条件</li>
+</ol>
+
+<h4>追及相遇问题分析步骤</h4>
+
+<ol>
+<li><strong>画运动示意图</strong>：标出两物体初始位置、运动方向</li>
+<li><strong>列位移方程</strong>：分别写出两物体的位移表达式 x₁(t) 和 x₂(t)</li>
+<li><strong>找临界条件</strong>：速度相等时距离最大或最小</li>
+<li><strong>列相遇方程</strong>：x₁ = x₂ + x₀（x₀为初始距离），解出时间t</li>
+<li><strong>检验合理性</strong>：判断是否在有效时间范围内（如刹车是否已停止）</li>
+</ol>
+
+<h4>刹车陷阱判断法</h4>
+
+<ol>
+<li>先用 v = v₀ + at 求刹车停止时间 t₀ = -v₀/a（取正值）</li>
+<li>比较给定时间 t 与 t₀：若 t ≤ t₀，直接用公式；若 t > t₀，位移按 t₀ 计算</li>
+<li>常见错误：不判断直接代入大时间，导致位移为负或速度反向的错误结果</li>
+</ol>
+
+<h3>记忆口诀/技巧</h3>
+
+<blockquote>
+<strong>"速位速方差，平均位移差，五式记心间，矢量方向先定好"</strong></p>
+
+<p><strong>刹车口诀</strong>："先求停时，再比大小，超时按停，不超时正常算"</p>
+
+<p><strong>v-t图面积口诀</strong>："上正下负，斜率加减，面积位移，交点临界"
+</blockquote>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_物理_核心知识网络_牛顿三定律与受力分析.md">高一筑基_物理_核心知识网络_牛顿三定律与受力分析</a> — 运动学与力学的桥梁，牛顿第二定律决定加速度</li>
+<li><a href="高一筑基_物理_核心知识网络_功和能与功能关系.md">高一筑基_物理_核心知识网络_功和能与功能关系</a> — 运动学公式可结合动能定理求解变力问题</li>
+<li><a href="高二深化_物理_核心知识网络_电磁感应定律.md">高二深化_物理_核心知识网络_电磁感应定律</a> — 电磁感应中的导轨问题需结合运动学分析</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+
+<p>（补充说明、个人理解、易错点提示、广东卷特殊考法等）</p>
+
+<ul>
+<li><strong>广东情境化命题常见素材</strong>：高铁运动（加速度恒定）、港珠澳大桥上的车辆、广州地铁的启动与制动、无人机升降运动</li>
+<li><strong>易错点</strong>：</li>
+</ul>
+
+<ol>
+<li>自由落体/竖直上抛：注意g的方向，通常取向上为正则g = -9.8m/s²</li>
+<li>往返运动：竖直上抛到最高点后自由落体，可用全程法（注意位移方向）</li>
+<li>纸带实验：Δx = aT² 用于求加速度，注意区分计数点和计时点</li>
+</ol>
+
+<ul>
+<li><strong>实验联系</strong>：打点计时器纸带分析、光电门测速度、频闪照片分析均需用本节公式</li>
+<li><strong>等级赋分提示</strong>：本节为基础章节，选择题和计算题第一问几乎必考，务必确保不丢分</li>
+</ul>
+  <div class="footer">2028高考知识库 | 广东新高考物理</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电场公式体系 | 2028高考物理</title>
+<!-- MathJax 3 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\(', '\)']],
+    displayMath: [['$$', '$$'], ['\[', '\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  h4 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .back:hover { background: #2980b9; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; border-radius: 4px; }
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>电场公式体系</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>人教版选择性必修第二册 / 2023-2025广东选择性考试·物理电场专题</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>关键概念</h3>
+
+<ul>
+<li><strong>电场强度 $E$</strong>：描述电场力的性质的物理量，单位正电荷所受电场力</li>
+<li><strong>电势 $\varphi$</strong>：描述电场能的性质的物理量，单位正电荷具有的电势能</li>
+<li><strong>电势差 $U$</strong>：两点间电势之差，又称电压</li>
+<li><strong>电场线</strong>：形象地描述电场分布的曲线，切线方向表场强方向，疏密表场强大小</li>
+<li><strong>等势面</strong>：电势相等的点构成的面，与电场线垂直</li>
+</ul>
+
+<h3>核心公式/定理</h3>
+
+<h4>1. 电场强度的三种求法</h4>
+
+<pre><code>定义式：E = F/q（适用于任何电场，q为试探电荷）
+点电荷场强：E = kQ/r²（仅适用于真空中的点电荷）
+匀强电场：E = U/d（d为沿电场线方向的距离）</code></pre>
+
+<blockquote>
+适用条件：定义式普适；点电荷式要求真空；匀强电场式仅适用于匀强电场</p>
+
+<p>注意事项：E = F/q 中 q 是试探电荷，E 与 q 无关；E = kQ/r² 中 Q 是场源电荷
+</blockquote>
+
+<h4>2. 电势与电势能</h4>
+
+<pre><code>电势定义：φ = Ep/q（单位：V）
+电势能：Ep = qφ
+电势差：U_AB = φ_A - φ_B = W_AB/q</code></pre>
+
+<blockquote>
+适用条件：任何静电场</p>
+
+<p>注意事项：电势、电势能是标量，但有正负；正电荷在电势高处电势能大，负电荷相反
+</blockquote>
+
+<h4>3. 电场力做功与电势能变化</h4>
+
+<pre><code>电场力做功：W_AB = qU_AB = q(φ_A - φ_B)
+功能关系：W_电 = -ΔEp = Ep_A - Ep_B</code></pre>
+
+<blockquote>
+适用条件：任何静电场</p>
+
+<p>注意事项：电场力做正功，电势能减小；电场力做负功，电势能增大
+</blockquote>
+
+<h4>4. 电场线与等势面关系</h4>
+
+<pre><code>电场线 ⊥ 等势面
+沿电场线方向电势降低
+电场线密处场强大，等势面密处场强大</code></pre>
+
+<h4>5. 常见电场模型</h4>
+
+<table>
+<tr><th>电场类型</th><th>场强特点</th><th>电势特点</th></tr>
+<tr><td>点电荷</td><td>E = kQ/r²，径向分布</td><td>正电荷：φ>0，近大远小；负电荷相反</td></tr>
+<tr><td>等量异种电荷</td><td>连线：中点最小；中垂线：中点最大，向外减小</td><td>中垂线为零势面</td></tr>
+<tr><td>等量同种电荷</td><td>连线：中点为零；中垂线：中点最大，先增后减</td><td>中垂线从中心向两侧先降后升（正电荷）</td></tr>
+<tr><td>匀强电场</td><td>处处相等</td><td>沿场强方向均匀降低</td></tr>
+</table>
+
+<h3>方法步骤</h3>
+
+<h4>电场中粒子运动分析三步法</h4>
+
+<ol>
+<li><strong>判断受力</strong>：$F = qE$，注意电荷正负决定力的方向</li>
+<li><strong>分析运动</strong>：直线运动（匀变速）或曲线运动（类平抛）</li>
+<li><strong>能量分析</strong>：只有电场力做功时，$Ek + Ep = 常数$</li>
+</ol>
+
+<h4>匀强电场中电势计算技巧</h4>
+
+<ol>
+<li>找等势点：线段中点电势 = (两端点电势和)/2</li>
+<li>等分法：等长线段电势差相等</li>
+<li>作图法：连接等势点 → 作垂线得电场线方向</li>
+</ol>
+
+<h3>记忆口诀/技巧</h3>
+
+<blockquote>
+<strong>场强方向口诀</strong>：正电荷受力方向为场强方向，负电荷相反。</p>
+
+<p><strong>电势高低口诀</strong>：沿电场线方向电势降低，正电荷在高电势处电势能大。</p>
+
+<p><strong>广东情境提示</strong>：广东卷常考带电粒子在电场中的偏转（示波器、喷墨打印、静电除尘等科技情境），注意从情境中提取 $E$ 的方向和 $d$ 的取值。
+</blockquote>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高二深化_物理_核心知识网络_磁场公式体系.md">磁场公式体系</a> — 电磁场综合时联合使用</li>
+<li><a href="高二深化_物理_核心知识网络_电磁感应定律.md">电磁感应定律</a> — 电场与感应电场关联</li>
+<li><a href="../典型题型与方法/高二深化_物理_典型题型与方法_广东物理情境化命题专题.md">广东物理情境化命题专题</a> — 广东卷电场情境题提取方法</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+
+<ul>
+<li>广东卷电场题常结合科技情境（如电容式传感器、静电纺丝），审题时注意提取物理模型</li>
+<li>等势面与电场线垂直关系是作图题关键</li>
+<li>电势正负取决于零势点选取，但电势差与零势点无关</li>
+<li>电场叠加遵循矢量合成法则（平行四边形定则）</li>
+</ul>
+  <div class="footer">2028高考知识库 | 广东新高考物理</div>
+</body>
+</html>

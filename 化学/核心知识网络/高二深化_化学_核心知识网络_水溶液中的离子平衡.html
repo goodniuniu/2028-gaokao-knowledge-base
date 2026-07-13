@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>水溶液中的离子平衡 | 2028高考化学</title>
+<!-- MathJax 3 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\(', '\)']],
+    displayMath: [['$$', '$$'], ['\[', '\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  h4 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .back:hover { background: #2980b9; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; border-radius: 4px; }
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>水溶液中的离子平衡</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>人教版选择性必修第一册 第三章 + 广东选择性考试</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
+<tr><td><strong>广东考情</strong></td><td>考查频率：高频（近5年广东卷每年必考，常与沉淀溶解平衡、工业流程结合）；难度定位：中档~压轴（三大守恒书写、离子浓度比较需综合多平衡，沉淀溶解平衡常与Ksp计算结合）；特色描述：广东卷常将离子平衡与真实情境结合（如废水处理、矿物提纯、医药制备），溶液pH调控是工艺流程中的关键步骤；赋分提示：本专题是等级赋分"拉分点"，掌握三大守恒和Ksp计算是高分关键</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>关键概念</h3>
+
+<ul>
+<li><strong>弱电解质电离平衡</strong>：弱酸/弱碱在水中部分电离，存在电离平衡。电离度α = 已电离分子数/总分子数，温度升高、稀释溶液促进电离</li>
+<li><strong>水的电离与离子积</strong>：H₂O ⇌ H⁺ + OH⁻，K_w = c(H⁺)·c(OH⁻) = 1×10⁻¹⁴（25℃），K_w只与温度有关，温度升高K_w增大</li>
+<li><strong>盐类水解</strong>：盐电离出的离子与水电离出的H⁺或OH⁻结合生成弱电解质的反应，"有弱才水解，越弱越水解，谁强显谁性"</li>
+<li><strong>沉淀溶解平衡</strong>：难溶电解质在水中存在溶解平衡，如AgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq)，溶度积Ksp = c(Ag⁺)·c(Cl⁻)</li>
+<li><strong>三大守恒</strong>：电荷守恒、物料守恒、质子守恒（可由电荷守恒-物料守恒推导）</li>
+</ul>
+
+<h3>核心公式/定理</h3>
+
+<pre><code>1. 弱酸电离平衡常数：
+   HA ⇌ H⁺ + A⁻，Kₐ = [c(H⁺)·c(A⁻)] / c(HA)
+   对于弱酸：c(H⁺) ≈ √(Kₐ·c)（当c/Kₐ ≥ 500时）
+
+2. 水的离子积：
+   K_w = c(H⁺)·c(OH⁻) = 1×10⁻¹⁴（25℃）
+   pH = -lg c(H⁺)，pOH = -lg c(OH⁻)，pH + pOH = 14（25℃）
+
+3. 盐类水解平衡常数：
+   A⁻ + H₂O ⇌ HA + OH⁻，K_h = K_w / Kₐ
+   水解程度：K_h越大，水解程度越大
+
+4. 溶度积：
+   AₘBₙ(s) ⇌ mAⁿ⁺(aq) + nBᵐ⁻(aq)
+   Ksp = cᵐ(Aⁿ⁺)·cⁿ(Bᵐ⁻)
+   沉淀生成条件：Q &gt; Ksp；沉淀溶解条件：Q &lt; Ksp
+   沉淀转化：Ksp小的沉淀更容易生成，但需考虑离子浓度
+
+5. 三大守恒通式：
+   电荷守恒：Σ(正电荷) = Σ(负电荷)（系数×电荷数）
+   物料守恒：某元素所有存在形式浓度之和 = 原始投入浓度（考虑系数比）
+   质子守恒：得质子产物 = 失质子产物（参考水准法）</code></pre>
+
+<blockquote>
+适用条件：Kₐ近似公式适用于弱酸且电离度小的情况；三大守恒适用于任何电解质溶液</p>
+
+<p>注意事项：① 温度影响K_w和Ksp，计算时注意温度条件；② 混合溶液中需考虑多重平衡的竞争；③ 沉淀转化需同时考虑Ksp和离子浓度
+</blockquote>
+
+<h3>方法步骤</h3>
+
+<h4>三大守恒书写方法</h4>
+
+<ol>
+<li><strong>电荷守恒</strong>：</li>
+</ol>
+
+<ul>
+<li>步骤：列出溶液中所有阳离子和阴离子</li>
+<li>原则：正电荷总数 = 负电荷总数，离子浓度前乘其所带电荷数</li>
+<li>示例：Na₂CO₃溶液中：c(Na⁺) + c(H⁺) = c(OH⁻) + c(HCO₃⁻) + 2c(CO₃²⁻)</li>
+</ul>
+
+<ol>
+<li><strong>物料守恒</strong>：</li>
+</ol>
+
+<ul>
+<li>步骤：确定原始溶质的组成比</li>
+<li>原则：某原子/基团的所有存在形式浓度之和保持原始比例</li>
+<li>示例：Na₂CO₃溶液中：c(Na⁺) = 2[c(CO₃²⁻) + c(HCO₃⁻) + c(H₂CO₃)]</li>
+</ul>
+
+<ol>
+<li><strong>质子守恒</strong>：</li>
+</ol>
+
+<ul>
+<li>方法一：电荷守恒 - 物料守恒（消去不参与质子转移的离子）</li>
+<li>方法二：参考水准法——选H₂O和溶质为参考水准，得质子产物浓度之和 = 失质子产物浓度之和</li>
+<li>示例：Na₂CO₃溶液中：c(OH⁻) = c(H⁺) + c(HCO₃⁻) + 2c(H₂CO₃)</li>
+</ul>
+
+<h4>离子浓度大小比较步骤</h4>
+
+<ol>
+<li><strong>定溶质</strong>：确定溶液中的溶质种类和浓度</li>
+<li><strong>判水解/电离</strong>：判断溶质电离、水解程度，确定溶液酸碱性</li>
+<li><strong>列所有离子</strong>：列出溶液中所有存在的离子和分子</li>
+<li><strong>用守恒辅助</strong>：利用电荷守恒、物料守恒辅助判断</li>
+<li><strong>定大小顺序</strong>：</li>
+</ol>
+
+<ul>
+<li>不水解离子 > 水解/电离产生的主要离子 > 次要离子 > 极微量离子</li>
+<li>示例：Na₂CO₃溶液中：c(Na⁺) > c(CO₃²⁻) > c(OH⁻) > c(HCO₃⁻) > c(H⁺)</li>
+</ul>
+
+<h3>盐类水解规律速查</h3>
+
+<table>
+<tr><th>盐的类型</th><th>实例</th><th>水解离子</th><th>溶液酸碱性</th><th>离子浓度特点</th></tr>
+<tr><td>强酸强碱盐</td><td>NaCl、KNO₃</td><td>无</td><td>中性</td><td>c(H⁺) = c(OH⁻)</td></tr>
+<tr><td>强酸弱碱盐</td><td>NH₄Cl、FeCl₃</td><td>阳离子</td><td>酸性</td><td>c(H⁺) > c(OH⁻)</td></tr>
+<tr><td>弱酸强碱盐</td><td>CH₃COONa、Na₂CO₃</td><td>阴离子</td><td>碱性</td><td>c(OH⁻) > c(H⁺)</td></tr>
+<tr><td>弱酸弱碱盐</td><td>CH₃COONH₄</td><td>双水解</td><td>看Kₐ与K_b相对大小</td><td>复杂，需具体分析</td></tr>
+</table>
+
+<h3>Ksp计算与沉淀转化</h3>
+
+<pre><code>1. 溶度积与溶解度换算（AB型，如AgCl）：
+   Ksp = s²，s = √Ksp
+
+2. 同离子效应：
+   在AgCl饱和溶液中加入NaCl，[Cl⁻]增大，AgCl溶解度降低
+
+3. 沉淀转化：
+   AgCl(s) + I⁻(aq) ⇌ AgI(s) + Cl⁻(aq)
+   K = Ksp(AgCl)/Ksp(AgI) &gt;&gt; 1，转化趋势大
+
+4. 分步沉淀：
+   当溶液中同时存在多种可被沉淀的离子时，Ksp小的先沉淀
+   但需考虑离子浓度：若浓度差异大，Ksp大的也可能先沉淀</code></pre>
+
+<h3>记忆口诀/技巧</h3>
+
+<blockquote>
+水解规律口诀："有弱才水解，无弱不水解，越弱越水解，谁强显谁性，双弱双水解，双强不水解"</p>
+
+<p>守恒书写口诀："电荷守恒看电荷，物料守恒看元素，质子守恒得与失，两式相减也能出"</p>
+
+<p>pH判断口诀："强酸强碱看浓度，弱酸弱碱看Kₐ和K_b，盐水解看谁强，缓冲溶液用Kₐ"
+</blockquote>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高二深化_化学_核心知识网络_化学反应速率与化学平衡.md">化学反应速率与化学平衡</a> — 电离平衡、水解平衡、沉淀溶解平衡均属于化学平衡，适用勒夏特列原理</li>
+<li><a href="高二深化_化学_核心知识网络_电化学体系.md">电化学体系</a> — 电解池中离子放电顺序与溶液中离子浓度、酸碱性密切相关</li>
+<li><a href="高一筑基_化学_核心知识网络_化学计量与物质的量.md">化学计量与物质的量</a> — 溶液浓度计算、物质的量守恒在物料守恒中的应用</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+
+<ol>
+<li><strong>广东卷高频考法</strong>：</li>
+</ol>
+
+<ul>
+<li>工艺流程中的pH调控：通过调节pH使金属离子分步沉淀（如Fe³⁺在pH≈3-4时完全沉淀，Cu²⁺在pH≈5-6时开始沉淀），需结合Ksp计算</li>
+<li>废水处理：利用沉淀法去除重金属离子，需判断沉淀完全性（一般认为离子浓度<10⁻⁵mol/L为沉淀完全）</li>
+<li>图像题：酸碱中和滴定曲线、沉淀量-pH曲线、溶解度-温度曲线等</li>
+</ul>
+
+<ol>
+<li><strong>易错警示</strong>：</li>
+</ol>
+
+<ul>
+<li>混淆电离度和电离常数：电离度α与浓度有关，电离常数Kₐ只与温度有关</li>
+<li>水的电离被忽略：酸或碱溶液中水电离出的c(H⁺)或c(OH⁻)可能很小但不为零，水电离的c(H⁺) = c(OH⁻)</li>
+<li>缓冲溶液：弱酸及其盐、弱碱及其盐组成的混合溶液，pH可用Henderson-Hasselbalch方程近似计算</li>
+<li>沉淀完全判断：当c(离子) < 1×10⁻⁵ mol/L时认为沉淀完全</li>
+</ul>
+
+<ol>
+<li><strong>温度影响</strong>：</li>
+</ol>
+
+<ul>
+<li>升温促进电离（电离吸热）、促进水解（水解吸热）、K_w增大</li>
+<li>但Ksp变化需具体看溶解过程吸热还是放热</li>
+</ul>
+
+<ol>
+<li><strong>与有机化学关联</strong>：有机反应中的酸碱催化（如酯的水解在碱性条件下更彻底）也涉及离子平衡</li>
+<li><strong>等级赋分提示</strong>：本专题是广东化学卷"中高档题"集中区，确保三大守恒书写准确、Ksp计算熟练，是赋分从B到A的关键突破点</li>
+</ol>
+  <div class="footer">2028高考知识库 | 广东新高考化学</div>
+</body>
+</html>

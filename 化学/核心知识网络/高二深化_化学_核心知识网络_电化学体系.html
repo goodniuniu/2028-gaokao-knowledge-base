@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电化学体系 | 2028高考化学</title>
+<!-- MathJax 3 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\(', '\)']],
+    displayMath: [['$$', '$$'], ['\[', '\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  h4 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .back:hover { background: #2980b9; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; border-radius: 4px; }
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>电化学体系</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>人教版选择性必修第一册 / 2023-2025广东选择性考试·化学电化学专题</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>关键概念</h3>
+
+<ul>
+<li><strong>原电池</strong>：将化学能转化为电能的装置，自发氧化还原反应</li>
+<li><strong>电解池</strong>：将电能转化为化学能的装置，非自发氧化还原反应（需外加电源）</li>
+<li><strong>电极判断</strong>：</li>
+<li>原电池：负极（失电子/氧化），正极（得电子/还原）</li>
+<li>电解池：阳极（失电子/氧化），阴极（得电子/还原）</li>
+<li><strong>电极电势</strong>：衡量氧化还原能力的标度，电势越高氧化性越强</li>
+<li><strong>盐桥</strong>：消除液接电势，保持电荷平衡，使离子能自由移动</li>
+</ul>
+
+<h3>核心公式/定理</h3>
+
+<h4>1. 原电池核心关系</h4>
+
+<pre><code>负极（阳极）：失电子，氧化反应，电子流出
+正极（阴极）：得电子，还原反应，电子流入
+
+总反应 = 正极反应 + 负极反应
+电子流向：负极 → 外电路 → 正极
+电流方向：正极 → 外电路 → 负极
+离子移动：阳离子→正极，阴离子→负极</code></pre>
+
+<blockquote>
+注意事项：负极金属性较强，正极金属性较弱或导电惰性材料；燃料电池中燃料为负极，氧化剂为正极
+</blockquote>
+
+<h4>2. 电解池核心关系</h4>
+
+<pre><code>阳极：与电源正极相连，失电子，氧化反应
+阴极：与电源负极相连，得电子，还原反应
+
+放电顺序（阳极/阴极）：
+阳极（活性电极优先溶解）：
+  若为惰性电极（Pt/C）：S²⁻ &gt; I⁻ &gt; Br⁻ &gt; Cl⁻ &gt; OH⁻ &gt; 含氧酸根 &gt; F⁻
+  若为活性电极（Cu/Ag）：电极本身溶解
+
+阴极（阳离子得电子）：
+  Ag⁺ &gt; Fe³⁺ &gt; Cu²⁺ &gt; H⁺(酸) &gt; Pb²⁺ &gt; Fe²⁺ &gt; Zn²⁺ &gt; H⁺(水) &gt; Al³⁺ &gt; Mg²⁺ &gt; Na⁺</code></pre>
+
+<blockquote>
+注意事项：活性电极（除Pt、Au、C外）作阳极时自身溶解；阴极放电顺序与金属活动性顺序相反
+</blockquote>
+
+<h4>3. 电极反应式书写通法</h4>
+
+<pre><code>① 判断电极：先确定是原电池还是电解池，再确定正负/阴阳极
+② 确定反应物：负极/阳极 → 失电子；正极/阴极 → 得电子
+③ 配平三步：电子守恒 → 电荷守恒（用H⁺/OH⁻/H₂O） → 原子守恒
+④ 检查：得失电子数相等，原子守恒，电荷守恒</code></pre>
+
+<h4>4. 常见电极反应式速查表</h4>
+
+<table>
+<tr><th>电池类型</th><th>负极反应</th><th>正极反应</th><th>总反应</th></tr>
+<tr><td>Zn-Cu原电池</td><td>Zn-2e⁻=Zn²⁺</td><td>Cu²⁺+2e⁻=Cu</td><td>Zn+Cu²⁺=Zn²⁺+Cu</td></tr>
+<tr><td>铜锌浓差电池</td><td>Zn-2e⁻=Zn²⁺</td><td>Cu²⁺+2e⁻=Cu</td><td>同上</td></tr>
+<tr><td>氢氧燃料电池(酸性)</td><td>H₂-2e⁻=2H⁺</td><td>O₂+4H⁺+4e⁻=2H₂O</td><td>2H₂+O₂=2H₂O</td></tr>
+<tr><td>氢氧燃料电池(碱性)</td><td>H₂-2e⁻+2OH⁻=2H₂O</td><td>O₂+2H₂O+4e⁻=4OH⁻</td><td>2H₂+O₂=2H₂O</td></tr>
+<tr><td>甲烷燃料电池(酸性)</td><td>CH₄-8e⁻+2H₂O=CO₂+8H⁺</td><td>O₂+4H⁺+4e⁻=2H₂O</td><td>CH₄+2O₂=CO₂+2H₂O</td></tr>
+<tr><td>铅蓄电池放电</td><td>Pb-2e⁻+SO₄²⁻=PbSO₄</td><td>PbO₂+4H⁺+SO₄²⁻+2e⁻=PbSO₄+2H₂O</td><td>总反应复杂</td></tr>
+<tr><td>电解CuCl₂溶液</td><td>2Cl⁻-2e⁻=Cl₂↑</td><td>Cu²⁺+2e⁻=Cu</td><td>CuCl₂=Cu+Cl₂↑</td></tr>
+<tr><td>电解NaCl溶液</td><td>2Cl⁻-2e⁻=Cl₂↑</td><td>2H₂O+2e⁻=H₂↑+2OH⁻</td><td>2NaCl+2H₂O=2NaOH+H₂↑+Cl₂↑</td></tr>
+<tr><td>电解CuSO₄溶液</td><td>2H₂O-4e⁻=O₂↑+4H⁺</td><td>Cu²⁺+2e⁻=Cu</td><td>2CuSO₄+2H₂O=2Cu+O₂↑+2H₂SO₄</td></tr>
+<tr><td>电解精炼铜</td><td>Cu-2e⁻=Cu²⁺(粗铜)</td><td>Cu²⁺+2e⁻=Cu(纯铜)</td><td>粗铜溶解，纯铜析出</td></tr>
+</table>
+
+<h4>5. 电化学计算关系</h4>
+
+<pre><code>电子转移数 n(e⁻) = 电路中通过的电量/96500（法拉第常数F）
+或：n(e⁻) = It/F（I为电流，t为时间）
+
+串联电路：各池转移电子数相等
+电量关系：Q = It = n(e⁻) × F</code></pre>
+
+<blockquote>
+注意事项：串联电路中各电解池转移电子数相同；计算时注意单位统一（A·s = C）
+</blockquote>
+
+<h3>方法步骤</h3>
+
+<h4>原电池/电解池判断与电极确定</h4>
+
+<ol>
+<li><strong>看装置</strong>：有外接电源 → 电解池；无外接电源 → 原电池</li>
+<li><strong>看电极反应</strong>：</li>
+</ol>
+
+<ul>
+<li>原电池：活泼金属/燃料/失电子物 → 负极；不活泼/氧化剂 → 正极</li>
+<li>电解池：接电源正极 → 阳极；接电源负极 → 阴极</li>
+</ul>
+
+<ol>
+<li><strong>写反应式</strong>：先写电极反应，再写总反应</li>
+<li><strong>算定量关系</strong>：利用电子守恒建立物质的量关系</li>
+</ol>
+
+<h4>金属腐蚀与防护</h4>
+
+<table>
+<tr><th>腐蚀类型</th><th>条件</th><th>负极反应</th><th>防护方法</th></tr>
+<tr><td>化学腐蚀</td><td>干燥/非电解质</td><td>直接氧化</td><td>涂层、合金化</td></tr>
+<tr><td>吸氧腐蚀</td><td>弱酸性/中性/碱性</td><td>2H₂O+O₂+4e⁻=4OH⁻</td><td>牺牲阳极法、外加电流法</td></tr>
+<tr><td>析氢腐蚀</td><td>较强酸性</td><td>2H⁺+2e⁻=H₂↑</td><td>同上</td></tr>
+</table>
+
+<blockquote>
+广东情境：海水腐蚀（吸氧腐蚀）、港珠澳大桥防腐、南海油田设备腐蚀防护
+</blockquote>
+
+<h3>记忆口诀/技巧</h3>
+
+<blockquote>
+<strong>原电池电极判断</strong>："负氧正还"——负极氧化，正极还原。</p>
+
+<p><strong>电解池电极判断</strong>："阳氧阴还"——阳极氧化，阴极还原。</p>
+
+<p><strong>放电顺序速记</strong>：阳极：卤素 > 氢氧根 > 含氧酸根；阴极：Ag⁺ > Cu²⁺ > H⁺ > Fe²⁺ > Zn²⁺ > 活泼金属离子（不放电）。</p>
+
+<p><strong>电子流向记忆</strong>："负出正入，阳失阴得"——原电池负极出电子，正极入电子；电解池阳极失电子，阴极得电子。</p>
+
+<p><strong>广东情境提示</strong>：广东卷电化学题常与新能源、电池技术结合（如比亚迪刀片电池、锂电池、氢燃料电池、海水淡化电池），注意提取正负极材料和电解质环境。
+</blockquote>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_化学_核心知识网络_氧化还原反应核心规律.md">氧化还原反应核心规律</a> — 电化学本质是氧化还原</li>
+<li><a href="高一筑基_化学_核心知识网络_元素周期律与位构性.md">元素周期律与位构性</a> — 金属性/非金属性与电极电势关联</li>
+<li><a href="高二深化_化学_核心知识网络_化学反应速率与化学平衡.md">化学反应速率与化学平衡</a> — 电极电势与平衡常数关系</li>
+<li><a href="../典型题型与方法/高二深化_化学_典型题型与方法_广东化学工艺流程题通用框架.md">广东化学工艺流程题通用框架</a> — 流程中常涉及电解精炼</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+
+<ul>
+<li>电极反应式书写是广东卷化学高频考点，失分率高，注意：</li>
+<li>酸性环境用H⁺配平电荷，碱性环境用OH⁻配平电荷</li>
+<li>熔融盐电解质无H⁺/OH⁻，用离子配平</li>
+<li>燃料电池中电解质酸碱性决定正负极反应式的写法</li>
+<li>计算陷阱：串联电路中各池转移电子数相等，但产物的物质的量不一定相等（取决于电极反应式中的电子数）</li>
+<li>新型电池（如锂离子电池、钠离子电池、固态电池）是广东卷热门，注意：</li>
+<li>锂离子电池的Li⁺在正负极间移动，不是电子移动</li>
+<li>充电时：正极接电源正极（作阳极），负极接电源负极（作阴极）</li>
+<li>放电时正负极与充电时相反</li>
+</ul>
+  <div class="footer">2028高考知识库 | 广东新高考化学</div>
+</body>
+</html>

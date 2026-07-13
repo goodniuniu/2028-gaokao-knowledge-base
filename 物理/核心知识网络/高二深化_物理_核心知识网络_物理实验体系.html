@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>物理实验体系 | 2028高考物理</title>
+<!-- MathJax 3 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\(', '\)']],
+    displayMath: [['$$', '$$'], ['\[', '\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  h4 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .back:hover { background: #2980b9; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; border-radius: 4px; }
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>物理实验体系</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>人教版必修+选择性必修实验 / 广东选择性考试必考模块（实验题约15-18分）</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
+<tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷实验题约15-18分，力学实验+电学实验各一题）。广东卷特色：实验题常以"探究性""设计性"为主，不是简单复现教材实验，而是变式创新。常以广东本地科技为情境（如深圳智能制造、佛山光电产业）。难度定位：中档。实验题是区分度较高的题型，数据处理和误差分析是高频难点。赋分提示：实验题步骤分很多，即使结果算错，过程写对也能拿大部分分数。</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>关键概念</h3>
+
+<ul>
+<li><strong>系统误差</strong>：由实验仪器或方法引起的，有规律可循，不能通过多次测量消除</li>
+<li><strong>偶然误差</strong>：由随机因素引起，可通过多次测量取平均值减小</li>
+<li><strong>绝对误差</strong>：测量值 - 真实值</li>
+<li><strong>相对误差</strong>：绝对误差 / 真实值 × 100%</li>
+<li><strong>有效数字</strong>：从第一个非零数字开始到最后一位可靠数字</li>
+<li><strong>图像法处理数据</strong>：化曲为直，斜率和截距有物理意义</li>
+<li><strong>等效替代法</strong>：用等效的简单实验替代复杂实验（如电阻箱替代电表）</li>
+<li><strong>控制变量法</strong>：控制其他变量不变，研究某两个量的关系（如a与F、M的关系）</li>
+<li><strong>逐差法</strong>：处理匀变速直线运动纸带数据，减小误差</li>
+</ul>
+
+<h3>核心公式/定理</h3>
+
+<h4>力学实验核心公式</h4>
+
+<p><strong>实验一：探究加速度与力、质量的关系</strong></p>
+
+<pre><code>原理：F = ma → a = F/M（控制变量法）
+
+平衡摩擦力：
+    不挂砂桶，小车连纸带，调整斜面倾角，使小车能匀速下滑
+    （纸带上点迹均匀，即匀速运动）
+
+条件：
+    ① 砂桶质量 m &lt;&lt; 小车质量 M（保证拉力 ≈ mg）
+    ② 细线与木板平行
+    ③ 先接通电源，后释放小车
+
+数据处理：
+    a-F图：应过原点的直线（斜率 = 1/M）
+    a-1/M图：应过原点的直线（斜率 = F）
+    若a-F图有截距：正截距→平衡摩擦力过度；负截距→未平衡或平衡不足</code></pre>
+
+<p><strong>实验二：验证机械能守恒定律</strong></p>
+
+<pre><code>原理：mgh = ½mv²（自由落体）
+
+器材：铁架台、打点计时器、重物、纸带、刻度尺
+    （不需要天平！质量m可约去）
+    （不需要秒表！时间由打点计时器记录）
+
+数据处理：
+    取下落点O，测各点高度h和速度v
+    验证：gh ≈ ½v²（或比较 mgh 与 ½mv²）
+
+误差来源：
+    ① 空气阻力、纸带与打点计时器摩擦 → 系统误差（使 ½mv² &lt; mgh）
+    ② 测量h和v的误差 → 偶然误差</code></pre>
+
+<p><strong>实验三：探究功与速度变化的关系</strong></p>
+
+<pre><code>原理：W = ½mv²（橡皮筋做功，变力功）
+
+方法：用n根相同橡皮筋（拉伸相同长度），做功分别为W、2W、3W...
+    测小车获得的速度v，作W-v²图看是否为直线</code></pre>
+
+<p><strong>实验四：验证动量守恒定律</strong></p>
+
+<pre><code>原理：m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'
+
+方法：平抛法（用水平位移代替速度，因为t相同）
+    入射球质量 &gt; 被碰球质量（防止反弹）
+    两球半径相同（对心碰撞）</code></pre>
+
+<h4>纸带数据处理公式</h4>
+
+<pre><code>瞬时速度：v_n = (x_n + x_{n+1}) / (2T)（中间时刻速度 = 平均速度）
+加速度（逐差法）：
+    a = [(x₄+x₅+x₆) - (x₁+x₂+x₃)] / (9T²)  （6段纸带）
+    或 a = [(x₃+x₄) - (x₁+x₂)] / (4T²)    （4段纸带）
+    或 a = (x_{n+1} - x_n) / T²            （2段纸带，误差大）
+
+T为相邻两点的时间间隔（通常为0.02s，若每5点取一个计数点则T=0.1s）</code></pre>
+
+<blockquote>
+<strong>逐差法优势</strong>：充分利用所有数据，减小偶然误差
+</blockquote>
+
+<h4>电学实验核心公式</h4>
+
+<p><strong>实验五：伏安法测电阻</strong></p>
+
+<pre><code>原理：R = U/I
+
+两种接法：
+    ① 内接法：电流表内接，测得 R测 = R_x + R_A &gt; R_x（偏大）
+       适用：R_x &gt;&gt; R_A（大电阻）
+    ② 外接法：电流表外接，测得 R测 = (R_x·R_V)/(R_x+R_V) &lt; R_x（偏小）
+       适用：R_x &lt;&lt; R_V（小电阻）
+
+判断口诀："大内偏大，小外偏小"
+    临界值：R_x ≈ √(R_A·R_V) 时内外接误差相近</code></pre>
+
+<p><strong>实验六：测电源电动势和内阻</strong></p>
+
+<pre><code>原理：E = U + Ir → U = E - Ir
+
+方法：
+    ① 伏安法：电压表测路端电压U，电流表测总电流I，作U-I图
+       纵截距 = E（电动势）
+       横截距 = I短 = E/r（短路电流）
+       斜率绝对值 = r（内阻）
+    ② 伏阻法：U = E - (U/R)·r → 1/U = 1/E + r/(E·R)
+    ③ 安阻法：I = E/(R+r) → 1/I = (R+r)/E = R/E + r/E
+
+误差分析：
+    电流表内接法：E测 = E真，r测 = r真 + R_A（偏大）
+    电流表外接法：E测 &lt; E真，r测 &lt; r真（系统误差来源于电压表分流）</code></pre>
+
+<p><strong>实验七：电表改装</strong></p>
+
+<pre><code>电流表改装为电压表：串联分压电阻 R
+    量程扩大n倍：R = (n-1)R_g
+    总内阻：R_V = nR_g
+
+电流表改装为大量程电流表：并联分流电阻 R
+    量程扩大n倍：R = R_g/(n-1)
+    总内阻：R_A = R_g/n
+
+其中 R_g 为表头内阻，I_g 为满偏电流</code></pre>
+
+<p><strong>实验八：半偏法测电表内阻</strong></p>
+
+<pre><code>测电流表内阻（半偏法）：
+    ① 闭合S₁，调R₁使电流表满偏
+    ② 闭合S₂，调R₂使电流表半偏
+    ③ 则 R_g ≈ R₂（条件：R₁ &gt;&gt; R₂，电源电动势足够大）
+    误差：R_测 &lt; R_真（并联R₂后总电阻减小，总电流增大，R₂分流 &gt; I_g/2）
+
+测电压表内阻（半偏法）：
+    ① 调R₁使电压表满偏
+    ② 调R₂使电压表半偏
+    ③ 则 R_V ≈ R₂（条件：R₂ &lt;&lt; R₁）
+    误差：R_测 &gt; R_真</code></pre>
+
+<h3>方法步骤</h3>
+
+<h4>力学实验通用步骤</h4>
+
+<ol>
+<li><strong>安装器材</strong>：按照实验要求安装，注意打点计时器限位孔与纸带对齐</li>
+<li><strong>平衡摩擦力/调零</strong>：如需要，先进行平衡摩擦力等准备工作</li>
+<li><strong>进行实验</strong>：先接通电源，后释放小车/重物；实验结束后先断电再取纸带</li>
+<li><strong>数据处理</strong>：用刻度尺测量数据，注意估读到毫米下一位（如用厘米刻度尺读到0.01cm）</li>
+<li><strong>作图分析</strong>：建立坐标系，描点，拟合直线（使点均匀分布在直线两侧）</li>
+<li><strong>误差分析</strong>：区分系统误差和偶然误差，提出减小误差的方法</li>
+</ol>
+
+<h4>电学实验通用步骤</h4>
+
+<ol>
+<li><strong>选器材</strong>：根据待测量大小选择合适量程的电压表、电流表；选滑动变阻器（分压式/限流式）</li>
+<li><strong>画电路图</strong>：确定电流表内接/外接，确定滑动变阻器接法</li>
+<li><strong>连接实物</strong>：按电路图连接，注意电表极性和量程；开关断开，滑片置保护位置</li>
+<li><strong>进行实验</strong>：闭合开关，调节滑动变阻器，记录多组数据</li>
+<li><strong>数据处理</strong>：作图法（U-I图、1/U-1/R图等），求斜率截距</li>
+<li><strong>整理器材</strong>：实验完毕，断开开关，拆除连线</li>
+</ol>
+
+<h4>滑动变阻器接法选择</h4>
+
+<table>
+<tr><th>接法</th><th>限流式</th><th>分压式</th></tr>
+<tr><td><strong>电路</strong></td><td>串联在电路中</td><td>一部分与待测电路并联</td></tr>
+<tr><td><strong>电压调节范围</strong></td><td>不能从零开始</td><td>可从零开始</td></tr>
+<tr><td><strong>电流调节范围</strong></td><td>较小</td><td>较大</td></tr>
+<tr><td><strong>适用场景</strong></td><td>测量电阻、测电源E和r</td><td>描绘小灯泡伏安特性曲线、要求从零开始调节</td></tr>
+<tr><td><strong>节能性</strong></td><td>节能</td><td>耗能大</td></tr>
+</table>
+
+<blockquote>
+<strong>选择原则</strong>：要求电压/电流从零开始调→分压式；测量电表内阻或校准电表→分压式；一般测电阻→限流式（节能）
+</blockquote>
+
+<h3>记忆口诀/技巧</h3>
+
+<blockquote>
+<strong>力学实验口诀</strong>：</p>
+
+<p><strong>"先通电后放车，先断电后取带；平衡摩擦看纸带，均匀即平衡"</strong></p>
+
+<p><strong>"逐差法六段分前后，加速度分子分母要对头"</strong></p>
+
+<p><strong>"机械能守恒不用天平，动能定理不用秒表"</strong></p>
+
+<p><strong>电学实验口诀</strong>：</p>
+
+<p><strong>"大内偏大，小外偏小，临界根号下R_A乘R_V"</strong></p>
+
+<p><strong>"测E测r用U-I图，纵截电动势，斜率内阻数"</strong></p>
+
+<p><strong>"改压串分压，改流并分流，n倍电阻算清楚"</strong></p>
+
+<p><strong>"半偏法测表头，电流偏小、电压偏大的误差要记住"</strong></p>
+
+<p><strong>"分压从零起，限流更节能，要求零起点必须用分压"</strong>
+</blockquote>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_物理_核心知识网络_匀变速直线运动公式体系.md">高一筑基_物理_核心知识网络_匀变速直线运动公式体系</a> — 纸带数据处理的基础</li>
+<li><a href="高一筑基_物理_核心知识网络_牛顿三定律与受力分析.md">高一筑基_物理_核心知识网络_牛顿三定律与受力分析</a> — 探究a与F、M关系的理论基础</li>
+<li><a href="高一筑基_物理_核心知识网络_功和能与功能关系.md">高一筑基_物理_核心知识网络_功和能与功能关系</a> — 验证机械能守恒的理论基础</li>
+<li><a href="高二深化_物理_核心知识网络_电场公式体系.md">高二深化_物理_核心知识网络_电场公式体系</a> — 电学实验的理论基础</li>
+<li><a href="高二深化_物理_核心知识网络_电磁感应定律.md">高二深化_物理_核心知识网络_电磁感应定律</a> — 电磁感应实验</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+
+<ul>
+<li><strong>广东实验题特色（探究性、设计性）</strong>：</li>
+</ul>
+
+<ol>
+<li>广东卷实验题往往不是教材实验的简单复现，而是"变式实验"（如改变器材、改变测量方法）</li>
+<li>常要求"设计实验步骤""补充实验器材""评价实验方案"</li>
+<li>数据处理常要求用图像法（化曲为直），斜率/截距有特定物理意义</li>
+<li>误差分析不仅要求判断偏大偏小，还要求提出改进方法</li>
+</ol>
+
+<ul>
+<li><strong>广东情境化实验素材</strong>：</li>
+<li>深圳光电产业：LED伏安特性曲线测量、光电传感器实验</li>
+<li>佛山制造业：精密测量、传感器应用实验</li>
+<li>广东新能源汽车：电池电动势和内阻测量、电机效率实验</li>
+<li>大湾区桥梁：桥梁应力测量、振动频率实验（简化为单摆/弹簧振子）</li>
+<li><strong>易错点</strong>：</li>
+</ul>
+
+<ol>
+<li>打点计时器：电磁式用4-6V交流电，电火花式用220V交流电；频率50Hz，周期0.02s</li>
+<li>纸带数据处理：注意区分计数点（每5点取一个，T=0.1s）和实际打点（T=0.02s）</li>
+<li>平衡摩擦力：是让重力沿斜面的分力抵消摩擦力，不是让斜面完全水平</li>
+<li>电表读数：电压表/电流表要估读（如0.6A量程读到0.01A，3A量程读到0.1A）</li>
+<li>实物连线：先连主回路，再连并联支路；连线不能交叉；开关要断开</li>
+<li>滑动变阻器分压接法：滑片初始位置应使待测电路电压为零（保护电路）</li>
+<li>半偏法误差：电流表半偏法 R_测 < R_真；电压表半偏法 R_测 > R_真</li>
+<li>图像法：作图时数据点要均匀分布在直线两侧，不是强行连线过所有点</li>
+</ol>
+
+<ul>
+<li><strong>有效数字规则</strong>：</li>
+<li>测量结果的有效数字与测量工具精度一致</li>
+<li>运算结果保留到最小有效数字位（如乘除法取最少有效数字）</li>
+<li>广东卷常要求"保留三位有效数字"</li>
+<li><strong>等级赋分提示</strong>：实验题是"步骤分大户"，即使最终结果算错，写出正确的实验原理、步骤、公式也能拿大部分分数。务必注意：实验器材选择、电路连接、数据处理的规范性。建议熟练掌握5-8个核心实验的原理、步骤、误差分析。</li>
+</ul>
+  <div class="footer">2028高考知识库 | 广东新高考物理</div>
+</body>
+</html>

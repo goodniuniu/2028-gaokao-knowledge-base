@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>动量定理与动量守恒定律 | 2028高考物理</title>
+<!-- MathJax 3 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\(', '\)']],
+    displayMath: [['$$', '$$'], ['\[', '\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  h4 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .back:hover { background: #2980b9; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; border-radius: 4px; }
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>动量定理与动量守恒定律</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>人教版选择性必修第一册 / 2023-2025广东选择性考试·物理力学综合专题</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>关键概念</h3>
+
+<ul>
+<li><strong>动量 $p$</strong>：描述物体运动状态的物理量，$p = mv$，矢量，方向与速度相同</li>
+<li><strong>冲量 $I$</strong>：力对时间的累积效应，$I = Ft$，矢量，方向与力相同</li>
+<li><strong>动量定理</strong>：物体动量的变化量等于合外力的冲量</li>
+<li><strong>动量守恒定律</strong>：系统不受外力或所受外力之和为零时，系统总动量保持不变</li>
+<li><strong>碰撞</strong>：相互作用时间极短，内力远大于外力，动量守恒</li>
+<li><strong>反冲</strong>：系统内一部分向某方向运动，另一部分向相反方向运动</li>
+</ul>
+
+<h3>核心公式/定理</h3>
+
+<h4>1. 动量定理</h4>
+
+<pre><code>Ft = Δp = mv₂ - mv₁
+或：I_合 = p₂ - p₁</code></pre>
+
+<blockquote>
+适用条件：任何力学过程（比牛顿定律适用范围更广，尤其适用于碰撞、爆炸、变力作用）</p>
+
+<p>注意事项：是矢量式，需规定正方向；变力时可用平均力或积分；也可用于某一方向的分量式
+</blockquote>
+
+<h4>2. 动量守恒定律</h4>
+
+<pre><code>系统总动量守恒：m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'
+或：p_初 = p_末</code></pre>
+
+<blockquote>
+适用条件：</p>
+
+<ul>
+<li>系统不受外力</li>
+<li>系统所受外力之和为零</li>
+<li>内力远大于外力（如碰撞、爆炸）</li>
+<li>某一方向外力之和为零，则该方向动量守恒</li>
+</ul>
+
+<p>注意事项：是矢量式，需规定正方向；只涉及初末状态，不涉及过程细节
+</blockquote>
+
+<h4>3. 碰撞分类与公式</h4>
+
+<table>
+<tr><th>碰撞类型</th><th>特征</th><th>公式</th></tr>
+<tr><td><strong>弹性碰撞</strong></td><td>动量守恒 + 动能守恒</td><td>m₁v₁+m₂v₂ = m₁v₁'+m₂v₂'<br>½m₁v₁²+½m₂v₂² = ½m₁v₁'²+½m₂v₂'²</td></tr>
+<tr><td><strong>完全非弹性碰撞</strong></td><td>动量守恒，动能损失最大，共速</td><td>m₁v₁+m₂v₂ = (m₁+m₂)v_共<br>ΔEk = ½μ(v_相)²（μ为约化质量）</td></tr>
+<tr><td><strong>非完全弹性碰撞</strong></td><td>动量守恒，动能有损失</td><td>m₁v₁+m₂v₂ = m₁v₁'+m₂v₂'<br>动能不守恒，用恢复系数e描述</td></tr>
+</table>
+
+<blockquote>
+弹性碰撞速度公式（记忆版）：</p>
+
+<pre><code>v₁' = [(m₁-m₂)v₁ + 2m₂v₂]/(m₁+m₂)
+v₂' = [(m₂-m₁)v₂ + 2m₁v₁]/(m₁+m₂)</code></pre>
+
+<p>特殊情况：m₁ = m₂ 时，速度交换；m₂ >> m₁ 且 v₂=0 时，v₁' ≈ -v₁（反弹）
+</blockquote>
+
+<h4>4. 反冲与爆炸</h4>
+
+<pre><code>0 = m₁v₁' + m₂v₂'（系统初动量为零）</code></pre>
+
+<blockquote>
+适用条件：内力作用，系统初动量为零或恒定</p>
+
+<p>注意事项：人船模型、火箭发射、炮弹发射均属此类
+</blockquote>
+
+<h4>5. 人船模型</h4>
+
+<pre><code>mx = Mx'，且 x + x' = L（相对位移）</code></pre>
+
+<blockquote>
+适用条件：系统水平方向动量守恒，初动量为零</p>
+
+<p>注意事项：位移与质量成反比；x为人位移，x'为船位移，L为船长
+</blockquote>
+
+<h3>方法步骤</h3>
+
+<h4>动量守恒问题解题五步通法</h4>
+
+<ol>
+<li><strong>选系统</strong>：明确研究对象（谁和谁组成系统）</li>
+<li><strong>判守恒</strong>：判断动量是否守恒（外力之和是否为零）</li>
+<li><strong>定方向</strong>：规定正方向（通常取初速度方向）</li>
+<li><strong>列方程</strong>：m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'（注意矢量符号）</li>
+<li><strong>求结果</strong>：解方程，验证物理合理性（速度方向、大小范围）</li>
+</ol>
+
+<h4>碰撞问题判断流程</h4>
+
+<ol>
+<li><strong>动量守恒</strong>：先验证 p_初 = p_末（必须满足）</li>
+<li><strong>能量不增</strong>：Ek_末 ≤ Ek_初（动能不可能增加）</li>
+<li><strong>速度合理</strong>：</li>
+</ol>
+
+<ul>
+<li>追碰后：v_前' ≥ v_后'（否则二次碰撞）</li>
+<li>被碰物体：v_被碰' ≥ 0（若原静止）</li>
+</ul>
+
+<h3>记忆口诀/技巧</h3>
+
+<blockquote>
+<strong>动量守恒三条件</strong>："无外力、外力零、内力大"——三满足其一即可。</p>
+
+<p><strong>弹性碰撞速记</strong>：等质量，换速度；大撞小，同向走；小撞大，反向弹。</p>
+
+<p><strong>人船模型速记</strong>：人走船退，人停船停，位移反比于质量。</p>
+
+<p><strong>广东情境提示</strong>：广东卷常考动量与能量综合的情境题（如新能源汽车碰撞安全、体育比赛中的碰撞、大湾区交通流量），注意动量守恒是矢量守恒，必须画方向。
+</blockquote>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="../典型题型与方法/高二深化_物理_典型题型与方法_力学三大模型通法.md">力学三大模型通法</a> — 板块/传送带/弹簧模型中动量守恒的应用</li>
+<li><a href="高二深化_物理_核心知识网络_电磁感应定律.md">电磁感应定律</a> — 双杆导轨模型中动量守恒的应用</li>
+<li>[功和能关系体系] — 动量与能量综合（待补充）</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+
+<ul>
+<li>动量定理的优势：不需要知道过程细节，只关心初末状态，特别适用于变力作用、曲线运动</li>
+<li>动量守恒与能量守恒常联立使用：</li>
+<li>弹性碰撞：动量守恒 + 动能守恒</li>
+<li>完全非弹性碰撞：动量守恒 + 能量损失</li>
+<li>注意区分：动量是矢量（p = mv），动能是标量（Ek = ½mv²），两者关系：Ek = p²/(2m)</li>
+<li>广东卷高频陷阱：</li>
+<li>弹簧压缩到最短时两物体共速，是完全非弹性碰撞模型</li>
+<li>子弹打木块：若穿出，用动量定理；若未穿出，是完全非弹性碰撞</li>
+<li>多物体碰撞注意逐步分析，不要试图一次写全</li>
+</ul>
+  <div class="footer">2028高考知识库 | 广东新高考物理</div>
+</body>
+</html>

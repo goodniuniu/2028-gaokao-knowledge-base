@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>功和能与功能关系 | 2028高考物理</title>
+<!-- MathJax 3 -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\(', '\)']],
+    displayMath: [['$$', '$$'], ['\[', '\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
+  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
+  h3 { color: #2e86c1; }
+  h4 { color: #3498db; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+  th { background: #eaf2f8; }
+  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
+  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
+  .back:hover { background: #2980b9; }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
+  ul, ol { margin: 10px 0; padding-left: 25px; }
+  li { margin: 5px 0; }
+  a { color: #2980b9; }
+  a:hover { color: #e74c3c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
+  img { max-width: 100%; height: auto; border-radius: 4px; }
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+</style>
+</head>
+<body>
+  <a class="back" href="./">← 返回目录</a>
+<h1>功和能与功能关系</h1>
+
+<table>
+<tr><th>字段</th><th>内容</th></tr>
+<tr><td><strong>来源</strong></td><td>人教版必修第二册第八章 / 广东选择性考试高频考点</td></tr>
+<tr><td><strong>时间标签</strong></td><td>#高一筑基</td></tr>
+<tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
+<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
+<tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
+<tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷均考查，常以计算题综合考查）。广东卷特色：常以"能量转化"情境命题（如新能源汽车动能回收、水力发电、过山车能量转化）。难度定位：中档偏上。功能关系是力学综合题的核心方法，常与动能定理、机械能守恒联合考查。赋分提示：功能关系是连接力学和电磁学的桥梁，务必建立清晰的能量流动图。</td></tr>
+</table>
+
+<hr>
+
+<h2>核心内容</h2>
+
+<h3>关键概念</h3>
+
+<ul>
+<li><strong>功</strong>：W = F·l·cosθ，力对空间的积累效果；单位焦耳(J)</li>
+<li><strong>功率</strong>：P = W/t（平均功率），P = F·v（瞬时功率，力与速度同向时）</li>
+<li><strong>重力势能</strong>：E_p = mgh，与零势能面选取有关；重力做功与路径无关</li>
+<li><strong>弹性势能</strong>：E_p = ½kx²，与弹簧形变量有关</li>
+<li><strong>动能</strong>：E_k = ½mv²，与参考系有关（通常以地面为参考系）</li>
+<li><strong>功能关系</strong>：各种力做功与对应能量变化的关系</li>
+<li><strong>机械能守恒</strong>：只有重力或弹力做功时，机械能守恒</li>
+<li><strong>能量守恒</strong>：能量不会凭空产生或消失，只会从一种形式转化为另一种形式</li>
+</ul>
+
+<h3>核心公式/定理</h3>
+
+<h4>功的计算</h4>
+
+<pre><code>恒力功：W = Fl cosθ
+    θ = 0°  → W = Fl（正功）
+    θ = 90° → W = 0（不做功）
+    θ = 180°→ W = -Fl（负功）
+
+变力功：
+    ① 图像法：F-l图面积 = 功
+    ② 平均力法：W = F̄·l（仅适用于线性变化的力）
+    ③ 动能定理：W = ΔE_k（最通用方法）
+
+功率：
+    平均功率：P̄ = W/t
+    瞬时功率：P = Fv cosθ（机车启动问题核心公式）</code></pre>
+
+<blockquote>
+<strong>注意事项</strong>：</p>
+
+<ol>
+<li>功是标量，但有正负；正功表示能量输入，负功表示能量输出</li>
+<li>计算功时，l 是力的作用点的位移（不一定是物体的位移）</li>
+<li>摩擦力做功与路径有关（非保守力），W_f = -f·s_路程</li>
+</ol>
+</blockquote>
+
+<h4>机车启动问题（两种模型）</h4>
+
+<pre><code>① 恒定功率启动：
+   P = Fv 恒定，F = P/v，a = (F-f)/m = P/(mv) - f/m
+   随着v增大，F减小，a减小，最终匀速时 F = f，v_max = P/f
+
+② 恒定加速度启动：
+   先匀加速：F = ma + f 恒定，P = Fv 逐渐增大
+   匀加速结束时：P = P额，v₁ = P额/F = P额/(ma+f)
+   之后功率恒定，变为变加速，最终匀速 v_max = P额/f</code></pre>
+
+<blockquote>
+<strong>注意</strong>：恒定加速度启动有两个转折点——匀加速结束（功率达额定值）和最终匀速（牵引力等于阻力）
+</blockquote>
+
+<h4>功能关系总结表</h4>
+
+<table>
+<tr><th>力做功</th><th>对应能量变化</th><th>关系式</th></tr>
+<tr><td><strong>重力做功</strong></td><td>重力势能变化</td><td>W_G = -ΔE_p = E_p初 - E_p末</td></tr>
+<tr><td><strong>弹力做功</strong></td><td>弹性势能变化</td><td>W_弹 = -ΔE_p弹</td></tr>
+<tr><td><strong>合外力做功</strong></td><td>动能变化</td><td>W_合 = ΔE_k = E_k末 - E_k初（动能定理）</td></tr>
+<tr><td><strong>重力/弹力以外力做功</strong></td><td>机械能变化</td><td>W_其他 = ΔE_机</td></tr>
+<tr><td><strong>摩擦力做功</strong></td><td>内能增加</td><td>W_f = -Q = -f·s_相对（产生热量）</td></tr>
+<tr><td><strong>电场力做功</strong></td><td>电势能变化</td><td>W_电 = -ΔE_p电</td></tr>
+<tr><td><strong>所有力做功</strong></td><td>总能量变化</td><td>能量守恒：ΔE_k + ΔE_p + ΔE_内 + ... = 0</td></tr>
+</table>
+
+<blockquote>
+<strong>核心理解</strong>：功能关系本质是"做功是能量转化的量度"，哪个力做功就对应哪种能量的转化
+</blockquote>
+
+<h4>动能定理</h4>
+
+<pre><code>W_合 = ΔE_k = ½mv₂² - ½mv₁²</code></pre>
+
+<blockquote>
+<strong>适用条件</strong>：任何运动（直线/曲线、恒力/变力、单个/多个过程），只需要知道初末状态和总功</p>
+
+<p><strong>注意事项</strong>：</p>
+
+<ol>
+<li>是标量方程，不能分方向列</li>
+<li>优先在全过程使用，避免分段求中间速度</li>
+<li>对多过程问题，可分段列也可全程列，灵活选择</li>
+</ol>
+</blockquote>
+
+<h4>机械能守恒定律</h4>
+
+<pre><code>条件：只有重力或弹力做功（其他力不做功或做功代数和为零）
+
+表达式：
+① E_k1 + E_p1 = E_k2 + E_p2（状态式）
+② ΔE_k = -ΔE_p（转化式）
+③ ΔE_A增 = ΔE_B减（转移式，系统内）</code></pre>
+
+<blockquote>
+<strong>与动能定理对比</strong>：</p>
+
+<table>
+<tr><th>对比项</th><th>动能定理</th><th>机械能守恒</th></tr>
+<tr><td>条件</td><td>无限制（适用于任何情况）</td><td>只有重力/弹力做功</td></tr>
+<tr><td>研究对象</td><td>单个物体</td><td>单个物体或系统</td></tr>
+<tr><td>方程</td><td>功 = 动能变化</td><td>初态机械能 = 末态机械能</td></tr>
+<tr><td>优势</td><td>通用性强，求功/力方便</td><td>不涉及力的细节，过程简洁</td></tr>
+</table>
+</blockquote>
+
+<h3>方法步骤</h3>
+
+<h4>功能关系分析"五步法"</h4>
+
+<ol>
+<li><strong>确定研究对象</strong>：单个物体还是系统？</li>
+<li><strong>分析受力与做功</strong>：哪些力做功？正功还是负功？</li>
+<li><strong>分析能量变化</strong>：动能、势能、内能、电势能等哪些在变化？</li>
+<li><strong>选方法</strong>：</li>
+</ol>
+
+<ul>
+<li>求功/力 → 优先动能定理</li>
+<li>只有重力/弹力做功 → 机械能守恒</li>
+<li>涉及摩擦生热 → 功能关系（W_f = -Q）</li>
+<li>涉及多种能量 → 能量守恒</li>
+</ul>
+
+<ol>
+<li><strong>列方程求解</strong>：注意正负号和零势能面选取</li>
+</ol>
+
+<h4>摩擦力做功与内能计算</h4>
+
+<pre><code>滑动摩擦力对系统做的总功：W_f = -f·s_相对
+系统内能增加：Q = f·s_相对（s_相对为两物体相对滑动的路程）
+
+对单个物体：W_f = -f·s_对地（注意是物体的对地位移）</code></pre>
+
+<blockquote>
+<strong>重要区分</strong>：摩擦力对单个物体做功用对地位移，系统内能增加用相对位移
+</blockquote>
+
+<h3>记忆口诀/技巧</h3>
+
+<blockquote>
+<strong>"功是能量转化的量度，哪种力做功对应哪种能量变"</strong></p>
+
+<p><strong>"重力功负势能增，弹力功负弹性增，合外力功动能增，其他力功机械能增"</strong></p>
+
+<p><strong>"动能定理最通用，机械能守恒条件严，摩擦生热相对程，功能关系连一线"</strong></p>
+
+<p><strong>机车启动口诀</strong>："恒功率启动加速度减，恒加速启动两转折点，最终都是P/f=v_max"
+</blockquote>
+
+<hr>
+
+<h2>关联卡片</h2>
+
+<ul>
+<li><a href="高一筑基_物理_核心知识网络_动能定理.md">高一筑基_物理_核心知识网络_动能定理</a> — 动能定理的专项深化</li>
+<li><a href="高一筑基_物理_核心知识网络_机械能守恒定律.md">高一筑基_物理_核心知识网络_机械能守恒定律</a> — 机械能守恒的专项深化</li>
+<li><a href="高一筑基_物理_核心知识网络_牛顿三定律与受力分析.md">高一筑基_物理_核心知识网络_牛顿三定律与受力分析</a> — 受力分析是功能分析的前提</li>
+<li><a href="高一筑基_物理_核心知识网络_匀变速直线运动公式体系.md">高一筑基_物理_核心知识网络_匀变速直线运动公式体系</a> — 运动学公式与能量方法可相互补充</li>
+<li><a href="高二深化_物理_核心知识网络_电磁感应定律.md">高二深化_物理_核心知识网络_电磁感应定律</a> — 电磁感应中安培力做功与电能转化</li>
+</ul>
+
+<hr>
+
+<h2>备注</h2>
+
+<ul>
+<li><strong>广东情境化命题常见素材</strong>：</li>
+<li>比亚迪新能源汽车动能回收系统（能量转化分析）</li>
+<li>广东水力发电站（重力势能→动能→电能）</li>
+<li>过山车/跳楼机（机械能守恒与临界条件）</li>
+<li>弹簧弹射装置（弹性势能→动能）</li>
+<li>广州塔摩天轮（重力势能周期性变化）</li>
+<li><strong>易错点</strong>：</li>
+</ul>
+
+<ol>
+<li>重力做功与路径无关，只与高度差有关；但摩擦力做功与路径有关</li>
+<li>机械能守恒的条件是"只有重力或弹力做功"，不是"只受重力或弹力"</li>
+<li>弹簧振子中，系统机械能守恒（包括弹性势能），但单个物体机械能不守恒</li>
+<li>摩擦生热 Q = f·s_相对，s_相对是相对滑动的路程，不是位移</li>
+<li>功率 P = Fv 中，v 是力F作用点的速度；如果F与v有夹角，需乘cosθ</li>
+<li>恒力功 W = Fl cosθ 中，l 是力的作用点的位移，不是物体的位移（如绳子拉滑轮问题）</li>
+</ol>
+
+<ul>
+<li><strong>功的正负判断</strong>：</li>
+<li>动力做正功（促进运动），阻力做负功（阻碍运动）</li>
+<li>重力做正功→重力势能减少；重力做负功→重力势能增加</li>
+<li><strong>等级赋分提示</strong>：功能关系是力学综合题的核心，常出现在计算题第二、三问。建立清晰的"能量流动图"（哪种能量转化为哪种能量）是解题关键。基础题不丢分，中档题争取满分，压轴题尽量多写步骤分。</li>
+</ul>
+  <div class="footer">2028高考知识库 | 广东新高考物理</div>
+</body>
+</html>
