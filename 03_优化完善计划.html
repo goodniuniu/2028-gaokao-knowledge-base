@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔧 知识库优化完善计划（工程 + 内容） | 2028高考知识库</title>
+<link rel="stylesheet" href="assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body >
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="index.html">🏠 首页</a>
+    <a href="图形库/index.html">🖼️ 图形库</a>
+    <a href="复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="index.html">首页</a></li><li><span aria-current="page">🔧 知识库优化完善计划（工程 + 内容）</span></li></ol>
+<h1 class="kb-title">🔧 知识库优化完善计划（工程 + 内容）</h1>
+
+<div class="kb-note"><strong>学科失衡</strong>：数学36 / 物理15 / 语文11 / 化学11 / 生物11 / 方法6 / **英语仅2张** | 英语是最严重短板（另有独立单词复习系统：77个 Day 词表 + 小测卷 + 生成脚本）<br><strong>易错警示</strong>：全库仅5张（数学2、物理1） | 语/英/化/生四科为 **0**<br><strong>素材与拓展</strong>：语文2、数学1 | 英/物/化/生为 **0**<br><strong>掌握状态</strong>：0 已掌握 / 91 待强化 / 1 未理解 | 复盘机制尚未真正运转，掌握度未破零<br><strong>与650分计划差距</strong>：第一阶段目标110+张 | 现有92张且结构偏离计划清单</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<blockquote><p><strong>制定时间</strong>：2026年7月20日（基于全库审计与工程调研）<br><strong>定位</strong>：本文件是 <code>00_知识库完善计划（650分目标）.md</code> 的执行层补充——650分计划回答&quot;补什么内容&quot;，本计划回答&quot;按什么顺序、用什么机制、如何交接执行&quot;。<br><strong>交接说明</strong>：后续完善工作由 AI 助手按本计划逐阶段执行；开始前请先阅读本文件与 <code>AGENTS.md</code>（阶段0第1步创建）。</p></blockquote>
+<hr>
+<h2>一、现状审计结论（2026-07-20）</h2>
+<h3>1. 内容结构</h3>
+<p>卡片总数 <strong>92 张</strong>（六科+方法口径，英语单词复习系统独立统计），卡片本身质量高（元信息表 + 干货提炼 + LaTeX 公式，符合 <code>01_知识卡片模板.md</code>），但结构失衡明显：</p>
+<div class="table-wrap"><table><tr><th>维度</th><th>现状</th><th>缺口</th></tr><tr><td><strong>学科失衡</strong></td><td>数学36 / 物理15 / 语文11 / 化学11 / 生物11 / 方法6 / <strong>英语仅2张</strong></td><td>英语是最严重短板（另有独立单词复习系统：77个 Day 词表 + 小测卷 + 生成脚本）</td></tr><tr><td><strong>易错警示</strong></td><td>全库仅5张（数学2、物理1）</td><td>语/英/化/生四科为 <strong>0</strong></td></tr><tr><td><strong>素材与拓展</strong></td><td>语文2、数学1</td><td>英/物/化/生为 <strong>0</strong></td></tr><tr><td><strong>掌握状态</strong></td><td>0 已掌握 / 91 待强化 / 1 未理解</td><td>复盘机制尚未真正运转，掌握度未破零</td></tr><tr><td><strong>与650分计划差距</strong></td><td>第一阶段目标110+张</td><td>现有92张且结构偏离计划清单</td></tr></table></div>
+<h3>2. 工程现状</h3>
+<p>工具链可用：<code>build_site.py</code>（一键重建：卡片换肤 + 索引生成 + 断链校验）、<code>kb_audit.py</code>（全库审计）、<code>build_status_table.py</code>（复盘状态表）。存在以下技术债：</p>
+<ol>
+<li><strong>无 <code>.gitignore</code></strong>：生成物（如 <code>复盘追踪/_scan_result.json</code>）入库。</li>
+<li><strong>脚本债务</strong>：<code>generate_index.py</code> 已被 build_site.py 取代（文件头自注明），且内含旧机器绝对路径 <code>C:/Users/user/WPSDrive/...</code>；<code>draw_batch2.py</code> 在根目录与 <code>图形库/</code> 各一份且<strong>内容不一致</strong>；<code>fix_management_docs.py</code>、<code>process_images.py</code> 为一次性脚本，无用途说明。</li>
+<li><strong>索引漂移</strong>：<code>数学/索引_数学.md</code> 写&quot;素材与拓展 2 张&quot;实际 1 张，索引更新时间停留在&quot;2025年7月&quot;；其他科索引大概率同样失准。</li>
+<li><strong>HTML 脱节</strong>：<code>英语/单词复习/分组词表/</code> 77 个 <code>Day_*.md</code> 无对应 HTML；<code>广东高考知识库指令.md</code> 无 HTML（需确认口径：有意保留 md-only 还是遗漏）。</li>
+<li><strong>无接手入口</strong>：没有 <code>AGENTS.md</code>/<code>README</code>，新接手的 AI 无法快速得知构建流程、脚本职责、命名规范。</li>
+<li><strong>无依赖声明</strong>（画图脚本依赖 matplotlib 等，无 requirements.txt）、无 CI。</li>
+<li><code>index.md</code> 与 <code>00_知识库总索引.md</code> 内容职责重叠，易再漂移。</li>
+</ol>
+<hr>
+<h2>二、阶段0：工程治理（低风险，最先做）</h2>
+<blockquote><p>目标：让仓库&quot;可交接、可重建、数字可信&quot;。预计一个工作会话内完成。</p></blockquote>
+<ul>
+<li>[x] <strong>0.1 新建 <code>AGENTS.md</code></strong>（接手入口，最重要）：项目结构说明、卡片模板与命名规范（指向 <code>01_知识卡片模板.md</code>）、<code>build_site.py</code> / <code>kb_audit.py</code> / <code>build_status_table.py</code> 各自职责与执行顺序、画图脚本位置（<code>图形库/</code>）、提交前检查清单：<strong>改 md → 跑 <code>python build_site.py</code> → 跑 <code>python kb_audit.py</code> 更新统计数字 → 再提交</strong>。</li>
+<li>[x] <strong>0.2 新建 <code>.gitignore</code></strong>：排除 <code>复盘追踪/_scan_result.json</code>、<code>__pycache__/</code>、<code>*.pyc</code> 及临时产物；77 个 Day 词表 md 是内容源，保留入库。</li>
+<li>[x] <strong>0.3 清理脚本</strong>：删除或归档 <code>generate_index.py</code>（已被取代，建议移入 <code>_archive/</code>）；<code>draw_batch2.py</code> 只保留一份（以 <code>图形库/</code> 内为准，对比后取舍）；给 <code>fix_management_docs.py</code>、<code>process_images.py</code>、<code>英语/单词复习/*.py</code> 补一行用途头注或移入 <code>_archive/</code>。</li>
+<li>[x] <strong>0.4 修复索引漂移</strong>：以 <code>python kb_audit.py</code> 输出为准，重算各科 <code>索引_*.md</code> 的卡片数与更新时间；明确 <code>index.md</code> 与 <code>00_知识库总索引.md</code> 职责——<code>index.md</code> 仅做门户导航，统计数字全库只保留一份（在总索引，由审计数据驱动更新）。</li>
+<li>[x] <strong>0.5 补 <code>requirements.txt</code></strong>：按画图脚本实际 import 生成（matplotlib 等）。</li>
+<li>[x] <strong>0.6 验证</strong>：<code>python build_site.py</code> 全量重建 → 断链清单为空 → <code>git status</code> 无意外变更。</li>
+</ul>
+<h2>三、阶段1：内容结构补全（按650分计划第一阶段清单）</h2>
+<blockquote><p>目标：对接 <code>00_知识库完善计划（650分目标）.md</code> 第一阶段（2026.9 前 110+ 张），优先补最失衡处。新增卡片必须严格走 <code>01_知识卡片模板.md</code>：元信息表 + 广东考情标注 + 试卷来源标签 + 关联卡片。</p></blockquote>
+<p>优先级排序（缺口 × 分值权重）：</p>
+<ul>
+<li>[ ] <strong>1.1 英语（最严重短板，仅2张）</strong>：核心知识网络6张（时态语态总表、三大从句连词、非谓语对比、特殊句式、词根词缀、高级句型）、典型题型6张（阅读四题型通法、七选五、完形语境线索、语法填空口诀、应用文模板、读后续写情节构建）、易错4张、素材4张；<strong>广东听说专区起步</strong>（模仿朗读/三问五答/故事复述各1张）。</li>
+<li>[ ] <strong>1.2 易错警示维度全科启动</strong>：语/英/化/生各补4张（清单见650分计划第一阶段：成语误用、实词一词多义、病句、作文偏题；易混动词、介词搭配、时态语境、从句辨析；阿伏伽德罗常数陷阱、离子少量过量；光反应暗反应、自交vs自由交配）。</li>
+<li>[ ] <strong>1.3 素材与拓展维度</strong>：物理（华为5G/比亚迪/大疆/港珠澳大桥）、化学（茂名石化/珠海盐化工/粤北稀土）、生物（生物医药/农业育种/海洋生态）各1-2张。</li>
+<li>[ ] <strong>1.4 物化生核心知识网络对照勾选</strong>：对照650分计划第一阶段清单，核对电场/磁场公式体系、化学计量、元素周期律、细胞结构、代谢体系等是否已入库（部分已完成），补缺漏。</li>
+<li>[ ] <strong>1.5 每批新卡完成后</strong>：更新对应 <code>索引_*.md</code>、跑 <code>kb_audit.py</code> 校准总索引统计、跑 <code>build_site.py</code> 重建站点。</li>
+</ul>
+<h2>四、阶段2：复盘机制运转</h2>
+<ul>
+<li>[ ] <strong>2.1 首次正式复盘</strong>：用 <code>build_status_table.py</code> + <code>kb_audit.py</code> 梳理全部92张卡片，按实际掌握情况重新标记，掌握状态&quot;破零&quot;（目标10+张 ✅）。</li>
+<li>[ ] <strong>2.2 固化周复盘流程</strong>：错题四分类（知识性/方法性/审题性/计算性）→ 匹配或新建卡片 → 更新 <code>复盘追踪/知识掌握状态表.md</code> → <code>build_site.py</code> 重建。</li>
+<li>[ ] <strong>2.3 使用场景提示词化</strong>：把 <code>广东高考知识库指令.md</code> 第三节的&quot;周复盘/考前冲刺20点/广东卷趋势分析&quot;落成可直接复用的提示词模板（放入 <code>02_使用规则与检索说明.md</code> 或 AGENTS.md）。</li>
+</ul>
+<h2>五、阶段3：可选增强（高三前完成即可）</h2>
+<ul>
+<li>[ ] <strong>3.1 GitHub Actions CI</strong>：push 时自动跑 <code>build_site.py</code> + 断链校验，防止 HTML 与 md 再脱节。</li>
+<li>[ ] <strong>3.2 Day 词表 HTML 口径</strong>：补齐 <code>英语/单词复习/分组词表/</code> 77 个词表的 HTML，或在 AGENTS.md 中明确声明该目录 md-only。</li>
+<li>[ ] <strong>3.3 站点搜索/标签聚合页</strong>：静态生成，按 <code>#标签</code>（时间轴/难度/试卷来源/广东特色）聚合卡片。</li>
+<li>[ ] <strong>3.4 图形库扩充</strong>：继续按科目补示意图并嵌入卡片（现有32张：物理/化学/生物/数学各8张）。</li>
+</ul>
+<hr>
+<h2>六、执行规则（给接手的 AI）</h2>
+<ol>
+<li><strong>先做阶段0再做内容</strong>：AGENTS.md 与 .gitignore 是所有后续工作的地基。</li>
+<li><strong>改内容必改三处</strong>：新卡片 md → 对应 <code>索引_*.md</code> → <code>kb_audit.py</code> 校准总索引 → <code>build_site.py</code> 重建 HTML。</li>
+<li><strong>内容口径以两个文件为准</strong>：<code>广东高考知识库指令.md</code>（收录规则与广东考情）+ <code>01_知识卡片模板.md</code>（格式规范）。</li>
+<li><strong>数量目标以 <code>00_知识库完善计划（650分目标）.md</code> 第六节&quot;关键成功指标&quot;为准</strong>，本计划不另立指标。</li>
+<li>每完成一个阶段，更新本文件的复选框与 <code>00_当前状态记录.md</code>。</li>
+</ol>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回首页</a>
+  <a class="kb-btn kb-btn--ghost" href="index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

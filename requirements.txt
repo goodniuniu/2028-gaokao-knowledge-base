@@ -1,0 +1,3 @@
+# 绘图脚本依赖（图形库/draw_*.py）
+matplotlib
+numpy
