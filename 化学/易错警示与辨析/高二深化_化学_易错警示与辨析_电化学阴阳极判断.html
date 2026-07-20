@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电化学阴阳极判断（原电池vs电解池 + 电极反应式四步法） | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="化学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">化学</a></li><li><a href="./index.html">易错警示与辨析</a></li><li><span aria-current="page">电化学阴阳极判断（原电池vs电解池 + 电极反应式四步法）</span></li></ol>
+<h1 class="kb-title">电化学阴阳极判断（原电池vs电解池 + 电极反应式四步法）</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★☆☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：近5年广东选择性考试电化学选择题考点 + 选择性必修1&quot;化学反应与电能&quot;单元</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频，近5年广东选择性考试电化学每年必考，通常以1道选择题（新型电池、电解应用情境）呈现，偶尔进入原理综合题。难度定位中档——判定规则固定，失分多在电极反应式书写细节。广东卷特色：爱用新型电池（锂电池、燃料电池、液流电池）和电解应用（电解水制氢、电化学处理废水）等科技情境包装，需从情境中剥离出&quot;哪个是电源、谁是正负极&quot;。等级赋分提示：电化学题属中档必拿分板块，6分左右；赋分制下中档题稳定得分是守住赋分档位的关键，书写细节（介质、守恒）决定这6分拿满还是打折。</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：电化学所有判断从一个字出发——<strong>&quot;氧&quot;</strong>：失电子、被氧化的一极，在原电池叫<strong>负极</strong>，在电解池叫<strong>阳极</strong>。记住&quot;<strong>负氧、阳氧</strong>&quot;（负极氧化、阳极氧化），其余全部由此推出：得电子被还原的一极，原电池叫正极、电解池叫阴极。</p></blockquote>
+<hr>
+<h3>一、判定总流程（先看有没有外接电源）</h3>
+<pre><code>装置中是否有外接电源？
+├── 无电源 → 原电池（本身发电）
+│     负极：失电子、氧化反应（通常是较活泼金属）
+│     正极：得电子、还原反应
+│     离子迁移：阳离子→正极，阴离子→负极（&quot;正正负负&quot;）
+│     电子流向：负极 → 外电路 → 正极
+└── 有电源 → 电解池（被驱动）
+      阳极：与电源【正极】相连，失电子、氧化反应
+      阴极：与电源【负极】相连，得电子、还原反应
+      离子迁移：阳离子→阴极，阴离子→阳极（&quot;阴阳相吸&quot;）
+      电子流向：电源负极 → 阴极；阳极 → 电源正极
+</code></pre>
+<blockquote><p><strong>口诀</strong>：&quot;<strong>负氧阳氧、正还阴还；原电池正正负负，电解池阴阳相吸。</strong>&quot;<br>（&quot;正正负负&quot;指原电池中阳离子向正极移动、阴离子向负极移动——离子找&quot;名异实同&quot;的电极：阳离子去的极发生还原，阳离子自己被还原的备选。）</p></blockquote>
+<h4>原电池正负极判定的两个经典特例（活泼金属不一定作负极）</h4>
+<div class="table-wrap"><table><tr><th>电池</th><th>负极</th><th>原因</th></tr><tr><td>Mg-Al 插入 NaOH 溶液</td><td><strong>Al</strong></td><td>Mg不与NaOH反应，Al能与NaOH反应失电子：Al - 3e- + 4OH- = AlO2- + 2H2O</td></tr><tr><td>Fe-Cu 插入浓硝酸（常温）</td><td><strong>Cu</strong></td><td>Fe常温下在浓硝酸中钝化，Cu持续失电子</td></tr></table></div>
+<blockquote><p><strong>判负极的真正标准</strong>：谁失电子谁是负极，&quot;活泼金属作负极&quot;只是常见情形，遇特殊电解质必须看实际反应。</p></blockquote>
+<hr>
+<h3>二、放电顺序（电解池判断产物的前提）</h3>
+<h4>阴极（阳离子得电子，氧化性强者先放电）</h4>
+<p>Ag+ &gt; Fe3+ &gt; Cu2+ &gt; H+(酸) &gt; Pb2+ &gt; Sn2+ &gt; Fe2+ &gt; Zn2+ &gt; H+(水) &gt; Al3+ &gt; Mg2+ &gt; Na+ &gt; Ca2+ &gt; K+</p>
+<blockquote><p>水溶液中 <strong>Al3+及更活泼金属离子永不放电</strong>（轮到水电离的H+）——电解NaCl、Na2SO4水溶液阴极都出H2。</p></blockquote>
+<h4>阳极（失电子，分两类）</h4>
+<ol>
+<li><strong>活性电极</strong>（除Pt、Au、石墨外的金属电极）：<strong>电极本身溶解</strong>，M - ne- = M^n+，溶液中离子不放电。</li>
+<li><strong>惰性电极</strong>（Pt、石墨）：阴离子放电，顺序 S2- &gt; I- &gt; Br- &gt; Cl- &gt; OH- &gt; 含氧酸根（SO4^2-、NO3-等不放电，由OH-放电）。</li>
+</ol>
+<blockquote><p><strong>口诀</strong>：&quot;<strong>阳极先看电极料，活性自身先溶掉；惰性才排阴离子，硫碘溴氯氢氧根。</strong>&quot;</p></blockquote>
+<hr>
+<h3>三、电极反应式书写四步法</h3>
+<ol>
+<li><strong>定电极、定反应类型</strong>：阳氧/负氧（失电子，-ne-在左），阴还/正还（得电子，+ne-在左）。</li>
+<li><strong>定放电物质</strong>：按放电顺序确定谁反应、生成什么。</li>
+<li><strong>按介质配平</strong>：先配变价原子与电子，再用介质粒子配电荷、配原子——</li>
+<ul>
+<li>酸性介质：用 H+ 和 H2O 调平（<strong>禁止出现OH-</strong>）；</li>
+<li>碱性介质：用 OH- 和 H2O 调平（<strong>禁止出现H+</strong>）；</li>
+<li>熔融/固体电解质：用传导离子调平（如熔融碳酸盐用CO3^2-，固体氧化物用O2-）。</li>
+</ul>
+<li><strong>三查</strong>：查电子守恒（两极得失电子相等）、查电荷守恒（方程式两侧净电荷相等）、查原子守恒；气体标↑、沉淀标↓（电极反应式中生成气体通常标↑）。</li>
+</ol>
+<h4>示范：碱性甲烷燃料电池负极（介质最容易写错的一例）</h4>
+<ol>
+<li>负极氧化：CH4 失电子，C由-4 → +4，失8e-。</li>
+<li>碱性介质中碳产物是 <strong>CO3^2-</strong>，不是CO2。</li>
+<li>配平：<strong>CH4 - 8e- + 10OH- = CO3^2- + 7H2O</strong>。</li>
+<ul>
+<li>❌ 错写：CH4 - 8e- + 2H2O = CO2↑ + 8H+（碱性介质中出现H+和CO2，双重错误）。</li>
+</ul>
+</ol>
+<hr>
+<h3>四、常见错误清单（逐条对照自查）</h3>
+<div class="table-wrap"><table><tr><th>错误类型</th><th>错例</th><th>正确做法</th></tr><tr><td>介质不写/错写</td><td>碱性电池电极式中出现H+；酸性电池中出现OH-</td><td>看题给电解质：酸补H+/H2O，碱补OH-/H2O</td></tr><tr><td>电荷不守恒</td><td>Cu - 2e- = Cu+（左-2右+1）</td><td>两侧净电荷必须相等：左 0-(-2)=+2... 正确为 Cu - 2e- = Cu2+</td></tr><tr><td>电子方向写反</td><td>阴极写成 M - ne-</td><td>阴极/正极得电子：M^n+ + ne- = M</td></tr><tr><td>气体符号漏标</td><td>电解饱和食盐水总式漏 H2↑、Cl2↑</td><td>溶液中的反应生成气体标↑</td></tr><tr><td>总反应与两极式不匹配</td><td>两极式电子数不相等就直接相加</td><td>先乘以最小公倍数使得失电子相等再相加</td></tr><tr><td>水溶液电解阴极写&quot;2H+ + 2e- = H2↑&quot;</td><td>中性溶液中H+来自水</td><td>规范写法：<strong>2H2O + 2e- = H2↑ + 2OH-</strong></td></tr><tr><td>Al3+/Na+在水溶液中&quot;被电解出来&quot;</td><td>电解NaCl溶液得金属Na</td><td>水溶液中活泼金属离子不放电，得Na须电解<strong>熔融</strong>NaCl</td></tr></table></div>
+<hr>
+<h3>五、充电电池：&quot;负对负、正对正&quot;</h3>
+<ul>
+<li>放电时是原电池；充电时变电解池，电极角色反转：放电时的<strong>负极</strong>充电时作<strong>阴极</strong>（接外电源<strong>负极</strong>），放电时的<strong>正极</strong>充电时作<strong>阳极</strong>（接外电源<strong>正极</strong>）。</li>
+<li><strong>接线口诀</strong>：&quot;<strong>负对负、正对正</strong>&quot;——电池负极接电源负极，电池正极接电源正极。</li>
+<li>充电反应 = 放电反应的逆过程；充电时电极反应式 = 放电时对应电极反应式倒写。</li>
+</ul>
+<h4>铅蓄电池示范</h4>
+<ul>
+<li>放电：负极 Pb - 2e- + SO4^2- = PbSO4；正极 PbO2 + 2e- + 4H+ + SO4^2- = PbSO4 + 2H2O。</li>
+<li>充电：原负极接电源负极作阴极，反应倒写：PbSO4 + 2e- = Pb + SO4^2-。</li>
+<li>❌ 易错：充电时把&quot;阳极&quot;与&quot;正极&quot;混为一谈，误认为正极仍发生还原——充电时原正极接电源正极，作<strong>阳极</strong>，发生<strong>氧化</strong>。</li>
+</ul>
+<hr>
+<h3>六、电镀与精炼铜特例（对比记忆）</h3>
+<div class="table-wrap"><table><tr><th>项目</th><th>电镀（铁件镀铜）</th><th>电解精炼铜</th></tr><tr><td>阳极</td><td><strong>镀层金属</strong> Cu：Cu - 2e- = Cu2+</td><td><strong>粗铜</strong>：Cu - 2e- = Cu2+（Zn、Fe、Ni也随之溶解）</td></tr><tr><td>阴极</td><td><strong>镀件</strong> Fe：Cu2+ + 2e- = Cu</td><td><strong>纯铜</strong>：Cu2+ + 2e- = Cu</td></tr><tr><td>电解质</td><td>含镀层金属离子的溶液（CuSO4溶液）</td><td>CuSO4溶液</td></tr><tr><td>溶液浓度</td><td><strong>不变</strong>（溶多少析多少）</td><td><strong>Cu2+浓度减小</strong>（阳极溶解的不全是Cu，阴极只析Cu）</td></tr><tr><td>特殊产物</td><td>—</td><td><strong>阳极泥</strong>（Ag、Au等不如Cu活泼，不失电子，沉在阳极下方）</td></tr></table></div>
+<h4>高频易错</h4>
+<ul>
+<li>❌ &quot;精炼铜时阳极减少的质量 = 阴极增加的质量&quot;——错。阳极溶解的有Zn/Fe/Ni等轻杂质（且部分变成阳极泥不溶），阴极只析出Cu，<strong>阳极减重 &gt; 阴极增重</strong> 一般不成立，两者无固定关系；电子守恒才是唯一可靠等量关系。</li>
+<li>❌ 电镀时把镀件作阳极——镀件必须作阴极（被&quot;镀上&quot;，发生还原析出）。</li>
+<li>❌ 精炼铜时认为溶液中Cu2+浓度不变——杂质放电拖走电子，Cu2+浓度变小，需定期补充。</li>
+</ul>
+<hr>
+<h3>记忆口诀</h3>
+<blockquote><p><strong>负氧阳氧正还阴还，原电正正负负、电解阴阳相吸；</strong><br><strong>写式四步：定极、定物、配介质、查三恒；</strong><br><strong>充电负对负、正对正；电镀镀层作阳极、镀件作阴极；</strong><br><strong>精炼粗铜阳、纯铜阴，阳极泥里藏金银。</strong></p></blockquote>
+<hr>
+<h3>训练计划（2周）</h3>
+<div class="table-wrap"><table><tr><th>阶段</th><th>内容</th><th>方法</th></tr><tr><td>第1-3天</td><td>判定流程+离子迁移</td><td>每天画3个装置图（原电池、电解池、充电电池各一），标全：电极名称、反应类型、电子流、离子迁移方向</td></tr><tr><td>第4-6天</td><td>放电顺序+电极式书写</td><td>默写阴阳极放电顺序；酸/碱/熔融三种介质各写5个电极反应式，逐式&quot;三查&quot;</td></tr><tr><td>第7-9天</td><td>充电电池+电镀精炼</td><td>铅蓄电池、锂离子电池充放电反应互写；精炼铜质量分析题3道</td></tr><tr><td>第10-14天</td><td>综合</td><td>广东真题/模拟电化学选择题每天3题，错题按&quot;判定错/介质错/守恒错/特例错&quot;四类归因</td></tr></table></div>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_化学_核心知识网络_电化学体系.html">高二深化_化学_核心知识网络_电化学体系</a> — 原电池、电解池、金属腐蚀与防护的体系化梳理，本卡是其&quot;判定与书写避坑篇&quot;</li>
+<li><a href="../核心知识网络/高一筑基_化学_核心知识网络_氧化还原反应核心规律.html">高一筑基_化学_核心知识网络_氧化还原反应核心规律</a> — 电极反应本质是氧化还原半反应，配平方法同源</li>
+<li><a href="高二深化_化学_易错警示与辨析_化学平衡等效平衡.html">高二深化_化学_易错警示与辨析_化学平衡等效平衡</a> — 同属反应原理板块，可安排在同一轮专题强化</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>做新型电池题的第一动作：<strong>在图上标出正负极/阴阳极和电子流向</strong>，标错一步满盘皆输；标完再读选项。</li>
+<li>&quot;正正负负&quot;与&quot;阴阳相吸&quot;容易背混，自检法：无论哪种池，<strong>阳离子永远奔向发生还原反应的电极</strong>（它自己可能是被还原的候选），以此反推不会错。</li>
+<li>介质判断线索：题给&quot;KOH溶液&quot;&quot;碱性&quot;&quot;熔融碳酸盐&quot;&quot;固体电解质传导O2-&quot;等字样，直接决定补什么粒子；选择题中电极式出现与介质相斥的粒子（碱中出现H+）可立即排除。</li>
+<li>等级赋分提示：电化学选择题6分属中档区，广东卷该题历年得分率不低——别人都对、你错一题，赋分端会被明显拉档；书写类小问（电极反应式）做到&quot;四步三查&quot;零失误。</li>
+</ul>
+<hr>
+<blockquote><p>🏷️ 标签：<code>#化学</code> <code>#易错警示与辨析</code> <code>#高二深化</code> <code>#难度3</code> <code>#广东选择性考试</code> <code>#电化学</code> <code>#原电池</code> <code>#电解池</code> <code>#电极反应式</code> <code>#电镀精炼</code></p></blockquote>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回易错警示与辨析</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

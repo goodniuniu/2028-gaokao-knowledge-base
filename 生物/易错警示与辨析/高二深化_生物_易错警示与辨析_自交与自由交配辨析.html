@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自交与自由交配辨析（含计算模板） | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="生物">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">生物</a></li><li><a href="./index.html">易错警示与辨析</a></li><li><span aria-current="page">自交与自由交配辨析（含计算模板）</span></li></ol>
+<h1 class="kb-title">自交与自由交配辨析（含计算模板）</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：人教版必修2第1章&quot;遗传因子的发现&quot; + 近5年广东选择性考试遗传计算高频考点</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频，近5年广东选择性考试遗传大题与选择题多次涉及&quot;逐代自交淘汰&quot;与&quot;自由交配（随机交配）&quot;计算，是区分度最高的计算点之一。难度定位中高档。广东卷特色：常把两种交配方式放在**同一情境的不同小问**中对比设问（如&quot;F2自交一代&quot;与&quot;F2随机交配一代&quot;各占一问），审题时一字之差全盘皆错；情境化命题中常以育种、遗传病筛查为背景。等级赋分提示：遗传计算是拉开原始分差距的关键题，高手过招在此处，务必做到方法模板化、零计算失误。<br><strong>自交</strong>：基因型相同的个体交配（植物自花传粉、同株异花传粉） | 纯合子鉴定、提高纯合度、逐代淘汰育种 | 群体中每个个体只与&quot;自己&quot;结合<br><strong>杂交</strong>：基因型不同的个体交配 | 显隐性判断、获得杂种优势 | 范围最广的统称<br><strong>测交</strong>：待测个体与**隐性纯合子**交配 | 判断待测个体基因型（AA还是Aa） | 后代比例直接反映待测个体产生的配子种类与比例<br><strong>正交/反交</strong>：父本母本互换的两组杂交（如♀AA×♂aa 与 ♀aa×♂AA） | 判断核遗传还是细胞质遗传、伴性还是常染色体遗传 | 两组结果相同→核遗传（且常染色体）；不同→细胞质或伴性<br><strong>自由交配（随机交配）</strong>：群体内所有个体随机结合 | 群体遗传计算 | 必须用**配子法**（基因频率）计算<br><strong>自由交配</strong>：AA = 4/9；Aa = 4/9；aa = 1/9</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：两类题的分水岭只有一句话——<strong>自交是&quot;自己和自己&quot;，基因型频率按分离定律逐代递推；自由交配是&quot;群体内部随机结合&quot;，必须先算配子（基因）频率，再用棋盘/公式合成子代。</strong> 拿到题先问：合子是&quot;自交产生&quot;还是&quot;随机结合产生&quot;？</p></blockquote>
+<hr>
+<h3>一、五种交配方式概念辨析表</h3>
+<div class="table-wrap"><table><tr><th>交配方式</th><th>含义</th><th>典型用途</th><th>关键特征</th></tr><tr><td><strong>自交</strong></td><td>基因型相同的个体交配（植物自花传粉、同株异花传粉）</td><td>纯合子鉴定、提高纯合度、逐代淘汰育种</td><td>群体中每个个体只与&quot;自己&quot;结合</td></tr><tr><td><strong>杂交</strong></td><td>基因型不同的个体交配</td><td>显隐性判断、获得杂种优势</td><td>范围最广的统称</td></tr><tr><td><strong>测交</strong></td><td>待测个体与<strong>隐性纯合子</strong>交配</td><td>判断待测个体基因型（AA还是Aa）</td><td>后代比例直接反映待测个体产生的配子种类与比例</td></tr><tr><td><strong>正交/反交</strong></td><td>父本母本互换的两组杂交（如♀AA×♂aa 与 ♀aa×♂AA）</td><td>判断核遗传还是细胞质遗传、伴性还是常染色体遗传</td><td>两组结果相同→核遗传（且常染色体）；不同→细胞质或伴性</td></tr><tr><td><strong>自由交配（随机交配）</strong></td><td>群体内所有个体随机结合</td><td>群体遗传计算</td><td>必须用<strong>配子法</strong>（基因频率）计算</td></tr></table></div>
+<blockquote><p><strong>避坑</strong>：自交≠近交的同义词混用没问题，但<strong>自交绝不是&quot;群体随机交配&quot;</strong>。题目出现&quot;自然状态&quot;&quot;随机传粉&quot;&quot;自由传粉&quot;→自由交配；出现&quot;自交&quot;&quot;自花传粉&quot;&quot;闭花受粉&quot;&quot;逐代自留种自种&quot;→自交。</p></blockquote>
+<hr>
+<h3>二、识别标志：一眼判断用哪种方法</h3>
+<div class="table-wrap"><table><tr><th>题干关键词</th><th>判定</th><th>方法</th></tr><tr><td>自交、自花传粉、自留种连续种植、豌豆自然状态（自花闭花）</td><td>自交</td><td>分离定律逐代递推</td></tr><tr><td>自由交配、随机交配、随机传粉、相互传粉、玉米自然状态（异花）</td><td>自由交配</td><td>配子法（基因频率）</td></tr><tr><td>玉米&quot;同株异花&quot;需注意</td><td>可自交也可自由交配，看题干限定</td><td>按题干字眼判定</td></tr></table></div>
+<hr>
+<h3>三、自交计算模板：杂合子逐代自交（含淘汰隐性个体）</h3>
+<h4>1. 基础模型：Aa连续自交n代</h4>
+<div class="table-wrap"><table><tr><th>代数</th><th>Aa</th><th>AA + aa</th><th>杂合子比例公式</th></tr><tr><td>F1</td><td>1/2</td><td>1/2</td><td>(1/2)¹</td></tr><tr><td>F2</td><td>1/4</td><td>3/4</td><td>(1/2)²</td></tr><tr><td>Fn</td><td>(1/2)ⁿ</td><td>1 − (1/2)ⁿ</td><td><strong>(1/2)ⁿ</strong></td></tr></table></div>
+<ul>
+<li>推论：Fn中 AA = aa = [1 − (1/2)ⁿ] / 2。</li>
+</ul>
+<h4>2. 进阶模型：每代淘汰aa后存活群体继续自交（广东高频）</h4>
+<blockquote><p><strong>操作要点</strong>：每代先算出后代比例 → <strong>剔除aa</strong> → 把剩余 AA:Aa <strong>重新归一化</strong> → 再进入下一代自交。</p></blockquote>
+<p><strong>示例：Aa自交，每代淘汰aa，求F3中Aa的比例</strong></p>
+<ul>
+<li>F1：1/4 AA : 1/2 Aa : 1/4 aa → 淘汰aa → 存活 1/3 AA : 2/3 Aa</li>
+<li>自交一代：AA后代全AA；Aa后代 1/4 AA : 1/2 Aa : 1/4 aa</li>
+<ul>
+<li>AA = 1/3 + 2/3×1/4 = 1/2；Aa = 2/3×1/2 = 1/3；aa = 2/3×1/4 = 1/6</li>
+<li>淘汰aa → 存活 AA : Aa = 1/2 : 1/3 = <strong>3/5 AA : 2/5 Aa</strong>（即F2存活群体）</li>
+</ul>
+<li>再自交一代：Aa = 2/5×1/2 = 1/5（占全体）；淘汰aa后归一化……按题目所问代数逐步推。</li>
+</ul>
+<p><strong>避坑警示</strong>：</p>
+<ul>
+<li>❌ 最常见的错误：淘汰aa后忘记<strong>归一化</strong>，直接用含aa的原始比例进入下一代计算。</li>
+<li>❌ 把&quot;F2中淘汰aa再自交&quot;理解为&quot;F2群体自由交配&quot;——两字之差，方法全错。</li>
+<li>✅ 口诀：<strong>&quot;先剔除，再归一，逐代推。&quot;</strong></li>
+</ul>
+<hr>
+<h3>四、自由交配计算模板：配子法（基因频率法）</h3>
+<blockquote><p><strong>三步模板</strong>：①求群体中各基因型比例 → ②计算<strong>配子频率</strong>（A频率 = AA + ½Aa；a频率 = aa + ½Aa）→ ③用棋盘/公式合成子代：AA = p²，Aa = 2pq，aa = q²。</p></blockquote>
+<p><strong>示例：群体中 1/3 AA : 2/3 Aa，自由交配一代，求子代基因型比例</strong></p>
+<ul>
+<li>① 配子频率：p(A) = 1/3 + 2/3×1/2 = <strong>2/3</strong>；q(a) = 2/3×1/2 = <strong>1/3</strong></li>
+<li>② 子代：AA = (2/3)² = 4/9；Aa = 2×2/3×1/3 = 4/9；aa = (1/3)² = 1/9</li>
+</ul>
+<p><strong>含淘汰的变式</strong>：若上述群体先淘汰aa再自由交配——先归一化存活群体，再算配子频率，步骤不变。</p>
+<p><strong>避坑警示</strong>：</p>
+<ul>
+<li>❌ 直接用基因型比例做棋盘（把 1/3 AA 与 2/3 Aa 两两组合列6种交配再相加）——不是不能做，但极易漏项、重复计数，<strong>考试只推荐配子法</strong>。</li>
+<li>❌ 雌雄配子频率不同的题（如伴性遗传、某性别中淘汰）——必须<strong>雌雄分别算配子频率</strong>再棋盘，不能共用一套p、q。</li>
+<li>❌ 自由交配一代后群体即达<strong>遗传平衡</strong>（基因频率不变、基因型频率 = p²:2pq:q²），之后各代比例不再变化——若题目说&quot;连续自由交配n代&quot;，算一代即可。</li>
+<li>✅ 口诀：<strong>&quot;自由交配算配子，p²、2pq、q²；自交递推看（1/2）ⁿ。&quot;</strong></li>
+</ul>
+<hr>
+<h3>五、两类题对照：同一群体，两种结果（经典对比）</h3>
+<p>群体 1/3 AA : 2/3 Aa：</p>
+<div class="table-wrap"><table><tr><th>处理方式</th><th>子一代结果</th></tr><tr><td><strong>自交</strong></td><td>AA = 1/3 + 2/3×1/4 = 1/2；Aa = 1/3；aa = 1/6</td></tr><tr><td><strong>自由交配</strong></td><td>AA = 4/9；Aa = 4/9；aa = 1/9</td></tr></table></div>
+<blockquote><p>结果明显不同（自交 3:2:1 vs 自由交配 4:4:1），<strong>审题时圈出交配方式关键词是第一步</strong>。</p></blockquote>
+<hr>
+<h3>六、典型错例集锦</h3>
+<div class="table-wrap"><table><tr><th>错例</th><th>错因</th><th>正解</th></tr><tr><td>&quot;Aa自交两代，杂合子占1/2&quot;</td><td>公式记错</td><td>杂合子 = (1/2)² = 1/4</td></tr><tr><td>&quot;淘汰aa后群体1/3AA、2/3Aa直接自交，aa = 2/3×1/4 = 1/6&quot;</td><td>这步本身对，但若忘记这是&quot;占全体&quot;而非&quot;占存活&quot;会直接当答案</td><td>要看清题目问&quot;占存活个体&quot;还是&quot;占全部后代&quot;</td></tr><tr><td>&quot;自由交配用基因型两两组合，漏掉Aa♂×AA♀与AA♂×Aa♀是两份&quot;</td><td>组合漏项</td><td>用配子法，p²:2pq:q² 一次到位</td></tr><tr><td>&quot;连续自由交配3代，每代都重新算一次&quot;</td><td>不懂遗传平衡</td><td>无选择无突变时，自由交配一代即平衡，以后各代相同</td></tr><tr><td>&quot;测交后代1:1说明是自由交配的结果&quot;</td><td>概念混淆</td><td>测交是特定杂交方式，与自由交配无关</td></tr></table></div>
+<hr>
+<h3>七、训练计划（2周）</h3>
+<div class="table-wrap"><table><tr><th>阶段</th><th>内容</th><th>方法</th></tr><tr><td>第1-3天</td><td>概念辨析</td><td>默写五种交配方式对比表，每天做5道&quot;判定交配方式&quot;小题</td></tr><tr><td>第4-7天</td><td>自交专项</td><td>(1/2)ⁿ公式推导默写 + 逐代淘汰隐性个体计算5题，强制写&quot;剔除→归一&quot;步骤</td></tr><tr><td>第8-11天</td><td>自由交配专项</td><td>配子法模板计算8题，含1-2道雌雄配子频率不同的变式</td></tr><tr><td>第12-14天</td><td>混合对比</td><td>同一情境分别按自交、自由交配计算，对比结果差异；用广东模拟卷遗传大题限时训练</td></tr></table></div>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高一筑基_生物_核心知识网络_遗传定律体系.html">高一筑基_生物_核心知识网络_遗传定律体系</a> — 分离定律与自由组合定律的体系化整理，本卡是其计算应用篇</li>
+<li><a href="高二深化_生物_易错警示与辨析_交叉互换与易位辨析.html">高二深化_生物_易错警示与辨析_交叉互换与易位辨析</a> — 遗传变异模块的另一高频辨析点</li>
+<li><a href="../典型题型与方法/高二深化_生物_典型题型与方法_生物长句表达标准模板.html">高二深化_生物_典型题型与方法_生物长句表达标准模板</a> — 遗传题中&quot;原因/依据类&quot;长句的表述框架</li>
+<li><a href="../核心知识网络/高二深化_生物_核心知识网络_广东生物长句表达答题模板.html">高二深化_生物_核心知识网络_广东生物长句表达答题模板</a> — 广东卷长句表达总纲</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>广东卷遗传题近年偏爱&quot;<strong>一题多问、交配方式混排</strong>&quot;：前两问用自交，最后一问突然改&quot;随机传粉&quot;，务必逐问圈关键词。</li>
+<li>遇到伴性遗传的自由交配（如 X^B X^b 与 X^B Y 群体），雌雄配子频率分开算：雌配子按雌性群体算，雄配子按雄性群体算。</li>
+<li>&quot;玉米自然种植&quot;默认异花传粉（自由交配），&quot;豌豆自然状态&quot;默认自花闭花传粉（自交）——教材原话，命题人默认你知道。</li>
+<li>等级赋分提醒：遗传计算是原始分拉开差距的主战场，但<strong>计算失误的代价在赋分制下加倍</strong>——建议此类题做完立即用代入法回验一次。</li>
+</ul>
+<hr>
+<blockquote><p>🏷️ 标签：<code>#生物</code> <code>#易错警示与辨析</code> <code>#高二深化</code> <code>#难度4</code> <code>#广东选择性考试</code> <code>#遗传计算</code> <code>#自交</code> <code>#自由交配</code> <code>#配子法</code> <code>#遗传平衡</code></p></blockquote>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回易错警示与辨析</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>
