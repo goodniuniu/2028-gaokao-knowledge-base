@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# ⚠️ 本脚本已被 build_site.py 取代（新设计系统 + 卡片换肤 + 链接校验），保留仅供参考。
 """
 为2028高考知识库生成所有index.html
 解决GitHub Pages中文路径404问题

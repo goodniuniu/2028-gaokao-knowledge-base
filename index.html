@@ -3,137 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>📚 2028高考知识库</title>
-<style>
-  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 1100px; margin: 0 auto; padding: 20px; background: #f0f4f8; color: #333; }
-  h1 { color: #1a5276; text-align: center; font-size: 28pt; margin-bottom: 10px; }
-  .subtitle { text-align: center; color: #5d6d7e; font-size: 12pt; margin-bottom: 30px; }
-  .stats { text-align: center; background: white; border-radius: 10px; padding: 15px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-  .stats span { display: inline-block; margin: 0 15px; font-size: 11pt; color: #555; }
-  .stats .num { color: #e74c3c; font-weight: bold; font-size: 14pt; }
-  .section-title { color: #2c3e50; font-size: 16pt; border-left: 4px solid #3498db; padding-left: 12px; margin: 30px 0 15px 0; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px; }
-  .subject-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s; }
-  .subject-card:hover { transform: translateY(-3px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
-  .subject-icon { font-size: 32pt; text-align: center; margin-bottom: 8px; }
-  .subject-name { text-align: center; font-size: 16pt; font-weight: bold; color: #2c3e50; margin-bottom: 5px; }
-  .subject-count { text-align: center; color: #e74c3c; font-size: 11pt; margin-bottom: 10px; }
-  .subject-links { font-size: 10pt; line-height: 1.8; }
-  .subject-links a { color: #2980b9; text-decoration: none; }
-  .subject-links a:hover { color: #e74c3c; text-decoration: underline; }
-  .special-zone { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px; }
-  .special-zone a { display: inline-block; margin: 5px 10px 5px 0; padding: 6px 14px; background: #eaf2f8; color: #2980b9; text-decoration: none; border-radius: 20px; font-size: 10pt; }
-  .special-zone a:hover { background: #3498db; color: white; }
-  .footer { text-align: center; margin-top: 40px; padding: 20px; color: #7f8c8d; font-size: 10pt; }
-  .footer a { color: #3498db; }
-  .quick-links { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px; }
-  .quick-links a { display: inline-block; margin: 5px 10px 5px 0; padding: 8px 16px; background: #eaf2f8; color: #2980b9; text-decoration: none; border-radius: 6px; font-size: 11pt; }
-  .quick-links a:hover { background: #3498db; color: white; }
+<title>首页 | 2028高考知识库</title>
+<link rel="stylesheet" href="assets/kb.css">
 
-  .figure { text-align: center; margin: 20px 0; }
-  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
-  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
-
-  /* 响应式增强 */
-  @media (max-width: 600px) {
-    body { padding: 12px; }
-    h1 { font-size: 20pt; }
-    h2 { font-size: 16pt; }
-    .figure img { border-radius: 4px; }
-    table { font-size: 10pt; }
-  }
-  .table-wrap { overflow-x: auto; }
-</style>
 </head>
-<body>
+<body >
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="index.html">🏠 首页</a>
+    <a href="图形库/index.html">🖼️ 图形库</a>
+    <a href="复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap">
+<div class="kb-hero">
   <h1>📚 2028高考知识库</h1>
-  <p class="subtitle">2028年广东新高考六科学习知识库 | 考生：女儿 | 选科：语文、数学、英语、物理、化学、生物</p>
-  
-  <div class="stats">
-    <span>总卡片数：<span class="num">248</span></span>
-    <span>覆盖科目：<span class="num">6</span>科</span>
-    <span>知识维度：<span class="num">4</span>大模块</span>
-    <span>目标分数：<span class="num">650</span>分</span>
+  <p>2028年广东新高考六科学习知识库 · 选科：语文 / 数学 / 英语 / 物理 / 化学 / 生物</p>
+  <div class="kb-stats">
+    <div class="kb-stat"><span class="num">92</span><span class="label">知识卡片</span></div>
+    <div class="kb-stat"><span class="num">6</span><span class="label">覆盖科目</span></div>
+    <div class="kb-stat"><span class="num">4</span><span class="label">知识维度</span></div>
+    <div class="kb-stat"><span class="num">650</span><span class="label">目标分数</span></div>
   </div>
-  
-  <div class="section-title">快速导航</div>
-  <div class="quick-links">
-    <a href="00_知识库总索引.html">📋 知识库总索引</a>
-    <a href="01_知识卡片模板.html">📝 卡片模板</a>
-    <a href="02_使用规则与检索说明.html">📖 使用规则</a>
-    <a href="00_知识库完善计划（650分目标）.html">🎯 完善计划</a>
-    <a href="图形库/index.html">🖼️ 图形索引</a>
-  </div>
-  
-  <div class="section-title">六科知识库</div>
-  <div class="grid">
-  <div class="subject-card">
-    <div class="subject-icon">📐</div>
-    <div class="subject-name">数学</div>
-    <div class="subject-count">37 张卡片</div>
-    <div class="subject-links">
-      <a href="数学/核心知识网络/index.html">核心知识网络</a> (25)<br><a href="数学/典型题型与方法/index.html">典型题型与方法</a> (8)<br><a href="数学/易错警示与辨析/index.html">易错警示与辨析</a> (2)<br><a href="数学/素材与拓展/index.html">素材与拓展</a> (1)
-    </div>
-  </div>
-  <div class="subject-card">
-    <div class="subject-icon">📖</div>
-    <div class="subject-name">语文</div>
-    <div class="subject-count">12 张卡片</div>
-    <div class="subject-links">
-      <a href="语文/核心知识网络/index.html">核心知识网络</a> (9)<br><a href="语文/素材与拓展/index.html">素材与拓展</a> (2)
-    </div>
-  </div>
-  <div class="subject-card">
-    <div class="subject-icon">🌍</div>
-    <div class="subject-name">英语</div>
-    <div class="subject-count">151 张卡片</div>
-    <div class="subject-links">
-      <a href="英语/核心知识网络/index.html">核心知识网络</a> (1)<br><a href="英语/典型题型与方法/index.html">典型题型与方法</a> (1)<br><br><small>单词复习: <a href="英语/单词复习/日期词表/index.html">日期词表</a> (49) | <a href="英语/单词复习/分组词表/index.html">分组词表</a> (76) | <a href="英语/单词复习/小测卷/index.html">小测卷</a> (20) | <a href="英语/单词复习/进度追踪/index.html">进度追踪</a> (2)</small>
-    </div>
-  </div>
-  <div class="subject-card">
-    <div class="subject-icon">⚛️</div>
-    <div class="subject-name">物理</div>
-    <div class="subject-count">16 张卡片</div>
-    <div class="subject-links">
-      <a href="物理/核心知识网络/index.html">核心知识网络</a> (12)<br><a href="物理/典型题型与方法/index.html">典型题型与方法</a> (2)<br><a href="物理/易错警示与辨析/index.html">易错警示与辨析</a> (1)
-    </div>
-  </div>
-  <div class="subject-card">
-    <div class="subject-icon">⚗️</div>
-    <div class="subject-name">化学</div>
-    <div class="subject-count">12 张卡片</div>
-    <div class="subject-links">
-      <a href="化学/核心知识网络/index.html">核心知识网络</a> (10)<br><a href="化学/典型题型与方法/index.html">典型题型与方法</a> (1)
-    </div>
-  </div>
-  <div class="subject-card">
-    <div class="subject-icon">🧬</div>
-    <div class="subject-name">生物</div>
-    <div class="subject-count">12 张卡片</div>
-    <div class="subject-links">
-      <a href="生物/核心知识网络/index.html">核心知识网络</a> (9)<br><a href="生物/典型题型与方法/index.html">典型题型与方法</a> (2)
-    </div>
-  </div>
-  </div>
-  
-  <div class="section-title">🎯 方法体系</div>
-  <div class="special-zone">
-    <p>学习方法、心理建设、生理管理、考试策略</p>
-    <p><a href="方法/学习方法/index.html">学习方法</a> (2) | <a href="方法/心理建设/index.html">心理建设</a> (1) | <a href="方法/生理管理/index.html">生理管理</a> (1) | <a href="方法/考试策略/index.html">考试策略</a> (1)</p>
-    <p style="margin-top:10px"><a href="方法/index.html">→ 进入方法体系</a> (7 篇)</p>
-  </div>
-  
-  <div class="section-title">📊 复盘追踪</div>
-  <div class="special-zone">
-    <p>知识掌握状态表、学习进度追踪</p>
-    <p style="margin-top:10px"><a href="复盘追踪/index.html">→ 进入复盘追踪</a> (1 篇)</p>
-  </div>
-  
-  <div class="footer">
-    <p>📝 本知识库持续更新中，目标：2028 高考 650 分</p>
-    <p><a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> | 
-       <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></p>
-  </div>
+</div>
+
+<h2 class="kb-section-title">快速导航</h2>
+<div class="kb-chips"><a class="kb-chip" href="00_知识库总索引.html">📋 📚 知识库总索引 | 2028广东新高考六科学习</a><a class="kb-chip" href="01_知识卡片模板.html">📝 📝 知识卡片标准模板</a><a class="kb-chip" href="02_使用规则与检索说明.html">📖 ⚙️ 使用规则与检索说明</a><a class="kb-chip" href="00_知识库完善计划（650分目标）.html">🎯 📈 2028广东高考650分知识库完善计划</a><a class="kb-chip" href="00_当前状态记录.html">📌 📋 2028高考知识库 — 当前状态记录</a><a class="kb-chip" href="图形库/index.html">🖼️ 图形索引</a></div>
+
+<h2 class="kb-section-title">六科知识库</h2>
+<div class="kb-grid kb-grid--wide">
+<a class="kb-card" href="语文/index.html" style="--card-accent:#b03a2e">
+  <div class="kb-card__icon">📖</div>
+  <div class="kb-card__title">语文</div>
+  <div class="kb-card__meta">11 张卡片</div>
+  <div class="kb-card__links"><a href="语文/核心知识网络/index.html">核心知识网络</a> <span class="cnt">(9)</span><br><a href="语文/素材与拓展/index.html">素材与拓展</a> <span class="cnt">(2)</span></div>
+</a><a class="kb-card" href="数学/index.html" style="--card-accent:#2563eb">
+  <div class="kb-card__icon">📐</div>
+  <div class="kb-card__title">数学</div>
+  <div class="kb-card__meta">36 张卡片</div>
+  <div class="kb-card__links"><a href="数学/核心知识网络/index.html">核心知识网络</a> <span class="cnt">(25)</span><br><a href="数学/典型题型与方法/index.html">典型题型与方法</a> <span class="cnt">(8)</span><br><a href="数学/易错警示与辨析/index.html">易错警示与辨析</a> <span class="cnt">(2)</span><br><a href="数学/素材与拓展/index.html">素材与拓展</a> <span class="cnt">(1)</span></div>
+</a><a class="kb-card" href="英语/index.html" style="--card-accent:#059669">
+  <div class="kb-card__icon">🌍</div>
+  <div class="kb-card__title">英语</div>
+  <div class="kb-card__meta">2 张卡片</div>
+  <div class="kb-card__links"><a href="英语/核心知识网络/index.html">核心知识网络</a> <span class="cnt">(1)</span><br><a href="英语/典型题型与方法/index.html">典型题型与方法</a> <span class="cnt">(1)</span><br><a href="英语/单词复习/index.html">🔤 单词复习专区</a> <span class="cnt">(假期49天)</span></div>
+</a><a class="kb-card" href="物理/index.html" style="--card-accent:#4f46e5">
+  <div class="kb-card__icon">⚛️</div>
+  <div class="kb-card__title">物理</div>
+  <div class="kb-card__meta">15 张卡片</div>
+  <div class="kb-card__links"><a href="物理/核心知识网络/index.html">核心知识网络</a> <span class="cnt">(12)</span><br><a href="物理/典型题型与方法/index.html">典型题型与方法</a> <span class="cnt">(2)</span><br><a href="物理/易错警示与辨析/index.html">易错警示与辨析</a> <span class="cnt">(1)</span></div>
+</a><a class="kb-card" href="化学/index.html" style="--card-accent:#ea580c">
+  <div class="kb-card__icon">⚗️</div>
+  <div class="kb-card__title">化学</div>
+  <div class="kb-card__meta">11 张卡片</div>
+  <div class="kb-card__links"><a href="化学/核心知识网络/index.html">核心知识网络</a> <span class="cnt">(10)</span><br><a href="化学/典型题型与方法/index.html">典型题型与方法</a> <span class="cnt">(1)</span></div>
+</a><a class="kb-card" href="生物/index.html" style="--card-accent:#0d9488">
+  <div class="kb-card__icon">🧬</div>
+  <div class="kb-card__title">生物</div>
+  <div class="kb-card__meta">11 张卡片</div>
+  <div class="kb-card__links"><a href="生物/核心知识网络/index.html">核心知识网络</a> <span class="cnt">(9)</span><br><a href="生物/典型题型与方法/index.html">典型题型与方法</a> <span class="cnt">(2)</span></div>
+</a>
+</div>
+
+<h2 class="kb-section-title">🎯 方法体系</h2>
+<div class="kb-card" style="--card-accent:#7c3aed">
+  <div class="kb-card__title">学习方法 · 心理建设 · 生理管理 · 考试策略（6 篇）</div>
+  <div class="kb-chips" style="margin-top:12px"><a class="kb-chip" href="方法/学习方法/index.html">💡 学习方法</a> <a class="kb-chip" href="方法/心理建设/index.html">🧘 心理建设</a> <a class="kb-chip" href="方法/生理管理/index.html">💪 生理管理</a> <a class="kb-chip" href="方法/考试策略/index.html">🎓 考试策略</a>
+  <a class="kb-chip" href="方法/index.html">→ 进入方法体系</a></div>
+</div>
+
+<h2 class="kb-section-title">📌 学习管理</h2>
+<div class="kb-grid">
+  <a class="kb-card" href="复盘追踪/index.html" style="--card-accent:#475569">
+    <div class="kb-card__icon">📊</div>
+    <div class="kb-card__title">复盘追踪</div>
+    <div class="kb-card__meta">知识掌握状态表 · 学习进度追踪</div>
+  </a>
+  <a class="kb-card" href="图形库/index.html" style="--card-accent:#0891b2">
+    <div class="kb-card__icon">🖼️</div>
+    <div class="kb-card__title">图形库</div>
+    <div class="kb-card__meta">32 张知识点示意图（物理 / 化学 / 生物 / 数学）</div>
+  </a>
+</div>
+
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
 </body>
 </html>

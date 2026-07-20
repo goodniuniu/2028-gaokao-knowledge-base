@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>不等式证明的多方向拆解思维：以一题贯通代数·分析·几何 | 2028高考数学</title>
-<!-- MathJax 配置 -->
+<title>不等式证明的多方向拆解思维：以一题贯通代数·分析·几何 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
 <script>
 MathJax = {
   tex: {
@@ -13,64 +13,27 @@ MathJax = {
     processEscapes: true,
     processEnvironments: true
   },
-  options: {
-    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-  }
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
 };
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<style>
-  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f7fa; line-height: 1.8; color: #333; }
-  h1 { color: #1a5276; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
-  h2 { color: #2874a6; border-left: 4px solid #3498db; padding-left: 12px; margin-top: 30px; }
-  h3 { color: #2e86c1; }
-  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
-  th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-  th { background: #eaf2f8; }
-  code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
-  pre { background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }
-  pre code { background: transparent; padding: 0; }
-  blockquote { border-left: 4px solid #3498db; margin: 15px 0; padding: 10px 20px; background: #eaf2f8; }
-  .back { display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; }
-  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 10pt; }
-  ul, ol { margin: 10px 0; padding-left: 25px; }
-  li { margin: 5px 0; }
-  a { color: #2980b9; }
-  a:hover { color: #e74c3c; }
-  hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
-  img { max-width: 100%; height: auto; }
-
-  .figure { text-align: center; margin: 20px 0; }
-  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
-  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
-
-  /* 响应式增强 */
-  @media (max-width: 600px) {
-    body { padding: 12px; }
-    h1 { font-size: 20pt; }
-    h2 { font-size: 16pt; }
-    .figure img { border-radius: 4px; }
-    table { font-size: 10pt; }
-  }
-  .table-wrap { overflow-x: auto; }
-</style>
 </head>
-<body>
-  <a class="back" href="./">← 返回目录</a>
-<h1>不等式证明的多方向拆解思维：以一题贯通代数·分析·几何</h1>
-
-<div class="table-wrap">
-<table>
-<tr><th>字段</th><th>内容</th></tr>
-<tr><td><strong>来源</strong></td><td>数学思想方法专题 / 一题多解训练 / 新高考Ⅰ卷压轴题常见思维</td></tr>
-<tr><td><strong>时间标签</strong></td><td>#高二深化</td></tr>
-<tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
-<tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
-</table>
-</div>
-
-<hr>
-
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">不等式证明的多方向拆解思维：以一题贯通代数·分析·几何</span></li></ol>
+<h1 class="kb-title">不等式证明的多方向拆解思维：以一题贯通代数·分析·几何</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--src">来源：数学思想方法专题 / 一题多解训练 / 新高考Ⅰ卷压轴题常见思维</span></div>
+<div class="kb-note"><strong>定义</strong>：从哪个数学分支切入 | 同一方向内的具体定理/工具<br><strong>本题示例</strong>：代数 / 分析 / 几何 | 配方、AM-GM、求导、拉格朗日、距离公式<br><strong>选择依据</strong>：知识储备、审美偏好、对题目结构的直觉 | 该方向内定理的熟练度、计算复杂度<br><strong>能否混搭</strong>：❌ 不能同时走两个方向（思维会混乱） | ✅ 同一方向内可灵活切换具体步骤<br><strong>何时切换方向</strong>：某一方向尝试3-5分钟无进展时 | 同一方向内某解法计算卡壳时</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
 <h2>核心内容</h2>
 
 <h3>关键概念</h3>
@@ -285,7 +248,14 @@ MathJax = {
 <li>大题：第一问用方向A，第二问用方向B（如先用代数求特殊值，再用分析证明一般性）</li>
 <li>广东卷（语数英）注重创新思维，一题多解能力是区分130+和140+的关键素养</li>
 </ul>
-
-  <div class="footer">2028高考知识库 | 广东新高考数学</div>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
 </body>
 </html>
