@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月30日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">handy</div><div class="def">adj. 便利的；手边的，就近的；容易取得的；敏捷的 n. (Handy)人名；(英)汉迪</div></td><td><div class="word">broken</div><div class="def">adj. 破碎的；坏掉的 v. 折断；打碎；损坏（break的过去分词）</div></td><td><div class="word">aloud</div><div class="def">adv. 大声地；出声地</div></td><td><div class="word">appear</div><div class="def">v. 出现；显得；似乎；出庭；登场</div></td></tr>
 <tr><td><div class="word">barbershop</div><div class="def">n. 理发店 adj. 有男声合唱之和声的</div></td><td><div class="word">student</div><div class="def">n. 学生；学者</div></td><td><div class="word">yummy</div><div class="def">adj. 好吃的；美味的；愉快的 n. 美味的东西；令人喜爱的东西</div></td><td><div class="word">midnight</div><div class="def">n. 午夜，半夜12点钟 adj. 半夜的；漆黑的</div></td></tr>
 <tr><td><div class="word">addition</div><div class="def">n. 添加；[数] 加法；增加物</div></td><td><div class="word">weatherman</div><div class="def">n. 气象员；天气预报员</div></td><td><div class="word">permit</div><div class="def">v. 许可；允许 n. 许可证，执照</div></td><td><div class="word">hand</div><div class="def">n. 手，手艺；帮助；指针；插手 v. 传递，交给；支持；搀扶</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">rooster</div><div class="def">n. 公鸡；狂妄自负的人</div></td><td><div class="word">capsule</div><div class="def">n. 胶囊；[植] 蒴果；太空舱；小容器 adj. 压缩的；概要的 v. 压缩；简述</div></td><td><div class="word">rag</div><div class="def">n. 破布；碎屑 v. 戏弄；责骂</div></td><td><div class="word">game</div><div class="def">n. 游戏；比赛 adj. 勇敢的 v. 赌博</div></td></tr>
 <tr><td><div class="word">port</div><div class="def">n. 港口，口岸；（计算机的）端口；左舷；舱门 v. 转向左舷</div></td><td><div class="word">leaf</div><div class="def">n. 叶子；（书籍等的）一张；扇页 v. 生叶；翻书页</div></td><td><div class="word">waiter</div><div class="def">n. 服务员，侍者</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

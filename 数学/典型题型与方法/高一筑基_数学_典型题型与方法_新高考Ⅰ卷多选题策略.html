@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>新高考Ⅰ卷多选题策略（2024改革后）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>2024年新课标Ⅰ卷改革说明 / 教育部考试中心多选题评分细则 / 2024-2025年新课标Ⅰ卷多选题真题</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东 / #新高考Ⅰ卷·江苏 / #新高考Ⅰ卷·山东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>2024年起新高考Ⅰ卷结构改革：8单选+3多选+3填空+5解答。多选题为9-11题，共3道，每题6分，合计18分。评分规则改为"部分选对得部分分"，2正确答案选1得3分；3正确答案选1得2分、选2得4分。广东考生（新高考Ⅰ卷）必须掌握多选题策略，因为错选得0分、少选得部分分的规则下，<strong>策略性选择比盲目全选更能提高数学期望</strong>。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -67,6 +83,7 @@ MathJax = {
 
 <h3>一、2024改革后多选题评分规则详解</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>正确选项数</th><th>选对数</th><th>无错选</th><th>得分</th><th>得分率</th></tr>
 <tr><td>2个</td><td>2个</td><td>是</td><td>6分</td><td>100%</td></tr>
@@ -76,6 +93,7 @@ MathJax = {
 <tr><td>3个</td><td>1个</td><td>是</td><td>2分</td><td>33%</td></tr>
 <tr><td>任意</td><td>有错选</td><td>否</td><td>0分</td><td>0%</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>关键结论</strong>：错选=满盘皆输，少选=部分得分。在不确定时，<strong>少选优于错选</strong>。
@@ -147,6 +165,7 @@ D. f(x)的图像关于点(0,b)对称 ← 需验证，但A、C已确定正确
 </ol>
 
 <p><strong>常用排除技巧</strong>：</p>
+<div class="table-wrap">
 <table>
 <tr><th>技巧</th><th>适用场景</th><th>示例</th></tr>
 <tr><td><strong>特殊值代入</strong></td><td>含参数的选项</td><td>令a=0或a=1检验</td></tr>
@@ -155,6 +174,7 @@ D. f(x)的图像关于点(0,b)对称 ← 需验证，但A、C已确定正确
 <tr><td><strong>反例构造</strong></td><td>全称判断"必""一定"</td><td>找一个反例推翻</td></tr>
 <tr><td><strong>量纲分析</strong></td><td>涉及物理意义的选项</td><td>检查单位是否匹配</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -179,6 +199,7 @@ D. f(x)的图像关于点(0,b)对称 ← 需验证，但A、C已确定正确
 
 <h3>三、多选题常见错误类型与防范</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>错误类型</th><th>典型表现</th><th>防范方法</th></tr>
 <tr><td><strong>过度自信</strong></td><td>凭直觉选3个，结果错1个→0分</td><td>每个选项必须验证，不能"感觉对"</td></tr>
@@ -187,11 +208,13 @@ D. f(x)的图像关于点(0,b)对称 ← 需验证，但A、C已确定正确
 <tr><td><strong>特殊值误区</strong></td><td>用一个特例验证全称命题</td><td>特例只能证伪，不能证明</td></tr>
 <tr><td><strong>计算失误</strong></td><td>验证正确但计算出错</td><td>复杂计算在草稿纸上分步进行</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h3>四、2024-2025年多选题命题新动向</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>动向</th><th>说明</th><th>应对策略</th></tr>
 <tr><td><strong>综合性增强</strong></td><td>多选题常跨知识点（如函数+导数+不等式）</td><td>逐个选项独立验证，不混淆知识点</td></tr>
@@ -199,6 +222,7 @@ D. f(x)的图像关于点(0,b)对称 ← 需验证，但A、C已确定正确
 <tr><td><strong>隐蔽性加大</strong></td><td>错误选项设置"半对半错"陷阱</td><td>仔细辨析条件是否充分必要</td></tr>
 <tr><td><strong>运算量适中</strong></td><td>每个选项计算量不大，但总量大</td><td>合理分配时间，不纠结单个选项</td></tr>
 </table>
+</div>
 
 <hr>
 

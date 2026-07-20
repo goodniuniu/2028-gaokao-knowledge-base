@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>生物长句表达标准模板</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>广东选择性考试长句表达题 / 高考生物能力立意研究</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试、#广州一模、#深圳一模</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷非选择题中，长句表达题占比超过50%，约20-25分），难度较高。广东生物长句表达以"原因类""依据类""措施类"为主，要求逻辑链条完整、专业术语准确。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -104,12 +116,14 @@ MathJax = {
 
 <p><strong>示例</strong>：2023广东卷——"为什么缺镁会导致植物叶片发黄？"</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>步骤</th><th>内容</th><th>得分点</th></tr>
 <tr><td>事实</td><td>镁是叶绿素的组成元素</td><td>元素功能</td></tr>
 <tr><td>本质</td><td>缺镁时叶绿素合成受阻，含量减少</td><td>生理过程</td></tr>
 <tr><td>结论</td><td>叶片呈现类胡萝卜素的颜色（黄色）</td><td>结果</td></tr>
 </table>
+</div>
 
 <p><strong>标准答案</strong>：因为镁是叶绿素的组成元素，缺镁时叶绿素合成受阻，含量减少，叶片呈现类胡萝卜素的颜色，所以叶片发黄。</p>
 
@@ -127,12 +141,14 @@ MathJax = {
 
 <p><strong>示例</strong>：某实验结果中A组比B组生长快，判断理由是？</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>步骤</th><th>内容</th></tr>
 <tr><td>事实</td><td>A组XX处理，B组不处理，结果显示A组生长速率大于B组</td></tr>
 <tr><td>本质</td><td>XX具有促进生长的作用（根据教材原理）</td></tr>
 <tr><td>结论</td><td>所以判断XX能促进生长</td></tr>
 </table>
+</div>
 
 <h4>3.3 考向三：机理分析类（"机理是...""过程是..."）</h4>
 
@@ -144,6 +160,7 @@ MathJax = {
 
 <p><strong>示例</strong>：胰岛素降低血糖的机理？</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>步骤</th><th>内容</th><th>关键词</th></tr>
 <tr><td>起始</td><td>血糖升高刺激胰岛B细胞</td><td>胰岛B细胞</td></tr>
@@ -153,11 +170,13 @@ MathJax = {
 <tr><td>效应2</td><td>抑制肝糖原分解和非糖物质转化</td><td>抑制来源</td></tr>
 <tr><td>结果</td><td>血糖浓度降低</td><td>血糖降低</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h3>四、长句表达常见失分原因与对策</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>失分类型</th><th>典型表现</th><th>对策</th></tr>
 <tr><td><strong>逻辑跳跃</strong></td><td>"因为A，所以C"（缺少B）</td><td>补全中间环节，每步都要写</td></tr>
@@ -167,6 +186,7 @@ MathJax = {
 <tr><td><strong>层次混乱</strong></td><td>原因和结果颠倒</td><td>按"因→果"顺序组织</td></tr>
 <tr><td><strong>过度简略</strong></td><td>只写关键词，不成句</td><td>组织完整句子，适当连接词</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -174,44 +194,54 @@ MathJax = {
 
 <h4>5.1 光合作用类</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>问题</th><th>答题模板</th></tr>
 <tr><td>为什么光照增强光合速率反而下降？</td><td>光照过强导致气孔关闭，CO₂供应不足，暗反应受限，光合速率下降</td></tr>
 <tr><td>为什么阴生植物适合弱光？</td><td>阴生植物叶绿素b/叶绿素a比值较高，对蓝紫光吸收能力强，更适应弱光环境</td></tr>
 <tr><td>为什么CO₂浓度增加光合速率饱和？</td><td>暗反应酶（如Rubisco）数量有限或光反应产物（ATP、[H]）不足，成为限制因素</td></tr>
 </table>
+</div>
 
 <h4>5.2 呼吸作用类</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>问题</th><th>答题模板</th></tr>
 <tr><td>为什么果蔬要低温储存？</td><td>低温降低呼吸酶活性，减少有机物消耗，延长保鲜期</td></tr>
 <tr><td>为什么中耕松土？</td><td>增加土壤透气性，促进根部有氧呼吸，有利于矿质元素吸收</td></tr>
 </table>
+</div>
 
 <h4>5.3 遗传类</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>问题</th><th>答题模板</th></tr>
 <tr><td>为什么3:1分离比没有出现？</td><td>①样本量太小，统计误差大；②存在致死现象；③不完全显性/共显性；④基因互作</td></tr>
 <tr><td>为什么判断基因在X染色体上？</td><td>杂交结果显示性状表现与性别相关联（如某性状只在雄性出现），符合伴性遗传特点</td></tr>
 </table>
+</div>
 
 <h4>5.4 调节类</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>问题</th><th>答题模板</th></tr>
 <tr><td>为什么反馈调节维持稳态？</td><td>当...过多时，通过...机制抑制...过程，使...恢复到正常水平；反之亦然，从而维持稳态</td></tr>
 <tr><td>为什么神经调节比体液调节快？</td><td>神经调节通过电信号+化学信号，传导速度快，作用范围准确；体液调节通过激素运输，速度慢，范围广</td></tr>
 </table>
+</div>
 
 <h4>5.5 生态类</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>问题</th><th>答题模板</th></tr>
 <tr><td>为什么引入物种可能破坏生态平衡？</td><td>引入物种可能缺乏天敌，数量快速增长，与本地物种竞争资源，导致本地物种数量下降，生物多样性降低</td></tr>
 <tr><td>为什么能量流动逐级递减？</td><td>每个营养级同化的能量，一部分通过呼吸作用以热能散失，一部分流向分解者，只有约10%-20%流向下一营养级</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -219,12 +249,14 @@ MathJax = {
 
 <h4>6.1 2024广东卷典型长句题</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>题号</th><th>情境</th><th>问题类型</th><th>核心原理</th></tr>
 <tr><td>第19题</td><td>免疫检查点疗法</td><td>原因类</td><td>免疫调节、肿瘤免疫逃逸</td></tr>
 <tr><td>第20题</td><td>湖泊沉水植物恢复</td><td>原因类+措施类</td><td>光合作用、生态恢复</td></tr>
 <tr><td>第21题</td><td>细菌纤维素膜</td><td>机理类</td><td>基因工程、酶的作用</td></tr>
 </table>
+</div>
 
 <h4>6.2 广东卷答题要求</h4>
 

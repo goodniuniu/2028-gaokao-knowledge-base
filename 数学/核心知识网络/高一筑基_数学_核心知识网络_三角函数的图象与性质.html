@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>三角函数的图象与性质</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第一册第五章</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：中档~中高档；周期、单调性、对称性综合是广东卷三角大题第二问的核心，常结合解三角形考查</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -61,6 +77,7 @@ MathJax = {
 
 <h3>一、基本三角函数图象与性质</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>性质</th><th>$y = \sin x$</th><th>$y = \cos x$</th><th>$y = \tan x$</th></tr>
 <tr><td>定义域</td><td>$\mathbb{R}$</td><td>$\mathbb{R}$</td><td>$\{x \mid x \neq k\pi + \frac{\pi}{2}, k \in \mathbb{Z}\}$</td></tr>
@@ -74,14 +91,18 @@ MathJax = {
 <tr><td>最大值点</td><td>$x = \frac{\pi}{2} + 2k\pi$ 时 $y = 1$</td><td>$x = 2k\pi$ 时 $y = 1$</td><td>无</td></tr>
 <tr><td>最小值点</td><td>$x = -\frac{\pi}{2} + 2k\pi$ 时 $y = -1$</td><td>$x = \pi + 2k\pi$ 时 $y = -1$</td><td>无</td></tr>
 </table>
+</div>
 
 <h3>二、五点法作图（$y = \sin x, x \in [0, 2\pi]$）</h3>
+<div class="table-wrap">
 <table>
 <tr><th>$x$</th><th>$0$</th><th>$\frac{\pi}{2}$</th><th>$\pi$</th><th>$\frac{3\pi}{2}$</th><th>$2\pi$</th></tr>
 <tr><td>$y$</td><td>$0$</td><td>$1$</td><td>$0$</td><td>$-1$</td><td>$0$</td></tr>
 </table>
+</div>
 
 <h3>三、函数 $y = A\sin(\omega x + \varphi)$（$A > 0, \omega > 0$）</h3>
+<div class="table-wrap">
 <table>
 <tr><th>参数</th><th>意义</th><th>影响</th></tr>
 <tr><td>$A$</td><td>振幅</td><td>$A > 1$ 纵坐标伸长为 $A$ 倍；$0 < A < 1$ 缩短为 $A$ 倍</td></tr>
@@ -90,6 +111,7 @@ MathJax = {
 <tr><td>周期</td><td>$T = \frac{2\pi}{\omega}$</td><td>决定图象重复的频率</td></tr>
 <tr><td>频率</td><td>$f = \frac{1}{T} = \frac{\omega}{2\pi}$</td><td>单位时间内完整周期的次数</td></tr>
 </table>
+</div>
 
 <p><strong>变换顺序</strong>：$y = \sin x \rightarrow y = \sin(x + \varphi) \rightarrow y = \sin(\omega x + \varphi) \rightarrow y = A\sin(\omega x + \varphi)$</p>
 

@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月15日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">eastern</div><div class="def">adj.  东方的， 东部的</div></td><td><div class="word">marathon</div><div class="def">n.  马拉松</div></td><td><div class="word">last</div><div class="def">determiner. 最近的，最近一段时间的，最近一次的 adv. 最近，上次 v. (使)持续 n. 鞋楦</div></td><td><div class="word">adapt</div><div class="def">v.  适应； 改编</div></td></tr>
 <tr><td><div class="word">wash</div><div class="def">v. 洗涤，冲刷 n.  洗； 洗的衣服</div></td><td><div class="word">weight</div><div class="def">n.  重量</div></td><td><div class="word">doubt</div><div class="def">n&v.  怀疑， 疑惑</div></td><td><div class="word">cheerful</div><div class="def">adj.  兴高采烈的， 快活的</div></td></tr>
 <tr><td><div class="word">uncomfortable</div><div class="def">adj.  不舒服的， 不安的</div></td><td><div class="word">develop</div><div class="def">v.   发展；  发育； 开发； 冲洗</div></td><td><div class="word">misunderstand</div><div class="def">vt.   误会， 不理解</div></td><td><div class="word">warn</div><div class="def">vt.  警告； 预告</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">civilization</div><div class="def">n.  文明， 文化</div></td><td><div class="word">before</div><div class="def">adv. 以前 conj.  在…之前 prep. 在…以前，在…前面</div></td><td><div class="word">fiction</div><div class="def">n.  小说； 虚构， 杜撰</div></td><td><div class="word">friendly</div><div class="def">adj.  友好的</div></td></tr>
 <tr><td><div class="word">possession</div><div class="def">n.  所有， 拥有； 财产， 所有物</div></td><td><div class="word">tell</div><div class="def">v.   告诉， 吩咐； 辨别， 知道</div></td><td></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

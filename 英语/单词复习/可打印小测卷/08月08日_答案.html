@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月08日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">nowadays</div><div class="def">adv. 现今；时下 n. 当今</div></td><td><div class="word">unimportant</div><div class="def">adj. 不重要的；琐碎的</div></td><td><div class="word">just</div><div class="def">adv. 只是，仅仅；刚才，刚刚；正好，恰好；实在；刚要 adj. 公正的，合理的；正直的，正义的；正确的；公平的；应得的 n. (Just)人名；(英)贾斯特；(法)朱斯特；(德、匈、波、捷、挪)尤斯特；(西)胡斯特</div></td><td><div class="word">acknowledge</div><div class="def">v. 承认；答谢；报偿；告知已收到</div></td></tr>
 <tr><td><div class="word">enlarge</div><div class="def">v. 扩大；放大；详述</div></td><td><div class="word">Switzerland</div><div class="def">n. 瑞士（欧洲国家）</div></td><td><div class="word">conclusion</div><div class="def">n. 结论；结局；推论</div></td><td><div class="word">theirs</div><div class="def">pron. 他们的；她们的；它们的</div></td></tr>
 <tr><td><div class="word">labourer</div><div class="def">n. 劳动者；劳工</div></td><td><div class="word">forbid</div><div class="def">v. 禁止；不准；不允许；〈正式〉严禁</div></td><td><div class="word">weekly</div><div class="def">adj. 每周的；周刊的；一周一次的 n. 周刊 adv. 每周一次；逐周</div></td><td><div class="word">skip</div><div class="def">v. 跳跃；跳绳；遗漏；跳读 n. 跳跃；跳读</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">grain</div><div class="def">n. 粮食；颗粒；[作物] 谷物；纹理 v. 成谷粒</div></td><td><div class="word">add</div><div class="def">v. 加；增加；加起来；做加法 n. 加法，加法运算</div></td><td><div class="word">premier</div><div class="def">adj. 第一的；最初的 n. 总理，首相</div></td><td><div class="word">starve</div><div class="def">v. 饿死；挨饿；渴望</div></td></tr>
 <tr><td><div class="word">himself</div><div class="def">pron. 他自己；他亲自，他本人</div></td><td><div class="word">pie</div><div class="def">n. 馅饼；饼图；爱说话的人 vt. 使杂乱</div></td><td><div class="word">slave</div><div class="def">n. 奴隶；从动装置 v. 苦干；拼命工作</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>🧬 基因工程与生物技术 | 核心知识网络</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第三册 第3~4章 / 广东选择性考试</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷5次考查，选必三每年1道大题）；中档偏难；实验设计类题目多，常要求"写出实验步骤""分析实验结果"；情境化命题常结合广东生物医药产业（深圳基因检测、广州生物医药基地）；赋分提示：限制酶选择是易失分点，PCR条件记忆必须准确</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -66,12 +78,14 @@ MathJax = {
 
 <h4>一、基因工程工具</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>工具</th><th>来源</th><th>功能</th><th>特点/注意</th></tr>
 <tr><td><strong>限制性内切核酸酶（限制酶）</strong></td><td>主要从原核生物中分离</td><td>识别特定核苷酸序列，在<strong>特定部位</strong>切割DNA</td><td>切割后产生黏性末端或平末端；一种限制酶识别一种特定序列</td></tr>
 <tr><td><strong>DNA连接酶</strong></td><td>大肠杆菌、T4噬菌体</td><td>连接双链DNA片段，恢复磷酸二酯键</td><td>E·coli DNA连接酶：黏性末端；T4 DNA连接酶：黏性/平末端</td></tr>
 <tr><td><strong>载体（质粒）</strong></td><td>细菌、酵母菌</td><td>将外源基因导入受体细胞</td><td>必备条件：①复制原点 ②标记基因 ③多克隆位点 ④对宿主无害</td></tr>
 </table>
+</div>
 
 <blockquote>
 ⚠️ <strong>限制酶不切割自身DNA的原因</strong>：原核生物细胞内的限制酶与甲基化酶配合，自身DNA相应位点被甲基化修饰，避免被切割。
@@ -83,17 +97,20 @@ MathJax = {
 
 <p><strong>步骤1：获取目的基因</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>方法</th><th>适用场景</th><th>特点</th></tr>
 <tr><td><strong>从基因文库获取</strong></td><td>已知部分序列</td><td>基因组文库含全部基因；cDNA文库只含表达的基因（无内含子）</td></tr>
 <tr><td><strong>PCR扩增</strong></td><td>已知目的基因两端序列</td><td>体外快速扩增，需设计引物</td></tr>
 <tr><td><strong>人工合成</strong></td><td>基因较小、序列已知</td><td>化学合成法；真核基因可用反转录法（先mRNA→cDNA）</td></tr>
 </table>
+</div>
 
 <p><strong>步骤2：构建基因表达载体（核心步骤）</strong></p>
 
 <pre><code>目的基因 + 启动子 + 终止子 + 标记基因 + 复制原点 → 重组质粒</code></pre>
 
+<div class="table-wrap">
 <table>
 <tr><th>组件</th><th>功能</th></tr>
 <tr><td><strong>启动子</strong></td><td>RNA聚合酶识别和结合部位，<strong>驱动基因转录</strong></td></tr>
@@ -102,6 +119,7 @@ MathJax = {
 <tr><td><strong>标记基因</strong></td><td>便于筛选含目的基因的受体细胞（如抗生素抗性基因）</td></tr>
 <tr><td><strong>复制原点</strong></td><td>使质粒能在宿主细胞中自我复制</td></tr>
 </table>
+</div>
 
 <blockquote>
 ⚠️ <strong>启动子 ≠ 起始密码子</strong>：启动子是DNA上的调控序列；起始密码子是mRNA上翻译开始的信号。
@@ -109,15 +127,18 @@ MathJax = {
 
 <p><strong>步骤3：导入受体细胞</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>受体细胞</th><th>导入方法</th><th>关键条件</th></tr>
 <tr><td><strong>植物细胞</strong></td><td>农杆菌转化法（最常用）、基因枪法、花粉管通道法</td><td>农杆菌Ti质粒上的T-DNA可转移并整合到植物染色体DNA</td></tr>
 <tr><td><strong>动物细胞</strong></td><td>显微注射法（受精卵）</td><td>导入受精卵，全能性高</td></tr>
 <tr><td><strong>微生物细胞</strong></td><td>Ca²⁺处理法（感受态细胞）</td><td>用CaCl₂处理大肠杆菌，增加细胞膜通透性</td></tr>
 </table>
+</div>
 
 <p><strong>步骤4：筛选与检测</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>检测层次</th><th>方法</th><th>检测目标</th></tr>
 <tr><td><strong>分子水平（DNA）</strong></td><td>DNA分子杂交（PCR/探针）</td><td>目的基因是否导入</td></tr>
@@ -125,6 +146,7 @@ MathJax = {
 <tr><td><strong>分子水平（蛋白质）</strong></td><td>抗原-抗体杂交</td><td>目的基因是否翻译</td></tr>
 <tr><td><strong>个体水平</strong></td><td>抗虫/抗病接种实验</td><td>目的基因是否发挥功能</td></tr>
 </table>
+</div>
 
 <blockquote>
 检测顺序：先确认导入（DNA水平）→再确认表达（蛋白质水平）→最后功能验证（个体水平）
@@ -136,12 +158,14 @@ MathJax = {
 
 <p><strong>三个步骤循环（每个循环约30次）</strong>：</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>步骤</th><th>温度</th><th>作用</th><th>说明</th></tr>
 <tr><td><strong>变性</strong></td><td>90~95℃</td><td>双链DNA解开为单链</td><td>高温破坏氢键，无需解旋酶</td></tr>
 <tr><td><strong>复性（退火）</strong></td><td>55~60℃</td><td>引物与单链DNA互补结合</td><td>引物决定扩增的特异性</td></tr>
 <tr><td><strong>延伸</strong></td><td>70~75℃</td><td>Taq DNA聚合酶催化DNA链延伸</td><td>从引物3'端开始延伸</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>Taq DNA聚合酶</strong>：热稳定DNA聚合酶，从嗜热菌中分离，耐高温。
@@ -157,6 +181,7 @@ MathJax = {
 
 <h4>四、基因工程应用</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>领域</th><th>应用实例</th></tr>
 <tr><td><strong>农业</strong></td><td>抗虫棉（Bt毒蛋白基因）、抗除草剂大豆、黄金大米</td></tr>
@@ -165,6 +190,7 @@ MathJax = {
 <tr><td><strong>基因诊断</strong></td><td>DNA探针检测遗传病、基因芯片</td></tr>
 <tr><td><strong>基因治疗</strong></td><td>将正常基因导入患者体内（如SCID治疗）</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>广东产业关联</strong>：深圳华大基因（基因测序）、广州生物岛（生物医药）、珠海丽珠医药等，是广东卷情境化命题的常用素材。
@@ -181,6 +207,7 @@ MathJax = {
          形成愈伤      形成根/芽
          （无定形）    （再分化）</code></pre>
 
+<div class="table-wrap">
 <table>
 <tr><th>技术</th><th>原理</th><th>应用</th></tr>
 <tr><td><strong>植物体细胞杂交</strong></td><td>细胞膜的流动性 + 植物细胞全能性</td><td>克服远缘杂交不亲和障碍（如番茄-马铃薯）</td></tr>
@@ -188,6 +215,7 @@ MathJax = {
 <tr><td><strong>作物脱毒</strong></td><td>茎尖病毒极少</td><td>获得脱毒苗（如脱毒马铃薯）</td></tr>
 <tr><td><strong>单倍体育种</strong></td><td>花药离体培养 + 秋水仙素加倍</td><td>快速获得纯合子，缩短育种年限</td></tr>
 </table>
+</div>
 
 <blockquote>
 植物体细胞杂交步骤：①去壁（纤维素酶+果胶酶）→②原生质体融合（PEG诱导/电激）→③筛选杂种细胞→④组织培养
@@ -195,12 +223,14 @@ MathJax = {
 
 <p><strong>动物细胞培养</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>条件</th><th>具体要求</th></tr>
 <tr><td><strong>营养</strong></td><td>糖、氨基酸、无机盐、维生素 + 血清（含未知生长因子）</td></tr>
 <tr><td><strong>环境</strong></td><td>无菌无毒、适宜温度（36.5±0.5℃）、pH（7.2~7.4）、气体（95%空气+5%CO₂）</td></tr>
 <tr><td><strong>CO₂作用</strong></td><td>维持培养液pH</td></tr>
 </table>
+</div>
 
 <blockquote>
 动物细胞培养过程：原代培养（1~10代）→传代培养（10~50代）→细胞系（遗传物质改变，可无限传代）
@@ -222,6 +252,7 @@ MathJax = {
 
 <h4>六、发酵工程</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>项目</th><th>内容</th></tr>
 <tr><td><strong>菌种选育</strong></td><td>诱变育种、基因工程育种、从自然界筛选</td></tr>
@@ -230,6 +261,7 @@ MathJax = {
 <tr><td><strong>发酵条件控制</strong></td><td>温度、pH、溶氧量、转速（搅拌）</td></tr>
 <tr><td><strong>产物提取</strong></td><td>菌体内产物（破碎细胞提取）/ 菌体外产物（过滤、萃取、蒸馏）</td></tr>
 </table>
+</div>
 
 <blockquote>
 发酵工程应用：抗生素（青霉素）、氨基酸（谷氨酸）、酶制剂、酒精（酵母菌无氧呼吸）、酸奶（乳酸菌）。

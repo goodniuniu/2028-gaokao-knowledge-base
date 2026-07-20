@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月12日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">energy</div><div class="def">n.  精力； 能量</div></td><td><div class="word">audience</div><div class="def">n.  观众， 听众</div></td><td><div class="word">solid</div><div class="def">adj. 结实的，固体的 n.  固体</div></td><td><div class="word">thus</div><div class="def">adv.  这样； 因而</div></td></tr>
 <tr><td><div class="word">meanwhile</div><div class="def">adv.  同时</div></td><td><div class="word">sniff</div><div class="def">v.  用力吸； 嗅， 闻</div></td><td><div class="word">possess</div><div class="def">vt.  占有， 拥有</div></td><td><div class="word">require</div><div class="def">vt.  需求； 要求</div></td></tr>
 <tr><td><div class="word">optional</div><div class="def">adj.  可选择的； 随意的</div></td><td><div class="word">scratch</div><div class="def">v. 抓，划破；乱涂 n.  乱写； 抓痕</div></td><td><div class="word">analysis</div><div class="def">n.  分析； 解析</div></td><td><div class="word">click</div><div class="def">v. 点击；发出滴答声 n.  滴答声</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">suitable</div><div class="def">adj.  合适的， 适宜的</div></td><td><div class="word">personnel</div><div class="def">n.  人员， 职员</div></td><td><div class="word">hopeless</div><div class="def">adj.  没有希望的； 不可救药的</div></td><td><div class="word">freeway</div><div class="def">n.  高速公路</div></td></tr>
 <tr><td><div class="word">fountain</div><div class="def">n.  喷泉； 源泉</div></td><td><div class="word">pile</div><div class="def">v. 堆积，积累 n.  堆</div></td><td></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

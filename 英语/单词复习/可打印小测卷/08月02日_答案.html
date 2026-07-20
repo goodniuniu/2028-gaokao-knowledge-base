@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月02日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">certainly</div><div class="def">adv. 当然；行（用于回答）；必定</div></td><td><div class="word">them</div><div class="def">pron. 他们；它们；她们 n. (Them)人名；(老)探</div></td><td><div class="word">kindergarten</div><div class="def">n. 幼儿园；幼稚园</div></td><td><div class="word">microwave</div><div class="def">n. 微波</div></td></tr>
 <tr><td><div class="word">hur</div><div class="def">abbr. 飓风（hurricane）</div></td><td><div class="word">sofa</div><div class="def">n. 沙发；长椅</div></td><td><div class="word">camel</div><div class="def">n. [畜牧][脊椎] 骆驼；打捞浮筒；工作作风官僚 adj. 驼色的；暗棕色的 vi. 工作刻板平庸</div></td><td><div class="word">engine</div><div class="def">n. 引擎，发动机；机车，火车头；工具</div></td></tr>
 <tr><td><div class="word">lift</div><div class="def">v. 举起；提升；鼓舞；空运；抄袭 n. 电梯；举起；起重机；搭车</div></td><td><div class="word">surrounding</div><div class="def">adj. 周围的，附近的 n. 环境，周围的事物</div></td><td><div class="word">flexible</div><div class="def">adj. 灵活的；柔韧的；易弯曲的</div></td><td><div class="word">holy</div><div class="def">adj. 圣洁的，神圣的；至善的 n. 神圣的东西</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">thirst</div><div class="def">n. 渴望；口渴；热望 v. 渴望；口渴</div></td><td><div class="word">register</div><div class="def">v. 登记；注册；记录；挂号邮寄；把…挂号；正式提出 n. 登记；注册；记录；寄存器；登记簿</div></td><td><div class="word">opening</div><div class="def">n. 开始；机会；通路；空缺的职位 adj. 开始的 v. 开放（open的ing形式）；打开；公开</div></td><td><div class="word">puzzle</div><div class="def">v. 使…困惑；使…为难；苦思而得出 n. 谜；难题；迷惑</div></td></tr>
 <tr><td><div class="word">we</div><div class="def">pron. 我们（主格）；笔者，本人（作者或演讲人使用）；朕，寡人 n. (We)人名；(缅)韦</div></td><td><div class="word">bear</div><div class="def">v. 结果实，开花（正式） n. 熊</div></td><td><div class="word">bedroom</div><div class="def">n. 卧室 adj. 两性关系的；城郊住宅区的</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

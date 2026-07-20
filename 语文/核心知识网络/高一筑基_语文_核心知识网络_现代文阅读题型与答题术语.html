@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>现代文阅读题型与答题术语</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>新高考Ⅰ卷近5年（2020-2024）真题归纳</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（现代文阅读35分，占全卷23%）；中高档（信息类文本侧重逻辑思辨，文学类文本侧重审美鉴赏）；广东卷偏好科技前沿+人文思辨复合文本，2023年涉及"竞争性真相"，2024年涉及AI与文学创作</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -66,6 +78,7 @@ MathJax = {
 
 <h4>题型1：内容理解与分析（3分×3=9分）</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>设错类型</th><th>标志词/特征</th><th>识别方法</th></tr>
 <tr><td><strong>偷换概念</strong></td><td>改变修饰语、替换关键词</td><td>比对选项与原文核心概念</td></tr>
@@ -75,6 +88,7 @@ MathJax = {
 <tr><td><strong>因果混乱</strong></td><td>因果倒置、强加因果</td><td>定位原文因果关系词</td></tr>
 <tr><td><strong>时态混淆</strong></td><td>已然vs未然，或然vs必然</td><td>关注"了""将""可能"等</td></tr>
 </table>
+</div>
 
 <p><strong>答题术语</strong>：</p>
 
@@ -87,6 +101,7 @@ MathJax = {
 
 <h4>题型2：论证分析（3分×1=3分）</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>考查角度</th><th>答题术语</th></tr>
 <tr><td><strong>论证结构</strong></td><td>总分式/并列式/层进式/对照式/总分总式</td></tr>
@@ -94,6 +109,7 @@ MathJax = {
 <tr><td><strong>论证方法</strong></td><td>举例论证/对比论证/比喻论证/引用论证/因果论证/假设论证</td></tr>
 <tr><td><strong>行文脉络</strong></td><td>围绕……核心话题，先……再……最后……</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -110,6 +126,7 @@ MathJax = {
 
 <h4>小说阅读题型框架</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>题型</th><th>答题角度</th><th>核心术语</th></tr>
 <tr><td><strong>人物形象</strong></td><td>外貌/语言/动作/心理/神态/侧面烘托</td><td>性格特征：善良坚韧、精明能干、懦弱自私……</td></tr>
@@ -118,20 +135,24 @@ MathJax = {
 <tr><td><strong>叙事技巧</strong></td><td>视角/顺序/节奏/语言</td><td>第一人称真实感、全知视角全面性、倒叙设置悬念、插叙补充背景</td></tr>
 <tr><td><strong>标题含义</strong></td><td>表层义/深层义/象征义</td><td>线索作用、点明对象、揭示主题、设置悬念</td></tr>
 </table>
+</div>
 
 <h4>散文阅读题型框架</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>题型</th><th>答题角度</th><th>核心术语</th></tr>
 <tr><td><strong>结构思路</strong></td><td>线索/段落关系</td><td>以……为线索，贯穿全文；由……到……，逐层深入</td></tr>
 <tr><td><strong>语言特色</strong></td><td>修辞/句式/用词/风格</td><td>清新自然/雄浑豪放/含蓄隽永/质朴平实/华丽典雅</td></tr>
 <tr><td><strong>情感主旨</strong></td><td>情感词/议论句/卒章显志</td><td>表达了……情感；揭示了……哲理；寄托了……情怀</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h3>三、实用类文本阅读（已融入信息类文本，但保留答题术语）</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>考点</th><th>答题术语</th></tr>
 <tr><td><strong>信息筛选</strong></td><td>根据题干定位区间→比对关键词→概括整合</td></tr>
@@ -139,6 +160,7 @@ MathJax = {
 <tr><td><strong>概念定义</strong></td><td>"XX是指……"（属概念+种差）</td></tr>
 <tr><td><strong>概括要点</strong></td><td>分层提炼→抓中心句→合并同类项→规范表述</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -146,6 +168,7 @@ MathJax = {
 
 <h4>必背高频术语（按使用频率排序）</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>术语</th><th>适用场景</th></tr>
 <tr><td>深化主题/揭示主旨</td><td>结尾段、关键句作用</td></tr>
@@ -159,6 +182,7 @@ MathJax = {
 <tr><td>以小见大/见微知著</td><td>选材特点</td></tr>
 <tr><td>留白/言有尽而意无穷</td><td>结尾艺术效果</td></tr>
 </table>
+</div>
 
 <hr>
 

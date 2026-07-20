@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月24日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">wealthy</div><div class="def">adj.  富有的</div></td><td><div class="word">strength</div><div class="def">n.  力量， 力气</div></td><td><div class="word">dusk</div><div class="def">n.  黄昏</div></td><td><div class="word">administration</div><div class="def">n.  管理； 行政部门</div></td></tr>
 <tr><td><div class="word">run</div><div class="def">vi.  跑， 奔跑； 褪色； 经营， 管理</div></td><td><div class="word">challenging</div><div class="def">adj.  具有挑战性的</div></td><td><div class="word">research</div><div class="def">n.  研究， 调查</div></td><td><div class="word">debate</div><div class="def">n&v.  讨论， 辩论</div></td></tr>
 <tr><td><div class="word">view</div><div class="def">n.  看法； 景色</div></td><td><div class="word">either</div><div class="def">determiner. 〔两者中的〕任何一个 adv. 也(不)</div></td><td><div class="word">furniture</div><div class="def">n.  〈总称〉 家具</div></td><td><div class="word">jet</div><div class="def">v. 喷射 n.  喷气式飞机； 喷射</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">care</div><div class="def">v. 介意，在乎；在意；关心 n.  照料； 保护； 小心</div></td><td><div class="word">damage</div><div class="def">n&v.  毁坏， 损害</div></td><td><div class="word">guard</div><div class="def">v. 保卫，看守 n.  防护装置； 警戒</div></td><td><div class="word">settle</div><div class="def">vi. 安家，定居 vt.  解决</div></td></tr>
 <tr><td><div class="word">direct</div><div class="def">adj. 直接的；直达的 v.  指挥， 指导</div></td><td><div class="word">pattern</div><div class="def">n.  式样； 模式</div></td><td></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

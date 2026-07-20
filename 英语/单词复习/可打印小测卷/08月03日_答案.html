@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月03日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">hurricane</div><div class="def">n. 飓风，暴风</div></td><td><div class="word">mouthful</div><div class="def">n. 一口，满口</div></td><td><div class="word">apologize</div><div class="def">v. 道歉；辩解；赔不是</div></td><td><div class="word">handtruck</div><div class="def">手推车</div></td></tr>
 <tr><td><div class="word">garbage</div><div class="def">n. 垃圾；废物</div></td><td><div class="word">spelling</div><div class="def">n. 拼写；拼字；拼法 v. 拼写；意味着（spell的ing形式）；迷住</div></td><td><div class="word">useful</div><div class="def">adj. 有用的，有益的；有帮助的</div></td><td><div class="word">astronomy</div><div class="def">n. 天文学</div></td></tr>
 <tr><td><div class="word">lesson</div><div class="def">n. 教训；课 vt. 教训；上课</div></td><td><div class="word">harbour</div><div class="def">v. 藏匿；入港停泊；庇护 n. 海港（等于harbor）；避难所</div></td><td><div class="word">herself</div><div class="def">pron. 她自己（she的反身代词）；她亲自</div></td><td><div class="word">quiet</div><div class="def">adj. 安静的；安定的；不动的；温顺的 n. 安静；和平 v. 使平息；安慰</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">admirable</div><div class="def">adj. 令人钦佩的；极好的；值得赞扬的</div></td><td><div class="word">dash</div><div class="def">n. 破折号；冲撞 v. 使…破灭；猛撞；泼溅</div></td><td><div class="word">thirteen</div><div class="def">n. 十三；十三岁；十三个 num. 十三 adj. 十三的；十三个的</div></td><td><div class="word">ambition</div><div class="def">n. 野心，雄心；抱负，志向 v. 追求；有…野心</div></td></tr>
 <tr><td><div class="word">enter</div><div class="def">v. 进入；开始；参加 n. [计] 输入；回车</div></td><td><div class="word">able</div><div class="def">adj. 能；[经管] 有能力的；能干的 n. (Able)人名；(伊朗)阿布勒；(英)埃布尔</div></td><td><div class="word">severe</div><div class="def">adj. 严峻的；严厉的；剧烈的；苛刻的</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

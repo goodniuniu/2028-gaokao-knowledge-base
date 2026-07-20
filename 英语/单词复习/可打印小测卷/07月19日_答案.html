@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月19日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">engineer</div><div class="def">n. 工程师；工兵；火车司机 v. 设计；策划；精明地处理</div></td><td><div class="word">spend</div><div class="def">v. 度过，消磨（时光）；花费；浪费；用尽 n. 预算</div></td><td><div class="word">bread</div><div class="def">n. 面包；生计 v. 在…上洒面包屑</div></td><td><div class="word">interpreter</div><div class="def">n. 解释者；口译者；注释器</div></td></tr>
 <tr><td><div class="word">operate</div><div class="def">v. 运转；动手术；起作用</div></td><td><div class="word">affect</div><div class="def">v. 影响；感染；感动；假装 n. 情感；引起感情的因素</div></td><td><div class="word">bike</div><div class="def">n. 自行车；脚踏车 v. 骑自行车（或摩托车）</div></td><td><div class="word">sacred</div><div class="def">adj. 神的；神圣的；宗教的；庄严的</div></td></tr>
 <tr><td><div class="word">means</div><div class="def">n. 手段；方法；财产 v. 意思是；打算（mean的第三人称单数） [ 复数means ]</div></td><td><div class="word">tire</div><div class="def">v. 疲劳；厌倦 n. 轮胎；头饰</div></td><td><div class="word">marble</div><div class="def">n. 大理石；大理石制品；弹珠 adj. 大理石的；冷酷无情的</div></td><td><div class="word">ferry</div><div class="def">n. 渡船；摆渡；渡口 v. （乘渡船）渡过；用渡船运送；空运</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">Tibet</div><div class="def">n. 西藏（中国一自治区）</div></td><td><div class="word">lay</div><div class="def">v. 躺下；产卵；搁放；放置；铺放；涂，敷 adj. 世俗的；外行的；没有经验的 n. 位置；短诗；花纹方向；叙事诗；性伙伴</div></td><td><div class="word">stomach</div><div class="def">n. 胃；腹部；胃口 v. 忍受；吃下</div></td><td><div class="word">damage</div><div class="def">n. 损害；损毁；赔偿金 v. 损害；损毁</div></td></tr>
 <tr><td><div class="word">cough</div><div class="def">n. 咳嗽，咳嗽声；咳嗽病 v. 咳出</div></td><td><div class="word">shut</div><div class="def">v. 关闭；停业；幽禁 n. 关闭 adj. 关闭的；围绕的</div></td><td><div class="word">anniversary</div><div class="def">n. 周年纪念日</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

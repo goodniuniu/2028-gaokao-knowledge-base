@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月30日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">come</div><div class="def">vi. 来，来到 v.  变成</div></td><td><div class="word">comprehension</div><div class="def">n.  理解</div></td><td><div class="word">leather</div><div class="def">n.  皮革</div></td><td><div class="word">comb</div><div class="def">v. 梳 n.  梳子</div></td></tr>
 <tr><td><div class="word">exist</div><div class="def">vi.  存在， 生存</div></td><td><div class="word">unemployment</div><div class="def">n.  失业</div></td><td><div class="word">exact</div><div class="def">adj.  精确的， 准确的， 确切的</div></td><td><div class="word">lift</div><div class="def">vi.  升起，  消散</div></td></tr>
 <tr><td><div class="word">motto</div><div class="def">n.  箴言， 格言</div></td><td><div class="word">nationwide</div><div class="def">adj.  全国性的</div></td><td><div class="word">force</div><div class="def">vt. 强迫，迫使 n.  力量， 武力</div></td><td><div class="word">centigrade</div><div class="def">adj.  摄氏的； 百分度的</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">dignity</div><div class="def">n.  尊严； 高贵</div></td><td><div class="word">challenge</div><div class="def">n. 挑战；挑战性 vt.  挑战</div></td><td><div class="word">category</div><div class="def">n.  种类</div></td><td><div class="word">cosy</div><div class="def">adj.  暖和舒服的； 舒适的</div></td></tr>
 <tr><td><div class="word">intend</div><div class="def">v.  想要， 打算</div></td><td><div class="word">wild</div><div class="def">adj.  野生的</div></td><td></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

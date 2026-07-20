@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>空间向量与立体几何</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版选择性必修第一册第一章</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：中档~中高档；空间向量法是广东卷立体几何大题的两大解法之一（几何法/向量法），向量法规范性强，适合计算能力稳定的学生</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -92,6 +108,7 @@ MathJax = {
 
 <p>设 $\boldsymbol{u}_1, \boldsymbol{u}_2$ 为直线方向向量，$\boldsymbol{n}_1, \boldsymbol{n}_2$ 为平面法向量：</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>关系</th><th>向量条件</th></tr>
 <tr><td>线线平行 $l_1 \parallel l_2$</td><td>$\boldsymbol{u}_1 \parallel \boldsymbol{u}_2$（$\exists \lambda, \boldsymbol{u}_1 = \lambda\boldsymbol{u}_2$）</td></tr>
@@ -101,14 +118,17 @@ MathJax = {
 <tr><td>线面垂直 $l \perp \alpha$</td><td>$\boldsymbol{u} \parallel \boldsymbol{n}$（$\exists \lambda, \boldsymbol{u} = \lambda\boldsymbol{n}$）</td></tr>
 <tr><td>面面垂直 $\alpha \perp \beta$</td><td>$\boldsymbol{n}_1 \perp \boldsymbol{n}_2$（$\boldsymbol{n}_1 \cdot \boldsymbol{n}_2 = 0$）</td></tr>
 </table>
+</div>
 
 <h3>五、空间角公式（向量法）</h3>
+<div class="table-wrap">
 <table>
 <tr><th>角类型</th><th>公式</th><th>范围</th></tr>
 <tr><td>异面直线所成角 $\theta$</td><td>$\cos\theta = \frac{</td><td>\boldsymbol{u}_1 \cdot \boldsymbol{u}_2</td><td>}{</td><td>\boldsymbol{u}_1</td><td>\boldsymbol{u}_2</td><td>}$</td><td>$(0, \frac{\pi}{2}]$</td></tr>
 <tr><td>线面角 $\theta$</td><td>$\sin\theta = \frac{</td><td>\boldsymbol{u} \cdot \boldsymbol{n}</td><td>}{</td><td>\boldsymbol{u}</td><td>\boldsymbol{n}</td><td>}$</td><td>$[0, \frac{\pi}{2}]$</td></tr>
 <tr><td>二面角 $\theta$</td><td>$\cos\theta = \frac{</td><td>\boldsymbol{n}_1 \cdot \boldsymbol{n}_2</td><td>}{</td><td>\boldsymbol{n}_1</td><td>\boldsymbol{n}_2</td><td>}$（取锐角或钝角由图判断）</td><td>$[0, \pi]$</td></tr>
 </table>
+</div>
 
 <h3>六、空间距离公式</h3>
 <ul>

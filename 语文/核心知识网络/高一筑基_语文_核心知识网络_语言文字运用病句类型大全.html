@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>语言文字运用病句类型大全</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>新高考Ⅰ卷（2020-2024）+ 广东卷真题归纳</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（语言文字运用题20分，病句修改占3-5分）；中档（广东卷近年偏好"情境化语段修改"，不再单句判断，需在完整语境中识别错误）；广东卷病句多与科技前沿、日常生活情境结合</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -76,6 +88,7 @@ MathJax = {
 
 <h4>类型1：语序不当</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>子类型</th><th>病例</th><th>修改</th></tr>
 <tr><td><strong>定语语序</strong></td><td>她是……的一位……优秀的……有20多年教学经验的……国家队的……篮球……女教练。</td><td>她是国家队的（领属）一位（数量）有20多年教学经验的（动词短语）优秀的（形容词）篮球（名词）女教练。</td></tr>
@@ -83,6 +96,7 @@ MathJax = {
 <tr><td><strong>关联词语序</strong></td><td>我不但信任他，而且……</td><td>不但我信任他，而且……</td></tr>
 <tr><td><strong>逻辑语序</strong></td><td>我们要善于解决问题、发现问题、分析问题。</td><td>发现问题、分析问题、解决问题。</td></tr>
 </table>
+</div>
 
 <p><strong>记忆口诀</strong>：定语排序：领数动形名；状语排序：因时地情人。</p>
 
@@ -90,6 +104,7 @@ MathJax = {
 
 <h4>类型2：搭配不当</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>子类型</th><th>病例</th><th>修改</th></tr>
 <tr><td><strong>主谓搭配</strong></td><td>他那崇高的革命品质，经常浮现在我的脑海中。</td><td>形象浮现，品质令人敬佩</td></tr>
@@ -98,6 +113,7 @@ MathJax = {
 <tr><td><strong>两面对一面</strong></td><td>能否取得好成绩，关键在于努力学习。</td><td>关键在于是否努力学习</td></tr>
 <tr><td><strong>修饰语与中心语</strong></td><td>他有一双聪明能干的手。</td><td>手能"干"不能"聪明"</td></tr>
 </table>
+</div>
 
 <p><strong>广东卷高频考点</strong>："能否/是否/好坏"等两面词与后文一面词搭配不当，是广东卷几乎年年出现的陷阱。</p>
 
@@ -107,6 +123,7 @@ MathJax = {
 
 <p><strong>残缺类：</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>子类型</th><th>病例</th><th>修改</th></tr>
 <tr><td><strong>缺主语</strong></td><td>通过这次活动，使我深受教育。</td><td>删"通过"或"使"</td></tr>
@@ -114,9 +131,11 @@ MathJax = {
 <tr><td><strong>缺宾语</strong></td><td>我们要尽一切力量使我国农业走上机械化、集体化。</td><td>加"的道路"</td></tr>
 <tr><td><strong>缺介词</strong></td><td>我……他的帮助，终于完成了任务。</td><td>加"在/由于"</td></tr>
 </table>
+</div>
 
 <p><strong>赘余类：</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>病例</th><th>修改</th><th>赘余类型</th></tr>
 <tr><td>悬殊很大</td><td>悬殊</td><td>语义重复</td></tr>
@@ -124,17 +143,20 @@ MathJax = {
 <tr><td>至少……以上</td><td>至少…… / ……以上</td><td>前后矛盾</td></tr>
 <tr><td>涉及（到）、亲眼目睹、互相厮打</td><td>涉及、目睹、厮打</td><td>成分多余</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h4>类型4：结构混乱</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>子类型</th><th>病例</th><th>修改</th></tr>
 <tr><td><strong>句式杂糅</strong></td><td>原因是……造成的 / 本着……为原则</td><td>原因是…… / 由……造成；本着……原则 / 以……为原则</td></tr>
 <tr><td><strong>中途易辙</strong></td><td>中国人民自从接受了马克思主义之后，中国的革命就……</td><td>自从中国人民接受了……</td></tr>
 <tr><td><strong>藕断丝连</strong></td><td>我们向政府提意见是人民的责任。</td><td>我们向政府提意见，这是人民的责任</td></tr>
 </table>
+</div>
 
 <p><strong>高频杂糅句式速记</strong>：</p>
 
@@ -149,6 +171,7 @@ MathJax = {
 
 <h4>类型5：表意不明</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>子类型</th><th>病例</th><th>修改</th></tr>
 <tr><td><strong>歧义（多义词）</strong></td><td>他走了一个多小时了。</td><td>"离开"还是"行走"？</td></tr>
@@ -156,11 +179,13 @@ MathJax = {
 <tr><td><strong>歧义（停顿不同）</strong></td><td>这一桩发生在普通家庭中的杀人悲剧在亲戚当中也有着不解和议论，要说小莉的妈妈不爱她家里人谁也不相信。</td><td>加标点断句</td></tr>
 <tr><td><strong>歧义（数量词）</strong></td><td>两个学校的领导</td><td>学校的两个领导 / 两所学校的领导</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h4>类型6：不合逻辑</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>子类型</th><th>病例</th><th>修改</th></tr>
 <tr><td><strong>概念并列不当</strong></td><td>报刊、杂志、电视和一切出版物</td><td>出版物包含报刊杂志</td></tr>
@@ -169,6 +194,7 @@ MathJax = {
 <tr><td><strong>强加因果</strong></td><td>因为他来自北方，所以思想很保守。</td><td>删因果关联词</td></tr>
 <tr><td><strong>不合事理</strong></td><td>八百多人，几千条胳膊，同暴雨洪水搏斗。</td><td>八百多人只有一千多条胳膊</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -197,6 +223,7 @@ MathJax = {
 
 <h3>四、广东卷病句真题特征</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>年份</th><th>情境主题</th><th>病句类型</th><th>分值</th></tr>
 <tr><td>2023</td><td>科技创新</td><td>结构混乱+搭配不当</td><td>4分</td></tr>
@@ -204,6 +231,7 @@ MathJax = {
 <tr><td>2021</td><td>文化传承</td><td>语序不当+表意不明</td><td>3分</td></tr>
 <tr><td>2020</td><td>公共卫生</td><td>搭配不当+否定失当</td><td>3分</td></tr>
 </table>
+</div>
 
 <hr>
 

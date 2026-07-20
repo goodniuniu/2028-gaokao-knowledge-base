@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月26日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">addicted</div><div class="def">adj. 沉溺于某种（尤其是不良的）嗜好的；入了迷的，上了瘾的 v. 使…上瘾（addict的过去分词）</div></td><td><div class="word">focus</div><div class="def">n. 焦点；中心；清晰；焦距 v. 使集中；使聚焦</div></td><td><div class="word">forget</div><div class="def">v. 忘记；忽略 n. (Forget)人名；(法)福尔热</div></td><td><div class="word">sailing</div><div class="def">n. 航行，航海；启航；航海术 adj. 航行的 v. 航行，起航（sail的现在分词形式）</div></td></tr>
 <tr><td><div class="word">serious</div><div class="def">adj. 严肃的，严重的；认真的；庄重的；危急的</div></td><td><div class="word">dad</div><div class="def">n. 爸爸；爹爹</div></td><td><div class="word">scold</div><div class="def">v. 责骂；叱责 n. 责骂；爱责骂的人</div></td><td><div class="word">vacation</div><div class="def">n. 假期；（房屋）搬出 v. 休假，度假</div></td></tr>
 <tr><td><div class="word">immediate</div><div class="def">adj. 立即的；直接的；最接近的</div></td><td><div class="word">timetable</div><div class="def">n. 时间表；时刻表；课程表</div></td><td><div class="word">recycle</div><div class="def">v. 使再循环；使…重新利用 n. 再生；再循环；重复利用</div></td><td><div class="word">fall</div><div class="def">v. 落下；变成；来临；减弱 n. 下降；秋天；瀑布 adj. 秋天的</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">moral</div><div class="def">adj. 道德的；精神上的；品性端正的 n. 道德；寓意</div></td><td><div class="word">evidence</div><div class="def">n. 证据，证明；迹象；明显 v. 证明</div></td><td><div class="word">pour</div><div class="def">n. 倾泻；流出；骤雨 v. 灌，注；倒；倾泻；倾吐</div></td><td><div class="word">map</div><div class="def">v. 映射；计划；绘制地图；确定基因在染色体中的位置 n. 地图；示意图；染色体图</div></td></tr>
 <tr><td><div class="word">blouse</div><div class="def">n. 宽松的上衣；女装衬衫 vt. 使…宽松下垂 vi. 宽松下垂</div></td><td><div class="word">lab</div><div class="def">n. 实验室，研究室</div></td><td><div class="word">hall</div><div class="def">n. 过道，门厅，走廊；会堂；食堂；学生宿舍；大厅，前厅；娱乐中心，会所</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

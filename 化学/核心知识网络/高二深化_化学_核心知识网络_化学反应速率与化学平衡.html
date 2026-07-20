@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>化学反应速率与化学平衡</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第一册 / 2023-2025广东选择性考试·化学速率平衡专题</td></tr>
@@ -55,6 +66,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -110,6 +122,7 @@ K = [C]^p[D]^q / ([A]^m[B]^n)</code></pre>
 
 <h4>4. 勒夏特列原理速判表</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>改变条件</th><th>平衡移动方向</th><th>对速率的影响</th><th>K值变化</th></tr>
 <tr><td>增大反应物浓度</td><td>正向移动</td><td>v_正突增，v_逆渐变</td><td>不变</td></tr>
@@ -120,6 +133,7 @@ K = [C]^p[D]^q / ([A]^m[B]^n)</code></pre>
 <tr><td>降低温度</td><td>向放热方向</td><td>均减小</td><td>放热反应K增大</td></tr>
 <tr><td>加入催化剂</td><td>不移动</td><td>同等倍数增大</td><td>不变</td></tr>
 </table>
+</div>
 
 <blockquote>
 压强只对气体分子数有变化的反应有影响；恒容充惰性气体，各组分浓度不变，平衡不移动
@@ -130,6 +144,7 @@ K = [C]^p[D]^q / ([A]^m[B]^n)</code></pre>
 <pre><code>本质标志：v_正 = v_逆 ≠ 0
 宏观标志：各组分浓度/百分含量保持不变</code></pre>
 
+<div class="table-wrap">
 <table>
 <tr><th>条件</th><th>判断是否平衡</th></tr>
 <tr><td>各组分浓度不变</td><td>是（本质标志）</td></tr>
@@ -139,6 +154,7 @@ K = [C]^p[D]^q / ([A]^m[B]^n)</code></pre>
 <tr><td>颜色不变（有有色物质）</td><td>是</td></tr>
 <tr><td>温度不变（绝热体系）</td><td>是</td></tr>
 </table>
+</div>
 
 <h3>方法步骤</h3>
 
@@ -162,12 +178,14 @@ K = [C]^p[D]^q / ([A]^m[B]^n)</code></pre>
 
 <h4>等效平衡判断</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>条件</th><th>等效平衡类型</th><th>判断标准</th></tr>
 <tr><td>恒温恒容</td><td>完全等效</td><td>起始投料换算成同侧后完全相同</td></tr>
 <tr><td>恒温恒容</td><td>比例等效（Δn=0）</td><td>起始投料换算成同侧后成比例</td></tr>
 <tr><td>恒温恒压</td><td>比例等效</td><td>起始投料换算成同侧后成比例</td></tr>
 </table>
+</div>
 
 <blockquote>
 换算方法：一边倒法——将生成物全部转化为反应物，看是否相同/成比例

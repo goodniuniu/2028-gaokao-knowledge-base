@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>热学光学与原子物理</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第三册 / 广东选择性考试必考模块（约占12-15分）</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
 <tr><td><strong>广东考情</strong></td><td>中高频（近5年广东卷均考查，约占12-15分，以选择题和填空题为主）。广东卷特色：热学常与"广东气候""空调制冷"情境结合；光学与"光纤通信""5G技术"关联；原子物理与"核电站""医学放疗"等科技前沿结合。难度定位：中档偏基础。赋分提示：本模块是"性价比"最高的章节，公式少、题型固定，务必确保满分。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -254,6 +266,11 @@ U_c-ν 图像：
 <li><a href="高一筑基_物理_核心知识网络_功和能与功能关系.html">高一筑基_物理_核心知识网络_功和能与功能关系</a> — 热力学第一定律是能量守恒的特例</li>
 </ul>
 
+
+<div class="figure">
+  <img src="../../图形库/物理/电路串并联对比.png" alt="电路串并联对比图">
+  <div class="figure-caption">图：串联与并联电路对比（电流、电压、电阻关系）</div>
+</div>
 <hr>
 
 <h2>备注</h2>

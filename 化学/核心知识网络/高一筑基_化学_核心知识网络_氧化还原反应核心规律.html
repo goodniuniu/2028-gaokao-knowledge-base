@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>氧化还原反应核心规律</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版必修第一册第一章 / 广东选择性考试高频考点</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试、#广州一模</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷100%涉及氧化还原，选择题和工艺流程题均考），中档难度。广东卷常将氧化还原与电化学、工艺流程结合考查，侧重规律应用而非死记硬背。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -64,12 +76,14 @@ MathJax = {
 
 <h3>一、氧化还原反应的本质与特征</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>项目</th><th>内容</th></tr>
 <tr><td><strong>本质</strong></td><td>电子转移（得失或偏移）</td></tr>
 <tr><td><strong>特征</strong></td><td>反应前后元素化合价发生变化</td></tr>
 <tr><td><strong>判断口诀</strong></td><td><strong>"升失氧还氧，降得还氧还"</strong></td></tr>
 </table>
+</div>
 
 <blockquote>
 口诀解读：化合价<strong>升</strong>高 → <strong>失</strong>电子 → 被<strong>氧</strong>化 → 本身是<strong>还</strong>原剂 → 具有<strong>氧</strong>化产物
@@ -83,6 +97,7 @@ MathJax = {
 
 <p><strong>核心原则</strong>：氧化性、还原性强弱取决于<strong>得失电子的难易</strong>，与得失电子的<strong>数目无关</strong>。</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>判断依据</th><th>具体规律</th><th>示例</th></tr>
 <tr><td><strong>金属活动性顺序</strong></td><td>金属越活泼，还原性越强</td><td>K > Ca > Na > Mg > Al > Zn > Fe</td></tr>
@@ -90,6 +105,7 @@ MathJax = {
 <tr><td><strong>化合价规律</strong></td><td>最高价只氧化性，最低价只还原性，中间价态两者皆有</td><td>Fe³⁺(氧化性) > Fe²⁺(两者) > Fe(还原性)</td></tr>
 <tr><td><strong>反应方向规律</strong></td><td>氧化性：氧化剂 > 氧化产物；还原性：还原剂 > 还原产物</td><td>强制弱原则</td></tr>
 </table>
+</div>
 
 <h4>2.2 规律二："强先弱后"反应顺序</h4>
 
@@ -111,6 +127,7 @@ MathJax = {
 
 <h4>2.3 规律三：价态规律</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>价态</th><th>性质</th><th>示例</th></tr>
 <tr><td><strong>最高价</strong></td><td>只具氧化性</td><td>HNO₃中N(+5)、浓H₂SO₄中S(+6)</td></tr>
@@ -119,6 +136,7 @@ MathJax = {
 <tr><td><strong>歧化反应</strong></td><td>同种元素同种价态 → 高低两种价态</td><td>Cl₂ + H₂O → HCl + HClO</td></tr>
 <tr><td><strong>归中反应</strong></td><td>同种元素高低价态 → 中间价态</td><td>2H₂S + SO₂ → 3S + 2H₂O</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -137,11 +155,13 @@ MathJax = {
 
 <p><strong>缺项类型</strong>：H⁺、OH⁻、H₂O（酸性/碱性环境）</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>环境</th><th>缺项规律</th><th>示例</th></tr>
 <tr><td><strong>酸性</strong></td><td>缺H⁺和H₂O，氧多的一边加H⁺</td><td>MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O</td></tr>
 <tr><td><strong>碱性</strong></td><td>缺OH⁻和H₂O，氧多的一边加H₂O</td><td>Cl₂ + 2OH⁻ → Cl⁻ + ClO⁻ + H₂O</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -173,12 +193,14 @@ MathJax = {
 
 <h3>五、与电化学的关联</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>装置</th><th>氧化还原关系</th><th>电极反应书写要点</th></tr>
 <tr><td><strong>原电池</strong></td><td>负极氧化，正极还原</td><td>负极：失电子；正极：得电子</td></tr>
 <tr><td><strong>电解池</strong></td><td>阳极氧化，阴极还原</td><td>阳极：阴离子或电极失电子；阴极：阳离子得电子</td></tr>
 <tr><td><strong>燃料电池</strong></td><td>燃料被氧化，氧化剂被还原</td><td>注意电解质环境（酸性/碱性）</td></tr>
 </table>
+</div>
 
 <p><strong>广东卷常考</strong>：新型燃料电池（如氢氧燃料电池、甲醇燃料电池）的电极反应式书写。</p>
 
@@ -186,6 +208,7 @@ MathJax = {
 
 <h3>六、广东卷氧化还原典型考法</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>考法</th><th>示例</th><th>解题关键</th></tr>
 <tr><td><strong>判断氧化性强弱</strong></td><td>根据反应方程式判断X、Y、Z的氧化性顺序</td><td>强制弱原则</td></tr>
@@ -194,6 +217,7 @@ MathJax = {
 <tr><td><strong>电化学应用</strong></td><td>写出电极反应式</td><td>注意电解质环境（酸/碱）</td></tr>
 <tr><td><strong>工艺流程</strong></td><td>某步骤加入氧化剂的目的</td><td>将某元素氧化为高价/低价，便于后续分离</td></tr>
 </table>
+</div>
 
 <hr>
 

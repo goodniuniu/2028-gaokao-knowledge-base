@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>【机械能守恒定律】守恒条件、三种表达式与动能定理的对比</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版必修第二册 第八章第4节 + 近年高考真题归纳（2022-2025）</td></tr>
@@ -55,6 +66,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -81,12 +93,14 @@ MathJax = {
 
 <p><strong>三种表达式</strong>：</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>表达式</th><th>适用场景</th><th>公式</th></tr>
 <tr><td><strong>状态式</strong></td><td>已知初末状态，直接列等式</td><td>$E_{k1} + E_{p1} = E_{k2} + E_{p2}$</td></tr>
 <tr><td><strong>转化式</strong></td><td>强调动能与势能的相互转化</td><td>$\Delta E_k = -\Delta E_p$（动能增加 = 势能减少）</td></tr>
 <tr><td><strong>转移式</strong></td><td>多物体系统，A的机械能转移给B</td><td>$\Delta E_A = -\Delta E_B$</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>注意事项</strong>：</p>
@@ -118,6 +132,7 @@ MathJax = {
 
 <p><strong>绳模型 vs 杆模型 vs 轨道模型</strong>：</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>模型</th><th>最高点临界条件</th><th>最低点半径向心力</th></tr>
 <tr><td>轻绳（单绳）</td><td>$v_{min} = \sqrt{gr}$，$T = 0$</td><td>$T - mg = \frac{mv^2}{r}$（$T$ 向上）</td></tr>
@@ -125,12 +140,14 @@ MathJax = {
 <tr><td>圆弧轨道（外轨）</td><td>$v_{min} = \sqrt{gr}$，$N = 0$</td><td>$N - mg = \frac{mv^2}{r}$（$N$ 向上）</td></tr>
 <tr><td>圆弧轨道（内轨）</td><td>$v_{min} = \sqrt{gr}$，$N = 0$</td><td>$mg + N = \frac{mv^2}{r}$（$N$ 向下）</td></tr>
 </table>
+</div>
 </blockquote>
 
 <hr>
 
 <h2>动能定理 vs 机械能守恒定律：对比与选择</h2>
 
+<div class="table-wrap">
 <table>
 <tr><th>对比项</th><th>动能定理</th><th>机械能守恒定律</th></tr>
 <tr><td><strong>适用范围</strong></td><td><strong>所有过程</strong>（含摩擦、含外力）</td><td><strong>仅无摩擦、无其他外力做功</strong>的过程</td></tr>
@@ -140,6 +157,7 @@ MathJax = {
 <tr><td><strong>是否需分析受力</strong></td><td>需要（求各力做功）</td><td>不需要（只需判断是否守恒）</td></tr>
 <tr><td><strong>高考使用频率</strong></td><td><strong>更高</strong>（约80%能量题可用）</td><td>较低（仅光滑、无摩擦情境）</td></tr>
 </table>
+</div>
 
 <p><strong>选择策略</strong>：</p>
 

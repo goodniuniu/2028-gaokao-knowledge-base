@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月31日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">flower</div><div class="def">n. 花；精华；开花植物 v. 成熟，发育；开花；繁荣；旺盛</div></td><td><div class="word">dusty</div><div class="def">adj. 落满灰尘的</div></td><td><div class="word">attraction</div><div class="def">n. 吸引，吸引力；引力；吸引人的事物</div></td><td><div class="word">sister</div><div class="def">n. 姐妹；（称志同道合者）姐妹；修女；护士 adj. 姐妹般的；同类型的</div></td></tr>
 <tr><td><div class="word">vegetable</div><div class="def">n. 蔬菜；植物；植物人 adj. 蔬菜的；植物的</div></td><td><div class="word">beehive</div><div class="def">n. 蜂窝；蜂箱</div></td><td><div class="word">fool</div><div class="def">v. 欺骗；开玩笑；戏弄 n. 傻瓜；愚人；受骗者 adj. 傻的</div></td><td><div class="word">firework</div><div class="def">n. 烟火；激烈情绪</div></td></tr>
 <tr><td><div class="word">dusk</div><div class="def">n. 黄昏，薄暮；幽暗，昏暗 adj. 微暗的 v. 使变微暗</div></td><td><div class="word">somewhere</div><div class="def">adv. 在某处；到某处 n. 某个地方</div></td><td><div class="word">low</div><div class="def">adj. 低的，浅的；卑贱的；粗俗的；消沉的 adv. 低声地；谦卑地，低下地 n. 低；低价；低点；牛叫声 v. 牛叫</div></td><td><div class="word">motto</div><div class="def">n. 座右铭，格言；箴言</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">tasty</div><div class="def">adj. 美味的；高雅的；有趣的 n. 可口的东西；引人入胜的东西</div></td><td><div class="word">contemporary</div><div class="def">n. 同时代的人；同时期的东西 adj. 当代的；同时代的；属于同一时期的</div></td><td><div class="word">punctual</div><div class="def">adj. 准时的，守时的；精确的</div></td><td><div class="word">must</div><div class="def">aux. 必须，一定；可以，应当；很可能 n. 绝对必要的事物；未发酵葡萄汁</div></td></tr>
 <tr><td><div class="word">attract</div><div class="def">v. 吸引；引起</div></td><td><div class="word">wisdom</div><div class="def">n. 智慧，才智；明智；学识；至理名言</div></td><td><div class="word">shorts</div><div class="def">n. 短裤</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

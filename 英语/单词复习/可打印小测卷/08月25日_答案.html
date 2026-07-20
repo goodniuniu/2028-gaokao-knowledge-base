@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月25日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">exercise</div><div class="def">v.  锻炼 n. [C]练习；[U]锻炼</div></td><td><div class="word">labour</div><div class="def">n.  劳动， 劳力</div></td><td><div class="word">gain</div><div class="def">v. 获得，挣得 n.  收获</div></td><td><div class="word">vehicle</div><div class="def">n.  车辆</div></td></tr>
 <tr><td><div class="word">hardship</div><div class="def">n.  困难， 艰辛</div></td><td><div class="word">confuse</div><div class="def">vt.  使糊涂； 搞乱</div></td><td><div class="word">kilo</div><div class="def">n.  千克； 公斤</div></td><td><div class="word">freedom</div><div class="def">n.  自由</div></td></tr>
 <tr><td><div class="word">cushion</div><div class="def">n.  垫子</div></td><td><div class="word">scold</div><div class="def">vt.  责骂， 谴责</div></td><td><div class="word">modern</div><div class="def">adj.  现代的， 近代的； 时尚的</div></td><td><div class="word">physics</div><div class="def">n.  物理</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">attention</div><div class="def">n.  注意； 关心</div></td><td><div class="word">latter</div><div class="def">n.   后者</div></td><td><div class="word">front</div><div class="def">adj. 前面的；前部的 n.  前面； 前部； 前线</div></td><td><div class="word">visit</div><div class="def">n&v.  参观， 访问， 拜访</div></td></tr>
 <tr><td><div class="word">clinic</div><div class="def">n.  诊所</div></td><td><div class="word">customer</div><div class="def">n.   顾客， 主顾</div></td><td></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

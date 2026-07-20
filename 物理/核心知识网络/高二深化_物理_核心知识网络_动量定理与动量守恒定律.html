@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>动量定理与动量守恒定律</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第一册 / 2023-2025广东选择性考试·物理力学综合专题</td></tr>
@@ -55,6 +66,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -104,12 +116,14 @@ MathJax = {
 
 <h4>3. 碰撞分类与公式</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>碰撞类型</th><th>特征</th><th>公式</th></tr>
 <tr><td><strong>弹性碰撞</strong></td><td>动量守恒 + 动能守恒</td><td>m₁v₁+m₂v₂ = m₁v₁'+m₂v₂'<br>½m₁v₁²+½m₂v₂² = ½m₁v₁'²+½m₂v₂'²</td></tr>
 <tr><td><strong>完全非弹性碰撞</strong></td><td>动量守恒，动能损失最大，共速</td><td>m₁v₁+m₂v₂ = (m₁+m₂)v_共<br>ΔEk = ½μ(v_相)²（μ为约化质量）</td></tr>
 <tr><td><strong>非完全弹性碰撞</strong></td><td>动量守恒，动能有损失</td><td>m₁v₁+m₂v₂ = m₁v₁'+m₂v₂'<br>动能不守恒，用恢复系数e描述</td></tr>
 </table>
+</div>
 
 <blockquote>
 弹性碰撞速度公式（记忆版）：</p>

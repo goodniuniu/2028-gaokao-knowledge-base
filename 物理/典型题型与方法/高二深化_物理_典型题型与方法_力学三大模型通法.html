@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>力学三大模型通法（板块·传送带·弹簧）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>动力学综合专题 / 广东选择性考试高频压轴 / 力学主干知识</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试、#广州一模、#深圳一模</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷压轴计算题约80%涉及三大模型），常以"生活/科技情境"包装（如工厂流水线、地铁安检、新能源汽车），需从情境中提取标准模型。原始分差距大，赋分后进一步放大，务必确保过程分拿满。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -95,11 +107,13 @@ MathJax = {
 
 <p><strong>第二步：相对滑动时的动力学方程</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>对象</th><th>受力分析</th><th>方程</th></tr>
 <tr><td>小物块 m</td><td>滑动摩擦力 $f = μmg$（方向与相对运动相反）</td><td>$a_m = μg$</td></tr>
 <tr><td>木板 M</td><td>外力 F + 地面摩擦力 + 物块给的摩擦力</td><td>$a_M = (F ± μmg ± f_{地})/M$</td></tr>
 </table>
+</div>
 
 <p><strong>第三步：运动学关系</strong></p>
 
@@ -123,23 +137,27 @@ MathJax = {
 
 <h4>3.1 分类</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>类型</th><th>特点</th><th>关键分析点</th></tr>
 <tr><td><strong>水平传送带</strong></td><td>带匀速转动，物体初速v₀</td><td>判断共速前是否滑出</td></tr>
 <tr><td><strong>倾斜传送带</strong></td><td>带有倾角θ</td><td>比较 $μ$ 与 $tanθ$ 判断能否静止</td></tr>
 <tr><td><strong>平斜交接</strong></td><td>水平段→倾斜段</td><td>交接处速度衔接，重新判断摩擦力方向</td></tr>
 </table>
+</div>
 
 <h4>3.2 水平传送带通法</h4>
 
 <p><strong>情景一：物体初速 v₀，带速 v，同向</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>条件</th><th>运动过程</th><th>痕迹长度</th></tr>
 <tr><td>v₀ < v，带足够长</td><td>先加速 $a=μg$，再共速匀速</td><td>$Δx = v·t - x_{物} = v²/(2μg) - v₀²/(2μg)$</td></tr>
 <tr><td>v₀ > v，带足够长</td><td>先减速 $a=μg$，再共速匀速</td><td>类似</td></tr>
 <tr><td>带长 L < 加速距离</td><td>一直加速，末速 $v' = √(v₀²+2μgL)$</td><td>全程滑动</td></tr>
 </table>
+</div>
 
 <p><strong>情景二：物体初速 v₀，带速 v，反向</strong></p>
 
@@ -169,11 +187,13 @@ MathJax = {
 
 <h4>4.1 两类问题</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>类型</th><th>特征</th><th>核心方法</th></tr>
 <tr><td><strong>弹簧连接体</strong></td><td>弹簧连接两物体，受外力作用</td><td>整体法 + 隔离法，注意弹簧弹力不可突变</td></tr>
 <tr><td><strong>弹簧类碰撞</strong></td><td>弹簧作为相互作用媒介，求最大压缩/分离</td><td>动量守恒 + 能量守恒（弹性势能参与）</td></tr>
 </table>
+</div>
 
 <h4>4.2 弹簧连接体通法</h4>
 

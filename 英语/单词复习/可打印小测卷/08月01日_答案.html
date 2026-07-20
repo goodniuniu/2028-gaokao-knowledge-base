@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月01日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">negotiate</div><div class="def">v. 谈判，商议；转让；越过</div></td><td><div class="word">feast</div><div class="def">v. 享受；款待，宴请 n. 筵席，宴会；节日</div></td><td><div class="word">practical</div><div class="def">adj. 实际的；实用性的</div></td><td><div class="word">private</div><div class="def">adj. 私人的；私有的；私下的 n. 列兵；二等兵</div></td></tr>
 <tr><td><div class="word">technique</div><div class="def">n. 技巧，技术；手法</div></td><td><div class="word">bun</div><div class="def">n. 小圆面包</div></td><td><div class="word">rabbit</div><div class="def">n. 兔子，野兔 v. 让…见鬼去吧</div></td><td><div class="word">yet</div><div class="def">adv. 还；但是；已经 conj. 但是；然而 n. (Yet)人名；(东南亚国家华语)一</div></td></tr>
 <tr><td><div class="word">Germany</div><div class="def">n. 德国</div></td><td><div class="word">referee</div><div class="def">n. 裁判员；调解人；介绍人 v. 仲裁；担任裁判</div></td><td><div class="word">policeman</div><div class="def">n. 警察，警员；[分化] 淀帚（橡皮头玻璃搅棒）</div></td><td><div class="word">normal</div><div class="def">adj. 正常的；正规的，标准的 n. 正常；标准；常态</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">heap</div><div class="def">n. 堆；许多；累积 v. 堆；堆积</div></td><td><div class="word">trend</div><div class="def">n. 趋势，倾向；走向 v. 趋向，伸向</div></td><td><div class="word">cellar</div><div class="def">n. 地窖；酒窖；地下室 vt. 把…藏入地窖</div></td><td><div class="word">visitor</div><div class="def">n. 访问者，参观者；视察者；候鸟</div></td></tr>
 <tr><td><div class="word">seed</div><div class="def">n. 种子；根据；精液；萌芽；子孙；原由 v. 播种；结实；成熟；去…籽</div></td><td><div class="word">out</div><div class="def">adv. 出现；在外；出局；出声地；不流行地 adj. 外面的；出局的；下台的 n. 出局 prep. 向；离去 v. 出来；暴露</div></td><td><div class="word">breakfast</div><div class="def">n. 早餐；早饭 v. 吃早餐</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

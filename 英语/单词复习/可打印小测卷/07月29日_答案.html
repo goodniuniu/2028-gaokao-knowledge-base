@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月29日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">swing</div><div class="def">n. 摇摆；摆动；秋千；音律；涨落 v. 摇摆；转向；悬挂；大摇大摆地行走 adj. 旋转的；悬挂的；强节奏爵士音乐的</div></td><td><div class="word">approach</div><div class="def">n. 方法；途径；接近 v. 接近；着手处理</div></td><td><div class="word">correct</div><div class="def">v. 改正；告诫 adj. 正确的；恰当的；端正的</div></td><td><div class="word">at</div><div class="def">prep. 在（表示存在或出现的地点、场所、位置、空间）；以（某种价格、速度等）；向；达；因为；朝；忙于 n. 阿特（老挝货币基本单位att）；[化]砹（极不稳定放射性元素） abbr. 密封的（airtight）；气温（air temperature）</div></td></tr>
 <tr><td><div class="word">pill</div><div class="def">n. 药丸；弹丸，子弹；口服避孕药 v. 把…制成丸剂；使服用药丸；抢劫，掠夺（古语）</div></td><td><div class="word">underline</div><div class="def">v. 强调；在…下面划线；预告 n. 下划线；下期节目预告</div></td><td><div class="word">team</div><div class="def">n. 队；组 v. 使合作</div></td><td><div class="word">scholarship</div><div class="def">n. 奖学金；学识，学问</div></td></tr>
 <tr><td><div class="word">committee</div><div class="def">n. 委员会</div></td><td><div class="word">stick</div><div class="def">v. 刺，戳；伸出；粘贴 n. 棍；手杖；呆头呆脑的人</div></td><td><div class="word">cowboy</div><div class="def">n. 牛仔；牧童；莽撞的人</div></td><td><div class="word">expectation</div><div class="def">n. 期待；预期；指望</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">shelter</div><div class="def">n. 庇护；避难所；遮盖物 v. 保护；使掩蔽</div></td><td><div class="word">look</div><div class="def">v. 看；期待；注意；面向；看上去像 n. 看；样子；面容</div></td><td><div class="word">coast</div><div class="def">v. 滑行；沿岸航行 n. 海岸；滑坡</div></td><td><div class="word">ignore</div><div class="def">v. 驳回诉讼；忽视；不理睬</div></td></tr>
 <tr><td><div class="word">different</div><div class="def">adj. 不同的；个别的，与众不同的</div></td><td><div class="word">real</div><div class="def">adj. 实际的；真实的；实在的 adv. 真正地；确实地 n. 现实；实数</div></td><td><div class="word">typical</div><div class="def">adj. 典型的；特有的；象征性的</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

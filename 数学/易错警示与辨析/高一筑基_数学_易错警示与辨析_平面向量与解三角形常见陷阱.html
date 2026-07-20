@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>平面向量与解三角形常见陷阱（向量夹角·SSA多解·投影·模长）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>2024~2025学年广州各区高一下期末试卷错题归纳 / 人教A版必修第二册第六章+第五章</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期末、三校/五校联考）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一下期末<strong>选填失分重灾区</strong>。广州各区期末试卷中，向量与解三角形的选择填空题（通常占15-20分）平均失分率高达40%。主要错误集中在：向量夹角范围、SSA多解取舍、投影概念、模长公式误用。名校联考（五校联考）中，解三角形第3问的多解讨论是区分中等生与优等生的关键。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -182,11 +198,13 @@ MathJax = {
 
 <p>#### 陷阱5：平行与垂直的坐标条件混淆</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>关系</th><th>坐标条件</th><th>常见错误</th></tr>
 <tr><td><strong>垂直</strong></td><td>$x_1x_2 + y_1y_2 = 0$</td><td>写成$x_1x_2 = y_1y_2$（漏符号）</td></tr>
 <tr><td><strong>平行</strong></td><td>$x_1y_2 = x_2y_1$（或$\vec{a} = k\vec{b}$）</td><td>写成$\frac{x_1}{x_2} = \frac{y_1}{y_2}$（未讨论$x_2 = 0$）</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>更安全</strong>：平行用$x_1y_2 = x_2y_1$，避免分式（防止分母为0）。

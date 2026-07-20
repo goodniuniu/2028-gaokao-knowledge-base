@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>神经—体液—免疫调节</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第一册 / 2023-2025广东选择性考试·生物调节专题</td></tr>
@@ -55,6 +66,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -120,6 +132,7 @@ MathJax = {
 
 <p>##### 主要激素及功能速查表</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>激素</th><th>分泌器官</th><th>靶器官/靶细胞</th><th>主要功能</th><th>异常症</th></tr>
 <tr><td>生长激素</td><td>垂体</td><td>全身细胞</td><td>促进生长，促进蛋白质合成</td><td>幼年过少→侏儒症；过多→巨人症/肢端肥大</td></tr>
@@ -130,6 +143,7 @@ MathJax = {
 <tr><td>性激素</td><td>性腺</td><td>生殖器官</td><td>促进生殖器官发育、配子形成、第二性征</td><td>过少→性发育迟缓</td></tr>
 <tr><td>抗利尿激素</td><td>下丘脑分泌，垂体释放</td><td>肾小管/集合管</td><td>促进水分重吸收</td><td>过少→尿崩症</td></tr>
 </table>
+</div>
 
 <p>##### 甲状腺激素分级调节与反馈</p>
 
@@ -151,11 +165,13 @@ MathJax = {
 
 <p>##### 特异性免疫两阶段</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>免疫类型</th><th>细胞参与</th><th>过程</th><th>特点</th></tr>
 <tr><td><strong>体液免疫</strong></td><td>B细胞、T细胞、吞噬细胞</td><td>抗原→吞噬细胞→T细胞→B细胞→浆细胞→抗体</td><td>针对胞外抗原，抗体发挥作用</td></tr>
 <tr><td><strong>细胞免疫</strong></td><td>T细胞、吞噬细胞</td><td>抗原→吞噬细胞→T细胞→效应T细胞→裂解靶细胞</td><td>针对胞内抗原（病毒、癌细胞），直接接触</td></tr>
 </table>
+</div>
 
 <blockquote>
 记忆细胞：寿命长，对抗原敏感，二次免疫反应更快更强（产生抗体更多）
@@ -163,21 +179,25 @@ MathJax = {
 
 <p>##### 免疫失调</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>类型</th><th>机制</th><th>例子</th></tr>
 <tr><td>过敏反应</td><td>已免疫机体再次接触相同过敏原</td><td>花粉过敏、青霉素过敏</td></tr>
 <tr><td>自身免疫病</td><td>免疫系统攻击自身组织</td><td>类风湿性关节炎、系统性红斑狼疮</td></tr>
 <tr><td>免疫缺陷病</td><td>免疫功能不足或缺乏</td><td>艾滋病（HIV攻击T细胞）</td></tr>
 </table>
+</div>
 
 <h4>4. 三大调节方式比较</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>调节方式</th><th>作用速度</th><th>作用范围</th><th>作用时间</th><th>结构基础</th></tr>
 <tr><td>神经调节</td><td>快</td><td>准确、局限</td><td>短暂</td><td>反射弧</td></tr>
 <tr><td>体液调节</td><td>慢</td><td>广泛</td><td>较长</td><td>体液运输</td></tr>
 <tr><td>免疫调节</td><td>较慢</td><td>针对特定抗原</td><td>产生记忆</td><td>免疫系统</td></tr>
 </table>
+</div>
 
 <blockquote>
 关系：神经调节占主导地位，体液调节可看作神经调节的环节；内分泌腺本身也受神经调节；三者相互协调，共同维持稳态
@@ -200,12 +220,14 @@ MathJax = {
 
 <h4>长句表达模板（广东卷高频）</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>问题类型</th><th>答题模板</th></tr>
 <tr><td>为什么血糖升高引起胰岛素分泌？</td><td>血糖升高 → 胰岛B细胞感受到血糖变化 → 胰岛素分泌增加 → 促进组织细胞加速摄取、利用和储存葡萄糖 → 从而使血糖降低</td></tr>
 <tr><td>为什么甲状腺激素分泌过多会抑制TRH分泌？</td><td>甲状腺激素对下丘脑和垂体存在负反馈调节，当甲状腺激素含量过高时，会抑制下丘脑分泌TRH和垂体分泌TSH，从而维持甲状腺激素含量的相对稳定</td></tr>
 <tr><td>二次免疫为什么更快更强？</td><td>初次免疫时产生的记忆细胞，在相同抗原再次入侵时能迅速增殖分化，产生大量浆细胞/效应T细胞，从而更快更强地产生抗体/裂解靶细胞</td></tr>
 </table>
+</div>
 
 <h3>记忆口诀/技巧</h3>
 

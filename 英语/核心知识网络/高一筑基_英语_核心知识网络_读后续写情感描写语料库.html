@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>读后续写情感描写语料库</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>新高考Ⅰ卷读后续写真题（2021-2025）/ 外刊情感描写精选 / 高分作文语料</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东 / #新高考Ⅰ卷·江苏</td></tr>
 <tr><td><strong>广东考情</strong></td><td>读后续写是新高考Ⅰ卷（含广东）的必考题型，25分。广东卷偏好"情感冲突+成长主题"（如2023年"写作比赛"、2024年"旅行经历"）。情感描写是读后续写的核心得分点，高分作文与低分作文的最大差距在于情感表达的细腻度和生动性。评分标准中"内容丰富"和"语言运用"两大维度都高度依赖情感描写。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -72,6 +84,7 @@ MathJax = {
 
 <h4>1. 高兴/兴奋（Joy/Excitement）</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>语料表达</th><th>中文含义</th><th>适用场景</th><th>频率</th></tr>
 <tr><td>A smile lit up her face.</td><td>笑容照亮了她的脸庞</td><td>获得认可、达成目标</td><td>★★★★★</td></tr>
@@ -85,6 +98,7 @@ MathJax = {
 <tr><td>She shed tears of joy.</td><td>她喜极而泣</td><td>感动+喜悦的复合情绪</td><td>★★★★☆</td></tr>
 <tr><td>Unforgettable were her eyes that shone like diamonds.</td><td>令人难忘的是她钻石般闪亮的眼睛</td><td>赞美、深刻印象</td><td>★★☆☆☆</td></tr>
 </table>
+</div>
 
 <p><strong>动作链示例</strong>（高分写法）：</p>
 
@@ -98,6 +112,7 @@ She <strong>gasped</strong> with delight, her hands <strong>flying to her mouth<
 
 <h4>2. 感激/感动（Gratitude/Moved）</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>语料表达</th><th>中文含义</th><th>适用场景</th><th>频率</th></tr>
 <tr><td>Tears welled up in her eyes.</td><td>泪水涌上她的眼眶</td><td>感动、感激</td><td>★★★★★</td></tr>
@@ -110,6 +125,7 @@ She <strong>gasped</strong> with delight, her hands <strong>flying to her mouth<
 <tr><td>She offered her heartfelt gratitude.</td><td>她表达了衷心的感谢</td><td>正式感谢、真诚致谢</td><td>★★★☆☆</td></tr>
 <tr><td>A smile of understanding flashed across his face.</td><td>他脸上闪过理解的微笑</td><td>被理解、共鸣</td><td>★★★☆☆</td></tr>
 </table>
+</div>
 
 <p><strong>复合情绪描写</strong>（感动+释然）：</p>
 
@@ -121,6 +137,7 @@ Tears <strong>filling her eyes</strong>, she <strong>offered her heartfelt grati
 
 <h4>3. 自信/坚定（Confidence/Determination）</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>语料表达</th><th>中文含义</th><th>适用场景</th><th>频率</th></tr>
 <tr><td>She wore a determined look.</td><td>她面带坚定的表情</td><td>下定决心、面对挑战</td><td>★★★★☆</td></tr>
@@ -129,6 +146,7 @@ Tears <strong>filling her eyes</strong>, she <strong>offered her heartfelt grati
 <tr><td>He set his jaw firmly.</td><td>他坚定地咬紧下巴</td><td>下定决心、绝不放弃</td><td>★★★☆☆</td></tr>
 <tr><td>With renewed confidence, she stepped forward.</td><td>带着重新燃起的自信，她向前迈步</td><td>重拾信心、克服恐惧</td><td>★★★★☆</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -136,6 +154,7 @@ Tears <strong>filling her eyes</strong>, she <strong>offered her heartfelt grati
 
 <h4>1. 悲伤/绝望（Sadness/Despair）</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>语料表达</th><th>中文含义</th><th>适用场景</th><th>频率</th></tr>
 <tr><td>Her heart sank.</td><td>她的心沉了下去</td><td>听到坏消息、失望</td><td>★★★★★</td></tr>
@@ -148,11 +167,13 @@ Tears <strong>filling her eyes</strong>, she <strong>offered her heartfelt grati
 <tr><td>A lump formed in her throat.</td><td>她喉咙里堵了一块东西</td><td>哽咽、强忍悲伤</td><td>★★★★☆</td></tr>
 <tr><td>The world seemed to lose its color.</td><td>世界仿佛失去了色彩</td><td>绝望、抑郁</td><td>★★★☆☆</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h4>2. 恐惧/紧张（Fear/Anxiety）</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>语料表达</th><th>中文含义</th><th>适用场景</th><th>频率</th></tr>
 <tr><td>Her heart pounded wildly.</td><td>她的心狂跳不止</td><td>紧张、恐惧</td><td>★★★★★</td></tr>
@@ -163,11 +184,13 @@ Tears <strong>filling her eyes</strong>, she <strong>offered her heartfelt grati
 <tr><td>She bit her lip nervously.</td><td>她紧张地咬着嘴唇</td><td>焦虑、不安</td><td>★★★★☆</td></tr>
 <tr><td>Every nerve in her body was on edge.</td><td>她全身的神经都紧绷着</td><td>极度紧张、戒备</td><td>★★★☆☆</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h4>3. 愤怒/沮丧（Anger/Frustration）</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>语料表达</th><th>中文含义</th><th>适用场景</th><th>频率</th></tr>
 <tr><td>His face flushed with anger.</td><td>他的脸因愤怒而涨红</td><td>生气、愤怒</td><td>★★★★☆</td></tr>
@@ -177,6 +200,7 @@ Tears <strong>filling her eyes</strong>, she <strong>offered her heartfelt grati
 <tr><td>He gritted his teeth in anger.</td><td>他愤怒地咬紧牙关</td><td>强忍愤怒</td><td>★★★☆☆</td></tr>
 <tr><td>Her eyes blazed with fury.</td><td>她的眼睛因愤怒而燃烧</td><td>极度愤怒</td><td>★★★☆☆</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -186,6 +210,7 @@ Tears <strong>filling her eyes</strong>, she <strong>offered her heartfelt grati
 读后续写评分标准中，"情节连贯、情感自然"要求情感转变不生硬。以下提供从负面到正面（或反向）的过渡表达。
 </blockquote>
 
+<div class="table-wrap">
 <table>
 <tr><th>转变类型</th><th>过渡表达</th><th>示例</th></tr>
 <tr><td><strong>从悲伤到希望</strong></td><td>Gradually, a glimmer of hope flickered in her heart.</td><td>她原本绝望→看到一线希望</td></tr>
@@ -195,6 +220,7 @@ Tears <strong>filling her eyes</strong>, she <strong>offered her heartfelt grati
 <tr><td><strong>从失望到惊喜</strong></td><td>To her pleasant surprise,...</td><td>令她惊喜的是……</td></tr>
 <tr><td><strong>从困惑到领悟</strong></td><td>Suddenly, it dawned on her that...</td><td>突然，她意识到……</td></tr>
 </table>
+</div>
 
 <p><strong>完整情感转变段落</strong>（高分模板）：</p>
 
@@ -210,6 +236,7 @@ At first, her heart <strong>sank</strong> and a heavy weight <strong>pressed on 
 用环境描写烘托情感，是读后续写高分作文的标志。避免直白说"I was sad"，用"阴沉的天空""刺骨的寒风"暗示。
 </blockquote>
 
+<div class="table-wrap">
 <table>
 <tr><th>情感</th><th>环境烘托</th><th>例句</th></tr>
 <tr><td><strong>悲伤</strong></td><td>阴沉的天空、冰冷的雨、落叶</td><td>Dark clouds gathered overhead, and a cold drizzle began to fall, matching my mood.</td></tr>
@@ -218,6 +245,7 @@ At first, her heart <strong>sank</strong> and a heavy weight <strong>pressed on 
 <tr><td><strong>紧张</strong></td><td>昏暗的房间、滴答的钟表、寂静</td><td>The room was deathly silent except for the ticking of the clock, each second amplifying my anxiety.</td></tr>
 <tr><td><strong>温暖</strong></td><td>柔和的灯光、壁炉、热茶</td><td>The soft lamplight and the crackling fireplace wrapped the room in a cozy warmth.</td></tr>
 </table>
+</div>
 
 <hr>
 

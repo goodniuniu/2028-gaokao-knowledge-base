@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月07日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">pole</div><div class="def">n. 杆；极点；电极 v. 用竿支撑</div></td><td><div class="word">average</div><div class="def">n. 平均；平均数；海损 adj. 平均的；普通的；通常的 v. 算出…的平均数；将…平均分配；使…平衡</div></td><td><div class="word">capital</div><div class="def">n. 首都，省会；资金；大写字母；资本家 adj. 首都的；重要的；大写的</div></td><td><div class="word">sit</div><div class="def">v. 坐；位于 n. (Sit)人名；(东南亚国家华语)硕；(罗)西特</div></td></tr>
 <tr><td><div class="word">stain</div><div class="def">v. 沾污；败坏；给…着色 n. 污点；瑕疵；着色剂</div></td><td><div class="word">aluminium</div><div class="def">adj. 铝的 n. 铝</div></td><td><div class="word">conventional</div><div class="def">adj. 符合习俗的，传统的；常见的；惯例的</div></td><td><div class="word">prepare</div><div class="def">v. 准备；使适合；装备；起草</div></td></tr>
 <tr><td><div class="word">elegant</div><div class="def">adj. 高雅的，优雅的；讲究的；简炼的；简洁的</div></td><td><div class="word">present</div><div class="def">v. 提出；介绍；呈现；赠送 adj. 现在的；出席的 n. 现在；礼物；瞄准</div></td><td><div class="word">bachelor</div><div class="def">n. 学士；单身汉；（尚未交配的）小雄兽</div></td><td><div class="word">religious</div><div class="def">adj. 宗教的；虔诚的；严谨的；修道的 n. 修道士；尼姑</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">lame</div><div class="def">adj. 跛足的；僵痛的；不完全的；无说服力的；差劲的，蹩脚的 v. 变跛</div></td><td><div class="word">rectangle</div><div class="def">n. 矩形；长方形</div></td><td><div class="word">thief</div><div class="def">n. 小偷，贼</div></td><td><div class="word">brand</div><div class="def">v. 铭刻于，铭记；打烙印于；印…商标于 n. 商标，牌子；烙印</div></td></tr>
 <tr><td><div class="word">litter</div><div class="def">n. 垃圾；轿，担架；一窝（动物的幼崽）；凌乱 v. 乱丢；给…垫褥草；把…弄得乱七八糟</div></td><td><div class="word">sneaker</div><div class="def">n. 运动鞋；卑鄙者；鬼鬼祟祟做事的人</div></td><td><div class="word">abstract</div><div class="def">n. 摘要；抽象；抽象的概念 adj. 抽象的；深奥的 v. 摘要；提取；使……抽象化；转移(注意力、兴趣等)；使心不在焉</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

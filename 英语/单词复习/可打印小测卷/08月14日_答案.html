@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月14日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">countryside</div><div class="def">n.  乡下， 农村</div></td><td><div class="word">chief</div><div class="def">adj. 主要的，首要的 n.  领导</div></td><td><div class="word">automatic</div><div class="def">adj.  自动的， 机械的</div></td><td><div class="word">lamp</div><div class="def">n.  灯， 油灯； 光源</div></td></tr>
 <tr><td><div class="word">cry</div><div class="def">v.  喊叫； 哭 n. 喊；哭声</div></td><td><div class="word">Antarctic</div><div class="def">adj. 南极的 n.  南极地区</div></td><td><div class="word">conduct</div><div class="def">vt.  引导； 管理</div></td><td><div class="word">bury</div><div class="def">vt.   埋， 葬</div></td></tr>
 <tr><td><div class="word">obey</div><div class="def">v.  服从， 顺从</div></td><td><div class="word">stable</div><div class="def">adj.  稳定的</div></td><td><div class="word">lamb</div><div class="def">n.  羔羊； 羔羊肉</div></td><td><div class="word">fantastic</div><div class="def">adj.  极好的， 美妙的， 很棒的</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">shoot</div><div class="def">vt. 射击，射中；摄影 n.  嫩枝， 苗， 芽</div></td><td><div class="word">realize</div><div class="def">vt.  认识到； 实现</div></td><td><div class="word">budget</div><div class="def">n.  预算</div></td><td><div class="word">actual</div><div class="def">adj.  实际的， 现实的</div></td></tr>
 <tr><td><div class="word">tension</div><div class="def">n.  紧张， 不安； 拉紧， 绷紧； 压力， 张力</div></td><td><div class="word">chest</div><div class="def">n.  箱子； 胸部</div></td><td></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

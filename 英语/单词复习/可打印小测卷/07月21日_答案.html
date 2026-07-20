@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月21日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">print</div><div class="def">n. 印刷业；印花布；印刷字体；印章；印记 v. 印刷；打印；刊载；用印刷体写；在…印花样</div></td><td><div class="word">die</div><div class="def">v. 死亡；凋零；熄灭 n. 冲模，钢模；骰子</div></td><td><div class="word">mouse</div><div class="def">n. 鼠标；老鼠；胆小羞怯的人 v. 探出</div></td><td><div class="word">space</div><div class="def">n. 空间；太空；距离 v. 留间隔</div></td></tr>
 <tr><td><div class="word">early</div><div class="def">adj. 早期的；早熟的 adv. 提早；在初期 n. (Early)人名；(英)厄尔利</div></td><td><div class="word">athletic</div><div class="def">adj. 运动的，运动员的；体格健壮的</div></td><td><div class="word">cubic</div><div class="def">adj. 立方体的，立方的 n. (Cubic)人名；(罗)库比克</div></td><td><div class="word">secret</div><div class="def">n. 秘密；秘诀；机密 adj. 秘密的；机密的</div></td></tr>
 <tr><td><div class="word">bush</div><div class="def">n. 灌木；矮树丛 v. 以灌木装饰；使…精疲力竭 adj. 如灌木般长得低矮的；粗野的</div></td><td><div class="word">calculate</div><div class="def">v. 计算；以为；作打算</div></td><td><div class="word">super</div><div class="def">adj. 特级的；极好的 n. 特级品，特大号；临时雇员</div></td><td><div class="word">people</div><div class="def">n. 人；人类；民族；公民 v. 居住于；使住满人</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">raincoat</div><div class="def">n. （美）雨衣</div></td><td><div class="word">humorous</div><div class="def">adj. 诙谐的，幽默的；滑稽的，可笑的</div></td><td><div class="word">gruel</div><div class="def">vt. 使极度疲劳；累垮 n. 稀粥</div></td><td><div class="word">fine</div><div class="def">adj. 好的；优良的；细小的，精美的；健康的；晴朗的 n. 罚款 v. 罚款；澄清 adv. 很好地；精巧地</div></td></tr>
 <tr><td><div class="word">quit</div><div class="def">v. 离开；放弃；停止；使…解除 n. 离开；[计] 退出 adj. 摆脱了…的；已经了结的</div></td><td><div class="word">ant</div><div class="def">n. 蚂蚁</div></td><td><div class="word">squeeze</div><div class="def">v. 挤；紧握；勒索 n. 压榨；紧握；拥挤；佣金</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

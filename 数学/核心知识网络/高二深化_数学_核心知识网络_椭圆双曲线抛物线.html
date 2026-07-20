@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>椭圆、双曲线与抛物线</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版选择性必修第一册第三章</td></tr>
@@ -54,12 +69,18 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：中高档~压轴；解析几何是广东卷大题压轴位置的重要候选，椭圆综合题计算量大，对运算能力要求极高</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h2>核心内容</h2>
 
 <h3>一、椭圆（以焦点在 $x$ 轴上为例）</h3>
+<div class="figure">
+  <img src="../../图形库/数学/椭圆定义.png" alt="椭圆定义示意图">
+  <div class="figure-caption">图：椭圆定义——平面上到两定点F₁、F₂距离之和为常数2a的轨迹</div>
+</div>
+
 <ul>
 <li><strong>定义</strong>：$|MF_1| + |MF_2| = 2a$（$2a > |F_1 F_2|$）</li>
 <li><strong>标准方程</strong>：$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$（$a > b > 0$）</li>

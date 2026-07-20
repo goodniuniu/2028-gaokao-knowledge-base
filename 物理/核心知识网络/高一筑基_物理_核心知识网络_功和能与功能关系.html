@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>功和能与功能关系</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版必修第二册第八章 / 广东选择性考试高频考点</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷均考查，常以计算题综合考查）。广东卷特色：常以"能量转化"情境命题（如新能源汽车动能回收、水力发电、过山车能量转化）。难度定位：中档偏上。功能关系是力学综合题的核心方法，常与动能定理、机械能守恒联合考查。赋分提示：功能关系是连接力学和电磁学的桥梁，务必建立清晰的能量流动图。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -120,6 +132,7 @@ MathJax = {
 
 <h4>功能关系总结表</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>力做功</th><th>对应能量变化</th><th>关系式</th></tr>
 <tr><td><strong>重力做功</strong></td><td>重力势能变化</td><td>W_G = -ΔE_p = E_p初 - E_p末</td></tr>
@@ -130,6 +143,7 @@ MathJax = {
 <tr><td><strong>电场力做功</strong></td><td>电势能变化</td><td>W_电 = -ΔE_p电</td></tr>
 <tr><td><strong>所有力做功</strong></td><td>总能量变化</td><td>能量守恒：ΔE_k + ΔE_p + ΔE_内 + ... = 0</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>核心理解</strong>：功能关系本质是"做功是能量转化的量度"，哪个力做功就对应哪种能量的转化
@@ -163,6 +177,7 @@ MathJax = {
 <blockquote>
 <strong>与动能定理对比</strong>：</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>对比项</th><th>动能定理</th><th>机械能守恒</th></tr>
 <tr><td>条件</td><td>无限制（适用于任何情况）</td><td>只有重力/弹力做功</td></tr>
@@ -170,6 +185,7 @@ MathJax = {
 <tr><td>方程</td><td>功 = 动能变化</td><td>初态机械能 = 末态机械能</td></tr>
 <tr><td>优势</td><td>通用性强，求功/力方便</td><td>不涉及力的细节，过程简洁</td></tr>
 </table>
+</div>
 </blockquote>
 
 <h3>方法步骤</h3>

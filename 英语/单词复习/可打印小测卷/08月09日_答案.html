@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月09日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">December</div><div class="def">n. 十二月</div></td><td><div class="word">budget</div><div class="def">n. 预算，预算费 v. 安排，预定；把…编入预算 adj. 廉价的</div></td><td><div class="word">dinner</div><div class="def">n. 晚餐，晚宴；宴会；正餐</div></td><td><div class="word">patience</div><div class="def">n. 耐性，耐心；忍耐，容忍</div></td></tr>
 <tr><td><div class="word">should</div><div class="def">aux. 应该；就；可能；将要</div></td><td><div class="word">mistaken</div><div class="def">adj. 错误的；弄错的；被误解的 v. 弄错（mistake的过去分词）</div></td><td><div class="word">adjust</div><div class="def">v. 调整，使…适合；校准</div></td><td><div class="word">possession</div><div class="def">n. 拥有；财产；领地；自制；着迷</div></td></tr>
 <tr><td><div class="word">blanket</div><div class="def">n. 毛毯，毯子；毯状物，覆盖层 adj. 总括的，全体的；没有限制的 v. 覆盖，掩盖；用毯覆盖</div></td><td><div class="word">ashamed</div><div class="def">adj. 惭愧的，感到难为情的；耻于……的</div></td><td><div class="word">crowded</div><div class="def">adj. 拥挤的；塞满的 v. 拥挤（crowd的过去分词）</div></td><td><div class="word">long</div><div class="def">n. 长时间；[语] 长音节；（服装的）长尺寸；长裤 adj. 长的；过长的；做多头的；长时间的；冗长的，长音 v. 渴望；热望 adv. 长期地；始终</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">theme</div><div class="def">n. 主题；主旋律；题目 adj. 以奇想主题布置的</div></td><td><div class="word">am</div><div class="def">abbr. 调频，调谐，调幅（ amplitude modulation） v. （用于第一人称单数现在时） aux. （与v-ing连用构成现在进行时，与v-ed连用构成被动语态） n. （柬）安（人名）</div></td><td><div class="word">accuracy</div><div class="def">n. [数] 精确度，准确性</div></td><td><div class="word">balloon</div><div class="def">v. 激增；膨胀如气球 n. 气球 adj. 像气球般鼓起的</div></td></tr>
 <tr><td><div class="word">you</div><div class="def">pron. 你；你们 n. (You)人名；(柬)尤；(东南亚国家华语)猷</div></td><td><div class="word">oil</div><div class="def">n. 油；石油；油画颜料 v. 加油；涂油；使融化</div></td><td><div class="word">departure</div><div class="def">n. 离开；出发；违背</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

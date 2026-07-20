@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>水溶液中的离子平衡</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第一册 第三章 + 广东选择性考试</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：高频（近5年广东卷每年必考，常与沉淀溶解平衡、工业流程结合）；难度定位：中档~压轴（三大守恒书写、离子浓度比较需综合多平衡，沉淀溶解平衡常与Ksp计算结合）；特色描述：广东卷常将离子平衡与真实情境结合（如废水处理、矿物提纯、医药制备），溶液pH调控是工艺流程中的关键步骤；赋分提示：本专题是等级赋分"拉分点"，掌握三大守恒和Ksp计算是高分关键</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -103,6 +115,11 @@ MathJax = {
 <p>注意事项：① 温度影响K_w和Ksp，计算时注意温度条件；② 混合溶液中需考虑多重平衡的竞争；③ 沉淀转化需同时考虑Ksp和离子浓度
 </blockquote>
 
+
+<div class="figure">
+  <img src="../../图形库/化学/化学平衡移动.png" alt="化学平衡移动示意图">
+  <div class="figure-caption">图：勒夏特列原理——化学平衡移动方向判断（浓度/温度/压强影响）</div>
+</div>
 <h3>方法步骤</h3>
 
 <h4>三大守恒书写方法</h4>
@@ -154,6 +171,7 @@ MathJax = {
 
 <h3>盐类水解规律速查</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>盐的类型</th><th>实例</th><th>水解离子</th><th>溶液酸碱性</th><th>离子浓度特点</th></tr>
 <tr><td>强酸强碱盐</td><td>NaCl、KNO₃</td><td>无</td><td>中性</td><td>c(H⁺) = c(OH⁻)</td></tr>
@@ -161,6 +179,7 @@ MathJax = {
 <tr><td>弱酸强碱盐</td><td>CH₃COONa、Na₂CO₃</td><td>阴离子</td><td>碱性</td><td>c(OH⁻) > c(H⁺)</td></tr>
 <tr><td>弱酸弱碱盐</td><td>CH₃COONH₄</td><td>双水解</td><td>看Kₐ与K_b相对大小</td><td>复杂，需具体分析</td></tr>
 </table>
+</div>
 
 <h3>Ksp计算与沉淀转化</h3>
 

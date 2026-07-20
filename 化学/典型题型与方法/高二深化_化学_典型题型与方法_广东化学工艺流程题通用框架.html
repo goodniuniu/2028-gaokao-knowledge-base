@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>广东化学工艺流程题通用框架</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>广东选择性考试第18题 / 工业流程题专题</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试、#广州一模、#深圳一模</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷第18题固定为工艺流程题，14-16分），中档偏难。广东卷工艺流程常以"广东本地产业"或"国家重大需求"为背景，如金属冶炼、稀土提取、新能源材料、绿色化学等。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -85,6 +97,7 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 
 <h4>3.1 常见原料预处理</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>操作</th><th>目的</th><th>涉及反应/原理</th></tr>
 <tr><td><strong>粉碎/研磨</strong></td><td>增大接触面积，加快反应速率</td><td>固体反应速率影响因素</td></tr>
@@ -93,9 +106,11 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 <tr><td><strong>碱浸</strong></td><td>溶解Al、SiO₂、两性氧化物</td><td>2Al + 2NaOH + 2H₂O → 2NaAlO₂ + 3H₂↑</td></tr>
 <tr><td><strong>水浸</strong></td><td>溶解可溶性盐</td><td>物理溶解过程</td></tr>
 </table>
+</div>
 
 <h4>3.2 核心反应类型</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>反应类型</th><th>常见考法</th><th>示例</th></tr>
 <tr><td><strong>氧化还原</strong></td><td>加入氧化剂/还原剂的目的</td><td>将Fe²⁺氧化为Fe³⁺，便于沉淀分离</td></tr>
@@ -104,9 +119,11 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 <tr><td><strong>络合反应</strong></td><td>溶解难溶物</td><td>AgCl + 2NH₃ → [Ag(NH₃)₂]⁺ + Cl⁻</td></tr>
 <tr><td><strong>电解</strong></td><td>提纯或提取金属</td><td>电解精炼铜、电解法制备铝</td></tr>
 </table>
+</div>
 
 <h4>3.3 分离提纯操作</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>操作</th><th>适用场景</th><th>注意事项</th></tr>
 <tr><td><strong>过滤</strong></td><td>固液分离</td><td>趁热过滤（防止结晶析出）</td></tr>
@@ -116,6 +133,7 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 <tr><td><strong>蒸馏</strong></td><td>沸点差异大的液体分离</td><td>注意温度计位置、冷凝水流向</td></tr>
 <tr><td><strong>重结晶</strong></td><td>提纯含少量杂质的固体</td><td>溶解→蒸发浓缩→冷却结晶→过滤</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -123,15 +141,18 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 
 <h4>4.1 温度控制</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>温度影响</th><th>答题角度</th></tr>
 <tr><td><strong>升高温度</strong></td><td>加快反应速率、促进溶解、使平衡向吸热方向移动</td></tr>
 <tr><td><strong>降低温度</strong></td><td>防止物质分解/挥发、使平衡向放热方向移动、减少能耗</td></tr>
 <tr><td><strong>控制温度</strong></td><td>防止副反应、控制晶体大小、节能</td></tr>
 </table>
+</div>
 
 <h4>4.2 pH控制</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>目的</th><th>答题角度</th><th>示例</th></tr>
 <tr><td><strong>促进沉淀</strong></td><td>使某金属离子完全沉淀（离子浓度<10⁻⁵ mol/L）</td><td>Fe³⁺：pH≥3.2</td></tr>
@@ -139,9 +160,11 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 <tr><td><strong>抑制水解</strong></td><td>防止金属离子水解</td><td>FeCl₃溶液中加HCl</td></tr>
 <tr><td><strong>促进水解</strong></td><td>制备氢氧化物沉淀</td><td>加热促进TiCl₄水解</td></tr>
 </table>
+</div>
 
 <h4>4.3 试剂选择</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>试剂类型</th><th>常见选择</th><th>选择原则</th></tr>
 <tr><td><strong>氧化剂</strong></td><td>H₂O₂、Cl₂、NaClO、KMnO₄、空气</td><td>不引入新杂质或易除去</td></tr>
@@ -149,6 +172,7 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 <tr><td><strong>调节pH</strong></td><td>CuO、Cu(OH)₂、NH₃·H₂O、Na₂CO₃</td><td>不引入新杂质，消耗H⁺</td></tr>
 <tr><td><strong>沉淀剂</strong></td><td>NaOH、NH₃·H₂O、Na₂CO₃、H₂S</td><td>使目标离子沉淀完全</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>绿色化学原则</strong>：优先选择H₂O₂（产物是水）、空气（廉价易得）、不引入新杂质的试剂。
@@ -158,6 +182,7 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 
 <h3>五、广东本地产业情境素材</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>产业/地区</th><th>涉及元素</th><th>典型流程</th><th>可能考点</th></tr>
 <tr><td><strong>粤北稀土</strong></td><td>稀土元素（La、Ce、Nd）</td><td>稀土矿→酸浸→萃取分离→沉淀</td><td>氧化还原、沉淀pH、Ksp计算</td></tr>
@@ -168,6 +193,7 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 <tr><td><strong>广东冶炼</strong></td><td>Cu、Fe、Zn、Pb</td><td>多金属矿→焙烧→浸取→电解</td><td>氧化还原、电解精炼、Ksp</td></tr>
 <tr><td><strong>新能源材料</strong></td><td>Li、Co、Ni、Mn</td><td>三元前驱体→共沉淀→烧结</td><td>沉淀控制、氧化还原、晶体结构</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -179,6 +205,7 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 <strong>模板</strong>：为了达到...目的，采取...措施，因为...（原理）。
 </blockquote>
 
+<div class="table-wrap">
 <table>
 <tr><th>问题类型</th><th>答题模板</th></tr>
 <tr><td>为什么粉碎？</td><td>增大固体与液体的接触面积，加快反应速率，提高浸取率</td></tr>
@@ -187,6 +214,7 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 <tr><td>为什么加H₂O₂？</td><td>将Fe²⁺氧化为Fe³⁺，便于后续调节pH沉淀除去，且H₂O₂产物为水，不引入新杂质</td></tr>
 <tr><td>为什么用XX调节pH？</td><td>消耗H⁺，使pH升高，且不引入新杂质（如CuO反应生成Cu²⁺，即目标离子）</td></tr>
 </table>
+</div>
 
 <h4>6.2 "方程式书写"类</h4>
 
@@ -212,6 +240,7 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 <strong>题目背景</strong>：从多金属精矿中提取Fe、Cu、Ni，涉及"酸浸→高压加热→萃取→电解"流程。
 </blockquote>
 
+<div class="table-wrap">
 <table>
 <tr><th>小题</th><th>考查点</th><th>涉及原理</th></tr>
 <tr><td>(1)提高浸取速率</td><td>反应速率影响因素</td><td>温度、浓度、接触面积</td></tr>
@@ -219,6 +248,7 @@ Step 4：答问题 → 规范表述（用化学术语，避免口语化）</code
 <tr><td>(3)调节pH分离</td><td>Fe³⁺、Al³⁺、Cu²⁺、Ni²⁺</td><td>Ksp + 沉淀pH控制</td></tr>
 <tr><td>(4)绿色化学思想</td><td>新型冶铁与传统高炉对比</td><td>环保、节能、原子经济</td></tr>
 </table>
+</div>
 
 <hr>
 

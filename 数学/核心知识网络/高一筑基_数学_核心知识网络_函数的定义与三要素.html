@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>函数的定义与三要素（概念·对应关系·同一函数判定）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教A版必修第一册第三章 / 01.函数的定义及常考题型总结.pdf</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期中/期末）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一上学期<strong>基础必考内容</strong>。函数是高中数学的基石，广东卷在高一期中/期末考试中必考函数概念辨析（是否为函数、同一函数判断）、定义域求解等基础题。虽然高考直接考查函数定义的题目较少，但函数思想贯穿整个高中数学，透彻理解函数概念是学好后续所有函数类型（指数、对数、三角）的前提。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -85,11 +101,13 @@ MathJax = {
 
 <p><strong>两个核心条件</strong>：</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>条件</th><th>含义</th><th>反例（不是函数）</th></tr>
 <tr><td><strong>每一个</strong></td><td>集合 $A$ 中不能有任何"多余"的元素，每个数都必须参与对应</td><td>$A=\{1,2,3\}$，但规则只规定了$1$和$2$的对应，$3$没有对应</td></tr>
 <tr><td><strong>唯一</strong></td><td>对于 $A$ 中的同一个数，在 $B$ 中只能有一个数和它对应</td><td>$y^2=x$，当 $x=1$ 时，$y=1$ 或 $y=-1$，不确定</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>广东卷易错点</strong>：很多初学者误以为只要集合 $A$ 中"有"一些数有对应就是函数。这是错的。必须是"每一个"数都有对应。
@@ -99,12 +117,14 @@ MathJax = {
 
 <h3>二、函数的三要素</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>要素</th><th>定义</th><th>符号</th><th>本质理解</th><th>示例</th></tr>
 <tr><td><strong>定义域</strong></td><td>自变量 $x$ 所有可能取值的集合</td><td>$D$</td><td>"允许输入"集</td><td>$f(x)=\frac{1}{x}$ 的定义域为 $\{x</td><td>x\neq 0\}$</td></tr>
 <tr><td><strong>值域</strong></td><td>所有函数值 $y$ 构成的集合</td><td>$R_f$</td><td>"实际输出"集</td><td>$f(x)=x^2$ 的值域为 $[0,+\infty)$</td></tr>
 <tr><td><strong>对应法则</strong></td><td>从 $x$ 到 $y$ 的具体规则</td><td>$f$</td><td>"内部工作机制"</td><td>"加3""平方""开根号"</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>重要区分</strong>：值域 $\subseteq$ 集合 $B$（陪域）。值域不一定是整个 $B$！
@@ -132,11 +152,13 @@ MathJax = {
 
 <p>#### 2. $f(x)$ 与 $f(a)$ 的区别</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>表达式</th><th>含义</th><th>示例</th></tr>
 <tr><td>$f(x)=x+1$</td><td><strong>定义函数</strong>——对于任意输入 $x$，输出为 $x+1$</td><td>定义规则</td></tr>
 <tr><td>$f(2)=3$</td><td><strong>求函数值</strong>——将 $x=2$ 代入规则，得到输出 $3$</td><td>计算结果</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>对应法则可变</strong>：虽然常用 $f$，但 $g$、$h$、$F$ 甚至希腊字母都可用于表示对应法则。关键是理解它所代表的"功能"本身，而不是它叫什么名字。
@@ -146,12 +168,14 @@ MathJax = {
 
 <h3>四、函数关系的判断：三种对应模式</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>对应模式</th><th>定义</th><th>图示</th><th>是否函数</th><th>示例</th></tr>
 <tr><td><strong>一对一</strong></td><td>每个 $x$ 对应一个不同的 $y$，且不同的 $x$ 对应不同的 $y$</td><td>一个 $x$ 对应一个 $y$</td><td>✅ 允许</td><td>$y=x+1$</td></tr>
 <tr><td><strong>多对一</strong></td><td>多个不同的 $x$ 对应同一个 $y$</td><td>多个 $x$ 对应同一个 $y$</td><td>✅ 允许</td><td>$y=x^2$（$x=1$和$x=-1$都对应$y=1$）</td></tr>
 <tr><td><strong>一对多</strong></td><td>一个 $x$ 对应多个不同的 $y$</td><td>一个 $x$ 对应多个 $y$</td><td>❌ <strong>不允许</strong></td><td>$y^2=x$（$x=1$时$y=\pm 1$）</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>核心原则</strong>："每一个 $x$ 只有唯一的 $y$"——允许"多对一"，但不允许"一对多"。
@@ -163,12 +187,14 @@ MathJax = {
 
 <p><strong>方法</strong>：在图像所在平面内，任意画一条垂直于 $x$ 轴的直线（即 $x=a$）。</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>交点情况</th><th>结论</th><th>原理</th></tr>
 <tr><td>始终只有一个交点</td><td>✅ 表示函数</td><td>每个 $x$ 对应唯一的 $y$</td></tr>
 <tr><td>存在某条直线与图像有两个或更多交点</td><td>❌ 不是函数</td><td>某个 $x$ 对应了多个 $y$，违反"唯一"原则</td></tr>
 <tr><td>存在某条直线与图像没有交点</td><td>❌ 不是函数</td><td>某个 $x$ 没有对应的 $y$，违反"每一个"原则</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>常见陷阱</strong>：图像只画了定义域的一部分，但题目说定义域是更大的区间。例如图像只画了 $x\in[0,2]$，但定义域要求 $x\in[0,4]$，那么在 $x\in(2,4]$ 上的垂直直线与图像就没有交点，不是函数。
@@ -180,12 +206,14 @@ MathJax = {
 
 <p>两个函数是<strong>同一函数</strong>，意味着它们"一模一样"。具体判定标准：</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>条件</th><th>要求</th><th>说明</th></tr>
 <tr><td><strong>定义域相同</strong></td><td>自变量取值范围完全一致</td><td>必须完全相同</td></tr>
 <tr><td><strong>对应法则相同</strong></td><td>输入一个 $x$ 后，运算规则完全一致</td><td>化简后比较</td></tr>
 <tr><td><strong>值域自动相同</strong></td><td>因为定义域和对应法则决定了值域</td><td>不必单独检查</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>注意</strong>：函数与用什么字母表示无关。例如 $f(x)=x^2$ 和 $g(t)=t^2$ 是同一函数，因为定义域都是 $\mathbb{R}$，对应法则都是"平方"。字母只是代号，不影响函数本身。
@@ -199,12 +227,14 @@ MathJax = {
 
 <p><strong>常见陷阱</strong>：</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>陷阱类型</th><th>示例</th><th>错误做法</th><th>正确做法</th></tr>
 <tr><td><strong>分母化简</strong></td><td>$f(x)=\frac{x^2-9}{x+3}$</td><td>直接化简为 $x-3$，认为定义域为 $\mathbb{R}$</td><td>先求定义域 $x\neq -3$，再化简为 $x-3$（$x\neq -3$）</td></tr>
 <tr><td><strong>零次方陷阱</strong></td><td>$f(x)=(x-1)^0$</td><td>直接化简为 $1$，认为定义域为 $\mathbb{R}$</td><td>先求定义域 $x\neq 1$，再化简为 $1$（$x\neq 1$）</td></tr>
 <tr><td><strong>根号平方</strong></td><td>$f(x)=\sqrt{x^2}$</td><td>直接化简为 $x$</td><td>$\sqrt{x^2}=</td><td>x</td><td>$，与 $g(x)=x$ 对应法则不同，不是同一函数</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>标准操作顺序</strong>：

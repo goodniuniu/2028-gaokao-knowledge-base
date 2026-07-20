@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>🌿 生态系统与环境保护 | 核心知识网络</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第二册 第1~4章 / 广东选择性考试</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷5次考查，生态题每年1~2道大题）；中档；情境化命题突出，常结合广东本地生态案例（珠江口湿地、红树林、南海生态）命题；长句表达要求解释生态现象的原因和意义；赋分提示：能量流动计算是基础题，必须满分；长句表达注意"因为...所以..."逻辑链</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -66,6 +78,7 @@ MathJax = {
 
 <h4>一、种群特征</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>特征类型</th><th>含义</th><th>调查/计算方法</th><th>应用</th></tr>
 <tr><td><strong>种群密度</strong></td><td>最基本数量特征</td><td>植物/活动范围小的动物：样方法；活动能力强动物：标记重捕法</td><td>害虫监测、渔业资源评估</td></tr>
@@ -74,6 +87,7 @@ MathJax = {
 <tr><td><strong>年龄结构</strong></td><td>增长型（幼多老少）/稳定型/衰退型</td><td>年龄金字塔</td><td>预测种群发展趋势</td></tr>
 <tr><td><strong>性别比例</strong></td><td>影响出生率</td><td>—</td><td>害虫防治（诱杀雄性）</td></tr>
 </table>
+</div>
 
 <blockquote>
 种群密度调查方法选择：</p>
@@ -106,6 +120,7 @@ t：时间</code></pre>
 特点：种群增长率先增大后减小，K/2时增长率最大（渔业捕捞最佳时机）
 </blockquote>
 
+<div class="table-wrap">
 <table>
 <tr><th>曲线对比</th><th>J型</th><th>S型</th></tr>
 <tr><td>前提条件</td><td>食物空间充足、无天敌、气候适宜</td><td>资源空间有限、存在种内/种间斗争</td></tr>
@@ -113,6 +128,7 @@ t：时间</code></pre>
 <tr><td>K值</td><td>无K值</td><td>有K值</td></tr>
 <tr><td>增长率</td><td>不变</td><td>先增后减</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>K值变动</strong>：改善环境→K值增大；破坏环境→K值减小。K值不是固定不变的。
@@ -120,11 +136,13 @@ t：时间</code></pre>
 
 <h4>三、群落结构</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>结构类型</th><th>含义</th><th>影响因素</th><th>生态意义</th></tr>
 <tr><td><strong>垂直结构</strong></td><td>群落在垂直方向上的分层现象</td><td>光照（植物）、食物/栖息空间（动物）</td><td>提高资源利用效率</td></tr>
 <tr><td><strong>水平结构</strong></td><td>不同地段分布不同种群，呈镶嵌分布</td><td>地形、土壤湿度、光照强度、生物自身生长特点、人类活动</td><td>空间异质性</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>垂直结构 ≠ 垂直地带性</strong>：前者是同一群落内部的分层；后者是不同海拔出现不同群落。
@@ -132,6 +150,7 @@ t：时间</code></pre>
 
 <h4>四、种间关系</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>关系</th><th>特点</th><th>图示记忆</th><th>实例</th></tr>
 <tr><td><strong>互利共生</strong></td><td>双方有利，彼此依存</td><td>"同生共死"</td><td>地衣（藻+菌）、根瘤菌与豆科植物</td></tr>
@@ -139,6 +158,7 @@ t：时间</code></pre>
 <tr><td><strong>竞争</strong></td><td>双方争夺资源，常一方占优</td><td>"你死我活"</td><td>牛和羊、水稻和杂草</td></tr>
 <tr><td><strong>寄生</strong></td><td>一方获益，一方受害（不致死）</td><td>"寄生者小，宿主大"</td><td>蛔虫与人、菟丝子与大豆</td></tr>
 </table>
+</div>
 
 <blockquote>
 捕食关系曲线辨识：<strong>先增先减</strong>的是被捕食者，<strong>后增后减</strong>的是捕食者。
@@ -146,6 +166,7 @@ t：时间</code></pre>
 
 <h4>五、生态系统成分</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>成分</th><th>组成</th><th>作用</th><th>地位</th></tr>
 <tr><td><strong>非生物的物质和能量</strong></td><td>阳光、热能、水、空气、无机盐</td><td>为生物提供物质和能量</td><td>生态系统的基础</td></tr>
@@ -153,12 +174,18 @@ t：时间</code></pre>
 <tr><td><strong>消费者</strong></td><td>各种动物</td><td>加快物质循环，帮助植物传粉和传播种子</td><td>最活跃部分</td></tr>
 <tr><td><strong>分解者</strong></td><td>腐生细菌、真菌、蚯蚓、秃鹫等</td><td>将有机物→无机物，供生产者重新利用</td><td><strong>物质循环的关键</strong></td></tr>
 </table>
+</div>
 
 <blockquote>
 ⚠️ <strong>不是所有植物都是生产者</strong>：菟丝子是消费者；<strong>不是所有细菌都是分解者</strong>：硝化细菌是生产者，寄生细菌是消费者。
 </blockquote>
 
 <h4>六、能量流动（核心考点）</h4>
+<div class="figure">
+  <img src="../../图形库/生物/光合作用过程.png" alt="光合作用过程示意图">
+  <div class="figure-caption">图：光合作用过程（光反应+暗反应，能量转化：光能→化学能→有机物）</div>
+</div>
+
 
 <p><strong>特点</strong>：</p>
 
@@ -190,11 +217,13 @@ t：时间</code></pre>
               ↓
             分解者</code></pre>
 
+<div class="table-wrap">
 <table>
 <tr><th>过程</th><th>方式</th><th>生理作用</th></tr>
 <tr><td>CO2进入生物群落</td><td>光合作用、化能合成作用</td><td>生产者固定CO2</td></tr>
 <tr><td>CO2返回无机环境</td><td>呼吸作用、分解作用、化石燃料燃烧</td><td>生物→CO2</td></tr>
 </table>
+</div>
 
 <blockquote>
 碳循环特点是<strong>全球性、循环性</strong>，在生物群落与无机环境之间以CO2形式循环，在生物群落内部以有机物形式传递。
@@ -202,12 +231,14 @@ t：时间</code></pre>
 
 <h4>八、信息传递</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>类型</th><th>来源</th><th>实例</th></tr>
 <tr><td><strong>物理信息</strong></td><td>光、声、温度、湿度、磁力等</td><td>萤火虫闪光、植物向光性、候鸟迁徙</td></tr>
 <tr><td><strong>化学信息</strong></td><td>生物代谢产物</td><td>昆虫信息素、植物次生代谢物（如生物碱）</td></tr>
 <tr><td><strong>行为信息</strong></td><td>动物特殊行为</td><td>蜜蜂舞蹈、孔雀开屏</td></tr>
 </table>
+</div>
 
 <blockquote>
 信息传递意义：①维持生命活动正常进行 ②维持生物种群繁衍 ③调节种间关系，维持生态系统稳定
@@ -215,11 +246,13 @@ t：时间</code></pre>
 
 <h4>九、生态稳定性</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>类型</th><th>含义</th><th>基础</th><th>特点</th></tr>
 <tr><td><strong>抵抗力稳定性</strong></td><td>抵抗外界干扰，保持原状</td><td>生态系统组分复杂、食物网复杂</td><td>与营养结构复杂程度正相关</td></tr>
 <tr><td><strong>恢复力稳定性</strong></td><td>受到干扰后恢复原状</td><td>生态系统自我调节能力</td><td>与抵抗力稳定性<strong>负相关</strong>（一般）</td></tr>
 </table>
+</div>
 
 <blockquote>
 生态系统的自我调节能力是<strong>有限的</strong>（负反馈调节是基础）。超过限度，生态系统会崩溃。
@@ -263,6 +296,7 @@ t：时间</code></pre>
 
 <h3>广东长句表达模板</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>设问类型</th><th>答题模板</th></tr>
 <tr><td>解释种群数量S型增长的原因</td><td>因为资源和空间是有限的，随着种群密度增加，种内斗争加剧、天敌数量增加，使种群增长率下降，最终达到K值</td></tr>
@@ -270,6 +304,7 @@ t：时间</code></pre>
 <tr><td>说明保护生物多样性的意义</td><td>生物多样性具有直接价值（食用、药用）、间接价值（生态功能）和潜在价值（未发现的价值），保护生物多样性有利于维持生态系统稳定性</td></tr>
 <tr><td>解释广东沿海建立红树林保护区的原因</td><td>红树林具有防浪护岸、提供栖息地、固碳释氧等生态功能，建立保护区可以有效保护生物多样性，维持珠江口湿地生态系统的稳定性</td></tr>
 </table>
+</div>
 
 <hr>
 

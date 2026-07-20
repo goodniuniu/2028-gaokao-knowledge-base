@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月28日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">brewery</div><div class="def">n. 啤酒厂</div></td><td><div class="word">finish</div><div class="def">v. 完成；结束；用完 n. 结束；完美；回味（葡萄酒）</div></td><td><div class="word">cock</div><div class="def">n. 公鸡；龙头；雄鸟；头目 v. 使竖起；使耸立；使朝上</div></td><td><div class="word">fairly</div><div class="def">adv. 相当地；公平地；简直 n. (Fairly)人名；(英)费尔利</div></td></tr>
 <tr><td><div class="word">grandparents</div><div class="def">n. 祖父母（grandparent的复数）；外祖父母</div></td><td><div class="word">instant</div><div class="def">adj. 立即的；紧急的；紧迫的 n. 瞬间；立即；片刻</div></td><td><div class="word">see</div><div class="def">v. 看见；理解；领会 n. (See)人名；(英)西伊；(柬)塞；(德)泽</div></td><td><div class="word">back</div><div class="def">n. 后面；背部；靠背；足球等的后卫；书报等的末尾 v. 支持；后退；背书；下赌注 adv. 以前；向后地；来回地；上溯；回来；回原处 adj. 后面的；过去的；拖欠的</div></td></tr>
 <tr><td><div class="word">area</div><div class="def">n. 区域，地区；面积；范围</div></td><td><div class="word">sacrifice</div><div class="def">n. 牺牲；祭品；供奉 v. 牺牲；献祭；亏本出售</div></td><td><div class="word">Africa</div><div class="def">n. 非洲</div></td><td><div class="word">collision</div><div class="def">n. 碰撞；冲突；（意见，看法）的抵触；（政党等的）倾轧</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">forest</div><div class="def">v. 植树于，使成为森林 n. 森林</div></td><td><div class="word">relative</div><div class="def">adj. 相对的；有关系的；成比例的 n. 亲戚；相关物；[语] 关系词；亲缘植物</div></td><td><div class="word">pupil</div><div class="def">n. 学生；[解剖] 瞳孔；未成年人</div></td><td><div class="word">visa</div><div class="def">n. 签证 v. 签发签证</div></td></tr>
 <tr><td><div class="word">restriction</div><div class="def">n. 限制；约束；束缚</div></td><td><div class="word">fridge</div><div class="def">n. 电冰箱</div></td><td><div class="word">behind</div><div class="def">prep. 落后于；支持；晚于 adv. 在后地；在原处 n. 屁股</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

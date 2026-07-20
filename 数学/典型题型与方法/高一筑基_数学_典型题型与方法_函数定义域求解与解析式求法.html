@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>函数定义域求解与解析式求法（三大限制·抽象函数·恒成立·待定系数·换元·配凑）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教A版必修第一册第三章 / 01.函数的定义及常考题型总结.pdf</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期中/期末）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一上学期<strong>高频考点</strong>。定义域求解是广东卷高一期中/期末的必考内容，通常出现在选填题（5-10分）。抽象函数定义域是易错重灾区，名校联考中常作为中档题区分学生。已知定义域为$\mathbb{R}$求参数是选填压轴的常见题型。解析式求法（待定系数、换元、配凑）在大题中偶有考查。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -69,12 +85,14 @@ MathJax = {
 
 <p>具体函数指有明显解析式的函数。其定义域由解析式中"不安全"的地方决定，目前（学对数前）只有<strong>三大限制</strong>：</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>限制类型</th><th>条件</th><th>表达式</th><th>示例</th></tr>
 <tr><td><strong>分母不为零</strong></td><td>分式中的分母位置</td><td>分母 $\neq 0$</td><td>$f(x)=\frac{1}{x-2}$，则 $x\neq 2$</td></tr>
 <tr><td><strong>偶次根号下非负</strong></td><td>平方根、四次方根等</td><td>被开方数 $\geq 0$</td><td>$f(x)=\sqrt{x-3}$，则 $x\geq 3$</td></tr>
 <tr><td><strong>零次方的底数不为零</strong></td><td>$0^0$ 无意义</td><td>底数 $\neq 0$</td><td>$f(x)=(x-5)^0$，则 $x\neq 5$</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>多个限制取交集</strong>：所有限制条件必须同时满足，因此解集是各不等式解集的<strong>交集</strong>。
@@ -111,11 +129,13 @@ MathJax = {
 
 <p>#### 2. 标准操作流程（两步法）</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>步骤</th><th>操作</th><th>示例</th></tr>
 <tr><td><strong>第一步：定整体范围</strong></td><td>由原函数的定义域（$x$ 的范围）求出括号内整体的范围（设为 $M$）</td><td>$f(x)$ 定义域为 $[1,2]$，则 $x\in[1,2]$，于是 $M=[1,2]$</td></tr>
 <tr><td><strong>第二步：解新 $x$ 的范围</strong></td><td>对新函数 $f(g(x))$，令 $g(x)\in M$，解出 $x$ 的范围，即为新函数定义域</td><td>$f(2x-1)$，令 $2x-1\in[1,2]$，解得 $x\in[1,1.5]$</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>关键记忆</strong>：定义域永远是指<strong>自变量 $x$ 的取值范围</strong>，而不是括号内整个表达式的范围！
@@ -141,11 +161,13 @@ $f(x)$ 定义域为 $[-1,2]$，求 $f(2x+1)+\frac{1}{x+1}$ 的定义域。
 
 <p>#### 常见类型与转化</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>类型</th><th>形式</th><th>条件</th><th>转化</th></tr>
 <tr><td><strong>根号型</strong></td><td>$f(x)=\sqrt{ax^2+bx+c}$</td><td>定义域为 $\mathbb{R}$</td><td>$\Leftrightarrow$ 对任意 $x\in\mathbb{R}$，$ax^2+bx+c\geq 0$ 恒成立</td></tr>
 <tr><td><strong>分母型</strong></td><td>$f(x)=\frac{1}{ax^2+bx+c}$</td><td>定义域为 $\mathbb{R}$</td><td>$\Leftrightarrow$ 对任意 $x\in\mathbb{R}$，$ax^2+bx+c\neq 0$ 恒成立（即分母无实根）</td></tr>
 </table>
+</div>
 
 <p>#### 分类讨论法（针对二次型）</p>
 
@@ -156,11 +178,13 @@ $f(x)$ 定义域为 $[-1,2]$，求 $f(2x+1)+\frac{1}{x+1}$ 的定义域。
 
 <p><strong>第二步：当 $a\neq 0$ 时，按图像性质讨论</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>要求</th><th>图像条件</th><th>结论</th></tr>
 <tr><td>恒 $\geq 0$</td><td>必须开口向上（$a>0$），且判别式 $\Delta\leq 0$（图像在 $x$ 轴上方或相切）</td><td>$a>0$ 且 $\Delta\leq 0$</td></tr>
 <tr><td>恒 $\neq 0$</td><td>函数与 $x$ 轴无交点，即 $\Delta<0$（无论开口方向，只要无实根即可）</td><td>$\Delta<0$</td></tr>
 </table>
+</div>
 
 <p><strong>第三步：合并结果</strong></p>
 <ul>

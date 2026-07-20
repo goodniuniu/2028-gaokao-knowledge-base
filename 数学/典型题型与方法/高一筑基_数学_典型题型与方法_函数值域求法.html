@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>函数值域求法（六大方法体系·分离常数·换元·对号函数·分段函数）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教A版必修第一册第三章 / 02.值域常考题型总结.pdf</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期中/期末）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一上学期<strong>中档至压轴高频考点</strong>。值域求法是广东卷高一期中/期末的必考内容，分值通常占10-15分。二次函数闭区间最值是送分题，但一次比一次分式（分离常数法）、二次比一次分式（换元+对号函数）是<strong>中档区分题</strong>。分段函数值域是易错重灾区。名校联考中，值域与不等式恒成立结合是压轴题常见考法。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -67,6 +83,7 @@ MathJax = {
 
 <h3>一、方法总览：六种武器</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>方法</th><th>适用函数类型</th><th>核心工具</th><th>难度</th></tr>
 <tr><td><strong>观察法</strong></td><td>简单一次、常数函数</td><td>直接判断</td><td>★☆☆☆☆</td></tr>
@@ -76,6 +93,7 @@ MathJax = {
 <tr><td><strong>单调性法</strong></td><td>已知单调性的函数</td><td>利用单调性确定最值</td><td>★★★☆☆</td></tr>
 <tr><td><strong>分段讨论法</strong></td><td>分段函数</td><td>逐段求值域，再取并集</td><td>★★★☆☆</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -108,12 +126,14 @@ MathJax = {
 
 <p>#### 分类讨论表</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>对称轴位置</th><th>最小值</th><th>最大值（$a>0$时）</th></tr>
 <tr><td>$-\frac{b}{2a}<m$（对称轴在区间左侧）</td><td>$f(m)$</td><td>$f(n)$</td></tr>
 <tr><td>$m\leq -\frac{b}{2a}\leq n$（对称轴在区间内）</td><td>$f(-\frac{b}{2a})$</td><td>$\max\{f(m),f(n)\}$（比较两端点）</td></tr>
 <tr><td>$-\frac{b}{2a}>n$（对称轴在区间右侧）</td><td>$f(n)$</td><td>$f(m)$</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>记忆口诀</strong>："开口向上，对称轴在区间内则最小值在顶点，最大值比较两端点；对称轴在区间外则最值都在端点"
@@ -216,6 +236,7 @@ MathJax = {
 
 <p>$$y=ax+\frac{b}{x}\quad (a>0, b>0, x\neq 0)$$</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>性质</th><th>内容</th></tr>
 <tr><td><strong>图像</strong></td><td>像"对勾"或"耐克标志"</td></tr>
@@ -225,6 +246,7 @@ MathJax = {
 <tr><td><strong>单调性</strong></td><td>$(-\infty, -\sqrt{\frac{b}{a}}]$ 递增，$[-\sqrt{\frac{b}{a}}, 0)$ 递减；$(0, \sqrt{\frac{b}{a}}]$ 递减，$[\sqrt{\frac{b}{a}}, +\infty)$ 递增</td></tr>
 <tr><td><strong>极值</strong></td><td>最小值 $y_{min}=2\sqrt{ab}$（当 $x=\sqrt{\frac{b}{a}}$ 时）；最大值 $y_{max}=-2\sqrt{ab}$（当 $x=-\sqrt{\frac{b}{a}}$ 时）</td></tr>
 </table>
+</div>
 
 <p>#### 2. 均值不等式推导极值</p>
 

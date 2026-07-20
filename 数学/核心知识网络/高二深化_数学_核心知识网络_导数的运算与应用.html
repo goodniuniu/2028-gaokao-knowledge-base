@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>导数的运算与应用</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版选择性必修第二册第五章</td></tr>
@@ -54,12 +69,19 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：中高档~压轴；导数是广东卷大题压轴的核心模块，含参讨论、极值点偏移、隐零点是高频难点</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h2>核心内容</h2>
 
 <h3>一、基本初等函数的导数公式</h3>
+<div class="figure">
+  <img src="../../图形库/数学/导数几何意义.png" alt="导数几何意义示意图">
+  <div class="figure-caption">图：导数的几何意义——切线斜率（f'(x₀)=切线在x₀处斜率）</div>
+</div>
+
+<div class="table-wrap">
 <table>
 <tr><th>函数</th><th>导数</th></tr>
 <tr><td>$C$（常数）</td><td>$0$</td></tr>
@@ -71,6 +93,7 @@ MathJax = {
 <tr><td>$\log_a x$（$a > 0, a \neq 1$）</td><td>$\frac{1}{x \ln a}$</td></tr>
 <tr><td>$\ln x$</td><td>$\frac{1}{x}$</td></tr>
 </table>
+</div>
 
 <h3>二、导数的四则运算法则</h3>
 <ul>

@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>不等式证明的多方向拆解思维：以一题贯通代数·分析·几何</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>数学思想方法专题 / 一题多解训练 / 新高考Ⅰ卷压轴题常见思维</td></tr>
@@ -52,6 +67,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -207,6 +223,7 @@ MathJax = {
 
 <h3>对比总结表</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>对比项</th><th>方向（战略）</th><th>解法（战术）</th></tr>
 <tr><td><strong>定义</strong></td><td>从哪个数学分支切入</td><td>同一方向内的具体定理/工具</td></tr>
@@ -215,6 +232,7 @@ MathJax = {
 <tr><td><strong>能否混搭</strong></td><td>❌ 不能同时走两个方向（思维会混乱）</td><td>✅ 同一方向内可灵活切换具体步骤</td></tr>
 <tr><td><strong>何时切换方向</strong></td><td>某一方向尝试3-5分钟无进展时</td><td>同一方向内某解法计算卡壳时</td></tr>
 </table>
+</div>
 
 <hr>
 

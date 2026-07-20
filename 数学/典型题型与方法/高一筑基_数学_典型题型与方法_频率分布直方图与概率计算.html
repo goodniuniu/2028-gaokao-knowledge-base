@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>频率分布直方图与概率计算（统计大题标准模板）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教A版必修第二册第九章+第十章 / 2024~2025学年广州各区高一下期末试卷（解答第17题，12-14分）</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期末、九区联考）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一下期末<strong>固定解答题</strong>，12-14分。广州各区期末卷第17题几乎固定是"频率分布直方图 + 概率计算"的综合题。通常分为两问：第1问求直方图参数、中位数或平均数；第2问用频率估计概率，结合古典概型或独立事件计算复合事件概率。2024-2025学年广州越秀区、番禺区、天河区期末第17题均为此结构。广东卷对<strong>统计语言的规范表述</strong>要求严格，"用频率估计概率"这句话必须写。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -208,6 +224,7 @@ P(情况2) = ...
 
 <h3>三、大题答题规范（广东卷评分细则）</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>项目</th><th>要求</th><th>分值</th><th>常见错误</th></tr>
 <tr><td><strong>设事件</strong></td><td>必须设"设事件A为..."</td><td>1分</td><td>不设事件，直接写$P = ...$</td></tr>
@@ -217,6 +234,7 @@ P(情况2) = ...
 <tr><td><strong>计算结果</strong></td><td>分数或小数（保留要求）</td><td>1分</td><td>计算错误</td></tr>
 <tr><td><strong>统计语句</strong></td><td>"用频率估计概率"</td><td>1分</td><td>不写此句</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>广东卷评分要点</strong>：统计大题共12-14分，概率计算部分通常占6-8分。按上述规范书写，可确保不丢步骤分。
@@ -226,6 +244,7 @@ P(情况2) = ...
 
 <h3>四、高频易错点速查</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>易错点</th><th>正确做法</th><th>错误示例</th></tr>
 <tr><td><strong>混淆频率与频率/组距</strong></td><td>频率 = 纵坐标 × 组距</td><td>直接把纵坐标当频率</td></tr>
@@ -235,6 +254,7 @@ P(情况2) = ...
 <tr><td><strong>互斥与独立混淆</strong></td><td>互斥用加法，独立用乘法</td><td>互斥事件直接相乘</td></tr>
 <tr><td><strong>"至少"问题直接算</strong></td><td>正难则反，用$1 - P(\text{对立})$</td><td>逐个情况相加，漏算</td></tr>
 </table>
+</div>
 
 <hr>
 

@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月23日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">terminal</div><div class="def">n. 末端；终点；终端机；极限 adj. 末端的；终点的；晚期的</div></td><td><div class="word">correspond</div><div class="def">v. 符合，一致；相应；通信</div></td><td><div class="word">war</div><div class="def">n. 战争，斗争；军事，战术；冲突，对抗，竞争 v. 打仗，作战；对抗</div></td><td><div class="word">sleepy</div><div class="def">adj. 欲睡的；困乏的；不活跃的</div></td></tr>
 <tr><td><div class="word">surprise</div><div class="def">n. 惊奇，诧异；突然袭击 v. 使惊奇；奇袭 adj. 令人惊讶的</div></td><td><div class="word">snowman</div><div class="def">n. 雪人</div></td><td><div class="word">search</div><div class="def">v. 搜寻；调查；探求 n. 搜寻；探究，查究</div></td><td><div class="word">toothache</div><div class="def">n. [口腔] 牙痛</div></td></tr>
 <tr><td><div class="word">wash</div><div class="def">n. 洗涤；洗的衣服；化妆水；冲积物 v. 洗涤；洗刷；冲走；拍打</div></td><td><div class="word">classroom</div><div class="def">n. 教室</div></td><td><div class="word">nephew</div><div class="def">n. 侄子；外甥</div></td><td><div class="word">cap</div><div class="def">n. 盖；帽子 v. 脱帽致意</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">cage</div><div class="def">n. 笼，兽笼；牢房，监狱 v. 把…关进笼子；把…囚禁起来</div></td><td><div class="word">either</div><div class="def">adj. 两者之中任一的；两者之中每一的 prep. 任何一个 conj. 也（用于否定句或否定词组后）；根本 pron. 任一，两方，随便哪一个；两者中的一个或另一个</div></td><td><div class="word">lucky</div><div class="def">adj. 幸运的；侥幸的</div></td><td><div class="word">order</div><div class="def">n. 命令；顺序；规则；[贸易] 定单 v. 命令；整理；定购</div></td></tr>
 <tr><td><div class="word">south</div><div class="def">n. 南方，南边；南部 adv. 在南方，向南方 adj. 南的，南方的</div></td><td><div class="word">mobile</div><div class="def">adj. 可移动的；机动的；易变的；非固定的 n. 运动物体</div></td><td><div class="word">door</div><div class="def">n. 门；家，户；门口；通道</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

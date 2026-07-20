@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月27日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">compromise</div><div class="def">v. 妥协；危害 n. 妥协，和解；折衷</div></td><td><div class="word">motivation</div><div class="def">n. 动机；积极性；推动</div></td><td><div class="word">unfit</div><div class="def">adj. 不适宜的；不合格的；不健康的 v. 使不合格；使不相宜；使不胜任</div></td><td><div class="word">lonely</div><div class="def">adj. 寂寞的；偏僻的 n. 孤独者</div></td></tr>
 <tr><td><div class="word">gifted</div><div class="def">adj. 有天赋的；有才华的 v. 给予（gift的过去分词）</div></td><td><div class="word">considerate</div><div class="def">adj. 体贴的；体谅的；考虑周到的</div></td><td><div class="word">plot</div><div class="def">n. 情节；图；阴谋 v. 密谋；绘图；划分；标绘</div></td><td><div class="word">carrot</div><div class="def">n. 胡萝卜</div></td></tr>
 <tr><td><div class="word">nothing</div><div class="def">neg. 没什么；毫不 n. 无；零；不关紧要之事 adv. 毫不；决不 pron. 无事；无物 int. 什么也没有</div></td><td><div class="word">brochure</div><div class="def">n. 手册，小册子</div></td><td><div class="word">weight</div><div class="def">n. 重量，重力；负担；砝码；重要性 v. 加重量于，使变重</div></td><td><div class="word">hope</div><div class="def">n. 希望；期望；信心 v. 希望；期望</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">ready</div><div class="def">adj. 准备好；现成的；迅速的；情愿的；快要…的 n. 现款；预备好的状态 adv. 迅速地；预先 v. 使准备好</div></td><td><div class="word">pig</div><div class="def">n. 猪；猪肉 v. 生小猪；像猪一样过活</div></td><td><div class="word">trap</div><div class="def">v. 诱捕；使…受限制；使…陷入困境 n. 陷阱；圈套；[建] 存水湾</div></td><td><div class="word">cancer</div><div class="def">n. 癌症；恶性肿瘤</div></td></tr>
 <tr><td><div class="word">vice</div><div class="def">n. 恶习；缺点；[机] 老虎钳；卖淫 prep. 代替 vt. 钳住 adj. 副的；代替的</div></td><td><div class="word">harm</div><div class="def">n. 伤害；损害 v. 伤害；危害；损害</div></td><td><div class="word">rare</div><div class="def">adj. 稀有的；稀薄的；半熟的 adv. 非常；极其 vi. 用后腿站起；渴望</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

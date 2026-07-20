@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月06日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">weak</div><div class="def">adj. [经] 疲软的；虚弱的；无力的；不牢固的</div></td><td><div class="word">accommodation</div><div class="def">n. 住处，膳宿；调节；和解；预订铺位</div></td><td><div class="word">kettle</div><div class="def">n. 壶；[化工] 釜；罐；鼓</div></td><td><div class="word">Easter</div><div class="def">n. 复活节</div></td></tr>
 <tr><td><div class="word">result</div><div class="def">n. 结果；成绩；答案；比赛结果 v. 结果；导致；产生</div></td><td><div class="word">Japanese</div><div class="def">adj. 日本（人）的；日语的 n. 日本人；日语</div></td><td><div class="word">simple</div><div class="def">adj. 简单的；单纯的；天真的 n. 笨蛋；愚蠢的行为；出身低微者</div></td><td><div class="word">president</div><div class="def">n. 总统；董事长；校长；主席</div></td></tr>
 <tr><td><div class="word">mark</div><div class="def">n. 标志；马克；符号；痕迹；分数 v. 作记号</div></td><td><div class="word">tournament</div><div class="def">n. 锦标赛，联赛；比赛</div></td><td><div class="word">musical</div><div class="def">adj. 音乐的；悦耳的 n. 音乐片</div></td><td><div class="word">invite</div><div class="def">v. 邀请，招待；招致 n. 邀请</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">government</div><div class="def">n. 政府；政体；管辖</div></td><td><div class="word">right</div><div class="def">adj. 正确的；直接的；右方的 v. 复正；恢复平稳 n. 正确；右边；正义 adv. 正确地；恰当地；彻底地</div></td><td><div class="word">cash</div><div class="def">n. 现款，现金 v. 将…兑现；支付现款</div></td><td><div class="word">chest</div><div class="def">n. 胸，胸部；衣柜；箱子；金库</div></td></tr>
 <tr><td><div class="word">advise</div><div class="def">v. 建议；劝告，忠告；通知；警告</div></td><td><div class="word">sad</div><div class="def">adj. 难过的；悲哀的，令人悲痛的；凄惨的，阴郁的（形容颜色）</div></td><td><div class="word">another</div><div class="def">adj. 又一，另一；另外的；不同的 pron. 另一个；又一个 prep. 另一个；另一个人</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

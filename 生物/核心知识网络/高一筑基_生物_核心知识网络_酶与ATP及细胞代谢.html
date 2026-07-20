@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>酶与ATP及细胞代谢</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版必修第一册 / 2023-2025广东选择性考试·生物代谢专题</td></tr>
@@ -55,6 +66,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -104,12 +116,14 @@ ADP + Pi + 能量 → ATP（合成，储能）
 
 <p>##### 有氧呼吸三阶段</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>阶段</th><th>场所</th><th>反应物</th><th>产物</th><th>释放能量</th><th>O₂参与</th></tr>
 <tr><td>第一阶段</td><td>细胞质基质</td><td>葡萄糖</td><td>丙酮酸 + [H] + 少量ATP</td><td>少量</td><td>否</td></tr>
 <tr><td>第二阶段</td><td>线粒体基质</td><td>丙酮酸 + H₂O</td><td>CO₂ + [H] + 少量ATP</td><td>少量</td><td>否</td></tr>
 <tr><td>第三阶段</td><td>线粒体内膜</td><td>[H] + O₂</td><td>H₂O + 大量ATP</td><td>大量</td><td>是</td></tr>
 </table>
+</div>
 
 <pre><code>总反应式：C₆H₁₂O₆ + 6H₂O + 6O₂ → 6CO₂ + 12H₂O + 能量（2870kJ，其中1161kJ储存在ATP中）</code></pre>
 
@@ -119,11 +133,13 @@ ADP + Pi + 能量 → ATP（合成，储能）
 
 <p>##### 无氧呼吸两类型</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>类型</th><th>场所</th><th>反应式</th><th>产物</th><th>常见生物</th></tr>
 <tr><td>乳酸发酵</td><td>细胞质基质</td><td>C₆H₁₂O₆ → 2C₃H₆O₃ + 少量能量</td><td>乳酸</td><td>动物、乳酸菌、马铃薯块茎、甜菜块根</td></tr>
 <tr><td>酒精发酵</td><td>细胞质基质</td><td>C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ + 少量能量</td><td>酒精+CO₂</td><td>植物、酵母菌</td></tr>
 </table>
+</div>
 
 <blockquote>
 注意事项：无氧呼吸只在第一阶段释放少量能量，第二阶段不释放能量；动物细胞无氧呼吸产物是乳酸，植物细胞可以是酒精或乳酸
@@ -155,6 +171,7 @@ ADP + Pi + 能量 → ATP（合成，储能）
 
 <h4>5. 影响光合作用和呼吸作用的因素</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>因素</th><th>对光合作用的影响</th><th>对呼吸作用的影响</th></tr>
 <tr><td>温度</td><td>有最适温度（酶活性），高温抑制</td><td>随温度升高而增强（有最适温度）</td></tr>
@@ -163,6 +180,7 @@ ADP + Pi + 能量 → ATP（合成，储能）
 <tr><td>O₂浓度</td><td>高浓度促进光呼吸（抑制）</td><td>低浓度抑制有氧呼吸，促进无氧呼吸</td></tr>
 <tr><td>水分</td><td>缺水导致气孔关闭，CO₂供应不足</td><td>自由水比例高促进代谢</td></tr>
 </table>
+</div>
 
 <h3>方法步骤</h3>
 
@@ -181,6 +199,7 @@ O₂：总产生 = 净释放 + 呼吸消耗
 
 <h4>C₃、C₅含量变化分析（CO₂浓度骤变时）</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>条件变化</th><th>C₃变化</th><th>C₅变化</th><th>原因</th></tr>
 <tr><td>CO₂供应增加</td><td>↑</td><td>↓</td><td>CO₂固定增强，C₅消耗多，C₃生成多</td></tr>
@@ -188,6 +207,7 @@ O₂：总产生 = 净释放 + 呼吸消耗
 <tr><td>光照增强</td><td>↓</td><td>↑</td><td>[H]和ATP增多，C₃还原快，C₅再生多</td></tr>
 <tr><td>光照停止</td><td>↑</td><td>↓</td><td>[H]和ATP减少，C₃还原慢，C₅不再生</td></tr>
 </table>
+</div>
 
 <blockquote>
 记忆口诀：CO₂增则C₃增C₅减，光增则C₃减C₅增；CO₂停则C₃减C₅增，光停则C₃增C₅减。

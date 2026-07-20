@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>平面向量体系（概念·运算·应用）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教A版必修第二册第六章 / 2024~2025学年广州各区高一下期末试卷（单选1-4题、多选9-11题、填空12-14题、解答18-19题）</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州天河/越秀/白云/番禺区期末、省实/执信/广雅/二中/六中联考）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一下期末<strong>必考基础板块</strong>，考查频率<strong>极高</strong>。广州各区期末卷中单选前4题必有1-2道向量题，多选题常考向量数量积与垂直/平行判定。难度定位<strong>基础至中档</strong>，核心在于坐标运算熟练度和几何意义的灵活转化。名校联考（如五校联考）会在解答题中结合解三角形或解析几何综合考查。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -67,6 +83,7 @@ MathJax = {
 
 <h3>一、关键概念辨析</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>概念</th><th>定义</th><th>符号</th><th>易混点</th></tr>
 <tr><td><strong>向量</strong></td><td>既有大小又有方向的量</td><td>$\vec{a}$, $\vec{b}$</td><td>向量≠有向线段（向量可平移）</td></tr>
@@ -76,6 +93,7 @@ MathJax = {
 <tr><td><strong>相等向量</strong></td><td>长度相等且方向相同</td><td>$\vec{a} = \vec{b}$</td><td>与起点位置无关，可平移重合</td></tr>
 <tr><td><strong>相反向量</strong></td><td>长度相等，方向相反</td><td>$-\vec{a}$</td><td>$\vec{a} + (-\vec{a}) = \vec{0}$</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -91,6 +109,7 @@ MathJax = {
 </ul>
 
 <p><strong>坐标法则</strong>：设$\vec{a}=(x_1,y_1)$, $\vec{b}=(x_2,y_2)$</p>
+<div class="table-wrap">
 <table>
 <tr><th>运算</th><th>公式</th><th>记忆口诀</th></tr>
 <tr><td>加法</td><td>$\vec{a}+\vec{b}=(x_1+x_2, y_1+y_2)$</td><td>对应坐标相加</td></tr>
@@ -98,6 +117,7 @@ MathJax = {
 <tr><td>数乘</td><td>$k\vec{a}=(kx_1, ky_1)$</td><td>各坐标同乘系数</td></tr>
 <tr><td>模长</td><td>$</td><td>\vec{a}</td><td>=\sqrt{x_1^2+y_1^2}$</td><td>勾股定理</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>广东卷常考</strong>：已知$\vec{a}=(m,2)$, $\vec{b}=(3,-1)$，若$\vec{a} \perp \vec{b}$，求$m$。——直接用坐标数量积为0。
@@ -221,11 +241,13 @@ MathJax = {
 
 <p><strong>建系示例</strong>：</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>图形</th><th>建系方法</th><th>坐标表示</th></tr>
 <tr><td>矩形$ABCD$，$AB=4$，$AD=2$</td><td>以$A$为原点，$AB$为$x$轴，$AD$为$y$轴</td><td>$A(0,0)$, $B(4,0)$, $D(0,2)$, $C(4,2)$</td></tr>
 <tr><td>等腰$\triangle ABC$，$AB=AC=\sqrt{5}$，$BC=2$</td><td>取$BC$中点$O$为原点，$BC$为$x$轴，$OA$为$y$轴（三线合一）</td><td>$B(-1,0)$, $C(1,0)$, $A(0,2)$</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>广东卷提示</strong>：广州名校联考中，无坐标几何题常需要主动建系。看到"矩形""直角""等腰三角形"等关键词，立即想到建系策略。

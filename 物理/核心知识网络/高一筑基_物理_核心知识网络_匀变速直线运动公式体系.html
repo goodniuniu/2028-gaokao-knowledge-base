@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>匀变速直线运动公式体系</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版必修第一册第二章 / 广东选择性考试高频考点</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷均考查）。基础题为主，常以"广东交通""大湾区基建"为情境（如港珠澳大桥上的汽车运动、高铁加速度）。考查频率：选择题中1-2道+计算题第一问。难度定位：基础，但需注意刹车陷阱和往返运动的边界条件。赋分提示：基础题必须满分，原始分差距在赋分后会被放大。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -72,6 +84,11 @@ MathJax = {
 <li><strong>刹车陷阱</strong>：刹车至停止后不再反向运动，需判断刹车时间是否超出给定时间</li>
 </ul>
 
+
+<div class="figure">
+  <img src="../../图形库/物理/运动学_vt图像对比.png" alt="运动学v-t图像对比图">
+  <div class="figure-caption">图：匀变速直线运动v-t图像对比（斜率=加速度，面积=位移）</div>
+</div>
 <h3>核心公式/定理</h3>
 
 <h4>五大基本公式</h4>

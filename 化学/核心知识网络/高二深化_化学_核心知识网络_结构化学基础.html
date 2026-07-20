@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>结构化学基础</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第二册 第一~三章 + 广东选择性考试</td></tr>
@@ -57,11 +68,17 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：中高频（近5年广东卷每年必考1-2道选择题，常与元素推断结合）；难度定位：中档（电子排布、杂化轨道、晶体计算需空间想象能力）；特色描述：广东卷常将结构化学与元素推断、有机化学结合考查，如根据晶胞结构计算密度、配位数，或根据杂化类型推断分子构型；赋分提示：晶体密度计算是高频"计算小难题"，掌握晶胞均摊法和密度公式是得分关键</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h2>核心内容</h2>
 
+
+<div class="figure">
+  <img src="../../图形库/化学/电子能级图.png" alt="电子能级图">
+  <div class="figure-caption">图：原子电子能级与排布示意图（1s→2s→2p→...）</div>
+</div>
 <h3>关键概念</h3>
 
 <ul>
@@ -76,6 +93,11 @@ MathJax = {
 <li><strong>VSEPR模型</strong>：价层电子对互斥模型，中心原子价层电子对（成键电子对+孤电子对）相互排斥，决定分子构型</li>
 </ul>
 
+
+<div class="figure">
+  <img src="../../图形库/化学/化学键类型对比.png" alt="化学键类型对比图">
+  <div class="figure-caption">图：离子键、共价键、金属键类型对比示意图</div>
+</div>
 <h3>核心公式/定理</h3>
 
 <pre><code>1. 晶胞密度计算：
@@ -162,6 +184,7 @@ MathJax = {
 
 <h3>四种晶体类型比较</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>性质</th><th>离子晶体</th><th>分子晶体</th><th>原子晶体</th><th>金属晶体</th></tr>
 <tr><td>构成粒子</td><td>阴、阳离子</td><td>分子</td><td>原子</td><td>金属阳离子+自由电子</td></tr>
@@ -172,9 +195,11 @@ MathJax = {
 <tr><td>实例</td><td>NaCl、MgO</td><td>H₂O、CO₂、I₂</td><td>金刚石、SiO₂、SiC</td><td>Fe、Cu、Al</td></tr>
 <tr><td>熔沸点判断</td><td>晶格能（电荷大、半径小则高）</td><td>相对分子质量+氢键</td><td>键能大则高</td><td>金属键强弱</td></tr>
 </table>
+</div>
 
 <h3>常见晶胞结构参数</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>晶胞类型</th><th>粒子数Z</th><th>配位数</th><th>特点</th></tr>
 <tr><td>NaCl型</td><td>Na⁺:4, Cl⁻:4</td><td>6</td><td>阴阳离子交替排列，棱长a = 2(r⁺ + r⁻)</td></tr>
@@ -186,6 +211,7 @@ MathJax = {
 <tr><td>体心立方</td><td>2</td><td>8</td><td>金属Na、K、Fe</td></tr>
 <tr><td>面心立方</td><td>4</td><td>12</td><td>金属Cu、Ag、Au</td></tr>
 </table>
+</div>
 
 <h3>记忆口诀/技巧</h3>
 

@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>立体几何证明与计算失误高发区（定理条件遗漏·计算错误·符号混乱）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>2024~2025学年广州各区高一下期末试卷错题归纳 / 人教A版必修第二册第八章</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期末、三校/五校联考）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一下期末<strong>解答题失分重灾区</strong>。广州各区期末试卷中，立体几何解答题（第15-16题，共24-28分）平均得分率约55%，失分原因中"条件遗漏"占30%，"计算错误"占35%，"符号混乱"占20%。广东卷对立体几何证明的<strong>书写规范性</strong>要求全国最高，定理名称不写、条件不充分、符号使用错误都会直接扣分。名校联考（五校联考）中，证明题第2问的"面面垂直性质"应用是最大失分点。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -242,6 +258,7 @@ MathJax = {
 
 <p>#### 混乱1：点、线、面的符号混用</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>正确</th><th>错误</th><th>说明</th></tr>
 <tr><td>点 $A$</td><td>直线 $A$</td><td>点用大写，直线用小写</td></tr>
@@ -250,6 +267,7 @@ MathJax = {
 <tr><td>$P \in l$</td><td>$P \subset l$</td><td>点在直线上用"∈"，不是"⊂"</td></tr>
 <tr><td>$l \subset \alpha$</td><td>$l \in \alpha$</td><td>直线在平面内用"⊂"，不是"∈"</td></tr>
 </table>
+</div>
 
 <hr>
 

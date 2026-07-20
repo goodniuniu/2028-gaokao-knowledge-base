@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月04日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">sharpener</div><div class="def">n. 卷笔刀；[机] 磨具；研磨者</div></td><td><div class="word">dream</div><div class="def">v. 梦想；做梦，梦见；想到 n. 梦想，愿望；梦 adj. 梦的；理想的；不切实际的</div></td><td><div class="word">bookshelf</div><div class="def">n. 书架</div></td><td><div class="word">analyze</div><div class="def">v. 对…进行分析，分解（等于analyse）</div></td></tr>
 <tr><td><div class="word">woman</div><div class="def">n. 妇女；女性；成年女子</div></td><td><div class="word">extraordinary</div><div class="def">adj. 非凡的；特别的；离奇的；临时的；特派的</div></td><td><div class="word">outcome</div><div class="def">n. 结果，结局；成果</div></td><td><div class="word">yoghurt</div><div class="def">n. 酸奶（等于yoghourt）；酸乳酪</div></td></tr>
 <tr><td><div class="word">make</div><div class="def">v. 使得；进行；布置，准备，整理；制造；认为；获得；形成；安排；引起；构成 n. 制造；构造；性情</div></td><td><div class="word">only</div><div class="def">adv. 只，仅仅；不料 adj. 唯一的，仅有的；最合适的 conj. 但是；不过；可是</div></td><td><div class="word">title</div><div class="def">n. 冠军；标题；头衔；权利；字幕 v. 加标题于；赋予头衔；把…称为 adj. 冠军的；标题的；头衔的</div></td><td><div class="word">card</div><div class="def">n. 卡片；纸牌；明信片 v. 记于卡片上</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">however</div><div class="def">adv. 无论如何；不管怎样（接副词或形容词）；然而；可是 conj. 无论以何种方式; 不管怎样</div></td><td><div class="word">mature</div><div class="def">adj. 成熟的；充分考虑的；到期的；成年人的 v. 成熟；到期</div></td><td><div class="word">guide</div><div class="def">n. 指南；向导；入门书 v. 引导；带领；操纵</div></td><td><div class="word">traffic</div><div class="def">n. 交通；运输；贸易；[通信] 通信量 v. 用…作交换；在…通行</div></td></tr>
 <tr><td><div class="word">block</div><div class="def">n. 块；街区；大厦；障碍物 v. 阻止；阻塞；限制；封盖 adj. 成批的，大块的；交通堵塞的</div></td><td><div class="word">happy</div><div class="def">adj. 幸福的；高兴的；巧妙的 n. (Happy)人名；(英、瑞典、喀)哈皮</div></td><td><div class="word">elect</div><div class="def">adj. 选出的；当选的；卓越的 n. 被选的人；特殊阶层；上帝的选民 v. 选举；选择；推选</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月22日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">add</div><div class="def">v.  添加， 增加</div></td><td><div class="word">minister</div><div class="def">n.  部长； 牧师</div></td><td><div class="word">need</div><div class="def">v. 必须 vt. 需要modal n.  需要， 需求</div></td><td><div class="word">cruel</div><div class="def">adj.  残忍的， 残酷的； 无情的</div></td></tr>
 <tr><td><div class="word">erupt</div><div class="def">v.   喷发， 爆发</div></td><td><div class="word">shade</div><div class="def">n.  阴凉处， 树荫处</div></td><td><div class="word">often</div><div class="def">adv.  经常地</div></td><td><div class="word">gather</div><div class="def">v.  聚集； 采集</div></td></tr>
 <tr><td><div class="word">insist</div><div class="def">v.  坚持， 坚决认为</div></td><td><div class="word">article</div><div class="def">n.  文章； 东西； 冠词</div></td><td><div class="word">respect</div><div class="def">n. 尊敬，尊重；方面 vt.  尊敬， 尊重</div></td><td><div class="word">ache</div><div class="def">vi. 疼痛 n.  痛， 疼痛</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">shake</div><div class="def">vt.   使摇动； 震动</div></td><td><div class="word">eyesight</div><div class="def">n.  视力， 视觉</div></td><td><div class="word">semicircle</div><div class="def">n.  半圆</div></td><td><div class="word">screen</div><div class="def">n.  幕， 荧光屏</div></td></tr>
 <tr><td><div class="word">autonomous</div><div class="def">adj.  自治的</div></td><td><div class="word">referee</div><div class="def">n.  仲裁人， 调解人； 裁判员</div></td><td></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

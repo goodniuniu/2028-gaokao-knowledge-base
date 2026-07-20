@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>等差数列与等比数列</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版选择性必修第二册第四章</td></tr>
@@ -54,12 +69,14 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：中档~中高档；数列是广东卷大题的重要考点，常与函数、不等式综合，错位相减和裂项相消是必会技能</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h2>核心内容</h2>
 
 <h3>一、等差数列</h3>
+<div class="table-wrap">
 <table>
 <tr><th>项目</th><th>公式/性质</th></tr>
 <tr><td>定义</td><td>$a_n - a_{n-1} = d$（$n \geq 2, n \in \mathbb{N}^*$）</td></tr>
@@ -68,6 +85,7 @@ MathJax = {
 <tr><td>前 $n$ 项和</td><td>$S_n = \frac{(a_1 + a_n)n}{2} = na_1 + \frac{n(n-1)}{2}d = \frac{d}{2}n^2 + (a_1 - \frac{d}{2})n$</td></tr>
 <tr><td>单调性</td><td>$d > 0$ 递增；$d = 0$ 常数列；$d < 0$ 递减</td></tr>
 </table>
+</div>
 
 <p><strong>重要性质</strong>：</p>
 <ul>
@@ -79,6 +97,7 @@ MathJax = {
 </ul>
 
 <h3>二、等比数列</h3>
+<div class="table-wrap">
 <table>
 <tr><th>项目</th><th>公式/性质</th></tr>
 <tr><td>定义</td><td>$\frac{a_n}{a_{n-1}} = q$（$n \geq 2, n \in \mathbb{N}^*$）</td></tr>
@@ -87,6 +106,7 @@ MathJax = {
 <tr><td>前 $n$ 项和</td><td>$S_n = \begin{cases} na_1 & (q = 1) \\ \frac{a_1(1 - q^n)}{1 - q} = \frac{a_1 - a_n q}{1 - q} & (q \neq 1) \end{cases}$</td></tr>
 <tr><td>单调性</td><td>$a_1 > 0, q > 1$ 或 $a_1 < 0, 0 < q < 1$ 时递增；$a_1 > 0, 0 < q < 1$ 或 $a_1 < 0, q > 1$ 时递减</td></tr>
 </table>
+</div>
 
 <p><strong>重要性质</strong>：</p>
 <ul>

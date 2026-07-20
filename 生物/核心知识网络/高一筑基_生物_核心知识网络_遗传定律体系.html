@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>遗传定律体系</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版必修第二册 / 2023-2025广东选择性考试·生物遗传专题</td></tr>
@@ -55,6 +66,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -104,6 +116,7 @@ MathJax = {
 
 <h4>2. 遗传定律核心比例与变式</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>交配类型</th><th>基因型比例</th><th>表现型比例</th><th>应用</th></tr>
 <tr><td>Aa × Aa</td><td>1:2:1</td><td>3:1</td><td>自交，验证分离定律</td></tr>
@@ -113,6 +126,7 @@ MathJax = {
 <tr><td>AaBb × aabb</td><td>1:1:1:1</td><td>1:1:1:1</td><td>双杂合测交</td></tr>
 <tr><td>AaBb × Aabb</td><td>复杂</td><td>复杂</td><td>拆分法：分别算每对，再相乘</td></tr>
 </table>
+</div>
 
 <blockquote>
 比例变式（基因互作）：</p>
@@ -124,12 +138,14 @@ MathJax = {
 
 <h4>3. 伴性遗传</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>类型</th><th>典型疾病</th><th>遗传特点</th><th>判断口诀</th></tr>
 <tr><td>X染色体隐性</td><td>红绿色盲、血友病</td><td>男性患者多，交叉遗传，母病子必病</td><td>无中生有为隐性，隐性看女病，女病父正非伴性</td></tr>
 <tr><td>X染色体显性</td><td>抗维生素D佝偻病</td><td>女性患者多，世代连续，父病女必病</td><td>有中生无为显性，显性看男病，男病母正非伴性</td></tr>
 <tr><td>Y染色体</td><td>外耳道多毛症</td><td>限雄遗传，父传子、子传孙</td><td>只在男性中传递</td></tr>
 </table>
+</div>
 
 <blockquote>
 遗传系谱图判断步骤：</p>
@@ -175,6 +191,7 @@ Bb × bb → 1/2显 : 1/2隐
 
 <h4>常见陷阱速查</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>陷阱</th><th>正确理解</th></tr>
 <tr><td>患病男孩 vs 男孩患病</td><td>患病男孩 = 患病概率 × 1/2；男孩患病 = 在男孩中患病的概率</td></tr>
@@ -182,6 +199,7 @@ Bb × bb → 1/2显 : 1/2隐
 <tr><td>纯合子概率</td><td>显性个体中纯合子概率 = 1/3（Aa自交后代中）</td></tr>
 <tr><td>致死效应</td><td>注意显性/隐性致死对比例的影响（如AA致死，则Aa自交后代为2:1）</td></tr>
 </table>
+</div>
 
 <h3>记忆口诀/技巧</h3>
 

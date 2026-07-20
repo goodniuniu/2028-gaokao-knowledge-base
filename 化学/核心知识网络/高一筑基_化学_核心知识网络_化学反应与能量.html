@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>化学反应与能量</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版必修第二册 第六章 + 广东选择性考试</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：中高频（近5年广东卷3-4次考查，常结合能量变化图像、盖斯定律计算）；难度定位：中档（盖斯定律计算需构建方程组，热化学方程式书写需规范）；特色描述：广东卷常结合新能源、碳中和等情境考查反应热，如锂电池、氢能源、CO₂资源化利用等；赋分提示：反应热计算是赋分"稳定得分区"，确保方程式书写规范和焓变符号准确</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -118,8 +130,14 @@ MathJax = {
 <li>检查：ΔH与化学计量数成正比；正逆反应ΔH数值相等、符号相反</li>
 </ol>
 
+
+<div class="figure">
+  <img src="../../图形库/化学/原电池示意图.png" alt="原电池工作原理示意图">
+  <div class="figure-caption">图：原电池工作原理（化学能→电能，电子流向与离子迁移）</div>
+</div>
 <h3>常见放热/吸热反应速记</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>放热反应（ΔH < 0）</th><th>吸热反应（ΔH > 0）</th></tr>
 <tr><td>燃烧反应</td><td>大多数分解反应（如CaCO₃分解）</td></tr>
@@ -130,6 +148,7 @@ MathJax = {
 <tr><td>铝热反应</td><td>碳与水蒸气反应：C + H₂O → CO + H₂</td></tr>
 <tr><td>合成氨、工业制硫酸</td><td>Ba(OH)₂·8H₂O + NH₄Cl反应</td></tr>
 </table>
+</div>
 
 <h3>记忆口诀/技巧</h3>
 

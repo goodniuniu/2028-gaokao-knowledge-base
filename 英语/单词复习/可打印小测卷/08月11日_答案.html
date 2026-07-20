@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月11日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">value</div><div class="def">n. 值；价值；价格；重要性；确切涵义 v. 评价；重视；估价</div></td><td><div class="word">scene</div><div class="def">n. 场面；情景；景象；事件</div></td><td><div class="word">freezing</div><div class="def">adj. 冰冻的；严寒的；冷冻用的</div></td><td><div class="word">wild</div><div class="def">adj. 野生的；野蛮的；狂热的；荒凉的 n. 荒野 adv. 疯狂地；胡乱地</div></td></tr>
 <tr><td><div class="word">scenery</div><div class="def">n. 风景；景色；舞台布景</div></td><td><div class="word">sideway</div><div class="def">n. 人行道；小巷 adv. 斜地里 adj. 旁边的；向侧面的（等于sideways）</div></td><td><div class="word">squid</div><div class="def">n. 鱿鱼；乌贼；枪乌贼</div></td><td><div class="word">convenient</div><div class="def">adj. 方便的；[废语]适当的；[口语]近便的；实用的</div></td></tr>
 <tr><td><div class="word">dark</div><div class="def">adj. 黑暗的，深色的；模糊的；无知的；忧郁的 n. 黑暗；夜；黄昏；模糊</div></td><td><div class="word">zero</div><div class="def">n. 零点，零度 num. 零</div></td><td><div class="word">interesting</div><div class="def">adj. 有趣的；引起兴趣的，令人关注的</div></td><td><div class="word">chips</div><div class="def">n. [食品] 炸土豆条；小木片；（作赌注用的）圆形筹码；缺口（chip的复数形式）</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">youth</div><div class="def">n.  青春； 青年</div></td><td><div class="word">without</div><div class="def">prep.  没有， 不</div></td><td><div class="word">drunk</div><div class="def">adj.  醉的</div></td><td><div class="word">would</div><div class="def">modal verb. 将，将会〔表示想做某事或认为某事会发生〕</div></td></tr>
 <tr><td><div class="word">pick</div><div class="def">v.  拾起， 采集； 挑选</div></td><td><div class="word">customs</div><div class="def">n.  海关； 关税</div></td><td><div class="word">calculate</div><div class="def">v.  计算， 核算</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

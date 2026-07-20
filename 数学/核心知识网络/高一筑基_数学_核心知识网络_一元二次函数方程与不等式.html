@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>一元二次函数、方程与不等式</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第一册第二章</td></tr>
@@ -54,12 +69,14 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：基础~中档；基本不等式常与最值问题结合，是广东卷多选和填空压轴的常见考点</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h2>核心内容</h2>
 
 <h3>一、不等式性质</h3>
+<div class="table-wrap">
 <table>
 <tr><th>性质</th><th>内容</th></tr>
 <tr><td>对称性</td><td>$a > b \Leftrightarrow b < a$</td></tr>
@@ -70,6 +87,7 @@ MathJax = {
 <tr><td>同向同正可乘性</td><td>$a > b > 0, c > d > 0 \Rightarrow ac > bd$</td></tr>
 <tr><td>可乘方性</td><td>$a > b > 0 \Rightarrow a^n > b^n$（$n \in \mathbb{N}, n \geq 2$）</td></tr>
 </table>
+</div>
 
 <h3>二、基本不等式</h3>
 <p>$$\sqrt{ab} \leq \frac{a+b}{2} \quad (a > 0, b > 0)$$</p>
@@ -105,12 +123,14 @@ MathJax = {
 </ul>
 
 <h3>四、一元二次不等式恒成立问题</h3>
+<div class="table-wrap">
 <table>
 <tr><th>条件</th><th>等价转化</th></tr>
 <tr><td>$ax^2 + bx + c > 0$ 在 $\mathbb{R}$ 上恒成立</td><td>$a > 0$ 且 $\Delta < 0$</td></tr>
 <tr><td>$ax^2 + bx + c < 0$ 在 $\mathbb{R}$ 上恒成立</td><td>$a < 0$ 且 $\Delta < 0$</td></tr>
 <tr><td>在某区间上恒成立</td><td>分离参数求最值，或端点效应分析</td></tr>
 </table>
+</div>
 
 <h3>五、根的分布问题</h3>
 <p>影响二次函数根分布的因素：</p>

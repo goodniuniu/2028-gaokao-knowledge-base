@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>恒成立与存在性问题的题型通法</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教A版选择性必修二 / 新高考Ⅰ卷近5年解答题真题归纳 / 2024新课标Ⅰ卷第18题（导数压轴）</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东 / #新高考Ⅰ卷·江苏</td></tr>
 <tr><td><strong>广东考情</strong></td><td>新高考Ⅰ卷（广东卷）解答题15-19题（77分）中，函数与导数题几乎必考恒成立或存在性问题；2024年新课标Ⅰ卷第18题导数压轴考查"当且仅当"型恒成立，2023年新课标Ⅰ卷第20题考查双变量存在性。此类题目是区分高分段与顶尖分段的关键，占17分压轴题中的8-12分。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -67,6 +83,7 @@ MathJax = {
 
 <h3>一、单变量问题：最值转化对照表</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>题干表述</th><th>数学翻译</th><th>转化目标</th><th>记忆口诀</th></tr>
 <tr><td>∀x∈D, f(x) < a <strong>恒成立</strong></td><td>全称量词</td><td>f(x)ₘₐₓ < a</td><td><strong>大值小于a</strong>（所有值都小）</td></tr>
@@ -78,6 +95,7 @@ MathJax = {
 <tr><td>∃x∈D, f(x) > a <strong>有解</strong></td><td>存在量词</td><td>f(x)ₘₐₓ > a</td><td><strong>大值大于a</strong>（至少有一个大）</td></tr>
 <tr><td>∃x∈D, f(x) ≥ a <strong>有解</strong></td><td>存在量词</td><td>f(x)ₘₐₓ ≥ a</td><td><strong>大值不小于a</strong></td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>关键提醒</strong>：恒成立与存在性问题的最值取法<strong>恰好相反</strong>！这是考生最容易混淆的地方。
@@ -191,6 +209,7 @@ MathJax = {
 
 <h3>三、双变量问题：分步转化策略</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>题干表述</th><th>数学翻译</th><th>转化结果</th><th>记忆口诀</th></tr>
 <tr><td>∀x₁,∀x₂, f(x₁)≥g(x₂)</td><td>两个全称</td><td>f(x)ₘᵢₙ ≥ g(x)ₘₐₓ</td><td><strong>最值交叉比</strong></td></tr>
@@ -198,6 +217,7 @@ MathJax = {
 <tr><td>∃x₁,∀x₂, f(x₁)≥g(x₂)</td><td>存在+全称</td><td>f(x)ₘₐₓ ≥ g(x)ₘₐₓ</td><td><strong>大对大</strong></td></tr>
 <tr><td>∃x₁,∃x₂, f(x₁)≥g(x₂)</td><td>两个存在</td><td>f(x)ₘₐₓ ≥ g(x)ₘᵢₙ</td><td><strong>大对小</strong></td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>双变量核心逻辑</strong>：先固定一个变量，再处理另一个变量；或转化为两个函数最值的比较。
@@ -207,6 +227,7 @@ MathJax = {
 
 <h3>四、高频陷阱与避坑指南</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>陷阱</th><th>说明</th><th>避坑方法</th></tr>
 <tr><td><strong>混淆量词</strong></td><td>将"存在"当作"恒成立"处理，最值取反</td><td>写出∀/∃符号，对照转化表确认</td></tr>
@@ -216,6 +237,7 @@ MathJax = {
 <tr><td><strong>最值点不可达</strong></td><td>函数在开区间上无最值，仅有确界</td><td>用极限值代替，注意等号是否可取</td></tr>
 <tr><td><strong>"当且仅当"型</strong></td><td>2024新课标Ⅰ卷新考法，需证充要性</td><td>必要性探路+充分性证明</td></tr>
 </table>
+</div>
 
 <hr>
 

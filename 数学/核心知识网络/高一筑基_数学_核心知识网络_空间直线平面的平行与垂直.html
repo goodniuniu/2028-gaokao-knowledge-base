@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>空间直线、平面的平行与垂直</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第二册第八章</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：高频；难度：中档~中高档；立体几何证明是广东卷必考大题，几何法证明标准步骤是得分关键</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -96,6 +112,7 @@ MathJax = {
 </ul>
 
 <h3>三、空间角与距离</h3>
+<div class="table-wrap">
 <table>
 <tr><th>类型</th><th>定义</th><th>范围</th></tr>
 <tr><td>异面直线所成角</td><td>平移后相交直线所成的锐角或直角</td><td>$(0, \frac{\pi}{2}]$</td></tr>
@@ -103,6 +120,7 @@ MathJax = {
 <tr><td>二面角</td><td>两个半平面所成的角</td><td>$[0, \pi]$</td></tr>
 <tr><td>点到平面距离</td><td>点到平面的垂线段长度</td><td>非负</td></tr>
 </table>
+</div>
 
 <hr>
 

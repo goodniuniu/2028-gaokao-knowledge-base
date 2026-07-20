@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>电化学体系</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第一册 / 2023-2025广东选择性考试·化学电化学专题</td></tr>
@@ -55,6 +66,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★★★☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -114,6 +126,7 @@ MathJax = {
 
 <h4>4. 常见电极反应式速查表</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>电池类型</th><th>负极反应</th><th>正极反应</th><th>总反应</th></tr>
 <tr><td>Zn-Cu原电池</td><td>Zn-2e⁻=Zn²⁺</td><td>Cu²⁺+2e⁻=Cu</td><td>Zn+Cu²⁺=Zn²⁺+Cu</td></tr>
@@ -127,6 +140,7 @@ MathJax = {
 <tr><td>电解CuSO₄溶液</td><td>2H₂O-4e⁻=O₂↑+4H⁺</td><td>Cu²⁺+2e⁻=Cu</td><td>2CuSO₄+2H₂O=2Cu+O₂↑+2H₂SO₄</td></tr>
 <tr><td>电解精炼铜</td><td>Cu-2e⁻=Cu²⁺(粗铜)</td><td>Cu²⁺+2e⁻=Cu(纯铜)</td><td>粗铜溶解，纯铜析出</td></tr>
 </table>
+</div>
 
 <h4>5. 电化学计算关系</h4>
 
@@ -161,12 +175,14 @@ MathJax = {
 
 <h4>金属腐蚀与防护</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>腐蚀类型</th><th>条件</th><th>负极反应</th><th>防护方法</th></tr>
 <tr><td>化学腐蚀</td><td>干燥/非电解质</td><td>直接氧化</td><td>涂层、合金化</td></tr>
 <tr><td>吸氧腐蚀</td><td>弱酸性/中性/碱性</td><td>2H₂O+O₂+4e⁻=4OH⁻</td><td>牺牲阳极法、外加电流法</td></tr>
 <tr><td>析氢腐蚀</td><td>较强酸性</td><td>2H⁺+2e⁻=H₂↑</td><td>同上</td></tr>
 </table>
+</div>
 
 <blockquote>
 广东情境：海水腐蚀（吸氧腐蚀）、港珠澳大桥防腐、南海油田设备腐蚀防护

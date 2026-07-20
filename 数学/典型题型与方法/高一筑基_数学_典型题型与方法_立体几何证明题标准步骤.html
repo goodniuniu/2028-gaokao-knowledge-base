@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>立体几何证明题标准步骤（平行·垂直·书写规范）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教A版必修第二册第八章 / 2024~2025学年广州各区高一下期末试卷（解答第15-16题，每题12-14分）</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期末、三校/五校联考）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一下期末<strong>核心解答题</strong>，占24-28分。广州各区期末卷解答题第15-16题固定考查立体几何证明，每题通常两问：第1问证明线面平行或垂直，第2问证明另一面面关系或计算体积。2024-2025学年广州越秀区期末第15题、天河区第16题均为此结构。广东卷对<strong>证明过程的逻辑严密性和书写规范性</strong>要求极高，条件不充分或定理名称不写会被扣分。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -194,6 +210,7 @@ MathJax = {
 
 <h3>三、证明题中的常用辅助线作法</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>辅助线类型</th><th>作法</th><th>适用场景</th></tr>
 <tr><td><strong>中位线</strong></td><td>连接两边中点</td><td>证平行、证线段相等</td></tr>
@@ -203,6 +220,7 @@ MathJax = {
 <tr><td><strong>延长线</strong></td><td>延长某线段与平面相交</td><td>找交点、构造新平面</td></tr>
 <tr><td><strong>补形</strong></td><td>补全几何体（如补成柱体）</td><td>不规则几何体的对称分析</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>广东卷提示</strong>：广州名校联考的证明题常需要作辅助线，辅助线描述必须准确（如"取$BC$中点$M$，连接$AM$、$DM$"）。
@@ -214,6 +232,7 @@ MathJax = {
 
 <p>#### 1. 必须写全的条件</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>定理</th><th>容易遗漏的条件</th><th>遗漏后果</th></tr>
 <tr><td>线面平行判定</td><td>$l \not\subset \alpha$（线在面外）</td><td>无法判定</td></tr>
@@ -221,6 +240,7 @@ MathJax = {
 <tr><td>面面平行判定</td><td>$a \cap b \neq \varnothing$（两线相交）</td><td>无法判定</td></tr>
 <tr><td>面面垂直性质</td><td>$l \subset \alpha$且$l \perp$交线</td><td>无法得出线面垂直</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>广东卷典型扣分</strong>：证明线面平行时只写"$l \parallel m$，$m \subset \alpha$"，漏写"$l \not\subset \alpha$"，扣1-2分。
@@ -228,12 +248,14 @@ MathJax = {
 
 <p>#### 2. 定理名称必须写</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>正确写法</th><th>错误写法</th></tr>
 <tr><td>∴ $l \parallel \alpha$（<strong>线面平行判定定理</strong>）</td><td>∴ $l \parallel \alpha$</td></tr>
 <tr><td>∴ $l \perp \alpha$（<strong>线面垂直判定定理</strong>）</td><td>∴ $l \perp \alpha$</td></tr>
 <tr><td>∴ $\alpha \perp \beta$（<strong>面面垂直判定定理</strong>）</td><td>∴ $\alpha \perp \beta$</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>广东卷评分</strong>：不写定理名称扣1分/处。
@@ -241,6 +263,7 @@ MathJax = {
 
 <p>#### 3. 符号使用规范</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>正确</th><th>错误</th></tr>
 <tr><td>点 $A$、直线 $l$、平面 $\alpha$</td><td>点 $a$、直线 $A$、平面 $A$</td></tr>
@@ -248,6 +271,7 @@ MathJax = {
 <tr><td>$P \in l$（点在直线上）</td><td>$P \subset l$</td></tr>
 <tr><td>$l \cap \alpha = P$</td><td>$l + \alpha = P$</td></tr>
 </table>
+</div>
 
 <hr>
 

@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>复数概念与运算（概念·几何意义·四则运算）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教A版必修第二册第七章 / 2024~2025学年广州各区高一下期末试卷（单选第1-3题、填空第12题）</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州天河/越秀/白云/番禺区期末、九区联考）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一下期末<strong>必考基础题</strong>，考查频率<strong>极高</strong>。广州各区期末卷中复数通常占1道单选（5分）或1道填空（5分），总分5分左右。难度定位<strong>基础</strong>，以复数运算、共轭复数、模长计算、几何意义为主。2024-2025学年广州九区联考第1题、越秀区第12题均考查复数，说明广东卷对复数基础概念的重视。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -67,6 +83,7 @@ MathJax = {
 
 <h3>一、关键概念体系</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>概念</th><th>定义</th><th>几何意义</th><th>易错点</th></tr>
 <tr><td><strong>复数</strong></td><td>$z = a + bi$（$a,b \in \mathbb{R}$）</td><td>复平面上的点$(a,b)$</td><td>实部是$a$，不是$bi$；虚部是$b$，不是$bi$</td></tr>
@@ -77,6 +94,7 @@ MathJax = {
 <tr><td><strong>复数模</strong></td><td>$</td><td>z</td><td>= \sqrt{a^2+b^2}$</td><td>点到原点的距离</td><td>$</td><td>z_1 \cdot z_2</td><td>=</td><td>z_1</td><td>\cdot</td><td>z_2</td><td>$；$</td><td>z_1 + z_2</td><td>\leq</td><td>z_1</td><td>+</td><td>z_2</td><td>$</td></tr>
 <tr><td><strong>复数相等</strong></td><td>$a+bi = c+di \Leftrightarrow a=c, b=d$</td><td>两点重合</td><td>实部相等且虚部相等</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>高频考点</strong>：已知$z = a + (a-1)i$为纯虚数，求$a$。——答案：$a=0$（注意$a=0$且$a-1 \neq 0$）。
@@ -88,6 +106,7 @@ MathJax = {
 
 <p>设$z_1 = a+bi$, $z_2 = c+di$</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>运算</th><th>公式</th><th>结果形式</th><th>记忆要点</th></tr>
 <tr><td><strong>加法</strong></td><td>$z_1 + z_2 = (a+c) + (b+d)i$</td><td>实部+实部，虚部+虚部</td><td>对应相加</td></tr>
@@ -95,6 +114,7 @@ MathJax = {
 <tr><td><strong>乘法</strong></td><td>$z_1 \cdot z_2 = (ac-bd) + (ad+bc)i$</td><td>展开后$i^2=-1$</td><td>多项式乘法，$i^2 \to -1$</td></tr>
 <tr><td><strong>除法</strong></td><td>$\frac{z_1}{z_2} = \frac{z_1 \cdot \bar{z}_2}{z_2 \cdot \bar{z}_2} = \frac{(a+bi)(c-di)}{c^2+d^2}$</td><td>分母实数化</td><td><strong>分子分母同乘分母的共轭</strong></td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>可直接使用</strong>：上述四则运算公式在解答题中可直接使用，无需推导。
@@ -134,6 +154,7 @@ MathJax = {
 
 <h3>四、复数的几何意义（与平面向量的联系）</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>几何操作</th><th>代数对应</th><th>说明</th></tr>
 <tr><td>复平面上点$Z(a,b)$</td><td>复数$z = a+bi$</td><td>一一对应</td></tr>
@@ -142,6 +163,7 @@ MathJax = {
 <tr><td>$</td><td>z - z_0</td><td>= r$</td><td>以$Z_0$为圆心、$r$为半径的圆</td><td>圆的复数方程</td></tr>
 <tr><td>复数乘法$z_1 \cdot z_2$</td><td>模相乘，角相加</td><td>旋转+伸缩变换</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>广东卷常考</strong>：已知$|z - (1+i)| = 2$，求$|z|$的最大值。——圆心到原点距离$\sqrt{2}$，半径2，最大值$\sqrt{2}+2$。

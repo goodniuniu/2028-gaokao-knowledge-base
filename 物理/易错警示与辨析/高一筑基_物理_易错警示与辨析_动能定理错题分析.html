@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>【动能定理错题】斜面往返与圆弧轨道模型</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>物理辅导课错题巩固（2026/06/28）第2次学习巩固</td></tr>
@@ -55,6 +66,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -176,6 +188,7 @@ MathJax = {
 
 <h3>共性知识点总结</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>考点</th><th>要点</th></tr>
 <tr><td><strong>动能定理的灵活选取</strong></td><td>可以全程用，也可以分段用；优先全程</td></tr>
@@ -183,6 +196,7 @@ MathJax = {
 <tr><td><strong>圆周运动最高点</strong></td><td>先写 $F_{向} = \frac{mv^2}{r}$，再确定各力方向</td></tr>
 <tr><td><strong>能量分配</strong></td><td>动能减少 = 势能增加 + 内能增加（摩擦热）</td></tr>
 </table>
+</div>
 
 <hr>
 

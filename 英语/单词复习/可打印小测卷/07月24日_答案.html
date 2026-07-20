@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月24日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">list</div><div class="def">n. [计] 列表；清单；目录 v. 列于表上</div></td><td><div class="word">videophone</div><div class="def">n. 电视电话</div></td><td><div class="word">empty</div><div class="def">adj. 空的；无意义的；无知的；徒劳的 v. 使失去；使…成为空的 n. 空车；空的东西</div></td><td><div class="word">armchair</div><div class="def">n. 扶手椅，单人沙发 adj. 不切实际的</div></td></tr>
 <tr><td><div class="word">self</div><div class="def">n. 自己，自我；本质；私心 adj. 同一的 vt. 使自花授精；使近亲繁殖 vi. 自花授精</div></td><td><div class="word">nature</div><div class="def">n. 自然；性质；本性；种类</div></td><td><div class="word">transparent</div><div class="def">adj. 透明的；显然的；坦率的；易懂的</div></td><td><div class="word">submit</div><div class="def">v. 使服从；主张；呈递</div></td></tr>
 <tr><td><div class="word">agriculture</div><div class="def">n. 农业；农耕；农业生产；农艺，农学</div></td><td><div class="word">exactly</div><div class="def">adv. 恰好地；正是；精确地；正确地</div></td><td><div class="word">undo</div><div class="def">v. 取消；解开；破坏；扰乱</div></td><td><div class="word">cheerful</div><div class="def">adj. 快乐的；愉快的；高兴的</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">diary</div><div class="def">n. 日志，日记；日记簿</div></td><td><div class="word">citizen</div><div class="def">n. 公民；市民；老百姓</div></td><td><div class="word">destroy</div><div class="def">v. 破坏；消灭；毁坏</div></td><td><div class="word">altogether</div><div class="def">adv. 完全地；总共；总而言之 n. 整个；裸体</div></td></tr>
 <tr><td><div class="word">contribution</div><div class="def">n. 贡献；捐献；投稿</div></td><td><div class="word">decoration</div><div class="def">n. 装饰，装潢；装饰品；奖章</div></td><td><div class="word">view</div><div class="def">n. 观察；视野；意见；风景 v. 观察；考虑；查看</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

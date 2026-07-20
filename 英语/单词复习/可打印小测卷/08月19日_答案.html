@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="08月19日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">accommodation</div><div class="def">n. 住处；工作场所</div></td><td><div class="word">authentic</div><div class="def">adj.  真的， 可信的</div></td><td><div class="word">socket</div><div class="def">n.  插座， 插孔； 孔， 穴</div></td><td><div class="word">biscuit</div><div class="def">n.  饼干</div></td></tr>
 <tr><td><div class="word">fence</div><div class="def">n.  栅栏， 篱笆</div></td><td><div class="word">breast</div><div class="def">n.  胸部； 胸怀</div></td><td><div class="word">mercy</div><div class="def">n.  怜悯</div></td><td><div class="word">annoy</div><div class="def">vt.  使烦恼， 使生气； 骚扰</div></td></tr>
 <tr><td><div class="word">inform</div><div class="def">v.  通知， 告诉</div></td><td><div class="word">depend</div><div class="def">vi.  依靠， 指望； 取决于</div></td><td><div class="word">commit</div><div class="def">v.   犯  ， 干</div></td><td><div class="word">about</div><div class="def">adv. 大约；到处，周围 prep.  关于； 在附近， 在周围</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">mountainous</div><div class="def">adj.  多山的</div></td><td><div class="word">inspect</div><div class="def">vt.  检查； 审视</div></td><td><div class="word">campaign</div><div class="def">vi.  参加活动； 作战 n. 战役；竞选活动</div></td><td><div class="word">vital</div><div class="def">adj.  重大的， 生死攸关的</div></td></tr>
 <tr><td><div class="word">conflict</div><div class="def">n.  斗争， 冲突</div></td><td><div class="word">allow</div><div class="def">vt.  允许， 准许</div></td><td></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

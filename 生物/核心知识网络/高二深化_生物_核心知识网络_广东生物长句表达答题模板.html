@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>✍️ 广东生物长句表达答题模板 | 核心知识网络</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>广东选择性考试长句表达题 / 评分标准 / 广州深圳佛山模拟</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试 #广州一模 #深圳一模</td></tr>
 <tr><td><strong>广东考情</strong></td><td>极高频（近5年广东卷<strong>每卷必考</strong>，占比15~25分）；长句表达是广东生物卷<strong>最显著的特色题型</strong>，也是拉开赋分档次的关键；原因类、依据类、措施类三种设问交替出现；赋分提示：长句表达满分需要<strong>逻辑链完整、术语准确、因果关系清晰</strong>，一句话漏掉关键环节可能被扣1~2分</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -66,12 +78,14 @@ MathJax = {
 
 <h4>一、广东生物长句表达三大题型</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>题型</th><th>设问标志词</th><th>本质要求</th><th>答题核心</th></tr>
 <tr><td><strong>原因类</strong></td><td>"为什么...""解释...原因""分析...机理"</td><td>因果逻辑链</td><td>因为A，所以B，导致C</td></tr>
 <tr><td><strong>依据类</strong></td><td>"据图/表分析...""由...可知""判断理由是"</td><td>证据推理链</td><td>由...（证据），可知...（结论），因此...</td></tr>
 <tr><td><strong>措施类</strong></td><td>"如何...""应采取什么措施""建议..."</td><td>方案效果链</td><td>通过...（措施），使...（变化），从而...（结果）</td></tr>
 </table>
+</div>
 
 <blockquote>
 广东卷长句表达往往不是简单的"是什么"，而是要求解释"为什么""凭什么""怎么办"，对逻辑推理能力要求极高。
@@ -83,6 +97,7 @@ MathJax = {
 
 <pre><code>[情境/条件] + [生理过程] → [中间变化] → [最终结果]</code></pre>
 
+<div class="table-wrap">
 <table>
 <tr><th>应用场景</th><th>模板句式</th><th>示例</th></tr>
 <tr><td><strong>代谢类</strong></td><td>因为[条件变化]，影响了[酶活性/反应速率]，导致[产物量变化]</td><td>因为温度降低，酶活性下降，导致光合作用暗反应速率降低，有机物积累减少</td></tr>
@@ -90,6 +105,7 @@ MathJax = {
 <tr><td><strong>遗传类</strong></td><td>因为[基因型/染色体变化]，导致[性状改变]，表现为[具体特征]</td><td>因为该植株基因型为Aa，自交后代出现aa隐性纯合子，表现为白化性状</td></tr>
 <tr><td><strong>生态类</strong></td><td>因为[环境因子变化]，影响了[种群/群落特征]，导致[生态系统变化]</td><td>因为围海造地导致湿地面积减少，使鸟类栖息地丧失，导致该湿地生物多样性下降</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>关键原则</strong>：原因类答题必须有<strong>完整因果链</strong>，不能只说结果不说原因，也不能跳过中间环节。
@@ -101,12 +117,14 @@ MathJax = {
 
 <pre><code>[图中数据/实验结果] → [得出结论] → [回答设问]</code></pre>
 
+<div class="table-wrap">
 <table>
 <tr><th>应用场景</th><th>模板句式</th><th>示例</th></tr>
 <tr><td><strong>图表分析</strong></td><td>由图可知，[自变量]为[数值]时，[因变量]为[数值]，说明[结论]</td><td>由图可知，光照强度为1000lx时，光合速率达到最大值，说明该植物的饱和点光照强度约为1000lx</td></tr>
 <tr><td><strong>实验结果</strong></td><td>由实验组与对照组对比可知，[实验变量]导致[结果差异]，因此[结论]</td><td>由实验组（添加激素）与对照组（不加激素）对比可知，添加激素后细胞分裂指数显著增加，因此该激素能促进细胞分裂</td></tr>
 <tr><td><strong>系谱图</strong></td><td>由系谱图中[现象]可知，该病遗传方式为[方式]，判断依据是[依据]</td><td>由系谱图中Ⅰ-1和Ⅰ-2正常但Ⅱ-1患病可知，该病为隐性遗传病；由Ⅱ-3患病但其父亲Ⅰ-2正常可知，该病为常染色体隐性遗传</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>关键原则</strong>：依据类答题必须<strong>引用题目信息</strong>（图/表/文），不能凭空推断。结论必须与证据直接对应。
@@ -118,6 +136,7 @@ MathJax = {
 
 <pre><code>[具体措施] + [预期变化] + [最终目的]</code></pre>
 
+<div class="table-wrap">
 <table>
 <tr><th>应用场景</th><th>模板句式</th><th>示例</th></tr>
 <tr><td><strong>农业生产</strong></td><td>通过[措施]，使[生理过程优化]，从而提高[产量/品质]</td><td>通过增施有机肥，使土壤微生物分解有机物增加CO₂供应和矿质元素，从而提高光合作用效率</td></tr>
@@ -125,6 +144,7 @@ MathJax = {
 <tr><td><strong>生态保护</strong></td><td>通过[保护措施]，使[生态因子改善]，从而[恢复生态功能]</td><td>通过建立红树林自然保护区，减少人类活动干扰，使湿地生态系统恢复自我调节能力，从而保护生物多样性</td></tr>
 <tr><td><strong>实验设计</strong></td><td>通过[实验处理]，使[变量控制]，从而[验证假设]</td><td>通过设置不同温度梯度（10℃、20℃、30℃、40℃），使温度成为唯一变量，从而探究温度对酶活性的影响</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>关键原则</strong>：措施类答题必须<strong>具体可操作</strong>，不能泛泛而谈。措施→变化→结果必须形成闭环。
@@ -145,6 +165,7 @@ MathJax = {
 
 <h4>常见失分点与对策</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>失分类型</th><th>典型表现</th><th>正确做法</th></tr>
 <tr><td><strong>逻辑断裂</strong></td><td>"因为温度高，所以植物死亡"（跳过中间环节）</td><td>"因为温度高于最适温度，酶活性下降，光合作用减弱，有机物积累不足，导致植物死亡"</td></tr>
@@ -154,6 +175,7 @@ MathJax = {
 <tr><td><strong>绝对化表述</strong></td><td>"酶在高温下一定失活"</td><td>"酶在高温下通常失活（除耐高温酶外）"</td></tr>
 <tr><td><strong>遗漏条件</strong></td><td>"光合作用使CO₂减少"（未说光照条件）</td><td>"在光照条件下，光合作用消耗CO₂"</td></tr>
 </table>
+</div>
 
 <h4>广东卷评分标准要点</h4>
 
@@ -161,6 +183,7 @@ MathJax = {
 根据广东卷评分标准，长句表达题通常按<strong>逻辑链完整度</strong>和<strong>术语准确度</strong>分档给分：
 </blockquote>
 
+<div class="table-wrap">
 <table>
 <tr><th>档次</th><th>特征</th><th>得分</th></tr>
 <tr><td><strong>一档</strong></td><td>逻辑链完整，术语准确，因果关系清晰</td><td>满分</td></tr>
@@ -168,6 +191,7 @@ MathJax = {
 <tr><td><strong>三档</strong></td><td>逻辑链有断裂，但核心意思正确</td><td>扣2分</td></tr>
 <tr><td><strong>四档</strong></td><td>答非所问或逻辑混乱</td><td>0~1分</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -237,6 +261,7 @@ MathJax = {
 
 <h3>长句表达术语库（广东卷高频）</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>场景</th><th>必用术语</th></tr>
 <tr><td><strong>酶活性</strong></td><td>空间结构、活性中心、最适温度/pH、变性失活</td></tr>
@@ -249,6 +274,7 @@ MathJax = {
 <tr><td><strong>生态系统</strong></td><td>能量流动、物质循环、信息传递、自我调节能力、抵抗力/恢复力稳定性</td></tr>
 <tr><td><strong>基因工程</strong></td><td>限制酶、DNA连接酶、载体、转化、表达、PCR扩增</td></tr>
 </table>
+</div>
 
 <hr>
 

@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>统计与概率基础（抽样·分布·概率计算）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教A版必修第二册第九章（统计）+第十章（概率） / 2024~2025学年广州各区高一下期末试卷（单选第7-8题、多选第10-11题、解答第17题）</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期末、九区联考）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一下期末<strong>解答题固定板块</strong>。广州各区期末卷解答题第17题（12-14分）几乎固定考查统计与概率的综合应用，通常是"频率分布直方图 + 概率计算"或"分层抽样 + 古典概型"的组合。选填中也有1-2道基础题（互斥事件、独立事件、抽样方法）。难度定位<strong>中档</strong>，核心在于准确读取图表信息和规范的概率计算步骤。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -67,12 +83,14 @@ MathJax = {
 
 <h3>一、统计基础：三种抽样方法</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>方法</th><th>特点</th><th>适用场景</th><th>操作步骤</th><th>广东卷考法</th></tr>
 <tr><td><strong>简单随机抽样</strong></td><td>每个个体等可能入选</td><td>总体容量小</td><td>抽签法/随机数法</td><td>直接概念判断</td></tr>
 <tr><td><strong>分层抽样</strong></td><td>按层按比例抽取</td><td>总体有明显分层</td><td>各层抽样比 = 总体抽样比</td><td><strong>高频！</strong>计算各层样本数</td></tr>
 <tr><td><strong>系统抽样</strong></td><td>等间隔抽取</td><td>总体容量大且有序</td><td>编号→分段→定起点→等距抽取</td><td>概念判断+计算</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>分层抽样公式</strong>：某层样本数 = 该层个体数 × 总体抽样比
@@ -86,12 +104,14 @@ MathJax = {
 
 <p>#### 1. 读图三要素</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>要素</th><th>含义</th><th>公式</th></tr>
 <tr><td><strong>纵坐标</strong></td><td>频率/组距</td><td>$\frac{频率}{组距}$，不是频率！</td></tr>
 <tr><td><strong>矩形面积</strong></td><td>频率</td><td>$面积 = \frac{频率}{组距} \times 组距 = 频率$</td></tr>
 <tr><td><strong>总面积</strong></td><td>1</td><td>所有矩形面积之和 = 1</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>关键提醒</strong>：频率分布直方图的纵坐标是<strong>频率/组距</strong>，不是频率！计算频率必须乘以组距。
@@ -99,6 +119,7 @@ MathJax = {
 
 <p>#### 2. 由图计算数字特征</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>特征</th><th>计算方法</th></tr>
 <tr><td><strong>频率</strong></td><td>矩形面积 = 纵坐标 × 组距</td></tr>
@@ -108,6 +129,7 @@ MathJax = {
 <tr><td><strong>平均数</strong></td><td>各矩形中点 × 对应频率，再求和</td></tr>
 <tr><td><strong>方差</strong></td><td>各矩形中点与平均数差的平方 × 频率，再求和</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>中位数计算步骤</strong>：
@@ -121,6 +143,7 @@ MathJax = {
 
 <p>#### 1. 事件关系</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>关系</th><th>定义</th><th>符号</th><th>概率公式</th></tr>
 <tr><td><strong>包含</strong></td><td>A发生则B必发生</td><td>$A \subseteq B$</td><td>$P(A) \leq P(B)$</td></tr>
@@ -130,6 +153,7 @@ MathJax = {
 <tr><td><strong>互斥</strong></td><td>A、B不能同时发生</td><td>$A \cap B = \varnothing$</td><td>$P(A \cup B) = P(A) + P(B)$</td></tr>
 <tr><td><strong>对立</strong></td><td>互斥且必有一个发生</td><td>$\bar{A}$</td><td>$P(A) + P(\bar{A}) = 1$</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>关键区分</strong>：互斥 ≠ 对立。对立一定互斥，互斥不一定对立。
@@ -137,6 +161,7 @@ MathJax = {
 
 <p>#### 2. 概率基本性质</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>性质</th><th>内容</th><th>说明</th></tr>
 <tr><td><strong>非负性</strong></td><td>$P(A) \geq 0$</td><td>概率不可能为负</td></tr>
@@ -144,6 +169,7 @@ MathJax = {
 <tr><td><strong>可加性</strong></td><td>互斥事件：$P(A_1 \cup A_2 \cup ... \cup A_n) = P(A_1) + ... + P(A_n)$</td><td>互斥才能直接相加</td></tr>
 <tr><td><strong>对立公式</strong></td><td>$P(\bar{A}) = 1 - P(A)$</td><td><strong>正难则反</strong>的数学思想</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -159,6 +185,7 @@ MathJax = {
 
 <p>#### 2. 常用计数方法</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>方法</th><th>适用场景</th><th>公式</th></tr>
 <tr><td><strong>列举法</strong></td><td>基本事件数少（≤20）</td><td>一一列出</td></tr>
@@ -167,6 +194,7 @@ MathJax = {
 <tr><td><strong>分步乘法</strong></td><td>分步完成</td><td>各步方法数相乘</td></tr>
 <tr><td><strong>分类加法</strong></td><td>分类完成</td><td>各类方法数相加</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>广东卷特点</strong>：古典概型题常与频率分布直方图结合，先由直方图得频率，再用频率估计概率，最后计算复合事件概率。
@@ -182,12 +210,14 @@ MathJax = {
 
 <p>#### 2. 独立事件的性质</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>性质</th><th>内容</th></tr>
 <tr><td><strong>对称性</strong></td><td>A与B独立 ⟺ B与A独立</td></tr>
 <tr><td><strong>与对立独立</strong></td><td>A与B独立 ⟺ A与$\bar{B}$独立 ⟺ $\bar{A}$与B独立 ⟺ $\bar{A}$与$\bar{B}$独立</td></tr>
 <tr><td><strong>乘法公式</strong></td><td>$P(A_1 \cap A_2 \cap ... \cap A_n) = P(A_1)P(A_2)...P(A_n)$（各事件独立）</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>与互斥的区别</strong>：

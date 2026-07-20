@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>有机化学推断与合成</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第三册 + 广东选择性考试</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：高频（近5年广东卷每年必考，有机推断题通常位于第20-21题，分值约12-15分）；难度定位：中档~压轴（有机推断需综合运用官能团性质、反应条件、分子式信息，合成路线设计需逆向分析）；特色描述：广东卷有机题常结合医药合成、材料制备、天然产物提取等真实情境，注重绿色化学理念（原子经济性、催化剂选择）；赋分提示：有机推断是广东化学卷压轴题之一，官能团识别和反应类型判断是得分基础，合成路线设计是高分突破点</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -174,6 +186,7 @@ MathJax = {
 
 <h3>有机反应类型总结</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>反应类型</th><th>定义</th><th>典型试剂/条件</th><th>典型官能团变化</th><th>实例</th></tr>
 <tr><td><strong>取代反应</strong></td><td>原子/基团被其他原子/基团替代</td><td>卤素/Fe、浓硝酸/浓硫酸、NaOH/△</td><td>-H→-X、-H→-NO₂、-X→-OH</td><td>苯的溴代、酯化、水解</td></tr>
@@ -184,9 +197,11 @@ MathJax = {
 <tr><td><strong>加聚反应</strong></td><td>不饱和单体加成聚合</td><td>催化剂、加热加压</td><td>C=C→链状高分子</td><td>乙烯→聚乙烯</td></tr>
 <tr><td><strong>缩聚反应</strong></td><td>单体间脱去小分子聚合</td><td>催化剂、加热</td><td>-OH+-COOH→酯键</td><td>对苯二甲酸+乙二醇→涤纶</td></tr>
 </table>
+</div>
 
 <h3>官能团特征反应与检验速查</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>官能团</th><th>特征反应</th><th>检验方法</th><th>现象</th></tr>
 <tr><td>-OH（醇）</td><td>与Na反应、氧化为醛/酮</td><td>加入Na</td><td>产生无色气体（H₂）</td></tr>
@@ -198,6 +213,7 @@ MathJax = {
 <tr><td>-COOR（酯）</td><td>水解反应</td><td>NaOH/△后酸化</td><td>分层消失或产生羧酸气味</td></tr>
 <tr><td>-NH₂</td><td>碱性、与酸反应</td><td>加入HCl</td><td>溶解</td></tr>
 </table>
+</div>
 
 <h3>合成路线设计常用策略</h3>
 

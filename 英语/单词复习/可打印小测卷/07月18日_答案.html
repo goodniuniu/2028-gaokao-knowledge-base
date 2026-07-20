@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月18日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">transform</div><div class="def">v. 改变，使…变形；转换</div></td><td><div class="word">defend</div><div class="def">v. 辩护；防护</div></td><td><div class="word">kilometre</div><div class="def">n. [计量] 公里；[计量] 千米</div></td><td><div class="word">talk</div><div class="def">v. 说；谈话；讨论 n. 谈话；演讲；空谈</div></td></tr>
 <tr><td><div class="word">girl</div><div class="def">n. 女孩；姑娘，未婚女子；女职员，女演员；（男人的）女朋友</div></td><td><div class="word">ambassador</div><div class="def">n. 大使；代表；使节</div></td><td><div class="word">grass</div><div class="def">n. 草；草地，草坪 v. 放牧；使……长满草；使……吃草</div></td><td><div class="word">billion</div><div class="def">n. 十亿；大量 num. 十亿 adj. 十亿的</div></td></tr>
 <tr><td><div class="word">summary</div><div class="def">adj. 简易的；扼要的 n. 概要，摘要，总结</div></td><td><div class="word">Moslem</div><div class="def">adj. 穆斯林的；伊斯兰教的；回教的 n. 穆斯林；穆罕默德信徒；伊斯兰</div></td><td><div class="word">wire</div><div class="def">n. 电线；金属丝；电报 v. 拍电报；给…装电线</div></td><td><div class="word">morning</div><div class="def">n. 早晨；黎明；初期</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">wine</div><div class="def">n. 酒，葡萄酒；紫红色 v. 喝酒</div></td><td><div class="word">physician</div><div class="def">n. [医] 医师；内科医师</div></td><td><div class="word">hillside</div><div class="def">n. 山坡，山腹；山腰</div></td><td><div class="word">Britain</div><div class="def">n. 英国；不列颠</div></td></tr>
 <tr><td><div class="word">hero</div><div class="def">n. 英雄；男主角，男主人公</div></td><td><div class="word">plan</div><div class="def">n. 计划；平面图 v. 计划；设计；打算</div></td><td><div class="word">mourn</div><div class="def">v. 哀悼；忧伤；服丧</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

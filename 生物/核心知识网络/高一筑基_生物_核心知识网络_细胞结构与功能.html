@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>细胞结构与功能</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版必修第一册 / 2023-2025广东选择性考试·生物细胞专题</td></tr>
@@ -55,6 +66,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★☆☆☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -86,6 +98,7 @@ MathJax = {
 
 <h4>2. 细胞器速查表</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>细胞器</th><th>结构</th><th>功能</th><th>分布</th><th>广东考点</th></tr>
 <tr><td>线粒体</td><td>双层膜，内膜折叠成嵴</td><td>有氧呼吸主要场所（第二、三阶段）</td><td>真核动植物</td><td>供能中心，与代谢旺盛程度正相关</td></tr>
@@ -97,6 +110,7 @@ MathJax = {
 <tr><td>液泡</td><td>单层膜，含细胞液</td><td>储存、维持渗透压、调节pH</td><td>成熟植物细胞</td><td>质壁分离/复原实验</td></tr>
 <tr><td>中心体</td><td>无膜，两个中心粒</td><td>与有丝分裂纺锤体形成有关</td><td>动物细胞和低等植物</td><td>前期发出星射线</td></tr>
 </table>
+</div>
 
 <h4>3. 分泌蛋白合成与分泌途径（蛋白质分选）</h4>
 
@@ -115,6 +129,7 @@ MathJax = {
 
 <h4>5. 原核细胞 vs 真核细胞对比</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>特征</th><th>原核细胞</th><th>真核细胞</th></tr>
 <tr><td>核膜</td><td>无</td><td>有</td></tr>
@@ -124,6 +139,7 @@ MathJax = {
 <tr><td>代表生物</td><td>细菌、蓝藻、支原体</td><td>动植物、真菌</td></tr>
 <tr><td>分裂方式</td><td>二分裂</td><td>有丝分裂/减数分裂/无丝分裂</td></tr>
 </table>
+</div>
 
 <h3>方法步骤</h3>
 
@@ -160,6 +176,7 @@ MathJax = {
 
 <h4>物质跨膜运输方式判断</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>方式</th><th>方向</th><th>是否需载体</th><th>是否耗能</th><th>例子</th></tr>
 <tr><td>自由扩散</td><td>高→低</td><td>否</td><td>否</td><td>O₂、CO₂、水、甘油、乙醇、苯</td></tr>
@@ -167,6 +184,7 @@ MathJax = {
 <tr><td>主动运输</td><td>低→高</td><td>是</td><td>是</td><td>小肠上皮吸收葡萄糖/氨基酸、离子泵</td></tr>
 <tr><td>胞吞/胞吐</td><td>—</td><td>否</td><td>是</td><td>蛋白质分泌、吞噬细胞吞噬</td></tr>
 </table>
+</div>
 
 <blockquote>
 判断口诀：顺浓度不耗能是扩散，逆浓度耗能是主动；大分子靠胞吞胞吐。

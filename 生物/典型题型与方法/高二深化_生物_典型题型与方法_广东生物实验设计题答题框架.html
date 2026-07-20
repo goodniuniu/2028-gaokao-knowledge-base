@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>广东生物实验设计题答题框架</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>广东选择性考试实验探究题 / 科学探究核心素养</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试、#广州一模、#深圳一模</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷非选择题中，实验设计/探究题占比约30%，约12-16分），中档偏难。广东生物实验题注重<strong>探究性</strong>（非验证性），要求设计实验思路、预测结果并得出结论。2024年考了基因功能探究、植物激素调控、碳浓缩机制验证等。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -84,6 +96,7 @@ Step 5：得出结论 → 结果与结论一一对应</code></pre>
 
 <h3>三、实验设计核心原则</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>原则</th><th>含义</th><th>广东卷常见考法</th></tr>
 <tr><td><strong>对照原则</strong></td><td>设置对照组，排除无关因素干扰</td><td>问"为什么设置X组？"——答"作为对照，排除...干扰"</td></tr>
@@ -91,9 +104,11 @@ Step 5：得出结论 → 结果与结论一一对应</code></pre>
 <tr><td><strong>平行重复原则</strong></td><td>每组多个样本，减少偶然误差</td><td>问"为什么每组设置多个样本？"——答"平行重复，减少误差"</td></tr>
 <tr><td><strong>科学性原则</strong></td><td>实验设计符合生物学原理</td><td>实验原理是否合理</td></tr>
 </table>
+</div>
 
 <h4>3.1 对照类型速查</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>对照类型</th><th>定义</th><th>示例</th></tr>
 <tr><td><strong>空白对照</strong></td><td>对照组不施加任何处理</td><td>实验组加激素，对照组加等量蒸馏水</td></tr>
@@ -101,6 +116,7 @@ Step 5：得出结论 → 结果与结论一一对应</code></pre>
 <tr><td><strong>相互对照</strong></td><td>几个实验组相互比较</td><td>不同浓度梯度的激素处理</td></tr>
 <tr><td><strong>条件对照</strong></td><td>对照组施加与实验组不同的条件</td><td>验证胰岛素降血糖，对照组注射生理盐水</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -117,6 +133,7 @@ Step 5：得出结论 → 结果与结论一一对应</code></pre>
 
 <p><strong>示例</strong>：验证生长素对根生长的作用</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>步骤</th><th>内容</th></tr>
 <tr><td>选材</td><td>取生长状况相同的萌发的绿豆种子若干</td></tr>
@@ -125,14 +142,17 @@ Step 5：得出结论 → 结果与结论一一对应</code></pre>
 <tr><td>控制</td><td>置于相同且适宜的温度、光照条件下培养</td></tr>
 <tr><td>检测</td><td>一段时间后测量各组根的平均长度</td></tr>
 </table>
+</div>
 
 <h4>4.2 预期结果与结论模板</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>实验类型</th><th>结果写法</th><th>结论写法</th></tr>
 <tr><td><strong>验证性实验</strong></td><td>若...，则...（结果唯一）</td><td>验证...成立</td></tr>
 <tr><td><strong>探究性实验</strong></td><td>若...，则...；若...，则...（分情况）</td><td>结果与结论一一对应</td></tr>
 </table>
+</div>
 
 <p><strong>探究性实验结果预测（分情况讨论）</strong>：</p>
 
@@ -171,6 +191,7 @@ Step 5：得出结论 → 结果与结论一一对应</code></pre>
 
 <p><strong>2024广东卷示例</strong>：验证黑藻的碳浓缩优势</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>要素</th><th>内容</th></tr>
 <tr><td>实验目的</td><td>验证黑藻在低CO₂条件下具有碳浓缩优势</td></tr>
@@ -180,6 +201,7 @@ Step 5：得出结论 → 结果与结论一一对应</code></pre>
 <tr><td>控制条件</td><td>CO₂浓度较低且相同，光照强度相同，温度相同</td></tr>
 <tr><td>测量指标</td><td>O₂释放量</td></tr>
 </table>
+</div>
 
 <h4>5.4 类型四：数据分析实验（从表格/曲线提取结论）</h4>
 
@@ -198,6 +220,7 @@ Step 5：得出结论 → 结果与结论一一对应</code></pre>
 
 <h4>6.1 酶相关实验</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>实验目的</th><th>关键控制</th><th>检测指标</th></tr>
 <tr><td>验证酶的高效性</td><td>无机催化剂 vs 酶</td><td>气泡产生速率</td></tr>
@@ -205,6 +228,7 @@ Step 5：得出结论 → 结果与结论一一对应</code></pre>
 <tr><td>探究温度对酶活性的影响</td><td>设置温度梯度</td><td>底物分解速率</td></tr>
 <tr><td>探究pH对酶活性的影响</td><td>设置pH梯度</td><td>底物分解速率</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>注意</strong>：探究温度时，不能选H₂O₂（自身受热分解）；探究pH时，不能选淀粉（酸性条件自发水解）。
@@ -212,43 +236,52 @@ Step 5：得出结论 → 结果与结论一一对应</code></pre>
 
 <h4>6.2 光合/呼吸相关实验</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>实验目的</th><th>关键控制</th><th>检测指标</th></tr>
 <tr><td>探究光照强度对光合速率的影响</td><td>设置光照梯度，CO₂浓度恒定</td><td>O₂释放量或CO₂吸收量</td></tr>
 <tr><td>探究CO₂浓度对光合速率的影响</td><td>设置CO₂梯度，光照恒定</td><td>同上</td></tr>
 <tr><td>验证呼吸作用产生CO₂</td><td>排除光合作用干扰（遮光）</td><td>澄清石灰水变浑浊</td></tr>
 </table>
+</div>
 
 <h4>6.3 激素调节实验</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>实验目的</th><th>关键控制</th><th>检测指标</th></tr>
 <tr><td>验证生长素的两重性</td><td>设置浓度梯度</td><td>根/茎长度</td></tr>
 <tr><td>探究某激素的作用</td><td>实验组加激素，对照组不加</td><td>相应生理指标</td></tr>
 <tr><td>验证激素间的相互作用</td><td>单独 vs 组合处理</td><td>综合效应</td></tr>
 </table>
+</div>
 
 <h4>6.4 遗传实验</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>实验目的</th><th>关键控制</th><th>检测指标</th></tr>
 <tr><td>判断显隐性</td><td>杂交/自交，观察F₁</td><td>性状分离比</td></tr>
 <tr><td>判断基因位置</td><td>正交、反交或伴性遗传设计</td><td>性状与性别是否关联</td></tr>
 <tr><td>验证分离定律</td><td>杂合子自交</td><td>3:1分离比</td></tr>
 </table>
+</div>
 
 <h4>6.5 基因工程实验</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>实验目的</th><th>关键控制</th><th>检测指标</th></tr>
 <tr><td>验证基因功能</td><td>过表达/敲低/敲除</td><td>表型变化</td></tr>
 <tr><td>检测基因表达</td><td>RT-PCR/Western blot</td><td>mRNA/蛋白质水平</td></tr>
 </table>
+</div>
 
 <hr>
 
 <h3>七、广东卷实验题特色素材</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>年份</th><th>情境</th><th>实验类型</th><th>核心能力</th></tr>
 <tr><td>2024</td><td>黑藻碳浓缩优势验证</td><td>独立设计</td><td>光合作用原理应用</td></tr>
@@ -257,6 +290,7 @@ Step 5：得出结论 → 结果与结论一一对应</code></pre>
 <tr><td>2024</td><td>ZNF862基因功能探究</td><td>独立设计</td><td>遗传实验设计</td></tr>
 <tr><td>2023</td><td>免疫检查点联合化疗</td><td>数据分析</td><td>免疫调节</td></tr>
 </table>
+</div>
 
 <hr>
 

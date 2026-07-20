@@ -23,6 +23,20 @@
   .btn-print { background: #3498db; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #2980b9; }
   .btn-answer { background: #27ae60; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -36,7 +50,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印小测卷</button>
   <a class="no-print btn-answer" href="08月14日_答案.html">📖 查看答案</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">countryside</div><div class="blank"></div></td><td><div class="word">chief</div><div class="blank"></div></td><td><div class="word">automatic</div><div class="blank"></div></td><td><div class="word">lamp</div><div class="blank"></div></td></tr>
 <tr><td><div class="word">cry</div><div class="blank"></div></td><td><div class="word">Antarctic</div><div class="blank"></div></td><td><div class="word">conduct</div><div class="blank"></div></td><td><div class="word">bury</div><div class="blank"></div></td></tr>
 <tr><td><div class="word">obey</div><div class="blank"></div></td><td><div class="word">stable</div><div class="blank"></div></td><td><div class="word">lamb</div><div class="blank"></div></td><td><div class="word">fantastic</div><div class="blank"></div></td></tr>
@@ -69,6 +84,7 @@
 <tr><td><div class="word">shoot</div><div class="blank"></div></td><td><div class="word">realize</div><div class="blank"></div></td><td><div class="word">budget</div><div class="blank"></div></td><td><div class="word">actual</div><div class="blank"></div></td></tr>
 <tr><td><div class="word">tension</div><div class="blank"></div></td><td><div class="word">chest</div><div class="blank"></div></td><td></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

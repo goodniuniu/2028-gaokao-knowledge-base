@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>幂函数与指数函数</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第一册第三章、第四章</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：中频；难度：中档；指数函数与对数函数图象性质是选填常考点，比较大小的题型在广东卷中稳定出现</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -80,6 +96,7 @@ MathJax = {
 </ul>
 
 <h3>三、指数函数 $y = a^x$（$a > 0$ 且 $a \neq 1$）</h3>
+<div class="table-wrap">
 <table>
 <tr><th>性质</th><th>$a > 1$</th><th>$0 < a < 1$</th></tr>
 <tr><td>图象</td><td>上升，过 $(0, 1)$</td><td>下降，过 $(0, 1)$</td></tr>
@@ -88,6 +105,7 @@ MathJax = {
 <tr><td>单调性</td><td>在 $\mathbb{R}$ 上递增</td><td>在 $\mathbb{R}$ 上递减</td></tr>
 <tr><td>函数值</td><td>$x > 0$ 时 $y > 1$；$x < 0$ 时 $0 < y < 1$</td><td>$x > 0$ 时 $0 < y < 1$；$x < 0$ 时 $y > 1$</td></tr>
 </table>
+</div>
 
 <ul>
 <li><strong>底数对图象的影响</strong>：在第一象限，底数越大图象越靠上（$0 < a_1 < a_2 < 1 < a_3 < a_4$ 时，$y = a_4^x$ 在最上方）</li>

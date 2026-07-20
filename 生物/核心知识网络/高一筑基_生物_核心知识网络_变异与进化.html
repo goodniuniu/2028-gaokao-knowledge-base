@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>🧬 变异与进化 | 核心知识网络</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版必修第二册 第5章~第6章 / 广东选择性考试</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷5次考查）；中档；长句表达重灾区，尤其"解释进化原因""分析遗传病来源"类设问；赋分提示：进化长句题逻辑链完整度直接影响赋分档次</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -66,15 +78,18 @@ MathJax = {
 
 <h4>一、可遗传变异的三大来源</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>变异类型</th><th>本质</th><th>发生时期</th><th>特点</th><th>意义</th></tr>
 <tr><td><strong>基因突变</strong></td><td>碱基对的替换、增添或缺失 → 基因结构改变</td><td>主要：DNA复制时（有丝分裂间期/减Ⅰ间期）</td><td>①普遍性 ②随机性 ③不定向性 ④低频性 ⑤多害少利性</td><td>①新基因产生的途径 ②生物变异的根本来源 ③生物进化的原始材料</td></tr>
 <tr><td><strong>基因重组</strong></td><td>原有基因的重新组合</td><td>①减Ⅰ前期（交叉互换）②减Ⅰ后期（自由组合）③基因工程（体外重组）</td><td>只产生新基因型，不产生新基因</td><td>生物变异的重要来源，生物多样性原因之一</td></tr>
 <tr><td><strong>染色体变异</strong></td><td>染色体结构或数目改变</td><td>有丝/减数分裂过程中</td><td>可在显微镜下观察</td><td>往往导致严重后果</td></tr>
 </table>
+</div>
 
 <h4>二、染色体结构变异</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>类型</th><th>图示简记</th><th>结果</th><th>实例</th></tr>
 <tr><td><strong>缺失</strong></td><td>染色体断片丢失</td><td>基因数目减少</td><td>猫叫综合征（5号染色体短臂缺失）</td></tr>
@@ -82,6 +97,7 @@ MathJax = {
 <tr><td><strong>易位</strong></td><td>非同源染色体间片段交换</td><td>基因排列改变</td><td>慢性粒细胞白血病（费城染色体）</td></tr>
 <tr><td><strong>倒位</strong></td><td>染色体片段180°翻转</td><td>基因排列顺序改变</td><td>某些昆虫遗传</td></tr>
 </table>
+</div>
 
 <blockquote>
 ⚠️ <strong>易位 ≠ 交叉互换</strong>：易位发生在<strong>非同源染色体</strong>之间；交叉互换发生在<strong>同源染色体的非姐妹染色单体</strong>之间。
@@ -103,12 +119,14 @@ MathJax = {
 
 <h4>四、人类遗传病</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>类型</th><th>遗传特点</th><th>常见实例</th></tr>
 <tr><td><strong>单基因遗传病</strong></td><td>孟德尔遗传规律</td><td>白化病（常隐）、血友病（X隐）、抗VD佝偻病（X显）</td></tr>
 <tr><td><strong>多基因遗传病</strong></td><td>易受环境影响，群体发病率高</td><td>青少年型糖尿病、冠心病、唇腭裂</td></tr>
 <tr><td><strong>染色体异常遗传病</strong></td><td>往往造成严重后果，流产率高</td><td>21三体综合征、猫叫综合征</td></tr>
 </table>
+</div>
 
 <blockquote>
 监测预防：遗传咨询 + 产前诊断（羊水检查、B超检查、基因诊断）
@@ -180,6 +198,7 @@ a基因频率 = aa基因型频率 + 1/2 × Aa基因型频率</code></pre>
 
 <h3>广东长句表达模板</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>设问类型</th><th>答题模板</th></tr>
 <tr><td>解释基因突变产生新基因的原因</td><td>基因突变是DNA分子中发生碱基对的替换、增添或缺失，引起基因结构的改变，从而产生新基因</td></tr>
@@ -187,6 +206,7 @@ a基因频率 = aa基因型频率 + 1/2 × Aa基因型频率</code></pre>
 <tr><td>解释隔离导致新物种形成</td><td>隔离阻断不同种群间的基因交流，使种群各自在不同环境下积累变异，最终形成生殖隔离，产生新物种</td></tr>
 <tr><td>分析遗传病发病率高的原因</td><td>该地区人群中携带致病基因的个体比例高，且近亲结婚（或随机交配）使隐性致病基因纯合的概率增加</td></tr>
 </table>
+</div>
 
 <hr>
 

@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>解三角形通法（正弦定理·余弦定理·面积公式综合应用）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教A版必修第二册（或必修第一册第五章） / 2024~2025学年广州各区高一下期末试卷（单选第4-6题、填空第13-14题、解答第18题）</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期末、三校/五校联考）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一下期末<strong>核心解答题板块</strong>。广州各区期末卷解答题第18题（12-14分）固定考查解三角形，通常分为三问：第1问用正/余弦定理求边或角；第2问求面积或周长最值；第3问（名校联考）可能考查三角形形状判定或多解讨论。2024-2025学年广州越秀区、天河区、白云区期末第18题均为此结构，说明广东卷对解三角形的<strong>公式综合运用和范围讨论</strong>要求较高。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -117,6 +133,7 @@ MathJax = {
 
 <p>#### 条件-定理匹配表</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>已知条件</th><th>选用定理</th><th>可求量</th><th>注意点</th></tr>
 <tr><td>两角一边（AAS/ASA）</td><td>正弦定理</td><td>所有边和角</td><td>先用内角和求第三角</td></tr>
@@ -124,6 +141,7 @@ MathJax = {
 <tr><td>三边（SSS）</td><td>余弦定理求角</td><td>所有角</td><td>可能有多解，需判断</td></tr>
 <tr><td>两边一对角（SSA）</td><td><strong>正弦定理或余弦定理</strong></td><td>需讨论</td><td><strong>高频陷阱！可能多解</strong></td></tr>
 </table>
+</div>
 
 <p>#### 详细解题流程（SSA多解讨论）</p>
 
@@ -179,12 +197,14 @@ MathJax = {
 
 <p><strong>方法</strong>：将条件统一化为边或统一化为角</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>条件特征</th><th>转化方向</th><th>判定结果</th></tr>
 <tr><td>含$a^2 + b^2$与$c^2$比较</td><td>统一为边（余弦定理）</td><td>$a^2+b^2>c^2$ → 锐角；$=c^2$ → 直角；$<c^2$ → 钝角</td></tr>
 <tr><td>含$\sin A$, $\sin B$, $\sin C$关系</td><td>统一为角（正弦定理）</td><td>利用三角恒等变换</td></tr>
 <tr><td>含$\cos A$, $\cos B$, $\cos C$</td><td>直接判断角</td><td>$\cos A > 0$ → $A$为锐角</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>典型结论</strong>：

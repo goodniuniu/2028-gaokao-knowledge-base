@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>🧬 有丝分裂与减数分裂 | 核心知识网络</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版必修第一册 第6章 / 必修第二册 第2章 / 广东选择性考试</td></tr>
@@ -57,6 +68,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东选择性考试</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高频（近5年广东卷5次考查，必考图像辨析）；中档偏难；图像辨析题是广东卷特色，常结合遗传病分析考查分裂过程；赋分提示：分裂时期判断错误会导致后续连锁失分，需确保图像辨析零失误</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -65,9 +77,15 @@ MathJax = {
 <h3>关键概念</h3>
 
 <h4>一、细胞周期</h4>
+<div class="figure">
+  <img src="../../图形库/生物/DNA复制半保留.png" alt="DNA半保留复制示意图">
+  <div class="figure-caption">图：DNA半保留复制（S期：每个DNA复制为两个，各含一条母链）</div>
+</div>
+
 
 <pre><code>细胞周期 = 分裂间期（G1期 + S期 + G2期）+ 分裂期（M期：前/中/后/末）</code></pre>
 
+<div class="table-wrap">
 <table>
 <tr><th>时期</th><th>主要事件</th><th>记忆关键词</th></tr>
 <tr><td><strong>G1期</strong></td><td>合成蛋白质、RNA，为DNA复制做准备</td><td>"复制准备"</td></tr>
@@ -75,13 +93,20 @@ MathJax = {
 <tr><td><strong>G2期</strong></td><td>合成蛋白质（纺锤丝相关），为分裂做准备</td><td>"分裂准备"</td></tr>
 <tr><td><strong>M期</strong></td><td>染色体分离，细胞分裂</td><td>"分裂执行"</td></tr>
 </table>
+</div>
 
 <blockquote>
 ⚠️ 只有<strong>连续分裂的细胞</strong>才有细胞周期（如根尖分生区、造血干细胞、皮肤生发层）。高度分化细胞（神经元、红细胞）无细胞周期。
 </blockquote>
 
 <h4>二、有丝分裂各时期特征</h4>
+<div class="figure">
+  <img src="../../图形库/生物/有丝分裂时期.png" alt="有丝分裂各时期示意图">
+  <div class="figure-caption">图：有丝分裂前、中、后、末四个时期染色体行为变化</div>
+</div>
 
+
+<div class="table-wrap">
 <table>
 <tr><th>时期</th><th>染色体行为</th><th>核膜核仁</th><th>纺锤体</th><th>染色体形态</th><th>记忆口诀</th></tr>
 <tr><td><strong>前期</strong></td><td>染色体出现，纺锤体形成</td><td>消失</td><td>形成</td><td>散乱分布</td><td>"膜仁消失现两体"</td></tr>
@@ -89,15 +114,22 @@ MathJax = {
 <tr><td><strong>后期</strong></td><td>着丝点分裂，姐妹染色单体分离，移向两极</td><td>无</td><td>有</td><td>染色体数目加倍</td><td>"点裂数加均两极"</td></tr>
 <tr><td><strong>末期</strong></td><td>染色体解螺旋，细胞分裂</td><td>重建</td><td>消失</td><td>染色质状态</td><td>"两消两现重开始"</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>后期是着丝点分裂，不是DNA复制！</strong> 染色体数目在后期加倍，DNA数目在间期加倍。
 </blockquote>
 
 <h4>三、减数分裂过程（核心：染色体复制一次，细胞分裂两次）</h4>
+<div class="figure">
+  <img src="../../图形库/生物/减数分裂染色体变化.png" alt="减数分裂染色体变化示意图">
+  <div class="figure-caption">图：减数分裂Ⅰ和Ⅱ染色体数目与行为变化（2n→n→2n→n）</div>
+</div>
+
 
 <p><strong>减数第一次分裂（减Ⅰ）——同源染色体分离</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>时期</th><th>主要特征</th><th>关键事件</th></tr>
 <tr><td><strong>减Ⅰ前期</strong></td><td>同源染色体联会，形成四分体</td><td><strong>交叉互换</strong>（基因重组）</td></tr>
@@ -105,6 +137,7 @@ MathJax = {
 <tr><td><strong>减Ⅰ后期</strong></td><td><strong>同源染色体分离</strong>，非同源染色体自由组合</td><td><strong>自由组合</strong>（基因重组）</td></tr>
 <tr><td><strong>减Ⅰ末期</strong></td><td>细胞分裂，染色体数目减半</td><td>2n → n</td></tr>
 </table>
+</div>
 
 <blockquote>
 减Ⅰ的核心是<strong>同源染色体</strong>的行为。联会、四分体、交叉互换都只在减Ⅰ前期发生。
@@ -112,6 +145,7 @@ MathJax = {
 
 <p><strong>减数第二次分裂（减Ⅱ）——姐妹染色单体分离</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>时期</th><th>主要特征</th><th>与有丝分裂对比</th></tr>
 <tr><td><strong>减Ⅱ前期</strong></td><td>染色体散乱分布</td><td>类似有丝分裂前期，但无同源染色体</td></tr>
@@ -119,6 +153,7 @@ MathJax = {
 <tr><td><strong>减Ⅱ后期</strong></td><td>着丝点分裂，姐妹染色单体分离</td><td><strong>与有丝分裂后期相同</strong></td></tr>
 <tr><td><strong>减Ⅱ末期</strong></td><td>细胞分裂，形成配子</td><td>—</td></tr>
 </table>
+</div>
 
 <blockquote>
 减Ⅱ<strong>无同源染色体</strong>（因为减Ⅰ已经分离），这是判断减Ⅱ的关键依据。
@@ -126,6 +161,7 @@ MathJax = {
 
 <h4>四、精卵形成对比</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>比较项目</th><th>精子形成</th><th>卵细胞形成</th></tr>
 <tr><td><strong>场所</strong></td><td>睾丸（精巢）</td><td>卵巢</td></tr>
@@ -134,6 +170,7 @@ MathJax = {
 <tr><td><strong>变形</strong></td><td>需要（细胞核变头部，细胞质变尾部）</td><td>不需要</td></tr>
 <tr><td><strong>发生时间</strong></td><td>从初情期开始，连续进行</td><td>胚胎期开始，分娩后暂停，性成熟后每月1个</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>同源染色体分离 ≠ 姐妹染色单体分离</strong>：前者发生在减Ⅰ后期，后者发生在减Ⅱ后期或有丝分裂后期。
@@ -141,6 +178,7 @@ MathJax = {
 
 <h4>五、有丝分裂 vs 减数分裂 核心对比</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>对比项</th><th>有丝分裂</th><th>减数分裂</th></tr>
 <tr><td><strong>分裂次数</strong></td><td>1次</td><td>2次</td></tr>
@@ -151,11 +189,13 @@ MathJax = {
 <tr><td><strong>子细胞数量</strong></td><td>2个</td><td>4个（精）或1个（卵）</td></tr>
 <tr><td><strong>意义</strong></td><td>生长、修复、保持遗传稳定性</td><td>产生配子，增加遗传多样性</td></tr>
 </table>
+</div>
 
 <h4>六、DNA / 染色体 / 染色单体 数量变化曲线</h4>
 
 <p><strong>设体细胞染色体数为2n，DNA数为2n</strong></p>
 
+<div class="table-wrap">
 <table>
 <tr><th>时期</th><th>染色体数</th><th>DNA数</th><th>染色单体数</th><th>判断要点</th></tr>
 <tr><td>间期（G1）</td><td>2n</td><td>2n</td><td>0</td><td>复制前</td></tr>
@@ -164,6 +204,7 @@ MathJax = {
 <tr><td><strong>后期</strong></td><td><strong>4n</strong></td><td>4n</td><td><strong>0</strong></td><td><strong>着丝点分裂，单体消失</strong></td></tr>
 <tr><td>末期</td><td>2n</td><td>2n</td><td>0</td><td>细胞分裂</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>减数分裂特殊点</strong>：</p>
@@ -197,12 +238,14 @@ MathJax = {
 
 <h3>曲线分析要点</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>曲线类型</th><th>上升原因</th><th>下降原因</th><th>关键点</th></tr>
 <tr><td>DNA曲线</td><td>间期复制（S期）</td><td>末期细胞分裂</td><td>有丝分裂：2n→4n→2n；减数分裂：2n→4n→2n→n</td></tr>
 <tr><td>染色体曲线</td><td>后期着丝点分裂</td><td>末期细胞分裂</td><td>有丝分裂：后期瞬间加倍；减Ⅱ：后期短暂加倍后恢复n</td></tr>
 <tr><td>染色单体曲线</td><td>间期复制出现</td><td>后期着丝点分裂消失</td><td>只有0或4n两种状态，不会出现2n</td></tr>
 </table>
+</div>
 
 <hr>
 

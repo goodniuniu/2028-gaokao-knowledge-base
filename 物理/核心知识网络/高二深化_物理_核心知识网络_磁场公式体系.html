@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>磁场公式体系</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第二册 / 2023-2025广东选择性考试·物理磁场专题</td></tr>
@@ -55,6 +66,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -119,12 +131,14 @@ MathJax = {
 
 <h4>5. 常见磁场模型</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>磁场类型</th><th>场强公式</th><th>特点</th></tr>
 <tr><td>通电直导线</td><td>B = kI/r</td><td>同心圆分布，越近越强</td></tr>
 <tr><td>通电螺线管</td><td>B = μ₀nI</td><td>内部近似匀强，外部近似为零</td></tr>
 <tr><td>匀强磁场</td><td>B = 常数</td><td>磁感线平行等距</td></tr>
 </table>
+</div>
 
 <h3>方法步骤</h3>
 

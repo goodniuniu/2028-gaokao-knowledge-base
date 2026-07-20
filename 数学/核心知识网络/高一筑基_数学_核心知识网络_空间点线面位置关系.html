@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>空间点线面位置关系（判定·性质·定理体系）</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教A版必修第二册第八章 / 2024~2025学年广州各区高一下期末试卷（单选第5-7题、多选第9-11题、解答第15-16题）</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#广东名校模拟（广州各区期末、三校/五校联考）</td></tr>
 <tr><td><strong>广东考情</strong></td><td>高一下期末<strong>核心解答题板块</strong>。广州各区期末卷的解答题第15-16题（每题12-14分）固定考查立体几何证明，总分占24-28分。命题以<strong>线面平行/垂直的证明</strong>为核心，偶尔结合空间角计算。名校联考难度更高，可能出现动点存在性问题。立体几何是广东卷区分中档生与优等生的关键板块。</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -69,12 +85,14 @@ MathJax = {
 
 <p>#### 1. 直线与直线的位置关系</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>关系</th><th>定义</th><th>图示特征</th><th>符号</th></tr>
 <tr><td><strong>相交</strong></td><td>同一平面内，有且只有一个公共点</td><td>交于一点</td><td>$a \cap b = P$</td></tr>
 <tr><td><strong>平行</strong></td><td>同一平面内，无公共点</td><td>方向相同</td><td>$a \parallel b$</td></tr>
 <tr><td><strong>异面</strong></td><td>不同在任何一个平面内，无公共点</td><td>既不平行也不相交</td><td>—</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>关键</strong>：异面直线是空间中特有的，平面几何中没有！
@@ -82,20 +100,24 @@ MathJax = {
 
 <p>#### 2. 直线与平面的位置关系</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>关系</th><th>定义</th><th>公共点个数</th><th>符号</th></tr>
 <tr><td><strong>直线在平面内</strong></td><td>直线上所有点都在平面内</td><td>无数个</td><td>$l \subset \alpha$</td></tr>
 <tr><td><strong>相交</strong></td><td>直线与平面有且只有一个公共点</td><td>1个</td><td>$l \cap \alpha = P$</td></tr>
 <tr><td><strong>平行</strong></td><td>直线与平面无公共点</td><td>0个</td><td>$l \parallel \alpha$</td></tr>
 </table>
+</div>
 
 <p>#### 3. 平面与平面的位置关系</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>关系</th><th>定义</th><th>公共点</th><th>符号</th></tr>
 <tr><td><strong>相交</strong></td><td>两个平面有公共点，且公共点在一条直线上</td><td>一条直线（交线）</td><td>$\alpha \cap \beta = l$</td></tr>
 <tr><td><strong>平行</strong></td><td>两个平面无公共点</td><td>无</td><td>$\alpha \parallel \beta$</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>重要事实</strong>：两个平面相交，交线是一条直线，不是点！
@@ -107,6 +129,7 @@ MathJax = {
 
 <p>#### 【平行关系】</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>定理</th><th>内容</th><th>口诀</th><th>用途</th></tr>
 <tr><td><strong>线面平行判定</strong></td><td>平面外一条直线与平面内一条直线平行，则线面平行</td><td>"线线平行 → 线面平行"</td><td>证明线面平行</td></tr>
@@ -114,9 +137,11 @@ MathJax = {
 <tr><td><strong>面面平行判定</strong></td><td>一个平面内有两条相交直线都平行于另一个平面，则面面平行</td><td>"两相交线平行 → 面面平行"</td><td>证明面面平行</td></tr>
 <tr><td><strong>面面平行性质</strong></td><td>两平行平面同时与第三个平面相交，交线平行</td><td>"面面平行 → 线线平行"</td><td>找平行线</td></tr>
 </table>
+</div>
 
 <p>#### 【垂直关系】</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>定理</th><th>内容</th><th>口诀</th><th>用途</th></tr>
 <tr><td><strong>线面垂直判定</strong></td><td>一条直线与平面内两条相交直线都垂直，则线面垂直</td><td>"两相交线垂直 → 线面垂直"</td><td>证明线面垂直（最常用）</td></tr>
@@ -124,6 +149,7 @@ MathJax = {
 <tr><td><strong>面面垂直判定</strong></td><td>一个平面过另一个平面的一条垂线，则面面垂直</td><td>"线面垂直 → 面面垂直"</td><td>证明面面垂直</td></tr>
 <tr><td><strong>面面垂直性质</strong></td><td>两平面垂直，一个平面内垂直于交线的直线垂直于另一平面</td><td>"面面垂直+线垂交线 → 线面垂直"</td><td>证明线面垂直（最常用）</td></tr>
 </table>
+</div>
 
 <blockquote>
 <strong>可直接使用</strong>：上述八大定理在解答题中可直接使用，无需重新证明。
@@ -196,6 +222,7 @@ MathJax = {
 
 <h3>五、空间几何计算辅助技巧</h3>
 
+<div class="table-wrap">
 <table>
 <tr><th>技巧</th><th>适用场景</th><th>操作</th></tr>
 <tr><td><strong>找中点</strong></td><td>证平行/垂直</td><td>中位线、三线合一</td></tr>
@@ -203,6 +230,7 @@ MathJax = {
 <tr><td><strong>展开法</strong></td><td>最短路径问题</td><td>侧面展开为平面</td></tr>
 <tr><td><strong>作垂线</strong></td><td>求距离/高</td><td>找面的垂线，用等体积法</td></tr>
 </table>
+</div>
 
 <hr>
 

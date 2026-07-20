@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月16日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">funeral</div><div class="def">n. 葬礼；麻烦事 adj. 丧葬的，出殡的</div></td><td><div class="word">compete</div><div class="def">v. 竞争；比赛；对抗</div></td><td><div class="word">gallon</div><div class="def">n. 加仑（容量单位）</div></td><td><div class="word">conduct</div><div class="def">v. 导电；带领 n. 进行；行为；实施</div></td></tr>
 <tr><td><div class="word">worth</div><div class="def">adj. 值…的 n. 价值；财产</div></td><td><div class="word">discovery</div><div class="def">n. 发现，发觉；被发现的事物</div></td><td><div class="word">centre</div><div class="def">v. 以…为中心 n. 中心 adj. 中央的</div></td><td><div class="word">abrupt</div><div class="def">adj. 生硬的；突然的；唐突的；陡峭的</div></td></tr>
 <tr><td><div class="word">hot</div><div class="def">adj. 热的；辣的；热情的；激动的；紧迫的 adv. 热；紧迫地 v. 变热 n. (Hot)人名；(塞)霍特；(法)奥特</div></td><td><div class="word">solar</div><div class="def">adj. 太阳的；日光的；利用太阳光的；与太阳相关的 n. 日光浴室</div></td><td><div class="word">clothing</div><div class="def">n. （总称）[服装] 服装；帆装 v. 覆盖（clothe的ing形式）；给…穿衣</div></td><td><div class="word">emergency</div><div class="def">n. 紧急情况；突发事件；非常时刻 adj. 紧急的；备用的</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">worldwide</div><div class="def">adj. 全世界的 adv. 在世界各地</div></td><td><div class="word">on</div><div class="def">adv. 向前地；作用中，行动中；继续着 prep. 向，朝……；关于；在……之上；在……时候 adj. 开着的；发生着的，正在进行中 n. (On)人名；(日)温(姓、名)；(缅、柬、印)翁</div></td><td><div class="word">appendix</div><div class="def">n. 附录；阑尾；附加物</div></td><td><div class="word">Canada</div><div class="def">n. 加拿大（北美洲国家）</div></td></tr>
 <tr><td><div class="word">parent</div><div class="def">n. 父亲（或母亲）；父母亲；根源</div></td><td><div class="word">kill</div><div class="def">v. 杀死；扼杀；使终止；抵消 n. 杀戮；屠杀 adj. 致命的；致死的</div></td><td><div class="word">frighten</div><div class="def">v. 使惊吓；吓唬…</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

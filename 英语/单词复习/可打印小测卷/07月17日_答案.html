@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月17日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">unsafe</div><div class="def">adj. 不安全的；危险的；不安稳的</div></td><td><div class="word">term</div><div class="def">n. 术语；学期；期限；条款；(代数式等的)项 v. 把…叫做</div></td><td><div class="word">bureaucratic</div><div class="def">adj. 官僚的；官僚政治的</div></td><td><div class="word">gown</div><div class="def">n. 长袍，长外衣；礼服；睡袍；法衣 v. 使穿睡衣</div></td></tr>
 <tr><td><div class="word">crazy</div><div class="def">adj. 疯狂的；狂热的，着迷的</div></td><td><div class="word">outward</div><div class="def">adj. 向外的；外面的；公开的；外服的；肉体的 adv. 向外（等于outwards）；在外；显而易见地 n. 外表；外面；物质世界</div></td><td><div class="word">exploit</div><div class="def">v. 开发，开拓；剥削；开采 n. 勋绩；功绩</div></td><td><div class="word">divide</div><div class="def">v. 划分；除；分开；使产生分歧 n. [地理] 分水岭，分水线</div></td></tr>
 <tr><td><div class="word">line</div><div class="def">n. 路线，航线；排；绳 v. 排成一行；划线于；以线条标示；使…起皱纹</div></td><td><div class="word">bag</div><div class="def">n. 袋；猎获物；（俚）一瓶啤酒 v. 猎获；把…装入袋中；占据，私吞；使膨大</div></td><td><div class="word">sail</div><div class="def">v. 航行；启航，开船 n. 帆，篷；航行</div></td><td><div class="word">untrue</div><div class="def">adj. 不真实的；不合标准的；不忠实的；不正当的</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">night</div><div class="def">n. 夜晚，晚上；黑暗，黑夜 adj. 夜晚的，夜间的</div></td><td><div class="word">drawer</div><div class="def">n. 抽屉；开票人；出票人；起草者；酒馆侍</div></td><td><div class="word">wooden</div><div class="def">adj. 木制的；僵硬的，呆板的</div></td><td><div class="word">accessible</div><div class="def">adj. 易接近的；可进入的；可理解的</div></td></tr>
 <tr><td><div class="word">passive</div><div class="def">adj. 被动的，消极的；被动语态的 n. 被动语态</div></td><td><div class="word">wonder</div><div class="def">n. 惊奇；奇迹；惊愕 v. 怀疑；想知道；惊讶 adj. 奇妙的；非凡的</div></td><td><div class="word">ought</div><div class="def">aux. 应该，应当；大概 vi. 应该，应当；大概</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

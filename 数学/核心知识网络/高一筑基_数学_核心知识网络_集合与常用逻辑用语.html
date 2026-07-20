@@ -39,12 +39,27 @@ MathJax = {
   a:hover { color: #e74c3c; }
   hr { border: none; border-top: 1px solid #ddd; margin: 25px 0; }
   img { max-width: 100%; height: auto; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>集合与常用逻辑用语</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第一册第一章</td></tr>
@@ -54,6 +69,7 @@ MathJax = {
 <tr><td><strong>试卷来源</strong></td><td>#新高考Ⅰ卷·广东</td></tr>
 <tr><td><strong>广东考情</strong></td><td>考查频率：中频（选填基础题）；难度：基础；常以集合运算与不等式解集结合命题</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -80,12 +96,14 @@ MathJax = {
 </ul>
 
 <h3>三、集合的基本运算</h3>
+<div class="table-wrap">
 <table>
 <tr><th>运算</th><th>定义</th><th>Venn图特征</th></tr>
 <tr><td>并集 $A \cup B$</td><td>$\{x \mid x \in A$ 或 $x \in B\}$</td><td>两圆覆盖的全部区域</td></tr>
 <tr><td>交集 $A \cap B$</td><td>$\{x \mid x \in A$ 且 $x \in B\}$</td><td>两圆重叠区域</td></tr>
 <tr><td>补集 $\complement_U A$</td><td>$\{x \mid x \in U$ 且 $x \notin A\}$</td><td>全集中圆外区域</td></tr>
 </table>
+</div>
 
 <p><strong>运算律</strong>：</p>
 <ul>
@@ -99,6 +117,7 @@ MathJax = {
 <h3>四、充分条件与必要条件</h3>
 <p>设 $A = \{x \mid p(x)\}$，$B = \{x \mid q(x)\}$：</p>
 
+<div class="table-wrap">
 <table>
 <tr><th>条件关系</th><th>集合关系</th><th>口诀</th></tr>
 <tr><td>$p$ 是 $q$ 的充分不必要条件</td><td>$A \subsetneqq B$</td><td>小推大</td></tr>
@@ -106,6 +125,7 @@ MathJax = {
 <tr><td>$p$ 是 $q$ 的充要条件</td><td>$A = B$</td><td>等价</td></tr>
 <tr><td>$p$ 是 $q$ 的既不充分也不必要条件</td><td>$A \not\subseteq B$ 且 $B \not\subseteq A$</td><td>无关</td></tr>
 </table>
+</div>
 
 <h3>五、全称量词与存在量词</h3>
 <ul>

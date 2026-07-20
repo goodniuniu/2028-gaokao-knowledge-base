@@ -42,12 +42,23 @@ MathJax = {
   .figure { text-align: center; margin: 20px 0; }
   .figure img { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; }
   .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
   <a class="back" href="./">← 返回目录</a>
 <h1>电场公式体系</h1>
 
+<div class="table-wrap">
 <table>
 <tr><th>字段</th><th>内容</th></tr>
 <tr><td><strong>来源</strong></td><td>人教版选择性必修第二册 / 2023-2025广东选择性考试·物理电场专题</td></tr>
@@ -55,6 +66,7 @@ MathJax = {
 <tr><td><strong>难度</strong></td><td>★★★☆☆</td></tr>
 <tr><td><strong>状态</strong></td><td>⚠️待强化</td></tr>
 </table>
+</div>
 
 <hr>
 
@@ -115,6 +127,7 @@ MathJax = {
 
 <h4>5. 常见电场模型</h4>
 
+<div class="table-wrap">
 <table>
 <tr><th>电场类型</th><th>场强特点</th><th>电势特点</th></tr>
 <tr><td>点电荷</td><td>E = kQ/r²，径向分布</td><td>正电荷：φ>0，近大远小；负电荷相反</td></tr>
@@ -122,6 +135,7 @@ MathJax = {
 <tr><td>等量同种电荷</td><td>连线：中点为零；中垂线：中点最大，先增后减</td><td>中垂线从中心向两侧先降后升（正电荷）</td></tr>
 <tr><td>匀强电场</td><td>处处相等</td><td>沿场强方向均匀降低</td></tr>
 </table>
+</div>
 
 <h3>方法步骤</h3>
 

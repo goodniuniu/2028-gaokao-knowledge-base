@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月20日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">coat</div><div class="def">n. 外套 v. 覆盖…的表面</div></td><td><div class="word">ham</div><div class="def">n. 火腿；业余无线电爱好者；蹩脚演员 v. 表演过火 adj. 过火的；做作的</div></td><td><div class="word">depth</div><div class="def">n. [海洋] 深度；深奥</div></td><td><div class="word">somebody</div><div class="def">n. 大人物；重要人物 pron. 有人；某人</div></td></tr>
 <tr><td><div class="word">requirement</div><div class="def">n. 要求；必要条件；必需品</div></td><td><div class="word">guard</div><div class="def">n. 守卫；警戒；护卫队；防护装置 v. 警惕</div></td><td><div class="word">superman</div><div class="def">n. 超人，能力非凡的</div></td><td><div class="word">artist</div><div class="def">n. 艺术家；美术家（尤指画家）；大师</div></td></tr>
 <tr><td><div class="word">prove</div><div class="def">v. 证明；检验；显示</div></td><td><div class="word">cry</div><div class="def">v. 叫喊；哭出；大声说 n. 叫喊；叫声；口号；呼叫</div></td><td><div class="word">lunch</div><div class="def">n. 午餐 v. 吃午餐；供给午餐</div></td><td><div class="word">fourth</div><div class="def">adj. 第四的，第四个的；四分之一的 n. 第四，月的第四日；四分之一 num. 第四</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">optional</div><div class="def">adj. 可选择的，随意的 n. 选修科目</div></td><td><div class="word">stop</div><div class="def">v. 停止；堵塞；断绝 n. 停止；车站；障碍；逗留</div></td><td><div class="word">dustbin</div><div class="def">n. 垃圾箱；吃货</div></td><td><div class="word">screen</div><div class="def">n. 屏，幕；屏风 v. 筛；拍摄；放映；掩蔽</div></td></tr>
 <tr><td><div class="word">stocking</div><div class="def">n. 长袜</div></td><td><div class="word">flat</div><div class="def">adj. 平的；单调的；不景气的；干脆的；平坦的；扁平的；浅的 adv. （尤指贴着另一表面）平直地；断然地；水平地；直接地，完全地 n. 平地；公寓；平面 vt. 使变平；[音乐]使（音调）下降，尤指降半音 vi. 逐渐变平；[音乐]以降调唱（或奏）</div></td><td><div class="word">alone</div><div class="def">adj. 独自的；单独的；孤独的 adv. 独自地；单独地</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>

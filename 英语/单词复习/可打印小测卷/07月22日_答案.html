@@ -22,6 +22,20 @@
   .btn-print { background: #27ae60; color: white; border: none; padding: 10px 24px; font-size: 14pt; border-radius: 4px; cursor: pointer; margin: 15px auto; display: block; }
   .btn-print:hover { background: #219a52; }
   .btn-back { background: #3498db; color: white; border: none; padding: 8px 18px; font-size: 12pt; border-radius: 4px; cursor: pointer; margin: 10px auto; display: block; text-decoration: none; }
+
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; }
+  .figure-caption { color: #666; font-size: 10pt; margin-top: 5px; }
+
+  /* 响应式增强 */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    .figure img { border-radius: 4px; }
+    table { font-size: 10pt; }
+  }
+  .table-wrap { overflow-x: auto; }
 </style>
 </head>
 <body>
@@ -35,7 +49,8 @@
   </div>
   <button class="no-print btn-print" onclick="window.print()">🖨️ 打印答案</button>
   <a class="no-print btn-back" href="07月22日_小测.html">📝 返回小测卷</a>
-  <table>
+  <div class="table-wrap">
+<table>
 <tr><td><div class="word">elephant</div><div class="def">n. 象；大号图画纸</div></td><td><div class="word">pest</div><div class="def">n. 害虫；有害之物；讨厌的人</div></td><td><div class="word">separate</div><div class="def">v. 使分离；使分开；使分居 adj. 单独的；分开的；不同的；各自的； n. 分开；抽印本</div></td><td><div class="word">telegram</div><div class="def">n. 电报 vt. 用电报发送 vi. 发电报</div></td></tr>
 <tr><td><div class="word">pronounce</div><div class="def">v. 发音；宣判；断言</div></td><td><div class="word">electronic</div><div class="def">adj. 电子的 n. 电子电路；电子器件</div></td><td><div class="word">jump</div><div class="def">n. 跳跃；暴涨；惊跳 v. 跳跃；使跳跃；跳过；突升</div></td><td><div class="word">lot</div><div class="def">n. 份额；许多；命运；阄 adv. （与形容词和副词连用）很，非常；（与动词连用）非常 pron. 大量，许多 v. 分组，把…划分（常与out连用）；把（土地）划分成块</div></td></tr>
 <tr><td><div class="word">deliberately</div><div class="def">adv. 故意地；谨慎地；慎重地</div></td><td><div class="word">sculpture</div><div class="def">n. 雕塑；雕刻；刻蚀 v. 雕塑；雕刻；刻蚀</div></td><td><div class="word">steal</div><div class="def">v. 剽窃；偷偷地做；偷窃 n. 偷窃；便宜货；偷垒；断球</div></td><td><div class="word">miniskirt</div><div class="def">n. 超短裙；迷你短裙</div></td></tr>
@@ -68,6 +83,7 @@
 <tr><td><div class="word">beast</div><div class="def">n. 野兽；畜生，人面兽心的人</div></td><td><div class="word">practice</div><div class="def">n. 实践；练习；惯例 v. 练习；实习；实行</div></td><td><div class="word">reliable</div><div class="def">adj. 可靠的；可信赖的 n. 可靠的人</div></td><td><div class="word">evening</div><div class="def">n. 晚上；傍晚；（联欢性的）晚会；后期 adj. 在晚上的；为晚上的；晚上用的 int. 晚上好（等于good evening）</div></td></tr>
 <tr><td><div class="word">allocate</div><div class="def">v. 分配；拨出；使坐落于</div></td><td><div class="word">development</div><div class="def">n. 发展；开发；发育；住宅小区（专指由同一开发商开发的）；[摄] 显影</div></td><td><div class="word">paragraph</div><div class="def">n. 段落；短评；段落符号 v. 将…分段</div></td><td></td></tr>
   </table>
+</div>
   <div class="footer">2028高考英语词汇假期复习 | 广东新高考</div>
 </body>
 </html>
