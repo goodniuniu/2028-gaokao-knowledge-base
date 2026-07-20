@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>07月28日（第16天）单词词表 | 假期单词复习</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: "Microsoft YaHei", "SimSun", sans-serif; margin: 0; background: #f5f7fa; color: #333; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  .header { text-align: center; padding: 26px 16px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px; margin-bottom: 16px; }
+  .header h1 { margin: 0; font-size: 22pt; }
+  .header .sub { margin: 8px 0 0; font-size: 11pt; opacity: 0.9; }
+  .nav-links { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 14px 0 4px; }
+  .nav-links a { text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 10.5pt; background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+  .nav-links a:hover { background: rgba(255,255,255,0.32); }
+  .mark-stats { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin: 10px 0 0; font-size: 10.5pt; }
+  .mark-stats span { background: rgba(255,255,255,0.18); padding: 4px 12px; border-radius: 20px; }
+
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; background: white; padding: 10px 14px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 14px; }
+  .toolbar button, .toolbar select { font-size: 10.5pt; padding: 6px 12px; border-radius: 6px; border: 1px solid #d0d0e0; background: #f6f7ff; color: #444; cursor: pointer; }
+  .toolbar button:hover { background: #e8eaff; }
+  .toolbar .btn-primary { background: #667eea; color: white; border-color: #667eea; }
+  .toolbar .btn-primary:hover { background: #5a6fd6; }
+  .toolbar .spacer { flex: 1; }
+
+  .family-section { background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); padding: 14px 16px; margin-bottom: 14px; }
+  .family-section h2 { margin: 0 0 10px; font-size: 13pt; color: #2c3e50; }
+  .family-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { background: linear-gradient(135deg, #eef1ff 0%, #f6efff 100%); border: 1px solid #d5dbf5; border-radius: 8px; padding: 8px 12px; font-size: 10pt; max-width: 100%; }
+  .chip .chip-title { font-weight: bold; color: #5a6fd6; }
+  .chip .chip-words { color: #555; }
+
+  .table-wrap { overflow-x: auto; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+  table { width: 100%; border-collapse: collapse; font-size: 10.5pt; }
+  th { background: #667eea; color: white; padding: 9px 8px; text-align: left; font-size: 10pt; white-space: nowrap; }
+  td { border-bottom: 1px solid #eee; padding: 8px; vertical-align: top; }
+  tbody tr { cursor: pointer; }
+  tbody tr:hover { background: #f4f6ff; }
+  tbody tr.mark-know { background: #f2fbf4; }
+  tbody tr.mark-know:hover { background: #e6f7ea; }
+  tbody tr.mark-fuzzy { background: #fffaec; }
+  tbody tr.mark-fuzzy:hover { background: #fff5d8; }
+  tbody tr.mark-unknown { background: #fdf1f1; }
+  tbody tr.mark-unknown:hover { background: #fbe4e4; }
+  .col-num { width: 34px; color: #999; text-align: right; }
+  .col-word { font-weight: bold; color: #2c3e50; white-space: nowrap; font-size: 11.5pt; }
+  .col-tags { white-space: nowrap; }
+
+  .pos { display: inline-block; font-size: 8.5pt; padding: 1px 6px; border-radius: 4px; margin: 0 3px 2px 0; color: #fff; font-weight: bold; }
+  .pos-n { background: #3498db; }
+  .pos-v { background: #27ae60; }
+  .pos-adj { background: #e67e22; }
+  .pos-adv { background: #9b59b6; }
+  .pos-gray { background: #95a5a6; }
+  .pos-num { background: #16a085; }
+  .pos-int { background: #e91e63; }
+  .pos-abbr { background: #795548; }
+  .pos-pron { background: #5c6bc0; }
+
+  .affix { font-weight: bold; }
+  .affix-pre { color: #1976d2; }
+  .affix-suf { color: #8e24aa; }
+  .affix-mean { color: #888; font-size: 9pt; }
+  .stem { color: #2c3e50; font-weight: bold; }
+  .plus { color: #bbb; }
+  .col-memo { font-size: 9.5pt; white-space: nowrap; }
+
+  .def-placeholder { color: #aab; font-size: 9.5pt; font-style: italic; user-select: none; }
+  tbody tr.show .def-placeholder { display: none; }
+  .def-content { display: none; }
+  tbody tr.show .def-content { display: block; }
+  tbody.show-all .def-placeholder { display: none; }
+  tbody.show-all .def-content { display: block; }
+
+  .mark-btns { white-space: nowrap; }
+  .mark-btns button { border: 1px solid #ddd; background: #fafafa; border-radius: 5px; cursor: pointer; font-size: 10pt; padding: 2px 5px; margin-right: 2px; opacity: 0.45; }
+  .mark-btns button:hover { opacity: 1; }
+  .mark-btns button.active { opacity: 1; border-color: #667eea; box-shadow: 0 0 0 1px #667eea inset; }
+  .eye-btn { border: none; background: none; cursor: pointer; font-size: 11pt; padding: 2px 4px; opacity: 0.6; }
+  .eye-btn:hover { opacity: 1; }
+
+  .checklist { background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); padding: 14px 18px; margin-top: 14px; font-size: 10.5pt; }
+  .checklist h2 { margin: 0 0 8px; font-size: 12.5pt; color: #2c3e50; }
+  .checklist a { color: #667eea; }
+  .footer { text-align: center; margin: 20px 0 10px; color: #999; font-size: 9.5pt; }
+
+  @media (max-width: 600px) {
+    .header h1 { font-size: 17pt; }
+    table { font-size: 9.5pt; }
+    th, td { padding: 6px 5px; }
+    .col-memo { white-space: normal; }
+    .toolbar { padding: 8px; }
+  }
+  @media print {
+    body { background: white; }
+    .toolbar, .nav-links, .mark-btns, .eye-btn, .family-section .hint { display: none !important; }
+    .header { background: none; color: #333; border: 1px solid #ccc; }
+    .def-placeholder { display: none !important; }
+    .def-content { display: block !important; }
+    tbody tr { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📅 07月28日（第16天）| 假期单词复习</h1>
+    <p class="sub">第 1846-1968 词（共123词） · 建议用时：晨读30分钟 + 晚测15分钟</p>
+    <div class="nav-links">
+      <a href="../假期复习总入口.html">🏠 返回总入口</a>
+      <a href="../可打印小测卷/07月28日_小测.html">📝 小测卷</a>
+      <a href="../可打印小测卷/07月28日_答案.html">📋 答案</a>
+    </div>
+    <div class="mark-stats" id="markStats">
+      <span>✅ <b id="statKnow">0</b></span>
+      <span>⚠️ <b id="statFuzzy">0</b></span>
+      <span>❌ <b id="statUnknown">0</b></span>
+      <span>未标记 <b id="statUnmarked">0</b></span>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn-primary" onclick="showAll(true)">👁 全部显示</button>
+    <button onclick="showAll(false)">🙈 全部隐藏</button>
+    <select id="filterSelect" onchange="applyFilter()">
+      <option value="all">全部单词</option>
+      <option value="fuzzy">仅 ⚠️ 模糊</option>
+      <option value="unknown">仅 ❌ 不认识</option>
+      <option value="unmarked">仅未标记</option>
+    </select>
+    <span class="spacer"></span>
+    <button onclick="resetMarks()">🔄 重置标记</button>
+  </div>
+
+  <div class="family-section">
+    <h2>🧬 当日词族速览 <span class="hint" style="font-size:9pt;color:#999;font-weight:normal">（按共享前缀/后缀自动分组，成组记忆更高效）</span></h2>
+    <div class="family-chips"><div class="chip"><span class="chip-title">re-（再/重新） 家族（5词）</span><br><span class="chip-words">reasonable, reserve, reviewer, relative, restriction</span></div><div class="chip"><span class="chip-title">in-（不/向内） 家族（4词）</span><br><span class="chip-words">instant, Indicate, inside, increase</span></div><div class="chip"><span class="chip-title">-tion（名词：动作/状态） 家族（4词）</span><br><span class="chip-words">separation, evolution, temptation, occupation</span></div><div class="chip"><span class="chip-title">-al（形容词） 家族（3词）</span><br><span class="chip-words">technical, facial, chemical</span></div><div class="chip"><span class="chip-title">un-（不/非） 家族（3词）</span><br><span class="chip-words">undivided, unmarried, unfair</span></div></div>
+  </div>
+
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>#</th><th>单词</th><th>词性</th><th>助记拆解</th><th>释义（点击行显示）</th><th>掌握</th></tr>
+      </thead>
+      <tbody id="wordBody">
+        <tr data-word="brewery">
+          <td class="col-num">1</td>
+          <td class="col-word">brewery<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 啤酒厂</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="finish">
+          <td class="col-num">2</td>
+          <td class="col-word">finish<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 完成；结束；用完 <span class="pos pos-n">n.</span> 结束；完美；回味（葡萄酒）</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="cock">
+          <td class="col-num">3</td>
+          <td class="col-word">cock<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 公鸡；龙头；雄鸟；头目 <span class="pos pos-v">v.</span> 使竖起；使耸立；使朝上</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="fairly">
+          <td class="col-num">4</td>
+          <td class="col-word">fairly<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adv">adv.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">fair</span><span class="plus"> + </span><span class="affix affix-suf">-ly</span><span class="affix-mean">(副词)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adv">adv.</span> 相当地；公平地；简直 <span class="pos pos-n">n.</span> (Fairly)人名；(英)费尔利</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="grandparents">
+          <td class="col-num">5</td>
+          <td class="col-word">grandparents<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 祖父母（grandparent的复数）；外祖父母</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="instant">
+          <td class="col-num">6</td>
+          <td class="col-word">instant<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">in-</span><span class="affix-mean">(不/向内)</span><span class="plus"> + </span><span class="stem">stant</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 立即的；紧急的；紧迫的 <span class="pos pos-n">n.</span> 瞬间；立即；片刻</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="see">
+          <td class="col-num">7</td>
+          <td class="col-word">see<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 看见；理解；领会 <span class="pos pos-n">n.</span> (See)人名；(英)西伊；(柬)塞；(德)泽</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="back">
+          <td class="col-num">8</td>
+          <td class="col-word">back<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span><span class="pos pos-adv">adv.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 后面；背部；靠背；足球等的后卫；书报等的末尾 <span class="pos pos-v">v.</span> 支持；后退；背书；下赌注 <span class="pos pos-adv">adv.</span> 以前；向后地；来回地；上溯；回来；回原处 <span class="pos pos-adj">adj.</span> 后面的；过去的；拖欠的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="area">
+          <td class="col-num">9</td>
+          <td class="col-word">area<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 区域，地区；面积；范围</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="sacrifice">
+          <td class="col-num">10</td>
+          <td class="col-word">sacrifice<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 牺牲；祭品；供奉 <span class="pos pos-v">v.</span> 牺牲；献祭；亏本出售</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="Africa">
+          <td class="col-num">11</td>
+          <td class="col-word">Africa<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 非洲</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="collision">
+          <td class="col-num">12</td>
+          <td class="col-word">collision<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">colli</span><span class="plus"> + </span><span class="affix affix-suf">-sion</span><span class="affix-mean">(名词：动作/状态)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 碰撞；冲突；（意见，看法）的抵触；（政党等的）倾轧</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="homeland">
+          <td class="col-num">13</td>
+          <td class="col-word">homeland<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 祖国；故乡</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="technical">
+          <td class="col-num">14</td>
+          <td class="col-word">technical<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"><span class="stem">technic</span><span class="plus"> + </span><span class="affix affix-suf">-al</span><span class="affix-mean">(形容词)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 工艺的，科技的；技术上的；专门的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="ink">
+          <td class="col-num">15</td>
+          <td class="col-word">ink<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 签署；涂墨水于 <span class="pos pos-n">n.</span> 墨水，墨汁；油墨</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="faith">
+          <td class="col-num">16</td>
+          <td class="col-word">faith<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 信仰；信念；信任；忠实</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="never">
+          <td class="col-num">17</td>
+          <td class="col-word">never<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adv">adv.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adv">adv.</span> 从未；决不</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="quarrel">
+          <td class="col-num">18</td>
+          <td class="col-word">quarrel<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 吵架；争论；挑剔 <span class="pos pos-n">n.</span> 吵架；反目；怨言；争吵的原因；方头凿</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="undivided">
+          <td class="col-num">19</td>
+          <td class="col-word">undivided<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">un-</span><span class="affix-mean">(不/非)</span><span class="plus"> + </span><span class="stem">divided</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 专心的；专一的；未分开的；完整的 <span class="pos pos-v">v.</span> 未分开（undivide的过去式和过去分词）</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="separation">
+          <td class="col-num">20</td>
+          <td class="col-word">separation<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">separa</span><span class="plus"> + </span><span class="affix affix-suf">-tion</span><span class="affix-mean">(名词：动作/状态)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 分离，分开；间隔，距离；[法] 分居；缺口</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="Indicate">
+          <td class="col-num">21</td>
+          <td class="col-word">Indicate<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">in-</span><span class="affix-mean">(不/向内)</span><span class="plus"> + </span><span class="stem">dicate</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 表明；指出；预示；象征</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="will">
+          <td class="col-num">22</td>
+          <td class="col-word">will<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span><span class="pos pos-gray">aux.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 意志；决心；情感；遗嘱；意图；心愿 <span class="pos pos-v">v.</span> 决心要；遗赠；用意志力使 <span class="pos pos-gray">aux.</span> 将；愿意；必须</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="express">
+          <td class="col-num">23</td>
+          <td class="col-word">express<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-adj">adj.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">ex-</span><span class="affix-mean">(向外)</span><span class="plus"> + </span><span class="stem">press</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 表达；快递 <span class="pos pos-adj">adj.</span> 明确的；迅速的；专门的 <span class="pos pos-n">n.</span> 快车，快递，专使；捷运公司</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="fast">
+          <td class="col-num">24</td>
+          <td class="col-word">fast<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-adv">adv.</span><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 快速的，迅速的；紧的，稳固的 <span class="pos pos-adv">adv.</span> 迅速地；紧紧地；彻底地 <span class="pos pos-v">v.</span> 禁食，斋戒 <span class="pos pos-n">n.</span> 斋戒；绝食</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="open">
+          <td class="col-num">25</td>
+          <td class="col-word">open<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 公开的；敞开的；空旷的；坦率的；营业着的 <span class="pos pos-v">v.</span> 开始；展现 <span class="pos pos-n">n.</span> 公开；空旷；户外</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="pocket">
+          <td class="col-num">26</td>
+          <td class="col-word">pocket<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 口袋；钱；容器 <span class="pos pos-v">v.</span> 隐藏；忍受；将…放入衣袋 <span class="pos pos-adj">adj.</span> 小型的，袖珍的；金钱上的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="soul">
+          <td class="col-num">27</td>
+          <td class="col-word">soul<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 灵魂；心灵；精神；鬼魂 <span class="pos pos-adj">adj.</span> 美国黑人文化的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="branch">
+          <td class="col-num">28</td>
+          <td class="col-word">branch<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 分支；出现分歧 <span class="pos pos-n">n.</span> 树枝，分枝；分部；支流</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="tip">
+          <td class="col-num">29</td>
+          <td class="col-word">tip<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 给小费；翻倒；倾覆 <span class="pos pos-n">n.</span> 小费；尖端；小建议，小窍门；轻拍</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="mutton">
+          <td class="col-num">30</td>
+          <td class="col-word">mutton<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 羊肉</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="boom">
+          <td class="col-num">31</td>
+          <td class="col-word">boom<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 使兴旺；发隆隆声 <span class="pos pos-n">n.</span> 繁荣；吊杆；隆隆声</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="magazine">
+          <td class="col-num">32</td>
+          <td class="col-word">magazine<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 杂志；弹药库；胶卷盒</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="hospital">
+          <td class="col-num">33</td>
+          <td class="col-word">hospital<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 医院</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="sock">
+          <td class="col-num">34</td>
+          <td class="col-word">sock<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span><span class="pos pos-adv">adv.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 短袜；一击 <span class="pos pos-v">v.</span> 重击；给……穿袜 <span class="pos pos-adv">adv.</span> 正着地；不偏不倚地 <span class="pos pos-adj">adj.</span> 非常成功的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="physics">
+          <td class="col-num">35</td>
+          <td class="col-word">physics<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 物理学；物理现象</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="taxi">
+          <td class="col-num">36</td>
+          <td class="col-word">taxi<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 乘出租车；滑行 <span class="pos pos-n">n.</span> 出租汽车</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="facial">
+          <td class="col-num">37</td>
+          <td class="col-word">facial<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">faci</span><span class="plus"> + </span><span class="affix affix-suf">-al</span><span class="affix-mean">(形容词)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 面部的，表面的；脸的，面部用的 <span class="pos pos-n">n.</span> 美容，美颜；脸部按摩</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="famous">
+          <td class="col-num">38</td>
+          <td class="col-word">famous<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"><span class="stem">fam</span><span class="plus"> + </span><span class="affix affix-suf">-ous</span><span class="affix-mean">(形容词)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 著名的；极好的，非常令人满意的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="China">
+          <td class="col-num">39</td>
+          <td class="col-word">China<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 中国 <span class="pos pos-adj">adj.</span> 中国的；中国制造的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="exam">
+          <td class="col-num">40</td>
+          <td class="col-word">exam<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 考试；测验</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="passenger">
+          <td class="col-num">41</td>
+          <td class="col-word">passenger<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">passeng</span><span class="plus"> + </span><span class="affix affix-suf">-er</span><span class="affix-mean">(名词：人/物)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 旅客；乘客；过路人；碍手碍脚的人</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="seagull">
+          <td class="col-num">42</td>
+          <td class="col-word">seagull<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 海鸥</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="when">
+          <td class="col-num">43</td>
+          <td class="col-word">when<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-gray">conj.</span><span class="pos pos-adv">adv.</span><span class="pos pos-pron">pron.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-gray">conj.</span> 考虑到；既然；当…时；在…时；如果 <span class="pos pos-adv">adv.</span> 什么时候，何时；（用于时间的表达方式之后）在那时；其时；当时 <span class="pos pos-pron">pron.</span> 那时；什么时侯 <span class="pos pos-n">n.</span> 时间，时候；日期；场合</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="trick">
+          <td class="col-num">44</td>
+          <td class="col-word">trick<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 诡计；恶作剧；窍门；花招；骗局；欺诈 <span class="pos pos-v">v.</span> 欺骗；哄骗；装饰；打扮 <span class="pos pos-adj">adj.</span> 特技的；欺诈的；有决窍的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="fix">
+          <td class="col-num">45</td>
+          <td class="col-word">fix<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 使固定；修理；安装；准备 <span class="pos pos-n">n.</span> 困境；方位；贿赂</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="onto">
+          <td class="col-num">46</td>
+          <td class="col-word">onto<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-gray">prep.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-gray">prep.</span> 在…之上；对…了解；映射到…上 <span class="pos pos-adj">adj.</span> 映射的；自身的；映成的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="commit">
+          <td class="col-num">47</td>
+          <td class="col-word">commit<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 犯罪，做错事；把交托给；指派…作战；使…承担义务</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="oval">
+          <td class="col-num">48</td>
+          <td class="col-word">oval<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 椭圆的；卵形的 <span class="pos pos-n">n.</span> 椭圆形；卵形</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="building">
+          <td class="col-num">49</td>
+          <td class="col-word">building<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 建筑；建筑物 <span class="pos pos-v">v.</span> 建筑；建立；增加（build的ing形式）</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="evolution">
+          <td class="col-num">50</td>
+          <td class="col-word">evolution<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">evolu</span><span class="plus"> + </span><span class="affix affix-suf">-tion</span><span class="affix-mean">(名词：动作/状态)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 演变；进化论；进展</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="disgusting">
+          <td class="col-num">51</td>
+          <td class="col-word">disgusting<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">dis-</span><span class="affix-mean">(不/相反)</span><span class="plus"> + </span><span class="stem">gusting</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 令人厌恶的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="unmarried">
+          <td class="col-num">52</td>
+          <td class="col-word">unmarried<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">un-</span><span class="affix-mean">(不/非)</span><span class="plus"> + </span><span class="stem">married</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> [法] 未婚的；单身的；独身的 <span class="pos pos-v">v.</span> 离婚（unmarry的过去分词）</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="chair">
+          <td class="col-num">53</td>
+          <td class="col-word">chair<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 椅子；讲座；（会议的）主席位；大学教授的职位 <span class="pos pos-v">v.</span> 担任（会议的）主席；使…入座；使就任要职</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="reasonable">
+          <td class="col-num">54</td>
+          <td class="col-word">reasonable<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">re-</span><span class="affix-mean">(再/重新)</span><span class="plus"> + </span><span class="stem">ason</span><span class="plus"> + </span><span class="affix affix-suf">-able</span><span class="affix-mean">(形容词：可…的)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 合理的，公道的；通情达理的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="hide">
+          <td class="col-num">55</td>
+          <td class="col-word">hide<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 隐藏；隐瞒；鞭打 <span class="pos pos-n">n.</span> 躲藏；兽皮；躲藏处</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="bye">
+          <td class="col-num">56</td>
+          <td class="col-word">bye<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-int">int.</span><span class="pos pos-n">n.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-int">int.</span> 再见 <span class="pos pos-n">n.</span> 轮空；次要的东西 <span class="pos pos-adj">adj.</span> 次要的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="sharpen">
+          <td class="col-num">57</td>
+          <td class="col-word">sharpen<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"><span class="stem">sharp</span><span class="plus"> + </span><span class="affix affix-suf">-en</span><span class="affix-mean">(动词：使变得)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 削尖；磨快；使敏捷；加重</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="fantastic">
+          <td class="col-num">58</td>
+          <td class="col-word">fantastic<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">fantast</span><span class="plus"> + </span><span class="affix affix-suf">-ic</span><span class="affix-mean">(形容词)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 奇异的；空想的；异想天开的；古怪的；极好的，极出色的；不可思议的；不切实际的 <span class="pos pos-n">n.</span> 古怪的人</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="eraser">
+          <td class="col-num">59</td>
+          <td class="col-word">eraser<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">eras</span><span class="plus"> + </span><span class="affix affix-suf">-er</span><span class="affix-mean">(名词：人/物)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 橡皮；擦除器；[计] 清除器</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="chemical">
+          <td class="col-num">60</td>
+          <td class="col-word">chemical<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"><span class="stem">chemic</span><span class="plus"> + </span><span class="affix affix-suf">-al</span><span class="affix-mean">(形容词)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 化学制品，化学药品 <span class="pos pos-adj">adj.</span> 化学的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="ministry">
+          <td class="col-num">61</td>
+          <td class="col-word">ministry<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> （政府的）部门</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="sponsor">
+          <td class="col-num">62</td>
+          <td class="col-word">sponsor<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"><span class="stem">spons</span><span class="plus"> + </span><span class="affix affix-suf">-or</span><span class="affix-mean">(名词：人/物)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 赞助者；主办者；保证人 <span class="pos pos-v">v.</span> 赞助；发起</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="nose">
+          <td class="col-num">63</td>
+          <td class="col-word">nose<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 鼻子；嗅觉；突出的部分；探问 <span class="pos pos-v">v.</span> 嗅；用鼻子触</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="reserve">
+          <td class="col-num">64</td>
+          <td class="col-word">reserve<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">re-</span><span class="affix-mean">(再/重新)</span><span class="plus"> + </span><span class="stem">serve</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 储备，储存；自然保护区；预备队；缄默；[金融] 储备金 <span class="pos pos-v">v.</span> 储备；保留；预约</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="during">
+          <td class="col-num">65</td>
+          <td class="col-word">during<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-gray">prep.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-gray">prep.</span> 在…的时候，在…的期间 <span class="pos pos-n">n.</span> (During)人名；(法)迪兰；(瑞典、利比)杜林</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="corn">
+          <td class="col-num">66</td>
+          <td class="col-word">corn<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> （美）玉米；（英）谷物；[皮肤] 鸡眼 <span class="pos pos-v">v.</span> 腌；使成颗粒</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="unfair">
+          <td class="col-num">67</td>
+          <td class="col-word">unfair<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">un-</span><span class="affix-mean">(不/非)</span><span class="plus"> + </span><span class="stem">fair</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 不公平的，不公正的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="educate">
+          <td class="col-num">68</td>
+          <td class="col-word">educate<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 教育；培养；训练</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="arrange">
+          <td class="col-num">69</td>
+          <td class="col-word">arrange<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 安排；排列；整理</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="rise">
+          <td class="col-num">70</td>
+          <td class="col-word">rise<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 上升；增强；起立；高耸 <span class="pos pos-n">n.</span> 上升；高地；增加；出现</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="month">
+          <td class="col-num">71</td>
+          <td class="col-word">month<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 月，一个月的时间</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="competence">
+          <td class="col-num">72</td>
+          <td class="col-word">competence<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 能力，胜任；权限；作证能力；足以过舒适生活的收入</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="noon">
+          <td class="col-num">73</td>
+          <td class="col-word">noon<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 中午；正午；全盛期</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="glasshouse">
+          <td class="col-num">74</td>
+          <td class="col-word">glasshouse<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 温室；暖房</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="water">
+          <td class="col-num">75</td>
+          <td class="col-word">water<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 水；海水；雨水；海域，大片的水 <span class="pos pos-v">v.</span> 使湿；供以水；给…浇水</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="key">
+          <td class="col-num">76</td>
+          <td class="col-word">key<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> （打字机等的）键；关键；钥匙 <span class="pos pos-v">v.</span> 键入；锁上；调节…的音调；提供线索 <span class="pos pos-adj">adj.</span> 关键的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="lung">
+          <td class="col-num">77</td>
+          <td class="col-word">lung<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 肺；呼吸器</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="sixty">
+          <td class="col-num">78</td>
+          <td class="col-word">sixty<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-num">num.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-num">num.</span> 六十；六十个</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="January">
+          <td class="col-num">79</td>
+          <td class="col-word">January<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 一月</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="fried">
+          <td class="col-num">80</td>
+          <td class="col-word">fried<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 油炸的，油煎的；喝醉了的 <span class="pos pos-v">v.</span> 油炸（fry的过去分词）</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="kilogram">
+          <td class="col-num">81</td>
+          <td class="col-word">kilogram<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 公斤；千克</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="smooth">
+          <td class="col-num">82</td>
+          <td class="col-word">smooth<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span><span class="pos pos-adv">adv.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 顺利的；光滑的；平稳的 <span class="pos pos-v">v.</span> 使光滑；消除（障碍等）；使优雅；缓和 <span class="pos pos-n">n.</span> 平滑部分；一块平地 <span class="pos pos-adv">adv.</span> 光滑地；平稳地；流畅地</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="reviewer">
+          <td class="col-num">83</td>
+          <td class="col-word">reviewer<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">re-</span><span class="affix-mean">(再/重新)</span><span class="plus"> + </span><span class="stem">view</span><span class="plus"> + </span><span class="affix affix-suf">-er</span><span class="affix-mean">(名词：人/物)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 评论者，评论家</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="inside">
+          <td class="col-num">84</td>
+          <td class="col-word">inside<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-adj">adj.</span><span class="pos pos-adv">adv.</span><span class="pos pos-gray">prep.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">in-</span><span class="affix-mean">(不/向内)</span><span class="plus"> + </span><span class="stem">side</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 里面；内部；内情；内脏 <span class="pos pos-adj">adj.</span> 里面的；内部的；秘密的 <span class="pos pos-adv">adv.</span> 在里面 <span class="pos pos-gray">prep.</span> 少于；在…之内</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="second">
+          <td class="col-num">85</td>
+          <td class="col-word">second<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span><span class="pos pos-adj">adj.</span><span class="pos pos-num">num.</span><span class="pos pos-adv">adv.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 秒；第二名；瞬间；二等品 <span class="pos pos-v">v.</span> 支持 <span class="pos pos-adj">adj.</span> 第二的；次要的；附加的 <span class="pos pos-num">num.</span> 第二 <span class="pos pos-adv">adv.</span> 第二；其次；居第二位</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="master">
+          <td class="col-num">86</td>
+          <td class="col-word">master<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 控制；精通；征服 <span class="pos pos-n">n.</span> 硕士；主人；大师；教师 <span class="pos pos-adj">adj.</span> 主人的；主要的；熟练的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="healthy">
+          <td class="col-num">87</td>
+          <td class="col-word">healthy<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 健康的，健全的；有益于健康的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="file">
+          <td class="col-num">88</td>
+          <td class="col-word">file<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 文件；档案；文件夹；锉刀 <span class="pos pos-v">v.</span> 提出；锉；琢磨；把…归档</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="seventh">
+          <td class="col-num">89</td>
+          <td class="col-word">seventh<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-adj">adj.</span><span class="pos pos-adv">adv.</span></td>
+          <td class="col-memo"><span class="stem">seven</span><span class="plus"> + </span><span class="affix affix-suf">-th</span><span class="affix-mean">(序数词)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 第七；七分之一 <span class="pos pos-adj">adj.</span> 第七的；七分之一的 <span class="pos pos-adv">adv.</span> 居第七位地</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="college">
+          <td class="col-num">90</td>
+          <td class="col-word">college<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 大学；学院；学会</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="liberty">
+          <td class="col-num">91</td>
+          <td class="col-word">liberty<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">liber</span><span class="plus"> + </span><span class="affix affix-suf">-ty</span><span class="affix-mean">(名词：性质)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 自由；许可；冒失</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="blow">
+          <td class="col-num">92</td>
+          <td class="col-word">blow<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 吹；打击；殴打 <span class="pos pos-v">v.</span> 风吹；喘气</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="questionnaire">
+          <td class="col-num">93</td>
+          <td class="col-word">questionnaire<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 问卷；调查表</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="Christmas">
+          <td class="col-num">94</td>
+          <td class="col-word">Christmas<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 圣诞节；圣诞节期间</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="father">
+          <td class="col-num">95</td>
+          <td class="col-word">father<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 父亲，爸爸；神父；祖先；前辈 <span class="pos pos-v">v.</span> 发明，创立；当…的父亲</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="everyone">
+          <td class="col-num">96</td>
+          <td class="col-word">everyone<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-pron">pron.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-pron">pron.</span> 每个人；人人 <span class="pos pos-n">n.</span> 每个人</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="mild">
+          <td class="col-num">97</td>
+          <td class="col-word">mild<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 温和的；轻微的；淡味的；文雅的；不含有害物质的的 <span class="pos pos-n">n.</span> （英国的一种）淡味麦芽啤酒</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="could">
+          <td class="col-num">98</td>
+          <td class="col-word">could<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-gray">aux.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-gray">aux.</span> 能够 <span class="pos pos-v">v.</span> 能（can的过去式）</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="automatic">
+          <td class="col-num">99</td>
+          <td class="col-word">automatic<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">automat</span><span class="plus"> + </span><span class="affix affix-suf">-ic</span><span class="affix-mean">(形容词)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 自动的；无意识的；必然的 <span class="pos pos-n">n.</span> 自动机械；自动手枪</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="article">
+          <td class="col-num">100</td>
+          <td class="col-word">article<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 文章；物品；条款；[语] 冠词 <span class="pos pos-v">v.</span> 订约将…收为学徒或见习生；使…受协议条款的约束</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="link">
+          <td class="col-num">101</td>
+          <td class="col-word">link<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> [计] 链环，环节；联系，关系 <span class="pos pos-v">v.</span> 连接，连结；联合，结合</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="CD">
+          <td class="col-num">102</td>
+          <td class="col-word">CD<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-abbr">abbr.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-abbr">abbr.</span> 光盘，激光唱片（Compact Disc）；呼叫设备（Calling Device）；中央地区（Central District）；商务部（Commerce Department）</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="about">
+          <td class="col-num">103</td>
+          <td class="col-word">about<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-gray">prep.</span><span class="pos pos-adj">adj.</span><span class="pos pos-adv">adv.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">a-</span><span class="affix-mean">(处于…状态)</span><span class="plus"> + </span><span class="stem">bout</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-gray">prep.</span> 关于；大约 <span class="pos pos-adj">adj.</span> 在附近的；四处走动的；在起作用的 <span class="pos pos-adv">adv.</span> 大约；周围；到处 <span class="pos pos-n">n.</span> 大致；粗枝大叶；不拘小节的人</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="local">
+          <td class="col-num">104</td>
+          <td class="col-word">local<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-adj">adj.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> [计] 局部；当地居民；本地新闻 <span class="pos pos-adj">adj.</span> 当地的；局部的；地方性的；乡土的</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="hydrogen">
+          <td class="col-num">105</td>
+          <td class="col-word">hydrogen<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">hydrog</span><span class="plus"> + </span><span class="affix affix-suf">-en</span><span class="affix-mean">(动词：使变得)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> [化学] 氢</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="backache">
+          <td class="col-num">106</td>
+          <td class="col-word">backache<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 背痛；腰痛</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="temptation">
+          <td class="col-num">107</td>
+          <td class="col-word">temptation<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">tempta</span><span class="plus"> + </span><span class="affix affix-suf">-tion</span><span class="affix-mean">(名词：动作/状态)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 引诱；诱惑物</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="crayon">
+          <td class="col-num">108</td>
+          <td class="col-word">crayon<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 蜡笔，有色粉笔 <span class="pos pos-v">v.</span> 以蜡笔作画，用颜色粉笔画</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="fruit">
+          <td class="col-num">109</td>
+          <td class="col-word">fruit<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 水果；产物 <span class="pos pos-v">v.</span> 结果实</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="learned">
+          <td class="col-num">110</td>
+          <td class="col-word">learned<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 博学的；有学问的；学术上的 <span class="pos pos-n">n.</span> (Learned)人名；(英)勒尼德</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="rather">
+          <td class="col-num">111</td>
+          <td class="col-word">rather<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adv">adv.</span><span class="pos pos-int">int.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adv">adv.</span> 宁可，宁愿；相当 <span class="pos pos-int">int.</span> 当然啦（回答问题时用） <span class="pos pos-n">n.</span> (Rather)人名；(英)拉瑟</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="job">
+          <td class="col-num">112</td>
+          <td class="col-word">job<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 工作；职业 <span class="pos pos-v">v.</span> 承包；代客买卖</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="mathematics">
+          <td class="col-num">113</td>
+          <td class="col-word">mathematics<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 数学；数学运算</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="occupation">
+          <td class="col-num">114</td>
+          <td class="col-word">occupation<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="stem">occupa</span><span class="plus"> + </span><span class="affix affix-suf">-tion</span><span class="affix-mean">(名词：动作/状态)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 职业；占有；消遣；占有期</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="consequence">
+          <td class="col-num">115</td>
+          <td class="col-word">consequence<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 结果；重要性；推论</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="increase">
+          <td class="col-num">116</td>
+          <td class="col-word">increase<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">in-</span><span class="affix-mean">(不/向内)</span><span class="plus"> + </span><span class="stem">crease</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 增加，增长；提高 <span class="pos pos-v">v.</span> 增加，增大；繁殖</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="forest">
+          <td class="col-num">117</td>
+          <td class="col-word">forest<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-v">v.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-v">v.</span> 植树于，使成为森林 <span class="pos pos-n">n.</span> 森林</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="relative">
+          <td class="col-num">118</td>
+          <td class="col-word">relative<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-adj">adj.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">re-</span><span class="affix-mean">(再/重新)</span><span class="plus"> + </span><span class="stem">lat</span><span class="plus"> + </span><span class="affix affix-suf">-ive</span><span class="affix-mean">(形容词)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-adj">adj.</span> 相对的；有关系的；成比例的 <span class="pos pos-n">n.</span> 亲戚；相关物；[语] 关系词；亲缘植物</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="pupil">
+          <td class="col-num">119</td>
+          <td class="col-word">pupil<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 学生；[解剖] 瞳孔；未成年人</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="visa">
+          <td class="col-num">120</td>
+          <td class="col-word">visa<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span><span class="pos pos-v">v.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 签证 <span class="pos pos-v">v.</span> 签发签证</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="restriction">
+          <td class="col-num">121</td>
+          <td class="col-word">restriction<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">re-</span><span class="affix-mean">(再/重新)</span><span class="plus"> + </span><span class="stem">stric</span><span class="plus"> + </span><span class="affix affix-suf">-tion</span><span class="affix-mean">(名词：动作/状态)</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 限制；约束；束缚</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="fridge">
+          <td class="col-num">122</td>
+          <td class="col-word">fridge<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-n">n.</span> 电冰箱</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+        <tr data-word="behind">
+          <td class="col-num">123</td>
+          <td class="col-word">behind<button class="eye-btn" title="显示/隐藏释义">👁</button></td>
+          <td class="col-tags"><span class="pos pos-gray">prep.</span><span class="pos pos-adv">adv.</span><span class="pos pos-n">n.</span></td>
+          <td class="col-memo"><span class="affix affix-pre">be-</span><span class="affix-mean">(使)</span><span class="plus"> + </span><span class="stem">hind</span></td>
+          <td class="col-def"><span class="def-placeholder">🔒 点击显示释义</span><span class="def-content"><span class="pos pos-gray">prep.</span> 落后于；支持；晚于 <span class="pos pos-adv">adv.</span> 在后地；在原处 <span class="pos pos-n">n.</span> 屁股</span></td>
+          <td class="mark-btns">
+            <button data-mark="know" title="认识">✅</button><button data-mark="fuzzy" title="模糊">⚠️</button><button data-mark="unknown" title="不认识">❌</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="checklist">
+    <h2>✅ 当日复习清单</h2>
+    <ul>
+      <li>晨读：通读一遍，标记生词（点击行可显示/隐藏释义自测）</li>
+      <li>晚测：遮盖释义，自测拼写与词义（用「全部隐藏」后逐行回忆）</li>
+      <li>订正：错题记入 <a href="../进度追踪/错题本.md">错题本</a>，做完 <a href="../可打印小测卷/07月28日_小测.html">当日小测卷</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">2028高考英语词汇假期复习 | 广东新高考 · 词表助记版（由 生成每日词表HTML.py 生成）</div>
+</div>
+
+<script>
+const STORE_KEY = 'vocab_mark_07月28日';
+let marks = {};
+try { marks = JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); } catch (e) { marks = {}; }
+
+function saveMarks() { localStorage.setItem(STORE_KEY, JSON.stringify(marks)); }
+
+function rowState(tr) {
+  const w = tr.getAttribute('data-word');
+  return marks[w] || '';
+}
+
+function refreshRow(tr) {
+  const st = rowState(tr);
+  tr.classList.remove('mark-know', 'mark-fuzzy', 'mark-unknown');
+  if (st) tr.classList.add('mark-' + st);
+  tr.querySelectorAll('.mark-btns button[data-mark]').forEach(function (b) {
+    b.classList.toggle('active', b.getAttribute('data-mark') === st);
+  });
+}
+
+function refreshStats() {
+  let know = 0, fuzzy = 0, unknown = 0, total = 0;
+  document.querySelectorAll('#wordBody tr[data-word]').forEach(function (tr) {
+    total++;
+    const st = rowState(tr);
+    if (st === 'know') know++;
+    else if (st === 'fuzzy') fuzzy++;
+    else if (st === 'unknown') unknown++;
+  });
+  document.getElementById('statKnow').textContent = know;
+  document.getElementById('statFuzzy').textContent = fuzzy;
+  document.getElementById('statUnknown').textContent = unknown;
+  document.getElementById('statUnmarked').textContent = total - know - fuzzy - unknown;
+}
+
+function applyFilter() {
+  const v = document.getElementById('filterSelect').value;
+  document.querySelectorAll('#wordBody tr[data-word]').forEach(function (tr) {
+    const st = rowState(tr);
+    let show = true;
+    if (v === 'fuzzy') show = (st === 'fuzzy');
+    else if (v === 'unknown') show = (st === 'unknown');
+    else if (v === 'unmarked') show = (st === '');
+    tr.style.display = show ? '' : 'none';
+  });
+}
+
+function showAll(on) {
+  document.getElementById('wordBody').classList.toggle('show-all', on);
+}
+
+function resetMarks() {
+  if (!confirm('确定清空本日（07月28日）全部掌握标记？')) return;
+  marks = {};
+  saveMarks();
+  document.querySelectorAll('#wordBody tr[data-word]').forEach(refreshRow);
+  refreshStats();
+  applyFilter();
+}
+
+document.getElementById('wordBody').addEventListener('click', function (e) {
+  const tr = e.target.closest('tr[data-word]');
+  if (!tr) return;
+  const markBtn = e.target.closest('button[data-mark]');
+  if (markBtn) {
+    const w = tr.getAttribute('data-word');
+    const m = markBtn.getAttribute('data-mark');
+    if (marks[w] === m) delete marks[w]; else marks[w] = m;
+    saveMarks();
+    refreshRow(tr);
+    refreshStats();
+    applyFilter();
+    return;
+  }
+  tr.classList.toggle('show');
+});
+
+document.querySelectorAll('#wordBody tr[data-word]').forEach(refreshRow);
+refreshStats();
+</script>
+</body>
+</html>

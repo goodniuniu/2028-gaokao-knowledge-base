@@ -6,6 +6,9 @@
 - 49个答案 HTML
 - 1个总入口 HTML
 - 更新总计划文件
+
+注：本脚本为旧机器一次性生成脚本（含旧绝对路径，已不可直接运行，仅留作模板参考）；
+日期词表的助记版 HTML 由 生成每日词表HTML.py 生成。
 """
 import os
 import sys
@@ -260,7 +263,7 @@ def generate_index_html():
       <div class="day-header">{date_str}</div>
       <div class="day-num">第{day_num}天</div>
       <div class="day-links">
-        <a href="日期词表/{date_str}.md" class="link-vocab">📖 词表</a>
+        <a href="日期词表/{date_str}.html" class="link-vocab">📖 词表</a>
         <a href="可打印小测卷/{date_str}_小测.html" class="link-quiz">📝 小测</a>
         <a href="可打印小测卷/{date_str}_答案.html" class="link-ans">📋 答案</a>
       </div>
@@ -412,7 +415,7 @@ def update_plan_file():
             end_w = 30 * WORDS_PER_DAY_FIRST_30 + (day - 30 + 1) * WORDS_PER_DAY_LAST_19
 
         plan_rows.append(
-            f"| {date_str} | 第{day_num}天 | 第{start_w}-{end_w}词 | {count}词 | [词表](日期词表/{date_str}.md) | [小测](可打印小测卷/{date_str}_小测.html) | [答案](可打印小测卷/{date_str}_答案.html) | | | | |"
+            f"| {date_str} | 第{day_num}天 | 第{start_w}-{end_w}词 | {count}词 | [词表](日期词表/{date_str}.html) | [小测](可打印小测卷/{date_str}_小测.html) | [答案](可打印小测卷/{date_str}_答案.html) | | | | |"
         )
 
     plan_content = f"""# 高考英语单词假期复习总计划
