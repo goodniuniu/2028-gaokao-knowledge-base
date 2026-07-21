@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【高考压轴中的竞赛思维】构造·放缩·特殊化：降维打击压轴题的六种竞赛思维 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">素材与拓展</a></li><li><span aria-current="page">【高考压轴中的竞赛思维】构造·放缩·特殊化：降维打击压轴题的六种竞赛思维</span></li></ol>
+<h1 class="kb-title">【高考压轴中的竞赛思维】构造·放缩·特殊化：降维打击压轴题的六种竞赛思维</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：数学竞赛通法 / 2024-2025新高考Ⅰ卷压轴题评析 / 华附、深中模拟题思维训练专题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（近5年新高考Ⅰ卷每年压轴题均渗透竞赛思维：2024年第19题新定义数列需&quot;模拟前几步找规律&quot;的归纳思维，2025年第19题三角导数压轴需构造与放缩；多选压轴也常考构造法）；难度定位为压轴（解答题第18、19题合计34分，多选压轴6分）；特色描述：2024年结构改革后8单选+3多选+3填空+5解答共19题，压轴题由&quot;固定导数压轴&quot;变为&quot;函数导数/解析几何/新定义轮换&quot;，竞赛思维成为区分度核心——课内通法走不通处恰是构造、放缩、特殊化等思维的用武之地；提分提示：竞赛思维不要求学竞赛知识，重在&quot;想问题的方式&quot;，第(1)(2)问用通法稳拿、第(3)问用竞赛思维抢分，不会也要写出关键转化步骤挣过程分。</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：高考压轴 ≠ 竞赛题，但压轴题的&quot;最后一层窗户纸&quot;往往需要竞赛思维捅破。竞赛思维的核心是<strong>降维</strong>——把陌生的、一般的问题转化为熟悉的、特殊的问题。</p></blockquote>
+<h3>关键概念</h3>
+<ul>
+<li><strong>竞赛思维 ≠ 竞赛知识</strong>：不要求掌握梅涅劳斯定理、柯西方程等竞赛结论，而是借用其思考问题的方式（构造、极端、不变量等），所有证明仍用课内工具书写。</li>
+<li><strong>降维转化</strong>：陌生 → 熟悉、一般 → 特殊、无限 → 有限、动态 → 静态。压轴题破题的瞬间几乎都是一次降维。</li>
+<li><strong>过程分意识</strong>：第(3)问写不出完整解答时，写出&quot;构造了辅助函数&quot;&quot;尝试了n=1,2,3发现规律&quot;等关键转化步骤，可挣1-3分过程分。</li>
+</ul>
+<h3>核心方法/步骤</h3>
+<h4>六种竞赛思维速查表</h4>
+<div class="table-wrap"><table><tr><th>#</th><th>思维</th><th>一句话口诀</th><th>高考典型场景</th><th>课内化操作</th></tr><tr><td>1</td><td><strong>构造法</strong></td><td>&quot;无中生有造工具&quot;</td><td>不等式证明、零点存在性</td><td>构造辅助函数F(x)=f(x)-g(x)、构造对偶式、构造几何图形</td></tr><tr><td>2</td><td><strong>放缩法</strong></td><td>&quot;证不出就换对手&quot;</td><td>数列不等式、导数不等式</td><td>找中间量：要证A&gt;B，改证A&gt;C≥B；常用lnx≤x-1、eˣ≥1+x+x²/2</td></tr><tr><td>3</td><td><strong>特殊化（先试后证）</strong></td><td>&quot;拿特殊值探路&quot;</td><td>新定义题、恒成立求参数范围</td><td>代n=1,2,3或x=0,1,e找规律、猜结论，再严格证明</td></tr><tr><td>4</td><td><strong>极端原理</strong></td><td>&quot;看最大最小的那个&quot;</td><td>存在性问题、最值问题</td><td>取最大元/最小元/边界点，利用&quot;极端者必满足某性质&quot;推出矛盾或结论</td></tr><tr><td>5</td><td><strong>不变量与奇偶性</strong></td><td>&quot;万变中找不变&quot;</td><td>数列递推、操作类问题</td><td>找过程中保持不变的量（和、积、奇偶性、单调量），一击制胜</td></tr><tr><td>6</td><td><strong>反证法与同一法</strong></td><td>&quot;正难则反&quot;</td><td>唯一性证明、&quot;不存在&quot;类问题</td><td>假设结论不成立，导出与已知/公理的矛盾</td></tr></table></div>
+<h4>压轴题思维调用流程</h4>
+<pre><code>拿到压轴问
+    │
+    ▼
+① 课内通法能走通吗？（求导/联立/递推）──能──→ 直接做，拿满
+    │ 不能
+    ▼
+② 特殊化探路：代具体数值/画草图/算前几项
+    │
+    ▼
+③ 猜出结论或发现结构了吗？──是──→ 用构造法/归纳法严格证明
+    │ 否
+    ▼
+④ 尝试降维：放缩换对手 / 找不变量 / 取极端元 / 反设结论
+    │
+    ▼
+⑤ 仍不会 → 写出已完成的转化步骤，挣过程分，果断跳题
+</code></pre>
+<h3>答题模板/技巧</h3>
+<blockquote><p><strong>特殊化探路模板</strong>（新定义/恒成立题）<br>1. 先令 n=1（或 x 取端点），算出具体值，理解定义在说啥；<br>2. 再算 n=2, 3，观察规律，<strong>猜想</strong>一般结论；<br>3. 用数学归纳法或构造法给出证明（试卷上只写&quot;猜想→证明&quot;，探路过程写草稿纸）。</p></blockquote>
+<blockquote><p><strong>构造法书写模板</strong>（不等式证明）<br>&quot;要证 f(x) ≥ g(x)，即证 f(x)−g(x) ≥ 0。<strong>构造函数</strong> F(x)=f(x)−g(x)，求导得 F′(x)=⋯，分析单调性知 F(x) ≥ F(x₀)=0，故原不等式成立。&quot;</p></blockquote>
+<blockquote><p><strong>过程分保底清单</strong>：①写出目标式的等价变形；②写出构造的辅助函数/辅助量；③写出特殊值验证结果。三行字≈2分。</p></blockquote>
+<h3>记忆口诀</h3>
+<blockquote><p><strong>&quot;通法走不通，特殊来探路；证不动就放缩，造个函数当工具；极端不变常留意，正难则反再试试。&quot;</strong></p></blockquote>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向.html">2024-2025新高考Ⅰ卷导数压轴题新动向</a> — 竞赛思维的主战场：反套路压轴题的考法风向</li>
+<li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_不等式证明的多方向拆解思维：代数·分析·几何.html">不等式证明的多方向拆解思维：代数·分析·几何</a> — &quot;方向选择&quot;与本卡&quot;思维调用&quot;互为表里</li>
+<li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_恒成立与存在性问题通法.html">恒成立与存在性问题通法</a> — 课内通法先行，走不通再调用本卡竞赛思维</li>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数的运算与应用.html">导数的运算与应用</a> — 构造辅助函数的知识基础</li>
+<li><a href="../典型题型与方法/高一筑基_数学_典型题型与方法_新高考Ⅰ卷多选题策略.html">新高考Ⅰ卷多选题策略</a> — 多选压轴同样可用特殊化探路抢分</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li><strong>易错点1：竞赛结论直接写</strong>。高考阅卷只认课内依据，泰勒展开、洛必达等超纲工具可用于草稿纸分析，答卷上必须翻译为&quot;构造函数+求导&quot;的课内语言。</li>
+<li><strong>易错点2：特殊化代替证明</strong>。n=1,2,3成立不能推出一般成立，探路结论必须用归纳法或构造法补证，否则第(3)问基本不得分。</li>
+<li><strong>易错点3：放缩方向搞反</strong>。要证A≥B，需把A<strong>缩小</strong>或把B<strong>放大</strong>；方向反了越证越远。拿不准时先代数值验证放缩是否成立。</li>
+<li><strong>广东卷特殊考法</strong>：2024年结构改革后压轴题题型轮换（导数/解析几何/新定义数列），&quot;新定义&quot;类压轴本质是竞赛式即时学习能力考查——现场读懂规则→模拟操作→归纳证明，与竞赛选拔逻辑一致。备考时每周精做1道新定义压轴，比刷10道套路导数题更有效。</li>
+<li><strong>使用时机</strong>：本卡定位为&quot;思维工具箱&quot;，配合各模块通法卡片使用；高二深化阶段重点练&quot;特殊化探路+构造法&quot;两种（出现频率最高），其余四种理解即可。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回素材与拓展</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>
