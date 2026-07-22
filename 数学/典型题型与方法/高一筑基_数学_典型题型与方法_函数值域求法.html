@@ -31,152 +31,66 @@ MathJax = {
 <ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">函数值域求法（六大方法体系·分离常数·换元·对号函数·分段函数）</span></li></ol>
 <h1 class="kb-title">函数值域求法（六大方法体系·分离常数·换元·对号函数·分段函数）</h1>
 <div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高一筑基</span><span class="kb-badge kb-badge--tag">#广东名校模拟（广州各区期中/期末）</span><span class="kb-badge kb-badge--src">来源：人教A版必修第一册第三章 / 02.值域常考题型总结.pdf</span></div>
-<div class="kb-note"><strong>广东考情</strong>：高一上学期**中档至压轴高频考点**。值域求法是广东卷高一期中/期末的必考内容，分值通常占10-15分。二次函数闭区间最值是送分题，但一次比一次分式（分离常数法）、二次比一次分式（换元+对号函数）是**中档区分题**。分段函数值域是易错重灾区。名校联考中，值域与不等式恒成立结合是压轴题常见考法。<br><strong>观察法</strong>：简单一次、常数函数 | 直接判断 | ★☆☆☆☆<br><strong>图像法</strong>：二次函数（闭区间） | 开口方向、对称轴、端点 | ★★☆☆☆<br><strong>分离常数法</strong>：一次比一次分式 $\frac{ax+b}{cx+d}$ | 反比例函数平移、渐近线 | ★★★☆☆<br><strong>换元法+对号函数</strong>：二次比一次分式 $\frac{ax^2+bx+c}{dx+e}$ | 令 $t=dx+e$，转化为对号函数 | ★★★★☆<br><strong>单调性法</strong>：已知单调性的函数 | 利用单调性确定最值 | ★★★☆☆<br><strong>分段讨论法</strong>：分段函数 | 逐段求值域，再取并集 | ★★★☆☆<br><strong>图像</strong>：像&quot;对勾&quot;或&quot;耐克标志&quot;<br><strong>定义域</strong>：$x\neq 0$<br><strong>渐近线</strong>：$y=ax$（斜渐近线）和 $x=0$（垂直渐近线）<br><strong>奇偶性</strong>：奇函数（关于原点对称）<br><strong>单调性</strong>：$(-\infty, -\sqrt{\frac{b}{a}}]$ 递增，$[-\sqrt{\frac{b}{a}}, 0)$ 递减；$(0, \sqrt{\frac{b}{a}}]$ 递减，$[\sqrt{\frac{b}{a}}, +\infty)$ 递增<br><strong>极值</strong>：最小值 $y_{min}=2\sqrt{ab}$（当 $x=\sqrt{\frac{b}{a}}$ 时）；最大值 $y_{max}=-2\sqrt{ab}$（当 $x=-\sqrt{\frac{b}{a}}$ 时）</div>
+<div class="kb-note"><strong>广东考情</strong>：高一上学期**中档至压轴高频考点**。值域求法是广东卷高一期中/期末的必考内容，分值通常占10-15分。二次函数闭区间最值是送分题，但一次比一次分式（分离常数法）、二次比一次分式（换元+对号函数）是**中档区分题**。分段函数值域是易错重灾区。名校联考中，值域与不等式恒成立结合是压轴题常见考法。</div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
-<blockquote>
-<strong>本质理解</strong>：值域是函数的"实际输出"集。求值域的核心是：<strong>识别函数类型 → 选择合适方法 → 利用图像或代数工具确定边界</strong>。
-</blockquote>
-
+<blockquote><p><strong>本质理解</strong>：值域是函数的&quot;实际输出&quot;集。求值域的核心是：<strong>识别函数类型 → 选择合适方法 → 利用图像或代数工具确定边界</strong>。</p></blockquote>
 <hr>
-
 <h3>一、方法总览：六种武器</h3>
-
-<div class="table-wrap">
-<table>
-<tr><th>方法</th><th>适用函数类型</th><th>核心工具</th><th>难度</th></tr>
-<tr><td><strong>观察法</strong></td><td>简单一次、常数函数</td><td>直接判断</td><td>★☆☆☆☆</td></tr>
-<tr><td><strong>图像法</strong></td><td>二次函数（闭区间）</td><td>开口方向、对称轴、端点</td><td>★★☆☆☆</td></tr>
-<tr><td><strong>分离常数法</strong></td><td>一次比一次分式 $\frac{ax+b}{cx+d}$</td><td>反比例函数平移、渐近线</td><td>★★★☆☆</td></tr>
-<tr><td><strong>换元法+对号函数</strong></td><td>二次比一次分式 $\frac{ax^2+bx+c}{dx+e}$</td><td>令 $t=dx+e$，转化为对号函数</td><td>★★★★☆</td></tr>
-<tr><td><strong>单调性法</strong></td><td>已知单调性的函数</td><td>利用单调性确定最值</td><td>★★★☆☆</td></tr>
-<tr><td><strong>分段讨论法</strong></td><td>分段函数</td><td>逐段求值域，再取并集</td><td>★★★☆☆</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>方法</th><th>适用函数类型</th><th>核心工具</th><th>难度</th></tr><tr><td><strong>观察法</strong></td><td>简单一次、常数函数</td><td>直接判断</td><td>★☆☆☆☆</td></tr><tr><td><strong>图像法</strong></td><td>二次函数（闭区间）</td><td>开口方向、对称轴、端点</td><td>★★☆☆☆</td></tr><tr><td><strong>分离常数法</strong></td><td>一次比一次分式 $\frac{ax+b}{cx+d}$</td><td>反比例函数平移、渐近线</td><td>★★★☆☆</td></tr><tr><td><strong>换元法+对号函数</strong></td><td>二次比一次分式 $\frac{ax^2+bx+c}{dx+e}$</td><td>令 $t=dx+e$，转化为对号函数</td><td>★★★★☆</td></tr><tr><td><strong>单调性法</strong></td><td>已知单调性的函数</td><td>利用单调性确定最值</td><td>★★★☆☆</td></tr><tr><td><strong>分段讨论法</strong></td><td>分段函数</td><td>逐段求值域，再取并集</td><td>★★★☆☆</td></tr></table></div>
 <hr>
-
 <h3>二、方法1：观察法（最简单）</h3>
-
 <p><strong>适用</strong>：一次函数、常数函数等简单形式</p>
-
 <p><strong>原理</strong>：直接根据函数表达式的特征判断值域。</p>
-
-<blockquote>
-<strong>示例</strong>：$f(x)=2x+1$，$x\in\mathbb{R}$ → 值域为 $\mathbb{R}$
-
-<strong>示例</strong>：$f(x)=\sqrt{x}$，$x\geq 0$ → 值域为 $[0,+\infty)$
-</blockquote>
-
+<blockquote><p><strong>示例</strong>：$f(x)=2x+1$，$x\in\mathbb{R}$ → 值域为 $\mathbb{R}$<br><strong>示例</strong>：$f(x)=\sqrt{x}$，$x\geq 0$ → 值域为 $[0,+\infty)$</p></blockquote>
 <hr>
-
 <h3>三、方法2：图像法（二次函数闭区间最值）—— 高频基础！</h3>
-
 <p><strong>适用</strong>：二次函数 $f(x)=ax^2+bx+c$ 在闭区间 $[m,n]$ 上的最值</p>
-
-<p>#### 核心步骤</p>
-
+<h4>核心步骤</h4>
 <ol>
 <li><strong>确定开口方向</strong>：$a>0$ 开口向上，$a<0$ 开口向下</li>
 <li><strong>求对称轴</strong>：$x=-\frac{b}{2a}$</li>
 <li><strong>判断对称轴位置</strong>：与区间 $[m,n]$ 的相对位置</li>
 <li><strong>比较端点和顶点</strong>：最大值和最小值在<strong>顶点或端点</strong>处取得</li>
 </ol>
-
-<p>#### 分类讨论表</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>对称轴位置</th><th>最小值</th><th>最大值（$a>0$时）</th></tr>
-<tr><td>$-\frac{b}{2a}<m$（对称轴在区间左侧）</td><td>$f(m)$</td><td>$f(n)$</td></tr>
-<tr><td>$m\leq -\frac{b}{2a}\leq n$（对称轴在区间内）</td><td>$f(-\frac{b}{2a})$</td><td>$\max\{f(m),f(n)\}$（比较两端点）</td></tr>
-<tr><td>$-\frac{b}{2a}>n$（对称轴在区间右侧）</td><td>$f(n)$</td><td>$f(m)$</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>记忆口诀</strong>："开口向上，对称轴在区间内则最小值在顶点，最大值比较两端点；对称轴在区间外则最值都在端点"
-</blockquote>
-
-<blockquote>
-<strong>示例</strong>：$f(x)=x^2-4x+6$，$x\in[1,5]$，求值域。
-- 对称轴 $x=2$，在区间 $[1,5]$ 内
-- $a>0$ 开口向上
-- 最小值：$f(2)=2$
-- 比较端点：$f(1)=3$，$f(5)=11$
-- 最大值：$f(5)=11$
-- 值域：$[2,11]$
-</blockquote>
-
-<blockquote>
-<strong>⚠️注意</strong>：若区间为开区间 $(m,n)$，则最值可能取不到（变成趋近值），值域可能含开区间端点。
-</blockquote>
-
+<h4>分类讨论表</h4>
+<div class="table-wrap"><table><tr><th>对称轴位置</th><th>最小值</th><th>最大值（$a>0$时）</th></tr><tr><td>$-\frac{b}{2a}<m$（对称轴在区间左侧）</td><td>$f(m)$</td><td>$f(n)$</td></tr><tr><td>$m\leq -\frac{b}{2a}\leq n$（对称轴在区间内）</td><td>$f(-\frac{b}{2a})$</td><td>$\max\{f(m),f(n)\}$（比较两端点）</td></tr><tr><td>$-\frac{b}{2a}>n$（对称轴在区间右侧）</td><td>$f(n)$</td><td>$f(m)$</td></tr></table></div>
+<blockquote><p><strong>记忆口诀</strong>：&quot;开口向上，对称轴在区间内则最小值在顶点，最大值比较两端点；对称轴在区间外则最值都在端点&quot;</p></blockquote>
+<blockquote><p><strong>示例</strong>：$f(x)=x^2-4x+6$，$x\in[1,5]$，求值域。<br>- 对称轴 $x=2$，在区间 $[1,5]$ 内<br>- $a>0$ 开口向上<br>- 最小值：$f(2)=2$<br>- 比较端点：$f(1)=3$，$f(5)=11$<br>- 最大值：$f(5)=11$<br>- 值域：$[2,11]$</p></blockquote>
+<blockquote><p><strong>⚠️注意</strong>：若区间为开区间 $(m,n)$，则最值可能取不到（变成趋近值），值域可能含开区间端点。</p></blockquote>
 <hr>
-
 <h3>四、方法3：分离常数法（一次比一次分式）—— 中档高频！</h3>
-
 <p><strong>适用</strong>：$y=\frac{ax+b}{cx+d}$（$c\neq 0$）</p>
-
-<p>#### 核心思想</p>
-
-<p>将分子中的 "$x$" 项消去一部分，构造出分母的倍数，从而拆成<strong>常数 + 标准反比例函数</strong>的形式。</p>
-
-<p>#### 操作步骤</p>
-
+<h4>核心思想</h4>
+<p>将分子中的 &quot;$x$&quot; 项消去一部分，构造出分母的倍数，从而拆成<strong>常数 + 标准反比例函数</strong>的形式。</p>
+<h4>操作步骤</h4>
 <ol>
 <li><strong>确定系数</strong>：$y=\frac{ax+b}{cx+d}$，其中 $a,b,c,d$ 为常数，$c\neq 0$</li>
 <li><strong>分离常数</strong>：</li>
 </ol>
-
 <p>$$y=\frac{ax+b}{cx+d}=\frac{a}{c}+\frac{bc-ad}{c(cx+d)}$$</p>
-
 <p>或更简洁地：</p>
-
 <p>$$y=\frac{a}{c}+\frac{bc-ad}{c^2(x+\frac{d}{c})}$$</p>
-
-<blockquote>
-<strong>本质</strong>：多项式除法。将分子 $ax+b$ 除以分母 $cx+d$，商是 $\frac{a}{c}$，余数是 $b-\frac{ad}{c}=\frac{bc-ad}{c}$。
-</blockquote>
-
+<blockquote><p><strong>本质</strong>：多项式除法。将分子 $ax+b$ 除以分母 $cx+d$，商是 $\frac{a}{c}$，余数是 $b-\frac{ad}{c}=\frac{bc-ad}{c}$。</p></blockquote>
 <ol>
 <li><strong>分析反比例函数</strong>：令 $y'=\frac{k}{x+\frac{d}{c}}$（其中 $k=\frac{bc-ad}{c^2}$），这是反比例函数 $y=\frac{k}{x}$ 向左/右平移得到</li>
 <li><strong>确定渐近线</strong>：</li>
-</ol>
 <ul>
 <li>垂直渐近线：$x=-\frac{d}{c}$（分母为零处）</li>
 <li>水平渐近线：$y=\frac{a}{c}$（$x\to\infty$ 时 $y$ 趋近的值）</li>
 </ul>
-<ol>
 <li><strong>读值域</strong>：$y\neq \frac{a}{c}$，即值域为 $(-\infty, \frac{a}{c})\cup(\frac{a}{c}, +\infty)$</li>
 </ol>
-
-<blockquote>
-<strong>示例</strong>：$y=\frac{2x+5}{x+2}$
-- 分离：$y=\frac{2(x+2)+1}{x+2}=2+\frac{1}{x+2}$
-- 这是 $y=\frac{1}{x}$ 向左平移2个单位，再向上平移2个单位
-- 垂直渐近线：$x=-2$；水平渐近线：$y=2$
-- 值域：$(-\infty, 2)\cup(2, +\infty)$
-</blockquote>
-
-<blockquote>
-<strong>⚠️注意</strong>：若题目限制了 $x$ 的定义域（如 $x\in[1,3]$），则需结合定义域在图像上截取对应段，确定实际值域。
-</blockquote>
-
+<blockquote><p><strong>示例</strong>：$y=\frac{2x+5}{x+2}$<br>- 分离：$y=\frac{2(x+2)+1}{x+2}=2+\frac{1}{x+2}$<br>- 这是 $y=\frac{1}{x}$ 向左平移2个单位，再向上平移2个单位<br>- 垂直渐近线：$x=-2$；水平渐近线：$y=2$<br>- 值域：$(-\infty, 2)\cup(2, +\infty)$</p></blockquote>
+<blockquote><p><strong>⚠️注意</strong>：若题目限制了 $x$ 的定义域（如 $x\in[1,3]$），则需结合定义域在图像上截取对应段，确定实际值域。</p></blockquote>
 <hr>
-
 <h3>五、方法4：换元法+对号函数（二次比一次分式）—— 压轴利器！</h3>
-
 <p><strong>适用</strong>：$y=\frac{ax^2+bx+c}{dx+e}$（$d\neq 0$）</p>
-
-<p>#### 核心思想</p>
-
+<h4>核心思想</h4>
 <p>令 $t=dx+e$（分母），将二次比一次转化为<strong>对号函数</strong>（或飘带函数）的形式。</p>
-
-<p>#### 操作步骤</p>
-
+<h4>操作步骤</h4>
 <ol>
 <li><strong>换元</strong>：令 $t=dx+e$，则 $x=\frac{t-e}{d}$</li>
 <li><strong>确定 $t$ 的范围</strong>：由原定义域和换元公式共同决定（例如 $x\in[m,n]$ 则 $t\in[dm+e, dn+e]$）</li>
@@ -184,154 +98,73 @@ MathJax = {
 <li><strong>识别对号函数</strong>：若 $\alpha\neq 0$ 且 $\beta\neq 0$，这是<strong>对号函数</strong>的平移形式</li>
 <li><strong>利用对号函数图像求值域</strong>：在 $t$ 的取值范围内，截取图像对应段，读取 $y$ 的范围</li>
 </ol>
-
-<blockquote>
-<strong>⚠️关键</strong>：换元后一定要写出新变量 $t$ 的范围！很多同学只换元不标范围，导致后面画图时截取错误。
-</blockquote>
-
+<blockquote><p><strong>⚠️关键</strong>：换元后一定要写出新变量 $t$ 的范围！很多同学只换元不标范围，导致后面画图时截取错误。</p></blockquote>
 <hr>
-
 <h3>六、对号函数（飘带函数）图像与性质</h3>
-
-<p>#### 1. 标准对号函数（$a>0, b>0$）</p>
-
+<h4>1. 标准对号函数（$a>0, b>0$）</h4>
 <p>$$y=ax+\frac{b}{x}\quad (a>0, b>0, x\neq 0)$$</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>性质</th><th>内容</th></tr>
-<tr><td><strong>图像</strong></td><td>像"对勾"或"耐克标志"</td></tr>
-<tr><td><strong>定义域</strong></td><td>$x\neq 0$</td></tr>
-<tr><td><strong>渐近线</strong></td><td>$y=ax$（斜渐近线）和 $x=0$（垂直渐近线）</td></tr>
-<tr><td><strong>奇偶性</strong></td><td>奇函数（关于原点对称）</td></tr>
-<tr><td><strong>单调性</strong></td><td>$(-\infty, -\sqrt{\frac{b}{a}}]$ 递增，$[-\sqrt{\frac{b}{a}}, 0)$ 递减；$(0, \sqrt{\frac{b}{a}}]$ 递减，$[\sqrt{\frac{b}{a}}, +\infty)$ 递增</td></tr>
-<tr><td><strong>极值</strong></td><td>最小值 $y_{min}=2\sqrt{ab}$（当 $x=\sqrt{\frac{b}{a}}$ 时）；最大值 $y_{max}=-2\sqrt{ab}$（当 $x=-\sqrt{\frac{b}{a}}$ 时）</td></tr>
-</table>
-</div>
-
-<p>#### 2. 均值不等式推导极值</p>
-
+<div class="table-wrap"><table><tr><th>性质</th><th>内容</th></tr><tr><td><strong>图像</strong></td><td>像&quot;对勾&quot;或&quot;耐克标志&quot;</td></tr><tr><td><strong>定义域</strong></td><td>$x\neq 0$</td></tr><tr><td><strong>渐近线</strong></td><td>$y=ax$（斜渐近线）和 $x=0$（垂直渐近线）</td></tr><tr><td><strong>奇偶性</strong></td><td>奇函数（关于原点对称）</td></tr><tr><td><strong>单调性</strong></td><td>$(-\infty, -\sqrt{\frac{b}{a}}]$ 递增，$[-\sqrt{\frac{b}{a}}, 0)$ 递减；$(0, \sqrt{\frac{b}{a}}]$ 递减，$[\sqrt{\frac{b}{a}}, +\infty)$ 递增</td></tr><tr><td><strong>极值</strong></td><td>最小值 $y_{min}=2\sqrt{ab}$（当 $x=\sqrt{\frac{b}{a}}$ 时）；最大值 $y_{max}=-2\sqrt{ab}$（当 $x=-\sqrt{\frac{b}{a}}$ 时）</td></tr></table></div>
+<h4>2. 均值不等式推导极值</h4>
 <p>当 $x>0$ 时，$ax+\frac{b}{x}\geq 2\sqrt{ax\cdot\frac{b}{x}}=2\sqrt{ab}$，当且仅当 $ax=\frac{b}{x}$，即 $x=\sqrt{\frac{b}{a}}$ 时取等号。</p>
-
-<blockquote>
-<strong>图像记忆口诀</strong>："一三象限对称勾，零点不取有渐近。均值定出最值点，平移变换要留心。"
-</blockquote>
-
-<p>#### 3. 飘带函数（$a,b$ 异号）</p>
-
+<blockquote><p><strong>图像记忆口诀</strong>：&quot;一三象限对称勾，零点不取有渐近。均值定出最值点，平移变换要留心。&quot;</p></blockquote>
+<h4>3. 飘带函数（$a,b$ 异号）</h4>
 <p>$$y=ax-\frac{b}{x}\quad (a>0, b>0)$$</p>
-
 <ul>
-<li>图像像"飘带"，单调递增（在整个定义域上）</li>
+<li>图像像&quot;飘带&quot;，单调递增（在整个定义域上）</li>
 <li>无极值点，值域为 $\mathbb{R}$</li>
 </ul>
-
 <hr>
-
 <h3>七、方法5：单调性法</h3>
-
 <p><strong>适用</strong>：已知或易判断函数单调性的情况</p>
-
 <p><strong>原理</strong>：若函数在区间上单调递增，则最小值在左端点，最大值在右端点；若单调递减，则相反。</p>
-
-<blockquote>
-<strong>示例</strong>：$f(x)=\sqrt{x}$ 在 $[0, +\infty)$ 上单调递增，所以值域为 $[0, +\infty)$
-</blockquote>
-
+<blockquote><p><strong>示例</strong>：$f(x)=\sqrt{x}$ 在 $[0, +\infty)$ 上单调递增，所以值域为 $[0, +\infty)$</p></blockquote>
 <hr>
-
 <h3>八、方法6：分段函数值域——取并集！</h3>
-
 <p><strong>适用</strong>：分段函数</p>
-
 <p><strong>核心原则</strong>：</p>
 <ol>
 <li><strong>逐段求值域</strong>：对每一段分别求出值域</li>
 <li><strong>取并集</strong>：将所有段的值域取<strong>并集</strong>（不是交集！），得到整个函数的值域</li>
 </ol>
-
-<blockquote>
-<strong>示例</strong>：$f(x)=\begin{cases} x+1, & x<0 \\ x^2, & 0\leq x\leq 2 \\ 3, & x>2 \end{cases}$
-- 第一段 $x<0$：$y=x+1<1$，值域 $(-\infty, 1)$
-- 第二段 $0\leq x\leq 2$：$y=x^2\in[0, 4]$
-- 第三段 $x>2$：$y=3$
-- 整体值域：$(-\infty, 1)\cup[0,4]\cup\{3\}=(-\infty, 4]$（因为 $[0,4]$ 已包含 $\{3\}$）
-</blockquote>
-
-<blockquote>
-<strong>⚠️注意</strong>：分段函数值域是各段值域的<strong>并集</strong>，不是交集！因为 $x$ 只能取一个值，对应一个段，所以是"或"的关系。
-</blockquote>
-
+<blockquote><p><strong>示例</strong>：$f(x)=\begin{cases} x+1, & x<0 \\ x^2, & 0\leq x\leq 2 \\ 3, & x>2 \end{cases}$<br>- 第一段 $x<0$：$y=x+1<1$，值域 $(-\infty, 1)$<br>- 第二段 $0\leq x\leq 2$：$y=x^2\in[0, 4]$<br>- 第三段 $x>2$：$y=3$<br>- 整体值域：$(-\infty, 1)\cup[0,4]\cup\{3\}=(-\infty, 4]$（因为 $[0,4]$ 已包含 $\{3\}$）</p></blockquote>
+<blockquote><p><strong>⚠️注意</strong>：分段函数值域是各段值域的<strong>并集</strong>，不是交集！因为 $x$ 只能取一个值，对应一个段，所以是&quot;或&quot;的关系。</p></blockquote>
 <hr>
-
 <h3>九、反解法（补充技巧）</h3>
-
 <p><strong>适用</strong>：分式函数，从原式解出 $x$ 的代数式</p>
-
 <p><strong>原理</strong>：从 $y=f(x)$ 解出 $x$ 关于 $y$ 的表达式，利用 $x$ 的定义域约束（如 $x^2\geq 0$）解关于 $y$ 的不等式，直接得到值域。</p>
-
-<blockquote>
-<strong>示例</strong>：$y=\frac{1-x^2}{1+x^2}$，求值域。
-- 由 $y=\frac{1-x^2}{1+x^2}$ 得 $y(1+x^2)=1-x^2$
-- $y+yx^2=1-x^2$ → $x^2(y+1)=1-y$ → $x^2=\frac{1-y}{1+y}$
-- 由 $x^2\geq 0$ 得 $\frac{1-y}{1+y}\geq 0$
-- 解得 $-1<y\leq 1$
-- 值域：$(-1, 1]$
-</blockquote>
-
-<blockquote>
-<strong>方法对比</strong>：
-- 反解法无需画图，但计算量稍大且对图像缺乏直观理解，适合<strong>检验</strong>或应对复杂定义域。
-- 图像法（换元+对号函数）更直观，易于理解函数行为，是<strong>首选方法</strong>。
-</blockquote>
-
+<blockquote><p><strong>示例</strong>：$y=\frac{1-x^2}{1+x^2}$，求值域。<br>- 由 $y=\frac{1-x^2}{1+x^2}$ 得 $y(1+x^2)=1-x^2$<br>- $y+yx^2=1-x^2$ → $x^2(y+1)=1-y$ → $x^2=\frac{1-y}{1+y}$<br>- 由 $x^2\geq 0$ 得 $\frac{1-y}{1+y}\geq 0$<br>- 解得 $-1<y\leq 1$<br>- 值域：$(-1, 1]$</p></blockquote>
+<blockquote><p><strong>方法对比</strong>：<br>- 反解法无需画图，但计算量稍大且对图像缺乏直观理解，适合<strong>检验</strong>或应对复杂定义域。<br>- 图像法（换元+对号函数）更直观，易于理解函数行为，是<strong>首选方法</strong>。</p></blockquote>
 <hr>
-
 <h3>十、记忆口诀</h3>
-
-<blockquote>
-<strong>值域求法口诀</strong>：
-- "观察一次和常数，图像二次看轴点"
-- "一次比一次分离常，反比例平移渐近线"
-- "二次比一次换元法，对号函数图像截"
-- "对号均值不等式，飘带单调没极值"
-- "分段函数逐段求，最后并集连起来"
-- "反解验证两相宜，图像直观首选它"
-</blockquote>
-
+<blockquote><p><strong>值域求法口诀</strong>：<br>- &quot;观察一次和常数，图像二次看轴点&quot;<br>- &quot;一次比一次分离常，反比例平移渐近线&quot;<br>- &quot;二次比一次换元法，对号函数图像截&quot;<br>- &quot;对号均值不等式，飘带单调没极值&quot;<br>- &quot;分段函数逐段求，最后并集连起来&quot;<br>- &quot;反解验证两相宜，图像直观首选它&quot;</p></blockquote>
 <hr>
-
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="../核心知识网络/高一筑基_数学_核心知识网络_函数的定义与三要素.html">高一筑基_数学_核心知识网络_函数的定义与三要素</a> — 函数概念、定义域、值域的基础理解</li>
 <li><a href="高一筑基_数学_典型题型与方法_函数定义域求解与解析式求法.html">高一筑基_数学_典型题型与方法_函数定义域求解与解析式求法</a> — 定义域确定后，求值域是下一步</li>
 <li><a href="../易错警示与辨析/高一筑基_数学_易错警示与辨析_平面向量与解三角形常见陷阱.html">高一筑基_数学_易错警示与辨析_平面向量与解三角形常见陷阱</a> — 最值问题的范围讨论思路相通</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
-
 <ul>
 <li><strong>广东高一期中/期末命题规律</strong>：</li>
+<ul>
 <li>二次函数闭区间最值：选填基础题（5分），几乎必考</li>
 <li>一次比一次分式（分离常数法）：选填中档题（5分），名校联考高频</li>
 <li>二次比一次分式（换元+对号函数）：选填压轴或解答题（5-8分），名校联考区分题</li>
 <li>分段函数值域：多选题常见，易漏段或混淆并集/交集</li>
+</ul>
 <li><strong>训练建议</strong>：</li>
+<ul>
 <li>第一层：二次函数图像法（15道基础题，含对称轴在区间内外三种情况）</li>
 <li>第二层：分离常数法（10道中档题，含渐近线分析）</li>
 <li>第三层：换元+对号函数（10道提升题，注意 $t$ 的范围和极值点位置）</li>
 <li>第四层：分段函数（5道综合题）</li>
-<li><strong>PDF来源</strong>：02.值域常考题型总结.pdf — 提供了完整的"二次函数→一次比一次→二次比一次→分段函数"值域求解链条，以及对号函数的详细图像分析，建议配合本卡片系统学习。</li>
 </ul>
-
+<li><strong>PDF来源</strong>：02.值域常考题型总结.pdf — 提供了完整的&quot;二次函数→一次比一次→二次比一次→分段函数&quot;值域求解链条，以及对号函数的详细图像分析，建议配合本卡片系统学习。</li>
+</ul>
 <hr>
-
-<blockquote>
-🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高一筑基</code> <code>#难度4</code> <code>#函数</code> <code>#值域</code> <code>#二次函数</code> <code>#分离常数法</code> <code>#换元法</code> <code>#对号函数</code> <code>#飘带函数</code> <code>#均值不等式</code> <code>#分段函数</code> <code>#反解法</code> <code>#广东名校模拟</code>
-</blockquote>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高一筑基</code> <code>#难度4</code> <code>#函数</code> <code>#值域</code> <code>#二次函数</code> <code>#分离常数法</code> <code>#换元法</code> <code>#对号函数</code> <code>#飘带函数</code> <code>#均值不等式</code> <code>#分段函数</code> <code>#反解法</code> <code>#广东名校模拟</code></p></blockquote>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

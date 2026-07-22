@@ -34,19 +34,20 @@ MathJax = {
 <div class="kb-note"><strong>广东考情</strong>：考查频率：中频（选填基础题）；难度：基础；常以集合运算与不等式解集结合命题</div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
 <h3>一、集合的概念与表示</h3>
 <ul>
 <li><strong>定义</strong>：研究对象称为元素，元素组成的总体叫做集合</li>
 <li><strong>元素特性</strong>：确定性、互异性、无序性</li>
 <li><strong>表示法</strong>：</li>
+<ul>
 <li>列举法：$\{a_1, a_2, a_3, \dots\}$</li>
 <li>描述法：$\{x \in A \mid P(x)\}$</li>
 <li>图示法：Venn图</li>
+</ul>
 <li><strong>常用数集</strong>：$\mathbb{N}^*$（正整数）$\subset \mathbb{N}$（自然数）$\subset \mathbb{Z}$（整数）$\subset \mathbb{Q}$（有理数）$\subset \mathbb{R}$（实数）$\subset \mathbb{C}$（复数）</li>
 </ul>
-
 <h3>二、集合间的基本关系</h3>
 <ul>
 <li><strong>子集</strong>：$A \subseteq B$（$\forall x \in A, x \in B$）</li>
@@ -55,17 +56,8 @@ MathJax = {
 <li><strong>空集</strong>：$\varnothing$ 是任何集合的子集；是任何非空集合的真子集</li>
 <li><strong>含 $n$ 个元素的集合</strong>：子集个数 $2^n$，真子集个数 $2^n-1$，非空真子集 $2^n-2$</li>
 </ul>
-
 <h3>三、集合的基本运算</h3>
-<div class="table-wrap">
-<table>
-<tr><th>运算</th><th>定义</th><th>Venn图特征</th></tr>
-<tr><td>并集 $A \cup B$</td><td>$\{x \mid x \in A$ 或 $x \in B\}$</td><td>两圆覆盖的全部区域</td></tr>
-<tr><td>交集 $A \cap B$</td><td>$\{x \mid x \in A$ 且 $x \in B\}$</td><td>两圆重叠区域</td></tr>
-<tr><td>补集 $\complement_U A$</td><td>$\{x \mid x \in U$ 且 $x \notin A\}$</td><td>全集中圆外区域</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>运算</th><th>定义</th><th>Venn图特征</th></tr><tr><td>并集 $A \cup B$</td><td>$\{x \mid x \in A$ 或 $x \in B\}$</td><td>两圆覆盖的全部区域</td></tr><tr><td>交集 $A \cap B$</td><td>$\{x \mid x \in A$ 且 $x \in B\}$</td><td>两圆重叠区域</td></tr><tr><td>补集 $\complement_U A$</td><td>$\{x \mid x \in U$ 且 $x \notin A\}$</td><td>全集中圆外区域</td></tr></table></div>
 <p><strong>运算律</strong>：</p>
 <ul>
 <li>$A \cup B = B \cup A$；$A \cap B = B \cap A$</li>
@@ -74,38 +66,22 @@ MathJax = {
 <li>$\complement_U(A \cup B) = \complement_U A \cap \complement_U B$（德摩根律）</li>
 <li>$\complement_U(A \cap B) = \complement_U A \cup \complement_U B$</li>
 </ul>
-
 <h3>四、充分条件与必要条件</h3>
 <p>设 $A = \{x \mid p(x)\}$，$B = \{x \mid q(x)\}$：</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>条件关系</th><th>集合关系</th><th>口诀</th></tr>
-<tr><td>$p$ 是 $q$ 的充分不必要条件</td><td>$A \subsetneqq B$</td><td>小推大</td></tr>
-<tr><td>$p$ 是 $q$ 的必要不充分条件</td><td>$B \subsetneqq A$</td><td>大推小</td></tr>
-<tr><td>$p$ 是 $q$ 的充要条件</td><td>$A = B$</td><td>等价</td></tr>
-<tr><td>$p$ 是 $q$ 的既不充分也不必要条件</td><td>$A \not\subseteq B$ 且 $B \not\subseteq A$</td><td>无关</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>条件关系</th><th>集合关系</th><th>口诀</th></tr><tr><td>$p$ 是 $q$ 的充分不必要条件</td><td>$A \subsetneqq B$</td><td>小推大</td></tr><tr><td>$p$ 是 $q$ 的必要不充分条件</td><td>$B \subsetneqq A$</td><td>大推小</td></tr><tr><td>$p$ 是 $q$ 的充要条件</td><td>$A = B$</td><td>等价</td></tr><tr><td>$p$ 是 $q$ 的既不充分也不必要条件</td><td>$A \not\subseteq B$ 且 $B \not\subseteq A$</td><td>无关</td></tr></table></div>
 <h3>五、全称量词与存在量词</h3>
 <ul>
 <li><strong>全称量词命题</strong>：$\forall x \in M, p(x)$，否定为 $\exists x \in M, \neg p(x)$</li>
 <li><strong>存在量词命题</strong>：$\exists x \in M, p(x)$，否定为 $\forall x \in M, \neg p(x)$</li>
 <li><strong>规律</strong>：全称 $\leftrightarrow$ 存在互换，结论取反</li>
 </ul>
-
 <hr>
-
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_函数的定义与三要素.html">函数的定义与三要素</a> — 集合是函数定义域、值域的基础</li>
 <li><a href="高一筑基_数学_核心知识网络_一元二次函数方程与不等式.html">一元二次函数方程与不等式</a> — 集合运算常与不等式解集结合</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
 <ul>
 <li>易错点：空集是任何集合的子集，但 $\varnothing \subseteq \varnothing$ 成立，$\varnothing \in \varnothing$ 不成立</li>

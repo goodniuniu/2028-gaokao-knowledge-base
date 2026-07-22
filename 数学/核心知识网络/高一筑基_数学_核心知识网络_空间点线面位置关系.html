@@ -31,111 +31,42 @@ MathJax = {
 <ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">空间点线面位置关系（判定·性质·定理体系）</span></li></ol>
 <h1 class="kb-title">空间点线面位置关系（判定·性质·定理体系）</h1>
 <div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★☆☆</span><span class="kb-badge kb-badge--tag">#高一筑基</span><span class="kb-badge kb-badge--tag">#广东名校模拟（广州各区期末、三校/五校联考）</span><span class="kb-badge kb-badge--src">来源：人教A版必修第二册第八章 / 2024~2025学年广州各区高一下期末试卷（单选第5-7题、多选第9-11题、解答第15-16题）</span></div>
-<div class="kb-note"><strong>广东考情</strong>：高一下期末**核心解答题板块**。广州各区期末卷的解答题第15-16题（每题12-14分）固定考查立体几何证明，总分占24-28分。命题以**线面平行/垂直的证明**为核心，偶尔结合空间角计算。名校联考难度更高，可能出现动点存在性问题。立体几何是广东卷区分中档生与优等生的关键板块。<br><strong>相交</strong>：同一平面内，有且只有一个公共点 | 交于一点 | $a \cap b = P$<br><strong>平行</strong>：同一平面内，无公共点 | 方向相同 | $a \parallel b$<br><strong>异面</strong>：不同在任何一个平面内，无公共点 | 既不平行也不相交 | —<br><strong>直线在平面内</strong>：直线上所有点都在平面内 | 无数个 | $l \subset \alpha$<br><strong>线面平行判定</strong>：平面外一条直线与平面内一条直线平行，则线面平行 | &quot;线线平行 → 线面平行&quot; | 证明线面平行<br><strong>线面平行性质</strong>：若直线平行于平面，过直线的平面与原平面交于一条直线，则直线与交线平行 | &quot;线面平行 → 线线平行&quot; | 找平行线<br><strong>面面平行判定</strong>：一个平面内有两条相交直线都平行于另一个平面，则面面平行 | &quot;两相交线平行 → 面面平行&quot; | 证明面面平行<br><strong>面面平行性质</strong>：两平行平面同时与第三个平面相交，交线平行 | &quot;面面平行 → 线线平行&quot; | 找平行线<br><strong>线面垂直判定</strong>：一条直线与平面内两条相交直线都垂直，则线面垂直 | &quot;两相交线垂直 → 线面垂直&quot; | 证明线面垂直（最常用）<br><strong>线面垂直性质</strong>：垂直于同一平面的两条直线平行 | &quot;线面垂直 → 线线平行&quot; | 找平行线<br><strong>面面垂直判定</strong>：一个平面过另一个平面的一条垂线，则面面垂直 | &quot;线面垂直 → 面面垂直&quot; | 证明面面垂直<br><strong>面面垂直性质</strong>：两平面垂直，一个平面内垂直于交线的直线垂直于另一平面 | &quot;面面垂直+线垂交线 → 线面垂直&quot; | 证明线面垂直（最常用）<br><strong>找中点</strong>：证平行/垂直 | 中位线、三线合一<br><strong>补形法</strong>：不规则几何体 | 补成柱体/锥体再分析<br><strong>展开法</strong>：最短路径问题 | 侧面展开为平面<br><strong>作垂线</strong>：求距离/高 | 找面的垂线，用等体积法</div>
+<div class="kb-note"><strong>广东考情</strong>：高一下期末**核心解答题板块**。广州各区期末卷的解答题第15-16题（每题12-14分）固定考查立体几何证明，总分占24-28分。命题以**线面平行/垂直的证明**为核心，偶尔结合空间角计算。名校联考难度更高，可能出现动点存在性问题。立体几何是广东卷区分中档生与优等生的关键板块。</div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
-<blockquote>
-<strong>本质理解</strong>：空间点线面关系是平面几何在三维空间的推广。核心思路：<strong>降维处理</strong>——将空间问题转化为平面问题（通过找垂线、作截面）。
-</blockquote>
-
+<blockquote><p><strong>本质理解</strong>：空间点线面关系是平面几何在三维空间的推广。核心思路：<strong>降维处理</strong>——将空间问题转化为平面问题（通过找垂线、作截面）。</p></blockquote>
 <hr>
-
 <h3>一、空间点线面位置关系总图</h3>
-
-<p>#### 1. 直线与直线的位置关系</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>关系</th><th>定义</th><th>图示特征</th><th>符号</th></tr>
-<tr><td><strong>相交</strong></td><td>同一平面内，有且只有一个公共点</td><td>交于一点</td><td>$a \cap b = P$</td></tr>
-<tr><td><strong>平行</strong></td><td>同一平面内，无公共点</td><td>方向相同</td><td>$a \parallel b$</td></tr>
-<tr><td><strong>异面</strong></td><td>不同在任何一个平面内，无公共点</td><td>既不平行也不相交</td><td>—</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>关键</strong>：异面直线是空间中特有的，平面几何中没有！
-</blockquote>
-
-<p>#### 2. 直线与平面的位置关系</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>关系</th><th>定义</th><th>公共点个数</th><th>符号</th></tr>
-<tr><td><strong>直线在平面内</strong></td><td>直线上所有点都在平面内</td><td>无数个</td><td>$l \subset \alpha$</td></tr>
-<tr><td><strong>相交</strong></td><td>直线与平面有且只有一个公共点</td><td>1个</td><td>$l \cap \alpha = P$</td></tr>
-<tr><td><strong>平行</strong></td><td>直线与平面无公共点</td><td>0个</td><td>$l \parallel \alpha$</td></tr>
-</table>
-</div>
-
-<p>#### 3. 平面与平面的位置关系</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>关系</th><th>定义</th><th>公共点</th><th>符号</th></tr>
-<tr><td><strong>相交</strong></td><td>两个平面有公共点，且公共点在一条直线上</td><td>一条直线（交线）</td><td>$\alpha \cap \beta = l$</td></tr>
-<tr><td><strong>平行</strong></td><td>两个平面无公共点</td><td>无</td><td>$\alpha \parallel \beta$</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>重要事实</strong>：两个平面相交，交线是一条直线，不是点！
-</blockquote>
-
+<h4>1. 直线与直线的位置关系</h4>
+<div class="table-wrap"><table><tr><th>关系</th><th>定义</th><th>图示特征</th><th>符号</th></tr><tr><td><strong>相交</strong></td><td>同一平面内，有且只有一个公共点</td><td>交于一点</td><td>$a \cap b = P$</td></tr><tr><td><strong>平行</strong></td><td>同一平面内，无公共点</td><td>方向相同</td><td>$a \parallel b$</td></tr><tr><td><strong>异面</strong></td><td>不同在任何一个平面内，无公共点</td><td>既不平行也不相交</td><td>—</td></tr></table></div>
+<blockquote><p><strong>关键</strong>：异面直线是空间中特有的，平面几何中没有！</p></blockquote>
+<h4>2. 直线与平面的位置关系</h4>
+<div class="table-wrap"><table><tr><th>关系</th><th>定义</th><th>公共点个数</th><th>符号</th></tr><tr><td><strong>直线在平面内</strong></td><td>直线上所有点都在平面内</td><td>无数个</td><td>$l \subset \alpha$</td></tr><tr><td><strong>相交</strong></td><td>直线与平面有且只有一个公共点</td><td>1个</td><td>$l \cap \alpha = P$</td></tr><tr><td><strong>平行</strong></td><td>直线与平面无公共点</td><td>0个</td><td>$l \parallel \alpha$</td></tr></table></div>
+<h4>3. 平面与平面的位置关系</h4>
+<div class="table-wrap"><table><tr><th>关系</th><th>定义</th><th>公共点</th><th>符号</th></tr><tr><td><strong>相交</strong></td><td>两个平面有公共点，且公共点在一条直线上</td><td>一条直线（交线）</td><td>$\alpha \cap \beta = l$</td></tr><tr><td><strong>平行</strong></td><td>两个平面无公共点</td><td>无</td><td>$\alpha \parallel \beta$</td></tr></table></div>
+<blockquote><p><strong>重要事实</strong>：两个平面相交，交线是一条直线，不是点！</p></blockquote>
 <hr>
-
 <h3>二、核心判定定理与性质定理（八大定理）</h3>
-
-<p>#### 【平行关系】</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>定理</th><th>内容</th><th>口诀</th><th>用途</th></tr>
-<tr><td><strong>线面平行判定</strong></td><td>平面外一条直线与平面内一条直线平行，则线面平行</td><td>"线线平行 → 线面平行"</td><td>证明线面平行</td></tr>
-<tr><td><strong>线面平行性质</strong></td><td>若直线平行于平面，过直线的平面与原平面交于一条直线，则直线与交线平行</td><td>"线面平行 → 线线平行"</td><td>找平行线</td></tr>
-<tr><td><strong>面面平行判定</strong></td><td>一个平面内有两条相交直线都平行于另一个平面，则面面平行</td><td>"两相交线平行 → 面面平行"</td><td>证明面面平行</td></tr>
-<tr><td><strong>面面平行性质</strong></td><td>两平行平面同时与第三个平面相交，交线平行</td><td>"面面平行 → 线线平行"</td><td>找平行线</td></tr>
-</table>
-</div>
-
-<p>#### 【垂直关系】</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>定理</th><th>内容</th><th>口诀</th><th>用途</th></tr>
-<tr><td><strong>线面垂直判定</strong></td><td>一条直线与平面内两条相交直线都垂直，则线面垂直</td><td>"两相交线垂直 → 线面垂直"</td><td>证明线面垂直（最常用）</td></tr>
-<tr><td><strong>线面垂直性质</strong></td><td>垂直于同一平面的两条直线平行</td><td>"线面垂直 → 线线平行"</td><td>找平行线</td></tr>
-<tr><td><strong>面面垂直判定</strong></td><td>一个平面过另一个平面的一条垂线，则面面垂直</td><td>"线面垂直 → 面面垂直"</td><td>证明面面垂直</td></tr>
-<tr><td><strong>面面垂直性质</strong></td><td>两平面垂直，一个平面内垂直于交线的直线垂直于另一平面</td><td>"面面垂直+线垂交线 → 线面垂直"</td><td>证明线面垂直（最常用）</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>可直接使用</strong>：上述八大定理在解答题中可直接使用，无需重新证明。
-</blockquote>
-
+<h4>【平行关系】</h4>
+<div class="table-wrap"><table><tr><th>定理</th><th>内容</th><th>口诀</th><th>用途</th></tr><tr><td><strong>线面平行判定</strong></td><td>平面外一条直线与平面内一条直线平行，则线面平行</td><td>&quot;线线平行 → 线面平行&quot;</td><td>证明线面平行</td></tr><tr><td><strong>线面平行性质</strong></td><td>若直线平行于平面，过直线的平面与原平面交于一条直线，则直线与交线平行</td><td>&quot;线面平行 → 线线平行&quot;</td><td>找平行线</td></tr><tr><td><strong>面面平行判定</strong></td><td>一个平面内有两条相交直线都平行于另一个平面，则面面平行</td><td>&quot;两相交线平行 → 面面平行&quot;</td><td>证明面面平行</td></tr><tr><td><strong>面面平行性质</strong></td><td>两平行平面同时与第三个平面相交，交线平行</td><td>&quot;面面平行 → 线线平行&quot;</td><td>找平行线</td></tr></table></div>
+<h4>【垂直关系】</h4>
+<div class="table-wrap"><table><tr><th>定理</th><th>内容</th><th>口诀</th><th>用途</th></tr><tr><td><strong>线面垂直判定</strong></td><td>一条直线与平面内两条相交直线都垂直，则线面垂直</td><td>&quot;两相交线垂直 → 线面垂直&quot;</td><td>证明线面垂直（最常用）</td></tr><tr><td><strong>线面垂直性质</strong></td><td>垂直于同一平面的两条直线平行</td><td>&quot;线面垂直 → 线线平行&quot;</td><td>找平行线</td></tr><tr><td><strong>面面垂直判定</strong></td><td>一个平面过另一个平面的一条垂线，则面面垂直</td><td>&quot;线面垂直 → 面面垂直&quot;</td><td>证明面面垂直</td></tr><tr><td><strong>面面垂直性质</strong></td><td>两平面垂直，一个平面内垂直于交线的直线垂直于另一平面</td><td>&quot;面面垂直+线垂交线 → 线面垂直&quot;</td><td>证明线面垂直（最常用）</td></tr></table></div>
+<blockquote><p><strong>可直接使用</strong>：上述八大定理在解答题中可直接使用，无需重新证明。</p></blockquote>
 <hr>
-
 <h3>三、证明题标准路径（解题思维导图）</h3>
-
-<p>#### 路径1：证明线面平行</p>
-
+<h4>路径1：证明线面平行</h4>
 <pre><code>目标：证明 l ∥ α
 
 方法1：找平面内一条直线m，使 l ∥ m
        → 用&quot;线线平行 → 线面平行&quot;
        
 方法2：证明 l 所在平面 β ∥ α
-       → 用&quot;面面平行 → 线面平行&quot;</code></pre>
-
-<blockquote>
-<strong>常用技巧</strong>：中位线、平行四边形对边、线段成比例。
-</blockquote>
-
-<p>#### 路径2：证明线面垂直</p>
-
+       → 用&quot;面面平行 → 线面平行&quot;
+</code></pre>
+<blockquote><p><strong>常用技巧</strong>：中位线、平行四边形对边、线段成比例。</p></blockquote>
+<h4>路径2：证明线面垂直</h4>
 <pre><code>目标：证明 l ⊥ α
 
 方法1：在α内找两条相交直线m,n，使 l ⊥ m 且 l ⊥ n
@@ -145,91 +76,48 @@ MathJax = {
        → 用&quot;线面垂直的传递性&quot;
        
 方法3：证明 α ⊥ β，且 l ⊂ β，l ⊥ 交线
-       → 用&quot;面面垂直性质&quot;</code></pre>
-
-<blockquote>
-<strong>常用技巧</strong>：等腰三角形三线合一、菱形对角线垂直、勾股定理逆定理。
-</blockquote>
-
-<p>#### 路径3：证明面面平行</p>
-
+       → 用&quot;面面垂直性质&quot;
+</code></pre>
+<blockquote><p><strong>常用技巧</strong>：等腰三角形三线合一、菱形对角线垂直、勾股定理逆定理。</p></blockquote>
+<h4>路径3：证明面面平行</h4>
 <pre><code>目标：证明 α ∥ β
 
 方法：在α内找两条相交直线a,b，使 a ∥ β 且 b ∥ β
-      → 用&quot;面面平行判定&quot;</code></pre>
-
-<p>#### 路径4：证明面面垂直</p>
-
+      → 用&quot;面面平行判定&quot;
+</code></pre>
+<h4>路径4：证明面面垂直</h4>
 <pre><code>目标：证明 α ⊥ β
 
 方法：在α（或β）内找一条直线l ⊥ β（或α）
-      → 用&quot;面面垂直判定&quot;</code></pre>
-
+      → 用&quot;面面垂直判定&quot;
+</code></pre>
 <hr>
-
 <h3>四、三垂线定理（选学/拓展）</h3>
-
-<blockquote>
-<strong>内容</strong>：平面内的一条直线，如果与斜线在平面内的射影垂直，则与斜线垂直。
-
-<strong>逆定理</strong>：平面内的一条直线，如果与斜线垂直，则与斜线在平面内的射影垂直。
-</blockquote>
-
-<blockquote>
-<strong>广东卷提示</strong>：新教材中三垂线定理不是重点，但在空间几何证明中仍然非常实用，可作为辅助思路。
-</blockquote>
-
+<blockquote><p><strong>内容</strong>：平面内的一条直线，如果与斜线在平面内的射影垂直，则与斜线垂直。<br><strong>逆定理</strong>：平面内的一条直线，如果与斜线垂直，则与斜线在平面内的射影垂直。</p></blockquote>
+<blockquote><p><strong>广东卷提示</strong>：新教材中三垂线定理不是重点，但在空间几何证明中仍然非常实用，可作为辅助思路。</p></blockquote>
 <hr>
-
 <h3>五、空间几何计算辅助技巧</h3>
-
-<div class="table-wrap">
-<table>
-<tr><th>技巧</th><th>适用场景</th><th>操作</th></tr>
-<tr><td><strong>找中点</strong></td><td>证平行/垂直</td><td>中位线、三线合一</td></tr>
-<tr><td><strong>补形法</strong></td><td>不规则几何体</td><td>补成柱体/锥体再分析</td></tr>
-<tr><td><strong>展开法</strong></td><td>最短路径问题</td><td>侧面展开为平面</td></tr>
-<tr><td><strong>作垂线</strong></td><td>求距离/高</td><td>找面的垂线，用等体积法</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>技巧</th><th>适用场景</th><th>操作</th></tr><tr><td><strong>找中点</strong></td><td>证平行/垂直</td><td>中位线、三线合一</td></tr><tr><td><strong>补形法</strong></td><td>不规则几何体</td><td>补成柱体/锥体再分析</td></tr><tr><td><strong>展开法</strong></td><td>最短路径问题</td><td>侧面展开为平面</td></tr><tr><td><strong>作垂线</strong></td><td>求距离/高</td><td>找面的垂线，用等体积法</td></tr></table></div>
 <hr>
-
 <h3>六、记忆口诀</h3>
-
-<blockquote>
-<strong>八大定理口诀</strong>：
-- 平行："线线推线面，线面推线线，两线推两面，两面推两线"
-- 垂直："两线推线面，线面推线线，线面推两面，两面+垂线推线面"
-- 总诀："判定由低维到高维，性质由高维到低维"
-</blockquote>
-
+<blockquote><p><strong>八大定理口诀</strong>：<br>- 平行：&quot;线线推线面，线面推线线，两线推两面，两面推两线&quot;<br>- 垂直：&quot;两线推线面，线面推线线，线面推两面，两面+垂线推线面&quot;<br>- 总诀：&quot;判定由低维到高维，性质由高维到低维&quot;</p></blockquote>
 <hr>
-
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_空间几何体表面积与体积.html">高一筑基_数学_核心知识网络_空间几何体表面积与体积</a> — 空间几何体的计算基础</li>
 <li><a href="../典型题型与方法/高一筑基_数学_典型题型与方法_立体几何证明题标准步骤.html">高一筑基_数学_典型题型与方法_立体几何证明题标准步骤</a> — 证明题的详细解题模板与书写规范</li>
 <li><a href="../易错警示与辨析/高一筑基_数学_易错警示与辨析_立体几何证明与计算失误高发区.html">高一筑基_数学_易错警示与辨析_立体几何证明与计算失误高发区</a> — 定理条件遗漏、条件不充分的常见错误</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
-
 <ul>
 <li><strong>广东高一下期末命题规律</strong>：解答题第15-16题固定是立体几何证明，每题两问（通常第1问证平行/垂直，第2问证另一关系或计算体积/距离）。广州名校联考（如五校联考）可能增加第三问，考查动点存在性。</li>
-<li><strong>2024-2025学年广州越秀区期末第15题</strong>：第1问证线面平行，第2问证线面垂直，是广东卷"一题两证"的典型结构。</li>
-<li><strong>书写规范</strong>：证明过程必须写清"因为...，所以..."，并注明所用定理（如"由线面平行判定定理得..."）。</li>
+<li><strong>2024-2025学年广州越秀区期末第15题</strong>：第1问证线面平行，第2问证线面垂直，是广东卷&quot;一题两证&quot;的典型结构。</li>
+<li><strong>书写规范</strong>：证明过程必须写清&quot;因为...，所以...&quot;，并注明所用定理（如&quot;由线面平行判定定理得...&quot;）。</li>
 <li><strong>训练建议</strong>：先熟背八大定理（每天默写一遍），再刷10道基础证明题，最后做5道名校联考综合题。</li>
 </ul>
-
 <hr>
-
-<blockquote>
-🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度3</code> <code>#立体几何</code> <code>#线面平行</code> <code>#线面垂直</code> <code>#面面平行</code> <code>#面面垂直</code> <code>#八大定理</code> <code>#广东名校模拟</code>
-</blockquote>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度3</code> <code>#立体几何</code> <code>#线面平行</code> <code>#线面垂直</code> <code>#面面平行</code> <code>#面面垂直</code> <code>#八大定理</code> <code>#广东名校模拟</code></p></blockquote>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

@@ -34,30 +34,28 @@ MathJax = {
 <div class="kb-note"><strong>广东考情</strong>：考查频率：高频；难度：中高档~压轴；解析几何是广东卷大题压轴位置的重要候选，椭圆综合题计算量大，对运算能力要求极高</div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
+<p><div class="figure"><img src="../../图形库/数学/椭圆定义.png" alt="图：椭圆定义——平面上到两定点F₁、F₂距离之和为常数2a的轨迹"><div class="figure-caption">图：椭圆定义——平面上到两定点F₁、F₂距离之和为常数2a的轨迹</div></div></p>
 <h2>核心内容</h2>
-
 <h3>一、椭圆（以焦点在 $x$ 轴上为例）</h3>
-<div class="figure">
-  <img src="../../图形库/数学/椭圆定义.png" alt="椭圆定义示意图">
-  <div class="figure-caption">图：椭圆定义——平面上到两定点F₁、F₂距离之和为常数2a的轨迹</div>
-</div>
-
 <ul>
 <li><strong>定义</strong>：$|MF_1| + |MF_2| = 2a$（$2a > |F_1 F_2|$）</li>
 <li><strong>标准方程</strong>：$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$（$a > b > 0$）</li>
 <li><strong>几何性质</strong>：</li>
+<ul>
 <li>范围：$x \in [-a, a]$，$y \in [-b, b]$</li>
 <li>对称性：关于 $x$ 轴、$y$ 轴、原点对称</li>
 <li>顶点：$(\pm a, 0)$，$(0, \pm b)$</li>
 <li>焦点：$(\pm c, 0)$，其中 $c^2 = a^2 - b^2$</li>
 <li>离心率：$e = \frac{c}{a}$，$e \in (0, 1)$</li>
 </ul>
-
+</ul>
 <h3>二、双曲线（以焦点在 $x$ 轴上为例）</h3>
 <ul>
 <li><strong>定义</strong>：$||MF_1| - |MF_2|| = 2a$（$0 < 2a < |F_1 F_2|$）</li>
 <li><strong>标准方程</strong>：$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$（$a > 0, b > 0$）</li>
 <li><strong>几何性质</strong>：</li>
+<ul>
 <li>范围：$x \leq -a$ 或 $x \geq a$，$y \in \mathbb{R}$</li>
 <li>对称性：关于 $x$ 轴、$y$ 轴、原点对称</li>
 <li>顶点：$(\pm a, 0)$</li>
@@ -65,12 +63,13 @@ MathJax = {
 <li>渐近线：$y = \pm \frac{b}{a}x$</li>
 <li>离心率：$e = \frac{c}{a}$，$e \in (1, +\infty)$</li>
 </ul>
-
+</ul>
 <h3>三、抛物线（以焦点在 $x$ 轴上，开口向右为例）</h3>
 <ul>
 <li><strong>定义</strong>：$|MF| = d$（到定点距离等于到定直线距离）</li>
 <li><strong>标准方程</strong>：$y^2 = 2px$（$p > 0$）</li>
 <li><strong>几何性质</strong>：</li>
+<ul>
 <li>范围：$x \geq 0$，$y \in \mathbb{R}$</li>
 <li>对称轴：$x$ 轴</li>
 <li>顶点：$(0, 0)$</li>
@@ -78,11 +77,9 @@ MathJax = {
 <li>准线：$x = -\frac{p}{2}$</li>
 <li>离心率：$e = 1$</li>
 </ul>
-
+</ul>
 <h3>四、圆锥曲线弦长公式</h3>
-<p>设直线 $AB$ 斜率为 $k$，与圆锥曲线交于 $A(x_1, y_1), B(x_2, y_2)$：</p>
-<p>$$|AB| = \sqrt{1 + k^2} |x_1 - x_2| = \sqrt{1 + \frac{1}{k^2}} |y_1 - y_2|\quad(k \neq 0)$$</p>
-
+<p>设直线 $AB$ 斜率为 $k$，与圆锥曲线交于 $A(x_1, y_1), B(x_2, y_2)$： $$|AB| = \sqrt{1 + k^2} |x_1 - x_2| = \sqrt{1 + \frac{1}{k^2}} |y_1 - y_2|\quad(k \neq 0)$$</p>
 <h3>五、点差法结论（弦中点问题）</h3>
 <p>设 $AB$ 为圆锥曲线的弦，$M$ 为弦 $AB$ 中点：</p>
 <ul>
@@ -90,18 +87,72 @@ MathJax = {
 <li>双曲线（焦点在 $x$ 轴）：$k_{AB} \cdot k_{OM} = \frac{b^2}{a^2}$</li>
 <li>抛物线（焦点在 $x$ 轴）：$k_{AB} = \frac{p}{y_0}$（$y_0$ 为中点 $M$ 的纵坐标）</li>
 </ul>
-
 <hr>
-
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;椭圆上两点A、B，过定点P的直线&quot;</td><td>弦长/面积/定点定值</td><td><strong>韦达联立五步法</strong>（见下方）</td></tr><tr><td>&quot;弦AB的中点M&quot;</td><td>弦中点问题</td><td><strong>点差法</strong>（回避联立，直接得斜率关系）</td></tr><tr><td>&quot;椭圆上动点P，求某量的范围&quot;</td><td>范围/最值</td><td>设参→建立目标函数→导数/不等式求最值</td></tr><tr><td>&quot;求椭圆的离心率&quot;</td><td>离心率问题</td><td>构造 $a,b,c$ 齐次方程 → 解 $e = c/a$</td></tr><tr><td>&quot;过焦点的弦AB&quot;</td><td>焦点弦</td><td>用椭圆第二定义 $\frac{PF}{d}=e$，或焦半径公式</td></tr><tr><td>&quot;椭圆与直线相切&quot;</td><td>切线</td><td>$\Delta = 0$（联立后判别式为零）</td></tr></table></div>
+<h2>解题路径（大题五步法）</h2>
+<blockquote><p>广东卷解析几何大题的<strong>标准操作路径</strong>，按此顺序走，不跳步。</p></blockquote>
+<h3>第一步：设</h3>
+<ul>
+<li>设直线方程 $l: y = kx + m$（或 $x = ty + n$，视情况而定）</li>
+<li>⚠️ <strong>斜率不存在时先单独讨论</strong>（k=0 或 k→∞ 的分情况是高频扣分点）</li>
+<li>设交点 $A(x_1, y_1), B(x_2, y_2)$</li>
+</ul>
+<h3>第二步：联</h3>
+<ul>
+<li>将直线方程代入椭圆方程 $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$，消元得一元二次方程</li>
+<li>标准形式：$(b^2 + a^2k^2)x^2 + 2a^2kmx + a^2(m^2 - b^2) = 0$</li>
+</ul>
+<h3>第三步：韦</h3>
+<ul>
+<li>写韦达定理：$x_1 + x_2 = -\frac{2a^2km}{b^2 + a^2k^2}$，$x_1x_2 = \frac{a^2(m^2 - b^2)}{b^2 + a^2k^2}$</li>
+<li>⚠️ <strong>必须验证</strong> $\Delta > 0$（确保直线与椭圆交于两点）</li>
+</ul>
+<h3>第四步：算</h3>
+<ul>
+<li>弦长：$|AB| = \sqrt{1+k^2}|x_1 - x_2| = \sqrt{1+k^2}\frac{\sqrt{\Delta}}{b^2 + a^2k^2}$</li>
+<li>面积：$S = \frac{1}{2}|AB| \cdot d$（$d$ 为点到直线的距离）</li>
+<li>中点：$M\left(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2}\right)$</li>
+</ul>
+<h3>第五步：解</h3>
+<ul>
+<li>将几何条件代数化（如&quot;面积为9&quot;→ 列面积方程）</li>
+<li>解出参数 $k$ 或 $m$ → 回代得直线方程</li>
+<li>⚠️ <strong>最后验证</strong>：解出的参数是否使 $\Delta > 0$？若否，舍去</li>
+</ul>
+<h2>母题（2024 新课标Ⅰ卷·第16题，15分）</h2>
+<blockquote><p>广东考生做的是同一张新课标Ⅰ卷，此题是解析几何第一道大题。</p></blockquote>
+<p><strong>题目</strong>：已知 $A(0, 3)$ 和 $P\left(3, \dfrac{3}{2}\right)$ 为椭圆 $C: \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$（$a > b > 0$）上两点。</p>
+<ul>
+<li>(1) 求 $C$ 的离心率；</li>
+<li>(2) 若过 $P$ 的直线 $l$ 交 $C$ 于另一点 $B$，且 $\triangle ABP$ 的面积为 $9$，求 $l$ 的方程。</li>
+</ul>
+<p><strong>解（走五步法）</strong>：</p>
+<p><strong>(1)</strong> 代入两点 → 解方程组：</p>
+<ul>
+<li>$A(0,3)$ 在椭圆上 $\Rightarrow$ $\frac{0}{a^2} + \frac{9}{b^2} = 1$ $\Rightarrow$ $b^2 = 9$</li>
+<li>$P\left(3, \frac{3}{2}\right)$ 代入 $\Rightarrow$ $\frac{9}{a^2} + \frac{9/4}{9} = 1$ $\Rightarrow$ $a^2 = 12$</li>
+<li>$e = \sqrt{1 - \frac{b^2}{a^2}} = \sqrt{1 - \frac{9}{12}} = \frac{1}{2}$</li>
+</ul>
+<p><strong>(2)</strong> 椭圆方程：$\frac{x^2}{12} + \frac{y^2}{9} = 1$</p>
+<p><strong>第一步（设）</strong>：设 $l: y - \frac{3}{2} = k(x - 3)$，即 $y = kx + \frac{3}{2} - 3k$</p>
+<ul>
+<li>先验斜率不存在：$x = 3$ 时，$B\left(3, -\frac{3}{2}\right)$，$S = \frac{9}{2} \neq 9$，舍去。</li>
+</ul>
+<p><strong>第二/三步（联立+韦达）</strong>：代入椭圆得 $$(4k^2 + 3)x^2 - (24k^2 - 12k)x + (36k^2 - 36k - 27) = 0$$</p>
+<p>已知 $x_P = 3$ 是一根，由韦达 $x_1 + x_2$ 公式直接得另一根： $$x_B = \frac{24k^2 - 12k}{4k^2 + 3} - 3$$</p>
+<blockquote><p>💡 <strong>关键技巧</strong>：已知椭圆上一点坐标，韦达定理中该点是二次方程的一根，另一根可直接由 $x_1+x_2$ 求出，无需解完整二次方程——省至少2分钟。</p></blockquote>
+<p><strong>第四步（算）</strong>：$|PB| = \sqrt{1+k^2} \cdot \frac{\sqrt{\Delta}}{4k^2 + 3}$，点 $A$ 到 $l$ 的距离 $d = \frac{|\frac{3}{2} - 3k|}{\sqrt{1+k^2}}$</p>
+<p><strong>第五步（解）</strong>：$S = \frac{1}{2}|PB| \cdot d = 9$ → 解得 $k = \frac{1}{2}$ 或 $k = \frac{3}{2}$</p>
+<p><strong>答案</strong>：$l: y = \frac{1}{2}x$ 或 $l: y = \frac{3}{2}x - 3$</p>
+<hr>
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="高二深化_数学_核心知识网络_直线与圆的方程.html">直线与圆的方程</a> — 解析几何基础</li>
 <li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_恒成立与存在性问题通法.html">恒成立与存在性问题通法</a> — 圆锥曲线中的范围问题</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
 <ul>
 <li>易错点：椭圆中 $a > b$，双曲线中 $a, b$ 大小不确定；焦点位置不确定时要分类讨论</li>

@@ -31,196 +31,108 @@ MathJax = {
 <ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">力学三大模型通法（板块·传送带·弹簧）</span></li></ol>
 <h1 class="kb-title">力学三大模型通法（板块·传送带·弹簧）</h1>
 <div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试、#广州一模、#深圳一模</span><span class="kb-badge kb-badge--src">来源：动力学综合专题 / 广东选择性考试高频压轴 / 力学主干知识</span></div>
-<div class="kb-note"><strong>广东考情</strong>：高频（近5年广东卷压轴计算题约80%涉及三大模型），常以&quot;生活/科技情境&quot;包装（如工厂流水线、地铁安检、新能源汽车），需从情境中提取标准模型。原始分差距大，赋分后进一步放大，务必确保过程分拿满。<br><strong>水平传送带</strong>：带匀速转动，物体初速v₀ | 判断共速前是否滑出<br><strong>倾斜传送带</strong>：带有倾角θ | 比较 $μ$ 与 $tanθ$ 判断能否静止<br><strong>平斜交接</strong>：水平段→倾斜段 | 交接处速度衔接，重新判断摩擦力方向<br><strong>弹簧连接体</strong>：弹簧连接两物体，受外力作用 | 整体法 + 隔离法，注意弹簧弹力不可突变<br><strong>弹簧类碰撞</strong>：弹簧作为相互作用媒介，求最大压缩/分离 | 动量守恒 + 能量守恒（弹性势能参与）</div>
+<div class="kb-note"><strong>广东考情</strong>：高频（近5年广东卷压轴计算题约80%涉及三大模型），常以&quot;生活/科技情境&quot;包装（如工厂流水线、地铁安检、新能源汽车），需从情境中提取标准模型。原始分差距大，赋分后进一步放大，务必确保过程分拿满。</div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
 <h3>一、模型总览与决策树</h3>
-
 <pre><code>力学压轴题 → 多物体+多过程 → 识别模型
   ├── 两物体叠放/相对滑动 → 板块模型
   ├── 物体在运动的带上运动 → 传送带模型
-  └── 涉及弹簧连接/弹性势能 → 弹簧模型（类碰撞）</code></pre>
-
-<blockquote>
-<strong>核心思想</strong>：三大模型本质都是<strong>牛顿定律 + 运动学 + 能量/动量</strong>的综合。解题关键是<strong>分段分析</strong>、<strong>找临界点</strong>、<strong>画v-t图</strong>。
-</blockquote>
-
+  └── 涉及弹簧连接/弹性势能 → 弹簧模型（类碰撞）
+</code></pre>
+<blockquote><p><strong>核心思想</strong>：三大模型本质都是<strong>牛顿定律 + 运动学 + 能量/动量</strong>的综合。解题关键是<strong>分段分析</strong>、<strong>找临界点</strong>、<strong>画v-t图</strong>。</p></blockquote>
 <hr>
-
 <h3>二、板块模型（滑块-木板）</h3>
-
 <h4>2.1 核心问题</h4>
-
 <p>两物体叠放，外力作用于其中一个，判断是否相对滑动、求相对位移/摩擦生热/分离时间。</p>
-
 <h4>2.2 解题通法</h4>
-
 <p><strong>第一步：求临界力 F₀（判断是否相对滑动）</strong></p>
-
 <p>假设相对静止，整体法求加速度：$a_{整体} = F/(M+m)$</p>
-
 <p>对上方物块用隔离法：$f = ma_{整体}$</p>
-
 <p>若 $f ≤ f_{max} = μmg$ → 相对静止，用整体法</p>
-
 <p>若 $f > f_{max}$ → 相对滑动，分别隔离列方程</p>
-
 <p><strong>第二步：相对滑动时的动力学方程</strong></p>
-
-<div class="table-wrap">
-<table>
-<tr><th>对象</th><th>受力分析</th><th>方程</th></tr>
-<tr><td>小物块 m</td><td>滑动摩擦力 $f = μmg$（方向与相对运动相反）</td><td>$a_m = μg$</td></tr>
-<tr><td>木板 M</td><td>外力 F + 地面摩擦力 + 物块给的摩擦力</td><td>$a_M = (F ± μmg ± f_{地})/M$</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>对象</th><th>受力分析</th><th>方程</th></tr><tr><td>小物块 m</td><td>滑动摩擦力 $f = μmg$（方向与相对运动相反）</td><td>$a_m = μg$</td></tr><tr><td>木板 M</td><td>外力 F + 地面摩擦力 + 物块给的摩擦力</td><td>$a_M = (F ± μmg ± f_{地})/M$</td></tr></table></div>
 <p><strong>第三步：运动学关系</strong></p>
-
 <ul>
 <li>相对位移：$Δx = x_{木板} - x_{物块}$（或反之，看参考系）</li>
 <li>摩擦生热：$Q = f_{滑} · |Δx|$</li>
 <li>共速条件：$v_m = v_M$ 时，判断是否还能相对滑动（若外力仍作用，需重新判断）</li>
 </ul>
-
 <h4>2.3 易错点</h4>
-
 <ul>
 <li>摩擦力方向：<strong>与相对运动方向相反</strong>，不是与运动方向相反</li>
 <li>地面光滑 vs 地面粗糙：地面有摩擦时木板加速度不同</li>
 <li>共速后若外力 F 仍存在，可能再次相对滑动，需重新判断</li>
 </ul>
-
 <hr>
-
 <h3>三、传送带模型</h3>
-
 <h4>3.1 分类</h4>
-
-<div class="table-wrap">
-<table>
-<tr><th>类型</th><th>特点</th><th>关键分析点</th></tr>
-<tr><td><strong>水平传送带</strong></td><td>带匀速转动，物体初速v₀</td><td>判断共速前是否滑出</td></tr>
-<tr><td><strong>倾斜传送带</strong></td><td>带有倾角θ</td><td>比较 $μ$ 与 $tanθ$ 判断能否静止</td></tr>
-<tr><td><strong>平斜交接</strong></td><td>水平段→倾斜段</td><td>交接处速度衔接，重新判断摩擦力方向</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>类型</th><th>特点</th><th>关键分析点</th></tr><tr><td><strong>水平传送带</strong></td><td>带匀速转动，物体初速v₀</td><td>判断共速前是否滑出</td></tr><tr><td><strong>倾斜传送带</strong></td><td>带有倾角θ</td><td>比较 $μ$ 与 $tanθ$ 判断能否静止</td></tr><tr><td><strong>平斜交接</strong></td><td>水平段→倾斜段</td><td>交接处速度衔接，重新判断摩擦力方向</td></tr></table></div>
 <h4>3.2 水平传送带通法</h4>
-
 <p><strong>情景一：物体初速 v₀，带速 v，同向</strong></p>
-
-<div class="table-wrap">
-<table>
-<tr><th>条件</th><th>运动过程</th><th>痕迹长度</th></tr>
-<tr><td>v₀ < v，带足够长</td><td>先加速 $a=μg$，再共速匀速</td><td>$Δx = v·t - x_{物} = v²/(2μg) - v₀²/(2μg)$</td></tr>
-<tr><td>v₀ > v，带足够长</td><td>先减速 $a=μg$，再共速匀速</td><td>类似</td></tr>
-<tr><td>带长 L < 加速距离</td><td>一直加速，末速 $v' = √(v₀²+2μgL)$</td><td>全程滑动</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>条件</th><th>运动过程</th><th>痕迹长度</th></tr><tr><td>v₀ &lt; v，带足够长</td><td>先加速 $a=μg$，再共速匀速</td><td>$Δx = v·t - x_{物} = v²/(2μg) - v₀²/(2μg)$</td></tr><tr><td>v₀ &gt; v，带足够长</td><td>先减速 $a=μg$，再共速匀速</td><td>类似</td></tr><tr><td>带长 L &lt; 加速距离</td><td>一直加速，末速 $v' = √(v₀²+2μgL)$</td><td>全程滑动</td></tr></table></div>
 <p><strong>情景二：物体初速 v₀，带速 v，反向</strong></p>
-
 <ul>
 <li>先减速到0，再反向加速</li>
 <li>若 $v₀ ≥ v$：返回速度 = v（与带共速后匀速）</li>
 <li>若 $v₀ < v$：返回速度 = v₀（对称性）</li>
 </ul>
-
 <h4>3.3 能量与摩擦生热</h4>
-
 <ul>
 <li>摩擦生热：$Q = f_{滑} · Δx_{相对}$（<strong>注意是相对位移，不是对地位移</strong>）</li>
 <li>多消耗的电能 = 物块动能变化 + 摩擦生热（能量守恒）</li>
 </ul>
-
 <h4>3.4 广东情境示例</h4>
-
 <ul>
 <li>2023广东模拟：地铁安检行李传送带（水平+倾斜交接）</li>
 <li>2024广东模拟：工厂流水线工件传输（多物体依次放上传送带）</li>
 </ul>
-
 <hr>
-
 <h3>四、弹簧模型（连接体/类碰撞）</h3>
-
 <h4>4.1 两类问题</h4>
-
-<div class="table-wrap">
-<table>
-<tr><th>类型</th><th>特征</th><th>核心方法</th></tr>
-<tr><td><strong>弹簧连接体</strong></td><td>弹簧连接两物体，受外力作用</td><td>整体法 + 隔离法，注意弹簧弹力不可突变</td></tr>
-<tr><td><strong>弹簧类碰撞</strong></td><td>弹簧作为相互作用媒介，求最大压缩/分离</td><td>动量守恒 + 能量守恒（弹性势能参与）</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>类型</th><th>特征</th><th>核心方法</th></tr><tr><td><strong>弹簧连接体</strong></td><td>弹簧连接两物体，受外力作用</td><td>整体法 + 隔离法，注意弹簧弹力不可突变</td></tr><tr><td><strong>弹簧类碰撞</strong></td><td>弹簧作为相互作用媒介，求最大压缩/分离</td><td>动量守恒 + 能量守恒（弹性势能参与）</td></tr></table></div>
 <h4>4.2 弹簧连接体通法</h4>
-
 <ul>
 <li>弹簧弹力：$F = kx$（x 为形变量，注意原长位置）</li>
 <li>平衡时：对连接体整体分析，求共同加速度，再隔离求弹簧形变量</li>
 <li><strong>关键</strong>：弹簧弹力不可突变，但形变量可以渐变</li>
 </ul>
-
 <h4>4.3 弹簧类碰撞（滑块-弹簧-滑块）</h4>
-
 <ul>
 <li><strong>系统动量守恒</strong>：$m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'$</li>
 <li><strong>系统能量守恒</strong>：$rac{1}{2}m₁v₁² + rac{1}{2}m₂v₂² = rac{1}{2}m₁v₁'² + rac{1}{2}m₂v₂'² + E_p$</li>
 </ul>
-
 <p><strong>临界条件</strong>：两滑块速度相等时，弹簧压缩/伸长最大，弹性势能最大。</p>
-
 <p><strong>求解方法</strong>：</p>
-
 <ol>
 <li>动量守恒求共同速度：$m₁v₁ + m₂v₂ = (m₁+m₂)v_{共}$</li>
 <li>能量守恒求最大弹性势能：$E_{p,max} = E_{k初} - E_{k共}$</li>
 </ol>
-
 <hr>
-
 <h3>五、三大模型通用解题步骤</h3>
-
 <pre><code>① 审题画情境图 → 标出已知量、未知量、各物体初速度
-② 分段分析 → 按"速度变化点"分段（摩擦突变点、共速点、分离点）
+② 分段分析 → 按&quot;速度变化点&quot;分段（摩擦突变点、共速点、分离点）
 ③ 选对象列方程 → 整体法/隔离法交替使用
 ④ 运动学联立 → v-t图辅助分析，避免代数错误
-⑤ 验证结果 → 检查物理意义（速度方向、位移正负、能量是否守恒）</code></pre>
-
+⑤ 验证结果 → 检查物理意义（速度方向、位移正负、能量是否守恒）
+</code></pre>
 <hr>
-
 <h3>六、记忆口诀</h3>
-
-<blockquote>
-<strong>板块传送带，弹簧连起来</strong></p>
-
-<p><strong>先判滑不滑，共速是要害</strong></p>
-
-<p><strong>摩擦看相对，能量别漏热</strong></p>
-
-<p><strong>v-t图一画，分段不混乱</strong>
-</blockquote>
-
+<blockquote><p><strong>板块传送带，弹簧连起来</strong><br><strong>先判滑不滑，共速是要害</strong><br><strong>摩擦看相对，能量别漏热</strong><br><strong>v-t图一画，分段不混乱</strong></p></blockquote>
 <hr>
-
 <h2>关联卡片</h2>
-
 <ul>
 <li><span class="kb-deadlink" title="关联内容尚未创建">高二深化_物理_典型题型与方法_牛顿定律连接体通法.md</span> — 连接体问题的一般解法</li>
 <li><span class="kb-deadlink" title="关联内容尚未创建">高二深化_物理_典型题型与方法_动量能量综合.md</span> — 滑块弹簧圆弧轨道的能量动量综合</li>
 <li><span class="kb-deadlink" title="关联内容尚未创建">高二深化_物理_典型题型与方法_广东情境化命题专题.md</span> — 从广东情境中提取物理模型</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
-
 <ul>
-<li><strong>广东卷特色</strong>：近年广东物理压轴题常将三大模型包装为"智能传送带""新能源汽车碰撞测试"等情境，题干较长，但核心物理模型不变。建议训练"先读问题→再回读题干提取物理量"的做题习惯。</li>
+<li><strong>广东卷特色</strong>：近年广东物理压轴题常将三大模型包装为&quot;智能传送带&quot;&quot;新能源汽车碰撞测试&quot;等情境，题干较长，但核心物理模型不变。建议训练&quot;先读问题→再回读题干提取物理量&quot;的做题习惯。</li>
 <li><strong>等级赋分提示</strong>：物理压轴题即使不能完全解出，也要写出关键方程（受力分析、牛顿定律、能量守恒）争取过程分。原始分差10分可能赋分差5-8分，基础模型题必须拿下。</li>
 <li><strong>推荐练习</strong>：2023广东物理第15题、2024广东物理第14题、2024广州一模力学压轴题。</li>
 </ul>

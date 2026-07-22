@@ -28,7 +28,8 @@
 
 | 脚本 | 用途 | 何时运行 |
 |------|------|----------|
-| `build_site.py` | 一键重建：卡片换肤、文档页 md→HTML、全部 index.html、断链校验 | **每次改动任何 md 后必跑** |
+| `build_site.py` | 一键重建：卡片换肤、文档页 md→HTML、全部 index.html、断链校验。**`card_page` 已由 md 重新生成卡片正文（md 是唯一源，不再从旧 HTML 提取）** | **每次改动任何 md 后必跑** |
+| `check_html_md_consistency.py` | HTML 与 MD 一致性校验：确认每张卡片 HTML 正文均可由 MD 生成（图片/标题/文本长度比对），退出码 0=一致、1=不一致 | 改动大量卡片后、CI 接入前复查；发现"标题/图片缺失"说明有内容只存在于 HTML，需回填 md |
 | `kb_audit.py` | 全库审计：卡片数/状态/分维度统计，写 `复盘追踪/_scan_result.json` | 更新统计数字时 |
 | `build_status_table.py` | 生成 `复盘追踪/知识掌握状态表.md` | 复盘、批量改掌握状态后 |
 | `图形库/draw_*.py` | 绘制知识点示意图（matplotlib） | 需要新图时 |

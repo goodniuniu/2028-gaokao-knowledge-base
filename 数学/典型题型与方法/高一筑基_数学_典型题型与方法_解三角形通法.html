@@ -34,119 +34,64 @@ MathJax = {
 <div class="kb-note"><strong>广东考情</strong>：高一下期末**核心解答题板块**。广州各区期末卷解答题第18题（12-14分）固定考查解三角形，通常分为三问：第1问用正/余弦定理求边或角；第2问求面积或周长最值；第3问（名校联考）可能考查三角形形状判定或多解讨论。2024-2025学年广州越秀区、天河区、白云区期末第18题均为此结构，说明广东卷对解三角形的**公式综合运用和范围讨论**要求较高。</div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
-<h2>核心内容</h2>
-
-<blockquote>
-<strong>本质理解</strong>：解三角形就是"知三求其他"——已知三角形的某些边和角，利用正弦定理、余弦定理、面积公式求未知量。核心是<strong>边角互化</strong>和<strong>方程思想</strong>。
-</blockquote>
-
 <hr>
-
+<p><div class="figure"><img src="../../图形库/数学/正余弦定理.png" alt="图：正弦定理与余弦定理解三角形示意图"><div class="figure-caption">图：正弦定理与余弦定理解三角形示意图</div></div></p>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：解三角形就是&quot;知三求其他&quot;——已知三角形的某些边和角，利用正弦定理、余弦定理、面积公式求未知量。核心是<strong>边角互化</strong>和<strong>方程思想</strong>。</p></blockquote>
+<hr>
 <h3>一、三大定理公式体系</h3>
-
-<p>#### 1. 正弦定理（"边化角"首选）</p>
-
+<h4>1. 正弦定理（&quot;边化角&quot;首选）</h4>
 <p>$$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R$$</p>
-
 <p>其中$R$为$\triangle ABC$外接圆半径。</p>
-
 <p><strong>变形公式</strong>：</p>
 <ul>
 <li>$a = 2R\sin A$, $b = 2R\sin B$, $c = 2R\sin C$（边化角）</li>
 <li>$\sin A = \frac{a}{2R}$, $\sin B = \frac{b}{2R}$, $\sin C = \frac{c}{2R}$（角化边）</li>
 <li>$a : b : c = \sin A : \sin B : \sin C$</li>
 </ul>
-
-<blockquote>
-<strong>适用场景</strong>：已知两角一边、两边一对角、求外接圆半径。
-</blockquote>
-
-<p>#### 2. 余弦定理（"角化边"首选，含平方关系）</p>
-
-<p>$$a^2 = b^2 + c^2 - 2bc\cos A$$</p>
-<p>$$b^2 = a^2 + c^2 - 2ac\cos B$$</p>
-<p>$$c^2 = a^2 + b^2 - 2ab\cos C$$</p>
-
-<p><strong>求角公式</strong>：</p>
-<p>$$\cos A = \frac{b^2 + c^2 - a^2}{2bc}$$</p>
-
-<blockquote>
-<strong>适用场景</strong>：已知三边、两边夹一角、两边一对角（求第三边）。
-</blockquote>
-
-<div class="figure">
-  <img src="../../图形库/数学/正余弦定理.png" alt="正弦定理与余弦定理解三角形示意图">
-  <div class="figure-caption">图：正弦定理与余弦定理解三角形示意图</div>
-</div>
-
-<p>#### 3. 面积公式（多版本，灵活选择）</p>
-
+<blockquote><p><strong>适用场景</strong>：已知两角一边、两边一对角、求外接圆半径。</p></blockquote>
+<h4>2. 余弦定理（&quot;角化边&quot;首选，含平方关系）</h4>
+<p>$$a^2 = b^2 + c^2 - 2bc\cos A$$ $$b^2 = a^2 + c^2 - 2ac\cos B$$ $$c^2 = a^2 + b^2 - 2ab\cos C$$</p>
+<p><strong>求角公式</strong>： $$\cos A = \frac{b^2 + c^2 - a^2}{2bc}$$</p>
+<blockquote><p><strong>适用场景</strong>：已知三边、两边夹一角、两边一对角（求第三边）。</p></blockquote>
+<h4>3. 面积公式（多版本，灵活选择）</h4>
 <p>$$S = \frac{1}{2}ab\sin C = \frac{1}{2}bc\sin A = \frac{1}{2}ca\sin B$$</p>
-
 <p>$$S = \frac{1}{2}ah_a = \frac{1}{2}bh_b = \frac{1}{2}ch_c$$（底×高）</p>
-
 <p>$$S = \frac{abc}{4R}$$（与外接圆半径关系）</p>
-
 <p>$$S = \frac{1}{2}(a+b+c)r$$（与内切圆半径关系，$r$为内切圆半径）</p>
-
-<blockquote>
-<strong>海伦公式</strong>：$S = \sqrt{p(p-a)(p-b)(p-c)}$，其中$p = \frac{a+b+c}{2}$（三边已知时用）。
-</blockquote>
-
+<blockquote><p><strong>海伦公式</strong>：$S = \sqrt{p(p-a)(p-b)(p-c)}$，其中$p = \frac{a+b+c}{2}$（三边已知时用）。</p></blockquote>
 <hr>
-
 <h3>二、解题通法：已知条件 → 选择定理 → 求解目标</h3>
-
-<p>#### 条件-定理匹配表</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>已知条件</th><th>选用定理</th><th>可求量</th><th>注意点</th></tr>
-<tr><td>两角一边（AAS/ASA）</td><td>正弦定理</td><td>所有边和角</td><td>先用内角和求第三角</td></tr>
-<tr><td>两边夹一角（SAS）</td><td>余弦定理求第三边 → 正弦定理求角</td><td>所有边和角</td><td>先用余弦定理</td></tr>
-<tr><td>三边（SSS）</td><td>余弦定理求角</td><td>所有角</td><td>可能有多解，需判断</td></tr>
-<tr><td>两边一对角（SSA）</td><td><strong>正弦定理或余弦定理</strong></td><td>需讨论</td><td><strong>高频陷阱！可能多解</strong></td></tr>
-</table>
-</div>
-
-<p>#### 详细解题流程（SSA多解讨论）</p>
-
+<h4>条件-定理匹配表</h4>
+<div class="table-wrap"><table><tr><th>已知条件</th><th>选用定理</th><th>可求量</th><th>注意点</th></tr><tr><td>两角一边（AAS/ASA）</td><td>正弦定理</td><td>所有边和角</td><td>先用内角和求第三角</td></tr><tr><td>两边夹一角（SAS）</td><td>余弦定理求第三边 → 正弦定理求角</td><td>所有边和角</td><td>先用余弦定理</td></tr><tr><td>三边（SSS）</td><td>余弦定理求角</td><td>所有角</td><td>可能有多解，需判断</td></tr><tr><td>两边一对角（SSA）</td><td><strong>正弦定理或余弦定理</strong></td><td>需讨论</td><td><strong>高频陷阱！可能多解</strong></td></tr></table></div>
+<h4>详细解题流程（SSA多解讨论）</h4>
 <p><strong>已知</strong>：$a$, $b$, $A$（两边及其中一边的对角）</p>
-
 <p><strong>步骤</strong>：</p>
 <ol>
 <li>用正弦定理：$\sin B = \frac{b\sin A}{a}$</li>
 <li>判断$\sin B$的值：</li>
-</ol>
 <ul>
 <li>若$\sin B > 1$：<strong>无解</strong>（不存在这样的三角形）</li>
 <li>若$\sin B = 1$：<strong>一解</strong>，$B = 90°$</li>
 <li>若$0 < \sin B < 1$：<strong>可能两解</strong>（$B$为锐角或钝角）</li>
+<ul>
 <li>当$a > b$时：$A > B$，$B$只能为锐角，<strong>一解</strong></li>
 <li>当$a = b$时：$A = B$，<strong>一解</strong>（等腰三角形）</li>
 <li>当$a < b$时：$B$可能为锐角或钝角，<strong>两解</strong>（需验证$A+B < 180°$）</li>
 </ul>
-
-<blockquote>
-<strong>口诀</strong>："大边对大角，小边对小角；sinB大于1无解，等于1唯一，小于1看大小"
-</blockquote>
-
+</ul>
+</ol>
+<blockquote><p><strong>口诀</strong>：&quot;大边对大角，小边对小角；sinB大于1无解，等于1唯一，小于1看大小&quot;</p></blockquote>
 <hr>
-
 <h3>三、高频题型与通法</h3>
-
-<p>#### 题型1：求面积/周长最值（广东卷解答题第2问核心！）</p>
-
-<p><strong>已知</strong>：一角（如$A$）及对边（如$a$）</p>
-<p><strong>目标</strong>：求面积$S$或周长$L = a+b+c$的最大值</p>
-
+<h4>题型1：求面积/周长最值（广东卷解答题第2问核心！）</h4>
+<p><strong>已知</strong>：一角（如$A$）及对边（如$a$） <strong>目标</strong>：求面积$S$或周长$L = a+b+c$的最大值</p>
 <p><strong>通法1：余弦定理+基本不等式</strong></p>
 <ul>
 <li>由$a^2 = b^2 + c^2 - 2bc\cos A$，结合$b^2 + c^2 \geq 2bc$</li>
 <li>得$bc \leq \frac{a^2}{2(1-\cos A)}$（当$b=c$时取等）</li>
 <li>$S = \frac{1}{2}bc\sin A \leq \frac{a^2\sin A}{4(1-\cos A)}$</li>
 </ul>
-
 <p><strong>通法2：正弦定理+三角函数有界性</strong></p>
 <ul>
 <li>$a = 2R\sin A$ → $R = \frac{a}{2\sin A}$（定值）</li>
@@ -154,102 +99,49 @@ MathJax = {
 <li>$S = \frac{1}{2}bc\sin A = 2R^2\sin A\sin B\sin(A+B)$</li>
 <li>用三角恒等变换求最值</li>
 </ul>
-
-<blockquote>
-<strong>广东卷特色</strong>：广州名校联考常在第2问考查面积最值，要求用两种方法之一。基本不等式法更简洁，三角函数法更通用。
-</blockquote>
-
-<p>#### 题型2：三角形形状判定</p>
-
+<blockquote><p><strong>广东卷特色</strong>：广州名校联考常在第2问考查面积最值，要求用两种方法之一。基本不等式法更简洁，三角函数法更通用。</p></blockquote>
+<h4>题型2：三角形形状判定</h4>
 <p><strong>方法</strong>：将条件统一化为边或统一化为角</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>条件特征</th><th>转化方向</th><th>判定结果</th></tr>
-<tr><td>含$a^2 + b^2$与$c^2$比较</td><td>统一为边（余弦定理）</td><td>$a^2+b^2>c^2$ → 锐角；$=c^2$ → 直角；$<c^2$ → 钝角</td></tr>
-<tr><td>含$\sin A$, $\sin B$, $\sin C$关系</td><td>统一为角（正弦定理）</td><td>利用三角恒等变换</td></tr>
-<tr><td>含$\cos A$, $\cos B$, $\cos C$</td><td>直接判断角</td><td>$\cos A > 0$ → $A$为锐角</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>典型结论</strong>：
-- 若$\sin 2A = \sin 2B$，则$A = B$（等腰）或$A + B = 90°$（直角）
-- 若$a\cos A = b\cos B$，则$A = B$（等腰）或$A + B = 90°$（直角）
-</blockquote>
-
-<p>#### 题型3：多三角形问题（连解题）</p>
-
-<p><strong>特征</strong>：图中多个三角形共享边或角</p>
-<p><strong>通法</strong>：</p>
+<div class="table-wrap"><table><tr><th>条件特征</th><th>转化方向</th><th>判定结果</th></tr><tr><td>含$a^2 + b^2$与$c^2$比较</td><td>统一为边（余弦定理）</td><td>$a^2+b^2>c^2$ → 锐角；$=c^2$ → 直角；$<c^2$ → 钝角</td></tr><tr><td>含$\sin A$, $\sin B$, $\sin C$关系</td><td>统一为角（正弦定理）</td><td>利用三角恒等变换</td></tr><tr><td>含$\cos A$, $\cos B$, $\cos C$</td><td>直接判断角</td><td>$\cos A > 0$ → $A$为锐角</td></tr></table></div>
+<blockquote><p><strong>典型结论</strong>：<br>- 若$\sin 2A = \sin 2B$，则$A = B$（等腰）或$A + B = 90°$（直角）<br>- 若$a\cos A = b\cos B$，则$A = B$（等腰）或$A + B = 90°$（直角）</p></blockquote>
+<h4>题型3：多三角形问题（连解题）</h4>
+<p><strong>特征</strong>：图中多个三角形共享边或角 <strong>通法</strong>：</p>
 <ol>
 <li>在$\triangle ABD$中用正弦/余弦定理求某量</li>
 <li>在$\triangle BCD$中利用上一步结果继续求解</li>
 <li>逐步递推，注意公共边和公共角的关系</li>
 </ol>
-
 <hr>
-
 <h3>四、向量法辅助解三角形</h3>
-
-<p>#### 1. 中线向量公式</p>
-
+<h4>1. 中线向量公式</h4>
 <p>$\vec{AD} = \frac{1}{2}(\vec{AB} + \vec{AC})$（$D$为$BC$中点）</p>
-
 <p><strong>推论</strong>：$AD^2 = \frac{1}{4}(AB^2 + AC^2 + 2\vec{AB} \cdot \vec{AC}) = \frac{1}{4}(b^2 + c^2 + 2bc\cos A)$</p>
-
-<blockquote>
-<strong>中线长公式</strong>：$m_a = \frac{1}{2}\sqrt{2b^2 + 2c^2 - a^2}$
-</blockquote>
-
-<p>#### 2. 角平分线向量公式</p>
-
+<blockquote><p><strong>中线长公式</strong>：$m_a = \frac{1}{2}\sqrt{2b^2 + 2c^2 - a^2}$</p></blockquote>
+<h4>2. 角平分线向量公式</h4>
 <p>$\vec{AD} = \frac{b\vec{AB} + c\vec{AC}}{b+c}$（$D$在$BC$上，$AD$平分$\angle A$）</p>
-
-<p>#### 3. 面积向量公式</p>
-
+<h4>3. 面积向量公式</h4>
 <p>$S = \frac{1}{2}|\vec{AB} \times \vec{AC}| = \frac{1}{2}|x_1y_2 - x_2y_1|$（坐标法）</p>
-
 <hr>
-
 <h3>五、记忆口诀</h3>
-
-<blockquote>
-<strong>正余弦定理口诀</strong>：
-- "两角一边用正弦，两边夹角用余弦"
-- "三边求角余弦好，边角互化正弦妙"
-- "SSA多解要小心，大边对大角来判"
-- "面积公式有多种，两边夹角最常用"
-- "求最值用不等式，或化三角有界性"
-</blockquote>
-
+<blockquote><p><strong>正余弦定理口诀</strong>：<br>- &quot;两角一边用正弦，两边夹角用余弦&quot;<br>- &quot;三边求角余弦好，边角互化正弦妙&quot;<br>- &quot;SSA多解要小心，大边对大角来判&quot;<br>- &quot;面积公式有多种，两边夹角最常用&quot;<br>- &quot;求最值用不等式，或化三角有界性&quot;</p></blockquote>
 <hr>
-
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="../核心知识网络/高一筑基_数学_核心知识网络_平面向量体系.html">高一筑基_数学_核心知识网络_平面向量体系</a> — 向量法辅助解三角形（中线、角平分线、面积）</li>
 <li><a href="../易错警示与辨析/高一筑基_数学_易错警示与辨析_平面向量与解三角形常见陷阱.html">高一筑基_数学_易错警示与辨析_平面向量与解三角形常见陷阱</a> — SSA多解、角的范围、内角和约束等易错点</li>
 <li><a href="../核心知识网络/高一筑基_数学_核心知识网络_空间几何体表面积与体积.html">高一筑基_数学_核心知识网络_空间几何体表面积与体积</a> — 解三角形与立体几何的衔接（如三棱锥的高计算）</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
-
 <ul>
 <li><strong>广东高一下期末命题规律</strong>：解答题第18题固定为解三角形，12-14分，三问结构。第1问基础（5-6分），第2问中档（4-6分），第3问（名校联考）拔高（2-4分）。广州名校联考（五校、三校）第3问常考查多解讨论或最值问题。</li>
-<li><strong>2024-2025学年广州越秀区期末第18题</strong>：第1问正弦定理求角；第2问余弦定理+面积公式；第3问面积最值（用基本不等式）。这是广东卷"层层递进"的典型结构。</li>
+<li><strong>2024-2025学年广州越秀区期末第18题</strong>：第1问正弦定理求角；第2问余弦定理+面积公式；第3问面积最值（用基本不等式）。这是广东卷&quot;层层递进&quot;的典型结构。</li>
 <li><strong>书写规范</strong>：写正弦定理时必须写$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R$的完整形式，不能只写比例式。</li>
-<li><strong>训练建议</strong>：先练基础"知三求其他"（15题），再练面积/周长最值（10题），最后练多解讨论（5题）。</li>
+<li><strong>训练建议</strong>：先练基础&quot;知三求其他&quot;（15题），再练面积/周长最值（10题），最后练多解讨论（5题）。</li>
 <li><strong>高考衔接</strong>：新高考Ⅰ卷中解三角形是解答题第15-16题的常客（10-12分），高一下打好基础，高二深化最值与范围问题。</li>
 </ul>
-
 <hr>
-
-<blockquote>
-🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高一筑基</code> <code>#难度3</code> <code>#解三角形</code> <code>#正弦定理</code> <code>#余弦定理</code> <code>#面积公式</code> <code>#SSA多解</code> <code>#最值</code> <code>#基本不等式</code> <code>#广东名校模拟</code>
-</blockquote>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高一筑基</code> <code>#难度3</code> <code>#解三角形</code> <code>#正弦定理</code> <code>#余弦定理</code> <code>#面积公式</code> <code>#SSA多解</code> <code>#最值</code> <code>#基本不等式</code> <code>#广东名校模拟</code></p></blockquote>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

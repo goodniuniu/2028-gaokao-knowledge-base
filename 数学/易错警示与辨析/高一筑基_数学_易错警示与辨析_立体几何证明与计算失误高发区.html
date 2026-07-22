@@ -34,49 +34,33 @@ MathJax = {
 <div class="kb-note"><strong>广东考情</strong>：高一下期末**解答题失分重灾区**。广州各区期末试卷中，立体几何解答题（第15-16题，共24-28分）平均得分率约55%，失分原因中&quot;条件遗漏&quot;占30%，&quot;计算错误&quot;占35%，&quot;符号混乱&quot;占20%。广东卷对立体几何证明的**书写规范性**要求全国最高，定理名称不写、条件不充分、符号使用错误都会直接扣分。名校联考（五校联考）中，证明题第2问的&quot;面面垂直性质&quot;应用是最大失分点。</div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
-<h2>核心内容</h2>
-
-<blockquote>
-<strong>本质理解</strong>：立体几何证明与计算的失误，80%不是"不会"，而是"不细"。核心对策：<strong>定理条件逐一核对、计算分步进行、符号规范书写</strong>。
-</blockquote>
-
 <hr>
-
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：立体几何证明与计算的失误，80%不是&quot;不会&quot;，而是&quot;不细&quot;。核心对策：<strong>定理条件逐一核对、计算分步进行、符号规范书写</strong>。</p></blockquote>
+<hr>
 <h3>一、证明题五大失分点</h3>
-
-<p>#### 失分点1：定理条件遗漏——"线在面外"被遗忘</p>
-
-<p><strong>高频场景</strong>：证明线面平行时，只写"$l \parallel m$，$m \subset \alpha$"，漏写"$l \not\subset \alpha$"。</p>
-
+<h4>失分点1：定理条件遗漏——&quot;线在面外&quot;被遗忘</h4>
+<p><strong>高频场景</strong>：证明线面平行时，只写&quot;$l \parallel m$，$m \subset \alpha$&quot;，漏写&quot;$l \not\subset \alpha$&quot;。</p>
 <p><strong>正确定理</strong>：线面平行判定定理要求：<strong>平面外</strong>一条直线与平面内一条直线平行，则线面平行。</p>
-
 <p><strong>三个条件缺一不可</strong>：</p>
 <ol>
 <li>$l \parallel m$（线线平行）</li>
 <li>$m \subset \alpha$（线在面内）</li>
 <li>$l \not\subset \alpha$（线在面外）← <strong>最容易遗漏！</strong></li>
 </ol>
-
 <p><strong>典型错误写法</strong>：</p>
 <pre><code>∵ EF ∥ AB，AB ⊂ 面 PAB
-∴ EF ∥ 面 PAB  ← 错误！漏了EF ⊄ 面PAB</code></pre>
-
+∴ EF ∥ 面 PAB  ← 错误！漏了EF ⊄ 面PAB
+</code></pre>
 <p><strong>正确写法</strong>：</p>
 <pre><code>∵ EF ∥ AB，AB ⊂ 面 PAB，且 EF ⊄ 面 PAB
-∴ EF ∥ 面 PAB（线面平行判定定理）</code></pre>
-
-<blockquote>
-<strong>广东卷扣分</strong>：漏写"$l \not\subset \alpha$"扣1-2分/处。一道证明题若有两处遗漏，可能扣3-4分。
-</blockquote>
-
+∴ EF ∥ 面 PAB（线面平行判定定理）
+</code></pre>
+<blockquote><p><strong>广东卷扣分</strong>：漏写&quot;$l \not\subset \alpha$&quot;扣1-2分/处。一道证明题若有两处遗漏，可能扣3-4分。</p></blockquote>
 <hr>
-
-<p>#### 失分点2：定理条件遗漏——"两线相交"被遗忘</p>
-
-<p><strong>高频场景</strong>：证明线面垂直时，只写"$l \perp m$，$l \perp n$，$m, n \subset \alpha$"，漏写"$m \cap n = P$"（两线相交）。</p>
-
+<h4>失分点2：定理条件遗漏——&quot;两线相交&quot;被遗忘</h4>
+<p><strong>高频场景</strong>：证明线面垂直时，只写&quot;$l \perp m$，$l \perp n$，$m, n \subset \alpha$&quot;，漏写&quot;$m \cap n = P$&quot;（两线相交）。</p>
 <p><strong>正确定理</strong>：线面垂直判定定理要求：一条直线与平面内<strong>两条相交直线</strong>都垂直，则线面垂直。</p>
-
 <p><strong>四个条件缺一不可</strong>：</p>
 <ol>
 <li>$l \perp m$（线线垂直1）</li>
@@ -84,251 +68,132 @@ MathJax = {
 <li>$m \subset \alpha$，$n \subset \alpha$（线在面内）</li>
 <li>$m \cap n = P$（两线相交）← <strong>最容易遗漏！</strong></li>
 </ol>
-
-<blockquote>
-<strong>广东卷扣分</strong>：漏写"$m \cap n \neq \varnothing$"扣1-2分/处。
-</blockquote>
-
+<blockquote><p><strong>广东卷扣分</strong>：漏写&quot;$m \cap n \neq \varnothing$&quot;扣1-2分/处。</p></blockquote>
 <hr>
-
-<p>#### 失分点3：定理名称不写——"由...得"代替定理名</p>
-
+<h4>失分点3：定理名称不写——&quot;由...得&quot;代替定理名</h4>
 <p><strong>错误写法</strong>：</p>
 <pre><code>∵ PA ⊥ 面 ABCD，PA ⊂ 面 PAB
-∴ 面 PAB ⊥ 面 ABCD  ← 错误！没写定理名称</code></pre>
-
+∴ 面 PAB ⊥ 面 ABCD  ← 错误！没写定理名称
+</code></pre>
 <p><strong>正确写法</strong>：</p>
 <pre><code>∵ PA ⊥ 面 ABCD，PA ⊂ 面 PAB
-∴ 面 PAB ⊥ 面 ABCD（面面垂直判定定理）</code></pre>
-
-<blockquote>
-<strong>广东卷评分</strong>：不写定理名称扣1分/处。一道12分的证明题，若3处不写定理名，扣3分，直接降档。
-</blockquote>
-
-<blockquote>
-<strong>必须记熟的定理名称</strong>：
-- 线面平行判定定理 / 线面平行性质定理
-- 线面垂直判定定理 / 线面垂直性质定理
-- 面面平行判定定理 / 面面平行性质定理
-- 面面垂直判定定理 / 面面垂直性质定理
-</blockquote>
-
+∴ 面 PAB ⊥ 面 ABCD（面面垂直判定定理）
+</code></pre>
+<blockquote><p><strong>广东卷评分</strong>：不写定理名称扣1分/处。一道12分的证明题，若3处不写定理名，扣3分，直接降档。</p></blockquote>
+<blockquote><p><strong>必须记熟的定理名称</strong>：<br>- 线面平行判定定理 / 线面平行性质定理<br>- 线面垂直判定定理 / 线面垂直性质定理<br>- 面面平行判定定理 / 面面平行性质定理<br>- 面面垂直判定定理 / 面面垂直性质定理</p></blockquote>
 <hr>
-
-<p>#### 失分点4：面面垂直性质定理的误用</p>
-
+<h4>失分点4：面面垂直性质定理的误用</h4>
 <p><strong>错误认知</strong>：两平面垂直，一个平面内的任意直线都垂直于另一平面。</p>
-
 <p><strong>正确定理</strong>：面面垂直性质定理要求：<strong>一个平面内垂直于交线的直线</strong>才垂直于另一平面。</p>
-
 <p><strong>两个条件缺一不可</strong>：</p>
 <ol>
 <li>直线$l \subset \alpha$（线在面内）</li>
 <li>$l \perp$交线（线垂直于交线）← <strong>最容易遗漏！</strong></li>
 </ol>
-
 <p><strong>典型错误</strong>：</p>
-<blockquote>
-已知面$PAB \perp$面$ABCD$，交线为$AB$。在面$PAB$内取$PA$，直接说$PA \perp$面$ABCD$。
-- <strong>错误</strong>：$PA$不一定垂直于交线$AB$！
-- <strong>正确</strong>：只有当$PA \perp AB$时，才有$PA \perp$面$ABCD$。
-</blockquote>
-
-<blockquote>
-<strong>广东卷高频</strong>：2024-2025广州天河区期末第16题第2问，面面垂直性质的应用，得分率仅45%。
-</blockquote>
-
+<blockquote><p>已知面$PAB \perp$面$ABCD$，交线为$AB$。在面$PAB$内取$PA$，直接说$PA \perp$面$ABCD$。<br>- <strong>错误</strong>：$PA$不一定垂直于交线$AB$！<br>- <strong>正确</strong>：只有当$PA \perp AB$时，才有$PA \perp$面$ABCD$。</p></blockquote>
+<blockquote><p><strong>广东卷高频</strong>：2024-2025广州天河区期末第16题第2问，面面垂直性质的应用，得分率仅45%。</p></blockquote>
 <hr>
-
-<p>#### 失分点5：辅助线不描述或描述不清</p>
-
+<h4>失分点5：辅助线不描述或描述不清</h4>
 <p><strong>错误写法</strong>：</p>
 <pre><code>作DE ⊥ BC，连接AE。
-∴ ...</code></pre>
-
+∴ ...
+</code></pre>
 <p><strong>正确写法</strong>：</p>
 <pre><code>取BC中点E，连接DE、AE。
 ∵ D是PC中点，E是BC中点
-∴ DE ∥ PB（三角形中位线定理）</code></pre>
-
-<blockquote>
-<strong>广东卷要求</strong>：辅助线必须说明作法（"取...中点""过...作...垂线"），连接哪些线段也要写清楚。
-</blockquote>
-
+∴ DE ∥ PB（三角形中位线定理）
+</code></pre>
+<blockquote><p><strong>广东卷要求</strong>：辅助线必须说明作法（&quot;取...中点&quot;&quot;过...作...垂线&quot;），连接哪些线段也要写清楚。</p></blockquote>
 <hr>
-
 <h3>二、计算题四大失误</h3>
-
-<p>#### 失误1：混淆表面积与侧面积</p>
-
-<p><strong>错误</strong>：求"圆锥的表面积"时，只算$\pi r l$（侧面积），漏加底面积$\pi r^2$。</p>
-
+<h4>失误1：混淆表面积与侧面积</h4>
+<p><strong>错误</strong>：求&quot;圆锥的表面积&quot;时，只算$\pi r l$（侧面积），漏加底面积$\pi r^2$。</p>
 <p><strong>正确</strong>：表面积 = 侧面积 + 底面积（圆锥只有一个底）。</p>
-
-<blockquote>
-<strong>快速区分</strong>：
-- "侧面积"或"全面积"：不含底（柱体不含两个底，锥体不含底）
-- "表面积"：含所有面（柱体含两个底，锥体含底）
-- "全面积"在某些教材中 = 表面积（含所有面），需根据上下文判断
-</blockquote>
-
+<blockquote><p><strong>快速区分</strong>：<br>- &quot;侧面积&quot;或&quot;全面积&quot;：不含底（柱体不含两个底，锥体不含底）<br>- &quot;表面积&quot;：含所有面（柱体含两个底，锥体含底）<br>- &quot;全面积&quot;在某些教材中 = 表面积（含所有面），需根据上下文判断</p></blockquote>
 <hr>
-
-<p>#### 失误2：圆锥/圆台中混淆母线、高、半径</p>
-
+<h4>失误2：圆锥/圆台中混淆母线、高、半径</h4>
 <p><strong>错误关系</strong>：把圆锥母线$l$当作高$h$代入体积公式$V = \frac{1}{3}\pi r^2 h$。</p>
-
 <p><strong>正确关系</strong>：$l^2 = r^2 + h^2$（母线、半径、高构成直角三角形）。</p>
-
 <p><strong>典型错误</strong>：</p>
-<blockquote>
-已知圆锥底面半径$r = 3$，母线$l = 5$，求体积。
-- 错误：$V = \frac{1}{3}\pi \times 9 \times 5 = 15\pi$（把母线当高）
-- 正确：$h = \sqrt{25-9} = 4$，$V = \frac{1}{3}\pi \times 9 \times 4 = 12\pi$
-</blockquote>
-
-<blockquote>
-<strong>广东卷高频</strong>：2024-2025广州番禺区期末第3题、越秀区第14题均涉及此混淆。
-</blockquote>
-
+<blockquote><p>已知圆锥底面半径$r = 3$，母线$l = 5$，求体积。<br>- 错误：$V = \frac{1}{3}\pi \times 9 \times 5 = 15\pi$（把母线当高）<br>- 正确：$h = \sqrt{25-9} = 4$，$V = \frac{1}{3}\pi \times 9 \times 4 = 12\pi$</p></blockquote>
+<blockquote><p><strong>广东卷高频</strong>：2024-2025广州番禺区期末第3题、越秀区第14题均涉及此混淆。</p></blockquote>
 <hr>
-
-<p>#### 失误3：圆台体积公式漏中间项</p>
-
+<h4>失误3：圆台体积公式漏中间项</h4>
 <p><strong>错误公式</strong>：$V = \frac{1}{3}\pi h(r_1^2 + r_2^2)$（漏了$r_1r_2$项）</p>
-
 <p><strong>正确公式</strong>：$V = \frac{1}{3}\pi h(r_1^2 + r_1r_2 + r_2^2)$</p>
-
-<p><strong>记忆口诀</strong>："圆台体积三兄弟，上底平方、下底平方、加上上下乘积"</p>
-
+<p><strong>记忆口诀</strong>：&quot;圆台体积三兄弟，上底平方、下底平方、加上上下乘积&quot;</p>
 <hr>
-
-<p>#### 失误4：球的直径与半径混淆</p>
-
-<p><strong>错误</strong>：题目给"球的直径为4"，直接代入$R = 4$计算$V = \frac{4}{3}\pi \times 64$。</p>
-
+<h4>失误4：球的直径与半径混淆</h4>
+<p><strong>错误</strong>：题目给&quot;球的直径为4&quot;，直接代入$R = 4$计算$V = \frac{4}{3}\pi \times 64$。</p>
 <p><strong>正确</strong>：$R = \frac{d}{2} = 2$，$V = \frac{4}{3}\pi \times 8 = \frac{32\pi}{3}$。</p>
-
-<blockquote>
-<strong>审题技巧</strong>：看到"直径"二字，立即画圈提醒自己先除以2。
-</blockquote>
-
+<blockquote><p><strong>审题技巧</strong>：看到&quot;直径&quot;二字，立即画圈提醒自己先除以2。</p></blockquote>
 <hr>
-
 <h3>三、符号与书写混乱</h3>
-
-<p>#### 混乱1：点、线、面的符号混用</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>正确</th><th>错误</th><th>说明</th></tr>
-<tr><td>点 $A$</td><td>直线 $A$</td><td>点用大写，直线用小写</td></tr>
-<tr><td>直线 $l$</td><td>点 $l$</td><td>直线用小写，点用大写</td></tr>
-<tr><td>平面 $\alpha$</td><td>直线 $\alpha$</td><td>平面用希腊字母，直线用小写</td></tr>
-<tr><td>$P \in l$</td><td>$P \subset l$</td><td>点在直线上用"∈"，不是"⊂"</td></tr>
-<tr><td>$l \subset \alpha$</td><td>$l \in \alpha$</td><td>直线在平面内用"⊂"，不是"∈"</td></tr>
-</table>
-</div>
-
+<h4>混乱1：点、线、面的符号混用</h4>
+<div class="table-wrap"><table><tr><th>正确</th><th>错误</th><th>说明</th></tr><tr><td>点 $A$</td><td>直线 $A$</td><td>点用大写，直线用小写</td></tr><tr><td>直线 $l$</td><td>点 $l$</td><td>直线用小写，点用大写</td></tr><tr><td>平面 $\alpha$</td><td>直线 $\alpha$</td><td>平面用希腊字母，直线用小写</td></tr><tr><td>$P \in l$</td><td>$P \subset l$</td><td>点在直线上用&quot;∈&quot;，不是&quot;⊂&quot;</td></tr><tr><td>$l \subset \alpha$</td><td>$l \in \alpha$</td><td>直线在平面内用&quot;⊂&quot;，不是&quot;∈&quot;</td></tr></table></div>
 <hr>
-
-<p>#### 混乱2：证明过程缺乏逻辑连接词</p>
-
+<h4>混乱2：证明过程缺乏逻辑连接词</h4>
 <p><strong>错误写法</strong>：</p>
 <pre><code>PA ⊥ 面 ABCD
 PA ⊂ 面 PAB
-面 PAB ⊥ 面 ABCD</code></pre>
-
+面 PAB ⊥ 面 ABCD
+</code></pre>
 <p><strong>正确写法</strong>：</p>
 <pre><code>∵ PA ⊥ 面 ABCD，且 PA ⊂ 面 PAB
-∴ 面 PAB ⊥ 面 ABCD（面面垂直判定定理）</code></pre>
-
-<blockquote>
-<strong>广东卷要求</strong>：每一步必须有"∵"和"∴"，不能省略逻辑连接词。
-</blockquote>
-
+∴ 面 PAB ⊥ 面 ABCD（面面垂直判定定理）
+</code></pre>
+<blockquote><p><strong>广东卷要求</strong>：每一步必须有&quot;∵&quot;和&quot;∴&quot;，不能省略逻辑连接词。</p></blockquote>
 <hr>
-
 <h3>四、快速自查清单（证明题写完后必查）</h3>
-
 <p><strong>检查条件完整性</strong>：</p>
 <ul>
-<li>[ ] 线面平行：写了"线在面外"吗？</li>
-<li>[ ] 线面垂直：写了"两线相交"吗？</li>
-<li>[ ] 面面垂直性质：写了"线垂直于交线"吗？</li>
+<li>[ ] 线面平行：写了&quot;线在面外&quot;吗？</li>
+<li>[ ] 线面垂直：写了&quot;两线相交&quot;吗？</li>
+<li>[ ] 面面垂直性质：写了&quot;线垂直于交线&quot;吗？</li>
 <li>[ ] 辅助线：描述清楚作法了吗？</li>
 </ul>
-
 <p><strong>检查定理名称</strong>：</p>
 <ul>
 <li>[ ] 每一步结论都写了定理名称吗？</li>
 <li>[ ] 定理名称写对了吗？（判定/性质别混淆）</li>
 </ul>
-
 <p><strong>检查符号规范</strong>：</p>
 <ul>
 <li>[ ] 点用大写、直线用小写、平面用希腊字母了吗？</li>
-<li>[ ] "∈"和"⊂"用对了吗？</li>
-<li>[ ] 逻辑连接词"∵""∴"写了吗？</li>
+<li>[ ] &quot;∈&quot;和&quot;⊂&quot;用对了吗？</li>
+<li>[ ] 逻辑连接词&quot;∵&quot;&quot;∴&quot;写了吗？</li>
 </ul>
-
 <p><strong>检查计算</strong>：</p>
 <ul>
-<li>[ ] "表面积"和"侧面积"区分了吗？</li>
+<li>[ ] &quot;表面积&quot;和&quot;侧面积&quot;区分了吗？</li>
 <li>[ ] 圆锥/圆台的母线、高、半径关系理清了吗？</li>
 <li>[ ] 圆台体积公式中间项$r_1r_2$写了吗？</li>
 <li>[ ] 直径转半径了吗？</li>
 </ul>
-
 <hr>
-
 <h3>五、记忆口诀</h3>
-
-<blockquote>
-<strong>证明题口诀</strong>：
-- "线面平行三条件：线线平行、线在面内、线在面外"
-- "线面垂直四条件：线垂两线、两线在面、两线相交"
-- "面面垂直性质：线要在面、线要垂交线"
-- "定理名称必须写，不写扣分真冤枉"
-- "辅助线要描述清，取中点、作垂线、连线段"
-</blockquote>
-
-<blockquote>
-<strong>计算口诀</strong>：
-- "表面积含所有面，侧面积只看侧面"
-- "圆锥高和母线，勾股定理来相连"
-- "圆台体积三兄弟，中间项别漏"
-- "直径半径要分清，看到直径先除以二"
-</blockquote>
-
+<blockquote><p><strong>证明题口诀</strong>：<br>- &quot;线面平行三条件：线线平行、线在面内、线在面外&quot;<br>- &quot;线面垂直四条件：线垂两线、两线在面、两线相交&quot;<br>- &quot;面面垂直性质：线要在面、线要垂交线&quot;<br>- &quot;定理名称必须写，不写扣分真冤枉&quot;<br>- &quot;辅助线要描述清，取中点、作垂线、连线段&quot;</p></blockquote>
+<blockquote><p><strong>计算口诀</strong>：<br>- &quot;表面积含所有面，侧面积只看侧面&quot;<br>- &quot;圆锥高和母线，勾股定理来相连&quot;<br>- &quot;圆台体积三兄弟，中间项别漏&quot;<br>- &quot;直径半径要分清，看到直径先除以二&quot;</p></blockquote>
 <hr>
-
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="../核心知识网络/高一筑基_数学_核心知识网络_空间点线面位置关系.html">高一筑基_数学_核心知识网络_空间点线面位置关系</a> — 八大定理的完整内容</li>
 <li><a href="../典型题型与方法/高一筑基_数学_典型题型与方法_立体几何证明题标准步骤.html">高一筑基_数学_典型题型与方法_立体几何证明题标准步骤</a> — 证明题的详细解题模板</li>
 <li><a href="../核心知识网络/高一筑基_数学_核心知识网络_空间几何体表面积与体积.html">高一筑基_数学_核心知识网络_空间几何体表面积与体积</a> — 表面积与体积的公式体系</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
-
 <ul>
-<li><strong>广东高一下期末失分统计</strong>：根据2024-2025学年广州各区期末试卷分析，立体几何解答题（第15-16题，共24-28分）平均得分率约55%。其中"条件遗漏"（30%）和"计算错误"（35%）是两大主因，"符号混乱"（20%）和"定理名称不写"（15%）也是重要失分点。</li>
-<li><strong>2024-2025广州天河区期末第16题</strong>：第2问面面垂直性质的应用，因漏写"线垂直于交线"条件，全市平均得分率仅45%。</li>
-<li><strong>2024-2025广州越秀区期末第15题</strong>：线面平行证明中漏写"线在面外"，是第一大失分点。</li>
-<li><strong>训练建议</strong>：建立"证明题自查表"，每次写完证明题后，对照本卡片的清单逐项检查。坚持10道题后，失分率可降低50%以上。</li>
+<li><strong>广东高一下期末失分统计</strong>：根据2024-2025学年广州各区期末试卷分析，立体几何解答题（第15-16题，共24-28分）平均得分率约55%。其中&quot;条件遗漏&quot;（30%）和&quot;计算错误&quot;（35%）是两大主因，&quot;符号混乱&quot;（20%）和&quot;定理名称不写&quot;（15%）也是重要失分点。</li>
+<li><strong>2024-2025广州天河区期末第16题</strong>：第2问面面垂直性质的应用，因漏写&quot;线垂直于交线&quot;条件，全市平均得分率仅45%。</li>
+<li><strong>2024-2025广州越秀区期末第15题</strong>：线面平行证明中漏写&quot;线在面外&quot;，是第一大失分点。</li>
+<li><strong>训练建议</strong>：建立&quot;证明题自查表&quot;，每次写完证明题后，对照本卡片的清单逐项检查。坚持10道题后，失分率可降低50%以上。</li>
 <li><strong>考场策略</strong>：立体几何证明题预留15-18分钟/题，写完后花1分钟对照自查清单检查，确保不因细节丢分。</li>
 <li><strong>高考衔接</strong>：新高考Ⅰ卷中立体几何大题（第17-18题，12-13分）的第1问通常是证明题，书写规范直接影响基础分。高一下养成良好书写习惯，高三直接受益。</li>
 </ul>
-
 <hr>
-
-<blockquote>
-🏷️ 标签：<code>#数学</code> <code>#易错警示与辨析</code> <code>#高一筑基</code> <code>#难度3</code> <code>#立体几何</code> <code>#证明题</code> <code>#条件遗漏</code> <code>#定理名称</code> <code>#表面积侧面积</code> <code>#母线高混淆</code> <code>#圆台体积</code> <code>#符号规范</code> <code>#广东名校模拟</code>
-</blockquote>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#易错警示与辨析</code> <code>#高一筑基</code> <code>#难度3</code> <code>#立体几何</code> <code>#证明题</code> <code>#条件遗漏</code> <code>#定理名称</code> <code>#表面积侧面积</code> <code>#母线高混淆</code> <code>#圆台体积</code> <code>#符号规范</code> <code>#广东名校模拟</code></p></blockquote>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

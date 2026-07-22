@@ -34,95 +34,68 @@ MathJax = {
 <div class="kb-note"><strong>广东考情</strong>：考查频率：高频（近5年广东卷每年考查，覆盖选择题与计算题，2025广东卷T14计算题即用动能定理求外力做功）；难度定位：基础~中档（多为计算题第一问或选择题功能关系判断）；特色描述：广东卷常以生活科技情境命题（交通制动、体育运动、轨道滑行），需从情境中提取初末状态与做功的力；赋分提示：能量题是赋分&quot;基本盘&quot;，务必保证功的正负号与初末状态选取准确，漏力或符号错误会导致整题失分</div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
 <h3>关键概念</h3>
-
 <ul>
 <li><strong>动能</strong>：物体由于运动而具有的能量，$E_k = \frac{1}{2}mv^2$，是标量，恒为非负值</li>
 <li><strong>动能定理</strong>：合外力对物体所做的功，等于物体动能的变化量</li>
 <li><strong>动能变化量</strong>：$\Delta E_k = E_{k末} - E_{k初}$，可为正、负或零</li>
 </ul>
-
 <h3>核心公式/定理</h3>
-
 <p>$$W_{合} = \Delta E_k = E_{k末} - E_{k初} = \frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2$$</p>
-
-<blockquote>
-<strong>适用条件</strong>：</p>
-
-<ul>
-<li>适用于单个质点或平动的刚体</li>
-<li>适用于直线运动和曲线运动</li>
-<li>适用于恒力做功和变力做功</li>
-<li>适用于各力同时作用或分段作用</li>
-<li><strong>注意</strong>：对系统内存在相对滑动（如摩擦生热）时，需单独处理内能</li>
-</ul>
-</blockquote>
-
-<blockquote>
-<strong>注意事项</strong>：</p>
-
-<ul>
-<li>$W_{合}$ 是<strong>所有外力做功的代数和</strong>（包括重力、弹力、摩擦力、拉力等）</li>
-<li>功的正负：动力做正功，阻力做负功；克服摩擦力做功 = $|W_f|$</li>
-<li>若分阶段分析，可列分段动能定理方程；若全程分析，可列全程动能定理方程</li>
-<li>动能定理是标量方程，无方向性，不能分解到某一方向单独使用</li>
-</ul>
-</blockquote>
-
+<blockquote><p><strong>适用条件</strong>：<br>- 适用于单个质点或平动的刚体<br>- 适用于直线运动和曲线运动<br>- 适用于恒力做功和变力做功<br>- 适用于各力同时作用或分段作用<br>- <strong>注意</strong>：对系统内存在相对滑动（如摩擦生热）时，需单独处理内能</p></blockquote>
+<blockquote><p><strong>注意事项</strong>：<br>- $W_{合}$ 是<strong>所有外力做功的代数和</strong>（包括重力、弹力、摩擦力、拉力等）<br>- 功的正负：动力做正功，阻力做负功；克服摩擦力做功 = $|W_f|$<br>- 若分阶段分析，可列分段动能定理方程；若全程分析，可列全程动能定理方程<br>- 动能定理是标量方程，无方向性，不能分解到某一方向单独使用</p></blockquote>
 <h3>方法步骤（四步解题法）</h3>
-
 <ol>
 <li><strong>确定研究对象</strong>：明确对哪个物体（或系统）使用动能定理</li>
 <li><strong>分析运动过程</strong>：确定初末状态（位置、速度），判断是否可全程分析或需分段</li>
 <li><strong>受力分析，计算总功</strong>：</li>
-</ol>
-
 <ul>
 <li>画出受力图</li>
 <li>计算各力做功的代数和 $W_{合} = W_1 + W_2 + W_3 + ...$</li>
 <li>特别注意：摩擦力做功 $W_f = -f \cdot s$（$s$ 为路程，不是位移）</li>
 </ul>
-
-<ol>
 <li><strong>列方程求解</strong>：$W_{合} = E_{k末} - E_{k初}$</li>
 </ol>
-
-<h3>记忆口诀/技巧</h3>
-
-<blockquote>
-<strong>"一对象、二状态、三受力、四列式"</strong></p>
-
-<p><strong>全程优先</strong>：往复运动、多过程问题，优先考虑全程动能定理，避免中间状态的繁琐计算。</p>
-
-<p><strong>摩擦力做功要点</strong>：</p>
-
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到用动能定理</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>为什么优先用动能定理</th></tr><tr><td>&quot;从A点静止释放，滑到B点时速度为v&quot;</td><td>已知初末速度，不求中间过程 → 动能定理直出</td></tr><tr><td>&quot;克服摩擦力做功&quot; / &quot;求摩擦力做功&quot;</td><td>需算 $W_f$，牛二需要知道每一时刻的 $f$，动能定理只需路程</td></tr><tr><td>&quot;求物体在粗糙面上滑行的距离&quot;</td><td>末速度为零，$-\mu mg \cdot s = 0 - \frac{1}{2}mv_0^2$，一步到位</td></tr><tr><td>&quot;物体沿斜面下滑/上升&quot;</td><td>重力做功 $mgh$ 和摩擦力做功 $-\mu mg\cos\theta \cdot s$ 直接代数加和</td></tr><tr><td>&quot;多过程/往复运动&quot;</td><td><strong>全程动能定理</strong>：只写初末状态，中间过程全部跳过</td></tr><tr><td>题目出现&quot;传送带&quot;、&quot;圆弧轨道&quot;、&quot;碰撞&quot;</td><td>每个阶段独立列动能定理方程，分段联立</td></tr></table></div>
+<h3>母题（2023 广东选择性考试·第15题，15分）</h3>
+<blockquote><p>广东物理压轴题，传送带+动能定理+碰撞+平抛四合一，经典的情境化命题风格。</p></blockquote>
+<p><strong>题目</strong>：如图为某药品自动传送系统。水平传送带以速度 $v_0$ 匀速运动，滑槽高 $3L$，平台高 $L$。药品盒A、B依次被轻放在传送带上，与传送带共速后从M点进入滑槽。A刚好滑到平台最右端N点停下，随后滑下的B以 $2v_0$ 的速度与A正碰（时间极短）。碰后A、B恰好落在桌面圆盘内直径两端。已知：$m_A = m$，$m_B = 2m$，碰撞损失能量 = 碰前总动能的 $\frac{1}{4}$，A与传送带动摩擦因数 $\mu$，忽略空气阻力和圆盘高度。</p>
+<p><strong>(1) A在传送带上由静止加速到共速所用时间 $t$</strong></p>
+<p><strong>解</strong>：取A为研究对象。传送带上：$a = \mu g$，由运动学 $v_0 = at$ → $t = \dfrac{v_0}{\mu g}$</p>
+<p><strong>(2) B从M点滑至N点过程中克服阻力做的功 $W$</strong></p>
+<p><strong>解</strong>：对B从M到N，全程动能定理。取B为研究对象：</p>
 <ul>
-<li>单一方向：$W_f = -f \cdot x$（$x$ 为位移大小）</li>
-<li>往返运动：$W_f = -f \cdot (2x)$，总生热 $Q = f \cdot s_{路程}$</li>
-<li>斜面上：$f = \mu mg\cos\theta$，上升和下降摩擦力大小相等、方向相反，均做负功</li>
+<li>初态：M点，速度 $v_0$（刚从传送带进入滑槽）</li>
+<li>末态：N点，速度 $2v_0$</li>
+<li>M在滑槽顶端（高于平台 $3L$），N在平台（高 $L$），重力做功 $W_G = 2mg \cdot 3L$</li>
 </ul>
-</blockquote>
-
+<p>$$W_G - W_{\text{克}} = \frac{1}{2} \cdot 2m \cdot (2v_0)^2 - \frac{1}{2} \cdot 2m \cdot v_0^2$$ $$2mg \cdot 3L - W = 3mv_0^2$$ $$W = 6mgL - 3mv_0^2$$</p>
+<blockquote><p>💡 <strong>为什么用动能定理不用牛二？</strong> 螺旋滑槽是曲线运动，摩擦力大小方向都在变，牛二无法直接处理。动能定理只看初末状态，跳过中间细节。</p></blockquote>
+<p><strong>(3) 圆盘圆心到平台右端N点的水平距离 $s$</strong></p>
+<p><strong>解</strong>：碰撞：动量守恒 $2m \cdot 2v_0 = m v_A + 2m v_B$</p>
+<p>能量：$\frac{1}{2} \cdot 2m \cdot (2v_0)^2 - \left(\frac{1}{2}m v_A^2 + \frac{1}{2} \cdot 2m \cdot v_B^2\right) = \frac{1}{4} \cdot \frac{1}{2} \cdot 2m \cdot (2v_0)^2$</p>
+<p>解得 $v_A = 2v_0$，$v_B = v_0$</p>
+<p>平抛时间 $t_1 = \sqrt{\frac{2L}{g}}$，$s - r = v_B t_1$，$s + r = v_A t_1$</p>
+<p>联立得 $s = \dfrac{3v_0}{2}\sqrt{\dfrac{2L}{g}}$</p>
+<h3>记忆口诀/技巧</h3>
+<blockquote><p><strong>&quot;一对象、二状态、三受力、四列式&quot;</strong><br><strong>全程优先</strong>：往复运动、多过程问题，优先考虑全程动能定理，避免中间状态的繁琐计算。<br><strong>摩擦力做功要点</strong>：<br>- 单一方向：$W_f = -f \cdot x$（$x$ 为位移大小）<br>- 往返运动：$W_f = -f \cdot (2x)$，总生热 $Q = f \cdot s_{路程}$<br>- 斜面上：$f = \mu mg\cos\theta$，上升和下降摩擦力大小相等、方向相反，均做负功</p></blockquote>
 <hr>
-
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="../易错警示与辨析/高一筑基_物理_易错警示与辨析_动能定理错题分析.html">高一筑基_物理_易错警示与辨析_动能定理错题分析</a> — 斜面往返与轨道模型错题及高考变式</li>
 <li><a href="高一筑基_物理_核心知识网络_机械能守恒定律.html">高一筑基_物理_核心知识网络_机械能守恒定律</a> — 守恒条件、三种表达式、与动能定理对比</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
-
 <ul>
 <li>课堂练习：9题中做对7题，正确率约78%，基础概念已掌握，但综合应用仍需加强</li>
-<li>易错点：开始应用时"不知所措"，主要问题在于<strong>不能正确计算总功</strong>和<strong>选取合适的初末状态</strong></li>
+<li>易错点：开始应用时&quot;不知所措&quot;，主要问题在于<strong>不能正确计算总功</strong>和<strong>选取合适的初末状态</strong></li>
 <li>下次课预告：2026-07-01 学习动能定理的综合应用</li>
-<li>建议：做题时严格按"四步解题法"书写，避免跳步导致漏力或功的正负号错误</li>
+<li>建议：做题时严格按&quot;四步解题法&quot;书写，避免跳步导致漏力或功的正负号错误</li>
 </ul>
 <!-- KB-CONTENT-END -->
 </article>

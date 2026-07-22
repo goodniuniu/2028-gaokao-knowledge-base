@@ -34,8 +34,8 @@ MathJax = {
 <div class="kb-note"><strong>广东考情</strong>：考查频率：高频；难度：中档~中高档；空间向量法是广东卷立体几何大题的两大解法之一（几何法/向量法），向量法规范性强，适合计算能力稳定的学生</div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
 <h3>一、空间向量及其运算</h3>
 <ul>
 <li><strong>定义</strong>：空间中具有大小和方向的量</li>
@@ -44,16 +44,12 @@ MathJax = {
 <li><strong>常用向量</strong>：零向量、单位向量、相等向量、相反向量</li>
 <li><strong>线性运算</strong>：加法、减法、数乘（与平面向量类似）</li>
 </ul>
-
 <h3>二、空间向量基本定理</h3>
-<p>如果三个向量 $\boldsymbol{a}, \boldsymbol{b}, \boldsymbol{c}$ <strong>不共面</strong>，那么对任意一个空间向量 $\boldsymbol{p}$，存在唯一的有序实数组 $(x, y, z)$，使得：</p>
-<p>$$\boldsymbol{p} = x\boldsymbol{a} + y\boldsymbol{b} + z\boldsymbol{c}$$</p>
-
+<p>如果三个向量 $\boldsymbol{a}, \boldsymbol{b}, \boldsymbol{c}$ <strong>不共面</strong>，那么对任意一个空间向量 $\boldsymbol{p}$，存在唯一的有序实数组 $(x, y, z)$，使得： $$\boldsymbol{p} = x\boldsymbol{a} + y\boldsymbol{b} + z\boldsymbol{c}$$</p>
 <ul>
 <li><strong>正交分解</strong>：$\boldsymbol{p} = x\boldsymbol{i} + y\boldsymbol{j} + z\boldsymbol{k}$（$\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}$ 为单位正交基底）</li>
 <li><strong>共面向量定理</strong>：$\boldsymbol{p}$ 与 $\boldsymbol{a}, \boldsymbol{b}$ 共面 $\Leftrightarrow \boldsymbol{p} = x\boldsymbol{a} + y\boldsymbol{b}$（$\boldsymbol{a}, \boldsymbol{b}$ 不共线）</li>
 </ul>
-
 <h3>三、空间向量的坐标运算</h3>
 <p>设 $\boldsymbol{a} = (x_1, y_1, z_1)$，$\boldsymbol{b} = (x_2, y_2, z_2)$：</p>
 <ul>
@@ -64,50 +60,23 @@ MathJax = {
 <li>夹角：$\cos\langle \boldsymbol{a}, \boldsymbol{b} \rangle = \frac{\boldsymbol{a} \cdot \boldsymbol{b}}{|\boldsymbol{a}||\boldsymbol{b}|} = \frac{x_1 x_2 + y_1 y_2 + z_1 z_2}{\sqrt{x_1^2 + y_1^2 + z_1^2} \cdot \sqrt{x_2^2 + y_2^2 + z_2^2}}$</li>
 <li>两点距离：$|\overrightarrow{AB}| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$</li>
 </ul>
-
 <h3>四、空间向量的应用（线面关系与空间角）</h3>
-
 <p>设 $\boldsymbol{u}_1, \boldsymbol{u}_2$ 为直线方向向量，$\boldsymbol{n}_1, \boldsymbol{n}_2$ 为平面法向量：</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>关系</th><th>向量条件</th></tr>
-<tr><td>线线平行 $l_1 \parallel l_2$</td><td>$\boldsymbol{u}_1 \parallel \boldsymbol{u}_2$（$\exists \lambda, \boldsymbol{u}_1 = \lambda\boldsymbol{u}_2$）</td></tr>
-<tr><td>线面平行 $l \parallel \alpha$</td><td>$\boldsymbol{u} \perp \boldsymbol{n}$（$\boldsymbol{u} \cdot \boldsymbol{n} = 0$）</td></tr>
-<tr><td>面面平行 $\alpha \parallel \beta$</td><td>$\boldsymbol{n}_1 \parallel \boldsymbol{n}_2$（$\exists \lambda, \boldsymbol{n}_1 = \lambda\boldsymbol{n}_2$）</td></tr>
-<tr><td>线线垂直 $l_1 \perp l_2$</td><td>$\boldsymbol{u}_1 \perp \boldsymbol{u}_2$（$\boldsymbol{u}_1 \cdot \boldsymbol{u}_2 = 0$）</td></tr>
-<tr><td>线面垂直 $l \perp \alpha$</td><td>$\boldsymbol{u} \parallel \boldsymbol{n}$（$\exists \lambda, \boldsymbol{u} = \lambda\boldsymbol{n}$）</td></tr>
-<tr><td>面面垂直 $\alpha \perp \beta$</td><td>$\boldsymbol{n}_1 \perp \boldsymbol{n}_2$（$\boldsymbol{n}_1 \cdot \boldsymbol{n}_2 = 0$）</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>关系</th><th>向量条件</th></tr><tr><td>线线平行 $l_1 \parallel l_2$</td><td>$\boldsymbol{u}_1 \parallel \boldsymbol{u}_2$（$\exists \lambda, \boldsymbol{u}_1 = \lambda\boldsymbol{u}_2$）</td></tr><tr><td>线面平行 $l \parallel \alpha$</td><td>$\boldsymbol{u} \perp \boldsymbol{n}$（$\boldsymbol{u} \cdot \boldsymbol{n} = 0$）</td></tr><tr><td>面面平行 $\alpha \parallel \beta$</td><td>$\boldsymbol{n}_1 \parallel \boldsymbol{n}_2$（$\exists \lambda, \boldsymbol{n}_1 = \lambda\boldsymbol{n}_2$）</td></tr><tr><td>线线垂直 $l_1 \perp l_2$</td><td>$\boldsymbol{u}_1 \perp \boldsymbol{u}_2$（$\boldsymbol{u}_1 \cdot \boldsymbol{u}_2 = 0$）</td></tr><tr><td>线面垂直 $l \perp \alpha$</td><td>$\boldsymbol{u} \parallel \boldsymbol{n}$（$\exists \lambda, \boldsymbol{u} = \lambda\boldsymbol{n}$）</td></tr><tr><td>面面垂直 $\alpha \perp \beta$</td><td>$\boldsymbol{n}_1 \perp \boldsymbol{n}_2$（$\boldsymbol{n}_1 \cdot \boldsymbol{n}_2 = 0$）</td></tr></table></div>
 <h3>五、空间角公式（向量法）</h3>
-<div class="table-wrap">
-<table>
-<tr><th>角类型</th><th>公式</th><th>范围</th></tr>
-<tr><td>异面直线所成角 $\theta$</td><td>$\cos\theta = \frac{</td><td>\boldsymbol{u}_1 \cdot \boldsymbol{u}_2</td><td>}{</td><td>\boldsymbol{u}_1</td><td>\boldsymbol{u}_2</td><td>}$</td><td>$(0, \frac{\pi}{2}]$</td></tr>
-<tr><td>线面角 $\theta$</td><td>$\sin\theta = \frac{</td><td>\boldsymbol{u} \cdot \boldsymbol{n}</td><td>}{</td><td>\boldsymbol{u}</td><td>\boldsymbol{n}</td><td>}$</td><td>$[0, \frac{\pi}{2}]$</td></tr>
-<tr><td>二面角 $\theta$</td><td>$\cos\theta = \frac{</td><td>\boldsymbol{n}_1 \cdot \boldsymbol{n}_2</td><td>}{</td><td>\boldsymbol{n}_1</td><td>\boldsymbol{n}_2</td><td>}$（取锐角或钝角由图判断）</td><td>$[0, \pi]$</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>角类型</th><th>公式</th><th>范围</th></tr><tr><td>异面直线所成角 $\theta$</td><td>$\cos\theta = \frac{|\boldsymbol{u}_1 \cdot \boldsymbol{u}_2|}{|\boldsymbol{u}_1||\boldsymbol{u}_2|}$</td><td>$(0, \frac{\pi}{2}]$</td></tr><tr><td>线面角 $\theta$</td><td>$\sin\theta = \frac{|\boldsymbol{u} \cdot \boldsymbol{n}|}{|\boldsymbol{u}||\boldsymbol{n}|}$</td><td>$[0, \frac{\pi}{2}]$</td></tr><tr><td>二面角 $\theta$</td><td>$\cos\theta = \frac{|\boldsymbol{n}_1 \cdot \boldsymbol{n}_2|}{|\boldsymbol{n}_1||\boldsymbol{n}_2|}$（取锐角或钝角由图判断）</td><td>$[0, \pi]$</td></tr></table></div>
 <h3>六、空间距离公式</h3>
 <ul>
 <li>点到直线距离：$d = \sqrt{|\overrightarrow{AP}|^2 - (\frac{\overrightarrow{AP} \cdot \boldsymbol{u}}{|\boldsymbol{u}|})^2}$</li>
 <li>点到平面距离：$d = \frac{|\overrightarrow{AP} \cdot \boldsymbol{n}|}{|\boldsymbol{n}|}$</li>
 </ul>
-
 <hr>
-
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_空间点线面位置关系.html">空间点线面位置关系</a> — 几何法基础</li>
 <li><a href="高一筑基_数学_核心知识网络_空间直线平面的平行与垂直.html">空间直线平面的平行与垂直</a> — 判定定理体系</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
 <ul>
 <li>建系原则：优先找三条两两垂直的棱（墙角模型），原点选在便于计算的位置</li>

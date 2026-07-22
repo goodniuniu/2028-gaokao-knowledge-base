@@ -274,7 +274,10 @@ def _inline(text: str) -> str:
         raw = spans[int(m.group(1))]
         if raw.startswith("!["):
             mm = re.match(r"!\[([^\]]*)\]\(([^)]+)\)", raw)
-            return f'<img src="{esc(mm.group(2))}" alt="{esc(mm.group(1))}">'
+            alt = mm.group(1)
+            src = mm.group(2)
+            return (f'<div class="figure"><img src="{esc(src)}" alt="{esc(alt)}">'
+                    f'<div class="figure-caption">{esc(alt)}</div></div>')
         if raw.startswith("["):
             mm = re.match(r"\[([^\]]*)\]\(([^)]+)\)", raw)
             return f'<a href="{esc(mm.group(2))}">{esc(mm.group(1))}</a>'
@@ -575,13 +578,14 @@ def ensure_tables_wrapped(content: str) -> str:
 
 def card_page(html_path: Path, md_path: Path, crumbs, subject: str, back_label: str,
               idx: dict):
-    """换肤保留内容：重写单个卡片 HTML"""
-    old = read_text(html_path) if html_path.exists() else ""
-    content = extract_card_content(old)
+    """md 为唯一源：由 md 重新生成卡片正文（不再从旧 HTML 提取，避免内容漂移）"""
+    text = read_text(md_path)
+    content, meta = md_body_to_html(text)
     content = ensure_tables_wrapped(content)
     content = fix_content_links(content, html_path.parent, idx)
     title = md_title(md_path)
-    meta = parse_md_meta(md_path)
+    if not meta:
+        meta = parse_md_meta(md_path)
     prefix = rel_prefix(html_path)
 
     body = f'''<div class="kb-wrap kb-wrap--narrow">

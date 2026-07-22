@@ -31,217 +31,79 @@ MathJax = {
 <ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">函数的定义与三要素（概念·对应关系·同一函数判定）</span></li></ol>
 <h1 class="kb-title">函数的定义与三要素（概念·对应关系·同一函数判定）</h1>
 <div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★☆☆☆</span><span class="kb-badge kb-badge--tag">#高一筑基</span><span class="kb-badge kb-badge--tag">#广东名校模拟（广州各区期中/期末）</span><span class="kb-badge kb-badge--src">来源：人教A版必修第一册第三章 / 01.函数的定义及常考题型总结.pdf</span></div>
-<div class="kb-note"><strong>广东考情</strong>：高一上学期**基础必考内容**。函数是高中数学的基石，广东卷在高一期中/期末考试中必考函数概念辨析（是否为函数、同一函数判断）、定义域求解等基础题。虽然高考直接考查函数定义的题目较少，但函数思想贯穿整个高中数学，透彻理解函数概念是学好后续所有函数类型（指数、对数、三角）的前提。<br><strong>每一个</strong>：集合 $A$ 中不能有任何&quot;多余&quot;的元素，每个数都必须参与对应 | $A=\{1,2,3\}$，但规则只规定了$1$和$2$的对应，$3$没有对应<br><strong>唯一</strong>：对于 $A$ 中的同一个数，在 $B$ 中只能有一个数和它对应 | $y^2=x$，当 $x=1$ 时，$y=1$ 或 $y=-1$，不确定<br><strong>定义域</strong>：自变量 $x$ 所有可能取值的集合 | $D$ | &quot;允许输入&quot;集 | $f(x)=\frac{1}{x}$ 的定义域为 $\{x|x\neq 0\}$<br><strong>值域</strong>：所有函数值 $y$ 构成的集合 | $R_f$ | &quot;实际输出&quot;集 | $f(x)=x^2$ 的值域为 $[0,+\infty)$<br><strong>对应法则</strong>：从 $x$ 到 $y$ 的具体规则 | $f$ | &quot;内部工作机制&quot; | &quot;加3&quot;&quot;平方&quot;&quot;开根号&quot;<br><strong>一对一</strong>：每个 $x$ 对应一个不同的 $y$，且不同的 $x$ 对应不同的 $y$ | 一个 $x$ 对应一个 $y$ | ✅ 允许 | $y=x+1$<br><strong>多对一</strong>：多个不同的 $x$ 对应同一个 $y$ | 多个 $x$ 对应同一个 $y$ | ✅ 允许 | $y=x^2$（$x=1$和$x=-1$都对应$y=1$）<br><strong>一对多</strong>：一个 $x$ 对应多个不同的 $y$ | 一个 $x$ 对应多个 $y$ | ❌ **不允许** | $y^2=x$（$x=1$时$y=\pm 1$）<br><strong>定义域相同</strong>：自变量取值范围完全一致 | 必须完全相同<br><strong>对应法则相同</strong>：输入一个 $x$ 后，运算规则完全一致 | 化简后比较<br><strong>值域自动相同</strong>：因为定义域和对应法则决定了值域 | 不必单独检查<br><strong>分母化简</strong>：$f(x)=\frac{x^2-9}{x+3}$ | 直接化简为 $x-3$，认为定义域为 $\mathbb{R}$ | 先求定义域 $x\neq -3$，再化简为 $x-3$（$x\neq -3$）<br><strong>零次方陷阱</strong>：$f(x)=(x-1)^0$ | 直接化简为 $1$，认为定义域为 $\mathbb{R}$ | 先求定义域 $x\neq 1$，再化简为 $1$（$x\neq 1$）<br><strong>根号平方</strong>：$f(x)=\sqrt{x^2}$ | 直接化简为 $x$ | $\sqrt{x^2}=|x|$，与 $g(x)=x$ 对应法则不同，不是同一函数</div>
+<div class="kb-note"><strong>广东考情</strong>：高一上学期**基础必考内容**。函数是高中数学的基石，广东卷在高一期中/期末考试中必考函数概念辨析（是否为函数、同一函数判断）、定义域求解等基础题。虽然高考直接考查函数定义的题目较少，但函数思想贯穿整个高中数学，透彻理解函数概念是学好后续所有函数类型（指数、对数、三角）的前提。</div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
-<blockquote>
-<strong>本质理解</strong>：函数是<strong>两个非空数集之间的一种确定的对应关系</strong>——对于定义域（输入集）中的每一个数，通过对应法则，在值域（输出集）中都有<strong>唯一</strong>的一个数与之对应。
-</blockquote>
-
+<blockquote><p><strong>本质理解</strong>：函数是<strong>两个非空数集之间的一种确定的对应关系</strong>——对于定义域（输入集）中的每一个数，通过对应法则，在值域（输出集）中都有<strong>唯一</strong>的一个数与之对应。</p></blockquote>
 <hr>
-
 <h3>一、函数的两大基石</h3>
-
-<p>#### 1. 非空数集（Non-empty Set of Numbers）</p>
-
+<h4>1. 非空数集（Non-empty Set of Numbers）</h4>
 <p><strong>定义</strong>：由一些确定的、互不相同的数构成的集合，且该集合不能是空集。</p>
-
-<p><strong>理解</strong>：函数是两个数集之间的"游戏"，如果其中一个集合是空的，游戏就没有参与者，也就无法进行。函数必须基于"真实的数字"进行运算和对应。</p>
-
-<blockquote>
-<strong>关键</strong>：非空！两个集合都必须至少有一个元素。
-</blockquote>
-
+<p><strong>理解</strong>：函数是两个数集之间的&quot;游戏&quot;，如果其中一个集合是空的，游戏就没有参与者，也就无法进行。函数必须基于&quot;真实的数字&quot;进行运算和对应。</p>
+<blockquote><p><strong>关键</strong>：非空！两个集合都必须至少有一个元素。</p></blockquote>
 <hr>
-
-<p>#### 2. 对应关系（Correspondence）</p>
-
+<h4>2. 对应关系（Correspondence）</h4>
 <p><strong>定义</strong>：给定两个非空数集 $A$ 和 $B$，如果按照某种确定的规则，对于集合 $A$ 中的<strong>每一个</strong>元素，都能在集合 $B$ 中找到<strong>唯一</strong>一个元素与之对应，那么就称这种对应关系为从集合 $A$ 到集合 $B$ 的一个<strong>函数</strong>。</p>
-
 <p><strong>两个核心条件</strong>：</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>条件</th><th>含义</th><th>反例（不是函数）</th></tr>
-<tr><td><strong>每一个</strong></td><td>集合 $A$ 中不能有任何"多余"的元素，每个数都必须参与对应</td><td>$A=\{1,2,3\}$，但规则只规定了$1$和$2$的对应，$3$没有对应</td></tr>
-<tr><td><strong>唯一</strong></td><td>对于 $A$ 中的同一个数，在 $B$ 中只能有一个数和它对应</td><td>$y^2=x$，当 $x=1$ 时，$y=1$ 或 $y=-1$，不确定</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>广东卷易错点</strong>：很多初学者误以为只要集合 $A$ 中"有"一些数有对应就是函数。这是错的。必须是"每一个"数都有对应。
-</blockquote>
-
+<div class="table-wrap"><table><tr><th>条件</th><th>含义</th><th>反例（不是函数）</th></tr><tr><td><strong>每一个</strong></td><td>集合 $A$ 中不能有任何&quot;多余&quot;的元素，每个数都必须参与对应</td><td>$A=\{1,2,3\}$，但规则只规定了$1$和$2$的对应，$3$没有对应</td></tr><tr><td><strong>唯一</strong></td><td>对于 $A$ 中的同一个数，在 $B$ 中只能有一个数和它对应</td><td>$y^2=x$，当 $x=1$ 时，$y=1$ 或 $y=-1$，不确定</td></tr></table></div>
+<blockquote><p><strong>广东卷易错点</strong>：很多初学者误以为只要集合 $A$ 中&quot;有&quot;一些数有对应就是函数。这是错的。必须是&quot;每一个&quot;数都有对应。</p></blockquote>
 <hr>
-
 <h3>二、函数的三要素</h3>
-
-<div class="table-wrap">
-<table>
-<tr><th>要素</th><th>定义</th><th>符号</th><th>本质理解</th><th>示例</th></tr>
-<tr><td><strong>定义域</strong></td><td>自变量 $x$ 所有可能取值的集合</td><td>$D$</td><td>"允许输入"集</td><td>$f(x)=\frac{1}{x}$ 的定义域为 $\{x</td><td>x\neq 0\}$</td></tr>
-<tr><td><strong>值域</strong></td><td>所有函数值 $y$ 构成的集合</td><td>$R_f$</td><td>"实际输出"集</td><td>$f(x)=x^2$ 的值域为 $[0,+\infty)$</td></tr>
-<tr><td><strong>对应法则</strong></td><td>从 $x$ 到 $y$ 的具体规则</td><td>$f$</td><td>"内部工作机制"</td><td>"加3""平方""开根号"</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>重要区分</strong>：值域 $\subseteq$ 集合 $B$（陪域）。值域不一定是整个 $B$！
-
-<strong>示例</strong>：$f(x)=x^2$，定义域 $A=\mathbb{R}$，若设定陪域 $B=\mathbb{R}$，则值域是 $[0,+\infty)$，是 $B$ 的一个子集。
-</blockquote>
-
+<div class="table-wrap"><table><tr><th>要素</th><th>定义</th><th>符号</th><th>本质理解</th><th>示例</th></tr><tr><td><strong>定义域</strong></td><td>自变量 $x$ 所有可能取值的集合</td><td>$D$</td><td>&quot;允许输入&quot;集</td><td>$f(x)=\frac{1}{x}$ 的定义域为 $\{x|x\neq 0\}$</td></tr><tr><td><strong>值域</strong></td><td>所有函数值 $y$ 构成的集合</td><td>$R_f$</td><td>&quot;实际输出&quot;集</td><td>$f(x)=x^2$ 的值域为 $[0,+\infty)$</td></tr><tr><td><strong>对应法则</strong></td><td>从 $x$ 到 $y$ 的具体规则</td><td>$f$</td><td>&quot;内部工作机制&quot;</td><td>&quot;加3&quot;&quot;平方&quot;&quot;开根号&quot;</td></tr></table></div>
+<blockquote><p><strong>重要区分</strong>：值域 $\subseteq$ 集合 $B$（陪域）。值域不一定是整个 $B$！<br><strong>示例</strong>：$f(x)=x^2$，定义域 $A=\mathbb{R}$，若设定陪域 $B=\mathbb{R}$，则值域是 $[0,+\infty)$，是 $B$ 的一个子集。</p></blockquote>
 <hr>
-
 <h3>三、对应法则与 $f(x)$ 符号</h3>
-
-<p>#### 1. $f(x)$ 的含义</p>
-
+<h4>1. $f(x)$ 的含义</h4>
 <ul>
-<li>$f$：代表对应法则（功能），如"加3""平方"</li>
+<li>$f$：代表对应法则（功能），如&quot;加3&quot;&quot;平方&quot;</li>
 <li>$x$：代表定义域中的输入变量（自变量）</li>
 <li>$f(x)$：代表经过对应法则作用后的输出值（因变量）</li>
 </ul>
-
-<blockquote>
-<strong>注意</strong>：$f(x)$ <strong>不是</strong> $f$ 乘以 $x$！$f$ 和 $x$ 之间是<strong>作用与被作用</strong>的关系，不是相乘。
-
-<strong>类比</strong>：$f$ 是榨汁机，$x$ 是苹果，$f(x)$ 是苹果汁。榨汁机和苹果不是相乘关系。
-</blockquote>
-
-<p>#### 2. $f(x)$ 与 $f(a)$ 的区别</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>表达式</th><th>含义</th><th>示例</th></tr>
-<tr><td>$f(x)=x+1$</td><td><strong>定义函数</strong>——对于任意输入 $x$，输出为 $x+1$</td><td>定义规则</td></tr>
-<tr><td>$f(2)=3$</td><td><strong>求函数值</strong>——将 $x=2$ 代入规则，得到输出 $3$</td><td>计算结果</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>对应法则可变</strong>：虽然常用 $f$，但 $g$、$h$、$F$ 甚至希腊字母都可用于表示对应法则。关键是理解它所代表的"功能"本身，而不是它叫什么名字。
-</blockquote>
-
+<blockquote><p><strong>注意</strong>：$f(x)$ <strong>不是</strong> $f$ 乘以 $x$！$f$ 和 $x$ 之间是<strong>作用与被作用</strong>的关系，不是相乘。<br><strong>类比</strong>：$f$ 是榨汁机，$x$ 是苹果，$f(x)$ 是苹果汁。榨汁机和苹果不是相乘关系。</p></blockquote>
+<h4>2. $f(x)$ 与 $f(a)$ 的区别</h4>
+<div class="table-wrap"><table><tr><th>表达式</th><th>含义</th><th>示例</th></tr><tr><td>$f(x)=x+1$</td><td><strong>定义函数</strong>——对于任意输入 $x$，输出为 $x+1$</td><td>定义规则</td></tr><tr><td>$f(2)=3$</td><td><strong>求函数值</strong>——将 $x=2$ 代入规则，得到输出 $3$</td><td>计算结果</td></tr></table></div>
+<blockquote><p><strong>对应法则可变</strong>：虽然常用 $f$，但 $g$、$h$、$F$ 甚至希腊字母都可用于表示对应法则。关键是理解它所代表的&quot;功能&quot;本身，而不是它叫什么名字。</p></blockquote>
 <hr>
-
 <h3>四、函数关系的判断：三种对应模式</h3>
-
-<div class="table-wrap">
-<table>
-<tr><th>对应模式</th><th>定义</th><th>图示</th><th>是否函数</th><th>示例</th></tr>
-<tr><td><strong>一对一</strong></td><td>每个 $x$ 对应一个不同的 $y$，且不同的 $x$ 对应不同的 $y$</td><td>一个 $x$ 对应一个 $y$</td><td>✅ 允许</td><td>$y=x+1$</td></tr>
-<tr><td><strong>多对一</strong></td><td>多个不同的 $x$ 对应同一个 $y$</td><td>多个 $x$ 对应同一个 $y$</td><td>✅ 允许</td><td>$y=x^2$（$x=1$和$x=-1$都对应$y=1$）</td></tr>
-<tr><td><strong>一对多</strong></td><td>一个 $x$ 对应多个不同的 $y$</td><td>一个 $x$ 对应多个 $y$</td><td>❌ <strong>不允许</strong></td><td>$y^2=x$（$x=1$时$y=\pm 1$）</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>核心原则</strong>："每一个 $x$ 只有唯一的 $y$"——允许"多对一"，但不允许"一对多"。
-</blockquote>
-
+<div class="table-wrap"><table><tr><th>对应模式</th><th>定义</th><th>图示</th><th>是否函数</th><th>示例</th></tr><tr><td><strong>一对一</strong></td><td>每个 $x$ 对应一个不同的 $y$，且不同的 $x$ 对应不同的 $y$</td><td>一个 $x$ 对应一个 $y$</td><td>✅ 允许</td><td>$y=x+1$</td></tr><tr><td><strong>多对一</strong></td><td>多个不同的 $x$ 对应同一个 $y$</td><td>多个 $x$ 对应同一个 $y$</td><td>✅ 允许</td><td>$y=x^2$（$x=1$和$x=-1$都对应$y=1$）</td></tr><tr><td><strong>一对多</strong></td><td>一个 $x$ 对应多个不同的 $y$</td><td>一个 $x$ 对应多个 $y$</td><td>❌ <strong>不允许</strong></td><td>$y^2=x$（$x=1$时$y=\pm 1$）</td></tr></table></div>
+<blockquote><p><strong>核心原则</strong>：&quot;每一个 $x$ 只有唯一的 $y$&quot;——允许&quot;多对一&quot;，但不允许&quot;一对多&quot;。</p></blockquote>
 <hr>
-
 <h3>五、垂直直线检验法（Vertical Line Test）</h3>
-
 <p><strong>方法</strong>：在图像所在平面内，任意画一条垂直于 $x$ 轴的直线（即 $x=a$）。</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>交点情况</th><th>结论</th><th>原理</th></tr>
-<tr><td>始终只有一个交点</td><td>✅ 表示函数</td><td>每个 $x$ 对应唯一的 $y$</td></tr>
-<tr><td>存在某条直线与图像有两个或更多交点</td><td>❌ 不是函数</td><td>某个 $x$ 对应了多个 $y$，违反"唯一"原则</td></tr>
-<tr><td>存在某条直线与图像没有交点</td><td>❌ 不是函数</td><td>某个 $x$ 没有对应的 $y$，违反"每一个"原则</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>常见陷阱</strong>：图像只画了定义域的一部分，但题目说定义域是更大的区间。例如图像只画了 $x\in[0,2]$，但定义域要求 $x\in[0,4]$，那么在 $x\in(2,4]$ 上的垂直直线与图像就没有交点，不是函数。
-</blockquote>
-
+<div class="table-wrap"><table><tr><th>交点情况</th><th>结论</th><th>原理</th></tr><tr><td>始终只有一个交点</td><td>✅ 表示函数</td><td>每个 $x$ 对应唯一的 $y$</td></tr><tr><td>存在某条直线与图像有两个或更多交点</td><td>❌ 不是函数</td><td>某个 $x$ 对应了多个 $y$，违反&quot;唯一&quot;原则</td></tr><tr><td>存在某条直线与图像没有交点</td><td>❌ 不是函数</td><td>某个 $x$ 没有对应的 $y$，违反&quot;每一个&quot;原则</td></tr></table></div>
+<blockquote><p><strong>常见陷阱</strong>：图像只画了定义域的一部分，但题目说定义域是更大的区间。例如图像只画了 $x\in[0,2]$，但定义域要求 $x\in[0,4]$，那么在 $x\in(2,4]$ 上的垂直直线与图像就没有交点，不是函数。</p></blockquote>
 <hr>
-
 <h3>六、同一函数的判定标准</h3>
-
-<p>两个函数是<strong>同一函数</strong>，意味着它们"一模一样"。具体判定标准：</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>条件</th><th>要求</th><th>说明</th></tr>
-<tr><td><strong>定义域相同</strong></td><td>自变量取值范围完全一致</td><td>必须完全相同</td></tr>
-<tr><td><strong>对应法则相同</strong></td><td>输入一个 $x$ 后，运算规则完全一致</td><td>化简后比较</td></tr>
-<tr><td><strong>值域自动相同</strong></td><td>因为定义域和对应法则决定了值域</td><td>不必单独检查</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>注意</strong>：函数与用什么字母表示无关。例如 $f(x)=x^2$ 和 $g(t)=t^2$ 是同一函数，因为定义域都是 $\mathbb{R}$，对应法则都是"平方"。字母只是代号，不影响函数本身。
-</blockquote>
-
+<p>两个函数是<strong>同一函数</strong>，意味着它们&quot;一模一样&quot;。具体判定标准：</p>
+<div class="table-wrap"><table><tr><th>条件</th><th>要求</th><th>说明</th></tr><tr><td><strong>定义域相同</strong></td><td>自变量取值范围完全一致</td><td>必须完全相同</td></tr><tr><td><strong>对应法则相同</strong></td><td>输入一个 $x$ 后，运算规则完全一致</td><td>化简后比较</td></tr><tr><td><strong>值域自动相同</strong></td><td>因为定义域和对应法则决定了值域</td><td>不必单独检查</td></tr></table></div>
+<blockquote><p><strong>注意</strong>：函数与用什么字母表示无关。例如 $f(x)=x^2$ 和 $g(t)=t^2$ 是同一函数，因为定义域都是 $\mathbb{R}$，对应法则都是&quot;平方&quot;。字母只是代号，不影响函数本身。</p></blockquote>
 <hr>
-
 <h3>七、定义域优先原则（化简陷阱）</h3>
-
 <p><strong>原则</strong>：对于给定的函数表达式，<strong>必须先确定其自然定义域</strong>（使表达式有意义的 $x$ 的范围），然后再进行化简。</p>
-
 <p><strong>常见陷阱</strong>：</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>陷阱类型</th><th>示例</th><th>错误做法</th><th>正确做法</th></tr>
-<tr><td><strong>分母化简</strong></td><td>$f(x)=\frac{x^2-9}{x+3}$</td><td>直接化简为 $x-3$，认为定义域为 $\mathbb{R}$</td><td>先求定义域 $x\neq -3$，再化简为 $x-3$（$x\neq -3$）</td></tr>
-<tr><td><strong>零次方陷阱</strong></td><td>$f(x)=(x-1)^0$</td><td>直接化简为 $1$，认为定义域为 $\mathbb{R}$</td><td>先求定义域 $x\neq 1$，再化简为 $1$（$x\neq 1$）</td></tr>
-<tr><td><strong>根号平方</strong></td><td>$f(x)=\sqrt{x^2}$</td><td>直接化简为 $x$</td><td>$\sqrt{x^2}=</td><td>x</td><td>$，与 $g(x)=x$ 对应法则不同，不是同一函数</td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>标准操作顺序</strong>：
-1. 先分别求出两个函数的定义域
-2. 若定义域不同则直接排除（不是同一函数）
-3. 若定义域相同，再化简表达式比较对应法则是否一致（注意化简时保持定义域不变）
-</blockquote>
-
+<div class="table-wrap"><table><tr><th>陷阱类型</th><th>示例</th><th>错误做法</th><th>正确做法</th></tr><tr><td><strong>分母化简</strong></td><td>$f(x)=\frac{x^2-9}{x+3}$</td><td>直接化简为 $x-3$，认为定义域为 $\mathbb{R}$</td><td>先求定义域 $x\neq -3$，再化简为 $x-3$（$x\neq -3$）</td></tr><tr><td><strong>零次方陷阱</strong></td><td>$f(x)=(x-1)^0$</td><td>直接化简为 $1$，认为定义域为 $\mathbb{R}$</td><td>先求定义域 $x\neq 1$，再化简为 $1$（$x\neq 1$）</td></tr><tr><td><strong>根号平方</strong></td><td>$f(x)=\sqrt{x^2}$</td><td>直接化简为 $x$</td><td>$\sqrt{x^2}=|x|$，与 $g(x)=x$ 对应法则不同，不是同一函数</td></tr></table></div>
+<blockquote><p><strong>标准操作顺序</strong>：<br>1. 先分别求出两个函数的定义域<br>2. 若定义域不同则直接排除（不是同一函数）<br>3. 若定义域相同，再化简表达式比较对应法则是否一致（注意化简时保持定义域不变）</p></blockquote>
 <hr>
-
 <h3>八、记忆口诀</h3>
-
-<blockquote>
-<strong>函数定义口诀</strong>：
-- "非空数集来参与，每个元素有对应"
-- "唯一输出是核心，一对多就不行"
-- "垂直检验看图像，一交点是函数"
-- "同一函数两条件，定义域和法则同"
-- "定义域优先要牢记，化简可能藏陷阱"
-</blockquote>
-
+<blockquote><p><strong>函数定义口诀</strong>：<br>- &quot;非空数集来参与，每个元素有对应&quot;<br>- &quot;唯一输出是核心，一对多就不行&quot;<br>- &quot;垂直检验看图像，一交点是函数&quot;<br>- &quot;同一函数两条件，定义域和法则同&quot;<br>- &quot;定义域优先要牢记，化简可能藏陷阱&quot;</p></blockquote>
 <hr>
-
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="../典型题型与方法/高一筑基_数学_典型题型与方法_函数定义域求解与解析式求法.html">高一筑基_数学_典型题型与方法_函数定义域求解与解析式求法</a> — 定义域的详细求解方法和解析式求法</li>
 <li><a href="../典型题型与方法/高一筑基_数学_典型题型与方法_函数值域求法.html">高一筑基_数学_典型题型与方法_函数值域求法</a> — 值域的六种求法（图像法、分离常数法、换元法、对号函数等）</li>
 <li><a href="高一筑基_数学_核心知识网络_平面向量体系.html">高一筑基_数学_核心知识网络_平面向量体系</a> — 函数与向量的映射思想相通</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
-
 <ul>
 <li><strong>广东高一期中/期末命题规律</strong>：函数概念辨析题（是否为函数、同一函数判断）通常出现在选择题前3题，属于送分题但必须确保100%正确。定义域求解是填空题高频考点。</li>
 <li><strong>训练建议</strong>：先掌握函数定义的两个核心条件（每一个、唯一），再练10道同一函数判断题，最后做5道定义域优先原则的判断题。</li>
-<li><strong>PDF来源</strong>：01.函数的定义及常考题型总结.pdf — 提供了"微波炉"类比理解函数，以及"每一个"和"唯一"的精准辨析，建议配合本卡片学习。</li>
+<li><strong>PDF来源</strong>：01.函数的定义及常考题型总结.pdf — 提供了&quot;微波炉&quot;类比理解函数，以及&quot;每一个&quot;和&quot;唯一&quot;的精准辨析，建议配合本卡片学习。</li>
 </ul>
-
 <hr>
-
-<blockquote>
-🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度2</code> <code>#函数</code> <code>#定义域</code> <code>#值域</code> <code>#对应法则</code> <code>#三要素</code> <code>#垂直直线检验</code> <code>#同一函数</code> <code>#定义域优先</code> <code>#广东名校模拟</code>
-</blockquote>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度2</code> <code>#函数</code> <code>#定义域</code> <code>#值域</code> <code>#对应法则</code> <code>#三要素</code> <code>#垂直直线检验</code> <code>#同一函数</code> <code>#定义域优先</code> <code>#广东名校模拟</code></p></blockquote>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

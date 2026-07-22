@@ -34,8 +34,8 @@ MathJax = {
 <div class="kb-note"><strong>广东考情</strong>：考查频率：高频；难度：中档~中高档；概率统计大题是广东卷必考题型，条件概率和全概率公式近年考查力度加大</div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
 <h3>一、条件概率与全概率公式</h3>
 <ul>
 <li><strong>条件概率</strong>：$P(B|A) = \frac{P(AB)}{P(A)}$（$P(A) > 0$）</li>
@@ -43,53 +43,38 @@ MathJax = {
 <li><strong>全概率公式</strong>：$P(B) = \sum_{i=1}^n P(A_i)P(B|A_i)$（$A_1, A_2, \dots, A_n$ 为样本空间的一个划分）</li>
 <li><strong>贝叶斯公式</strong>：$P(A_i|B) = \frac{P(A_i)P(B|A_i)}{P(B)} = \frac{P(A_i)P(B|A_i)}{\sum_{k=1}^n P(A_k)P(B|A_k)}$</li>
 </ul>
-
 <h3>二、离散型随机变量</h3>
 <ul>
 <li><strong>定义</strong>：可能取值为有限个或可以一一列举的随机变量</li>
 <li><strong>分布列</strong>：$P(X = x_i) = p_i$（$i = 1, 2, \dots, n$），满足 $p_i \geq 0$ 且 $\sum p_i = 1$</li>
 </ul>
-
-<p>#### 1. 均值（数学期望）</p>
+<h4>1. 均值（数学期望）</h4>
 <p>$$E(X) = x_1 p_1 + x_2 p_2 + \cdots + x_n p_n = \sum_{i=1}^n x_i p_i$$</p>
 <ul>
 <li>线性性质：$E(aX + b) = aE(X) + b$</li>
 </ul>
-
-<p>#### 2. 方差</p>
+<h4>2. 方差</h4>
 <p>$$D(X) = \sum_{i=1}^n (x_i - E(X))^2 p_i$$</p>
 <ul>
 <li>线性性质：$D(aX + b) = a^2 D(X)$</li>
 </ul>
-
 <h3>三、两点分布（0-1分布）</h3>
-<div class="table-wrap">
-<table>
-<tr><th>$X$</th><th>$0$</th><th>$1$</th></tr>
-<tr><td>$P$</td><td>$1-p$</td><td>$p$</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>$X$</th><th>$0$</th><th>$1$</th></tr><tr><td>$P$</td><td>$1-p$</td><td>$p$</td></tr></table></div>
 <ul>
 <li>$E(X) = p$，$D(X) = p(1-p)$</li>
 </ul>
-
 <hr>
-
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="高二深化_数学_核心知识网络_计数原理与二项式定理.html">计数原理与二项式定理</a> — 概率计算中的计数基础</li>
 <li><a href="高二深化_数学_核心知识网络_二项分布超几何分布与正态分布.html">二项分布超几何分布与正态分布</a> — 特殊分布的期望方差</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
 <ul>
 <li>条件概率计算关键：正确识别条件和事件，画树状图辅助分析</li>
 <li>全概率公式适用场景：事件 $B$ 的发生有多个互斥的原因 $A_i$</li>
-<li>广东卷概率大题：注意审题中"有放回"和"无放回"的区别，这决定了用二项分布还是超几何分布</li>
+<li>广东卷概率大题：注意审题中&quot;有放回&quot;和&quot;无放回&quot;的区别，这决定了用二项分布还是超几何分布</li>
 </ul>
 <!-- KB-CONTENT-END -->
 </article>
