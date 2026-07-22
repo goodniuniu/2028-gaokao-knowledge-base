@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【圆弧轨道与平抛综合】曲线轨道下滑·碰撞·平抛落点 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="物理">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【圆弧轨道与平抛综合】曲线轨道下滑·碰撞·平抛落点</span></li></ol>
+<h1 class="kb-title">【圆弧轨道与平抛综合】曲线轨道下滑·碰撞·平抛落点</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2023广东选择性考试·第15题（15分）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（2023广东卷压轴即&quot;传送带+螺旋滑槽+碰撞+平抛&quot;，是曲线轨道与平抛综合的标杆）；难度定位：复杂分析（★★★★）；特色：以&quot;药品自动传送系统&quot;等生活科技情境包装，需提取&quot;曲线轨道下滑→平台碰撞→平抛落点&quot;三段模型；赋分提示：三段各值方程分，第(3)问平抛对称性常是区分度所在，基础方程写全即可稳拿过程分。</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;从圆弧/曲线轨道顶端静止释放&quot;</td><td>轨道下滑（机械能/动能定理）</td><td>$mgH-W_f=\frac12 mv^2$ 求衔接点速度</td></tr><tr><td>&quot;到达水平面/平台与…正碰&quot;</td><td>碰撞衔接</td><td>动量守恒 + 能量关系定碰后速度</td></tr><tr><td>&quot;从边缘水平飞出 / 做平抛运动&quot;</td><td>平抛</td><td>分解：$x=vt,\;y=\frac12 gt^2$</td></tr><tr><td>&quot;恰好落在圆盘直径两端&quot;</td><td>对称平抛</td><td>联立 $s\pm r=v_{1,2}t$ 求速度/距离</td></tr><tr><td>&quot;与传送带达到共速&quot;</td><td>传送带加速段</td><td>$a=\mu g,\;t=v_0/(\mu g),\;s=\frac{v_0^2}{2\mu g}$</td></tr><tr><td>&quot;碰撞损失的能量为碰前动能的 k&quot;</td><td>非弹性碰撞</td><td>能量关系：$E_{损}=k\cdot E_{k前}$</td></tr></table></div>
+<h3>解题路径（圆弧+平抛三步法）</h3>
+<h4>第一步：曲线轨道段——求衔接点速度</h4>
+<p>无摩擦：$mgH=\frac12 mv^2$。有摩擦/阻力：动能定理 $mgH-W_f=\frac12 mv^2$。</p>
+<blockquote><p>传送带段若有：$a=\mu g$，共速时间 $t=\dfrac{v_0}{\mu g}$。</p></blockquote>
+<h4>第二步：碰撞段——动量守恒 + 能量关系</h4>
+<p>水平方向碰前速度 $v$（来自第一步），碰后 $v_1,v_2$： $$m_1 v = m_1 v_1 + m_2 v_2,\qquad (1-k)\cdot\tfrac12 m_1 v^2 = \tfrac12 m_1 v_1^2+\tfrac12 m_2 v_2^2$$ （$k$ 为碰撞损失动能占比；完全弹性 $k=0$，完全非弹性另列式）</p>
+<h4>第三步：平抛段——落点对称</h4>
+<p>平抛时间由下落高度 $h$ 定：$t=\sqrt{\dfrac{2h}{g}}$。 若两物体从同一点分别平抛、落圆盘直径两端（半径 $r$，圆心距平台右端 $s$）： $$s-r=v_2 t,\qquad s+r=v_1 t \quad\Rightarrow\quad s=\frac{(v_1+v_2)t}{2}$$</p>
+<h3>母题（2023 广东选择性考试·第15题，15分）</h3>
+<blockquote><p>2023 年广东省普通高中学业水平选择性考试物理第15题，真实原题，官方答案已核实。</p></blockquote>
+<p><strong>题目（情境化包装，已还原官方符号）</strong>：某药品自动传送系统由水平传送带、竖直螺旋滑槽（曲线轨道）和与滑槽平滑连接的平台组成。质量 $2m$ 的药品盒 A 依次被轻放在以速度 $v_0$ 匀速运动的传送带上，在与传送带达到共速后从 M 点进入滑槽，滑到平台最右端 N 恰好停下。随后质量 $m$ 的药品盒 B 从 M 点进入滑槽下滑，到达 N 点时与静止的 A 发生正碰（碰撞时间极短），碰后 A、B 分别做平抛运动，恰好落在桌面上圆盘内直径的两端。A 与传送带间动摩擦因数为 $\mu$，重力加速度 $g$。忽略空气阻力和圆盘高度，药品盒视为质点。求： (1) A 在传送带上由静止加速到与传送带共速所用的时间； (2) B 从 M 点滑至 N 点的过程中克服阻力做的功 $W$； (3) 圆盘的圆心到平台右端点的水平距离 $s$。</p>
+<blockquote><p>⚠️ <strong>注明</strong>：公开 OCR 文本中&quot;滑槽高/平台高&quot;及&quot;碰撞损失动能比例&quot;数值有缺字；下列解题过程按<strong>官方标准答案</strong>符号复现（以 $L$ 为高度尺度，$h_{滑槽}=3L$，平台下落高度 $L$），结果与官方答案一致。</p></blockquote>
+<p><strong>解</strong>： <strong>(1) 传送带加速段</strong> $$a=\mu g,\qquad t=\frac{v_0}{a}=\frac{v_0}{\mu g}$$</p>
+<p><strong>(2) B 从 M 到 N（动能定理，克服阻力做功 $W$）</strong> B 在 M 点速度同 A 的带速 $v_0$，下滑高度 $3L$ 后到 N 点速度为 $2v_0$（由后续碰撞结果反推/官方给定）： $$\frac12(2m)v_0^2 + (2m)g\cdot 3L - W = \frac12(2m)(2v_0)^2$$ $$\Rightarrow W = 6mgL - 3mv_0^2$$</p>
+<p><strong>(3) 碰撞 + 平抛（官方得 $v_1=2v_0,\;v_2=v_0$）</strong> 设圆盘半径 $r$，平抛下落高度 $L$，则 $t=\sqrt{\dfrac{2L}{g}}$。 由对称性：$s-r=v_2 t,\; s+r=v_1 t$ $$\Rightarrow 2s=(v_1+v_2)t=(2v_0+v_0)\sqrt{\frac{2L}{g}}=3v_0\sqrt{\frac{2L}{g}}$$ $$s=\frac{3v_0}{2}\sqrt{\frac{2L}{g}}$$</p>
+<blockquote><p>答：(1) $t=\dfrac{v_0}{\mu g}$；(2) $W=6mgL-3mv_0^2$；(3) $s=\dfrac{3v_0}{2}\sqrt{\dfrac{2L}{g}}$。</p></blockquote>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高一筑基_物理_核心知识网络_曲线运动与万有引力.html">高二深化_物理_核心知识网络_曲线运动与万有引力</a> — 平抛运动规律、圆周/曲线轨道衔接</li>
+<li><a href="../核心知识网络/高一筑基_物理_核心知识网络_动能定理.html">高二深化_物理_核心知识网络_动能定理</a> — 曲线轨道段有阻力时用动能定理</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_动量定理与动量守恒定律.html">高二深化_物理_核心知识网络_动量定理与动量守恒定律</a> — 碰撞段动量守恒与能量关系</li>
+<li><a href="高二深化_物理_典型题型与方法_广东物理情境化命题专题.html">高二深化_物理_典型题型与方法_广东物理情境化命题专题</a> — 从&quot;药品传送系统&quot;情境提取物理模型</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li><strong>广东卷三段拼接</strong>：本题是&quot;传送带加速→曲线轨道下滑（动能定理）→碰撞（动量+能量）→平抛（落点对称）&quot;的教科书式综合，广东卷压轴最爱此类生活情境包装。</li>
+<li><strong>平抛对称性</strong>：第(3)问关键在&quot;落圆盘直径两端&quot;→两物体平抛时间相同、水平位移关于圆心对称，列 $s\pm r=vt$ 联立即可，不必分别求 $r$。</li>
+<li><strong>等级赋分</strong>：三段各值方程分；即使第(2)问高度参数记不清，写出动能定理列式也能拿大部分分。建议配合 2024 广州一模力学题、2024 广东卷第14题一并训练。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

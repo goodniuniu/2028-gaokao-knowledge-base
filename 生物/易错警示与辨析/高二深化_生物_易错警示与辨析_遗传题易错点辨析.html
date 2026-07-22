@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遗传题易错点辨析（概率计算与条件陷阱） | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="生物">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">生物</a></li><li><a href="./index.html">易错警示与辨析</a></li><li><span aria-current="page">遗传题易错点辨析（概率计算与条件陷阱）</span></li></ol>
+<h1 class="kb-title">遗传题易错点辨析（概率计算与条件陷阱）</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：人教版必修2第1~2章 + 2022 广东选择性考试·第16题（镰状细胞贫血家系基因检测）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：考查频率：高频（广东卷遗传大题/选择题几乎年年出现，2022 第16、2024 第18 家系判定）；难度：中高档，失分主因在&quot;概率条件&quot;而非&quot;遗传规律本身&quot;；特色：广东卷常以真实遗传病研究/基因检测电泳图为情境，把&quot;系谱判定+概率计算+生命伦理&quot;打包；赋分提示：遗传题原始分高（选择 2~4 分/空、大题 12~14 分），一处条件概率算错满盘皆输，等级赋分下是拉分主战场。</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>一句话点破易错本质</strong>：遗传题 90% 的失分不是不会&quot;分离/自由组合&quot;，而是<strong>没看清&quot;条件&quot;与&quot;范围&quot;</strong>——谁的基因型已知、谁的概率要加权、算的是&quot;所有孩子中&quot;还是&quot;男孩中&quot;。</p></blockquote>
+<hr>
+<h3>一、五大高频易错点辨析表</h3>
+<div class="table-wrap"><table><tr><th>易错点</th><th>正解</th><th>典型误判</th></tr><tr><td><strong>&quot;表型正常&quot;≠&quot;不携带&quot;</strong></td><td>隐性病中正常双亲生患病子女 → 双亲必为杂合（Aa）</td><td>以为父母正常就不带致病基因</td></tr><tr><td><strong>&quot;已知表型正常&quot;要加权</strong></td><td>正常后代基因型为 1/3 AA、2/3 Aa（在患者同胞中）</td><td>直接当 Aa（概率 1）算</td></tr><tr><td><strong>传递/生育致病基因概率</strong></td><td>先判自身基因型概率，再 ×1/2；如女儿 = 2/3×1/2 = 1/3</td><td>想当然写 1/2</td></tr><tr><td><strong>&quot;患病男孩&quot; vs &quot;男孩患病&quot;</strong></td><td>患病男孩 = 所有孩子中患病且男 = 患病概率×1/2；男孩患病 = 男孩中患病概率（常染色体病=患病概率）</td><td>两者混为一谈</td></tr><tr><td><strong>&quot;携带致病基因概率&quot;范围</strong></td><td>指含一个 a 即可（Aa 或 aa 都算&quot;携带/带有&quot;），常 = 3/4</td><td>只算 Aa 漏掉 aa</td></tr></table></div>
+<h3>二、概率计算的&quot;三步防错法&quot;</h3>
+<h4>第一步：先定遗传方式</h4>
+<ul>
+<li>无中生有 → 隐性；有中生无 → 显性；伴性看&quot;男多女少/女患父子必病&quot;等。</li>
+<li>隐性病 + 正常双亲生患病子 → <strong>双亲必杂合</strong>（这是广东卷最高频隐含条件）。</li>
+</ul>
+<h4>第二步：列出已知个体的基因型概率（不是直接写基因型）</h4>
+<ul>
+<li>患者同胞中&quot;表型正常者&quot;：AA 概率 $1/3$，Aa 概率 $2/3$（不是在算 1/2！）。</li>
+<li>若题干已用电泳/基因检测确定某人为 Aa，则该人概率就是 1，不再加权。</li>
+</ul>
+<h4>第三步：按&quot;范围&quot;算目标概率</h4>
+<ul>
+<li>&quot;传递给下一代&quot;：自身为 Aa 才算，故 = $P(\text{Aa}) \times 1/2$。</li>
+<li>&quot;生育一个患病子代&quot;：依遗传方式用配子法。</li>
+<li>&quot;男孩/女孩&quot;条件：常染色体病中加 ×1/2；伴性病中范围限定在对应性别。</li>
+</ul>
+<h3>三、典型错例集锦</h3>
+<div class="table-wrap"><table><tr><th>错例</th><th>错因</th><th>正解</th></tr><tr><td>&quot;父母正常，女儿正常，故女儿基因型为 Aa&quot;</td><td>忽略正常同胞有 1/3 AA 可能</td><td>女儿 = 1/3 AA、2/3 Aa</td></tr><tr><td>&quot;女儿把致病基因传给下一代概率 1/2&quot;</td><td>把女儿当确定 Aa</td><td>2/3×1/2 = 1/3</td></tr><tr><td>&quot;第三胎携带致病基因概率 = 1/2&quot;</td><td>只算 Aa，漏 aa</td><td>Aa+aa = 2/4+1/4 = 3/4</td></tr><tr><td>&quot;患病男孩概率 = 男孩患病概率&quot;</td><td>未区分&quot;所有孩子&quot;与&quot;男孩中&quot;</td><td>常染色体病中相差 ×1/2</td></tr><tr><td>&quot;父母正常→不携带致病基因&quot;</td><td>混淆表型与基因型</td><td>隐性病双亲生患儿必为杂合携带者</td></tr></table></div>
+<h3>四、真题印证（广东卷，已核实）</h3>
+<p><strong>（2022 广东选择性考试·第16题，单选）</strong></p>
+<blockquote><p>一对表型正常的夫妇，生育了一个表型正常的女儿和一个患镰状细胞贫血症的儿子（致病基因位于 11 号染色体，单对碱基突变）。家庭成员进行了基因检测（电泳图，略）。下列叙述<strong>错误</strong>的是（ ）<br>A. 女儿和父母基因检测结果相同的概率是 2/3<br>B. 若父母生育第三胎，此孩携带该病致病基因的概率是 3/4<br>C. 女儿将该病致病基因传递给下一代的概率是 1/2<br>D. 该家庭的基因检测信息应受到保护，避免基因歧视</p></blockquote>
+<p><strong>分析与答案：C</strong></p>
+<ul>
+<li>该病为常染色体隐性（设 A/a），父母均 Aa，儿子 aa，女儿表型正常 → 基因型 1/3 AA、2/3 Aa。</li>
+<li>A 对：父母均为杂合 Aa（检测结果相同），女儿为 Aa 的概率 2/3 → &quot;相同概率 2/3&quot;正确。</li>
+<li>B 对：第三胎基因型 1/4 AA、2/4 Aa、1/4 aa，携带致病基因（含 a）= Aa+aa = 3/4。</li>
+<li><strong>C 错</strong>：女儿传递致病基因概率 = $P(\text{Aa}) \times 1/2 = 2/3 \times 1/2 = 1/3$，并非 1/2。</li>
+<li>D 对：基因隐私应受保护。</li>
+<li><strong>答</strong>：C。本题核心陷阱正是 C——把&quot;女儿&quot;当成确定杂合，漏掉 1/3 AA 的加权。</li>
+</ul>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高一筑基_生物_核心知识网络_遗传定律体系.html">遗传定律体系</a> — 分离/自由组合/伴性遗传概率计算底座</li>
+<li><a href="../典型题型与方法/高二深化_生物_典型题型与方法_遗传系谱图判定.html">遗传系谱图判定</a> — 系谱五步判定法，本卡是其&quot;概率易错&quot;补丁篇</li>
+<li><a href="高二深化_生物_易错警示与辨析_自交与自由交配辨析.html">自交与自由交配辨析</a> — 遗传计算的另一个高频易错点</li>
+<li><a href="../核心知识网络/高二深化_生物_核心知识网络_广东生物长句表达答题模板.html">广东生物长句表达答题模板</a> — 遗传题&quot;原因/依据类&quot;长句表述框架</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>广东卷遗传题最爱在&quot;条件概率&quot;上设陷阱：① 已知表型但基因型未知要加权；② &quot;患病男孩&quot;与&quot;男孩患病&quot;范围不同；③ &quot;携带&quot;包括 Aa 和 aa。</li>
+<li>解题铁律：先写&quot;谁的基因型概率是多少&quot;，再代入算目标，绝不在脑中直接默认 Aa。</li>
+<li>等级赋分提醒：遗传计算是原始分拉开差距的主战场，但失误代价在赋分制下加倍——做完用配子法或代入法回验一次。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回易错警示与辨析</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

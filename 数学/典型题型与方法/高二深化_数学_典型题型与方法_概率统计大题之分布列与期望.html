@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【卡片标题】概率统计大题之分布列与期望 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【卡片标题】概率统计大题之分布列与期望</span></li></ol>
+<h1 class="kb-title">【卡片标题】概率统计大题之分布列与期望</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2023新课标Ⅰ卷·第21题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（概率统计解答题近年置于第19~21题，12分，常考马尔可夫链/递推概率/两点分布期望）；广东卷偏爱&quot;状态转移+数列通项+期望求和&quot;三连，思维链长、计算量大，是130+的关键分水岭题</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;每次由其中一人投篮/抽奖，命中则继续、不中则换人&quot;</td><td>马尔可夫链</td><td>设 aₙ=P(第n次状态)，建递推</td></tr><tr><td>&quot;第n次处于某状态的概率&quot;</td><td>递推数列</td><td>aₙ = p·aₙ₋₁ + q·(1-aₙ₋₁) 构造等比</td></tr><tr><td>&quot;已知 Xi 两点分布，E(ΣXi)=Σqi&quot;</td><td>期望线性性</td><td>直接求和 Σaᵢ</td></tr><tr><td>随机变量取值为 0/1（是否发生）</td><td>两点分布</td><td>用指示变量把计数转化为 ΣXi</td></tr><tr><td>多个互斥状态转移</td><td>全概率公式</td><td>按上一状态分类</td></tr></table></div>
+<h3>解题路径（概率递推大题四步法）</h3>
+<h4>第一步：建模设变量</h4>
+<p>设 aₙ = &quot;第 n 次处于目标状态&quot;的概率，写出 a₁（初始概率）。</p>
+<h4>第二步：建递推</h4>
+<p>用全概率：aₙ = P(本状态命中留)+P(他状态未中换)，化为 aₙ = p·aₙ₋₁ + q（一阶线性递推）。</p>
+<h4>第三步：求通项</h4>
+<p>构造常数列 aₙ + c = k(aₙ₋₁ + c) 化为等比，得 aₙ = A·k^(n-1) + B。</p>
+<h4>第四步：算期望</h4>
+<p>利用两点分布期望线性性 E(Y) = Σaᵢ，分组（等比求和+常数求和）得结果。</p>
+<h3>母题（2023 新课标Ⅰ卷·第21题，12分）</h3>
+<p><strong>题目</strong>：甲、乙两人投篮，每次由其中一人投篮，规则：若命中则此人继续，若未命中则换对方。甲命中率0.6，乙命中率0.8，第一次由抽签决定，甲、乙各0.5。 (1) 求第2次投篮的人是乙的概率； (2) 求第 i 次投篮的人是甲的概率； (3) 记前 n 次中甲投篮次数为 Y（Xi 为两点分布、P(Xi=1)=aᵢ），求 E(Y)。</p>
+<p><strong>解析</strong>： (1) P(第2次是乙) = P(甲先投且未中) + P(乙先投且命中) = 0.5×0.4 + 0.5×0.8 = 0.6 = <strong>3/5</strong>。 (2) 设 aᵢ = P(第i次甲投)，则 aᵢ = 0.6·aᵢ₋₁ + 0.2·(1-aᵢ₋₁) = (2/5)aᵢ₋₁ + 1/5（i≥2），a₁=1/2。 构造：aᵢ - 1/3 = (2/5)(aᵢ₋₁ - 1/3)，故 {aᵢ-1/3} 是首项 1/6、公比 2/5 的等比， 得 <strong>aᵢ = (1/6)(2/5)^(i-1) + 1/3</strong>。 (3) 由两点分布期望线性性，E(Y) = Σ₁ⁿ aᵢ = Σ₁ⁿ[(1/6)(2/5)^(i-1) + 1/3] = (1/6)·[1-(2/5)ⁿ]/(1-2/5) + n/3 = <strong>n/3 + 5/18 - (1/9)(2/5)^(n-1)</strong>。</p>
+<p><strong>关键提炼</strong>：马尔可夫链本质是一阶线性递推数列；期望用&quot;指示变量+线性性&quot;一步到位，避免逐一列分布列。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_条件概率与离散型随机变量.html">条件概率与离散型随机变量</a> — 两点分布、全概率、期望线性性的底层工具</li>
+<li><span class="kb-deadlink" title="关联内容尚未创建">数列放缩与不等式证明</span> — 递推求通项、等比求和的同款运算</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>广东卷概率压轴近3年连续考递推（2022传球、2023投篮、2024骰子），&quot;识别状态→建递推→求通项→算期望&quot;是通用打法。</li>
+<li>易错：第(3)问误把 Y 当单一分布列硬算；忘记用期望线性性。</li>
+<li>提速：直接记递推 aₙ=paₙ₋₁+q 通解 aₙ=(a₁-q/(1-p))(p)^(n-1)+q/(1-p)。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

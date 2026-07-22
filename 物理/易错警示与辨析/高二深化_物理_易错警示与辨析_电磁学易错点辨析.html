@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【电磁学易错点辨析】电场·磁场·电磁感应高频误区 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="物理">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">易错警示与辨析</a></li><li><span aria-current="page">【电磁学易错点辨析】电场·磁场·电磁感应高频误区</span></li></ol>
+<h1 class="kb-title">【电磁学易错点辨析】电场·磁场·电磁感应高频误区</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★☆☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 广东卷电磁学高频错点梳理</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（电场、磁场、电磁感应为广东卷计算题/选择题常客，2023第14题线框电磁感应、2024第15题复合场均为压轴）；难度定位：中—难（★★★~★★★★）；特色：广东卷重&quot;场的性质辨析&quot;与&quot;图像结合&quot;，左手/右手定则、E-φ 关系、楞次定律是选择题易错重灾区；赋分提示：电磁学概念辨析错一处常整题连锁错，须先辨清&quot;力/能/方向&quot;三要素。</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>易错点总览表</h3>
+<div class="table-wrap"><table><tr><th>易错点</th><th>常见错解</th><th>正确认知</th></tr><tr><td><strong>E 与 φ 的关系</strong></td><td>认为 $E=0$ 则 $\varphi=0$</td><td>$E$ 描述力的性质、$\varphi$ 描述能的性质，二者无必然相等关系</td></tr><tr><td><strong>电势高低判断</strong></td><td>沿电场线误判为升高</td><td>沿电场线方向电势<strong>降低</strong>；正电荷受力与 $E$ 同向</td></tr><tr><td><strong>左/右手定则</strong></td><td>左手右手混用</td><td><strong>左力右电</strong>：左手判安培力/洛伦兹力，右手判感应电流方向</td></tr><tr><td><strong>洛伦兹力做功</strong></td><td>误认为改变速率</td><td>洛伦兹力始终垂直速度，<strong>永不做功</strong>，只改速度方向</td></tr><tr><td><strong>楞次定律&quot;阻碍&quot;</strong></td><td>误为&quot;阻止&quot;变化</td><td>阻碍的是<strong>磁通量的变化</strong>（增反减同、来拒去留），不阻止变化本身</td></tr><tr><td><strong>电容器动态</strong></td><td>断开电源后误认 $U$ 不变</td><td>断开电源 $Q$ 不变；由 $E=U/d=Q/(Cd)\propto Q/\varepsilon_r S$ 知 $E$ 与 $d$ 无关</td></tr></table></div>
+<h3>易错点 1：$E$ 与 $\varphi$ 的关系混淆</h3>
+<blockquote><p><strong>关键</strong>：电场强度 $E$ 由电场本身决定（力的性质）；电势 $\varphi$ 与零势面选取有关（能的性质）。</p></blockquote>
+<ul>
+<li>等量<strong>同种</strong>电荷连线中点：$E=0$，但 $\varphi\neq 0$（同号叠加）。</li>
+<li>等量<strong>异种</strong>电荷中垂线：可令中垂线为零势面，故 $\varphi=0$，但 $E\neq 0$（电场线垂直中垂线）。</li>
+<li>结论：<strong>$E=0 \nRightarrow \varphi=0$</strong>；<strong>$\varphi=0 \nRightarrow E=0$</strong>。只有 $E=-\dfrac{\mathrm d\varphi}{\mathrm d x}$（电势沿场强方向降落最快）。</li>
+</ul>
+<h3>易错点 2：左、右手定则混淆</h3>
+<div class="table-wrap"><table><tr><th>定则</th><th>用途</th><th>手势</th></tr><tr><td><strong>左手定则</strong></td><td>已知 $B$、$I/v$ 求安培力/洛伦兹力方向（电动机原理）</td><td>磁感线穿掌心，四指电流/正电荷运动，拇指受力</td></tr><tr><td><strong>右手定则</strong></td><td>已知切割运动求感应电流方向（发电机原理）</td><td>磁感线穿掌心，拇指运动，四指感应电流</td></tr></table></div>
+<blockquote><p>记忆口诀：<strong>&quot;左力右电&quot;</strong>——左手出力（力），右手发电（电）。</p></blockquote>
+<h3>易错点 3：洛伦兹力与圆周运动参量</h3>
+<ul>
+<li>洛伦兹力 $f=qvB$ 始终 $\perp v$，<strong>不做功</strong>，故速度大小不变，仅方向变 → 匀速圆周运动。</li>
+<li>半径：$r=\dfrac{mv}{qB}$；周期：$T=\dfrac{2\pi m}{qB}$（<strong>与速率 $v$ 无关</strong>！）。</li>
+<li>易错：误以为 $T$ 随 $v$ 增大而增大——实际 $v$ 大则 $r$ 大，$T$ 不变。</li>
+<li>在有界磁场中，&quot;磁聚焦&quot;&quot;旋转圆&quot;&quot;平移圆&quot;模型判断轨迹，先用几何关系求圆心角 $\theta$，再算时间 $t=\dfrac{\theta}{2\pi}T$。</li>
+</ul>
+<h3>易错点 4：楞次定律与法拉第定律</h3>
+<ul>
+<li>感应电动势大小：$E=n\dfrac{\Delta\Phi}{\Delta t}$（求<strong>平均值</strong>）；单棒切割 $E=BLv$（$L,v$ 均取<strong>垂直</strong>于 $B$ 的有效分量）。</li>
+<li>方向：楞次定律&quot;<strong>增反减同</strong>&quot;——磁通量增加则感应磁场与原磁场反向，减少则同向。</li>
+<li>易错：把&quot;阻碍变化&quot;当成&quot;阻碍磁通量&quot;本身；磁通量为 0 的瞬间变化率未必为 0（如正弦交变磁场过零时 $\Delta\Phi/\Delta t$ 最大）。</li>
+</ul>
+<h3>经典易错例（概念综合）</h3>
+<p><strong>题</strong>：一带电粒子以速度 $v$ 垂直射入匀强磁场做匀速圆周运动，若突然将磁感应强度 $B$ 增大为 $2B$，则粒子（　　） A. 周期变大　B. 半径变大　C. 速率不变　D. 向心加速度变小</p>
+<p><strong>错解</strong>：选 A（误以为 $T$ 随 $B$ 增大而增大）或选 B。 <strong>正解</strong>：由 $r=\dfrac{mv}{qB}$，$B$ 增大→$r$ <strong>变小</strong>；由 $T=\dfrac{2\pi m}{qB}$，$B$ 增大→$T$ <strong>变小</strong>；洛伦兹力不做功→<strong>速率 $v$ 不变</strong>；向心加速度 $a=\dfrac{qvB}{m}$ 随 $B$ 增大而<strong>变大</strong>。故选 <strong>C</strong>。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_电场公式体系.html">高二深化_物理_核心知识网络_电场公式体系</a> — 场强、电势、电势能、电容器公式体系</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_磁场公式体系.html">高二深化_物理_核心知识网络_磁场公式体系</a> — 安培力、洛伦兹力、圆周运动参量</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_电磁感应定律.html">高二深化_物理_核心知识网络_电磁感应定律</a> — 楞次定律、法拉第定律、切割电动势</li>
+<li><a href="../典型题型与方法/高二深化_物理_典型题型与方法_复合场中的带电粒子运动.html">高二深化_物理_典型题型与方法_复合场中的带电粒子运动</a> — 电场+磁场+重力场综合运动</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li><strong>广东卷命题落点</strong>：电磁学概念辨析多出现在选择题（场的性质、图像、定则方向），计算题多落在复合场与电磁感应（见典型题型卡片）。</li>
+<li><strong>避错口诀</strong>：判方向想&quot;左力右电&quot;；判电势想&quot;顺线降低&quot;；判做功想&quot;洛伦兹力永远不做功&quot;；判感应想&quot;增反减同&quot;。</li>
+<li><strong>等级赋分</strong>：电磁学选择错题常因一个概念误判整题连锁错，是&quot;不该丢的分&quot;，务必把上表 6 个易错点背熟到条件反射。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回易错警示与辨析</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【卡片标题】导数大题之双变量与同构问题 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【卡片标题】导数大题之双变量与同构问题</span></li></ol>
+<h1 class="kb-title">【卡片标题】导数大题之双变量与同构问题</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2020新高考Ⅰ卷(山东)·第21题（同构视角）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（同构法是新课标Ⅰ卷导数压轴最常用技巧）；看到 e^x 与 lnx 混合的恒成立/不等式，优先尝试同构化为同一函数</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>式子含 e^{x}+x 与 lnx+x 形式</td><td>同构</td><td>构造 g(t)=e^t+t，化归 g(A)≥g(B)</td></tr><tr><td>&quot;f(x)≥1 恒成立&quot;且含 ae^{x-1} 与 lnx</td><td>同构</td><td>写成 e^{ln a+x-1}+lna+x-1 ≥ lnx+x</td></tr><tr><td>指数与对数并存、难直接解</td><td>同构优先</td><td>移项配成 g(u)=g(v) 利用单调性</td></tr><tr><td>同构不易时</td><td>转隐零点</td><td>见&quot;导数大题之隐零点问题&quot;卡</td></tr></table></div>
+<h3>解题路径（同构三步法）</h3>
+<h4>第一步：观察结构</h4>
+<p>将式中的 e^{...} 与 ln(...) 配成&quot;指数+指数内&quot;或&quot;对数+对数内&quot;的对称形式。</p>
+<h4>第二步：构造辅助函数</h4>
+<p>令 g(t)=e^t+t（或 g(t)=t+ln t 等），把原不等式化为 g(u) ≥ g(v)。</p>
+<h4>第三步：用单调性消参</h4>
+<p>因 g(t) 单调增，g(u)≥g(v) ⇔ u≥v，从而把超越不等式化为代数不等式求参。</p>
+<h3>母题（2020 新高考Ⅰ卷(山东)·第21题，12分）</h3>
+<p><strong>题目</strong>：已知函数 f(x)=ae^{x-1} - lnx + lna。(1) 当 a=e 时，求曲线在点(1,f(1))处切线与坐标轴围成三角形面积；(2) 若 f(x)≥1，求a的取值范围。</p>
+<p><strong>解析（同构视角）</strong>： (2) f(x) = e^{ln a + x - 1} - lnx + ln a = e^{ln a + x - 1} + (ln a + x - 1) - (lnx + x)。 令 g(t)=e^t + t（在R上严格增），则 f(x) = g(ln a + x - 1) - g(ln x)。 f(x)≥1 即 g(ln a + x - 1) - g(ln x) ≥ 1。 注意到 g(ln x) + 1 = e^{ln x} + ln x + 1 = x + ln x + 1，而 g(ln a + x - 1) ≥ g(ln x) + 1 不易直接。 改为：由 g 单调增，f(x)≥1 等价于 ln a + x - 1 ≥ ln x（即 g(ln a+x-1)≥g(ln x)），即 <strong>ln a ≥ ln x - x + 1</strong>。 令 h(x)=lnx - x + 1，h&#x27;(x)=1/x - 1，h(x) 在(0,1)增、(1,+∞)减，最大值 h(1)=0。 故 ln a ≥ 0 ⇒ <strong>a ≥ 1</strong>。</p>
+<p><strong>关键提炼</strong>：同构本质&quot;把指数与对数配成同一个增函数 g 的复合，用单调性把超越不等式降为代数不等式&quot;。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数的运算与应用.html">导数的运算与应用</a> — 含参讨论框架</li>
+<li><a href="高二深化_数学_典型题型与方法_导数大题之隐零点问题.html">导数大题之隐零点问题</a> — 同题的隐零点视角</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>同构与隐零点解决的是同一类题，考试时哪种顺手用哪种；建议两卡对照。</li>
+<li>易错：g(t) 构造错（必须 e^t+t 同形）；忘证 g 单调。</li>
+<li>提速：熟记 e^x+x、x+lnx 这两类标准同构母函数。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

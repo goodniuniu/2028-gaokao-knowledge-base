@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【基因频率与进化计算】哈温平衡与进化实质 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="生物">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">生物</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【基因频率与进化计算】哈温平衡与进化实质</span></li></ol>
+<h1 class="kb-title">【基因频率与进化计算】哈温平衡与进化实质</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★☆☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2024广东选择性考试·第11题（EDAR基因）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：考查频率：中高频（广东卷几乎每年1道进化/基因频率选择题，2024第11、2023第13等）；难度：中档；特色：常以&quot;古代人类DNA/化石/环境变迁&quot;为情境，考基因频率变化原因与哈温平衡计算；赋分提示：选择题2分，但若发散到非选择大题（如2024第18题融合基因频率）则分值更高，公式必须熟记</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;某基因频率升高/降低，原因最合理&quot;</td><td>进化实质=基因频率改变</td><td>自然选择/突变/漂变/迁移择优</td></tr><tr><td>&quot;已知AA、Aa、aa个体数，求A频率&quot;</td><td>常染色体基因频率计算</td><td>$p=\frac{2N_{AA}+N_{Aa}}{2N_{总}}$</td></tr><tr><td>&quot;种群中患病（aa）频率为x%，求携带者频率&quot;</td><td>哈温平衡逆推</td><td>$q=\sqrt{x\%}$，$2pq$</td></tr><tr><td>&quot;伴X遗传病，男患者比例=a%&quot;</td><td>伴X基因频率</td><td>男患频率=致病基因频率 $q$</td></tr><tr><td>&quot;达到遗传平衡，求下一代基因型频率&quot;</td><td>哈温平衡</td><td>$(p+q)^2=p^2+2pq+q^2$</td></tr><tr><td>&quot;突变/迁入导致频率变化&quot;</td><td>进化原材料/迁移</td><td>突变率×种群规模；迁移公式</td></tr></table></div>
+<h3>解题路径（基因频率计算三步法）</h3>
+<h4>第一步：区分常染色体与伴X</h4>
+<ul>
+<li><strong>常染色体</strong>：$A$频率 $p=\dfrac{2\times AA + Aa}{2\times 总个体}$；等位基因频率 $p+q=1$。</li>
+<li><strong>伴X</strong>：$X^A$频率 $p=\dfrac{2\times X^AX^A + X^AX^a + X^AY}{2\times 雌性个体 + 雄性个体}$（雌性贡献2个、雄性贡献1个X）。</li>
+</ul>
+<h4>第二步：用哈温平衡列式</h4>
+<ul>
+<li>平衡条件（种群大、随机交配、无突变/迁入/选择）：基因型频率 $p^2+2pq+q^2=1$。</li>
+<li><strong>隐性病携带者频率</strong> $=2pq=2q(1-q)$（其中 $q=\sqrt{\text{隐性患者频率}}$）。</li>
+</ul>
+<h4>第三步：判定进化方向</h4>
+<ul>
+<li>进化的实质 = <strong>种群基因频率的定向改变</strong>；<strong>自然选择</strong>使有利变异基因频率升高。</li>
+<li>仅&quot;基因突变&quot;提供新等位基因（原材料），频率大幅定向改变靠自然选择。</li>
+</ul>
+<h3>母题（2024 广东选择性考试·第11题，2分）</h3>
+<blockquote><p>EDAR基因的一个碱基替换使M突变为m，研究发现m的频率从末次盛冰期后开始明显升高（东亚人汗腺密度等体征与之相关）。下列推测合理的是（ ）<br>A. m的出现是自然选择的结果<br>B. m不存在于现代非洲和欧洲人群中<br>C. m的频率升高是末次盛冰期后环境选择的结果<br>D. MM、Mm和mm个体的汗腺密度依次下降</p></blockquote>
+<p><strong>解</strong>：</p>
+<ul>
+<li>A：m的<strong>出现</strong>是<strong>基因突变</strong>结果，不是自然选择，A错。</li>
+<li>B：仅凭题干无法断定m不存在于非洲/欧洲人群，B错。</li>
+<li>C：m频率从末次盛冰期后<strong>明显升高</strong> → 频率定向改变由<strong>环境选择（自然选择）</strong>驱动，C正确。</li>
+<li>D：末次盛冰期后气温升高，m频率升高，推测mm（更适应环境）汗腺密度应<strong>升高</strong>而非下降，D错。</li>
+<p><strong>答：C</strong></p>
+</ul>
+<blockquote><p>计算演练（同情境）：若某东亚群体中mm个体占49%，且达哈温平衡，则 $q=\sqrt{0.49}=0.7$，$p=0.3$；携带者(Mm)频率 $=2pq=2\times0.3\times0.7=0.42$（42%）。</p></blockquote>
+<blockquote><p>💡 <strong>关键技巧</strong>：选择题问&quot;原因最合理&quot;时，&quot;出现=突变、升高=选择&quot;是铁律；计算题先判常/X染色体再套公式，伴X莫忘雌雄X数不同。</p></blockquote>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高一筑基_生物_核心知识网络_变异与进化.html">变异与进化</a> — 现代进化理论/基因频率实质</li>
+<li><a href="高二深化_生物_典型题型与方法_遗传系谱图判定.html">遗传系谱图判定</a> — 伴X基因频率与系谱概率融合</li>
+<li><a href="../核心知识网络/高一筑基_生物_核心知识网络_遗传定律体系.html">遗传定律体系</a> — 基因型频率计算基础</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>广东卷进化题常以&quot;化石/古DNA/气候&quot;包装，本质仍考 $p^2+2pq+q^2$ 与&quot;频率改变=进化&quot;。</li>
+<li>易错：把&quot;突变频率&quot;与&quot;基因频率变化&quot;混淆；突变提供原材料但不直接定向改变频率。</li>
+<li>伴X遗传病患者频率：男性患者频率=致病基因频率 $q$，女性患者频率=$q^2$。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

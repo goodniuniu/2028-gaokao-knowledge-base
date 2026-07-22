@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【卡片标题】导数大题之极值点偏移 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【卡片标题】导数大题之极值点偏移</span></li></ol>
+<h1 class="kb-title">【卡片标题】导数大题之极值点偏移</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★★</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2021新高考Ⅰ卷·第22题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（极值点偏移是新课标Ⅰ卷导数压轴经典模型）；常与&quot;同构+对称构造&quot;结合，是数学冲击140分必须拿下的压轴模型</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;a,b为不等正数，且 f(a)=f(b)，证 a+b&gt;2x₀&quot;</td><td>极值点偏移</td><td>对称构造法 F(x)=f(x)-f(2x₀-x)</td></tr><tr><td>&quot;证 1/a+1/b 落在某区间&quot;且含对数</td><td>变量代换偏移</td><td>令 x₁=1/a,x₂=1/b 化归对称点</td></tr><tr><td>f(x) 在 x₀ 处取极值，且有两个零点</td><td>偏移模型</td><td>构造差函数证单调性</td></tr><tr><td>条件含 blna-alnb=a-b 类对称式</td><td>同构+偏移</td><td>两边除以ab化归同一函数</td></tr></table></div>
+<h3>解题路径（极值点偏移三步法）</h3>
+<h4>第一步：求极值点与单调性</h4>
+<p>求导确定 f(x) 的唯一极值点 x₀（通常也是最值点），明确单调区间。</p>
+<h4>第二步：条件同构</h4>
+<p>将题设等式变形，使两个变量落在同一函数 f 上，即 f(x₁)=f(x₂)。</p>
+<h4>第三步：对称构造证偏移</h4>
+<p>设 x₁&lt;x₀&lt;x₂，构造 F(x)=f(x)-f(2x₀-x)（x∈(0,x₀)），证 F(x)&gt;0 ⇒ f(x₁)&gt;f(2x₀-x₁)=f(x₂) ⇒ x₁&gt;2x₀-x₁ ⇒ x₁+x₂&gt;2x₀；同理证上界。</p>
+<h3>母题（2021 新高考Ⅰ卷·第22题，12分）</h3>
+<p><strong>题目</strong>：已知函数 f(x)=x(1-lnx)。(1) 讨论 f(x) 的单调性；(2) 设a,b为两个不相等的正数，且 blna - alnb = a - b，证明：2 &lt; 1/a + 1/b &lt; e。</p>
+<p><strong>解析</strong>： (1) f&#x27;(x)=1-lnx-1=-lnx。当 0&lt;x&lt;1 时 f&#x27;(x)&gt;0，f 增；x&gt;1 时 f&#x27;(x)&lt;0，f 减。x=1 为极大值点，f(1)=1。 (2) 条件两边除以 ab 得 (ln a)/a - (ln b)/b = 1/b - 1/a，整理得 (1+ln(1/a))/a = (1+ln(1/b))/b，即 <strong>f(1/a)=f(1/b)</strong>。 令 x₁=1/a, x₂=1/b（0&lt;x₁&lt;1&lt;x₂），需证 2&lt;x₁+x₂&lt;e。</p>
+<ul>
+<li>证左（x₁+x₂&gt;2）：构造 F(x)=f(x)-f(2-x), x∈(0,1)，F&#x27;(x)=-ln[x(2-x)]&gt;0，故 F(x)&gt;F(1)=0，即 f(x₁)&gt;f(2-x₁)。由 f(x₁)=f(x₂) 得 f(x₂)&gt;f(2-x₁)，结合 x₂,2-x₁ 均在(1,+∞)递减区间，得 x₂&gt;2-x₁ ⇒ x₁+x₂&gt;2。</li>
+<li>证右（x₁+x₂&lt;e）：构造 G(x)=f(x)-f(e-x), x∈(0,1)，G&#x27;(x)=-ln[x(e-x)]，因 x(e-x)&lt;1 故 G&#x27;(x)&gt;0，G(x)&lt;G(1)=0 ⇒ f(x₁)&lt;f(e-x₁)=f(x₂) ⇒ x₂&lt;e-x₁ ⇒ x₁+x₂&lt;e。</li>
+<p>综上 2&lt;1/a+1/b&lt;e。证毕。</p>
+</ul>
+<p><strong>关键提炼</strong>：偏移本质是&quot;把变量不等式转化为函数值不等式，再用单调性比较自变量&quot;。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数的运算与应用.html">导数的运算与应用</a> — 含参讨论与必要性/充分性策略</li>
+<li><a href="高二深化_数学_典型题型与方法_导数大题之隐零点问题.html">导数大题之隐零点问题</a> — 另一导数压轴模型</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>极值点偏移与同构常结伴出现（本题先同构再偏移）。</li>
+<li>易错：对称构造的区间写错（F(x) 定义域应为 (0,x₀)）；忘证等号取不到。</li>
+<li>提速：直接背熟模板 F(x)=f(x)-f(2x₀-x)、G(x)=f(x)-f(2x₀&#x27;+x)。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

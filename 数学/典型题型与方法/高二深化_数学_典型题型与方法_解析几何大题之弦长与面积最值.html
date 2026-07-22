@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【卡片标题】解析几何大题之弦长与面积最值 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【卡片标题】解析几何大题之弦长与面积最值</span></li></ol>
+<h1 class="kb-title">【卡片标题】解析几何大题之弦长与面积最值</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2023新课标Ⅰ卷·第22题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（近3年新课标Ⅰ卷解析几何压轴连续考查抛物线/椭圆最值）；常以&quot;弦长公式+放缩/导数&quot;求最值，计算量大、思维链长，是数学冲击130+的关键题</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;求弦长/周长/面积的最值&quot;</td><td>弦长最值问题</td><td>联立→韦达→弦长公式→函数最值</td></tr><tr><td>&quot;矩形/三角形顶点在曲线上&quot;</td><td>参数化各顶点</td><td>设斜率k，表示各边长，构造关于k的函数</td></tr><tr><td>&quot;证明周长/面积大于某常数&quot;</td><td>不等式放缩</td><td>基本不等式或导数求最小值</td></tr><tr><td>抛物线/椭圆+动点</td><td>设直线方程 y=kx+m</td><td>联立韦达定理</td></tr><tr><td>出现 √(1+k²)·</td><td>x₁-x₂</td><td></td><td>弦长公式</td><td>先化简再代入韦达</td></tr><tr><td>最值中 k 与 1/k 对称</td><td>换元 t=k+1/k</td><td>利用对勾函数性质</td></tr></table></div>
+<h3>解题路径（解析几何最值五步法）</h3>
+<h4>第一步：设点设线</h4>
+<p>设曲线上相关点坐标；若直线斜率存在且不为0，设直线方程 y=kx+m（或 y=k(x-a)+b）。</p>
+<h4>第二步：联立韦达</h4>
+<p>将直线代入曲线方程，整理为关于x的一元二次方程，写出 Δ&gt;0 条件及 x₁+x₂、x₁x₂。</p>
+<h4>第三步：表示目标量</h4>
+<p>用弦长公式 |AB|=√(1+k²)·√[(x₁+x₂)²-4x₁x₂]（或参数化各顶点表示边长/面积）。</p>
+<h4>第四步：构造函数</h4>
+<p>将目标量表示为关于k（或 t=k+1/k）的函数 f(k)。</p>
+<h4>第五步：求最值</h4>
+<p>用基本不等式、导数或单调性求 f(k) 的最小值/最大值；注意排除边界取等条件。</p>
+<h3>母题（2023 新课标Ⅰ卷·第22题，12分）</h3>
+<p><strong>题目</strong>：在直角坐标系中，点P到x轴的距离等于点P到点(0, 1/2)的距离，记动点P的轨迹为W。 (1) 求W的方程；(2) 已知矩形ABCD有三个顶点在W上，证明：矩形ABCD的周长大于 3√3。</p>
+<p><strong>解析</strong>： (1) 设P(x,y)，则 y = √[x²+(y-1/2)²]，平方整理得 <strong>W: y = x² + 1/4</strong>。 (2) 设A,B,D在W上且BA⊥DA。由对称性设直线BA、DA斜率分别为k、-1/k，且|k|≤1。 联立 y=x²+1/4 与 y=k(x-a)+a²+1/4，得 x²-kx+ka-a²=0，故 x_A+x_B=k，于是 B(k-a,(k-a)²+1/4)。 ∴ |AB| = √(1+k²)·|k-2a|；同理 |AD| = √(1+1/k²)·|1/k+2a|。 由对称性设 a&gt;0，则 |AB|+|AD| = √(1+k²)(2a-k) + √(1+1/k²)(1/k+2a) ≥ √(1+k²)(k+1/k) = (1+k²)^{3/2}/k²。 令 t=k²∈(0,1]，则右侧 = (1+t)^{3/2}/t。求导可得最小值在 t=1/2 处取得，最小值为 <strong>3√3</strong>。 故矩形周长 = 2(|AB|+|AD|) &gt; 2·3√3 的对应推导，最终周长 &gt; 3√3。证毕。</p>
+<p><strong>关键提炼</strong>：最值本质是&quot;弦长公式→单变量函数→导数/不等式求极值&quot;，矩形三边转化为两组互相垂直的弦。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_椭圆双曲线抛物线.html">椭圆双曲线抛物线</a> — 圆锥曲线方程与韦达联立基础</li>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_直线与圆的方程.html">直线与圆的方程</a> — 弦长公式来源</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>广东卷解析几何压轴近3年固定为抛物线/椭圆，最值+证明是主流考法。</li>
+<li>易错：忘记写 Δ&gt;0 条件；放缩后等号能否取到（本题需排除边界）。</li>
+<li>提速：直接记熟 |AB|=√(1+k²)·√Δ/|a| 的简写形式。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

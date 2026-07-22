@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【卡片标题】新定义压轴题突破 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【卡片标题】新定义压轴题突破</span></li></ol>
+<h1 class="kb-title">【卡片标题】新定义压轴题突破</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★★</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2024新课标Ⅰ卷·第19题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：中频但极重（2024起压轴第19题17分改为&quot;新定义+跨学科融合&quot;，数列/概率/组合交汇）；广东卷新定义题重&quot;阅读理解→特殊到一般→构造/归纳&quot;，是140+的把关题，区分度最高</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>给出全新术语（如&quot;可分数列&quot;）并定义</td><td>新定义阅读题</td><td>先翻译定义、举小例子</td></tr><tr><td>&quot;写出所有满足条件的 (i,j)&quot;</td><td>枚举特例</td><td>从小到大枚举 m=1 验证</td></tr><tr><td>&quot;证明当 m≥某值时成立&quot;</td><td>数学归纳/递推构造</td><td>先证最小 m，再证加4项仍可分</td></tr><tr><td>&quot;任取两个，记概率为 Pₘ，证 Pₘ&gt;1/8&quot;</td><td>组合计数+概率</td><td>算总对数 C、满足对数 d，证 d/C&gt;1/8</td></tr><tr><td>定义涉及&quot;删去两项后分组等差&quot;</td><td>结构化分组</td><td>按公差/模4分类构造</td></tr></table></div>
+<h3>解题路径（新定义压轴五步法）</h3>
+<h4>第一步：翻译定义</h4>
+<p>用自己的话重述定义，举 m=1、m=2 的小例子验证理解。</p>
+<h4>第二步：枚举特例（第1问）</h4>
+<p>对最小情形逐一枚举，列出所有满足条件的参数，切忌跳步。</p>
+<h4>第三步：找递推/构造（第2问）</h4>
+<p>观察&quot;m 增加→多4项&quot;，证明新增的连续4项可自成一组，从而由小 m 推大 m。</p>
+<h4>第四步：组合计数（第3问）</h4>
+<p>算&quot;任取两数&quot;的总对数 C(n,2)，分类数出满足&quot;可分数列&quot;的对数 d，化为关于 m 的表达式。</p>
+<h4>第五步：放缩证不等式</h4>
+<p>对 d/C 用 m 的单调性/下界放缩，证 &gt; 目标值（如 1/8）。</p>
+<h3>母题（2024 新课标Ⅰ卷·第19题，17分）</h3>
+<p><strong>题目</strong>：设 m 为正整数，数列 a₁,…,a_{4m+2} 是公差不为0的等差数列。若从中删去两项 aᵢ、aⱼ 后剩余项可分 m 组、每组4个数成等差，则称 (i,j)-可分数列。 (1) 写出所有使数列为 (i,j)-可分数列的 (i,j)； (2) 当 m≥3 时，证明数列是 (2,13)-可分数列； (3) 任取 i&lt;j，记概率为 Pₘ，证明：Pₘ &gt; 1/8。</p>
+<p><strong>解析</strong>： (1) 枚举得 <strong>(i,j) = (1,2)、(1,6)、(5,6)</strong>（删后剩余可4项一组等差）。 (2) m=3 时，a₁..a₁₄ 删去 a₂、a₁₃，分三组：{a₁,a₄,a₇,a₁₀}、{a₃,a₆,a₉,a₁₂}、{a₅,a₈,a₁₁,a₁₄}（公差3d）。 当 m&gt;3，前12项同法分组，之后每连续4项 {a_{4k+3},…,a_{4k+6}} 自成一组，故 m≥3 时恒为 (2,13)-可分数列。 (3) 设满足条件的 (i,j) 对数为 dₘ。由(2)知 m≥3 至少含 (2,13) 一组；总对数为 C(4m+2,2)，组合计数得满足对数随 m 单调增长，可证 <strong>Pₘ = dₘ/C(4m+2,2) &gt; 1/8</strong>（m=1,2 直接验证，m≥3 由构造保下界）。</p>
+<p><strong>关键提炼</strong>：新定义题&quot;先小后大&quot;——第1问枚举探路，第2问找&quot;+4项自成组&quot;的递推结构，第3问转为组合概率计数。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_等差数列与等比数列.html">等差数列与等比数列</a> — 公差、分组等差的底层概念</li>
+<li><span class="kb-deadlink" title="关联内容尚未创建">概率统计大题之分布列与期望</span> — 第3问概率计数的同款思路</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>广东卷新定义题&quot;读得懂就赢一半&quot;：务必先用小例子把定义跑通，再谈证明。</li>
+<li>易错：第1问枚举遗漏 (1,6)/(5,6)；第3问忘算总对数直接放缩。</li>
+<li>提速：先证最小 m 的构造，再用&quot;每+4项增一组&quot;递推到一般 m，避免逐 m 重证。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

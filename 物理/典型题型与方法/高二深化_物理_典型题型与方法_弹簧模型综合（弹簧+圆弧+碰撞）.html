@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【弹簧模型综合】弹簧+圆弧轨道+碰撞的能量动量通法 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="物理">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【弹簧模型综合】弹簧+圆弧轨道+碰撞的能量动量通法</span></li></ol>
+<h1 class="kb-title">【弹簧模型综合】弹簧+圆弧轨道+碰撞的能量动量通法</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东名校模拟</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 广东名校模拟·弹簧—圆弧—碰撞综合（小车-圆弧-弹簧模型）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（弹簧模型近5年广东卷计算题/名校模拟必现，常与圆弧轨道、碰撞、板块拼接）；难度定位：复杂分析（★★★★）；特色：多过程拼接——&quot;圆弧下滑→碰撞→压弹簧&quot;或&quot;弹簧弹射→圆弧→平抛&quot;，情境化包装强；赋分提示：每一过程（机械能守恒/动量守恒/能量守恒）各值方程分，按过程分步拿分，原始分差距赋分后放大。</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;弹簧连接/拴接两物体，求最大弹性势能&quot;</td><td>弹簧类碰撞（类碰撞）</td><td>共速时 $E_{p,max}$，动量+能量守恒</td></tr><tr><td>&quot;光滑 1/4 圆弧轨道，滑块由顶端静止释放&quot;</td><td>圆弧下滑（机械能守恒）</td><td>$mgR=\frac12 mv^2$，过最高点需 $v\ge\sqrt{gR}$</td></tr><tr><td>&quot;与…碰撞并粘在一起 / 完全非弹性碰撞&quot;</td><td>动量守恒（损失动能）</td><td>$(m_1+m_2)v_{共}$ 列式，能量用 $Q$ 或 $E_p$ 吸收</td></tr><tr><td>&quot;弹簧处于原长 / 压缩至最短&quot;</td><td>临界状态</td><td>压缩最短 ↔ 两者共速；原长 ↔ 弹性势能为0</td></tr><tr><td>&quot;光滑水平面 + 小车/木板可动&quot;</td><td>水平方向动量守恒</td><td>系统水平方向不受外力则 $p$ 守恒</td></tr><tr><td>&quot;靠墙静置的小车&quot;</td><td>墙壁约束破动量守恒</td><td>滑块下滑阶段墙支持，仅碰撞/压簧段用动量守恒需谨慎</td></tr></table></div>
+<h3>解题路径（弹簧综合四步法）</h3>
+<h4>第一步：圆弧段——机械能守恒求速度</h4>
+<p>滑块从圆弧顶端（高 $R$）静止释放到水平段： $$mgR=\frac12 mv_0^2 \quad\Rightarrow\quad v_0=\sqrt{2gR}$$</p>
+<blockquote><p>若要求&quot;恰能通过圆弧最高点&quot;：$mg=m\dfrac{v_{顶}^2}{R}\Rightarrow v_{顶}\ge\sqrt{gR}$，再用机械能守恒反推释放高度。</p></blockquote>
+<h4>第二步：碰撞段——动量守恒</h4>
+<p>水平方向无外力时，碰前 $v_0$ 与碰后共同速度 $v_1$：</p>
+<ul>
+<li>完全非弹性（粘在一起）： $mv_0=(m+m')v_1$</li>
+<li>弹性碰撞：同时列动量守恒 + 动能守恒</li>
+</ul>
+<h4>第三步：弹簧段——动量守恒 + 能量守恒</h4>
+<p>弹簧压缩至<strong>最短</strong>（或伸长至最长）时，两物体<strong>共速</strong> $v_2$，此时弹性势能最大： $$p_{初}=(M_{总})v_2,\qquad E_{p,max}=E_{k,碰后}-E_{k,共速}$$</p>
+<h4>第四步：验证守恒条件</h4>
+<ul>
+<li>弹簧弹力<strong>不可突变</strong>，但形变量可渐变；</li>
+<li>系统水平方向动量守恒 $\Leftrightarrow$ 水平方向合外力为零（注意&quot;靠墙&quot;约束会破坏守恒）。</li>
+</ul>
+<h3>母题（广东名校模拟·弹簧—圆弧—碰撞综合，15分）</h3>
+<blockquote><p>真实模拟题（已核实标准答案 $E_{p,max}=0.44\,\mathrm{J}$），小车-圆弧-弹簧典型拼接。</p></blockquote>
+<p><strong>题目</strong>：小车靠着左侧竖直墙壁静置在光滑水平面上，其左端固定一半径为 $R=0.2\,\mathrm{m}$ 的光滑四分之一圆弧轨道，右端有一竖直挡板，通过轻质弹簧拴接一质量 $m_1=100\,\mathrm{g}$ 的小滑块 A。小车、轨道和挡板的总质量 $M=1.1\,\mathrm{kg}$。初始时弹簧处于原长状态。现从圆弧轨道最高点 O 处静止释放一质量 $m_2=400\,\mathrm{g}$ 的小滑块 B，B 通过小车上表面的光滑水平轨道后与 A 发生碰撞并粘在一起。重力加速度 $g=10\,\mathrm{m/s^2}$。求弹簧的最大弹性势能。</p>
+<p><strong>解</strong>： <strong>(1) B 下滑到水平轨道（机械能守恒）</strong> $$m_2 g R=\frac12 m_2 v_0^2 \Rightarrow v_0=\sqrt{2gR}=\sqrt{2\times10\times0.2}=2\,\mathrm{m/s}$$</p>
+<p><strong>(2) B 与 A 完全非弹性碰撞（动量守恒，向右为正）</strong> $$m_2 v_0=(m_2+m_1)v_1 \Rightarrow 0.4\times2=(0.4+0.1)v_1 \Rightarrow v_1=1.6\,\mathrm{m/s}$$</p>
+<p><strong>(3) 压缩弹簧至最短（A、B 与小车共速 $v_2$，水平方向动量守恒）</strong> $$(m_2+m_1)v_1=(M+m_2+m_1)v_2 \Rightarrow 0.5\times1.6=(1.1+0.5)v_2 \Rightarrow v_2=0.5\,\mathrm{m/s}$$</p>
+<p><strong>(4) 能量守恒求最大弹性势能</strong> $$E_{p,max}=\frac12(m_2+m_1)v_1^2-\frac12(M+m_2+m_1)v_2^2$$ $$=\frac12\times0.5\times1.6^2-\frac12\times1.6\times0.5^2=0.64-0.20=0.44\,\mathrm{J}$$</p>
+<blockquote><p>答：弹簧的最大弹性势能为 $0.44\,\mathrm{J}$。</p></blockquote>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高一筑基_物理_核心知识网络_机械能守恒定律.html">高二深化_物理_核心知识网络_机械能守恒定律</a> — 圆弧段机械能守恒、过最高点临界条件</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_动量定理与动量守恒定律.html">高二深化_物理_核心知识网络_动量定理与动量守恒定律</a> — 碰撞与弹簧段的动量守恒条件</li>
+<li><a href="../核心知识网络/高一筑基_物理_核心知识网络_动能定理.html">高二深化_物理_核心知识网络_动能定理</a> — 含摩擦时的功能关系替代法</li>
+<li><a href="高二深化_物理_典型题型与方法_力学三大模型通法.html">高二深化_物理_典型题型与方法_力学三大模型通法</a> — 弹簧模型通法（连接体/类碰撞）</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li><strong>广东卷拼接套路</strong>：本题是&quot;圆弧+碰撞+弹簧&quot;三段拼接的范本。广东卷常把三段任意组合并加情境（如&quot;新能源汽车碰撞测试&quot;&quot;智能缓冲装置&quot;）。</li>
+<li><strong>共速即极值</strong>：弹簧类问题，&quot;两物体速度相等&quot;是压缩/伸长最大、弹性势能最大的充要条件，务必记住。</li>
+<li><strong>动量守恒判据</strong>：小车靠墙时墙有水平支持力，滑块单独下滑阶段系统水平动量不守恒；但 B 与 A 碰后压弹簧过程，墙已无作用（小车自由），可用水平动量守恒。审题要分段。</li>
+<li><strong>等级赋分</strong>：四步各值 3~4 分方程分，按过程写即可稳拿大部分分数。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

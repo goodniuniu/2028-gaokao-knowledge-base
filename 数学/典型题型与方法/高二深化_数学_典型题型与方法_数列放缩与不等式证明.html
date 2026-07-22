@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【卡片标题】数列放缩与不等式证明 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【卡片标题】数列放缩与不等式证明</span></li></ol>
+<h1 class="kb-title">【卡片标题】数列放缩与不等式证明</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2022新课标Ⅰ卷·第17题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（数列解答题常置于第17题，10分，第一问求通项、第二问放缩证明 Σ1/aₙ&lt;C）；广东卷偏爱&quot;累乘法求通项+裂项相消+边界放缩&quot;，是数学稳拿120的必得分题，也是冲击130+的保分底线</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;证明 1/a₁+1/a₂+…+1/aₙ &lt; C（C为整数）&quot;</td><td>放缩证明</td><td>裂项相消后整体放缩</td></tr><tr><td>&quot;{Sₙ/aₙ} 是等差数列&quot; / &quot;{naₙ}等差&quot;</td><td>累乘法求通项</td><td>用 Sₙ-Sₙ₋₁ 构造 aₙ/aₙ₋₁ 比，累乘</td></tr><tr><td>通项为 n(n+1)/2、n² 等二次型</td><td>1/aₙ 可裂项</td><td>1/aₙ = 常数·(1/f(n)-1/f(n+1))</td></tr><tr><td>出现 1/[n(n+1)]、1/[n(n+k)]</td><td>标准裂项</td><td>1/[n(n+k)] = (1/k)(1/n - 1/(n+k))</td></tr><tr><td>要证 Σ &lt; C 但逐项求和发散</td><td>放缩后再裂项</td><td>先放缩通项再求和</td></tr></table></div>
+<h3>解题路径（数列放缩证明四步法）</h3>
+<h4>第一步：求通项</h4>
+<p>由题干递推/和项关系，用累乘法、构造常数列或待定系数求出 aₙ 的显式。广东卷第17题几乎必考&quot;和项关系→累乘法&quot;。</p>
+<h4>第二步：裂项变形</h4>
+<p>将 1/aₙ 写成常数×(1/f(n) - 1/f(n+1)) 的形式。关键是配出&quot;后项减前项&quot;的分母结构。</p>
+<h4>第三步：求和并放缩</h4>
+<p>Σ1/aₙ = 常数×(首项 - 末项)。因末项 &gt;0，故 Σ &lt; 常数×首项 = 目标上界 C。</p>
+<h4>第四步：验证严格不等</h4>
+<p>说明等号无法取到（n 有限时末项 &gt;0），即得严格小于。若问&quot;≤&quot;则补 n→∞ 极限情形。</p>
+<h3>母题（2022 新课标Ⅰ卷·第17题，10分）</h3>
+<p><strong>题目</strong>：记 Sₙ 为数列 {aₙ} 的前 n 项和，已知 a₁=1，{Sₙ/aₙ} 是公差为 1/3 的等差数列。 (1) 求 {aₙ} 的通项公式； (2) 证明：1/a₁ + 1/a₂ + … + 1/aₙ &lt; 2。</p>
+<p><strong>解析</strong>： (1) 由题 Sₙ/aₙ = 1 + (n-1)·(1/3) = (n+2)/3，故 Sₙ = (n+2)aₙ/3。 当 n≥2 时 Sₙ₋₁ = (n+1)aₙ₋₁/3，两式相减得 aₙ = (n+2)aₙ/3 - (n+1)aₙ₋₁/3， 整理：(n-1)aₙ = (n+1)aₙ₋₁，即 aₙ/aₙ₋₁ = (n+1)/(n-1)。 累乘：aₙ/a₁ = [(n+1)/(n-1)]·[n/(n-2)]·…·(3/1) = n(n+1)/2，又 a₁=1，故 <strong>aₙ = n(n+1)/2</strong>（首项也满足）。 (2) 1/aₙ = 2/[n(n+1)] = 2(1/n - 1/(n+1))， Σ₁ⁿ 1/aₖ = 2[(1-1/2)+(1/2-1/3)+…+(1/n-1/(n+1))] = 2(1 - 1/(n+1)) &lt; 2。证毕。</p>
+<p><strong>关键提炼</strong>：和项关系→累乘法求通项是广东卷数列第一问的固定套路；第二问&quot;裂项相消+末项正数放缩&quot;是放缩证明题的标准模板。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_等差数列与等比数列.html">等差数列与等比数列</a> — 累乘法、裂项相消的底层工具</li>
+<li><span class="kb-deadlink" title="关联内容尚未创建">解析几何大题之弦长与面积最值</span> — 同为&quot;放缩求界&quot;思想，跨板块印证</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>广东卷数列放缩常考「分母二次型通项」，裂项后必剩一项正数，故严格 &lt; 上界。</li>
+<li>易错：累乘时漏掉 a₁ 验证首项；裂项系数配错（2/[n(n+1)] 的 2 易丢）。</li>
+<li>提速：直接背熟 Σ1/[k(k+1)] = 1 - 1/(n+1)。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

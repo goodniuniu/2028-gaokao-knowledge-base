@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【卡片标题】导数大题之隐零点问题 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【卡片标题】导数大题之隐零点问题</span></li></ol>
+<h1 class="kb-title">【卡片标题】导数大题之隐零点问题</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2020新高考Ⅰ卷(山东)·第21题（隐零点视角）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：中高频（导数压轴恒成立/不等式证明常需隐零点）；导函数零点无法显式解出时必用&quot;设而不求、代入消参&quot;</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;f(x)≥1 恒成立，求a范围&quot;且 f&#x27;(x)=0 无显式解</td><td>隐零点</td><td>设 x₀ 使 f&#x27;(x₀)=0，代回 f(x₀) 消参</td></tr><tr><td>导函数含 e^x 与 1/x 混合，无法解x</td><td>隐零点</td><td>由 f&#x27;(x₀)=0 得 e^{x₀}=1/x₀ 类关系</td></tr><tr><td>求最小值但极值点非特殊值</td><td>隐零点</td><td>用 x₀ 表示最值，再证不等式</td></tr><tr><td>同构不易构造时</td><td>隐零点替代</td><td>设零点+单调性证唯一</td></tr></table></div>
+<h3>解题路径（隐零点四步法）</h3>
+<h4>第一步：求导判单调性</h4>
+<p>求 f&#x27;(x)，证 f&#x27;(x) 单调（如 f&#x27;&#x27;(x)&gt;0），故 f&#x27;(x)=0 有唯一零点 x₀。</p>
+<h4>第二步：设零点列方程</h4>
+<p>设 f&#x27;(x₀)=0，得到关于 x₀ 与参数的关系（如 ae^{x₀-1}=1/x₀）。</p>
+<h4>第三步：代回消参</h4>
+<p>将参数用 x₀ 表示，代入 f(x₀) 得仅含 x₀ 的表达式。</p>
+<h4>第四步：求最值证不等式</h4>
+<p>对 f(x₀) 用基本不等式/单调性求得最小值，回推参数范围。</p>
+<h3>母题（2020 新高考Ⅰ卷(山东)·第21题，12分）</h3>
+<p><strong>题目</strong>：已知函数 f(x)=ae^{x-1} - lnx + lna。(1) 当 a=e 时，求曲线在点(1,f(1))处切线与坐标轴围成三角形面积；(2) 若 f(x)≥1，求a的取值范围。</p>
+<p><strong>解析（隐零点视角）</strong>： (2) f&#x27;(x)=ae^{x-1} - 1/x，显然 a&gt;0 时 f&#x27;(x) 在(0,+∞)单调递增（f&#x27;&#x27;(x)=ae^{x-1}+1/x²&gt;0），故存在唯一 x₀ 使 f&#x27;(x₀)=0，即 <strong>ae^{x₀-1}=1/x₀</strong>，取对数得 ln a + x₀ - 1 = -ln x₀。 f(x) 在(0,x₀)减、(x₀,+∞)增，最小值 f(x₀)=ae^{x₀-1} - lnx₀ + ln a。 代入 ae^{x₀-1}=1/x₀ 与 ln a = -ln x₀ - x₀ + 1，得 f(x₀) = 1/x₀ + (-ln x₀ - x₀ + 1) + ln a ... 整理得 f(x₀) = 1/x₀ + x₀ - 1 ≥ 2√(1/x₀·x₀) - 1 = 1， 当且仅当 x₀=1 即 a=1 时取等。故 f(x)≥1 恒成立 ⇔ a≥1。</p>
+<p><strong>关键提炼</strong>：隐零点核心是&quot;设 x₀ 满足 f&#x27;(x₀)=0 → 建立参数与 x₀ 关系 → 代回最小值表达式消参&quot;。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数的运算与应用.html">导数的运算与应用</a> — 含参讨论框架</li>
+<li><a href="高二深化_数学_典型题型与方法_导数大题之双变量与同构问题.html">导数大题之双变量与同构问题</a> — 同题的同构视角</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>同一道 2020 山东卷题既有&quot;隐零点法&quot;也有&quot;同构法&quot;，两卡互补，建议对比掌握。</li>
+<li>易错：漏证 f&#x27;(x) 单调（保障唯一零点）；代回时符号出错。</li>
+<li>提速：记住 ae^{x-1}=1/x₀ ⇒ ln a = 1 - x₀ - ln x₀ 的代换链。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

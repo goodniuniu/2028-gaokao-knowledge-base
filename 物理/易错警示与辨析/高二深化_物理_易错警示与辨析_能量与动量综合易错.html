@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【能量与动量综合易错】守恒条件·碰撞类型·多过程衔接 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="物理">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">易错警示与辨析</a></li><li><span aria-current="page">【能量与动量综合易错】守恒条件·碰撞类型·多过程衔接</span></li></ol>
+<h1 class="kb-title">【能量与动量综合易错】守恒条件·碰撞类型·多过程衔接</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 广东卷能量与动量综合高频错点梳理</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频且压轴（动量、能量综合是广东卷计算题常驻，2021第15题、2022第14题、2024广州一模第15题均含碰撞/板块动量能量综合）；难度定位：难（★★★★）；特色：广东卷重&quot;多过程分段&quot;——先判守恒段、再衔接能量段，碰撞类型判定是得分关键；赋分提示：动量守恒方向/系统判错、碰撞类型选错会整题崩盘，须形成&quot;先判守恒、再定类型、后算能量&quot;的固定解题顺序。</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>易错点总览表</h3>
+<div class="table-wrap"><table><tr><th>易错点</th><th>常见错解</th><th>正确认知</th></tr><tr><td><strong>动量守恒条件</strong></td><td>以为&quot;有外力就不守恒&quot;</td><td>系统<strong>合外力为 0</strong> 才守恒；某方向合外力为 0 则<strong>该方向</strong>守恒</td></tr><tr><td><strong>动量 vs 机械能守恒</strong></td><td>两守恒混为一谈</td><td>动量守恒看外力、与参考系无关；机械能守恒看<strong>只有重力/弹力做功</strong></td></tr><tr><td><strong>碰撞类型判定</strong></td><td>见碰就当弹性</td><td>弹性（动量和动能均守）、非弹性、完全非弹性（<strong>共速</strong>，动能损失最大）</td></tr><tr><td><strong>动量定理方向</strong></td><td>标量代换、丢方向</td><td>$I=\Delta p$ 是<strong>矢量</strong>，先建坐标正方向</td></tr><tr><td><strong>反冲/爆炸</strong></td><td>忽略内力远大于外力</td><td>内力≫外力时近似<strong>动量守恒</strong>（如爆竹、火箭）</td></tr><tr><td><strong>人船模型</strong></td><td>误用单物体动量</td><td>初动量为 0 则末动量也为 0：$m_1v_1=m_2v_2$（方向相反）</td></tr><tr><td><strong>能量损失计算</strong></td><td>与动量守恒混淆</td><td>损失的动能 $\Delta E_k=E_{k初}-E_{k末}$，完全非弹性时最大</td></tr></table></div>
+<h3>易错点 1：动量守恒的&quot;系统&quot;与&quot;方向&quot;</h3>
+<ul>
+<li>守恒条件：<strong>系统所受合外力为零</strong>。注意是&quot;系统&quot;不是&quot;单物体&quot;。</li>
+<li>若合外力不为零但<strong>某一方向</strong>合外力为零，则<strong>该方向</strong>动量分量守恒（如爆炸瞬间水平方向、斜面光滑时水平方向）。</li>
+<li>易错：把&quot;地面摩擦&quot;等外力一律视为破坏守恒——若题目明确&quot;光滑&quot;&quot;碰撞时间极短（外力冲量可忽略）&quot;，则近似守恒。</li>
+</ul>
+<h3>易错点 2：三类碰撞的能量命运</h3>
+<div class="table-wrap"><table><tr><th>碰撞类型</th><th>动量</th><th>动能</th><th>末态特征</th></tr><tr><td><strong>弹性碰撞</strong></td><td>守恒</td><td>守恒</td><td>可解出 $v_1',v_2'$ 公式</td></tr><tr><td><strong>非弹性碰撞</strong></td><td>守恒</td><td>有损失</td><td>—</td></tr><tr><td><strong>完全非弹性碰撞</strong></td><td>守恒</td><td>损失<strong>最大</strong></td><td>两物体<strong>共速</strong> $v_1'=v_2'$</td></tr></table></div>
+<blockquote><p>一维弹性碰撞结论（质量 $m_1,m_2$，初速 $v_1,v_2$）：<br>$$v_1'=\frac{m_1-m_2}{m_1+m_2}v_1+\frac{2m_2}{m_1+m_2}v_2,\quad v_2'=\frac{2m_1}{m_1+m_2}v_1+\frac{m_2-m_1}{m_1+m_2}v_2$$<br>特例：$m_1=m_2$ 弹性碰撞 → <strong>速度交换</strong>。</p></blockquote>
+<h3>易错点 3：多过程&quot;分段&quot;衔接</h3>
+<p>综合题（板块、弹簧、圆弧+碰撞）标准顺序：</p>
+<ol>
+<li><strong>判段</strong>：哪一段动量守恒？（看合外力/方向）</li>
+<li><strong>定类型</strong>：碰撞属哪类？是否共速？</li>
+<li><strong>算能量</strong>：哪一段机械能守恒/有损失？用动能定理或能量守恒补刀。</li>
+<li><strong>衔接</strong>：上一段末态 = 下一段初态。</li>
+</ol>
+<blockquote><p>关键：动量守恒与机械能守恒<strong>不是同时自动成立</strong>——弹性碰撞才两者皆守；非弹性只守动量。</p></blockquote>
+<h3>经典易错例（碰撞 + 能量）</h3>
+<p><strong>题</strong>：质量 $m$ 的子弹以速度 $v_0$ 水平射入静止于光滑水平面的木块（质量 $M$），子弹留在木块中（完全非弹性）。求系统损失的机械能。</p>
+<p><strong>错解</strong>：直接用弹性碰撞公式，或认为动能守恒。 <strong>正解</strong>：</p>
+<ul>
+<li>水平面光滑 → 系统动量守恒：$mv_0=(m+M)v$，得共同速度 $v=\dfrac{m}{m+M}v_0$。</li>
+<li>初动能：$E_{k0}=\dfrac12 mv_0^2$。</li>
+<li>末动能：$E_k=\dfrac12(m+M)v^2=\dfrac12(m+M)\left(\dfrac{m}{m+M}\right)^2v_0^2=\dfrac{m^2}{2(m+M)}v_0^2$。</li>
+<li>损失：$\Delta E_k=E_{k0}-E_k=\dfrac12 mv_0^2\left(1-\dfrac{m}{m+M}\right)=\boxed{\dfrac{M}{2(m+M)}mv_0^2}$。</li>
+<li>说明：完全非弹性碰撞动能损失最大，且全部转化为内能（子弹与木块摩擦生热）。</li>
+</ul>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_动量定理与动量守恒定律.html">高二深化_物理_核心知识网络_动量定理与动量守恒定律</a> — 守恒条件、碰撞类型、人船模型</li>
+<li><a href="../核心知识网络/高一筑基_物理_核心知识网络_动能定理.html">高二深化_物理_核心知识网络_动能定理</a> — 动能定理与能量损失计算</li>
+<li><a href="../核心知识网络/高一筑基_物理_核心知识网络_机械能守恒定律.html">高二深化_物理_核心知识网络_机械能守恒定律</a> — 守恒条件、与动量守恒对比</li>
+<li><a href="../典型题型与方法/高二深化_物理_典型题型与方法_滑块木板模型综合.html">高二深化_物理_典型题型与方法_滑块木板模型综合</a> — 板块多过程动量能量综合</li>
+<li><a href="../典型题型与方法/高二深化_物理_典型题型与方法_弹簧模型综合（弹簧+圆弧+碰撞）.html">高二深化_物理_典型题型与方法_弹簧模型综合（弹簧+圆弧+碰撞）</a> — 弹簧 + 碰撞能量综合</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li><strong>广东卷命题落点</strong>：能量与动量综合几乎必以计算题出现，且常&quot;嵌套&quot;板块/弹簧/圆弧（见典型题型卡片）。解题顺序固定为&quot;先判守恒段→定碰撞类型→算能量损失&quot;。</li>
+<li><strong>避错口诀</strong>：守恒先看系统合外力；碰撞先分型（弹/非弹/完全非弹）；完全非弹性必共速、动能损最大；动量定理带方向。</li>
+<li><strong>等级赋分</strong>：该类题是拉开 650 分档的关键压轴，单处守恒条件判错即连锁崩盘；建议把&quot;分段衔接&quot;写成显性步骤，避免跳步。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回易错警示与辨析</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

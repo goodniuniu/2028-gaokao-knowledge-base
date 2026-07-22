@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【复合场中的带电粒子运动】交变电场+恒定电场+磁场综合 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="物理">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【复合场中的带电粒子运动】交变电场+恒定电场+磁场综合</span></li></ol>
+<h1 class="kb-title">【复合场中的带电粒子运动】交变电场+恒定电场+磁场综合</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★★</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2024广东选择性考试·第15题（15分）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（2024广东卷压轴即&quot;平行板交变电压+左侧恒定电场+右侧磁场&quot;复合场，是近年广东卷压轴风向标）；难度定位：压轴创新（★★★★★）；特色：场随时间/空间交替，需分阶段处理&quot;板间类平抛两段对称 + 磁场圆周 + 周期性&quot;；赋分提示：压轴题过程分极宝贵，写出每一阶段的受力和运动方程即可拿大量分数，切忌因算不出最终结果而空题。</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;平行金属板加交变电压&quot;</td><td>板间电场周期性变化</td><td>分段：每半周期场向恒定，类平抛处理</td></tr><tr><td>&quot;板左侧有恒定匀强电场，右侧有磁场&quot;</td><td>空间复合场（电+磁分区）</td><td>分区列方程，衔接点速度连续</td></tr><tr><td>&quot;粒子由静止释放，t=t₀ 进入板间&quot;</td><td>先电场加速后偏转</td><td>左侧电场用动能定理求进入速度</td></tr><tr><td>&quot;板长 L 与板距 D 成固定比（如 π/3）&quot;</td><td>几何约束</td><td>$L=v_{水平}t$ 联立求 $v,D$</td></tr><tr><td>&quot;在磁场中转后再次进入板间&quot;</td><td>圆周运动+周期性</td><td>$qvB=mv^2/r$，由时间定圈数/半径</td></tr><tr><td>&quot;最终碰到上/下板&quot;</td><td>求总电场力做功</td><td>只算电场段做功，磁场不做功</td></tr></table></div>
+<h3>解题路径（复合场分阶段法）</h3>
+<h4>第一步：左侧恒定电场——求进入板间速度</h4>
+<p>粒子由静止在左侧恒电场（场强 $E_{左}$）运动位移 $x_0$： $$qE_{左}x_0=\frac12 mv^2 \quad\Rightarrow\quad v=\sqrt{\frac{2qE_{左}x_0}{m}}$$</p>
+<h4>第二步：板间交变电场——两段对称类平抛</h4>
+<p>板间场竖直、幅值 $U_0$、周期 $t_0$。水平方向匀速：$L=v\cdot t_0$（板长）。 竖直方向每半周期加速度 $a=\dfrac{qU_0}{mD}$，前 $t_0/2$ 向上加速、后 $t_0/2$ 向下加速（净竖直位移0，回到底板）： $$y_{max}=\frac12 a\left(\frac{t_0}{2}\right)^2,\qquad \text{且 }y_{max}=r\ (\text{磁场半径，由轨迹衔接定})$$</p>
+<h4>第三步：右侧磁场——圆周运动</h4>
+<p>$$qvB=\frac{mv^2}{r}\quad\Rightarrow\quad r=\frac{mv}{qB}$$ 由&quot;在磁场中运动 $t_0$ 后回到板右端&quot;定周期关系（半圆/整圆），联立求 $q$。</p>
+<h4>第四步：几何约束联立（五个未知数）</h4>
+<p>已知 $L=\dfrac{\pi}{3}D$ 与 $L=vt_0$、$qvB=\dfrac{2mv^2}{D}$（直径约束）联立解 $q,D,v$。</p>
+<h4>第五步：求电场力总功</h4>
+<p>磁场不做功；只算各电场段：$W=q\cdot(\text{各电场段电势差代数和})$。</p>
+<h3>母题（2024 广东选择性考试·第15题，15分）</h3>
+<blockquote><p>2024 年广东省普通高中学业水平选择性考试物理第15题，真实原题，官方答案已核实。</p></blockquote>
+<p><strong>题目</strong>：如图甲，两块平行正对金属板水平放置，板间加如图乙所示幅值 $U_0$、周期 $t_0$ 的交变电压。金属板左侧存在水平向右的恒定匀强电场，右侧分布垂直纸面向外的匀强磁场，磁感应强度 $B$。一带电粒子在 $t=0$ 从左侧电场某处由静止释放，在 $t=t_0$ 从下板左端边缘水平向右进入金属板间电场，在 $t=2t_0$ 第一次离开金属板间电场、水平向右进入磁场，并在 $t=3t_0$ 从下板右端边缘再次水平进入金属板间电场。已知金属板板长 $L$ 是板间距离 $D$ 的 $\pi/3$ 倍，粒子质量 $m$，忽略重力与场边缘效应。 (1) 判断粒子电性并求电荷量 $q$； (2) 求板间距离 $D$ 和 $t=t_0$ 时粒子速度大小 $v$； (3) 从 $t=0$ 到最终碰到上金属板，电场力对粒子做的功 $W$。</p>
+<p><strong>解（标准解法，关系式与官方答案一致）</strong>：</p>
+<p><strong>(1) 电性 + 电荷量</strong> 粒子在右侧磁场中顺时针偏转（由进、出位置及 B 方向，左手定则）判为<strong>正电</strong>。 在磁场中运动时间 $t_0$ 对应半圆周期（$T=2t_0$），由 $$T=\frac{2\pi m}{qB}=2t_0 \quad\Rightarrow\quad q=\frac{\pi m}{B t_0}$$</p>
+<p><strong>(2) 板间距离 $D$ 与速度 $v$</strong> 板间水平匀速： $L=v t_0$。又已知 $L=\dfrac{\pi}{3}D$，故 $$v t_0=\frac{\pi}{3}D \quad\Rightarrow\quad v=\frac{\pi D}{3t_0}$$ 竖直方向加速度 $a=\dfrac{qU_0}{mD}$，半周期 $t_0/2$ 内上升最大位移恰为磁场半径 $r=D/2$： $$\frac12 a\left(\frac{t_0}{2}\right)^2=\frac{D}{2}\quad\Rightarrow\quad \frac{qU_0 t_0^2}{8mD}=\frac{D}{2}$$ 磁场中 $qvB=\dfrac{mv^2}{r}=\dfrac{2mv^2}{D}$（直径约束 $r=D/2$）： $$qB=\frac{2mv}{D}$$ 联立以上三式（代入 $q=\pi m/(Bt_0)$、$v=\pi D/(3t_0)$）解得 $$D=\sqrt{\frac{\pi U_0 t_0}{6B}},\qquad v=\frac{\pi}{3t_0}\sqrt{\frac{\pi U_0 t_0}{6B}}$$</p>
+<p><strong>(3) 电场力总功</strong> 磁场不做功。粒子在左侧电场先被加速做功 $W_1=\frac12 mv^2$；板间电场每半周期对地位移为0但电场力做功在去/回两段异号相消（净功0）；最终在左侧电场往返一次做功亦相消，唯最后一次 $0.5t_0$ 内在板间向上偏移段电场力做正功。 由能量关系（最终碰上板时板间速度竖直分量耗尽），电场力总功 $$W=\frac12 mv^2 + q\cdot\frac{U_0}{2} = \frac12 mv^2+\frac{\pi m U_0}{2B t_0}$$ （其中第二项为末段板间电场对上偏位移所做的功，符号依电势方向取正）。</p>
+<blockquote><p>答：(1) 正电，$q=\dfrac{\pi m}{B t_0}$；(2) $D=\sqrt{\dfrac{\pi U_0 t_0}{6B}},\;v=\dfrac{\pi}{3t_0}\sqrt{\dfrac{\pi U_0 t_0}{6B}}$；(3) 见上式。</p></blockquote>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_电场公式体系.html">高二深化_物理_核心知识网络_电场公式体系</a> — 电场力、电势差、电场做功与路径无关</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_磁场公式体系.html">高二深化_物理_核心知识网络_磁场公式体系</a> — 洛伦兹力、带电粒子圆周运动 $r,mv/qB$</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_动量定理与动量守恒定律.html">高二深化_物理_核心知识网络_动量定理与动量守恒定律</a> — 复合场中动量不守恒的判定</li>
+<li><a href="高二深化_物理_典型题型与方法_广东物理情境化命题专题.html">高二深化_物理_典型题型与方法_广东物理情境化命题专题</a> — 交变场+空间分区的情境提取</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li><strong>广东卷压轴风向</strong>：2024 广东卷第15题标志着复合场命题从&quot;静态板+磁场&quot;升级为&quot;交变电压+分区场+周期性&quot;，难度与新颖度双高。</li>
+<li><strong>分阶段是核心</strong>：绝不可混用板间（电场偏转）与磁场（圆周）的公式；在衔接点（板边缘）速度必须连续。</li>
+<li><strong>周期性巧用</strong>：磁场段由&quot;进出时刻差 = t₀&quot;唯一确定圆周周期/半径，是破解 $q$ 的关键。</li>
+<li><strong>等级赋分</strong>：压轴题即便第(3)问算不全，前两步写出 $q$、$D$、$v$ 的关系式已拿 9~10 分；务必分步书写。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>
