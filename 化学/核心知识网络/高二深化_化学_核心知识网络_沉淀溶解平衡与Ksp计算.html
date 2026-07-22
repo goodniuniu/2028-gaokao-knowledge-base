@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沉淀溶解平衡与Ksp计算 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="化学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">化学</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">沉淀溶解平衡与Ksp计算</span></li></ol>
+<h1 class="kb-title">沉淀溶解平衡与Ksp计算</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：人教版选择性必修第一册 第三章 + 广东选择性考试工艺流程（2021·广东T18）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频(近5年广东卷每年必考，常与工艺流程、废水处理结合)·中档~压轴·分步沉淀与Ksp共存条件计算·真题锚定：2021广东选择性考试T18（沉钼中BaMoO₄与BaCO₃竞争沉淀）</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>一、知识网络</h3>
+<pre><code>沉淀溶解平衡：AₘBₙ(s) ⇌ mAⁿ⁺(aq) + nBᵐ⁻(aq)
+        │
+        ├─ 溶度积 Ksp = cᵐ(Aⁿ⁺)·cⁿ(Bᵐ⁻)  （只与温度有关）
+        ├─ 离子积 Q = cᵐ(Aⁿ⁺)·cⁿ(Bᵐ⁻)（任意时刻）
+        │     Q &gt; Ksp → 沉淀生成
+        │     Q = Ksp → 饱和共存
+        │     Q &lt; Ksp → 沉淀溶解
+        ├─ 沉淀生成/溶解/转化
+        └─ 分步沉淀：Ksp小的先沉淀（但需结合离子浓度）
+</code></pre>
+<h3>二、核心公式/结论</h3>
+<pre><code>1. 溶度积与溶解度（AB型，如AgCl）：Ksp=s²，s=√Ksp
+2. 分步沉淀：当多种离子可沉淀时，先满足 Q&gt;Ksp 者先沉淀
+3. 沉淀完全：一般认为 c(离子)&lt;1×10⁻⁵ mol/L 时沉淀完全
+4. 沉淀转化：AgCl(s)+I⁻⇌AgI(s)+Cl⁻，K=Ksp(AgCl)/Ksp(AgI)&gt;&gt;1
+5. 竞争沉淀临界：两沉淀刚共存时，c(Ba²⁺)=Ksp(沉淀1)/c(离子1)=Ksp(沉淀2)/c(离子2)
+</code></pre>
+<h3>三、易混点</h3>
+<div class="table-wrap"><table><tr><th>易混点</th><th>澄清</th></tr><tr><td>Ksp越小越易沉淀？</td><td>不一定！需结合离子浓度，浓度差异大时Ksp大的也可能先沉淀</td></tr><tr><td>同离子效应 vs 盐效应</td><td>加相同离子→溶解度降(同离子效应)；加无关盐→微弱升(盐效应)</td></tr><tr><td>沉淀完全=Ksp=0？</td><td>错，沉淀完全指浓度&lt;10⁻⁵ mol/L，平衡仍存在</td></tr><tr><td>温度变化Ksp</td><td>溶解吸热则升温Ksp增大，需具体看过程</td></tr></table></div>
+<h3>四、Ksp计算标准步骤</h3>
+<pre><code>Step 1：写出沉淀溶解平衡式与Ksp表达式（注意系数幂次）
+Step 2：由已知Ksp与某离子浓度，求另一离子平衡浓度
+Step 3：竞争沉淀时，先求&quot;共存临界&quot;的c(共同离子)
+Step 4：结合Ka/Kw等求相关型体浓度比，列出算式
+Step 5：代温度条件（25℃常用），检查单位与数量级
+</code></pre>
+<h3>五、真题母题（2021 广东选择性考试·第18题，节选）</h3>
+<blockquote><p>广东卷&quot;废催化剂回收&quot;流程中，沉钼步骤考查BaMoO₄与BaCO₃的竞争沉淀临界计算。</p></blockquote>
+<p><strong>已知</strong>：25℃时 Ksp(BaMoO₄)=3.5×10⁻⁸，Ksp(BaCO₃)=2.6×10⁻⁹；H₂CO₃的 Ka₂=4.7×10⁻¹¹；pH&gt;6.0时Mo以MoO₄²⁻存在。</p>
+<p>(3)&quot;沉钼&quot;中pH=7.0。②若条件控制不当，BaCO₃也会沉淀。为避免BaMoO₄中混入BaCO₃沉淀，溶液中 c(HCO₃⁻):c(MoO₄²⁻)= ______（列出算式）时，应停止加入BaCl₂溶液。</p>
+<p><strong>解</strong>：</p>
+<ul>
+<li>刚析出BaMoO₄：c(Ba²⁺)=Ksp(BaMoO₄)/c(MoO₄²⁻)</li>
+<li>不析出BaCO₃需 c(Ba²⁺)·c(CO₃²⁻) ≤ Ksp(BaCO₃)</li>
+<p>→ c(CO₃²⁻) ≤ Ksp(BaCO₃)·c(MoO₄²⁻)/Ksp(BaMoO₄)</p>
+<li>由 Ka₂=c(CO₃²⁻)·c(H⁺)/c(HCO₃⁻)，pH=7.0即 c(H⁺)=10⁻⁷</li>
+<p>→ c(HCO₃⁻)/c(MoO₄²⁻) ≤ Ksp(BaCO₃)·c(H⁺)/[Ksp(BaMoO₄)·Ka₂]</p>
+</ul>
+<p><strong>答</strong>：$\dfrac{2.6\times10^{-9}\times10^{-7}}{3.5\times10^{-8}\times4.7\times10^{-11}}$ （与官方答案一致）</p>
+<blockquote><p>💡 关键技巧：竞争沉淀题核心是&quot;两沉淀刚共存&quot;——用共同离子(Ba²⁺)搭桥，把两个不等式连成等式，再借Ka₂换算HCO₃⁻/MoO₄²⁻之比。</p></blockquote>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../典型题型与方法/高二深化_化学_典型题型与方法_广东化学工艺流程题通用框架.html">广东化学工艺流程题通用框架</a> — 流程中pH调控与分步沉淀</li>
+<li><a href="高二深化_化学_核心知识网络_水溶液中的离子平衡.html">水溶液中的离子平衡</a> — 三大守恒、多重平衡联立</li>
+<li><a href="../典型题型与方法/高二深化_化学_典型题型与方法_广东工艺流程题通用框架.md">广东工艺流程题通用框架</a> — 工艺题中沉淀分离环节</li>
+<li><a href="高二深化_化学_核心知识网络_化学反应速率与化学平衡.html">化学反应速率与化学平衡</a> — 沉淀溶解平衡属化学平衡，适用勒夏特列原理</li>
+</ul>
+<hr>
+<ul>
+<li><a href="../典型题型与方法/高二深化_化学_典型题型与方法_离子方程式正误判断.md">离子方程式正误判断</a></li>
+</ul>
+<h2>备注</h2>
+<ul>
+<li>广东卷Ksp计算多嵌在工艺流程题(第18题)中，与&quot;调pH分步沉淀&quot;紧密结合。</li>
+<li>易错：① 忽略离子浓度系数幂次(如Fe(OH)₃的Ksp=[Fe³⁺][OH⁻]³)；② 误以为Ksp小就一定先沉淀；③ 忘记沉淀完全判据&lt;10⁻⁵ mol/L。</li>
+<li>等级赋分提示：Ksp计算是&quot;拉分区&quot;，掌握竞争沉淀临界列式可从B冲A。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回核心知识网络</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

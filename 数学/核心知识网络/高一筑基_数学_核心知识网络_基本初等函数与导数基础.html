@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>基本初等函数与导数基础 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">基本初等函数与导数基础</span></li></ol>
+<h1 class="kb-title">基本初等函数与导数基础</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★☆☆</span><span class="kb-badge kb-badge--tag">#高一筑基</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：人教A版必修第一册+选择性必修二 / 2024新课标Ⅰ卷第6、13题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：考查频率：高频（函数性质+导数基础年年考）· 基础 · 幂/指/对/三角四大基本函数 + 求导公式 + 切线几何意义是导数大题的&quot;地基&quot; · 真题锚定：2024新高考Ⅰ卷T6（分段单调）、T13（公切线）</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：基本初等函数是&quot;原材料&quot;，导数是&quot;加工工具&quot;。先认清每个基本函数的图与性，再掌握求导四则，才能应对压轴。</p></blockquote>
+<hr>
+<h3>一、知识网络</h3>
+<pre><code>基本初等函数
+ ├─ 幂函数 y=x^a（过(1,1)，a符号定象限增减）
+ ├─ 指数 y=a^x (a&gt;0,a≠1) — 过(0,1)，a&gt;1增
+ ├─ 对数 y=log_a x — 过(1,0)，与指数互逆
+ ├─ 三角 y=sin/cos/tan — 周期、有界
+ └─ 导数基础
+      ├─ 求导公式：(x^n)&#x27;=nx^{n-1}, (e^x)&#x27;=e^x, (lnx)&#x27;=1/x
+      ├─ 四则：(uv)&#x27;=u&#x27;v+uv&#x27;, (u/v)&#x27;=(u&#x27;v-uv&#x27;)/v²
+      ├─ 复合：链式法则
+      └─ 几何意义：f&#x27;(x0)=切线斜率；切线 y-f(x0)=f&#x27;(x0)(x-x0)
+</code></pre>
+<h3>二、核心公式/结论</h3>
+<div class="table-wrap"><table><tr><th>公式</th><th>内容</th><th>注意</th></tr><tr><td>求导公式</td><td>$(e^x)'=e^x,\ (\ln x)'=\frac1x,\ (x^n)'=nx^{n-1}$</td><td>常背常新</td></tr><tr><td>公切线</td><td>两曲线共点共斜率：$f'(x_0)=g'(x_1)$ 且切线方程同</td><td>切点可不同</td></tr><tr><td>分段单调</td><td>全 R 单调 ⇒ 各段单调且<strong>衔接处不降/不增</strong></td><td>端点值比较不可省</td></tr><tr><td>对数恒等式</td><td>$a^{\log_a x}=x,\ \log_a a^x=x$</td><td>与指数互逆</td></tr></table></div>
+<h3>三、易混点</h3>
+<div class="table-wrap"><table><tr><th>易混点</th><th>正解</th><th>错法</th></tr><tr><td>分段函数在分界点单调</td><td>需左段末值 ≤ 右段初值（递增）</td><td>只看各段导数&gt;0</td></tr><tr><td>公切线切点</td><td>两曲线切点<strong>可不同</strong></td><td>误设同一点</td></tr><tr><td>$(a^x)'$</td><td>$a^x\ln a$</td><td>误为 $xa^{x-1}$</td></tr><tr><td>$\ln(x+1)$ 定义域</td><td>$x>-1$</td><td>忽略对数定义域</td></tr></table></div>
+<hr>
+<h3>真题母题（2024 新课标Ⅰ卷·第13题，5分）</h3>
+<p><strong>题目</strong>：若曲线 $y=e^x+x$ 在点 $(0,1)$ 处的切线也是曲线 $y=\ln(x+1)+a$ 的切线，则 $a=$___。</p>
+<p><strong>解析</strong>： $y=e^x+x$ 在 $(0,1)$：$y'=e^x+1$，斜率 $k=2$，切线 $y=2x+1$。 对 $y=\ln(x+1)+a$，设切点 $(t,\ln(t+1)+a)$，斜率 $y'|_{t}=\frac1{t+1}=2\Rightarrow t+1=\frac12\Rightarrow t=-\frac12$。 切点纵坐标 $\ln\frac12+a=-\ln2+a$，须满足切线：$2(-\frac12)+1=0=-\ln2+a\Rightarrow a=\ln2$。 <strong>答案：$\ln2$</strong>。</p>
+<p><strong>关键提炼</strong>：公切线题是&quot;求导+点斜式&quot;的标准调用；T6分段单调则考&quot;衔接处不降&quot;，均属导数基础。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../典型题型与方法/高一筑基_数学_典型题型与方法_新高考Ⅰ卷多选题策略.html">高一筑基_数学_典型题型与方法_新高考Ⅰ卷多选题策略</a> — 选填策略（前置）</li>
+<li><a href="高一筑基_数学_核心知识网络_幂函数与指数函数.html">高一筑基_数学_核心知识网络_幂函数与指数函数</a> — 幂/指函数性质</li>
+<li><a href="高一筑基_数学_核心知识网络_对数函数.html">高一筑基_数学_核心知识网络_对数函数</a> — 对数函数性质</li>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系.md">高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系</a> — 导数进阶</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>基本初等函数与导数基础是广东卷&quot;送分主线&quot;：T6、T13等选填年年出现，且是导数大题的必经之路。</li>
+<li>训练建议：求导公式默写过关；公切线、分段单调各做10题，重点练&quot;衔接条件&quot;。</li>
+</ul>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度3</code> <code>#基本初等函数</code> <code>#导数基础</code> <code>#公切线</code> <code>#分段单调</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回核心知识网络</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

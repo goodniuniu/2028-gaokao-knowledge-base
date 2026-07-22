@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>导数零点问题分类讨论框架 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">导数零点问题分类讨论框架</span></li></ol>
+<h1 class="kb-title">导数零点问题分类讨论框架</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东 / #新高考Ⅰ卷·江苏</span><span class="kb-badge kb-badge--src">来源：2024年新课标Ⅰ卷第18题(3) / 2020-2024新高考Ⅰ卷导数零点类真题归纳</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（导数压轴核心子问题）· 中档偏难 · &quot;讨论零点个数/符号区间&quot;需按导数零点与参数分类 · 真题锚定：2024新高考Ⅰ卷T18(3)（f(x)&gt;-2当且仅当1&lt;x&lt;2，求b）</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：导数零点问题 = 分析&quot;导函数符号如何随参数变化&quot;，进而确定原函数单调性、极值、零点/符号区间。核心口诀：<strong>先找导函数零点，再按零点位置分类</strong>。</p></blockquote>
+<hr>
+<h3>题型识别标志</h3>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;讨论 $f(x)$ 的零点个数&quot;</td><td>零点个数讨论</td><td>求导→分类→极值正负定个数</td></tr><tr><td>&quot; $f(x)>c$ 当且仅当 $m<x<n$ &quot;</td><td>符号区间+充要</td><td>边界即解/端点效应定参，再证单调性</td></tr><tr><td>&quot;有且仅有一个零点&quot;</td><td>唯一零点</td><td>极值=0 或单调穿过</td></tr><tr><td>含参 $b$ 且导函数含 $(x-x_0)^2$ 因子</td><td>分类讨论 $b$</td><td>看 $b$ 对导函数符号的影响</td></tr></table></div>
+<hr>
+<h3>标准化解题路径（导函零点分类五步法）</h3>
+<h4>第一步：求导并因式分解</h4>
+<p>如 $g'(x)=\frac{2}{x(2-x)}+3b(x-1)^2=(x-1)^2\left[\frac{2}{x(2-x)(x-1)^2}+3b\right]$，提取公因式看&quot;不变号因子&quot;。</p>
+<h4>第二步：确定不变量</h4>
+<p>$(x-1)^2\ge0$ 恒非负，故符号由方括号内 $h(x)=\frac{2}{x(2-x)}+3b$ 决定。</p>
+<h4>第三步：分析 $h(x)$ 单调性</h4>
+<p>$h'(x)$ 判得 $h(x)$ 在 $(1,2)$ 单调增，故只需看端点 $h(1)=2+3b$。</p>
+<h4>第四步：按参数分类</h4>
+<ul>
+<li>$b<-\frac23$ ⇒ $h(1)<0$ ⇒ 存在零点使 $g$ 递减 ⇒ 不符；</li>
+<li>$b\ge-\frac23$ ⇒ $g'(x)\ge0$ ⇒ $g$ 单调增 ⇒ 符号区间唯一。</li>
+</ul>
+<h4>第五步：回扣充要条件</h4>
+<p>结合边界 $g(1)=0$，得 $g(x)>0\Leftrightarrow 1<x<2$，从而 $b\in[-\frac23,+\infty)$。</p>
+<hr>
+<h3>真题母题（2024 新课标Ⅰ卷·第18题(3)，6分）</h3>
+<p><strong>题目</strong>：已知函数 $f(x)=\ln\frac{x}{2-x}+ax+b(x-1)^3$，若 $f(x)>-2$ 当且仅当 $1<x<2$，求 $b$ 的取值范围。</p>
+<p><strong>解析</strong>：令 $g(x)=f(x)+2$，题意即 $g(x)>0\Leftrightarrow x\in(1,2)$。 由边界 $x=1$ 是解且为端点得 $g(1)=0\Rightarrow a=-2$。 $$g'(x)=\frac{2}{x(2-x)}+3b(x-1)^2=(x-1)^2\left[\frac{2}{x(2-x)(x-1)^2}+3b\right]$$ 方括号内 $h(x)=\frac{2}{x(2-x)}+3b$ 在 $(1,2)$ 单调增，$h(1)=2+3b$。</p>
+<ul>
+<li>若 $b<-\frac23$：$h(1)<0$，存在 $x_0\in(1,2)$ 使 $g$ 在 $(1,x_0)$ 递减，$g(x)<g(1)=0$，不符；</li>
+<li>若 $b\ge-\frac23$：$g'(x)\ge0$（仅 $x=1$ 取等），$g$ 在 $(1,2)$ 单调增，由 $g(1)=0$ 得 $g(x)>0\Leftrightarrow1<x<2$，符合。</li>
+</ul>
+<p>故 <strong>$b\in[-\frac23,+\infty)$</strong>。</p>
+<p><strong>关键提炼</strong>：分类的&quot;分水岭&quot;是导函数零点是否落在区间内；遇到 $(x-x_0)^2$ 因子先提公因子，可大幅简化讨论。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="高二深化_数学_典型题型与方法_恒成立与存在性问题通法.html">高二深化_数学_典型题型与方法_恒成立与存在性问题通法</a> — 恒成立/存在性（前置基础）</li>
+<li><a href="高三冲刺_数学_典型题型与方法_2024新课标Ⅰ卷第18题（导数压轴）精析.html">高三冲刺_数学_典型题型与方法_2024新课标Ⅰ卷第18题（导数压轴）精析</a> — 同真题T18完整精析</li>
+<li><a href="../素材与拓展/高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向.html">高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向</a> — 导数压轴新动向总览</li>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系.html">高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系</a> — 单调性/极值理论体系</li>
+</ul>
+<hr>
+<ul>
+<li><a href="../素材与拓展/高三冲刺_数学_素材与拓展_泰勒展开与凸凹性放缩技巧.md">泰勒展开与凸凹性放缩技巧</a></li>
+</ul>
+<h2>备注</h2>
+<ul>
+<li>导数零点分类讨论是压轴题&quot;标配子能力&quot;，与极值点偏移、隐零点同属&quot;导数工具性&quot;考查。</li>
+<li>常见漏讨论点：① 导函数零点恰为区间端点；② $(x-x_0)^2$ 型因子的非负性；③ 参数使导函数恒非负（退化为单调）。</li>
+<li>训练建议：先做&quot;求零点个数&quot;10题，再做&quot;当且仅当&quot;型充要讨论5题。</li>
+</ul>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高二深化</code> <code>#难度4</code> <code>#导数</code> <code>#零点</code> <code>#分类讨论</code> <code>#符号区间</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

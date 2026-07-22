@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复数的概念与运算 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">复数的概念与运算</span></li></ol>
+<h1 class="kb-title">复数的概念与运算</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★☆☆☆</span><span class="kb-badge kb-badge--tag">#高一筑基</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：人教A版必修第二册第七章 / 2024新课标Ⅰ卷第2题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：考查频率：高频（每年单选第1-2题必考）· 基础 · 复数代数运算、共轭、模、几何意义是&quot;送分题&quot;，务必全拿 · 真题锚定：2024新高考Ⅰ卷T2（复数方程求z）</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：复数 $z=a+bi$ 是&quot;实数+虚数&quot;。运算核心是 $i^2=-1$；共轭 $\bar z=a-bi$；模 $|z|=\sqrt{a^2+b^2}$。几何上对应平面点 $(a,b)$。</p></blockquote>
+<hr>
+<h3>一、知识网络</h3>
+<pre><code>复数 z=a+bi (a,b∈R)
+ ├─ 实部 Re z=a，虚部 Im z=b（b≠0 才叫虚数）
+ ├─ 共轭：z̄=a−bi（实部同、虚部反）
+ ├─ 模：|z|=√(a²+b²)，|z|²=z·z̄
+ ├─ 四则运算（i²=−1）
+ │   加減：(a+bi)±(c+di)=(a±c)+(b±d)i
+ │   乘法：(a+bi)(c+di)=(ac−bd)+(ad+bc)i
+ │   除法：分子分母同乘分母共轭，化为实数分母
+ └─ 几何意义：点(a,b) / 向量OZ；乘i=逆时针转90°
+</code></pre>
+<h3>二、核心公式/结论</h3>
+<div class="table-wrap"><table><tr><th>公式</th><th>内容</th><th>注意</th></tr><tr><td>幂次周期</td><td>$i^{4k}=1,\ i^{4k+1}=i,\ i^{4k+2}=-1,\ i^{4k+3}=-i$</td><td>周期为4</td></tr><tr><td>模性质</td><td>$|z_1z_2|=|z_1||z_2|,\ |z^n|=|z|^n$</td><td>模可先算</td></tr><tr><td>共轭性质</td><td>$\overline{z_1\pm z_2}=\bar z_1\pm\bar z_2,\ \overline{z_1z_2}=\bar z_1\bar z_2$</td><td>共轭分配</td></tr><tr><td>除法</td><td>$\frac{a+bi}{c+di}=\frac{(a+bi)(c-di)}{c^2+d^2}$</td><td>分母实数化</td></tr></table></div>
+<h3>三、易混点</h3>
+<div class="table-wrap"><table><tr><th>易混点</th><th>正解</th><th>错法</th></tr><tr><td>虚部</td><td>$b$（不带 $i$）</td><td>误写 $bi$</td></tr><tr><td>共轭</td><td>仅虚部变号</td><td>实部也变</td></tr><tr><td>除法</td><td>同乘<strong>分母</strong>共轭</td><td>同乘分子共轭</td></tr><tr><td>$i^2$</td><td>$=-1$</td><td>误作 $1$ 或 $-i$</td></tr></table></div>
+<hr>
+<h3>真题母题（2024 新课标Ⅰ卷·第2题，5分）</h3>
+<p><strong>题目</strong>：已知 $\frac{z}{z-1}=1+i$，则 $z=$（ ） A. $-1-i$　B. $-1+i$　C. $1-i$　D. $1+i$</p>
+<p><strong>解析</strong>： $\frac{z}{z-1}=1+i\Rightarrow z=(1+i)(z-1)= (1+i)z-(1+i)$ $\Rightarrow z-(1+i)z=-(1+i)\Rightarrow -iz=-(1+i)\Rightarrow z=\frac{1+i}{i}=\frac{(1+i)(-i)}{-i^2}=\frac{-i+1}{1}=1-i$。 <strong>答案：C</strong>。</p>
+<p><strong>关键提炼</strong>：复数方程是&quot;代数化简+ $i^2=-1$&quot;，属于送分题；熟练共轭与除法可1分钟出数。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_复数的三角表示.html">高一筑基_数学_核心知识网络_复数的三角表示</a> — 三角形式与几何意义（进阶）</li>
+<li><a href="../核心知识网络/高一筑基_数学_核心知识网络_平面向量坐标运算进阶.md">高一筑基_数学_核心知识网络_平面向量坐标运算进阶</a> — 复数与向量几何对应</li>
+</ul>
+<hr>
+<ul>
+<li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_选填提速技巧.md">选填提速技巧</a></li>
+</ul>
+<h2>备注</h2>
+<ul>
+<li>复数题是广东卷&quot;开门送分&quot;，每年T1/T2必出，目标满分；错因几乎全是 $i^2=-1$ 或共轭符号。</li>
+<li>训练建议：共轭、模、除法各练10题，做到&quot;机械正确&quot;。</li>
+</ul>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度2</code> <code>#复数</code> <code>#四则运算</code> <code>#共轭</code> <code>#模</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回核心知识网络</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

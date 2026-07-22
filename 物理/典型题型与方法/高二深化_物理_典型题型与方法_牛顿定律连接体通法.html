@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>牛顿定律连接体通法（整体法·隔离法·结点法） | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="物理">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">牛顿定律连接体通法（整体法·隔离法·结点法）</span></li></ol>
+<h1 class="kb-title">牛顿定律连接体通法（整体法·隔离法·结点法）</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：动力学专题 / 广东选择性考试高频考点（2022广东卷T2、2023广东卷T2）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（连接体/结点平衡为广东卷选择题常客，2022广东卷T2石磨结点、2023广东卷T2机器人船舷均考查共点力平衡与受力分析）· 中档 · 常以生活/传统器具/科技情境包装（石磨、磁吸附机器人、磁悬浮），需整体隔离建模 · 等级赋分：此类选择题属基础分，须稳拿不留失误</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;两物体叠放/靠在一起&quot;&quot;一起加速&quot;</td><td>连接体（无相对滑动）</td><td>先整体求 $a$，再隔离求相互作用力</td></tr><tr><td>&quot;结点O&quot;&quot;三根轻绳/轻杆相连&quot;</td><td>共点力平衡（结点法）</td><td>以结点为对象，正交分解列平衡方程</td></tr><tr><td>&quot;轻杆/轻绳连接两球&quot;&quot;系统静止&quot;</td><td>系统平衡</td><td>整体法求外力，隔离法求内力</td></tr><tr><td>&quot;加速度相同&quot;</td><td>关联加速度</td><td>整体牛顿第二定律 $\sum F_{外}=(m_1+m_2)a$</td></tr></table></div>
+<h3>标准化解题路径（分步骤）</h3>
+<p><strong>第一步：判定能否用整体法</strong></p>
+<ul>
+<li>若连接体内各物体<strong>加速度相同</strong>（同向或关联），优先用整体法求共同加速度：</li>
+<p>$$a=\frac{F_{合外}}{m_1+m_2+\cdots}$$</p>
+<li>若只求外力、不求内力，整体法一步到位。</li>
+</ul>
+<p><strong>第二步：隔离法求内力</strong></p>
+<ul>
+<li>单独取某一物体，画受力图，列牛顿第二定律：</li>
+<p>$$F_{内}=m_{\text{隔离}}\cdot a$$</p>
+<li>关键：内力是连接体之间的弹力/摩擦力/张力。</li>
+</ul>
+<p><strong>第三步：结点/共点力平衡（无加速度）</strong></p>
+<ul>
+<li>以结点为对象，三个及以上共点力平衡 → 正交分解：</li>
+<p>$$\sum F_x=0,\quad \sum F_y=0$$</p>
+<li>轻绳结点张力沿绳方向；轻杆结点力可沿任意方向（由平衡决定）。</li>
+</ul>
+<p><strong>第四步：验证</strong></p>
+<ul>
+<li>整体法结果与隔离法结果应自洽；</li>
+<li>方向用&quot;假设法&quot;判断：先假设某力方向，解出负值则说明反向。</li>
+</ul>
+<h3>方法口诀</h3>
+<blockquote><p><strong>&quot;连体先看是否同加速，同速整体先求出 $a$</strong><br><strong>要知内力再隔离，单画一物列方程</strong><br><strong>结点平衡正交分，三分力也能定方向</strong><br>**整体隔离交替用，受力图画清不慌张&quot;</p></blockquote>
+<hr>
+<h2>母题（2022·广东卷 T2，4分）</h2>
+<blockquote><p>广东卷共点力平衡典型题：以&quot;制作豆腐的石磨&quot;为生活情境，考查结点隔离法。</p></blockquote>
+<p><strong>题目</strong>：图是可用来制作豆腐的石磨。木柄AB静止时，连接AB的轻绳处于绷紧状态。O点是三根轻绳的结点，$F$、$F_1$ 和 $F_2$ 分别表示三根绳的拉力大小，其中 $F_1\perp F_2$ 且 $F$ 与 $F_1$ 的夹角为 $60^\circ$。下列关系式正确的是（　　）</p>
+<p><strong>解</strong>：</p>
+<ul>
+<li>以结点 O 为研究对象，三绳拉力共点平衡。</li>
+<li>建立坐标：$F_1$ 沿 x 轴、$F_2$ 沿 y 轴（因 $F_1\perp F_2$），$F$ 与 $F_1$ 夹角 $60^\circ$。</li>
+<li>正交分解平衡方程：</li>
+<p>$$\sum F_x=0:\quad F\cos60^\circ-F_1=0\ \Rightarrow\ F_1=\frac{1}{2}F$$ $$\sum F_y=0:\quad F\sin60^\circ-F_2=0\ \Rightarrow\ F_2=\frac{\sqrt3}{2}F$$</p>
+<li>故 $F_1\neq F_2$，且 $F_1=\frac12F$、$F_2=\frac{\sqrt3}{2}F$（满足 $F_1^2+F_2^2=F^2$）。</li>
+<li><strong>答</strong>：本题正确选项为 <strong>D</strong>（以结点隔离、正交分解即可判关系）。</li>
+</ul>
+<blockquote><p>💡 关键：连接体/结点问题<strong>第一步一定是判定&quot;用整体还是隔离&quot;</strong>；纯平衡用结点法（正交分解），有加速度用整体+隔离。广东卷偏爱把这类题包装成&quot;石磨、机器人、吊灯&quot;等生活器具，物理本质不变。</p></blockquote>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="高二深化_物理_典型题型与方法_力学三大模型通法.html">高二深化_物理_典型题型与方法_力学三大模型通法</a> — 连接体是板块/传送带/弹簧三大模型的基础分析方法</li>
+<li><a href="../核心知识网络/高一筑基_物理_核心知识网络_牛顿三定律与受力分析.html">高一筑基_物理_核心知识网络_牛顿三定律与受力分析</a> — 牛顿三定律、整体法隔离法、摩擦力突变</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li><strong>广东卷考情</strong>：连接体与结点平衡是&quot;送分题&quot;也是&quot;易失分题&quot;——题干包装生活化（石磨、磁吸附机器人），但核心就是共点力平衡与牛顿第二定律。建议训练&quot;先判整体/隔离 → 画受力图 → 正交分解&quot;的固定流程，控制在 2 分钟内完成。</li>
+<li><strong>易错点</strong>：</li>
+<ol>
+<li>轻绳结点张力<strong>沿绳方向</strong>，轻杆结点力方向由平衡决定（不一定沿杆）；</li>
+<li>整体法<strong>不能求内力</strong>，求内力必须隔离；</li>
+<li>加速度不同的连接体（如一端加速、一端静止）不能用简单整体法，需分别隔离。</li>
+</ol>
+<li><strong>等级赋分提示</strong>：该类选择题属中低难度，原始分每丢 1 分在赋分后可能放大，务必确保拿满。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

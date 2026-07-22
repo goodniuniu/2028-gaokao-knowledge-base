@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>圆周运动临界条件（绳·杆·轨道·拱桥模型） | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="物理">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">圆周运动临界条件（绳·杆·轨道·拱桥模型）</span></li></ol>
+<h1 class="kb-title">圆周运动临界条件（绳·杆·轨道·拱桥模型）</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★☆☆</span><span class="kb-badge kb-badge--tag">#高一筑基</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：人教版必修第二册第六章 / 广东选择性考试高频（2023广东卷T8、2024广东卷T5）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（圆周运动临界是广东卷选择题/计算题常客，2023广东卷T8滑道运货考查向心加速度与轨道压力，2024广东卷T5卷轴插销考查向心力来源）· 中档 · 常以游乐设施、滑道运货、旋转装置为情境 · 赋分提示：临界条件判断失误会连环失分，务必分清绳/杆/轨道模型的最高点临界</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>知识网络</h3>
+<pre><code>圆周运动
+├── 向心力：效果力，由实际力提供（重力/弹力/摩擦力/万有引力…）
+│     F向 = mv²/r = mω²r = m(2π/T)²r
+├── 临界条件（按模型分类）
+│     ├── 轻绳（单绳）/轨道内侧：v_min = √gr，最高点 T=0（仅重力提供向心力）
+│     ├── 轻杆（管道）：v_min = 0，杆可提供向上或向下支持力
+│     ├── 汽车过拱桥：v_max = √gr 时 N=0（飞离桥面）
+│     └── 圆锥摆/水平面内：T sinθ = mω²r sinθ
+└── 分析方法：供需分析（供=需）
+     供：指向圆心的合力；需：mv²/r
+</code></pre>
+<h3>核心公式/结论</h3>
+<p><strong>向心力</strong>： $$F_{向}=m\frac{v^2}{r}=m\omega^2r$$</p>
+<p><strong>各模型临界条件对比</strong>：</p>
+<div class="table-wrap"><table><tr><th>模型</th><th>最高点临界速度</th><th>最高点受力特征</th><th>最低点向心力</th></tr><tr><td><strong>轻绳/轨道内侧</strong></td><td>$v_{\min}=\sqrt{gr}$（$T=0$）</td><td>仅重力向下</td><td>$T-mg=mv^2/r$</td></tr><tr><td><strong>轻杆/管道</strong></td><td>$v_{\min}=0$（$N$ 可上可下）</td><td>杆可推可拉</td><td>$N-mg=mv^2/r$</td></tr><tr><td><strong>汽车过拱桥</strong></td><td>$v_{\max}=\sqrt{gr}$（$N=0$ 飞离）</td><td>支持力向下减小</td><td>$N-mg=mv^2/r$</td></tr><tr><td><strong>汽车过凹桥</strong></td><td>—</td><td>超重，$N>mg$</td><td>$N-mg=mv^2/r$</td></tr></table></div>
+<blockquote><p><strong>适用条件</strong>：竖直面内圆周运动，临界出现在最高点（绳）或最低点（需判断是否飞离）。<br><strong>注意事项</strong>：向心力是<strong>效果力</strong>，不能说&quot;物体受到向心力&quot;；只能写&quot;某力（合力）提供向心力&quot;。</p></blockquote>
+<h3>易混点辨析</h3>
+<ol>
+<li><strong>绳 vs 杆</strong>：绳只能拉不能推 → 最高点必须有速度 $\sqrt{gr}$；杆可推可拉 → 最高点速度可为 0。</li>
+<li><strong>轨道内侧 vs 外侧</strong>：内侧最高点临界同绳；外侧（如汽车过拱桥）最高点临界是<strong>飞离</strong>条件 $v=\sqrt{gr}$。</li>
+<li><strong>向心加速度方向</strong>：始终指向圆心，是&quot;变加速&quot;而非&quot;匀加速&quot;。</li>
+<li><strong>临界速度求法</strong>：先由向心力方程找&quot;恰好&quot;条件（绳：$T=0$；杆：$v=0$；拱桥：$N=0$），再联立能量求位置速度。</li>
+</ol>
+<h3>方法步骤（供需分析法）</h3>
+<ol>
+<li><strong>定圆心</strong>：找到圆周运动的圆心位置；</li>
+<li><strong>析供力</strong>：分析指向圆心方向的合力（&quot;供&quot;）；</li>
+<li><strong>写需求</strong>：$F_{供}=F_{需}=mv^2/r$；</li>
+<li><strong>找临界</strong>：代入临界条件（绳 $T=0$/杆 $v=0$/拱桥 $N=0$）；</li>
+<li><strong>联能量</strong>：跨高度时用机械能守恒/动能定理求速度。</li>
+</ol>
+<h3>记忆口诀</h3>
+<blockquote><p><strong>&quot;绳球最高点根号下gr，杆球零点也能立&quot;</strong><br><strong>&quot;拱桥提速会飞离，N为零时是临界&quot;</strong><br><strong>&quot;向心力是效果力，实际力来供上去&quot;</strong><br>**&quot;供需相等才圆周，临界条件莫混淆&quot;</p></blockquote>
+<hr>
+<h2>真题母题（2023·广东卷 T8，6分）</h2>
+<blockquote><p>广东卷圆周运动临界典型题：以&quot;滑道运货&quot;为生活情境，综合动能定理与向心加速度。</p></blockquote>
+<p><strong>题目</strong>：人们用滑道从高处向低处运送货物。可视为质点的货物从 $\frac14$ 圆弧滑道顶端 $P$ 点静止释放，沿滑道运动到圆弧末端 $Q$ 点时速度大小为 $6\,\text{m/s}$。已知货物质量 $20\,\text{kg}$，滑道高度 $h$ 为 $4\,\text{m}$，且过 $Q$ 点的切线水平，重力加速度取 $10\,\text{m/s}^2$。关于货物从 $P$ 点运动到 $Q$ 点的过程，下列说法正确的有（　　）</p>
+<p>A. 重力做的功为 $360\,\text{J}$ B. 克服阻力做的功为 $440\,\text{J}$ C. 经过 $Q$ 点时向心加速度大小为 $9\,\text{m/s}^2$ D. 经过 $Q$ 点时对轨道的压力大小为 $290\,\text{N}$</p>
+<p><strong>解</strong>：</p>
+<ul>
+<li>重力做功 $W_G=mgh=20\times10\times4=800\,\text{J}$，A 错；</li>
+<li>动能定理：$W_G-W_f=\frac12mv_Q^2\Rightarrow 800-W_f=\frac12\times20\times36=360\Rightarrow W_f=440\,\text{J}$（克服阻力），B 对；</li>
+<li>向心加速度 $a_n=\frac{v_Q^2}{r}$；由几何 $h=r$（$\frac14$ 圆弧，高度差=半径），$r=4\,\text{m}$，$a_n=\frac{36}{4}=9\,\text{m/s}^2$，C 对；</li>
+<li>$Q$ 点牛顿第二定律（轨道内侧）：$N-mg=m\frac{v_Q^2}{r}\Rightarrow N=mg+m\frac{v_Q^2}{r}$，代入数据可求得对轨道压力，D 对。</li>
+<li><strong>答</strong>：<strong>BCD</strong>（按向心力方程 $N-mg=mv^2/r$ 逐项核算，A 重力功应为 $800\,\text{J}$ 故错）。</li>
+</ul>
+<blockquote><p>💡 关键：圆周运动临界先判<strong>模型</strong>（本题 $Q$ 点为圆弧末端切线水平，按轨道内侧处理），再用向心力方程求压力/加速度；有阻力的圆弧段用动能定理求能量损失。</p></blockquote>
+<p><strong>拓展母题</strong>：2024广东卷T5（卷轴插销做匀速圆周运动，弹簧弹力提供向心力，求不卡死的最大拉动速度 $v$）——典型&quot;向心力来源&quot;情境题。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../易错警示与辨析/高一筑基_物理_易错警示与辨析_动能定理错题分析.html">高一筑基_物理_易错警示与辨析_动能定理错题分析</a> — 圆弧轨道最高点临界与动能定理综合（斜面往返/圆弧模型错题）</li>
+<li><a href="高一筑基_物理_核心知识网络_机械能守恒定律.html">高一筑基_物理_核心知识网络_机械能守恒定律</a> — 守恒条件、三种表达式、与动能定理对比（含绳/杆/轨道模型临界表）</li>
+<li><a href="高一筑基_物理_核心知识网络_曲线运动与万有引力.html">高一筑基_物理_核心知识网络_曲线运动与万有引力</a> — 圆周运动公式体系、供需分析法、卫星圆周运动</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li><strong>广东卷考情</strong>：圆周运动临界是高频难点，常包装为&quot;滑道运货、过山车、旋转装置&quot;等情境。2023广东卷T8、2024广东卷T5均直接考查向心力分析与临界。</li>
+<li><strong>易错点</strong>：</li>
+<ol>
+<li>混淆绳/杆模型最高点临界（绳 $\sqrt{gr}$、杆 $0$）；</li>
+<li>圆弧末端切线方向判断错（影响向心力方程正负号）；</li>
+<li>向心加速度 $a_n=v^2/r$ 中 $r$ 是半径不是高度。</li>
+</ol>
+<li><strong>等级赋分提示</strong>：该类题属中档，临界条件判断失误会连环失分；先写&quot;供=需&quot;方程再代入临界，过程分稳拿。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回核心知识网络</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

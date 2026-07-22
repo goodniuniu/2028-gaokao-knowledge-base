@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新定义题型破题策略 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">新定义题型破题策略</span></li></ol>
+<h1 class="kb-title">新定义题型破题策略</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★★</span><span class="kb-badge kb-badge--tag">#高三冲刺</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东 / #新高考Ⅰ卷·江苏</span><span class="kb-badge kb-badge--src">来源：2024年新课标Ⅰ卷第19题（17分） / 2024-2025新高考Ⅰ卷创新题归纳</span></div>
+<div class="kb-note"><strong>广东考情</strong>：压轴新动向（2024新课标Ⅰ卷T19首设&quot;数列+组合&quot;新定义压轴）· 反套路 · 考查即时理解新概念、枚举特例、递推构造、组合计数 · 真题锚定：2024新高考Ⅰ卷T19（(i,j)-可分数列）</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：新定义题 = &quot;用你熟悉的基础知识，去处理一个陌生的规则&quot;。破题关键不是&quot;见过&quot;，而是<strong>慢读定义 → 特例验证 → 抽象证明</strong>。</p></blockquote>
+<hr>
+<h3>题型识别标志</h3>
+<div class="table-wrap"><table><tr><th>题干特征</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;称……为XX-数列/可分数列&quot;</td><td>概念新定义</td><td>逐字翻译定义，用最小情形枚举</td></tr><tr><td>&quot;证明：数列是 $(i,j)$-可分数列&quot;</td><td>性质新定义</td><td>先构造 $m=3$ 特例，再归纳推广</td></tr><tr><td>&quot;任取 $i,j$，记概率为 $P_m$，证明 $P_m>...$&quot;</td><td>规则新定义+概率</td><td>设状态数 $b_m$，找递推 $b_{m+1}-b_m$</td></tr></table></div>
+<hr>
+<h3>标准化解题路径（新定义四步法）</h3>
+<h4>第一步：慢读定义，圈关键词</h4>
+<p>如&quot;删去两项 $a_i,a_j$ 后剩余 $4m$ 项可平均分 $m$ 组，每组4个数成等差&quot;——核心约束是&quot;每组4项等差&quot;。</p>
+<h4>第二步：枚举最小情形（特例开路）</h4>
+<p>$m=1$ 时数列共6项，直接枚举所有 $(i,j)$ 使删后4项可分2组（每组2对等差）。得 $(1,2),(1,6),(5,6)$。</p>
+<h4>第三步：寻找构造规律（从特例到一般）</h4>
+<p>观察 $(1,2),(5,6),(1,6)$ 都是&quot;掐头/去尾/掐两头&quot;。对 $m\ge3$，删 $a_2,a_{13}$ 后，前14项分3组公差 $3d$ 的等差，其后每连续4项自成一组。</p>
+<h4>第四步：递推/归纳严格证明</h4>
+<p>设满足条件的 $(i,j)$ 对数为 $b_m$。由构造规律得 $b_{m+1}-b_m\ge 2m+2$，累加：$b_m\ge b_1+(4+6+\cdots+2m)=m^2+m+1$。 故 $P_m=\frac{b_m}{C_{4m+2}^2}\ge\frac{m^2+m+1}{8m^2+6m+1}>\frac18$。</p>
+<hr>
+<h3>真题母题（2024 新课标Ⅰ卷·第19题，17分）</h3>
+<p><strong>题目</strong>：设 $m$ 为正整数，数列 $a_1,a_2,\dots,a_{4m+2}$ 是公差不为0的等差数列，若从中删去两项 $a_i$ 和 $a_j(i<j)$ 后剩余的 $4m$ 项可被平均分为 $m$ 组，且每组的4个数都能构成等差数列，则称该数列是 $(i,j)$-可分数列。 (1) 写出所有 $(i,j)$，$1\le i<j\le6$，使 $a_1,\dots,a_6$ 是 $(i,j)$-可分数列； (2) 当 $m\ge3$ 时，证明：该数列是 $(2,13)$-可分数列； (3) 从 $1,2,\dots,4m+2$ 中任取两个数 $i,j(i<j)$，记是 $(i,j)$-可分数列的概率为 $P_m$，证明：$P_m>\frac18$。</p>
+<p><strong>解析</strong>：见四步法。结论：(1) $(1,2),(1,6),(5,6)$；(2)(3) 如上。</p>
+<p><strong>关键提炼</strong>：新定义题&quot;多想少算&quot;，第一问枚举送分必拿；第二问构造特例找规律；第三问用<strong>组合计数+累加法</strong>估下界，是高考递推放缩的经典套路。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../素材与拓展/高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向.html">高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向</a> — 新定义题型趋势总览（前置总览）</li>
+<li><a href="高二深化_数学_典型题型与方法_新定义压轴题突破.html">高二深化_数学_典型题型与方法_新定义压轴题突破</a> — 同类新定义题（(i,j)可分数列）深化</li>
+<li><a href="高二深化_数学_典型题型与方法_数列放缩与不等式证明.html">高二深化_数学_典型题型与方法_数列放缩与不等式证明</a> — 放缩与累加法技巧</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>2024年新课标Ⅰ卷T19打破固化为首道&quot;数列+组合&quot;新定义压轴，体现&quot;反刷题、重思维&quot;。广东考生需训练<strong>即时抽象</strong>能力。</li>
+<li>破题心法：&quot;定义是规则，照章办事&quot;——不慌，把新名词翻译成等差数列/组合的基本语言即可。</li>
+<li>训练建议：先攻第一问（必拿分），再练&quot;特例→一般&quot;的构造归纳，最后突破概率下界放缩。</li>
+</ul>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高三冲刺</code> <code>#难度5</code> <code>#新定义</code> <code>#等差数列</code> <code>#组合计数</code> <code>#递推放缩</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

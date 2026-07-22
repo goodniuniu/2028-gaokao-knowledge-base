@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电磁感应综合（导轨·线框·动生/感生·能量） | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="物理">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">电磁感应综合（导轨·线框·动生/感生·能量）</span></li></ol>
+<h1 class="kb-title">电磁感应综合（导轨·线框·动生/感生·能量）</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：电磁感应专题 / 广东选择性考试高频（2024广东卷T4、2023广东卷T14）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（电磁感应是广东卷计算题/选择题常客，2023广东卷T14为14分电磁感应综合，2024广东卷T4以&quot;电磁俘能器&quot;考查）· 压轴/中档 · 常以新能源、汽车、科技装置为情境（广东卷特色）· 等级赋分：综合题过程分丰厚，电学+动力学双分析框架是得分核心</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;金属棒在导轨上切割磁感线&quot;</td><td>动生电动势（导轨模型）</td><td>$E=BLv$，电流 $I=E/R_{总}$</td></tr><tr><td>&quot;磁场随时间线性变化&quot;</td><td>感生电动势（线框模型）</td><td>$E=\dfrac{\Delta\Phi}{\Delta t}=S\dfrac{\Delta B}{\Delta t}$</td></tr><tr><td>&quot;求安培力/加速度&quot;</td><td>动力学</td><td>$F_{安}=BIL$，牛顿第二定律</td></tr><tr><td>&quot;最终匀速/共速&quot;</td><td>动态平衡或动量守恒</td><td>单杆 $F=F_{安}$；双杆系统动量守恒</td></tr><tr><td>&quot;求产生热量 Q&quot;</td><td>焦耳热/能量</td><td>$Q=I^2Rt$ 或能量守恒 $\Delta E_{其他}=Q$</td></tr><tr><td>&quot;通过某截面电荷量 q&quot;</td><td>电量微元</td><td>$q=\dfrac{\Delta\Phi}{R_{总}}$（与速度无关）</td></tr></table></div>
+<h3>标准化解题路径（双分析 + 通法）</h3>
+<p><strong>第一步：电学分析（先求 E、I）</strong></p>
+<ul>
+<li>动生（切割）：$E=BLv$</li>
+<li>感生（磁场变）：$E=n\dfrac{\Delta\Phi}{\Delta t}=nS\dfrac{\Delta B}{\Delta t}$</li>
+<li>电流：$I=\dfrac{E}{R_{总}}$，多导体切割注意方向叠加（右手/楞次定则）</li>
+</ul>
+<p><strong>第二步：动力学分析（求 $F_{安}$、$a$、$v$ 变化）</strong> $$F_{安}=BIL$$</p>
+<ul>
+<li>单杆受恒外力：$a=\dfrac{F-F_{安}}{m}$，最终 $F=F_{安}$ 时匀速</li>
+<li>双杆不受外水平力 → 动量守恒，最终共速</li>
+</ul>
+<p><strong>第三步：两大结论</strong></p>
+<ul>
+<li>电荷量：$q=\displaystyle\int I\,dt=\dfrac{\Delta\Phi}{R_{总}}$</li>
+<li>动量定理（单杆受变力）：$\sum F_{外}t-\overline{F}_{安}t=\Delta p$，其中 $\overline{F}_{安}t=BLq$</li>
+</ul>
+<p><strong>第四步：能量/热量</strong> $$Q=I^2Rt\quad\text{或}\quad W_{外}-Q=\Delta E_k$$</p>
+<h3>方法口诀</h3>
+<blockquote><p><strong>&quot;电学先求E和I，动生感生两公式</strong><br><strong>安培力里牛顿走，匀速条件是守恒</strong><br><strong>求热就写I²Rt，求q用ΔΦ除R</strong><br>**双杆共速动量守，广东情境莫发愁&quot;</p></blockquote>
+<hr>
+<h2>母题（2024·广东卷 T4，4分）</h2>
+<blockquote><p>广东卷科技前沿情境题：以&quot;电磁俘能器（汽车发动机振动能量回收）&quot;为情境，综合电磁感应与楞次定律。</p></blockquote>
+<p><strong>题目</strong>：电磁俘能器可在汽车发动机振动时利用电磁感应发电实现能量回收，结构如图甲所示。两对永磁铁可随发动机一起上下振动，每对永磁铁间有水平方向的匀强磁场，磁感应强度大小均为 $B$。磁场中，边长为 $L$ 的正方形线圈竖直固定在减震装置上。某时刻磁场分布与线圈位置如图乙所示，永磁铁振动时磁场分界线不会离开线圈。关于图乙中的线圈，下列说法正确的是（　　）</p>
+<p>A. 穿过线圈的磁通量为 $BL^2$ B. 永磁铁相对线圈上升越高，线圈中感应电动势越大 C. 永磁铁相对线圈上升越快，线圈中感应电动势越小 D. 永磁铁相对线圈下降时，线圈中感应电流的方向为顺时针方向</p>
+<p><strong>解</strong>：</p>
+<ul>
+<li>图乙中线圈左右两半磁场方向相反、面积相等 → 总磁通量 $\Phi=0$，A 错；</li>
+<li>法拉第定律 $E=\left|\frac{\Delta\Phi}{\Delta t}\right|$：上升越高不改变瞬时变化率，B 错；上升越快变化率越大、电动势越大，C 错；</li>
+<li>下降时由楞次定律+安培定则，感应电流为顺时针，D 对。</li>
+<li><strong>答</strong>：<strong>D</strong>。</li>
+</ul>
+<blockquote><p>💡 关键：本题把&quot;电磁感应&quot;包装进汽车能量回收科技情境（广东卷偏爱），但核心仅为&quot;反向匀强磁场中线圈运动 → 磁通量与感应电流方向判断&quot;。</p></blockquote>
+<p><strong>真题索引</strong>：2023广东卷T14（14分）为完整电磁感应计算题，考查法拉第电磁感应定律、闭合电路欧姆定律、安培力与焦耳热，是&quot;电学+动力学&quot;双分析框架的压轴范例。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="高二深化_物理_典型题型与方法_广东物理情境化命题专题.html">高二深化_物理_典型题型与方法_广东物理情境化命题专题</a> — 新能源/汽车情境中的电磁感应模型</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_电磁感应定律.html">高二深化_物理_核心知识网络_电磁感应定律</a> — 法拉第定律、楞次定律、动生/感生电动势</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_磁场公式体系.html">高二深化_物理_核心知识网络_磁场公式体系</a> — 安培力 $F=BIL$、左手定则</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li><strong>广东卷考情</strong>：电磁感应常与&quot;新能源、汽车、电磁制动&quot;等科技情境结合（广东卷特色）。2024广东卷T4以&quot;电磁俘能器&quot;考选择，2023广东卷T14以&quot;线框在分区变化磁场中运动&quot;考计算，二者共用&quot;电学+动力学&quot;双分析框架。</li>
+<li><strong>易错点</strong>：</li>
+<ol>
+<li>动生 $E=BLv$ 中 $L$ 是<strong>切割磁感线的有效长度</strong>；</li>
+<li>感生用 $\Delta\Phi/\Delta t$，磁通量取<strong>代数和</strong>（反向相抵）；</li>
+<li>求 $Q$ 用 $I^2Rt$，感生情形先由 $\Delta\Phi/\Delta t$ 求 $E$。</li>
+</ol>
+<li><strong>等级赋分提示</strong>：综合题各步方程独立给分，即使第(3)问记错系数，写出 $E'=\Delta\Phi/\Delta t$ 与 $Q=I'^2Rt$ 即可拿大部分分。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>平面向量坐标运算进阶 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">平面向量坐标运算进阶</span></li></ol>
+<h1 class="kb-title">平面向量坐标运算进阶</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★☆☆</span><span class="kb-badge kb-badge--tag">#高一筑基</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东 / #广东名校模拟</span><span class="kb-badge kb-badge--src">来源：人教A版必修第二册第六章 + 2024新课标Ⅰ卷第3题 / 广州名校联考进阶题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：考查频率：高频（选填+解答均常考）· 基础至中档 · 在&quot;平面向量体系&quot;基础上深化坐标运算：垂直/平行判定、模长夹角、单位向量、投影、建系与三点共线参数法 · 真题锚定：2024新高考Ⅰ卷T3（坐标垂直）</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：坐标法是向量运算的&quot;代数化&quot;。把几何关系翻译为坐标等式，垂直⇔点积0，平行⇔叉积0，最值⇔函数，难题即迎刃而解。</p></blockquote>
+<hr>
+<h3>一、知识网络（在体系卡之上进阶）</h3>
+<pre><code>坐标运算进阶
+ ├─ 垂直判定：a⊥b ⇔ x₁x₂+y₁y₂=0
+ ├─ 平行判定：a∥b ⇔ x₁y₂−x₂y₁=0（叉积为0）
+ ├─ 模长：|a|=√(x₁²+y₁²)；夹角cosθ=(x₁x₂+y₁y₂)/(|a||b|)
+ ├─ 单位向量：±a/|a|（平行含正负两个！）
+ ├─ 投影向量：proj_a b = (a·b/|a|²)·a
+ ├─ 建系：无坐标图形主动建系（先找直角）
+ └─ 三点共线参数：N=(1−λ)E+λF, λ∈[0,1]（线段上）
+</code></pre>
+<h3>二、核心公式/结论</h3>
+<div class="table-wrap"><table><tr><th>公式</th><th>内容</th><th>注意</th></tr><tr><td>垂直</td><td>$\vec a\perp\vec b\Leftrightarrow x_1x_2+y_1y_2=0$</td><td>点积为0</td></tr><tr><td>平行</td><td>$\vec a\parallel\vec b\Leftrightarrow x_1y_2-x_2y_1=0$</td><td>叉积为0</td></tr><tr><td>夹角</td><td>$\cos\theta=\frac{x_1x_2+y_1y_2}{\sqrt{x_1^2+y_1^2}\sqrt{x_2^2+y_2^2}}$</td><td>$\cos\theta>0$ 未必锐角（排除共线）</td></tr><tr><td>单位向量（平行）</td><td>$\pm\frac{\vec a}{|\vec a|}$</td><td>&quot;平行&quot;含同向+反向</td></tr><tr><td>投影向量</td><td>$\text{proj}_{\vec a}\vec b=\frac{\vec a\cdot\vec b}{|\vec a|^2}\vec a$</td><td>是向量，非标量</td></tr></table></div>
+<h3>三、易混点</h3>
+<div class="table-wrap"><table><tr><th>易混点</th><th>正解</th><th>错法</th></tr><tr><td>单位向量（平行）</td><td>有 $\pm$ 两个</td><td>只写同向一个</td></tr><tr><td>垂直 vs 平行</td><td>点积0 / 叉积0</td><td>混淆两条件</td></tr><tr><td>投影向量 vs 投影数量</td><td>向量 / 标量</td><td>审题不清</td></tr><tr><td>共线时点积</td><td>正也可能同向非垂直</td><td>见正即判锐角</td></tr></table></div>
+<hr>
+<h3>真题母题（2024 新课标Ⅰ卷·第3题，5分）</h3>
+<p><strong>题目</strong>：已知向量 $\vec a=(0,1),\vec b=(2,x)$，若 $\vec b\perp(\vec b-4\vec a)$，则 $x=$（ ） A. $-2$　B. $-1$　C. $1$　D. $2$</p>
+<p><strong>解析</strong>： $\vec b-4\vec a=(2,x)-4(0,1)=(2,x-4)$。 由垂直得点积为0：$\vec b\cdot(\vec b-4\vec a)=2\cdot2+x(x-4)=4+x^2-4x=(x-2)^2=0\Rightarrow x=2$。 <strong>答案：D</strong>。</p>
+<p><strong>关键提炼</strong>：坐标垂直&quot;点积=0列出方程&quot;是标准操作；进阶题（投影、建系、三点共线）同理翻译为坐标等式。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_平面向量体系.html">高一筑基_数学_核心知识网络_平面向量体系</a> — 概念/线性运算/数量积基础（前置）</li>
+<li><a href="../易错警示与辨析/高一筑基_数学_易错警示与辨析_平面向量与解三角形常见陷阱.html">高一筑基_数学_易错警示与辨析_平面向量与解三角形常见陷阱</a> — 夹角/投影/单位向量易错点</li>
+<li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_选填提速技巧.md">高二深化_数学_典型题型与方法_选填提速技巧</a> — 坐标法在选填提速中的应用</li>
+</ul>
+<hr>
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_复数的概念与运算.html">复数的概念与运算</a></li>
+</ul>
+<h2>备注</h2>
+<ul>
+<li>平面向量是广东卷&quot;基础送分板块&quot;，但&quot;单位向量±&quot;&quot;投影向量&quot;等进阶点易失分，需精准。</li>
+<li>训练建议：垂直/平行坐标判定各10题；进阶练投影向量+建系参数法各5题（广州名校联考风格）。</li>
+</ul>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度3</code> <code>#平面向量</code> <code>#坐标运算</code> <code>#垂直平行</code> <code>#投影向量</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回核心知识网络</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

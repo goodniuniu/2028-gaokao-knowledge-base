@@ -204,6 +204,15 @@ MathJax = {
 <li>✅ 新增审计脚本 <code>gd_kaotiqing_audit.py</code>（广东考情现状审计）；AGENTS.md 脚本表补充 check_backlinks.py / gd_kaotiqing_audit.py</li>
 <li>⏳ 待续：真断链64 / 单向461 留作后续内容补全；核心知识网络(56张C类)与易错维度考情精确化、阶段2.4复盘机制运转未做</li>
 </ul>
+<h3>2026-07-22 阶段2.3余量：461单向→双向 + 16条TYPE_X改链（用户选&quot;修断链&quot;）</h3>
+<ul>
+<li>✅ <strong>分类诊断</strong>（<code>analyze_broken.py</code>）：64真断链 = TYPE_X_prefix(3, 漏时间标签_科目_维度_前缀) + TYPE_X_topic(13, 主题一致但时间标签/维度前缀错) + TYPE_Y(48, 目标卡真缺失)</li>
+<li>✅ <strong>TYPE_X 改链 16 条</strong>（<code>fix_backlinks_phase2.py</code>，可逆）：3条数学同板块印证互链补全 <code>高二深化_数学_典型题型与方法_</code> 前缀；13条物理/方法链接原名写 <code>高二深化_</code> 但实际卡为 <code>高一筑基_</code>，改为正确文件名+相对路径</li>
+<li>✅ <strong>单向→双向</strong>：目标卡「关联卡片」段补反向链接，单向 461→<strong>0</strong>、双向 174→<strong>1127</strong></li>
+<li>✅ 修复 <code>check_backlinks.py</code> 链接正则：原 <code>-\s*\ SPAN0 </code> 漏解析同行第二条链接（如 写作高级句型结构 与 读后续写情节构建 用 <code> / </code> 同行分隔），改为匹配「关联卡片」段内全部 <code> SPAN1 </code>，误报的1条单向消失</li>
+<li>✅ 工程三闸门复过：build_site 216张无断链 / check_html_md_consistency 206张0不一致 / kb_audit 216张0缺HTML</li>
+<li>⏳ <strong>48条 TYPE_Y（目标卡真缺失）待决策</strong>：多为计划中进阶卡（高三冲刺卷精析、各类素材卡、广东情境化专题等）。选项：① 按科目批量建卡（需逐卡核实真题，量大）② 删死链保图谱干净 ③ 混合（近义卡重定向+其余建卡/删链）</li>
+</ul>
 <blockquote><p>💡 重启后可直接说&quot;继续补充第三批示意图&quot;或&quot;继续完善XX功能&quot;，我会从当前状态接续。</p></blockquote>
 <!-- KB-CONTENT-END -->
 </article>

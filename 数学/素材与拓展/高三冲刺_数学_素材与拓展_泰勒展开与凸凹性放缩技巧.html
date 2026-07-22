@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>泰勒展开与凸凹性放缩技巧 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">素材与拓展</a></li><li><span aria-current="page">泰勒展开与凸凹性放缩技巧</span></li></ol>
+<h1 class="kb-title">泰勒展开与凸凹性放缩技巧</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★★</span><span class="kb-badge kb-badge--tag">#高三冲刺</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东 / #新高考Ⅰ卷·江苏</span><span class="kb-badge kb-badge--src">来源：2023年新课标Ⅰ卷第19题（切线放缩） / 2024-2025导数压轴新动向归纳</span></div>
+<div class="kb-note"><strong>广东考情</strong>：压轴高阶技巧（反套路压轴常需&quot;放缩&quot;）· 凸凹性/泰勒展开放缩能把复杂函数压成多项式，是证明不等式、估零点的&quot;隐藏武器&quot; · 真题锚定：2023新高考Ⅰ卷T19（切线放缩证 f(x)≥0）</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：泰勒展开 = 用多项式局部逼近函数。取前几项即得&quot;切线不等式链&quot;，是高考压轴证明不等式的<strong>降维武器</strong>。核心：在取等点处展开，保不等号方向一致。</p></blockquote>
+<hr>
+<h3>一、切线不等式链（最常考的一阶/二阶放缩）</h3>
+<div class="table-wrap"><table><tr><th>不等式</th><th>取等条件</th><th>来源（泰勒）</th></tr><tr><td>$e^x \ge 1+x$（进而 $e^x\ge 1+x+\frac{x^2}{2}$）</td><td>$x=0$</td><td>$e^x$ 在0处展开</td></tr><tr><td>$\ln(1+x)\le x$（$x>-1$）</td><td>$x=0$</td><td>$\ln(1+x)$ 在0处展开</td></tr><tr><td>$\sin x \le x$（$x\ge0$）</td><td>$x=0$</td><td>$\sin x$ 在0处展开</td></tr><tr><td>$x-\frac{x^3}{6}\le\sin x\le x$</td><td>$x=0$</td><td>三阶泰勒</td></tr><tr><td>$\ln x \le x-1$（$x>0$）</td><td>$x=1$</td><td>$\ln x$ 在1处展开</td></tr></table></div>
+<blockquote><p><strong>使用铁律</strong>：放缩后不等号方向必须一致；取等条件要与目标不等式的取等点吻合，否则&quot;放崩&quot;。</p></blockquote>
+<h3>二、凸凹性放缩（二阶思路）</h3>
+<ul>
+<li>$f''(x)>0$ ⇒ $f$ 凸 ⇒ 切线在曲线<strong>下方</strong>：$f(x)\ge f(x_0)+f'(x_0)(x-x_0)$</li>
+<li>$f''(x)<0$ ⇒ $f$ 凹 ⇒ 切线在曲线<strong>上方</strong></li>
+<li>压轴常借&quot;函数在某点凸/凹&quot;得到整体不等式，省去繁琐求导。</li>
+</ul>
+<h3>三、标准化使用路径（放缩四步）</h3>
+<h4>第一步：锁定取等点</h4>
+<p>观察目标不等式在何处取等号（通常是 $x=0$ 或 $x=1$）。</p>
+<h4>第二步：选对应切线不等式</h4>
+<p>在取等点展开，挑&quot;方向一致&quot;的那一条。</p>
+<h4>第三步：代入并验证方向</h4>
+<p>把放缩式代入原不等式，确认不等号不反向。</p>
+<h4>第四步：回扣原题</h4>
+<p>若仍需更紧，取二阶/三阶泰勒项。</p>
+<hr>
+<h3>真题母题（2023 新课标Ⅰ卷·第19题，部分）</h3>
+<p><strong>题目</strong>：已知函数 $f(x)=a e^x-\ln(x+1)-1$。 (1) 当 $a=1$ 时，讨论 $f(x)$ 的单调性； (2) 若 $f(x)\ge0$ 在 $(-1,+\infty)$ 上恒成立，求 $a$ 的取值范围（证法用到切线放缩）。</p>
+<p><strong>解析要点</strong>： (1) $a=1$ 时 $f'(x)=e^x-\frac1{x+1}$。当 $x\ge0$，$e^x\ge1$ 且 $\frac1{x+1}\le1$ ⇒ $f'(x)\ge0$ 增；当 $-1<x<0$，分类得在 $(-1,0)$ 减。故 $x<0$ 减、$x>0$ 增。 (2) 切线放缩思路：由 $\ln(1+x)\le x$（取等 $x=0$）与 $e^x\ge1+x$，可构造 $g(x)=a e^x-x-1\ge a(1+x)-x-1=(a-1)x+(a-1)$，当 $a\ge1$ 时 $g(x)\ge0$ 且 $\ln(1+x)\le x$ ⇒ $f(x)=a e^x-\ln(1+x)-1\ge a e^x-x-1\ge0$。严格论证配合单调性可得 $a\ge\frac12$（经典答案）。</p>
+<p><strong>关键提炼</strong>：切线不等式链是&quot;放缩证明&quot;的速攻武器，2023T19、2024T18(3)的符号分析都隐含凸凹性思想。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向.html">高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向</a> — 压轴新动向总览（前置）</li>
+<li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_导数零点问题分类讨论框架.html">高二深化_数学_典型题型与方法_导数零点问题分类讨论框架</a> — 符号/凸凹分析（同思路）</li>
+<li><a href="../典型题型与方法/高三冲刺_数学_典型题型与方法_2024新课标Ⅰ卷第18题（导数压轴）精析.html">高三冲刺_数学_典型题型与方法_2024新课标Ⅰ卷第18题（导数压轴）精析</a> — T18(3)凸凹性实战</li>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系.html">高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系</a> — 导数基础</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>泰勒展开放缩是&quot;高观点&quot;技巧，广东压轴反套路题（如2024T18、2023T19）常需借助凸凹性简化。</li>
+<li>注意：高考<strong>不要求</strong>写出泰勒公式，只需会调用切线不等式链（e^x≥1+x、ln(1+x)≤x 等）。</li>
+<li>训练建议：默写切线不等式链；做5道&quot;放缩证明&quot;压轴，重点练&quot;取等点对齐&quot;。</li>
+</ul>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#素材与拓展</code> <code>#高三冲刺</code> <code>#难度5</code> <code>#泰勒展开</code> <code>#切线放缩</code> <code>#凸凹性</code> <code>#不等式证明</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回素材与拓展</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

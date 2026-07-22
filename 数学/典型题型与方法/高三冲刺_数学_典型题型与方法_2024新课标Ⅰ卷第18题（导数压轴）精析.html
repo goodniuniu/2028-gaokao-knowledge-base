@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024新课标Ⅰ卷第18题（导数压轴）精析 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">2024新课标Ⅰ卷第18题（导数压轴）精析</span></li></ol>
+<h1 class="kb-title">2024新课标Ⅰ卷第18题（导数压轴）精析</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★★</span><span class="kb-badge kb-badge--tag">#高三冲刺</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：2024年新课标Ⅰ卷第18题（17分） / 教育部教育考试院官方真题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：压轴（17分）· 反套路 · 第(2)问考&quot;曲线是中心对称图形&quot;的几何性质证明，第(3)问&quot;当且仅当&quot;型充要条件 + 导数符号分类讨论 · 真题锚定：2024新高考Ⅰ卷T18（导数+函数性质综合）</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：2024年改革后导数不再是&quot;求导→找零点→判单调&quot;的固定套路，而是作为研究函数<strong>几何性质</strong>（对称性）与<strong>不等式充要条件</strong>的工具。核心：把&quot;中心对称&quot;翻译成代数语言 $f(x)+f(2a-x)=2b$。</p></blockquote>
+<hr>
+<h3>题型识别标志</h3>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;证明曲线 $y=f(x)$ 是中心对称图形&quot;</td><td>对称性证明</td><td>证 $f(x)+f(2a-x)=2b$ 恒成立（或平移后证奇函数）</td></tr><tr><td>&quot;若 $f(x)>c$ 当且仅当 $m<x<n$&quot;</td><td>充要条件 + 参数范围</td><td>先由端点/解定参，再证充分性（单调性）</td></tr><tr><td>&quot; $f'(x)\ge0$ ，求参数最小值&quot;</td><td>恒成立/单调</td><td>分离后求最值，结合基本不等式</td></tr></table></div>
+<hr>
+<h3>标准化解题路径（导数压轴五步法）</h3>
+<h4>第一步：定定义域</h4>
+<p>$f(x)=\ln\frac{x}{2-x}+ax+b(x-1)^3$，由 $\frac{x}{2-x}>0$ 得 <strong>$x\in(0,2)$</strong>。</p>
+<h4>第二步：第(1)问——求参数最小值</h4>
+<p>$b=0$ 时 $f(x)=\ln\frac{x}{2-x}+ax$，$f'(x)=\frac{2}{x(2-x)}+a$。 由 $x(2-x)\le1$（当 $x=1$ 取等），得 $f'(x)_{\min}=2+a$；由 $f'(x)\ge0$ 得 $a\ge-2$，<strong>$a_{\min}=-2$</strong>。</p>
+<h4>第三步：第(2)问——中心对称证明</h4>
+<p>计算 $f(2-x)+f(x)$： $$\ln\frac{2-x}{x}+a(2-x)+b(1-x)^3+\ln\frac{x}{2-x}+ax+b(x-1)^3=2a$$ 故对任意 $x\in(0,2)$ 有 $f(2-x)+f(x)=2a$，即曲线关于点 <strong>$(1,a)$</strong> 中心对称。</p>
+<h4>第四步：第(3)问——充要条件转化</h4>
+<p>&quot; $f(x)>-2$ 当且仅当 $1<x<2$ &quot; ⇒ $x=1$ 是边界解 ⇒ 令 $g(x)=f(x)+2$，则 $g(1)=0$ 且 $g(x)>0\Leftrightarrow x\in(1,2)$。 由 $g(1)=0$ 得 $a=-2$。</p>
+<h4>第五步：分类讨论定 $b$</h4>
+<p>$g'(x)=\frac{2}{x(2-x)}+3b(x-1)^2=(x-1)^2\left[\frac{2}{x(2-x)(x-1)^2}+3b\right]$。 令 $h(x)=\frac{2}{x(2-x)}+3b$（$x\in(1,2)$），$h$ 在 $(1,2)$ 单调增，$h(1)=2+3b$。</p>
+<ul>
+<li>若 $b<-\frac23$：存在零点使 $g$ 在 $(1,2)$ 递减，不符；</li>
+<li>若 $b\ge-\frac23$：$g'(x)\ge0$，$g$ 在 $(1,2)$ 单调增，结合 $g(1)=0$ 得 $g(x)>0$ 当且仅当 $1<x<2$。</li>
+</ul>
+<p>故 <strong>$b\in[-\frac23,+\infty)$</strong>。</p>
+<hr>
+<h3>真题母题（2024 新课标Ⅰ卷·第18题，17分）</h3>
+<p><strong>题目</strong>：已知函数 $f(x)=\ln\frac{x}{2-x}+ax+b(x-1)^3$。 (1) 若 $b=0$，且 $f'(x)\ge0$，求 $a$ 的最小值； (2) 证明：曲线 $y=f(x)$ 是中心对称图形； (3) 若 $f(x)>-2$ 当且仅当 $1<x<2$，求 $b$ 的取值范围。</p>
+<p><strong>解析</strong>：见上述五步法。结论：(1) $-2$；(2) 关于 $(1,a)$ 中心对称；(3) $[-\frac23,+\infty)$。</p>
+<p><strong>关键提炼</strong>：第(2)问&quot;对称即 $f(x)+f(2a-x)=2b$&quot;，不要试图求导找极值；第(3)问&quot;当且仅当&quot;=充要，先由端点定参再证单调性，是2024新考法。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="高二深化_数学_典型题型与方法_恒成立与存在性问题通法.html">高二深化_数学_典型题型与方法_恒成立与存在性问题通法</a> — 恒成立/存在性通法（前置基础）</li>
+<li><a href="高二深化_数学_典型题型与方法_导数零点问题分类讨论框架.md">高二深化_数学_典型题型与方法_导数零点问题分类讨论框架</a> — 导数符号分类讨论（同卷T18(3)延伸）</li>
+<li><a href="../素材与拓展/高三冲刺_数学_素材与拓展_泰勒展开与凸凹性放缩技巧.md">高三冲刺_数学_素材与拓展_泰勒展开与凸凹性放缩技巧</a> — 凸凹性/放缩在压轴中的应用</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>2024年新课标Ⅰ卷T18是&quot;反套路&quot;代表作：不考零点偏移、不考隐零点，而考几何对称与充要条件，提醒广东考生<strong>不押题、重理解</strong>。</li>
+<li>第(1)问用基本不等式 $x(2-x)\le1$，是高一筑基内容的直接调用，属于&quot;送分&quot;，务必拿满。</li>
+<li>第(3)问本质是<strong>导数零点/符号分类讨论</strong>，与&quot;导数零点问题分类讨论框架&quot;卡一脉相承。</li>
+</ul>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高三冲刺</code> <code>#难度5</code> <code>#导数</code> <code>#中心对称</code> <code>#恒成立</code> <code>#分类讨论</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>

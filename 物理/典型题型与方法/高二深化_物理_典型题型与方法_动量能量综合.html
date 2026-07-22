@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>动量能量综合（动量守恒 + 动能定理 + 机械能守恒） | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="物理">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">动量能量综合（动量守恒 + 动能定理 + 机械能守恒）</span></li></ol>
+<h1 class="kb-title">动量能量综合（动量守恒 + 动能定理 + 机械能守恒）</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：力学三大观点综合专题 / 广东选择性考试计算题高频（2021广东卷T13、2022广东卷T13）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（动量+能量综合是广东卷计算题压轴常客，2021广东卷T13、2022广东卷T13均为此类）· 中档偏难 · 常以&quot;传统文化器具&quot;&quot;自动装置&quot;为情境（算盘、自动雨伞），隐含碰撞+摩擦+多过程 · 等级赋分：计算题过程分丰厚，写出动量守恒与能量方程是保分关键</div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;碰撞时间极短&quot;&quot;打击/爆炸&quot;</td><td>动量守恒（瞬间过程）</td><td>碰撞前后动量守恒，先求碰后速度</td></tr><tr><td>&quot;光滑水平面&quot;&quot;系统不受外力&quot;</td><td>动量守恒</td><td>$m_1v_1+m_2v_2=(m_1+m_2)v_{共}$</td></tr><tr><td>&quot;摩擦/阻力&quot;&quot;滑行停下&quot;</td><td>动能定理/功能关系</td><td>$W_{合}=\Delta E_k$，摩擦力做功与路程有关</td></tr><tr><td>&quot;恰好/临界速度&quot;&quot;最高点&quot;</td><td>能量守恒+圆周临界</td><td>机械能守恒或动能定理求临界</td></tr><tr><td>&quot;完全非弹性碰撞&quot;</td><td>碰后共速</td><td>动量守恒求共速，能量损失 $\Delta E=\frac12\mu m_1m_2/(m_1+m_2)\cdot v_{相对}^2$</td></tr></table></div>
+<h3>标准化解题路径（分步骤）</h3>
+<p><strong>第一步：分段，找&quot;过程节点&quot;</strong></p>
+<ul>
+<li>按&quot;碰撞点&quot;&quot;共速点&quot;&quot;分离点&quot;把运动分为若干段；</li>
+<li>碰撞段（时间极短）→ 动量守恒优先；非碰撞段（有摩擦）→ 动能定理/能量守恒。</li>
+</ul>
+<p><strong>第二步：碰撞瞬间——动量守恒</strong> $$m_1v_1+m_2v_2=m_1v_1'+m_2v_2'\quad(\text{弹性})$$ $$m_1v_1+m_2v_2=(m_1+m_2)v_{共}\quad(\text{完全非弹性})$$</p>
+<p><strong>第三步：非碰撞段——能量/动能定理</strong></p>
+<ul>
+<li>有摩擦：$W_f=-f\cdot s_{路程}=\Delta E_k$</li>
+<li>光滑（仅重力/弹力）：$E_{k1}+E_{p1}=E_{k2}+E_{p2}$</li>
+</ul>
+<p><strong>第四步：联立求解，验证物理意义</strong></p>
+<ul>
+<li>速度方向、位移正负、能量是否非负；</li>
+<li>临界问题先找&quot;恰好&quot;条件（如恰好滑到边界 $x=s_2$）。</li>
+</ul>
+<h3>方法口诀</h3>
+<blockquote><p><strong>&quot;碰撞瞬间动量守，非碰段里能量走</strong><br><strong>摩擦做功看路程，光滑守恒不犯愁</strong><br><strong>分段节点先画清，联立方程解不丢</strong><br>**完全非弹性共速走，能量损失莫漏扣&quot;</p></blockquote>
+<hr>
+<h2>母题1（2021·广东卷 T13，11分）</h2>
+<blockquote><p>广东卷动量+能量综合典型题：以&quot;算盘&quot;为传统文化情境，融合动量守恒碰撞与动能定理多过程。</p></blockquote>
+<p><strong>题目</strong>：算盘是我国古老的计算工具，中心带孔的相同算珠可在算盘的固定导杆上滑动。水平放置的算盘中有甲、乙两颗算珠未在归零位置，甲靠边框b，甲、乙相隔 $s_1=3.5\times10^{-2}\,\text{m}$，乙与边框a相隔 $s_2=2.0\times10^{-2}\,\text{m}$，算珠与导杆间动摩擦因数 $\mu=0.1$。现用手指将甲以 $v_0=0.4\,\text{m/s}$ 的初速度拨出，甲、乙碰撞后甲的速度大小为 $0.1\,\text{m/s}$、方向不变，碰撞时间极短且不计，重力加速度 $g$ 取 $10\,\text{m/s}^2$。 （1）通过计算，判断乙算珠能否滑动到边框a； （2）求甲算珠从拨出到停下所需的时间。</p>
+<p><strong>解</strong>：</p>
+<ul>
+<li>甲、乙滑动加速度均为 $a=\mu g=1\,\text{m/s}^2$。</li>
+<li>甲碰前速度：$v_1^2=v_0^2-2as_1\Rightarrow v_1=0.3\,\text{m/s}$。</li>
+<li>碰撞（动量守恒，质量相同）：$v_1=v_1'+v_3\Rightarrow 0.3=0.1+v_3\Rightarrow v_3=0.2\,\text{m/s}$。</li>
+<li>乙碰后减速至停位移：$x_3=\frac{v_3^2}{2a}=0.02\,\text{m}=s_2$，<strong>恰好滑到边框a</strong>（答(1)：能）。</li>
+<li>甲运动时间：$t_1=\frac{v_0-v_1}{a}=0.1\,\text{s}$，$t_2=\frac{v_1'}{a}=0.1\,\text{s}$，总 $t=0.2\,\text{s}$（答(2)）。</li>
+<li><strong>答</strong>：(1) 能；(2) $0.2\,\text{s}$。</li>
+</ul>
+<hr>
+<h2>母题2（2022·广东卷 T13，12分）</h2>
+<blockquote><p>广东卷完全非弹性碰撞+动能定理综合：以&quot;自动雨伞开伞&quot;为情境。</p></blockquote>
+<p><strong>题目</strong>：竖直放置在水平桌面上的滑杆上套有一个滑块，初始静止。当滑块从A处以初速度 $v_0$ 向上滑动时，受到滑杆的摩擦力 $f$ 为 $1\,\text{N}$，滑块滑到B处与滑杆发生<strong>完全非弹性碰撞</strong>，带动滑杆离开桌面一起竖直向上运动。已知滑块质量 $m$、滑杆质量 $M$、A与B间距离 $h$、重力加速度 $g$。求： （1）滑块在静止时和向上滑动过程中，桌面对滑杆支持力的大小； （2）滑块碰撞前瞬间的速度大小 $v_1$； （3）滑杆向上运动的最大高度 $H$。</p>
+<p><strong>解思路</strong>：</p>
+<ul>
+<li>(1) 静止时 $N_0=(m+M)g$；滑动时滑块对滑杆摩擦力向上 $1\,\text{N}$，故 $N_1=(m+M)g-1$。</li>
+<li>(2) 滑块上滑（动能定理）：$\frac12mv_0^2-fh=\frac12mv_1^2\Rightarrow v_1=\sqrt{v_0^2-2fh/m}$。</li>
+<li>(3) 完全非弹性碰撞（动量守恒）：$mv_1=(m+M)v_{共}$；上抛（动能定理）：$-(m+M)gH=0-\frac12(m+M)v_{共}^2\Rightarrow H=\frac{m^2v_1^2}{2g(m+M)^2}$。</li>
+</ul>
+<blockquote><p>💡 关键：碰撞段<strong>时间极短、外力冲量可忽略</strong>→动量守恒；上滑/上抛段有重力→动能定理。广东卷此类题&quot;情境新、模型旧&quot;，抓住&quot;碰前碰后&quot;两个节点即可。</p></blockquote>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="高二深化_物理_典型题型与方法_力学三大模型通法.html">高二深化_物理_典型题型与方法_力学三大模型通法</a> — 弹簧类碰撞、板块模型均属动量能量综合</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_动量定理与动量守恒定律.html">高二深化_物理_核心知识网络_动量定理与动量守恒定律</a> — 动量守恒条件、碰撞类型、人船模型</li>
+<li><a href="../核心知识网络/高一筑基_物理_核心知识网络_机械能守恒定律.html">高一筑基_物理_核心知识网络_机械能守恒定律</a> — 守恒条件与能量表达式对比</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li><strong>广东卷考情</strong>：动量能量综合是计算题&quot;压轴预备役&quot;，常与碰撞、弹簧、圆弧轨道结合。2021、2022广东卷连续两年以T13考查，2023广东卷T15（传送带+滑槽+平抛）亦含动量守恒。</li>
+<li><strong>易错点</strong>：</li>
+<ol>
+<li>碰撞前后<strong>质量相同</strong>才能直接 $v_1=v_1'+v_3$，质量不同须带质量；</li>
+<li>摩擦力做功用<strong>路程</strong>不是位移，往返要乘2；</li>
+<li>完全非弹性碰撞有动能损失，不能用机械能守恒。</li>
+</ol>
+<li><strong>等级赋分提示</strong>：计算题每步方程都有分，先写&quot;动量守恒/动能定理&quot;原始式，再代入数据，避免跳步丢分。</li>
+</ul>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+</body>
+</html>
