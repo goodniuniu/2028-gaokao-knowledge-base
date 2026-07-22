@@ -195,6 +195,15 @@ MathJax = {
 <li>✅ 阶段1.4成果已提交（commit e2ee9a9）</li>
 </ul>
 <hr>
+<h3>2026-07-22 阶段2.2 广东考情精确化 + 阶段2.3 关联卡片检测（详见 <a href="03_优化完善计划.html">03_优化完善计划.md</a>）</h3>
+<ul>
+<li>✅ <strong>2.3 关联卡片检测</strong>：新建 <code>check_backlinks.py</code>（断链/路径不规范/单向引用 + <code>--fix-paths</code> 自动修复）；全库216卡提取635条链接，真断链64、路径不规范90、单向461、双向174；自动修复89条路径不规范链接（可逆，git可回溯）</li>
+<li>✅ <strong>2.2 广东考情精确化</strong>：六科「典型题型与方法」维度86张全量精确化（子代理分科并行，基于卡内母题/真实真题）；全库A类（已锚定年份+题号）35→63，典型题型维度A类19→47、D类（笼统）归零</li>
+<li>⚠️ 6张卡考情年份由子代理依真实高考真题常识补充（卡内母题未注明，如2023作文&quot;故事的力量&quot;、2024新高考Ⅰ卷T9-T11），非编造，后续可在母题段补注年份闭环</li>
+<li>✅ 工程三闸门通过：build_site.py 无断链 / check_html_md_consistency.py 0不一致 / kb_audit.py 216张0缺HTML</li>
+<li>✅ 新增审计脚本 <code>gd_kaotiqing_audit.py</code>（广东考情现状审计）；AGENTS.md 脚本表补充 check_backlinks.py / gd_kaotiqing_audit.py</li>
+<li>⏳ 待续：真断链64 / 单向461 留作后续内容补全；核心知识网络(56张C类)与易错维度考情精确化、阶段2.4复盘机制运转未做</li>
+</ul>
 <blockquote><p>💡 重启后可直接说&quot;继续补充第三批示意图&quot;或&quot;继续完善XX功能&quot;，我会从当前状态接续。</p></blockquote>
 <!-- KB-CONTENT-END -->
 </article>

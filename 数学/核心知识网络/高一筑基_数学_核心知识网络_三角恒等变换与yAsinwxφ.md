@@ -108,6 +108,8 @@ $$\cos(2\alpha+2\beta)=1-2\sin^2(\alpha+\beta)=1-2\times\frac{4}{9}=\frac{1}{9}$
 
 ---
 
+
+- [【卡片标题】三角函数与解三角形大题](../典型题型与方法/高二深化_数学_典型题型与方法_三角函数与解三角形大题.md)
 ## 备注
 - 易错点：辅助角公式中 $\tan\varphi = \frac{b}{a}$，注意 $\varphi$ 的象限由 $a, b$ 共同决定，不是仅由 $\frac{b}{a}$ 决定
 - 三角大题化简的标准路径：诱导公式 $\rightarrow$ 和差/倍角展开 $\rightarrow$ 降幂 $\rightarrow$ 辅助角公式 $\rightarrow$ $y = A\sin(\omega x + \varphi)$ 形式

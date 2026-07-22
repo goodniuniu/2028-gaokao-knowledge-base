@@ -25,7 +25,7 @@ ROOT = Path(__file__).parent
 SUBJECTS = ["语文", "数学", "英语", "物理", "化学", "生物", "方法"]
 EXCLUDE_NAMES = {"index.md"}
 EXCLUDE_PREFIX = ("索引_",)
-LINK_RE = re.compile(r"-\s*\[([^\]]+)\]\(([^)]+)\)")
+LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 HEAD_RE = re.compile(r"^#\s+(.+)$", re.M)
 REPORT = ROOT / "复盘追踪" / "_backlinks_report.txt"
 
