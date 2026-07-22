@@ -86,6 +86,41 @@ MathJax = {
 <h3>记忆口诀/技巧</h3>
 <blockquote><p><strong>场强方向口诀</strong>：正电荷受力方向为场强方向，负电荷相反。<br><strong>电势高低口诀</strong>：沿电场线方向电势降低，正电荷在高电势处电势能大。<br><strong>广东情境提示</strong>：广东卷常考带电粒子在电场中的偏转（示波器、喷墨打印、静电除尘等科技情境），注意从情境中提取 $E$ 的方向和 $d$ 的取值。</p></blockquote>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;两点电荷&quot;&quot;场强 $E=kQ/r^2$&quot;</td><td>点电荷电场叠加</td><td>矢量合成（平行四边形定则），$E=kQ/r^2$</td></tr><tr><td>&quot;等势面&quot;&quot;电势高低&quot;&quot;电场线方向&quot;</td><td>电势/等势面</td><td>沿电场线电势降低；$\varphi_A-\varphi_B=U_{AB}=W_{AB}/q$</td></tr><tr><td>&quot;电场力做功&quot;&quot;电势能变化&quot;</td><td>功能关系（电场）</td><td>$W_{电}=qU=-ΔE_{p电}$</td></tr><tr><td>&quot;带电粒子在电场中偏转&quot;&quot;示波器/喷墨&quot;</td><td>类平抛（匀强电场）</td><td>分解：垂直于场强方向匀速，沿场强方向匀加速</td></tr><tr><td>&quot;电子墨水&quot;&quot;胶囊电极变色&quot;</td><td>电场力方向/做功正负</td><td>正电荷受力沿 $E$，电场力做功看电势升降</td></tr><tr><td>&quot;密立根油滴&quot;&quot;匀速下落加电压&quot;</td><td>电场中的平衡/运动</td><td>受力平衡 $qE=mg$（或含空气阻力 $kv$）</td></tr></table></div>
+<h2>解题路径（带电粒子在电场中运动通法）</h2>
+<blockquote><p>广东卷常以静电除尘、电子墨水、密立根油滴等科技情境命题，核心是&quot;受力→运动→能量&quot;三线分析法。</p></blockquote>
+<h3>第一步：判电场性质</h3>
+<ul>
+<li>匀强电场：$E=U/d$；点电荷电场：$E=kQ/r^2$。</li>
+<li>由电场线/等势面确定 $E$ 方向与电势高低。</li>
+</ul>
+<h3>第二步：分析受力与运动</h3>
+<ul>
+<li>带电粒子：$F=qE$，正负电荷决定 $F$ 方向。</li>
+<li>类平抛：垂直场强方向匀速 $x=v_0t$，沿场强方向匀加速 $y=\frac12at^2$，$a=qE/m$。</li>
+</ul>
+<h3>第三步：能量/功分析</h3>
+<ul>
+<li>只有电场力做功：$E_k+E_p=\text{常量}$，或 $qU=\Delta E_k$。</li>
+<li>电场力做功 $W=qU_{AB}$，与路径无关。</li>
+</ul>
+<h3>第四步：平衡与临界（油滴/电容类）</h3>
+<ul>
+<li>匀速 → 合力为零：$qE=mg$（或其他力平衡）。</li>
+<li>变速 → 列牛顿第二定律或动能定理。</li>
+</ul>
+<h2>母题（2022 广东选择性考试·第14题，16分）</h2>
+<blockquote><p>广东卷电场综合题：以&quot;密立根油滴实验&quot;为情境，考查受力平衡、电场力做功与电势能、以及两油滴合并后的运动。</p></blockquote>
+<p><strong>题目</strong>：密立根通过观测油滴的运动规律证明了电荷的量子性。如图是密立根油滴实验原理示意图，两个水平放置、相距为 $d$ 的足够大金属极板，上极板中央有一小孔。通过小孔喷入一些小油滴，部分油滴带上了电荷。有两个质量均为 $m$、位于同一竖直线上的球形小油滴 $A$ 和 $B$，在时间 $t$ 内都匀速下落了距离 $h_1$。此时给两极板加上电压 $U$（上极板接正极），$A$ 继续以原速度下落，$B$ 经过一段时间后向上匀速运动。$B$ 在匀速运动时间 $t$ 内上升了距离 $h_2$（$h_2\neq h_1$），随后与 $A$ 合并，形成一个球形新油滴，继续在两极板间运动直至匀速。已知球形油滴受到的空气阻力大小为 $f=kmv$，其中 $k$ 为比例系数，$v$ 为油滴运动速率。不计空气浮力，重力加速度为 $g$。求： (1) 比例系数 $k$； (2) 油滴 $A$、$B$ 的带电量和电性；$B$ 上升距离 $h_2$ 电势能的变化量； (3) 新油滴匀速运动速度的大小和方向。</p>
+<p><strong>解</strong>：</p>
+<p><strong>(1)</strong> 未加电压时油滴匀速下落，速度 $v_1=h_1/t$，受力平衡： $$mg=f_1=kmv_1\quad\Rightarrow\quad k=\frac{mg}{mv_1}=\frac{g}{v_1}=\frac{gt}{h_1}$$</p>
+<p><strong>(2)</strong> 加电压后 $A$ 速度不变 → $A$ 不带电（$q_A=0$）。 $B$ 向上匀速，速度 $v_2=h_2/t$，受力平衡（向上电场力、向下重力与阻力）： $$q_BE=mg+kmv_2,\quad E=\frac{U}{d}$$ $$\Rightarrow q_B=\frac{d}{U}\left(mg+kmv_2\right)=\frac{d}{U}\left(mg+\frac{mg}{h_1}\cdot h_2\right)=\frac{mgd}{U}\left(1+\frac{h_2}{h_1}\right)$$ 因 $B$ 向上运动受向上电场力，而极板间电场方向向下（上板正），故 $B$ 带<strong>负电</strong>。 $B$ 上升 $h_2$ 过程中，电场力做功 $W_{电}=q_BEh_2=(mg+kmv_2)h_2$，电势能变化： $$\Delta E_p=-W_{电}=-(mg+kmv_2)h_2=-\frac{mgd}{U}\left(1+\frac{h_2}{h_1}\right)\frac{U}{d}h_2=-mg h_2\left(1+\frac{h_2}{h_1}\right)$$ （即电势能减少该值）。</p>
+<p><strong>(3)</strong> $B$ 与 $A$ 合并后新油滴质量 $2m$。若 $h_2>h_1$（即 $v_2>v_1$），电场力 $F'=q_BE>2mg$，新油滴向上加速，最终匀速时： $$q_BE=2mg+k(2m)v\quad\Rightarrow\quad v=\frac{q_BE-2mg}{2km}=\frac{mg(1+h_2/h_1)-2mg}{2mg/v_1}=\frac{v_1}{2}\left(\frac{h_2}{h_1}-1\right)$$ 方向向上。</p>
+<p><strong>答</strong>：(1) $k=\dfrac{gt}{h_1}$；(2) $A$ 不带电，$B$ 带负电 $q_B=\dfrac{mgd}{U}\left(1+\dfrac{h_2}{h_1}\right)$，电势能减少 $mg h_2\left(1+\dfrac{h_2}{h_1}\right)$；(3) 速度大小 $\dfrac{v_1}{2}\left(\dfrac{h_2}{h_1}-1\right)$，方向向上（$h_2>h_1$ 时）。</p>
+<blockquote><p>💡 关键：油滴&quot;匀速&quot;即合力为零，是列平衡式的突破口；电场力做功与电势能变化互为相反数；合并后质量加倍，重新列平衡求末速。</p></blockquote>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高二深化_物理_核心知识网络_磁场公式体系.html">磁场公式体系</a> — 电磁场综合时联合使用</li>

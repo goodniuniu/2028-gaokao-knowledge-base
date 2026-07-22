@@ -66,6 +66,29 @@ MathJax = {
 <li><strong>奇数项与偶数项的二项式系数和相等</strong>：$C_n^0 + C_n^2 + C_n^4 + \cdots = C_n^1 + C_n^3 + C_n^5 + \cdots = 2^{n-1}$</li>
 </ul>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>求二项式展开特定项系数</td><td>通项公式</td><td>$T_{k+1}=C_n^k a^{n-k}b^k$</td></tr><tr><td>乘积形式（如 $(1-\frac yx)(x+y)^8$）</td><td>分项合并</td><td>逐项匹配目标幂次后相加</td></tr><tr><td>求系数和</td><td>赋值法</td><td>令 $x=1$ 或 $x=-1$</td></tr><tr><td>排列组合计数</td><td>基础方法</td><td>优先法/捆绑/插空/排除</td></tr><tr><td>&quot;二项式系数最大&quot;</td><td>对称性</td><td>中间项（奇偶有别）</td></tr><tr><td>区分概念</td><td>易混点</td><td>&quot;二项式系数&quot; $C_n^k$ ≠ &quot;项的系数&quot;</td></tr></table></div>
+<h2>解题路径（特定项系数四步）</h2>
+<h3>第一步：写通项</h3>
+<p>$$(x+y)^n:\quad T_{k+1}=C_n^k x^{n-k}y^k,$$ 明确 $k$ 对应 $y$ 的幂次。</p>
+<h3>第二步：分项匹配</h3>
+<p>对乘积式，分别令每一项（如 $1$ 与 $-\frac yx$）产生目标幂次。</p>
+<h3>第三步：解方程定 $k$</h3>
+<p>令总指数等于目标，解出 $k$，算出对应系数（注意符号）。</p>
+<h3>第四步：合并得结果</h3>
+<p>各项系数相加。</p>
+<blockquote><p><strong>易错提醒</strong>：混淆&quot;二项式系数&quot;与&quot;项的系数&quot;；乘积展开时漏掉负号的分配；通项中 $k$ 的计数基准弄反。</p></blockquote>
+<h2>母题（2022 新课标Ⅰ卷·第13题，5分）</h2>
+<p><strong>题目</strong>：$(1-\frac{y}{x})(x+y)^8$ 的展开式中 $x^2y^6$ 的系数为 ________。（用数字作答）</p>
+<p><strong>解答</strong>： $$(x+y)^8=\sum_{k=0}^8 C_8^k x^{8-k}y^k.$$</p>
+<ul>
+<li>来自 $1\cdot(x+y)^8$：需 $x^2y^6$，即 $8-k=2\Rightarrow k=6$，系数为 $C_8^6=28$。</li>
+<li>来自 $-\frac yx\cdot(x+y)^8$：$-\frac yx\cdot C_8^k x^{8-k}y^k=-C_8^k x^{7-k}y^{k+1}$，需 $x^2y^6$，即 $7-k=2\Rightarrow k=5$，系数为 $-C_8^5=-56$。</li>
+</ul>
+<p>合计系数：$28+(-56)=-28$。</p>
+<p>故填空为 <strong>$-28$</strong>。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高二深化_数学_核心知识网络_条件概率与离散型随机变量.html">条件概率与离散型随机变量</a> — 计数原理是概率计算的基础</li>

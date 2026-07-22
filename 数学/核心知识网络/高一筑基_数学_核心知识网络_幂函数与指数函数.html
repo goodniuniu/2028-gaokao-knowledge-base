@@ -73,6 +73,30 @@ MathJax = {
 </ul>
 </ul>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>形如 $a^x$ 与 $b^y$ 比较大小</td><td>指数型比大小</td><td>化同底/同指，或取中间值 $0,1$</td></tr><tr><td>含 $e^x$ 与多项式混合</td><td>指数放缩</td><td>构造函数 $f(x)=e^x-1-x\ge0$ 或切线放缩</td></tr><tr><td>含 $\ln$ 的比较</td><td>对数放缩</td><td>用 $\ln(1+x)<x\ (x>0)$、$\ln(1+x)>x-\frac{x^2}{2}$</td></tr><tr><td>指数式与分数比较</td><td>估值夹逼</td><td>两边取对数或双向夹逼定位</td></tr><tr><td>$a^{f(x)}=a^{g(x)}$ 方程/不等式</td><td>同底指数幂</td><td>利用单调性化为 $f(x)=g(x)$ 或比大小</td></tr><tr><td>幂指函数 $x^\alpha$ 比大小</td><td>幂函数性质</td><td>看 $\alpha>0$ 或 $<0$ 及单调性</td></tr></table></div>
+<h2>解题路径（指幂大小比较四步法）</h2>
+<h3>第一步：统一结构</h3>
+<p>尽量化为同底（用 $a^m=e^{m\ln a}$）或同指数；无法统一时寻找中间值 $0,1$。</p>
+<h3>第二步：构造函数放缩</h3>
+<p>常用不等式：$e^x\ge 1+x$（$x=0$ 取等）；$\ln(1+x)<x\ (x>0)$；$\ln(1+x)>x-\frac{x^2}{2}\ (x>0)$。</p>
+<h3>第三步：双向夹逼定位</h3>
+<p>分别证明 $c<\text{某值}<a$ 与 $a<\text{某值}<b$，或直接比大小，把每个数夹在可比较的区间里。</p>
+<h3>第四步：下结论</h3>
+<p>按大小排序，回扣选项。</p>
+<blockquote><p><strong>易错提醒</strong>：放缩方向搞反（$e^x\ge 1+x$ 不能写成 $\le$）；中间值选错导致无法比较；估算 $e\approx2.718$ 时误差过大。</p></blockquote>
+<h2>母题（2022 新课标Ⅰ卷·第7题，5分）</h2>
+<p><strong>题目</strong>：设 $a=0.1e^{0.1},\ b=\frac{1}{9},\ c=-\ln 0.9$，则（　） A. $a<b<c$　B. $c<b<a$　C. $c<a<b$　D. $a<c<b$</p>
+<p><strong>解答</strong>：</p>
+<ul>
+<li>比较 $a$ 与 $b$：由 $e^{0.1}<1.1111\ldots=\frac{10}{9}$，得</li>
+<p>$$a=0.1e^{0.1}<\frac{1}{10}\cdot\frac{10}{9}=\frac19=b.$$</p>
+<li>比较 $c$ 与 $a$：由 $e^{0.1}>1.1$ 得 $a=0.1e^{0.1}>0.11$；又 $c=-\ln 0.9=\ln\frac{10}{9}$，因为 $e^{0.11}>1.116>\frac{10}{9}$，故 $\ln\frac{10}{9}<0.11$，即 $c<0.11<a$。</li>
+<li>综上 $c<a<b$。</li>
+</ul>
+<p>故选 <strong>C</strong>。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_对数函数.html">对数函数</a> — 指数函数与对数函数互为反函数</li>

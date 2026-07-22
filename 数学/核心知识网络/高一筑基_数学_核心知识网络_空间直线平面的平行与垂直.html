@@ -85,6 +85,27 @@ MathJax = {
 <h3>三、空间角与距离</h3>
 <div class="table-wrap"><table><tr><th>类型</th><th>定义</th><th>范围</th></tr><tr><td>异面直线所成角</td><td>平移后相交直线所成的锐角或直角</td><td>$(0, \frac{\pi}{2}]$</td></tr><tr><td>直线与平面所成角</td><td>直线与其在平面内射影所成的角</td><td>$[0, \frac{\pi}{2}]$</td></tr><tr><td>二面角</td><td>两个半平面所成的角</td><td>$[0, \pi]$</td></tr><tr><td>点到平面距离</td><td>点到平面的垂线段长度</td><td>非负</td></tr></table></div>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>棱柱/棱锥中证线线平行</td><td>平行证明</td><td>建系证方向向量共线，或构造平行四边形</td></tr><tr><td>已知棱长求二面角</td><td>向量法</td><td>建系求两平面法向量，用夹角公式</td></tr><tr><td>&quot;正四棱柱/正方体&quot;</td><td>标准建系</td><td>以顶点为原点，三边为坐标轴</td></tr><tr><td>二面角为钝角/特殊角</td><td>取绝对值判断</td><td>$|\cos\theta|=\dfrac{|\vec n_1\cdot\vec n_2|}{|\vec n_1||\vec n_2|}$</td></tr><tr><td>动点在线段上（如 $P$ 在 $BB_1$）</td><td>参数化</td><td>设 $P$ 坐标含参数，列方程解</td></tr><tr><td>证平行且四点不共线</td><td>向量共线</td><td>$\overrightarrow{B_2C_2}=\overrightarrow{A_2D_2}\Rightarrow$ 平行</td></tr></table></div>
+<h2>解题路径（向量法证算五步）</h2>
+<h3>第一步：建系写坐标</h3>
+<p>以互相垂直的三条棱为坐标轴，标出所有已知点坐标（含参数点）。</p>
+<h3>第二步：证平行/垂直</h3>
+<p>平行：证两方向向量相等或成比例；垂直：证点积为 $0$。</p>
+<h3>第三步：求平面法向量</h3>
+<p>设 $\vec n=(x,y,z)$，由 $\vec n\cdot\vec a=0,\ \vec n\cdot\vec b=0$ 解方程组，令某坐标为特殊值。</p>
+<h3>第四步：代入夹角公式</h3>
+<p>二面角满足 $|\cos\theta|=\dfrac{|\vec n_1\cdot\vec n_2|}{|\vec n_1||\vec n_2|}$，注意锐角/钝角由图判断。</p>
+<h3>第五步：解参数得结果</h3>
+<p>解方程求动点参数，回代求线段长。</p>
+<blockquote><p><strong>易错提醒</strong>：法向量求错符号；二面角取绝对值后未结合图形判断锐钝；动点参数范围（如 $0\le\lambda\le4$）漏写。</p></blockquote>
+<h2>母题（2023 新课标Ⅰ卷·第18题，12分）</h2>
+<p><strong>题目</strong>：如图，在正四棱柱 $ABCD-A_1B_1C_1D_1$ 中，$AB=2$，$AA_1=4$。点 $A_2,B_2,C_2,D_2$ 分别在棱 $AA_1,BB_1,CC_1,DD_1$ 上，$AA_2=1$，$BB_2=DD_2=2$，$CC_2=3$。 (1) 证明：$B_2C_2\parallel A_2D_2$； (2) 点 $P$ 在棱 $BB_1$ 上，当二面角 $P-A_2C_2-D_2$ 为 $150^\circ$ 时，求 $B_2P$。</p>
+<p><strong>解答</strong>： 以 $C$ 为原点，$CD,CB,CC_1$ 所在直线分别为 $x,y,z$ 轴建系，则 $C_2(0,0,3),\ B_2(0,2,2),\ D_2(2,0,2),\ A_2(2,2,1)$。</p>
+<p>(1) $\overrightarrow{B_2C_2}=(0,-2,1)$，$\overrightarrow{A_2D_2}=(0,-2,1)$， 两向量相等且不共线，故 $B_2C_2\parallel A_2D_2$。</p>
+<p>(2) 设 $P(0,2,\lambda)\ (0\le\lambda\le4)$。 $\overrightarrow{A_2C_2}=(-2,-2,2)$，$\overrightarrow{PC_2}=(0,-2,3-\lambda)$，$\overrightarrow{D_2C_2}=(-2,0,1)$。 平面 $PA_2C_2$ 的法向量 $\vec n$：由 $\vec n\cdot\overrightarrow{A_2C_2}=0,\ \vec n\cdot\overrightarrow{PC_2}=0$，取 $\vec n=(\lambda-1,3-\lambda,2)$。 平面 $A_2C_2D_2$ 的法向量 $\vec m$：由 $\vec m\cdot\overrightarrow{A_2C_2}=0,\ \vec m\cdot\overrightarrow{D_2C_2}=0$，取 $\vec m=(1,1,2)$。 由 $|\cos150^\circ|=\dfrac{|\vec n\cdot\vec m|}{|\vec n||\vec m|}$ 得 $$\frac{6}{\sqrt{(\lambda-1)^2+(3-\lambda)^2+4}\cdot\sqrt6}=\frac{\sqrt3}{2}.$$ 化简得 $(\lambda-1)^2+(3-\lambda)^2+4=8$，即 $\lambda^2-4\lambda+3=0$，解得 $\lambda=1$ 或 $\lambda=3$。 $B_2$ 坐标为 $(0,2,2)$，故 $B_2P=|\lambda-2|=1$。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_空间点线面位置关系.html">空间点线面位置关系</a> — 位置关系的基础</li>

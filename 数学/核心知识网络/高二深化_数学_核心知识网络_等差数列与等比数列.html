@@ -56,6 +56,26 @@ MathJax = {
 <li>性质3：项数为 $2n$ 时，$\frac{S_{偶}}{S_{奇}} = q$；项数为 $2n+1$ 时，$\frac{S_{奇} - a_1}{S_{偶}} = q$</li>
 </ul>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>给 $S_n$ 与 $a_n$ 的混合关系</td><td>消去 $S_n$</td><td>$a_n=S_n-S_{n-1}\ (n\ge2)$</td></tr><tr><td>$\{S_n/a_n\}$ 等差/等比</td><td>辅助数列</td><td>设 $b_n=S_n/a_n$ 先求 $b_n$ 通项</td></tr><tr><td>求通项</td><td>累乘/累加</td><td>$\frac{a_n}{a_{n-1}}=f(n)$ 用累乘法</td></tr><tr><td>求和证不等式</td><td>裂项相消</td><td>$\frac1{a_n}$ 裂成差分</td></tr><tr><td>等比数列求和</td><td>讨论 $q$</td><td>必须讨论 $q=1$ 与 $q\ne1$</td></tr><tr><td>前 $n$ 项和最值</td><td>二次/转折</td><td>$S_n$ 是 $n$ 的二次函数或看正负项</td></tr></table></div>
+<h2>解题路径（由 $S_n/a_n$ 关系求通五步）</h2>
+<h3>第一步：设辅助数列</h3>
+<p>令 $b_n=\dfrac{S_n}{a_n}$，利用已知公差（或公比）写出 $b_n$ 通项。</p>
+<h3>第二步：建立 $S_n$ 与 $a_n$ 关系</h3>
+<p>由 $S_n=b_n a_n$，对 $n\ge2$ 用 $a_n=S_n-S_{n-1}$ 代入。</p>
+<h3>第三步：化为比式</h3>
+<p>整理出 $\dfrac{a_n}{a_{n-1}}=f(n)$ 的形式。</p>
+<h3>第四步：累乘求通</h3>
+<p>$$a_n=a_1\prod_{k=2}^n f(k),$$ 化简时注意分子分母大量相消。</p>
+<h3>第五步：裂项证不等式</h3>
+<p>将 $\dfrac1{a_n}$ 裂项为差分，求和后放缩。</p>
+<blockquote><p><strong>易错提醒</strong>：忽略 $n=1$ 的验证；累乘时上下标约错；等比数列求和忘讨论 $q=1$。</p></blockquote>
+<h2>母题（2022 新课标Ⅰ卷·第17题，10分）</h2>
+<p><strong>题目</strong>：记 $S_n$ 为数列 $\{a_n\}$ 的前 $n$ 项和，已知 $a_1=1$，$\left\{\dfrac{S_n}{a_n}\right\}$ 是公差为 $\dfrac13$ 的等差数列。 (1) 求 $\{a_n\}$ 的通项公式； (2) 证明：$\dfrac1{a_1}+\dfrac1{a_2}+\cdots+\dfrac1{a_n}<2$。</p>
+<p><strong>解答</strong>： (1) 设 $b_n=\dfrac{S_n}{a_n}$，则 $b_1=\dfrac{S_1}{a_1}=1$， $$b_n=1+\frac13(n-1)=\frac{n+2}{3},\quad\text{即 }S_n=\frac{n+2}{3}a_n.$$ 对 $n\ge2$，$a_n=S_n-S_{n-1}=\frac{n+2}{3}a_n-\frac{n+1}{3}a_{n-1}$， 整理得 $a_n(1-n)=-(n+1)a_{n-1}$，即 $$\frac{a_n}{a_{n-1}}=\frac{n+1}{n-1}.$$ 累乘得 $$a_n=a_1\prod_{k=2}^n\frac{k+1}{k-1}=\frac{3\cdot4\cdots(n+1)}{1\cdot2\cdots(n-1)}=\frac{n(n+1)}{2}.$$ 当 $n=1$ 时 $a_1=1$ 也满足，故 $a_n=\dfrac{n(n+1)}{2}$。</p>
+<p>(2) $\dfrac1{a_n}=\dfrac{2}{n(n+1)}=2\left(\dfrac1n-\dfrac1{n+1}\right)$， $$\sum_{k=1}^n\frac1{a_k}=2\left(1-\frac1{n+1}\right)=2-\frac{2}{n+1}<2.$$ 证毕。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_函数零点与函数模型.html">函数零点与函数模型</a> — 数列与函数的联系（$S_n$ 是 $n$ 的二次函数）</li>

@@ -73,6 +73,30 @@ MathJax = {
 <li>$2\pi - \alpha$ 与 $\alpha$：终边关于 $x$ 轴对称</li>
 </ul>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;已知 $\tan\theta=k$，求关于 $\sin\theta,\cos\theta$ 的式子&quot;</td><td>同角关系</td><td><strong>切化弦</strong> $\tan\theta=\frac{\sin\theta}{\cos\theta}$，或构 $1=\sin^2\theta+\cos^2\theta$</td></tr><tr><td>&quot;出现 $\sin2\theta,\cos2\theta$&quot;</td><td>倍角</td><td>用 $\sin2\theta=2\sin\theta\cos\theta$ 等降次</td></tr><tr><td>&quot;求 $\sin(\alpha\pm\beta),\cos(\alpha\pm\beta)$&quot;</td><td>和差角</td><td>展开后正余弦互化</td></tr><tr><td>&quot;给角求值含非特殊角&quot;</td><td>诱导/配角</td><td>奇变偶不变、符号看象限；或配成特殊角</td></tr><tr><td>&quot;分子分母同次齐次式&quot;</td><td>齐次式</td><td>同除以 $\cos\theta$ 化为 $\tan\theta$</td></tr><tr><td>&quot;已知终边/单位圆上点坐标&quot;</td><td>定义</td><td>$\sin\alpha=y,\cos\alpha=x,\;r=1$</td></tr></table></div>
+<h2>解题路径（同角+倍角求值三步法）</h2>
+<blockquote><p>650分导向：三角求值是广东卷三角大题第一问的标配，目标是&quot;化为同名、可代入&quot;。</p></blockquote>
+<h3>第一步：统一名称</h3>
+<p>优先&quot;切化弦&quot;或&quot;弦化切&quot;，把不同名函数化为同名，便于约分。</p>
+<h3>第二步：降次配角</h3>
+<p>用倍角公式、平方和公式把式子化为可代入的形式（如分子配成 $(\sin\theta+\cos\theta)^2$）。</p>
+<h3>第三步：代入约分</h3>
+<p>代入已知值（如 $\tan\theta=-2$），注意符号与分母不为零。</p>
+<h2>母题（2021 新课标Ⅰ卷·第6题，5分）</h2>
+<blockquote><p>广东考生真题。典型&quot;切化弦+齐次式&quot;求值，属于三角概念与恒等变换的基础应用。</p></blockquote>
+<p><strong>题目</strong>：若 $\tan\theta=-2$，则 $\dfrac{\sin\theta(1+\sin2\theta)}{\sin\theta+\cos\theta}=$（ ）</p>
+<p>A. $-\dfrac{6}{5}$　B. $-\dfrac{2}{5}$　C. $\dfrac{2}{5}$　D. $\dfrac{6}{5}$</p>
+<p><strong>解</strong>： $$\begin{aligned}
+\text{原式}&=\frac{\sin\theta(\sin^2\theta+\cos^2\theta+2\sin\theta\cos\theta)}{\sin\theta+\cos\theta}\\
+&=\frac{\sin\theta(\sin\theta+\cos\theta)^2}{\sin\theta+\cos\theta}
+=\sin\theta(\sin\theta+\cos\theta)\\
+&=\frac{\sin^2\theta+\sin\theta\cos\theta}{\sin^2\theta+\cos^2\theta}
+\end{aligned}$$</p>
+<p>上下同除以 $\cos^2\theta$ 得 $$\frac{\tan^2\theta+\tan\theta}{\tan^2\theta+1}=\frac{4-2}{4+1}=\frac{2}{5}$$</p>
+<p><strong>答</strong>：选 C。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_三角函数的图象与性质.html">三角函数的图象与性质</a> — 诱导公式是图象分析的基础</li>

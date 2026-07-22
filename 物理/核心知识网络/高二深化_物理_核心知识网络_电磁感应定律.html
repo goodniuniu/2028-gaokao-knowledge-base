@@ -90,6 +90,41 @@ MathJax = {
 <h3>记忆口诀/技巧</h3>
 <blockquote><p><strong>楞次定律速记</strong>：&quot;增反减同&quot;——磁通量增加，感应磁场与原磁场反向；磁通量减小，感应磁场与原磁场同向。<br><strong>右手定则对比</strong>：判断感应电流方向用右手（发电机），判断安培力方向用左手（电动机）。<br><strong>能量守恒核心</strong>：电磁感应过程必伴随能量转化，机械能→电能→焦耳热，或化学能→电能→机械能。<br><strong>广东情境提示</strong>：广东卷常考电磁感应与能量结合的情境题（如磁悬浮、无线充电、电磁制动），注意从能量守恒角度列方程，比动力学分析更简洁。</p></blockquote>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;线框切割磁感线&quot;&quot;ab边以速度v运动&quot;</td><td>动生电动势</td><td>$E=BLv$；右手定则判电流方向</td></tr><tr><td>&quot;磁场随时间变化&quot;&quot;B-t图像斜率&quot;</td><td>感生电动势</td><td>$E=nS\Delta B/\Delta t$（法拉第定律）</td></tr><tr><td>&quot;求安培力&quot;&quot;线框受磁力&quot;</td><td>动生+安培力</td><td>$F_安=BIL=B^2L^2v/R$</td></tr><tr><td>&quot;求热量Q&quot;&quot;焦耳热&quot;</td><td>能量守恒</td><td>动能→电能→焦耳热，$Q=I^2Rt$ 或能量守恒</td></tr><tr><td>&quot;磁通量&quot;&quot;t时刻穿过线框的Φ&quot;</td><td>磁通量计算</td><td>$\Phi=BS$（注意方向与正负）</td></tr><tr><td>&quot;导轨单杆/双杆&quot;</td><td>导轨模型</td><td>&quot;源—路—力&quot;三步，最终匀速 $F=F_安$</td></tr></table></div>
+<h2>解题路径（电磁感应&quot;源—路—力—能&quot;四步法）</h2>
+<blockquote><p>广东卷电磁感应多为压轴计算题（磁悬浮、无线充电、电磁制动），按步骤赋分，写对关键式即可拿可观分数。</p></blockquote>
+<h3>第一步：源分析（定电动势）</h3>
+<ul>
+<li>动生（切割）：$E=BLv$（$B\perp v\perp L$ 两两垂直）。</li>
+<li>感生（磁场变）：$E=n\dfrac{\Delta\Phi}{\Delta t}=nS\dfrac{\Delta B}{\Delta t}$。</li>
+</ul>
+<h3>第二步：路分析（画等效电路）</h3>
+<ul>
+<li>导体棒/线框视为电源，内阻=导体电阻。</li>
+<li>用右手定则或楞次定律判电流方向（&quot;增反减同&quot;）。</li>
+</ul>
+<h3>第三步：力分析（运动状态）</h3>
+<ul>
+<li>安培力 $F_安=BIL=\dfrac{B^2L^2v}{R}$（切割型典型结果）。</li>
+<li>单杆无外力：加速度减小，最终静止；恒外力：最终匀速 $F=F_安$。</li>
+</ul>
+<h3>第四步：能量分析（求热量/功）</h3>
+<ul>
+<li>能量守恒：机械能→电能→焦耳热。</li>
+<li>$Q=I^2Rt$，或对全过程 $W_{外}=Q+\Delta E_k$。</li>
+</ul>
+<h2>母题（2023 广东选择性考试·第14题，14分）</h2>
+<blockquote><p>广东卷电磁感应压轴题：动生与感生综合，考查安培力、瞬时磁通量与焦耳热。</p></blockquote>
+<p><strong>题目</strong>：光滑绝缘的水平面上有垂直平面的匀强磁场，磁场被分成区域Ⅰ和Ⅱ，宽度均为 $h$，俯视图如图(a)所示；两磁场磁感应强度随时间 $t$ 的变化如图(b)所示，$0\sim\tau$ 时间内两区域磁场恒定、方向相反，磁感应强度大小分别为 $2B_0$ 和 $B_0$。一电阻为 $R$、边长为 $h$ 的刚性正方形金属框 $abcd$ 平放在水平面上，$ab$、$cd$ 边与磁场边界平行。$t=0$ 时线框 $ab$ 边刚好跨过区域Ⅰ的左边界以速度 $v$ 向右运动。在 $\tau$ 时刻，$ab$ 边运动到距区域Ⅰ左边界 $\frac h2$ 处，线框速度近似为零，此时线框被固定，如图(a)中虚线框所示。随后 $\tau\sim2\tau$ 时间内，Ⅰ区磁感应强度线性减小到 0；$\tau\sim3\tau$ 时间内，Ⅱ区磁场也线性减小到 0。求： (1) $t=0$ 时线框所受的安培力 $F$； (2) $t=1.2\tau$ 时穿过线框的磁通量 $\Phi$； (3) $2\tau\sim3\tau$ 时间内，线框中产生的热量 $Q$。</p>
+<p><strong>解</strong>：</p>
+<p><strong>(1)</strong> $t=0$ 时 $ab$ 边在Ⅰ区（$2B_0$）、$cd$ 边在Ⅱ区（$B_0$），两边均切割，由右手定则两电动势均顺时针： $$E=2B_0hv+B_0hv=3B_0hv$$ $$I=\frac{E}{R}=\frac{3B_0hv}{R}$$ $ab$ 边安培力 $F_1=2B_0Ih$，$cd$ 边安培力 $F_2=B_0Ih$，由左手定则均向左，合力： $$F=F_1+F_2=3B_0Ih=\frac{9B_0^2h^2v}{R}$$ 方向水平向左。</p>
+<p><strong>(2)</strong> $t=1.2\tau$ 时Ⅰ区 $B=2B_0+\dfrac{0-2B_0}{2\tau}\cdot0.2\tau=1.6B_0$（向下），Ⅱ区仍为 $B_0$（向上）。线框固定时 $ab$ 边距Ⅰ左边界 $\frac h2$，即线框一半在Ⅰ区、一半在Ⅱ区： $$\Phi=1.6B_0\cdot\frac{h^2}{2}-B_0\cdot\frac{h^2}{2}=0.3B_0h^2$$ 方向垂直纸面向里。</p>
+<p><strong>(3)</strong> $2\tau\sim3\tau$ 仅Ⅱ区磁场由 $B_0$ 线性减到 0，磁通变化率： $$\left|\frac{\Delta\Phi}{\Delta t}\right|=\frac{B_0\cdot h^2}{\tau}$$ $$E_1=\frac{B_0h^2}{\tau},\quad I_1=\frac{E_1}{R}=\frac{B_0h^2}{R\tau}$$ 产生热量： $$Q=I_1^2R\tau=\left(\frac{B_0h^2}{R\tau}\right)^2R\tau=\frac{B_0^2h^4}{R\tau}$$</p>
+<p><strong>答</strong>：(1) $F=\dfrac{9B_0^2h^2v}{R}$，水平向左；(2) $\Phi=0.3B_0h^2$（向里）；(3) $Q=\dfrac{B_0^2h^4}{R\tau}$。</p>
+<blockquote><p>💡 关键：双切割时两电动势同向相加；磁通量要带方向（一正一负相减）；感生电动势用 $E=\left|\Delta\Phi/\Delta t\right|$，热量用 $Q=I^2Rt$。</p></blockquote>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高二深化_物理_核心知识网络_电场公式体系.html">电场公式体系</a> — 电磁场综合中的电场部分</li>

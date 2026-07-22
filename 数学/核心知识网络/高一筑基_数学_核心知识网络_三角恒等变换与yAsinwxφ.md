@@ -50,6 +50,57 @@ $$a\sin x + b\cos x = \sqrt{a^2 + b^2}\sin(x + \varphi)$$
 
 ---
 
+## 题型识别标志
+
+> **看到什么条件 → 立刻想到什么方法**
+
+| 题干关键条件 | 识别为 | 首选方法 |
+|-------------|--------|----------|
+| "已知 $\sin(\alpha-\beta)$、$\cos\alpha\sin\beta$，求 $\cos(2\alpha+2\beta)$" | 和差角+倍角 | 先求 $\sin(\alpha+\beta)$，再用 $\cos2x=1-2\sin^2x$ |
+| "化简三角式求值" | 恒等变换 | 和差、倍角、降幂、辅助角依次使用 |
+| "出现 $\sin A\cos B\pm\cos A\sin B$" | 和差公式 | 逆用 $\sin(A\pm B)$ |
+| "已知两角和与差的正弦/余弦" | 配角 | 用 $\alpha=(\alpha-\beta)+\beta$ 等关系配角 |
+| "化简到 $A\sin(\omega x+\varphi)$" | 辅助角 | $\sqrt{a^2+b^2}\sin(x+\varphi)$ |
+| "求周期/单调区间/最值" | 图象性质 | 先化简成标准型，再整体代入 |
+
+## 解题路径（三角恒等变换求值四步法）
+
+> 650分导向：给值求值的核心是"变角"——把所求角用已知角表示，避免硬算。
+
+### 第一步：看所求
+明确目标角与已知角的关系，确定配角路线（如 $\alpha+\beta=(\alpha-\beta)+2\beta$ 等）。
+
+### 第二步：选公式
+和差角、倍角、降幂、辅助角按需组合。
+
+### 第三步：代已知
+将已知数值代入，求出中间量（如 $\sin(\alpha+\beta)$）。
+
+### 第四步：得结论
+用二倍角等收口，注意符号与取值范围。
+
+## 母题（2023 新课标Ⅰ卷·第8题，5分）
+
+> 广东考生真题。由和差角求中间量、再用二倍角收口，是三角恒等变换的标准流程。
+
+**题目**：已知 $\sin(\alpha-\beta)=\dfrac{1}{3}$，$\cos\alpha\sin\beta=\dfrac{1}{6}$，则 $\cos(2\alpha+2\beta)=$（ ）
+
+A. $\dfrac{7}{9}$　B. $\dfrac{1}{9}$　C. $-\dfrac{1}{9}$　D. $-\dfrac{7}{9}$
+
+**解**：
+由 $\sin(\alpha-\beta)=\sin\alpha\cos\beta-\cos\alpha\sin\beta=\frac{1}{3}$，且 $\cos\alpha\sin\beta=\frac{1}{6}$，得
+$$\sin\alpha\cos\beta=\frac{1}{3}+\frac{1}{6}=\frac{1}{2}$$
+
+于是
+$$\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta=\frac{1}{2}+\frac{1}{6}=\frac{2}{3}$$
+
+故
+$$\cos(2\alpha+2\beta)=1-2\sin^2(\alpha+\beta)=1-2\times\frac{4}{9}=\frac{1}{9}$$
+
+**答**：选 B。
+
+---
+
 ## 关联卡片
 
 - [三角函数的概念与诱导公式](高一筑基_数学_核心知识网络_三角函数的概念与诱导公式.md) — 恒等变换的基础工具

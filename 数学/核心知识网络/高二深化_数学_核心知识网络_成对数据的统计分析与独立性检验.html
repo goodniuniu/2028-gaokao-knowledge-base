@@ -64,6 +64,29 @@ MathJax = {
 <li>等高堆积条形图：直观判断两个分类变量是否相关</li>
 </ul>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>给 $2\times2$ 列联表，问&quot;是否有把握认为有关&quot;</td><td>独立性检验</td><td>算 $\chi^2$ 与临界值比较</td></tr><tr><td>问&quot;有 $99\%$ 把握&quot;</td><td>取临界值</td><td>查表 $k_{0.010}=6.635$</td></tr><tr><td>求经验回归方程 $\hat y=\hat b x+\hat a$</td><td>回归分析</td><td>最小二乘 $\hat b=\frac{\sum(x_i-\bar x)(y_i-\bar y)}{\sum(x_i-\bar x)^2}$</td></tr><tr><td>判断线性相关强弱</td><td>相关系数</td><td>看 $|r|$ 接近 $1$ 的程度、正负表方向</td></tr><tr><td>给条件概率比值 $R$</td><td>比值化简</td><td>用 $P(B|A)=\frac{P(AB)}{P(A)}$ 展开为比值式</td></tr><tr><td>&quot;正相关/负相关&quot;</td><td>方向判断</td><td>$r>0$ 正，$r<0$ 负</td></tr></table></div>
+<h2>解题路径（独立性检验四步）</h2>
+<h3>第一步：列出 $2\times2$ 列联表</h3>
+<p>整理 $a,b,c,d$ 及各行、列合计与总计 $n$。</p>
+<h3>第二步：套 $\chi^2$ 公式</h3>
+<p>$$\chi^2=\frac{n(ad-bc)^2}{(a+b)(c+d)(a+c)(b+d)}.$$</p>
+<h3>第三步：与临界值比较</h3>
+<p>$\chi^2>6.635$ 有 $99\%$ 把握有关；$\chi^2>3.841$ 有 $95\%$ 把握有关。</p>
+<h3>第四步：条件概率比值 $R$</h3>
+<p>用条件概率定义把 $R$ 化为列联表比值，代入频率估计值计算。</p>
+<blockquote><p><strong>易错提醒</strong>：$\chi^2$ 中 $n$ 是总样本量；临界值记错（99% 对应 6.635）；比值 $R$ 的方向与分子分母别颠倒。</p></blockquote>
+<h2>母题（2022 新课标Ⅰ卷·第20题，12分）</h2>
+<p><strong>题目</strong>：一医疗队为研究某地一种地方性疾病与当地居民卫生习惯（分为良好和不够良好两类）的关系，在已患该疾病的人群中随机调查了 $100$ 例（病例组），在未患该疾病的人群中随机调查了 $100$ 人（对照组），得到如下数据：</p>
+<div class="table-wrap"><table><tr><th></th><th>不够良好</th><th>良好</th></tr><tr><td>病例组</td><td>$40$</td><td>$60$</td></tr><tr><td>对照组</td><td>$10$</td><td>$90$</td></tr></table></div>
+<p>(1) 能否有 $99\%$ 的把握认为患该疾病群体与未患该疾病群体的卫生习惯有差异？ (2) 从该地人群中随机选一人，$A$ 表示&quot;选到的人卫生习惯不够良好&quot;，$B$ 表示&quot;选到的人患有该疾病&quot;。记 $$R=\frac{P(B|A)/P(\overline B|A)}{P(B|\overline A)/P(\overline B|\overline A)}$$ 为卫生习惯不够良好对患该疾病风险程度的度量指标。 (i) 证明：$R=\dfrac{P(A|B)P(\overline A|\overline B)}{P(A|\overline B)P(\overline A|B)}$； (ii) 利用调查数据，给出 $P(A|B),P(A|\overline B)$ 的估计值，并利用 (i) 的结果给出 $R$ 的估计值。 附：$\chi^2$ 临界值 $k_{0.05}=3.841,\ k_{0.01}=6.635,\ k_{0.001}=10.828$。</p>
+<p><strong>解答</strong>： (1) 列联表合计：不够良好 $50$、良好 $150$、总计 $200$。 $$\chi^2=\frac{200\times(40\times90-60\times10)^2}{100\times100\times50\times150}=\frac{200\times3000^2}{75\,000\,000}=24.$$ 因为 $24>6.635$，所以有 $99\%$ 的把握认为两者卫生习惯有差异。</p>
+<p>(2)(i) 由 $P(B|A)=\dfrac{P(AB)}{P(A)}$ 等， $$R=\frac{P(AB)P(\overline A\,\overline B)}{P(A\overline B)P(\overline A B)}
+=\frac{P(A|B)P(B)\cdot P(\overline A|\overline B)P(\overline B)}{P(A|\overline B)P(\overline B)\cdot P(\overline A|B)P(B)}
+=\frac{P(A|B)P(\overline A|\overline B)}{P(A|\overline B)P(\overline A|B)}.$$</p>
+<p>(ii) 估计值：$P(A|B)=\frac{40}{100}=0.4$，$P(A|\overline B)=\frac{10}{100}=0.1$， $P(\overline A|B)=\frac{60}{100}=0.6$，$P(\overline A|\overline B)=\frac{90}{100}=0.9$。 $$R\text{ 的估计值}=\frac{0.4\times0.9}{0.1\times0.6}=6.$$</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_统计与概率基础.html">统计与概率基础</a> — 统计基础概念</li>

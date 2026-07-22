@@ -70,6 +70,25 @@ MathJax = {
 <li>乘以 $-i$：顺时针旋转 $90°$</li>
 </ul>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;求复数乘除结果（尤其旋转、伸缩）&quot;</td><td>三角形式</td><td>模相乘、辐角相加；除法模相除、辐角相减</td></tr><tr><td>&quot;复数乘以 $i$&quot;</td><td>旋转</td><td>逆时针旋转 $90^\circ$</td></tr><tr><td>&quot;已知 $z=r(\cos\theta+i\sin\theta)$，求 $z^n$&quot;</td><td>棣莫弗</td><td>$z^n=r^n(\cos n\theta+i\sin n\theta)$</td></tr><tr><td>&quot;化代数→三角&quot;</td><td>互化</td><td>$r=\sqrt{a^2+b^2},\tan\theta=b/a$ 按象限定 $\theta$</td></tr><tr><td>&quot;求 $z_1z_2$ 辐角&quot;</td><td>几何</td><td>辐角相加（模 $r_1r_2$）</td></tr><tr><td>&quot;复数方程的轨迹&quot;</td><td>几何意义</td><td>$\|z\|=r$ 为圆，$\|z-z_0\|=r$ 为圆</td></tr></table></div>
+<h2>解题路径（复数三角形式乘除三步法）</h2>
+<blockquote><p>650分导向：三角形式是复数运算的&quot;几何化&quot;利器，处理旋转、开方、乘方尤其简洁。</p></blockquote>
+<h3>第一步：取模定角</h3>
+<p>将每个复数写成 $r(\cos\theta+i\sin\theta)$，确定模 $r$ 与辐角 $\theta$（按象限）。</p>
+<h3>第二步：模角运算</h3>
+<p>乘法：$r_1r_2$、角 $\theta_1+\theta_2$；除法：$r_1/r_2$、角 $\theta_1-\theta_2$。</p>
+<h3>第三步：回代数（如需）</h3>
+<p>由 $a=r\cos\theta,\;b=r\sin\theta$ 写回 $a+bi$。</p>
+<h2>母题（[代表性示例·待核实：需替换为真实真题]，拟 新课标Ⅰ卷·复数三角形式，5分）</h2>
+<blockquote><p>⚠️ <strong>说明</strong>：新课标Ⅰ卷（2021–2024）复数题均以代数运算（四则、共轭、模）为主，直接考查&quot;三角形式&quot;的真题罕见。以下为代表性强化示例，用于掌握&quot;模相乘、辐角相加&quot;的通法。<br><strong>TODO</strong>：核实此题为真实真题并补全年份题号（建议从教材习题或权威模拟中替换为真实三角形式题）。</p></blockquote>
+<p><strong>题目（代表性）</strong>：设复数 $z_1=2\left(\cos\dfrac{\pi}{6}+i\sin\dfrac{\pi}{6}\right)$，$z_2=\sqrt2\left(\cos\dfrac{\pi}{4}+i\sin\dfrac{\pi}{4}\right)$，求 $z_1z_2$ 的代数形式。</p>
+<p><strong>解</strong>： 由三角形式乘法， $$z_1z_2=2\sqrt2\left[\cos\left(\frac{\pi}{6}+\frac{\pi}{4}\right)+i\sin\left(\frac{\pi}{6}+\frac{\pi}{4}\right)\right]
+=2\sqrt2\left(\cos\frac{5\pi}{12}+i\sin\frac{5\pi}{12}\right)$$</p>
+<p>其中 $\cos\frac{5\pi}{12}=\cos75^\circ=\frac{\sqrt6-\sqrt2}{4}$，$\sin\frac{5\pi}{12}=\sin75^\circ=\frac{\sqrt6+\sqrt2}{4}$，故 $$z_1z_2=2\sqrt2\cdot\frac{\sqrt6-\sqrt2}{4}+i\cdot2\sqrt2\cdot\frac{\sqrt6+\sqrt2}{4}
+=(\sqrt3-1)+i(\sqrt3+1)$$</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><span class="kb-deadlink" title="关联内容尚未创建">复数概念与运算</span> — 代数形式基础（如存在则链接）</li>

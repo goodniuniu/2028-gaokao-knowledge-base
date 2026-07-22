@@ -76,6 +76,26 @@ MathJax = {
 <li>端点处的函数值</li>
 </ul>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;和/积为定值，求另一量的最值&quot;</td><td>基本不等式</td><td><strong>一正二定三相等</strong>，构造 $a+b$ 或 $ab$ 后用 $ab\le\left(\frac{a+b}{2}\right)^2$</td></tr><tr><td>&quot;椭圆/双曲线上动点，求 $\|MF_1\|\cdot\|MF_2\|$ 类乘积&quot;</td><td>圆锥曲线+基本不等式</td><td>用定义 $\|MF_1\|+\|MF_2\|=2a$，再用均值不等式</td></tr><tr><td>&quot;解含参一元二次不等式 $ax^2+bx+c>0$&quot;</td><td>二次不等式</td><td>先求方程根，画抛物线写解集（注意 $a<0$ 时图象翻折）</td></tr><tr><td>&quot;含参不等式恒成立&quot;</td><td>恒成立求参</td><td>分离参数求最值，或等价转为 $a>0$ 且 $\Delta<0$</td></tr><tr><td>&quot;讨论方程根的分布&quot;</td><td>根的分布</td><td>抓四要素：开口、$\Delta$、对称轴、端点函数值</td></tr><tr><td>&quot;求二次函数在某区间最值&quot;</td><td>最值</td><td>看对称轴 $x=-\frac{b}{2a}$ 与区间的位置关系</td></tr></table></div>
+<h2>解题路径（基本不等式求最值三步法）</h2>
+<blockquote><p>650分导向：基本不等式是广东卷选填压轴与解答题放缩的常客，等号能否取到是扣分重灾区。</p></blockquote>
+<h3>第一步：定模型</h3>
+<p>识别是&quot;和定求积最大&quot;还是&quot;积定求和最小&quot;，并列出已知定值（如圆锥曲线中的 $2a$）。</p>
+<h3>第二步：凑形式</h3>
+<p>通过变形（配凑、换元、常数 $1$ 的代换）使各项为正且和/积为定值。例如 $ab$ 与 $a+b$ 互化、$(a+b)^2$ 展开。</p>
+<h3>第三步：验等号</h3>
+<p>检查取等条件是否可取（如 $a=b$ 是否在定义域内），再下结论。避免&quot;正而不等&quot;或&quot;等而不可取&quot;。</p>
+<h2>母题（2021 新课标Ⅰ卷·第5题，5分）</h2>
+<blockquote><p>广东考生做的是同一张新课标Ⅰ卷，此题用椭圆定义+基本不等式求最值，是不等式与解析几何的交汇典型。</p></blockquote>
+<p><strong>题目</strong>：已知 $F_1,F_2$ 是椭圆 $C:\dfrac{x^2}{9}+\dfrac{y^2}{4}=1$ 的两个焦点，点 $M$ 在 $C$ 上，则 $\|MF_1\|\cdot\|MF_2\|$ 的最大值为（ ）</p>
+<p>A. $13$　B. $12$　C. $9$　D. $6$</p>
+<p><strong>解</strong>： 由椭圆定义，$\|MF_1\|+\|MF_2\|=2a=6$。</p>
+<p>由基本不等式： $$\|MF_1\|\cdot\|MF_2\|\le\left(\frac{\|MF_1\|+\|MF_2\|}{2}\right)^2=\left(\frac{6}{2}\right)^2=9$$</p>
+<p>当且仅当 $\|MF_1\|=\|MF_2\|=3$，即 $M$ 为短轴端点时取等号（此时确在椭圆上）。</p>
+<p><strong>答</strong>：最大值为 $9$，选 C。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_集合与常用逻辑用语.html">集合与常用逻辑用语</a> — 不等式解集与集合运算综合</li>

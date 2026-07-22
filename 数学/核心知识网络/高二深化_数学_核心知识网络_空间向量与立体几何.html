@@ -71,6 +71,28 @@ MathJax = {
 <li>点到平面距离：$d = \frac{|\overrightarrow{AP} \cdot \boldsymbol{n}|}{|\boldsymbol{n}|}$</li>
 </ul>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>棱柱/棱锥中求二面角、距离</td><td>向量法</td><td>建系求法向量，用夹角公式</td></tr><tr><td>&quot;直棱柱&quot;&quot;正方体&quot;</td><td>标准建系</td><td>以顶点为原点，三边为坐标轴</td></tr><tr><td>证线面平行/垂直</td><td>向量判定</td><td>$\vec u\cdot\vec n=0$ 平行；$\vec u\parallel\vec n$ 垂直</td></tr><tr><td>求点到平面距离</td><td>等体积或向量</td><td>$d=\frac{|\overrightarrow{AP}\cdot\vec n|}{|\vec n|}$</td></tr><tr><td>已知二面角大小求参数</td><td>解方程</td><td>由 $|\cos\theta|=\frac{|\vec n_1\cdot\vec n_2|}{|\vec n_1||\vec n_2|}$ 解</td></tr><tr><td>面面垂直条件</td><td>建系依据</td><td>交线为轴，找垂线方向</td></tr></table></div>
+<h2>解题路径（空间向量法六步）</h2>
+<h3>第一步：建系</h3>
+<p>优先找三条两两垂直棱（墙角模型），原点选便于计算处，标明坐标轴。</p>
+<h3>第二步：写坐标</h3>
+<p>写出所有已知点坐标；含参数点设参数坐标。</p>
+<h3>第三步：求法向量</h3>
+<p>设 $\vec n=(x,y,z)$，由 $\vec n\cdot\vec a=0,\ \vec n\cdot\vec b=0$ 解方程组，令某坐标为特殊值。</p>
+<h3>第四步：代入公式</h3>
+<p>二面角 $\cos\theta=\dfrac{|\vec n_1\cdot\vec n_2|}{|\vec n_1||\vec n_2|}$；线面角 $\sin\theta=\dfrac{|\vec u\cdot\vec n|}{|\vec u||\vec n|}$。</p>
+<h3>第五步：判断锐钝</h3>
+<p>由图形判断二面角是锐角还是钝角，决定取 $\cos$ 的正负。</p>
+<h3>第六步：解参数/求距离</h3>
+<p>列方程解出动点参数，或代入距离公式。</p>
+<blockquote><p><strong>易错提醒</strong>：建系时未确认三条轴两两垂直；法向量符号错导致二面角锐钝颠倒；漏写&quot;建系—坐标—向量—法向量—公式—结论&quot;六步。</p></blockquote>
+<h2>母题（2022 新课标Ⅰ卷·第19题，12分）</h2>
+<p><strong>题目</strong>：如图，直三棱柱 $ABC-A_1B_1C_1$ 的体积为 $4$，$\triangle A_1BC$ 的面积为 $2\sqrt2$。 (1) 求 $A$ 到平面 $A_1BC$ 的距离； (2) 设 $D$ 为 $A_1C$ 的中点，$AA_1=AB$，平面 $A_1BC\perp$ 平面 $ABB_1A_1$，求二面角 $A-BD-C$ 的正弦值。</p>
+<p><strong>解答</strong>： (1) 由等体积法：$V_{A_1-ABC}=\frac13 V_{\text{棱柱}}=\frac43$。 设 $A$ 到平面 $A_1BC$ 的距离为 $d$，则 $$V_{A-A_1BC}=\frac13 S_{\triangle A_1BC}\cdot d=\frac13\cdot2\sqrt2\cdot d=\frac43,$$ 解得 $d=\sqrt2$。</p>
+<p>(2) 因 $AA_1=AB$，四边形 $ABB_1A_1$ 为正方形，$AB_1\perp A_1B$；又平面 $A_1BC\perp$ 平面 $ABB_1A_1$，交线 $A_1B$，故 $AB_1\perp$ 平面 $A_1BC$，从而 $AB_1\perp BC$。结合 $BB_1\perp BC$ 得 $BC\perp$ 平面 $ABB_1A_1$，即 $BC\perp AB$。 以 $B$ 为原点，$BC,BA,BB_1$ 分别为 $x,y,z$ 轴建系。由条件可解得 $AB=BC=AA_1=2$， $$A(0,2,0),\ B(0,0,0),\ C(2,0,0),\ A_1(0,2,2),\ D(1,1,1).$$ $\overrightarrow{BA}=(0,2,0)$，$\overrightarrow{BD}=(1,1,1)$，$\overrightarrow{BC}=(2,0,0)$。 平面 $ABD$ 的法向量 $\vec n$：由 $\vec n\cdot\overrightarrow{BA}=2y=0,\ \vec n\cdot\overrightarrow{BD}=x+y+z=0$，取 $\vec n=(1,0,-1)$。 平面 $BCD$ 的法向量 $\vec m$：由 $\vec m\cdot\overrightarrow{BC}=2a=0,\ \vec m\cdot\overrightarrow{BD}=a+b+c=0$，取 $\vec m=(0,1,-1)$。 $$\cos\langle\vec n,\vec m\rangle=\frac{1}{\sqrt2\cdot\sqrt2}=\frac12,$$ 故二面角 $A-BD-C$ 的正弦值 $$\sin\theta=\sqrt{1-\left(\frac12\right)^2}=\frac{\sqrt3}{2}.$$</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_空间点线面位置关系.html">空间点线面位置关系</a> — 几何法基础</li>

@@ -119,6 +119,41 @@ MathJax = {
 <h3>记忆口诀/技巧</h3>
 <blockquote><p><strong>&quot;平抛分两头，水平匀速竖直落，时间看高度，射程看初速&quot;</strong><br><strong>&quot;绳球最高点根号下gr，杆球最高点可以为零&quot;</strong> — 临界条件<br><strong>&quot;高轨低速长周期，大机大势小动能&quot;</strong> — 卫星轨道规律（轨道越高，v、ω、a越小，T越大；机械能、引力势能越大，动能越小）<br><strong>&quot;GM=gR²，黄金代换要牢记，表面忽略自转才成立&quot;</strong></p></blockquote>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;水平抛出&quot;&quot;高度差 $h$、初速度 $v_0$&quot;&quot;平抛&quot;</td><td>平抛运动</td><td>分解：水平 $x=v_0t$，竖直 $y=\frac12gt^2$；时间 $t=\sqrt{2h/g}$</td></tr><tr><td>&quot;圆周运动最高点/最低点&quot;&quot;绳/杆模型&quot;</td><td>圆周运动临界</td><td>轻绳 $v_{\min}=\sqrt{gr}$，轻杆 $v_{\min}=0$；牛顿第二定律 $F_{\text{向}}=mv^2/r$</td></tr><tr><td>&quot;卫星绕行星&quot;&quot;周期 $T$、半径 $r$&quot;&quot;同步卫星&quot;</td><td>万有引力天体</td><td>$GMm/r^2=mv^2/r=m\omega^2r=m(2\pi/T)^2r$；黄金代换 $GM=gR^2$</td></tr><tr><td>&quot;探测器亮度周期性变化（行星遮挡）&quot;</td><td>天体公转周期/半径</td><td>由遮挡时长推周期 $T$，再 $r=\sqrt[3]{GMT^2/4\pi^2}$</td></tr><tr><td>&quot;圆锥摆&quot;&quot;水平面内圆周&quot;</td><td>匀速圆周（供需分析）</td><td>竖直方向平衡 + 水平方向 $T\sin\theta=m\omega^2r$</td></tr><tr><td>&quot;斜抛最高点&quot;&quot;速度反向延长线过水平位移中点&quot;</td><td>斜抛/平抛几何</td><td>平抛 $\tan\theta=2\tan\alpha$；反向延长线过中点</td></tr></table></div>
+<h2>解题路径（曲线运动三步法 + 万有引力&quot;一绕二表三比较&quot;）</h2>
+<blockquote><p>广东卷常以&quot;北斗导航、嫦娥探月、空间站、无人机抛投&quot;为情境，平抛与圆周临界是高频难点。</p></blockquote>
+<h3>第一步：判定运动模型</h3>
+<ul>
+<li>平抛/类平抛 → 分解为匀速 + 匀加速，时间 $t$ 是两方向桥梁。</li>
+<li>圆周 → 找圆心、定半径，判临界（绳/杆/拱桥模型）。</li>
+<li>天体 → 判断是绕行（卫星）还是表面（求 $g$）。</li>
+</ul>
+<h3>第二步：列核心方程</h3>
+<ul>
+<li>平抛：$x=v_0t,\ y=\frac12gt^2,\ v_y=gt,\ \tan\theta=\dfrac{v_y}{v_0}=2\tan\alpha$</li>
+<li>圆周：$F_{\text{供}}=F_{\text{需}}=m\dfrac{v^2}{r}=m\omega^2r$</li>
+<li>天体：$G\dfrac{Mm}{r^2}=m\dfrac{v^2}{r}=m\omega^2r=m\dfrac{4\pi^2}{T^2}r$</li>
+</ul>
+<h3>第三步：临界与比较</h3>
+<ul>
+<li>圆周临界：最高点 $v_{\min}=\sqrt{gr}$（绳），或 $v_{\min}=0$（杆）。</li>
+<li>天体比较：同中心天体时 $v\propto1/\sqrt r,\ \omega\propto1/\sqrt{r^3},\ T\propto\sqrt{r^3},\ a\propto1/r^2$。</li>
+</ul>
+<h2>母题（2021 广东选择性考试·第4题，6分）</h2>
+<blockquote><p>广东卷平抛运动典型题：以&quot;长征途中投手榴弹&quot;为情境，综合考查平抛时间、重力功率与机械能守恒（多选题）。</p></blockquote>
+<p><strong>题目</strong>：长征途中，为了突破敌方关隘，战士爬上陡峭的山头，居高临下向敌方工事内投掷手榴弹。战士在同一位置先后投出甲、乙两颗质量均为 $m$ 的手榴弹，手榴弹从投出位置到落地点的高度差为 $h$，在空中的运动可视为平抛运动，轨迹如图所示，重力加速度为 $g$。下列说法正确的有（  ） A. 甲在空中的运动时间比乙的长 B. 两手榴弹在落地前瞬间，重力的功率相等 C. 从投出到落地，每颗手榴弹的重力势能减少 $mgh$ D. 从投出到落地，每颗手榴弹的机械能变化量为 $\frac12mv^2$（动能增量）</p>
+<p><strong>解</strong>：</p>
+<ul>
+<li>平抛运动时间由高度决定：$t=\sqrt{2h/g}$，两弹高度差相同 → 时间相等，A 错。</li>
+<li>落地前瞬间重力功率 $P=mg\cdot v_y=mg\cdot gt=mg^2t$，与时间成正比、与质量成正比，两弹 $m,h$ 相同 → 功率相等，B 对。</li>
+<li>重力做功 $W_G=mgh$ → 重力势能减少 $mgh$，C 对。</li>
+<li>平抛过程只有重力做功，机械能守恒，变化量为 0，D 错。</li>
+</ul>
+<p><strong>答</strong>：选 <strong>BC</strong>。</p>
+<blockquote><p>💡 关键：平抛&quot;时间看高度&quot;是首要结论；重力瞬时功率用 $P=mgv_y$（竖直分量），不是 $mgv$；机械能守恒前提是&quot;只有重力做功&quot;。</p></blockquote>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_物理_核心知识网络_牛顿三定律与受力分析.html">高一筑基_物理_核心知识网络_牛顿三定律与受力分析</a> — 圆周运动向心力由牛顿定律分析，万有引力提供天体向心力</li>

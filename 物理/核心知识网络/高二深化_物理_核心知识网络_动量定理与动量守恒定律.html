@@ -91,6 +91,42 @@ MathJax = {
 <h3>记忆口诀/技巧</h3>
 <blockquote><p><strong>动量守恒三条件</strong>：&quot;无外力、外力零、内力大&quot;——三满足其一即可。<br><strong>弹性碰撞速记</strong>：等质量，换速度；大撞小，同向走；小撞大，反向弹。<br><strong>人船模型速记</strong>：人走船退，人停船停，位移反比于质量。<br><strong>广东情境提示</strong>：广东卷常考动量与能量综合的情境题（如新能源汽车碰撞安全、体育比赛中的碰撞、大湾区交通流量），注意动量守恒是矢量守恒，必须画方向。</p></blockquote>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;碰撞时间极短&quot;&quot;爆炸&quot;&quot;反冲&quot;</td><td>动量守恒</td><td>内力≫外力，系统总动量守恒，先规定正方向</td></tr><tr><td>&quot;冲量&quot;&quot;F-t图像面积&quot;&quot;头锤碰撞气囊&quot;</td><td>动量定理</td><td>$I_{\text{合}}=\Delta p=mv_2-mv_1$；$I$=$F$-$t$ 图面积</td></tr><tr><td>&quot;完全非弹性碰撞&quot;&quot;共速&quot;&quot;粘在一起&quot;</td><td>动量守恒+共速</td><td>$m_1v_1+m_2v_2=(m_1+m_2)v_{\text{共}}$</td></tr><tr><td>&quot;弹性碰撞&quot;&quot;速度交换&quot;</td><td>动量+动能守恒</td><td>等质量速度交换；$v_1'=[(m_1-m_2)v_1+2m_2v_2]/(m_1+m_2)$</td></tr><tr><td>&quot;子弹打木块&quot;&quot;滑块木板&quot;</td><td>动量守恒+能量损失</td><td>未穿出→完全非弹性；穿出→动量定理分段</td></tr><tr><td>&quot;某一方向外力为零&quot;</td><td>单方向动量守恒</td><td>该方向列 $p_{x初}=p_{x末}$</td></tr></table></div>
+<h2>解题路径（动量守恒四步法 + 动量定理冲量法）</h2>
+<blockquote><p>广东卷常以&quot;新能源汽车碰撞安全、安全气囊、体育碰撞&quot;为情境，正负号与方向是主要失分点。</p></blockquote>
+<h3>第一步：选系统、判守恒</h3>
+<ul>
+<li>确定研究对象（谁和谁组成系统）。</li>
+<li>判守恒：系统不受外力 / 外力之和为零 / 内力≫外力（碰撞、爆炸）。</li>
+</ul>
+<h3>第二步：规定正方向</h3>
+<ul>
+<li>通常取初速度方向为正；<strong>矢量式必须带符号运算</strong>。</li>
+<li>单方向守恒时，该方向单独列式。</li>
+</ul>
+<h3>第三步：列式求解</h3>
+<ul>
+<li>动量守恒：$m_1v_1+m_2v_2=m_1v_1'+m_2v_2'$</li>
+<li>动量定理（求冲量/平均力）：$I=\Delta p=F_{\text{平}}\Delta t$</li>
+</ul>
+<h3>第四步：验证合理性（碰撞三判据）</h3>
+<ul>
+<li>动量守恒（必须满足）；</li>
+<li>动能不增（$E_{k末}\le E_{k初}$）；</li>
+<li>速度合理（追碰后 $v_{\text{前}}'\ge v_{\text{后}}'$；原静止被碰体 $v'\ge0$）。</li>
+</ul>
+<h2>母题（2024 广东选择性考试·第14(2)题，约8分）</h2>
+<blockquote><p>广东卷动量定理典型题：以&quot;汽车安全气囊性能测试&quot;为情境，考查 $F$-$t$ 图像面积求冲量及竖直上抛（综合动量定理与运动学）。</p></blockquote>
+<p><strong>题目</strong>：在安全气囊的性能测试中，可视为质点的头锤从离气囊表面高度为 $H=3.2\,\text{m}$ 处做自由落体运动，与正下方气囊发生碰撞。以头锤到气囊表面为计时起点，气囊对头锤竖直方向作用力 $F$ 随时间 $t$ 的变化规律可近似用题图（三角形脉冲）描述。已知头锤质量 $M=30\,\text{kg}$，重力加速度取 $g=10\,\text{m/s}^2$。求： ① 碰撞过程中 $F$ 的冲量大小和方向； ② 碰撞结束后头锤上升的最大高度。</p>
+<p><strong>解</strong>：</p>
+<p><strong>(1) 碰撞前速度</strong> 自由落体：$v_0=\sqrt{2gH}=\sqrt{2\times10\times3.2}=8\,\text{m/s}$（向下）。</p>
+<p><strong>(2) ① 冲量大小</strong> $F$-$t$ 图（底 $0.1\,\text{s}$、高 $6600\,\text{N}$ 的三角形）面积即冲量： $$I_F=\frac12\times0.1\times6600=330\,\text{N·s}$$ 方向竖直向上（气囊对头锤作用力向上）。</p>
+<p><strong>(2) ② 碰撞后上升高度</strong> 取向上为正，作用过程由动量定理： $$I_F-Mgt=Mv-(-Mv_0)\quad (t=0.1\,\text{s})$$ $$330-30\times10\times0.1=30v+30\times8\Rightarrow 300=30v+240\Rightarrow v=2\,\text{m/s}$$ 碰撞后竖直上抛，上升最大高度： $$h=\frac{v^2}{2g}=\frac{2^2}{2\times10}=0.2\,\text{m}$$</p>
+<p><strong>答</strong>：① 冲量 $330\,\text{N·s}$，方向竖直向上；② 最大高度 $0.2\,\text{m}$。</p>
+<blockquote><p>💡 关键：$F$-$t$ 图像面积=冲量；动量定理必须规定正方向并对全过程列式；先求碰前速度再求碰后速度。</p></blockquote>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../典型题型与方法/高二深化_物理_典型题型与方法_力学三大模型通法.html">力学三大模型通法</a> — 板块/传送带/弹簧模型中动量守恒的应用</li>

@@ -89,6 +89,26 @@ MathJax = {
 <h3>八、记忆口诀</h3>
 <blockquote><p><strong>函数定义口诀</strong>：<br>- &quot;非空数集来参与，每个元素有对应&quot;<br>- &quot;唯一输出是核心，一对多就不行&quot;<br>- &quot;垂直检验看图像，一交点是函数&quot;<br>- &quot;同一函数两条件，定义域和法则同&quot;<br>- &quot;定义域优先要牢记，化简可能藏陷阱&quot;</p></blockquote>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;判断 $f(x)$ 的奇偶性&quot;</td><td>奇偶性</td><td>先验定义域关于原点对称，再算 $f(-x)$ 与 $\pm f(x)$</td></tr><tr><td>&quot;已知 $f(x)$ 为奇/偶函数，求参数&quot;</td><td>求参</td><td>由 $f(-x)=\pm f(x)$ 恒成立列方程</td></tr><tr><td>&quot;判断两函数是否为同一函数&quot;</td><td>同一函数</td><td>定义域+对应法则都相同（值域自动同）</td></tr><tr><td>&quot;求复合函数定义域&quot;</td><td>定义域</td><td>内层函数值落在外层定义域内</td></tr><tr><td>&quot;解析式含根号/分母/对数&quot;</td><td>自然定义域</td><td>分母$\neq0$、偶次根号内$\ge0$、真数$>0$</td></tr><tr><td>&quot;分段函数求值&quot;</td><td>分段</td><td>先判自变量落在哪一段</td></tr></table></div>
+<h2>解题路径（函数奇偶性求参三步法）</h2>
+<blockquote><p>650分导向：奇偶性是广东卷送分题（常在第1-2题），但定义域对称这一前提极易被忽略。</p></blockquote>
+<h3>第一步：验定义域</h3>
+<p>确认定义域关于原点对称（否则直接非奇非偶）。</p>
+<h3>第二步：列恒等式</h3>
+<p>由 $f(-x)=f(x)$（偶）或 $f(-x)=-f(x)$（奇）对定义域内任意 $x$ 成立。</p>
+<h3>第三步：解参数</h3>
+<p>比较系数或取特殊值代入，求出参数并代回验证。</p>
+<h2>母题（2021 新课标Ⅰ卷·第13题，5分）</h2>
+<blockquote><p>广东考生真题。以&quot;偶函数&quot;为条件反推解析式中的参数，考查函数三要素中的对应法则与奇偶性。</p></blockquote>
+<p><strong>题目</strong>：已知函数 $f(x)=x^3(a\cdot 2^x-2^{-x})$ 是偶函数，则 $a=$ \_\_\_。</p>
+<p><strong>解</strong>： 由偶函数定义，$f(-x)=f(x)$ 对一切 $x$ 成立。</p>
+<p>计算 $$f(-x)=(-x)^3(a\cdot 2^{-x}-2^x)=-x^3(a\cdot 2^{-x}-2^x)$$</p>
+<p>令其等于 $f(x)=x^3(a\cdot 2^x-2^{-x})$，约去 $x^3$ 得 $$-(a\cdot 2^{-x}-2^x)=a\cdot 2^x-2^{-x}$$</p>
+<p>即 $2^x+2^{-x}=a(2^x+2^{-x})$。因 $2^x+2^{-x}>0$，故 $a=1$。</p>
+<p><strong>答</strong>：$a=1$。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../典型题型与方法/高一筑基_数学_典型题型与方法_函数定义域求解与解析式求法.html">高一筑基_数学_典型题型与方法_函数定义域求解与解析式求法</a> — 定义域的详细求解方法和解析式求法</li>

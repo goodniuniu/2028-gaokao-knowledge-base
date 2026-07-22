@@ -102,6 +102,24 @@ MathJax = {
 <h3>六、记忆口诀</h3>
 <blockquote><p><strong>八大定理口诀</strong>：<br>- 平行：&quot;线线推线面，线面推线线，两线推两面，两面推两线&quot;<br>- 垂直：&quot;两线推线面，线面推线线，线面推两面，两面+垂线推线面&quot;<br>- 总诀：&quot;判定由低维到高维，性质由高维到低维&quot;</p></blockquote>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>给出&quot;面面垂直&quot;</td><td>面面垂直性质</td><td>在一个面内作交线的垂线 $\Rightarrow$ 垂直于另一面</td></tr><tr><td>等腰三角形+中点</td><td>三线合一</td><td>中线即高，得线线垂直</td></tr><tr><td>证线⊥线（如 $OA\perp CD$）</td><td>线面垂直推线线垂直</td><td>先证线⊥面，再由 $CD\subset$ 面得垂直</td></tr><tr><td>求体积且高未知</td><td>等积/建系</td><td>找现成高或用坐标法</td></tr><tr><td>二面角大小已知</td><td>二面角平面角</td><td>三垂线定理或建系求法向量</td></tr><tr><td>比例点（如 $DE=2EA$）</td><td>分点坐标</td><td>用分点公式或向量定比分点</td></tr></table></div>
+<h2>解题路径（立体几何证明·降维四步）</h2>
+<h3>第一步：抓垂直条件</h3>
+<p>出现&quot;面面垂直&quot;立刻在其中一个面内找交线的垂线；出现&quot;等腰+中点&quot;想到三线合一。</p>
+<h3>第二步：证线面垂直</h3>
+<p>用判定定理：直线垂直于平面内两条相交直线 $\Rightarrow$ 线面垂直。</p>
+<h3>第三步：由线面垂直推结论</h3>
+<p>$CD\subset$ 平面，则垂线 $\perp CD$；或得到高用于求体积。</p>
+<h3>第四步：求角或体积</h3>
+<p>二面角用三垂线定理找平面角，或建系用法向量；体积 $V=\frac13S_{底}\cdot h$。</p>
+<blockquote><p><strong>易错提醒</strong>：使用面面垂直性质时，垂线必须在其中一个平面内且垂直于交线；证明步骤必须写清定理名称与条件。</p></blockquote>
+<h2>母题（2021 新课标Ⅰ卷·第20题，12分）</h2>
+<p><strong>题目</strong>：如图，在三棱锥 $A-BCD$ 中，平面 $ABD\perp$ 平面 $BCD$，$AB=AD$，$O$ 为 $BD$ 的中点。 (1) 证明：$OA\perp CD$； (2) 若 $\triangle OCD$ 是边长为 $1$ 的等边三角形，点 $E$ 在棱 $AD$ 上，$DE=2EA$，且二面角 $E-BC-D$ 的大小为 $45^\circ$，求三棱锥 $A-BCD$ 的体积。</p>
+<p><strong>解答</strong>： (1) 在 $\triangle ABD$ 中，$AB=AD$，$O$ 为 $BD$ 中点，故 $AO\perp BD$。 又平面 $ABD\perp$ 平面 $BCD$，交线为 $BD$，且 $AO\subset$ 平面 $ABD$， 由面面垂直性质定理得 $AO\perp$ 平面 $BCD$。 因为 $CD\subset$ 平面 $BCD$，所以 $OA\perp CD$。</p>
+<p>(2) 以 $O$ 为原点，$OD$ 为 $y$ 轴，$OA$ 为 $z$ 轴，在平面 $BCD$ 内过 $C$ 且垂直 $OD$ 的直线为 $x$ 轴建系。设 $AO=m$。 由 $\triangle OCD$ 边长为 $1$ 且 $O$ 为 $BD$ 中点，可取 $D(0,1,0),\ B(0,-1,0),\ C(\frac{\sqrt3}{2},\frac12,0),\ A(0,0,m)$。 由 $DE=2EA$ 得 $E(0,\frac13,\frac{2m}{3})$。 平面 $BCD$ 的法向量为 $\vec m_0=(0,0,1)$。 平面 $EBC$ 的法向量 $\vec n=\overrightarrow{BE}\times\overrightarrow{BC}$，其中 $\overrightarrow{BE}=(0,\frac43,\frac{2m}{3})$，$\overrightarrow{BC}=(\frac{\sqrt3}{2},\frac32,0)$， 得 $\vec n=(-m,\frac{\sqrt3}{3}m,-\frac{2\sqrt3}{3})$。 二面角余弦： $$\cos\theta=\frac{|\vec n\cdot\vec m_0|}{|\vec n||\vec m_0|}=\frac{1}{\sqrt{m^2+1}}.$$ 由 $\theta=45^\circ$ 得 $\frac{1}{\sqrt{m^2+1}}=\frac{\sqrt2}{2}\Rightarrow m=1$，即 $AO=1$。 又 $S_{\triangle BCD}=\frac12\cdot BD\cdot(\text{C 到 }BD\text{ 的距离})=\frac12\cdot2\cdot\frac{\sqrt3}{2}=\frac{\sqrt3}{2}$， 故 $$V_{A-BCD}=\frac13 S_{\triangle BCD}\cdot AO=\frac13\cdot\frac{\sqrt3}{2}\cdot1=\frac{\sqrt3}{6}.$$</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_空间几何体表面积与体积.html">高一筑基_数学_核心知识网络_空间几何体表面积与体积</a> — 空间几何体的计算基础</li>

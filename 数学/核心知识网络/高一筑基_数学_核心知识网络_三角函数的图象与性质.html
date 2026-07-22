@@ -53,6 +53,27 @@ MathJax = {
 <li>初相：$\varphi$</li>
 </ul>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;已知 $f(x)=A\sin(\omega x+\varphi)+b$，给出周期范围&quot;</td><td>求 $\omega$</td><td>由 $T=\frac{2\pi}{\omega}$ 解范围，注意 $\omega>0$</td></tr><tr><td>&quot;图象关于某点 $(x_0,b)$ 中心对称&quot;</td><td>定 $\varphi,b$</td><td>中心处正弦项为 $0$ 且纵坐标为 $b$</td></tr><tr><td>&quot;求 $f(x_0)$ 的具体数值&quot;</td><td>求值</td><td>先定 $\omega,\varphi,b$ 再代入</td></tr><tr><td>&quot;求单调区间/对称轴/对称中心&quot;</td><td>图象性质</td><td>整体代入 $2k\pi-\frac{\pi}{2}\le\omega x+\varphi\le2k\pi+\frac{\pi}{2}$ 等</td></tr><tr><td>&quot;由部分图象求解析式&quot;</td><td>求参</td><td>最高点定 $A$，周期定 $\omega$，特殊点定 $\varphi$</td></tr><tr><td>&quot;两曲线交点个数&quot;</td><td>图象</td><td>五点法作图，数交点</td></tr></table></div>
+<h2>解题路径（$y=A\sin(\omega x+\varphi)$ 参数求解三步法）</h2>
+<blockquote><p>650分导向：广东卷三角大题第一/二问几乎必考&quot;由条件定参&quot;，步骤固定、不跳步。</p></blockquote>
+<h3>第一步：抓周期</h3>
+<p>由已知周期 $T$（或范围）求 $\omega=\frac{2\pi}{T}$，注意 $\omega>0$ 且常需结合范围锁定唯一值。</p>
+<h3>第二步：用对称/最值定参</h3>
+<p>代入对称中心或最值点列方程求 $\varphi,b$。中心点满足正弦部分为 $0$、纵坐标为 $b$；最值点满足正弦部分为 $\pm1$。</p>
+<h3>第三步：代回验解</h3>
+<p>将求得的 $\omega,\varphi,b$ 代回原式，计算目标值并核对取值范围。</p>
+<h2>母题（2022 新课标Ⅰ卷·第6题，5分）</h2>
+<blockquote><p>广东考生真题。由周期范围+中心对称定参，是 $y=A\sin(\omega x+\varphi)+b$ 的经典考法。</p></blockquote>
+<p><strong>题目</strong>：记函数 $f(x)=\sin\left(\omega x+\dfrac{\pi}{4}\right)+b\;(\omega>0)$ 的最小正周期为 $T$。若 $\dfrac{2\pi}{3}<T<\pi$，且 $y=f(x)$ 的图象关于点 $\left(\dfrac{3\pi}{2},2\right)$ 中心对称，则 $f\left(\dfrac{\pi}{2}\right)=$（ ）</p>
+<p>A. $1$　B. $\dfrac{3}{2}$　C. $\dfrac{5}{2}$　D. $3$</p>
+<p><strong>解</strong>： 由 $\frac{2\pi}{3}<T=\frac{2\pi}{\omega}<\pi$，得 $2<\omega<3$。</p>
+<p>中心 $\left(\frac{3\pi}{2},2\right)$ 在图象上且为正弦的平衡位置，故 $b=2$，且 $$\omega\cdot\frac{3\pi}{2}+\frac{\pi}{4}=k\pi\quad(k\in\mathbb Z)$$</p>
+<p>即 $\omega=-\frac{1}{6}+\frac{2}{3}k$。结合 $2<\omega<3$，取 $k=4$ 得 $\omega=\frac{5}{2}$。</p>
+<p>于是 $f(x)=\sin\left(\frac{5}{2}x+\frac{\pi}{4}\right)+2$， $$f\left(\frac{\pi}{2}\right)=\sin\left(\frac{5\pi}{4}+\frac{\pi}{4}\right)+2=\sin\frac{3\pi}{2}+2=-1+2=1$$</p>
+<p><strong>答</strong>：选 A。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_三角函数的概念与诱导公式.html">三角函数的概念与诱导公式</a> — 图象分析的基础</li>

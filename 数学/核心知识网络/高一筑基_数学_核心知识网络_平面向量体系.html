@@ -136,6 +136,33 @@ MathJax = {
 <h3>六、记忆口诀</h3>
 <blockquote><p><strong>向量运算口诀</strong>：<br>- &quot;加平行四，减三角形，数乘伸缩变&quot;<br>- &quot;点积是两积夹余弦，坐标就是对应乘积和&quot;<br>- &quot;垂直点积为零，平行叉积为零&quot;<br>- &quot;单位化除以模长，投影向量点积除模平方&quot;<br>- &quot;建系先找直角，原点选在已知多&quot;<br>- &quot;动点参数用λ，三点共线转化它&quot;<br>- &quot;钝角锐角看点积，正负之后排除共线&quot;</p></blockquote>
 <hr>
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>给坐标求模/夹角</td><td>坐标运算</td><td>$|\vec v|=\sqrt{x^2+y^2},\ \cos\theta=\dfrac{x_1x_2+y_1y_2}{|\vec a||\vec b|}$</td></tr><tr><td>证 $\vec a\perp\vec b$</td><td>垂直判定</td><td>证 $\vec a\cdot\vec b=x_1x_2+y_1y_2=0$</td></tr><tr><td>证 $\vec a\parallel\vec b$</td><td>平行判定</td><td>证 $x_1y_2-x_2y_1=0$</td></tr><tr><td>求与 $\vec a$ 平行的单位向量</td><td>单位向量</td><td>$\pm\dfrac{\vec a}{|\vec a|}$（注意有正负两个）</td></tr><tr><td>几何图中求向量关系</td><td>基底或建系</td><td>选不共线向量为基底，或主动建系</td></tr><tr><td>动点最值问题</td><td>参数化</td><td>三点共线设 $\vec{EN}=\lambda\vec{EF},\ \lambda\in[0,1]$</td></tr></table></div>
+<h2>解题路径（向量运算坐标法五步）</h2>
+<h3>第一步：确定目标</h3>
+<p>明确是求模、夹角、垂直/平行判定，还是向量等式证明。</p>
+<h3>第二步：写坐标或设基底</h3>
+<p>有坐标直接代入；无坐标则建系或选一组不共线向量作为基底。</p>
+<h3>第三步：代入公式计算</h3>
+<p>数量积 $x_1x_2+y_1y_2$；模 $\sqrt{x_1^2+y_1^2}$；夹角余弦 $\dfrac{\vec a\cdot\vec b}{|\vec a||\vec b|}$。</p>
+<h3>第四步：判定与证明</h3>
+<p>垂直 $\Leftrightarrow$ 点积为 $0$；平行 $\Leftrightarrow$ 叉积 $x_1y_2-x_2y_1=0$。</p>
+<h3>第五步：回扣结论</h3>
+<p>特别注意单位向量有 $\pm$ 两个；共线时点积为正也可能同向而非垂直。</p>
+<blockquote><p><strong>易错提醒</strong>：把圆上点 $|\overrightarrow{OP}|$ 当变量而忽略其模为 $1$；垂直与平行条件混淆；单位向量漏掉反向情形。</p></blockquote>
+<h2>母题（2021 新课标Ⅰ卷·第10题，5分）</h2>
+<p><strong>题目</strong>：已知 $O$ 为坐标原点，点 $P_1(\cos\alpha,\sin\alpha)$，$P_2(\cos\beta,-\sin\beta)$，$P_3(\cos(\alpha+\beta),\sin(\alpha+\beta))$，$A(1,0)$，则（　） A. $|\overrightarrow{OP_1}|=|\overrightarrow{OP_2}|$ B. $|\overrightarrow{AP_1}|=|\overrightarrow{AP_2}|$ C. $\overrightarrow{OA}\cdot\overrightarrow{OP_3}=\overrightarrow{OP_1}\cdot\overrightarrow{OP_2}$ D. $\overrightarrow{OA}\cdot\overrightarrow{OP_1}=\overrightarrow{OP_2}\cdot\overrightarrow{OP_3}$</p>
+<p><strong>解答</strong>：</p>
+<ul>
+<li><strong>A</strong>：$|\overrightarrow{OP_1}|=\sqrt{\cos^2\alpha+\sin^2\alpha}=1$，$|\overrightarrow{OP_2}|=\sqrt{\cos^2\beta+(-\sin\beta)^2}=1$，故相等，<strong>A 正确</strong>。</li>
+<li><strong>B</strong>：$|\overrightarrow{AP_1}|^2=(\cos\alpha-1)^2+\sin^2\alpha=2-2\cos\alpha$，$|\overrightarrow{AP_2}|^2=(\cos\beta-1)^2+\sin^2\beta=2-2\cos\beta$，仅当 $\cos\alpha=\cos\beta$ 时相等，一般不成立，<strong>B 错</strong>。</li>
+<li><strong>C</strong>：$\overrightarrow{OA}\cdot\overrightarrow{OP_3}=1\cdot\cos(\alpha+\beta)+0=\cos(\alpha+\beta)$；</li>
+<p>$\overrightarrow{OP_1}\cdot\overrightarrow{OP_2}=\cos\alpha\cos\beta-\sin\alpha\sin\beta=\cos(\alpha+\beta)$，相等，<strong>C 正确</strong>。</p>
+<li><strong>D</strong>：$\overrightarrow{OA}\cdot\overrightarrow{OP_1}=\cos\alpha$；$\overrightarrow{OP_2}\cdot\overrightarrow{OP_3}=\cos\beta\cos(\alpha+\beta)-\sin\beta\sin(\alpha+\beta)=\cos(\alpha+2\beta)$，一般不等于 $\cos\alpha$，<strong>D 错</strong>。</li>
+</ul>
+<p>故选 <strong>AC</strong>。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_复数概念与运算.html">高一筑基_数学_核心知识网络_复数概念与运算</a> — 平面向量与复数的几何表示（$\vec{OZ}$对应复数$z$）</li>
