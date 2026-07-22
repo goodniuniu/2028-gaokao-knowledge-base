@@ -4,6 +4,8 @@ __pycache__/
 
 # 审计产物（由 kb_audit.py 生成，本地保留但不入库）
 复盘追踪/_scan_result.json
+# 关联卡片检测报告（由 check_backlinks.py 生成，本地保留但不入库）
+复盘追踪/_backlinks_report.txt
 
 # 临时产物
 *.tmp
