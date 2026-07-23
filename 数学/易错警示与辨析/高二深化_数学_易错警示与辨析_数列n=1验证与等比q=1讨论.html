@@ -68,6 +68,33 @@ MathJax = {
 <h3>记忆口诀</h3>
 <blockquote><p>- &quot;S减S前一，n从二算起；n等于一时，代回再合体&quot;<br>- &quot;等比求和先问一，q等一是常数列&quot;<br>- &quot;错位相减防q一，分段通项防漏一&quot;</p></blockquote>
 <hr>
+<h3>题型识别标志（陷阱信号）</h3>
+<div class="table-wrap"><table><tr><th>题干/选项信号</th><th>触发易错点</th><th>立即动作</th></tr><tr><td>&quot;已知 Sₙ，求 aₙ&quot; / &quot;Sₙ 与 aₙ 混合型递推&quot;</td><td>n=1 验证漏验</td><td>先算 a₁=S₁，n≥2 用 aₙ=Sₙ−Sₙ₋₁，代回 n=1 检验</td></tr><tr><td>&quot;等比数列求和&quot; / 公比含参数（q=t、q=a+1）</td><td>漏讨论 q=1</td><td>求和前先单独令 q=1（常数列 Sₙ=na₁），再 q≠1</td></tr><tr><td>&quot;错位相减&quot; / 乘 q 相减</td><td>默认 q≠1</td><td>q=1 时无减可错，单独算</td></tr><tr><td>&quot;{aₙ}等比 ⇒ {Sₙ}性质&quot; / &quot;等差数列&quot;</td><td>忽略 q=1 线性情形</td><td>q=1 时 Sₙ 是一次函数，q≠1 时指数型</td></tr><tr><td>多选题&quot;以下说法正确的是&quot;含分段/特例</td><td>等比中项 b²=ac 当充要</td><td>先确认各项≠0；优先验 q=1、d=0 反例</td></tr></table></div>
+<h3>标准化纠错路径（两步法）</h3>
+<p><strong>一、已知 Sₙ 求 aₙ 的标准路径</strong></p>
+<ol>
+<li><strong>n=1</strong>：a₁=S₁，单独算出并记下。</li>
+<li><strong>n≥2</strong>：aₙ=Sₙ−Sₙ₋₁，化简得 f(n)。</li>
+<li><strong>代回检验</strong>：将 n=1 代入 f(n)，等于 a₁ → 合并写 aₙ=f(n)；不等 → <strong>必须写分段</strong>，缺一扣分。</li>
+</ol>
+<p><strong>二、含参等比求和标准路径</strong></p>
+<ol>
+<li>识别公比是否含参数。</li>
+<li><strong>先讨论 q=1</strong>（Sₙ=na₁），再 q≠1（Sₙ=a₁(1−qⁿ)/(1−q)）。</li>
+<li>汇总并检验是否满足题设（递增/Sₙ存在等），舍去矛盾。</li>
+</ol>
+<h3>真题母题（2022 新高考Ⅰ卷 T17）</h3>
+<p><strong>题</strong>：记 Sₙ 为数列 {aₙ} 的前 n 项和，已知 a₁=1，{Sₙ/aₙ} 是公差为 1/3 的等差数列。 (1) 求 {aₙ} 的通项公式；(2) 证明：1/a₁+1/a₂+…+1/aₙ &lt; 2。</p>
+<p><strong>错解</strong>：由 {Sₙ/aₙ} 公差 1/3 得 Sₙ=(n+2)aₙ/3，n≥2 时 aₙ=Sₙ−Sₙ₋₁ 化简得 aₙ=n(n+1)/2；直接落笔&quot;aₙ=n(n+1)/2&quot;，<strong>跳过 n=1 验证书写</strong>——广东卷评卷该步占 1~2 分步骤分，漏写即失。</p>
+<p><strong>正解</strong>（关键步骤）：</p>
+<ul>
+<li>由 Sₙ/aₙ = 1+(n−1)/3 = (n+2)/3，得 Sₙ=(n+2)aₙ/3，Sₙ₋₁=(n+1)aₙ₋₁/3。</li>
+<li>n≥2：aₙ=Sₙ−Sₙ₋₁=(n+2)aₙ/3−(n+1)aₙ₋₁/3 ⇒ aₙ/aₙ₋₁=(n+1)/(n−1)，累乘得 <strong>aₙ=n(n+1)/2</strong>。</li>
+<li><strong>代回检验</strong>：当 n=1 时，上式=1×2/2=1=a₁，成立 ⇒ 合并写 <strong>aₙ=n(n+1)/2（n∈N*）</strong>。</li>
+<li>(2) 由 aₙ=n(n+1)/2 得 1/aₙ=2(1/n−1/(n+1))，裂项求和=2(1−1/(n+1))&lt;2。</li>
+</ul>
+<p><strong>避错要点</strong>：本题 n=1 恰好满足，属&quot;验证通过&quot;型；但书写上必须显式写出&quot;当 n=1 时，上式=a₁，成立&quot;，否则按广东卷评分细则扣步骤分。若遇 n=1 不满足（如 Sₙ−Sₙ₋₁ 化简后 n=1 不成立），则必须写分段通项——这正是本卡&quot;三步法&quot;第三步的意义。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高二深化_数学_核心知识网络_等差数列与等比数列.html">高二深化_数学_核心知识网络_等差数列与等比数列</a> — 两大基本数列的定义、公式与性质体系，本卡片的公式前提即来源于此</li>

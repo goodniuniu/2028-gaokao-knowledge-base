@@ -161,6 +161,27 @@ MathJax = {
 <blockquote><p><strong>焦点位置口诀</strong>：<br>- &quot;焦点轴不明，两轴都要行&quot;<br>- &quot;椭减双加记心间，$a$随大分母走&quot;<br>- &quot;抛物线先标准化，焦点是$\frac{p}{2}$不是$p$&quot;<br>- &quot;设线先问斜率无，$x$轴点用$x=my+t$&quot;</p></blockquote>
 <blockquote><p><strong>定义域端点口诀</strong>：<br>- &quot;求导先定域，区间不出界&quot;<br>- &quot;含参看零点，在域内才分层&quot;<br>- &quot;端点非极值，最值要比齐&quot;<br>- &quot;恒成立问等号，取到取不到先断&quot;<br>- &quot;端点效应必要不充分，回代验证才闭环&quot;</p></blockquote>
 <hr>
+<h3>题型识别标志（陷阱信号）</h3>
+<div class="table-wrap"><table><tr><th>题干/选项信号</th><th>触发陷阱</th><th>立即动作</th></tr><tr><td>&quot;椭圆/双曲线焦点在坐标轴上&quot;（未限定轴）</td><td>陷阱1：焦点轴未讨论</td><td>题目没写&quot;焦点在×轴&quot;，x轴、y轴两种情况都要讨论</td></tr><tr><td>&quot;求离心率 / 写 $a,b,c$ 关系&quot;</td><td>陷阱2：椭减双加混淆</td><td>椭圆 $c^2=a^2-b^2$，双曲线 $c^2=a^2+b^2$，先念&quot;椭减双加&quot;</td></tr><tr><td>&quot;方程 $\dfrac{x^2}{m}+\dfrac{y^2}{n}=1$&quot;</td><td>陷阱3：$a^2$ 归属随轴走</td><td>$a^2$ 取较大分母；异号则为双曲线，正分母对应实轴</td></tr><tr><td>&quot;$y=2x^2$ 等求焦点&quot;</td><td>陷阱4：抛物线未标准化</td><td>化标准形 $x^2=2py$，焦点是 $p/2$ 不是 $p$</td></tr><tr><td>&quot;过焦点设直线&quot;</td><td>陷阱5：斜率不存在</td><td>x轴点用 $x=my+t$ 规避讨论；y轴点用 $y=kx+t$</td></tr><tr><td>&quot;$f(x)=\ln x-ax$ 求单调&quot;</td><td>陷阱6：漏写定义域</td><td>第一步写定义域 $x>0$，单调区间必为定义域子集</td></tr><tr><td>&quot;含参讨论零点&quot;</td><td>陷阱7：零点在定义域内</td><td>先判导数零点是否存在、是否 $\in$ 定义域，再分层</td></tr><tr><td>&quot;闭区间最值&quot;</td><td>陷阱8：端点当极值点</td><td>最值比端点函数值与极值；极值点须是内点</td></tr><tr><td>&quot;恒成立 $f(x)>0$&quot;</td><td>陷阱9：等号取得到/取不到</td><td>标注能否取等：取到写 $\ge$，取不到写 $>$</td></tr><tr><td>&quot;端点效应求参&quot;</td><td>陷阱10：必要非充分</td><td>求出参数后回代验证充分性，不能只写必要条件</td></tr></table></div>
+<h3>标准化纠错路径（「先定位置·先圈范围」纠错法）</h3>
+<p><strong>一、解析几何纠错路径（动笔前先定&quot;位置&quot;）</strong></p>
+<ol>
+<li><strong>定轴</strong>：题目未限定焦点轴 → 椭圆/双曲线 x轴、y轴两种情况都要讨论。</li>
+<li><strong>定关系</strong>：先判曲线类型，写对 $a,b,c$ 关系（椭圆 $c^2=a^2-b^2$，双曲线 $c^2=a^2+b^2$，抛物线 $e=1$）。</li>
+<li><strong>定直线</strong>：过 x轴上点设 $x=my+t$（规避斜率不存在）；抛物线先化标准形再读 $p/2$。</li>
+</ol>
+<p><strong>二、导数纠错路径（动笔前先圈&quot;范围&quot;）</strong></p>
+<ol>
+<li><strong>写定义域</strong>：任何导数题第一步写定义域（$\ln$ 严格 $>0$、根号 $\ge0$、分母 $\ne0$），单调区间必为定义域子集。</li>
+<li><strong>判零点</strong>：含参讨论先判导数零点是否存在、是否在定义域内，再分层。</li>
+<li><strong>比端点</strong>：闭区间最值比较端点函数值与极值；端点不是极值点；恒成立先问&quot;等号取得到吗&quot;，端点效应求出参数后回代验证充分性。</li>
+</ol>
+<h3>真题母题（2024 新高考Ⅰ卷 T12）</h3>
+<p><strong>题</strong>：设双曲线 $C:\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\ (a>0,b>0)$ 的左、右焦点分别为 $F_1,F_2$，过 $F_2$ 作平行于 $y$ 轴的直线交 $C$ 于 $A,B$ 两点，若 $\lvert F_1A\rvert=13$，$\lvert AB\rvert=10$，则 $C$ 的离心率为 \_\_\_\_\_。</p>
+<p><strong>错解</strong>：看到&quot;双曲线&quot;求离心率，下意识套用椭圆关系式 $c^2=a^2-b^2$（椭减），由 $b^2=5a$ 与 $a=4$ 得 $c^2=16-20=-4<0$，出现矛盾仍硬算，或由此得出错误离心率。</p>
+<p><strong>正解</strong>：双曲线满足 $c^2=a^2+b^2$（<strong>双加</strong>）。由 $\lvert AB\rvert=2\dfrac{b^2}{a}=10$ 得 $b^2=5a$；又 $\lvert F_2A\rvert=\dfrac{b^2}{a}=5$，由双曲线定义 $\lvert F_1A\rvert-\lvert F_2A\rvert=2a\Rightarrow 13-5=2a\Rightarrow a=4$；于是 $b^2=20$，$c^2=a^2+b^2=16+20=36\Rightarrow c=6$；故离心率 $e=\dfrac{c}{a}=\dfrac{6}{4}=\boxed{\dfrac{3}{2}}$。</p>
+<p><strong>避错要点</strong>：本题命中本卡<strong>陷阱2（$a,b,c$ 关系：椭减双加）</strong>——椭圆与双曲线的 $c^2$ 关系式恰好相反，错用&quot;椭减&quot;会得到 $c^2<0$ 的荒谬结果。动笔写关系式前，先口头确认&quot;这是椭圆还是双曲线&quot;，把&quot;椭减双加&quot;四个字念一遍，可杜绝此类公式张冠李戴。此外本题焦点已在 x轴（方程明确），未触发陷阱1的分类讨论，但&quot;先定位置&quot;的习惯仍应保留，莫因一题不分类而松懈。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高二深化_数学_核心知识网络_椭圆双曲线抛物线.html">高二深化_数学_核心知识网络_椭圆双曲线抛物线</a> — 三大圆锥曲线定义、标准方程与几何性质的体系化整理</li>
