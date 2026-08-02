@@ -56,6 +56,15 @@ MathJax = {
 <p><strong>解析</strong>： $f'(x)=2(x-1)(x-4)+(x-1)^2=3(x-1)(x-3)$。 单调表：$(-\infty,1)$ 增、$(1,3)$ 减、$(3,+\infty)$ 增。 A：$x=3$ 左减右增→极小值点，对。 B：$0<x<1$ 时 $x^2<x$ 且 $f$ 增，故 $f(x^2)<f(x)$，即 $f(x)>f(x^2)$，B错。 C：$1<x<2\Rightarrow1<2x-1<3$，$f$ 在 $(1,3)$ 减，$f(1)=0,f(3)=-4$，故 $-4<f(2x-1)<0$，C对。 D：令 $g(x)=f(2-x)-f(x)$，展开 $f(2-x)-f(x)=(x-1)^2(-2x+2)=-2(x-1)^3$；$-1<x<0\Rightarrow x-1<0\Rightarrow g(x)>0$，D对。 <strong>答案：ACD</strong>。</p>
 <p><strong>关键提炼</strong>：本题是&quot;求导→单调表→判极值/比大小&quot;的范式，导数是分析一切的源头。</p>
 <hr>
+<h2>自测训练（3道·覆盖单调性·极值·最值）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 求导定单调区间）</p>
+<p>求函数 $f(x) = x^3 - 3x^2 + 2$ 的单调区间和极值。</p>
+<p><strong>第2题</strong>（检验 闭区间最值）</p>
+<p>求函数 $f(x) = x^3 - 6x^2 + 9x - 3$ 在 $[0, 4]$ 上的最大值和最小值。</p>
+<p><strong>第3题</strong>（检验 极值判定陷阱 + 含参讨论）</p>
+<p>已知 $f(x) = \dfrac{1}{3}x^3 - \dfrac{a}{2}x^2 + x$。讨论 $f(x)$ 的单调性。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_恒成立与存在性问题通法.html">高二深化_数学_典型题型与方法_恒成立与存在性问题通法</a> — 恒成立/存在性（前置应用）</li>
@@ -73,6 +82,37 @@ MathJax = {
 <li>训练建议：求导+画单调表练到&quot;盲操&quot;；含参讨论按&quot;根的位置&quot;画数轴，杜绝漏类。</li>
 </ul>
 <blockquote><p>🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高二深化</code> <code>#难度4</code> <code>#导数</code> <code>#单调性</code> <code>#极值最值</code> <code>#含参讨论</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（求导定单调性 + 极值判定）</summary><p>求导：$f'(x) = 3x^2 - 6x = 3x(x-2)$。</p>
+<p>令 $f'(x) = 0$：$x_1 = 0$，$x_2 = 2$。</p>
+<p>列表分析 $f'(x)$ 符号：</p>
+<div class="table-wrap"><table><tr><th>$x$</th><th>$(-\infty, 0)$</th><th>$0$</th><th>$(0, 2)$</th><th>$2$</th><th>$(2, +\infty)$</th></tr><tr><td>$f'(x)$</td><td>$+$</td><td>$0$</td><td>$-$</td><td>$0$</td><td>$+$</td></tr><tr><td>$f(x)$</td><td>递增</td><td>极大值</td><td>递减</td><td>极小值</td><td>递增</td></tr></table></div>
+<ul>
+<li>在 $(-\infty, 0)$ 和 $(2, +\infty)$ 上单调递增，在 $(0, 2)$ 上单调递减。</li>
+<li>极大值：$f(0) = 0 - 0 + 2 = 2$；极小值：$f(2) = 8 - 12 + 2 = -2$。</li>
+</ul>
+<blockquote><p><strong>易错提醒</strong>：$f'(x_0)=0$ 只是极值<strong>必要条件</strong>，必须看 $f'(x)$ 在 $x_0$ 左右是否<strong>变号</strong>。如 $y=x^3$ 在 $x=0$ 处 $f'(0)=0$ 但左右同号，不是极值。</p></blockquote></details>
+<details><summary>▶ 第2题详解（闭区间最值：极值 + 端点比较）</summary><p>求导：$f'(x) = 3x^2 - 12x + 9 = 3(x-1)(x-3)$。</p>
+<p>令 $f'(x) = 0$：$x_1 = 1$，$x_2 = 3$，均在 $[0, 4]$ 内。</p>
+<p>计算极值和端点值：</p>
+<ul>
+<li>$f(0) = -3$</li>
+<li>$f(1) = 1 - 6 + 9 - 3 = 1$（极大值）</li>
+<li>$f(3) = 27 - 54 + 27 - 3 = -3$（极小值）</li>
+<li>$f(4) = 64 - 96 + 36 - 3 = 1$</li>
+</ul>
+<p>比较：$\max = 1$（在 $x=1$ 和 $x=4$ 处），$\min = -3$（在 $x=0$ 和 $x=3$ 处）。</p>
+<p><strong>答</strong>：最大值 $1$，最小值 $-3$。</p>
+<blockquote><p><strong>易错提醒</strong>：闭区间上最值 = 极值 + 端点值 比较。必须<strong>逐一计算所有驻点和端点的函数值</strong>，不能只比较驻点。本题端点 $x=4$ 恰取最大值，漏算必错。</p></blockquote></details>
+<details><summary>▶ 第3题详解（含参讨论：根的位置分类）</summary><p>求导：$f'(x) = x^2 - ax + 1$，判别式 $\Delta = a^2 - 4$。</p>
+<p><strong>情形1</strong>：$a^2 \le 4$（$-2 \le a \le 2$），$\Delta \le 0$，$f'(x) \ge 0$ 恒成立，$f(x)$ 在 $\mathbb{R}$ 上单调递增。（$a = \pm 2$ 时仅在孤立点 $f'=0$，不影响单调性。）</p>
+<p><strong>情形2</strong>：$a^2 > 4$（$a > 2$ 或 $a < -2$），$\Delta > 0$，$f'(x)=0$ 有两根 $x_1 = \dfrac{a-\sqrt{a^2-4}}{2} < x_2 = \dfrac{a+\sqrt{a^2-4}}{2}$。</p>
+<p>$f'(x)$ 符号：$(-\infty, x_1)$ 正、$(x_1, x_2)$ 负、$(x_2, +\infty)$ 正。</p>
+<p>故 $f(x)$ 在 $(-\infty, x_1)$ 和 $(x_2, +\infty)$ 上递增，在 $(x_1, x_2)$ 上递减。</p>
+<p><strong>答</strong>：当 $-2 \le a \le 2$ 时，$f(x)$ 在 $\mathbb{R}$ 上单调递增；当 $a > 2$ 或 $a < -2$ 时，$f(x)$ 在 $\left(-\infty, \dfrac{a-\sqrt{a^2-4}}{2}\right)$ 和 $\left(\dfrac{a+\sqrt{a^2-4}}{2}, +\infty\right)$ 上递增，在 $\left(\dfrac{a-\sqrt{a^2-4}}{2}, \dfrac{a+\sqrt{a^2-4}}{2}\right)$ 上递减。</p>
+<blockquote><p><strong>易错提醒</strong>：含参讨论关键是看 $f'(x)=0$ 的根是否存在、是否在定义域内。以 $\Delta = 0$ 为分界点分类，不遗漏 $\Delta = 0$（仅一个重根，不改变单调性）和 $\Delta < 0$（无根，$f'$ 恒正或恒负）两种情形。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

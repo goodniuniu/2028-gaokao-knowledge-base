@@ -115,6 +115,15 @@ MathJax = {
 <h3>四、高频陷阱与避坑指南</h3>
 <div class="table-wrap"><table><tr><th>陷阱</th><th>说明</th><th>避坑方法</th></tr><tr><td><strong>混淆量词</strong></td><td>将&quot;存在&quot;当作&quot;恒成立&quot;处理，最值取反</td><td>写出∀/∃符号，对照转化表确认</td></tr><tr><td><strong>忽略定义域</strong></td><td>分离参数后未考虑x的范围限制</td><td>每一步标注定义域，最后取交集</td></tr><tr><td><strong>端点效应漏用</strong></td><td>未利用区间端点值缩小参数范围</td><td>先代入端点，获取必要条件</td></tr><tr><td><strong>分类讨论遗漏</strong></td><td>导函数零点与区间位置关系未穷尽</td><td>画数轴，标注零点与区间端点</td></tr><tr><td><strong>最值点不可达</strong></td><td>函数在开区间上无最值，仅有确界</td><td>用极限值代替，注意等号是否可取</td></tr><tr><td><strong>&quot;当且仅当&quot;型</strong></td><td>2024新课标Ⅰ卷新考法，需证充要性</td><td>必要性探路+充分性证明</td></tr></table></div>
 <hr>
+<h2>自测训练（3道·覆盖三大通法 + 双变量转化）</h2>
+<blockquote><p>检验目标：能否在动笔前先判断&quot;该分离参数还是不分离&quot;，以及双变量问题能否正确翻成最值比较。<strong>先独立完成，再展开卡片末尾「参考答案」核对</strong>。每题标注了所检验的方法，方便对号入座查漏补缺。</p></blockquote>
+<p><strong>第1题</strong>（检验 方法1·分离参数法 + 单变量恒成立转化）</p>
+<p>已知函数 $f(x)=\ln x - ax$（$a\in\mathbb{R}$）。若 $\forall x>0$，$f(x)\le 0$ 恒成立，求实数 $a$ 的取值范围。</p>
+<p><strong>第2题</strong>（检验 方法2/3·不分离参数 + 必要性探路）</p>
+<p>已知函数 $f(x)=e^x - 1 - x - ax^2$。若 $\forall x\ge 0$，$f(x)\ge 0$ 恒成立，求实数 $a$ 的取值范围。</p>
+<p><strong>第3题</strong>（检验 双变量最值转化表 + 存在性量词）</p>
+<p>已知函数 $f(x)=x^2-2x$，$g(x)=\dfrac{1}{2}x^2-mx+2$（$x\in[0,2]$）。若 $\forall x_1\in[0,2]$，$\exists x_2\in[0,2]$，使得 $f(x_1)\ge g(x_2)$ 成立，求实数 $m$ 的取值范围。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系.html">高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系</a> — 前置基础</li>
@@ -159,6 +168,33 @@ MathJax = {
 </ul>
 <hr>
 <blockquote><p>🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高二深化</code> <code>#难度4</code> <code>#函数与导数</code> <code>#恒成立</code> <code>#存在性</code> <code>#分离参数</code> <code>#必要性探路</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（分离参数法 + 恒成立转化）</summary><p>$f(x)=\ln x - ax\le 0$ 恒成立，即 $a\ge \dfrac{\ln x}{x}$（$x>0$）恒成立。</p>
+<p>设 $g(x)=\dfrac{\ln x}{x}$（$x>0$），求 $g(x)$ 的最大值： $$g'(x)=\dfrac{\dfrac{1}{x}\cdot x - \ln x\cdot 1}{x^2}=\dfrac{1-\ln x}{x^2}$$</p>
+<p>令 $g'(x)=0$ 得 $x=e$。当 $0<x<e$ 时 $g'(x)>0$（增），当 $x>e$ 时 $g'(x)<0$（减），故 $g(x)_{\max}=g(e)=\dfrac{1}{e}$。</p>
+<p>由 $a\ge g(x)$ 恒成立，得 $a\ge g(x)_{\max}=\dfrac{1}{e}$。</p>
+<p><strong>答</strong>：$a$ 的取值范围为 $\left[\dfrac{1}{e},\,+\infty\right)$。</p>
+<blockquote><p><strong>易错提醒</strong>：① &quot;$f(x)\le 0$ 恒成立&quot;翻译为 $f(x)_{\max}\le 0$，不要翻译成最小值；② 分离后 $\dfrac{\ln x}{x}$ 在 $x\to 0^+$ 时趋于 $-\infty$、$x\to+\infty$ 时趋于 $0$，最大值唯一，结论干净；③ 别漏验证 $g'(x)$ 的符号变化对应&quot;先增后减&quot;。</p></blockquote></details>
+<details><summary>▶ 第2题详解（不分离参数 + 必要性探路）</summary><p>$f(x)=e^x-1-x-ax^2\ge 0$ 恒成立。注意 $f(0)=e^0-1-0-0=0$，端点等号成立，<strong>不宜分离参数</strong>，改用直接构造 + 必要性探路。</p>
+<p>$f'(x)=e^x-1-2ax$，$f'(0)=1-1-0=0$；$f''(x)=e^x-2a$。</p>
+<p><strong>必要性</strong>：若 $f''(0)<0$ 即 $a>\dfrac{1}{2}$，则 $f'(x)$ 在 $x=0$ 附近为减，结合 $f'(0)=0$ 得 $f'(x)<0$（$x$ 小正数），进而 $f(x)<f(0)=0$，不满足。故必要条件为 $a\le \dfrac{1}{2}$。</p>
+<p><strong>充分性</strong>：当 $a\le \dfrac{1}{2}$ 时，$f''(x)=e^x-2a\ge e^0-2a=1-2a\ge 0$（$x\ge 0$），故 $f'(x)$ 在 $[0,+\infty)$ 单调递增；由 $f'(0)=0$ 得 $f'(x)\ge 0$，故 $f(x)$ 在 $[0,+\infty)$ 单调递增；由 $f(0)=0$ 得 $f(x)\ge 0$，成立。</p>
+<p><strong>答</strong>：$a$ 的取值范围为 $\left(-\infty,\,\dfrac{1}{2}\right]$。</p>
+<blockquote><p><strong>易错提醒</strong>：① 端点 $f(0)=0$ 是用&quot;必要性探路&quot;的信号，不是巧合；② 必要条件 $a\le \dfrac{1}{2}$ 缩范围后必须<strong>回头证充分性</strong>，二者缺一不可；③ $f''(x)\ge 0$ 用的是 &quot;$e^x\ge 1$（$x\ge 0$）&quot;，而不是 $e^x\ge 2a$。</p></blockquote></details>
+<details><summary>▶ 第3题详解（双变量最值转化 + 存在性量词）</summary><p>题意 &quot;$\forall x_1$，$\exists x_2$，$f(x_1)\ge g(x_2)$&quot; 即&quot;任意一个 $f(x_1)$ 都要大于等于某个 $g(x_2)$&quot;——把 $f$ 的<strong>最小值</strong>固定下来，要求 $g$ 能取到比它更小的值。</p>
+<p>翻译：$\forall x_1,\exists x_2,\ f(x_1)\ge g(x_2)\ \Leftrightarrow\ f(x)_{\min}\ge g(x)_{\min}$。</p>
+<p>先求 $f(x)=x^2-2x$（$x\in[0,2]$）的最小值：对称轴 $x=1$，$f(1)=1-2=-1$，故 $f(x)_{\min}=-1$。</p>
+<p>再求 $g(x)=\dfrac{1}{2}x^2-mx+2$（$x\in[0,2]$）的最小值，对称轴 $x=m$：</p>
+<ul>
+<li>若 $m<0$：$g$ 在 $[0,2]$ 递增，$g(x)_{\min}=g(0)=2\ge -1$ ✓；</li>
+<li>若 $0\le m\le 2$：$g(x)_{\min}=g(m)=\dfrac{1}{2}m^2-m^2+2=2-\dfrac{1}{2}m^2\ge 2-\dfrac{1}{2}\cdot 4=0\ge -1$ ✓；</li>
+<li>若 $m>2$：$g$ 在 $[0,2]$ 递减，$g(x)_{\min}=g(2)=2-2m+2=4-2m$，需 $4-2m\ge -1$，即 $m\le \dfrac{5}{2}$。</li>
+</ul>
+<p>综合三种情况，$m\in\left(-\infty,\dfrac{5}{2}\right]$。</p>
+<p><strong>答</strong>：实数 $m$ 的取值范围为 $\left(-\infty,\,\dfrac{5}{2}\right]$。</p>
+<blockquote><p><strong>易错提醒</strong>：① &quot;$\forall x_1,\exists x_2$&quot;属&quot;全称+存在&quot;，按转化表是 <strong>$f_{\min}\ge g_{\min}$（小对小）</strong>，不要错写成 $f_{\min}\ge g_{\max}$；② $g(x)$ 在 $[0,2]$ 上的最小值要按对称轴 $x=m$ 与区间位置<strong>分三类</strong>讨论，漏掉中间情形是常见扣分点；③ 区间闭，最值可达，等号可以取到。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

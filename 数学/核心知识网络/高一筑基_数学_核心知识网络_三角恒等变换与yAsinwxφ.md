@@ -101,6 +101,24 @@ $$\cos(2\alpha+2\beta)=1-2\sin^2(\alpha+\beta)=1-2\times\frac{4}{9}=\frac{1}{9}$
 
 ---
 
+## 自测训练（3道·覆盖恒等变换核心公式）
+
+> 先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。
+
+**第1题**（检验 二倍角公式 + 半角公式）
+
+已知 $\cos\alpha = -\dfrac{3}{5}$，$\alpha \in \left(\dfrac{\pi}{2}, \pi\right)$，求 $\cos 2\alpha$ 和 $\sin\dfrac{\alpha}{2}$ 的值。
+
+**第2题**（检验 和差角公式 + 配角法）
+
+已知 $\alpha,\beta$ 均为锐角，$\cos\alpha = \dfrac{4}{5}$，$\cos(\alpha+\beta) = \dfrac{5}{13}$，求 $\cos\beta$ 的值。
+
+**第3题**（检验 辅助角公式 + 标准型性质）
+
+化简 $f(x) = \sin 2x - \sqrt{3}\cos 2x$ 为 $A\sin(\omega x+\varphi)$ 的形式，并求其最小正周期和值域。
+
+---
+
 ## 关联卡片
 
 - [三角函数的概念与诱导公式](高一筑基_数学_核心知识网络_三角函数的概念与诱导公式.md) — 恒等变换的基础工具
@@ -116,3 +134,64 @@ $$\cos(2\alpha+2\beta)=1-2\sin^2(\alpha+\beta)=1-2\times\frac{4}{9}=\frac{1}{9}$
 - 易错点：辅助角公式中 $\tan\varphi = \frac{b}{a}$，注意 $\varphi$ 的象限由 $a, b$ 共同决定，不是仅由 $\frac{b}{a}$ 决定
 - 三角大题化简的标准路径：诱导公式 $\rightarrow$ 和差/倍角展开 $\rightarrow$ 降幂 $\rightarrow$ 辅助角公式 $\rightarrow$ $y = A\sin(\omega x + \varphi)$ 形式
 - 广东卷常考：给定三角函数式化简后求周期、单调区间、最值
+
+---
+
+## 参考答案
+
+> 答案与题目分板块呈现，便于"先做后对"。每题给出规范解答 + 易错提醒，做完一题对一题。
+
+<details>
+<summary>▶ 第1题详解（二倍角公式 + 半角符号判定）</summary>
+
+**(1)** 由二倍角公式：
+$$\cos 2\alpha = 2\cos^2\alpha - 1 = 2\cdot\dfrac{9}{25} - 1 = \dfrac{18}{25} - 1 = -\dfrac{7}{25}$$
+
+**(2)** $\alpha \in \left(\dfrac{\pi}{2}, \pi\right)$，故 $\dfrac{\alpha}{2} \in \left(\dfrac{\pi}{4}, \dfrac{\pi}{2}\right)$（第一象限），$\sin\dfrac{\alpha}{2} > 0$。
+
+$$\sin\dfrac{\alpha}{2} = \sqrt{\dfrac{1-\cos\alpha}{2}} = \sqrt{\dfrac{1-(-\frac{3}{5})}{2}} = \sqrt{\dfrac{\frac{8}{5}}{2}} = \sqrt{\dfrac{4}{5}} = \dfrac{2\sqrt{5}}{5}$$
+
+**答**：$\cos 2\alpha = -\dfrac{7}{25}$，$\sin\dfrac{\alpha}{2} = \dfrac{2\sqrt{5}}{5}$。
+
+> **易错提醒**：半角公式必须先判 $\dfrac{\alpha}{2}$ 所在象限以定符号——$\alpha$ 在第二象限时 $\dfrac{\alpha}{2}$ 在第一象限，$\sin\dfrac{\alpha}{2}$ 取正。
+
+</details>
+
+<details>
+<summary>▶ 第2题详解（配角法 + 象限符号判定）</summary>
+
+$\alpha$ 锐角，$\cos\alpha = \dfrac{4}{5}$，故 $\sin\alpha = \sqrt{1-\dfrac{16}{25}} = \dfrac{3}{5}$。
+
+$\alpha,\beta$ 均锐角 $\Rightarrow 0 < \alpha+\beta < \pi$；又 $\cos(\alpha+\beta) = \dfrac{5}{13} > 0$，故 $\alpha+\beta \in \left(0, \dfrac{\pi}{2}\right)$，$\sin(\alpha+\beta) = \sqrt{1-\dfrac{25}{169}} = \dfrac{12}{13}$。
+
+配角：$\beta = (\alpha+\beta) - \alpha$，
+$$\begin{aligned}
+\cos\beta &= \cos[(\alpha+\beta)-\alpha] \\
+&= \cos(\alpha+\beta)\cos\alpha + \sin(\alpha+\beta)\sin\alpha \\
+&= \dfrac{5}{13}\cdot\dfrac{4}{5} + \dfrac{12}{13}\cdot\dfrac{3}{5} \\
+&= \dfrac{20}{65} + \dfrac{36}{65} = \dfrac{56}{65}
+\end{aligned}$$
+
+**答**：$\cos\beta = \dfrac{56}{65}$。
+
+> **易错提醒**：必须先判定 $\alpha+\beta$ 落在第几象限（此处 $\cos(\alpha+\beta)>0$ 说明在第一象限），否则 $\sin(\alpha+\beta)$ 的符号会错。
+
+</details>
+
+<details>
+<summary>▶ 第3题详解（辅助角公式 + 标准型性质）</summary>
+
+提取系数 $1$ 和 $-\sqrt{3}$：
+$$f(x) = \sin 2x - \sqrt{3}\cos 2x = 2\!\left(\dfrac{1}{2}\sin 2x - \dfrac{\sqrt{3}}{2}\cos 2x\right)$$
+
+由辅助角公式（$\tan\varphi = \dfrac{-\sqrt{3}}{1} = -\sqrt{3}$，$a=1>0, b=-\sqrt{3}<0$，$\varphi$ 在第四象限）：
+$$f(x) = 2\sin\!\left(2x - \dfrac{\pi}{3}\right)$$
+
+- 最小正周期：$T = \dfrac{2\pi}{2} = \pi$
+- 值域：$[-2, 2]$
+
+**答**：$f(x) = 2\sin\!\left(2x - \dfrac{\pi}{3}\right)$，$T = \pi$，值域 $[-2, 2]$。
+
+> **易错提醒**：辅助角公式中 $\varphi$ 的象限由 $a, b$ 共同决定。此处 $a=1>0, b=-\sqrt{3}<0$，$\varphi = -\dfrac{\pi}{3}$（不能直接写成 $+\dfrac{\pi}{3}$）。
+
+</details>

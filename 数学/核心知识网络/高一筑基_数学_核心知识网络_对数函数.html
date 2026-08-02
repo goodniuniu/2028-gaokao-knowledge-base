@@ -95,6 +95,15 @@ MathJax = {
 </ul>
 <p>综上，$f(x)$ 的最小值为 <strong>$1$</strong>（在 $x=1$ 处取得）。</p>
 <hr>
+<h2>自测训练（3道·覆盖对数运算与性质）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 对数运算性质 + 换底公式）</p>
+<p>计算：$\log_2 8\cdot \log_3 9 + \lg 2 + \lg 5 - \log_{\frac{1}{2}} 4$。</p>
+<p><strong>第2题</strong>（检验 对数函数性质 + 比大小）</p>
+<p>比较 $\log_2 0.3$、$\log_{0.2} 0.3$、$\log_2 3.5$ 的大小。</p>
+<p><strong>第3题</strong>（检验 对数型函数定义域 + 奇偶性）</p>
+<p>已知 $f(x) = \ln\dfrac{1+x}{1-x}$。 (1) 求函数的定义域； (2) 判断 $f(x)$ 的奇偶性并证明。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_幂函数与指数函数.html">幂函数与指数函数</a> — 指数与对数的互化关系</li>
@@ -113,6 +122,33 @@ MathJax = {
 <li>比较大小时：同底用单调性，同真用换底公式，不同底不同真找中间值</li>
 <li>广东卷常考：对数运算与函数性质的结合题</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（对数运算性质综合）</summary><p>逐项化简：</p>
+<ul>
+<li>$\log_2 8 = \log_2 2^3 = 3$，$\log_3 9 = \log_3 3^2 = 2$，故 $\log_2 8\cdot \log_3 9 = 3\times 2 = 6$。</li>
+<li>$\lg 2 + \lg 5 = \lg(2\times 5) = \lg 10 = 1$。</li>
+<li>$\log_{\frac{1}{2}} 4 = \dfrac{\log_2 4}{\log_2 \frac{1}{2}} = \dfrac{2}{-1} = -2$（或：$4 = \left(\dfrac{1}{2}\right)^{-2}$，故 $\log_{1/2} 4 = -2$）。</li>
+</ul>
+<p>原式 $= 6 + 1 - (-2) = 9$。</p>
+<p><strong>答</strong>：$9$。</p>
+<blockquote><p><strong>易错提醒</strong>：$\log_{\frac{1}{2}} 4$ 结果为 $-2$，因为底数 $0 < \dfrac{1}{2} < 1$，函数单调递减；$\lg 2 + \lg 5 = 1$ 是常用结论（互补对数和为 1）。</p></blockquote></details>
+<details><summary>▶ 第2题详解（对数函数单调性 + 中间值比较）</summary><p>逐个分析符号：</p>
+<ul>
+<li>$\log_2 0.3$：底数 $2 > 1$ 递增，$0.3 < 1 = 2^0$，故 $\log_2 0.3 < 0$。</li>
+<li>$\log_{0.2} 0.3$：底数 $0 < 0.2 < 1$ 递减，$0.3 < 1 = 0.2^0$，故 $\log_{0.2} 0.3 > 0$。</li>
+<li>$\log_2 3.5$：底数 $2 > 1$ 递增，$3.5 > 2^1 = 2$，故 $\log_2 3.5 > 1$。</li>
+</ul>
+<p>综合：$\log_2 0.3 < 0 < \log_{0.2} 0.3$，而 $\log_{0.2} 0.3$ 与 $1$ 比较：$\log_{0.2} 0.3 = \dfrac{\lg 0.3}{\lg 0.2}$，$\lg 0.3 \approx -0.523$，$\lg 0.2 \approx -0.699$，比值 $\approx 0.75 < 1$。</p>
+<p>故 $\log_2 0.3 < \log_{0.2} 0.3 < \log_2 3.5$。</p>
+<blockquote><p><strong>易错提醒</strong>：不同底对数比较时先定符号（与 $0$ 比），再与 $1$ 比较（看真数与底数大小关系），最后用换底公式精确定位。本题 $\log_2 3.5 > \log_2 2 = 1$ 是关键。</p></blockquote></details>
+<details><summary>▶ 第3题详解（对数型函数定义域与奇偶性）</summary><p><strong>(1)</strong> 对数真数须大于 $0$：$\dfrac{1+x}{1-x} > 0$。</p>
+<p>分子分母异号或同正： $$\begin{cases} 1+x > 0 \\ 1-x > 0 \end{cases} \Rightarrow -1 < x < 1$$ 或 $$\begin{cases} 1+x < 0 \\ 1-x < 0 \end{cases} \Rightarrow x < -1\ \text{且}\ x > 1$$</p>
+<p>后者无解。定义域为 $(-1, 1)$。</p>
+<p><strong>(2)</strong> 定义域 $(-1, 1)$ 关于原点对称。对任意 $x \in (-1, 1)$： $$f(-x) = \ln\dfrac{1+(-x)}{1-(-x)} = \ln\dfrac{1-x}{1+x} = \ln\left(\dfrac{1+x}{1-x}\right)^{-1} = -\ln\dfrac{1+x}{1-x} = -f(x)$$</p>
+<p>故 $f(x)$ 为<strong>奇函数</strong>。</p>
+<blockquote><p><strong>易错提醒</strong>：(1) $\dfrac{1+x}{1-x} > 0$ 要分子分母同号，勿漏讨论；(2) 奇偶性判定前<strong>必须先验证定义域关于原点对称</strong>，否则判定无效。$\ln\dfrac{1}{A} = -\ln A$ 是关键一步。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

@@ -109,6 +109,15 @@ MathJax = {
 <p>即 $2^x+2^{-x}=a(2^x+2^{-x})$。因 $2^x+2^{-x}>0$，故 $a=1$。</p>
 <p><strong>答</strong>：$a=1$。</p>
 <hr>
+<h2>自测训练（3道·覆盖函数概念与三要素）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 同一函数判定）</p>
+<p>下列各组函数中，是同一函数的是（  ）。 (1) $f(x) = x$ 与 $g(x) = \sqrt{x^2}$ (2) $f(x) = \dfrac{x^2-1}{x-1}$ 与 $g(x) = x+1$ (3) $f(x) = |x|$ 与 $g(t) = \sqrt{t^2}$（定义域均为 $\mathbb{R}$） (4) $f(x) = x^0$ 与 $g(x) = 1$</p>
+<p><strong>第2题</strong>（检验 定义域优先原则）</p>
+<p>求函数 $f(x) = \dfrac{\sqrt{x+1}}{x-2} + \lg(3-x)$ 的定义域。</p>
+<p><strong>第3题</strong>（检验 函数概念 + $f(x)$ 符号理解）</p>
+<p>已知 $f(x) = 2x^2 - 3x + 1$。 (1) 求 $f(2)$ 和 $f(a+1)$ 的值； (2) 若 $f(x) = g(x+1)$，求 $g(x)$ 的解析式。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../典型题型与方法/高一筑基_数学_典型题型与方法_函数定义域求解与解析式求法.html">高一筑基_数学_典型题型与方法_函数定义域求解与解析式求法</a> — 定义域的详细求解方法和解析式求法</li>
@@ -142,6 +151,26 @@ MathJax = {
 </ul>
 <hr>
 <blockquote><p>🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度2</code> <code>#函数</code> <code>#定义域</code> <code>#值域</code> <code>#对应法则</code> <code>#三要素</code> <code>#垂直直线检验</code> <code>#同一函数</code> <code>#定义域优先</code> <code>#广东名校模拟</code></p></blockquote>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（同一函数判定：定义域 + 对应法则）</summary><p>逐组判断——必须<strong>定义域相同且对应法则一致</strong>（化简后）：</p>
+<p><strong>(1)</strong> 不是。$f(x)=x$ 定义域 $\mathbb{R}$；$g(x)=\sqrt{x^2}=|x|$ 定义域 $\mathbb{R}$，定义域相同，但对应法则不同（$g(-1)=1 \ne -1=f(-1)$）。</p>
+<p><strong>(2)</strong> 不是。$f(x)=\dfrac{x^2-1}{x-1}$ 化简为 $x+1$，但定义域为 $\{x \mid x \ne 1\}$；$g(x)=x+1$ 定义域为 $\mathbb{R}$。定义域不同。</p>
+<p><strong>(3)</strong> 是。$f(x)=|x|$ 与 $g(t)=\sqrt{t^2}=|t|$，定义域均为 $\mathbb{R}$，对应法则均为&quot;取绝对值&quot;。字母不同不影响函数同一性。</p>
+<p><strong>(4)</strong> 不是。$f(x)=x^0=1$ 定义域 $\{x \mid x \ne 0\}$；$g(x)=1$ 定义域 $\mathbb{R}$。定义域不同。</p>
+<p><strong>答</strong>：只有 (3) 是同一函数。</p>
+<blockquote><p><strong>易错提醒</strong>：判定顺序是&quot;先看定义域，再看对应法则&quot;。定义域不同直接排除，不要先化简。$\sqrt{x^2}=|x| \ne x$ 是高频陷阱。</p></blockquote></details>
+<details><summary>▶ 第2题详解（定义域求解：根号+分母+对数）</summary><p>定义域须满足所有部分同时有意义： $$\begin{cases} x+1 \ge 0 \quad (\text{偶次根号内} \ge 0) \\ x-2 \ne 0 \quad (\text{分母} \ne 0) \\ 3-x > 0 \quad (\text{对数真数} > 0) \end{cases}$$</p>
+<p>解得： $$\begin{cases} x \ge -1 \\ x \ne 2 \\ x < 3 \end{cases} \Rightarrow x \in [-1, 3)\ \text{且}\ x \ne 2$$</p>
+<p>即 $x \in [-1, 2) \cup (2, 3)$。</p>
+<p><strong>答</strong>：定义域为 $[-1, 2) \cup (2, 3)$。</p>
+<blockquote><p><strong>易错提醒</strong>：多个限制条件要同时满足（取交集），不是并集。对数真数要求 $>0$（不是 $\ge 0$），分母 $\ne 0$ 容易漏掉。</p></blockquote></details>
+<details><summary>▶ 第3题详解（$f(x)$ 符号与换元法）</summary><p><strong>(1)</strong> $f(2) = 2\cdot 2^2 - 3\cdot 2 + 1 = 8 - 6 + 1 = 3$。</p>
+<p>$f(a+1) = 2(a+1)^2 - 3(a+1) + 1 = 2(a^2+2a+1) - 3a - 3 + 1 = 2a^2 + 4a + 2 - 3a - 2 = 2a^2 + a$。</p>
+<p><strong>(2)</strong> 令 $t = x+1$（则 $x = t-1$），由 $f(t-1) = g(t)$： $$g(t) = f(t-1) = 2(t-1)^2 - 3(t-1) + 1 = 2(t^2-2t+1) - 3t + 3 + 1 = 2t^2 - 7t + 6$$</p>
+<p>故 $g(x) = 2x^2 - 7x + 6$。</p>
+<blockquote><p><strong>易错提醒</strong>：$f(x)$ 中的 $x$ 是占位符，求 $f(a+1)$ 就是把 $f(x)$ 表达式里的所有 $x$ 都换成 $(a+1)$，再加括号，<strong>不要只换一部分</strong>。换元时记得回代检查。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

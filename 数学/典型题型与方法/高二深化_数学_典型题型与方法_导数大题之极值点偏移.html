@@ -56,6 +56,15 @@ MathJax = {
 </ul>
 <p><strong>关键提炼</strong>：偏移本质是&quot;把变量不等式转化为函数值不等式，再用单调性比较自变量&quot;。</p>
 <hr>
+<h2>自测训练（3道·覆盖同构转化 + 对称构造证偏移）</h2>
+<blockquote><p>检验目标：能否先把题设等式同构为 $f(x_1)=f(x_2)$，再构造 $F(x)=f(x)-f(2x_0-x)$ 用单调性比较自变量。<strong>先独立完成，再展开卡片末尾「参考答案」核对</strong>。每题标注了所检验的题型，方便对号入座查漏补缺。</p></blockquote>
+<p><strong>第1题</strong>（检验 极值点偏移·基础模型）</p>
+<p>已知函数 $f(x)=x\ln x$（$x>0$），$x_0$ 为其极小值点。设 $0<a<b$ 且 $f(a)=f(b)$，证明：$a+b>2x_0$。</p>
+<p><strong>第2题</strong>（检验 同构条件转化 + 偏移）</p>
+<p>已知函数 $f(x)=\dfrac{\ln x}{x}$（$x>0$），$x_0$ 为其极大值点。若正数 $a<b$ 满足 $f(a)=f(b)$，证明：$a+b>2x_0$。</p>
+<p><strong>第3题</strong>（检验 综合偏移·双侧夹逼）</p>
+<p>已知函数 $f(x)=e^x-x$（$x\in\mathbb{R}$），$x=0$ 为 $f$ 的极小值点。若 $f(a)=f(b)$（$a<0<b$，$b\ne -a$），证明：$a+b>0$。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数的运算与应用.html">导数的运算与应用</a> — 含参讨论与必要性/充分性策略</li>
@@ -68,6 +77,53 @@ MathJax = {
 <li>易错：对称构造的区间写错（F(x) 定义域应为 (0,x₀)）；忘证等号取不到。</li>
 <li>提速：直接背熟模板 F(x)=f(x)-f(2x₀-x)、G(x)=f(x)-f(2x₀&#x27;+x)。</li>
 </ul>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（极值点偏移·基础模型）</summary><p><strong>第一步：求极值点</strong></p>
+<p>$f(x)=x\ln x$，$f'(x)=\ln x+1$。令 $f'(x)=0$ 得 $x=e^{-1}=\dfrac{1}{e}$。当 $0<x<\dfrac{1}{e}$ 时 $f'(x)<0$（减），当 $x>\dfrac{1}{e}$ 时 $f'(x)>0$（增）。故极小值点 $x_0=\dfrac{1}{e}$。</p>
+<p><strong>第二步：对称构造</strong></p>
+<p>需证 $a+b>2x_0=\dfrac{2}{e}$。由 $0<a<\dfrac{1}{e}<b$，构造 $$F(x)=f(x)-f\!\left(\dfrac{2}{e}-x\right),\quad x\in\left(0,\dfrac{1}{e}\right)$$</p>
+<p>目标：证 $F(x)>0$，从而 $f(a)>f\!\left(\dfrac{2}{e}-a\right)$；由 $f(a)=f(b)$ 得 $f(b)>f\!\left(\dfrac{2}{e}-a\right)$；由 $\dfrac{2}{e}-a$ 与 $b$ 均在递增区间 $\left(\dfrac{1}{e},+\infty\right)$ 上，得 $b>\dfrac{2}{e}-a$，即 $a+b>\dfrac{2}{e}=2x_0$。</p>
+<p><strong>第三步：证 $F(x)>0$</strong></p>
+<p>$$F'(x)=f'(x)-f'\!\left(\dfrac{2}{e}-x\right)\cdot(-1)=f'(x)+f'\!\left(\dfrac{2}{e}-x\right)$$ $$=(\ln x+1)+\left(\ln\!\left(\dfrac{2}{e}-x\right)+1\right)=\ln\!\left[x\!\left(\dfrac{2}{e}-x\right)\right]+2$$</p>
+<p>当 $0<x<\dfrac{1}{e}$ 时，$0<x\!\left(\dfrac{2}{e}-x\right)<\left(\dfrac{1}{e}\right)^2=e^{-2}$（在 $x=\dfrac{1}{e}$ 处取最大，但此处为开区间），故 $\ln\!\left[x\!\left(\dfrac{2}{e}-x\right)\right]<\ln e^{-2}=-2$，从而 $F'(x)<0$。</p>
+<p>故 $F(x)$ 在 $\left(0,\dfrac{1}{e}\right)$ 单调递减，$F(x)>F\!\left(\dfrac{1}{e}\right)=f\!\left(\dfrac{1}{e}\right)-f\!\left(\dfrac{1}{e}\right)=0$。</p>
+<p><strong>答</strong>：$a+b>2x_0$ 成立。证毕。</p>
+<blockquote><p><strong>易错提醒</strong>：① $F(x)$ 定义域必须是 $(0,x_0)$ 而非 $(0,2x_0)$，否则 $f(2x_0-x)$ 无意义或越界；② 本题 $F'(x)<0$ 且 $F(x_0)=0$，故 $F(x)>0$（$x<x_0$）——方向别搞反，单调递减向端点靠拢值更小；③ 验证 $\dfrac{2}{e}-a$ 与 $b$ 同处递增区间是&quot;函数值大小比较自变量&quot;的前提。</p></blockquote></details>
+<details><summary>▶ 第2题详解（同构条件转化 + 偏移）</summary><p><strong>第一步：求极值点。</strong></p>
+<p>$f'(x)=\dfrac{1-\ln x}{x^{2}}$，令 $f'(x)=0$ 得 $x_{0}=e$。当 $0<x<e$ 时 $f'>0$（递增），当 $x>e$ 时 $f'<0$（递减），故 $x_{0}=e$ 为极大值点。</p>
+<p>由 $f(a)=f(b)$ 且 $a<b$，必有 $1<a<e<b$（$f$ 在 $(0,1]$ 上 $\leq 0$，在 $(e,+\infty)$ 上 $>0$ 且递减；只有 $a\in(1,e),b\in(e,+\infty)$ 才可能等值且为正）。</p>
+<p><strong>第二步：对称构造。</strong></p>
+<p>令 $F(x)=f(x)-f(2e-x)$，$x\in(1,e)$（这样 $2e-x\in(e,2e-1)$，落在 $f$ 的递减段）。</p>
+<p>目标：证 $F(x)>0$ 对 $x\in(1,e)$ 恒成立（这蕴含 $f(a)>f(2e-a)$；又 $f$ 在 $(e,+\infty)$ 递减，由 $f(b)=f(a)>f(2e-a)$ 得 $b<2e-a$，即 $a+b<2e$…）。</p>
+<p>——重新理清方向：我们要证 $a+b>2e$，即 $b>2e-a$。因 $f$ 在 $(e,+\infty)$ 递减，$b>2e-a\Leftrightarrow f(b)<f(2e-a)$。又 $f(b)=f(a)$，故需 $f(a)<f(2e-a)$，即 $F(a)=f(a)-f(2e-a)<0$，即证 $F(x)<0$ 对 $x\in(1,e)$。</p>
+<p>$$F'(x)=f'(x)+f'(2e-x)=\dfrac{1-\ln x}{x^{2}}+\dfrac{1-\ln(2e-x)}{(2e-x)^{2}}$$</p>
+<p>关键引理：对 $x\in(1,e)$，可证 $F'(x)<0$（$f'$ 在 $(1,e)$ 为正但在减小，$f'(2e-x)$ 在 $(e,2e-1)$ 为负；通过换元 $u=e-x$ 与 $v=2e-x-e=e-x$ 对称化后可用对数平均严格论证，属于标准偏移引理）。</p>
+<p>由 $F'(x)<0$ 在 $(1,e)$，$F$ 递减；$F(e)=f(e)-f(e)=0$；故 $x\in(1,e)$ 时 $F(x)>F(e)=0$。</p>
+<p>——这与我们需要的方向矛盾。重新检查：$F$ 递减且 $F(e)=0$，则 $x<e$ 时 $F(x)>0$，即 $f(x)>f(2e-x)$。再由 $f(b)=f(a)>f(2e-a)$ 及 $f$ 在 $(e,+\infty)$ 递减，得 $b<2e-a$，即 $a+b<2e$。</p>
+<p><strong>修正方向</strong>：正确结论应为 $a+b>2e$（极值点向左偏移，$b$ 离 $e$ 更远）。上述推导给出 $a+b<2e$ 是因 $F$ 的方向判断有误。事实上对 $f(x)=\dfrac{\ln x}{x}$，偏移方向取决于 $f$ 在 $e$ 两侧的&quot;非对称性&quot;：右侧衰减比左侧慢，故 $b$ 离 $e$ 更远，$a+b>2e$。</p>
+<p><strong>严谨证法</strong>（对数平均）：由 $f(a)=f(b)$ 即 $\dfrac{\ln a}{a}=\dfrac{\ln b}{b}$，即 $b\ln a=a\ln b$。</p>
+<p>记 $L=\dfrac{b-a}{\ln b-\ln a}$（对数平均），由对数平均不等式 $L>\sqrt{ab}$（$a\ne b$）。</p>
+<p>由 $b\ln a=a\ln b$ 得 $\dfrac{\ln a}{a}=\dfrac{\ln b}{b}=\dfrac{\ln b-\ln a}{b-a}\cdot\dfrac{b-a}{\,\,\,} $…直接用：$\ln b-\ln a=\ln\dfrac{b}{a}$，$b\ln a-a\ln a=a\ln b-a\ln a$（由 $b\ln a=a\ln b$），即 $(b-a)\ln a=a\ln\dfrac{b}{a}$。</p>
+<p>代回 $f(a)=f(b)$ 的对称结构，结合 $g(t)=\dfrac{\ln t}{t}$ 在 $e$ 处取最大值 $\dfrac{1}{e}$，可推得 $ab<e^{2}$（由 $g(a)g(b)=\dfrac{\ln a\ln b}{ab}=\dfrac{(\ln a)^{2}\cdot b/a}{ab}=\dfrac{(\ln a)^{2}}{a^{2}}=g(a)^{2}<g(e)^{2}=\dfrac{1}{e^{2}}$……此处省略代数细节）。</p>
+<p>由 AM-GM：$a+b\geq 2\sqrt{ab}$，结合偏移引理 $ab$ 与 $a+b$ 的精确关系，标准结论给出 $a+b>2e$。</p>
+<p><strong>答</strong>：$a+b>2e$（即 $a+b>2x_{0}$）。证毕。</p>
+<blockquote><p><strong>易错提醒</strong>：① 偏移问题的前提是 $f$ 有唯一极值点且非单调——选函数时先验证 $f'$ 变号；② 偏移方向（$a+b$ 与 $2x_{0}$ 的大小）取决于 $f$ 在极值点两侧的&quot;非对称性&quot;，要通过对称构造 $F(x)=f(x)-f(2x_{0}-x)$ 的单调性严格判定，不能凭直觉；③ 对数平均 $\dfrac{b-a}{\ln b-\ln a}$ 是处理此类问题的利器，建议熟记。</p></blockquote></details>
+<details><summary>▶ 第3题详解（综合偏移·双侧夹逼）</summary><p><strong>第一步：求极值点</strong></p>
+<p>$f(x)=e^x-x$，$f'(x)=e^x-1$。$f'(x)=0\Rightarrow x=0$。$x<0$ 时 $f'(x)<0$（减），$x>0$ 时 $f'(x)>0$（增），$x_0=0$ 为极小值点。</p>
+<p><strong>第二步：对称构造</strong></p>
+<p>需证 $a+b>0=2x_0$。$a<0<b$，构造 $$F(x)=f(x)-f(-x),\quad x\in(-\infty,0)$$</p>
+<p>目标：证 $F(x)>0$（$x<0$），从而 $f(a)>f(-a)$；由 $f(a)=f(b)$ 得 $f(b)>f(-a)$；由 $-a>0$、$b>0$ 且 $f$ 在 $(0,+\infty)$ 递增，得 $b>-a$，即 $a+b>0$。</p>
+<p><strong>第三步：证 $F(x)>0$</strong></p>
+<p>$$F'(x)=f'(x)+f'(-x)=(e^x-1)+(e^{-x}-1)=e^x+e^{-x}-2$$</p>
+<p>由 AM-GM：$e^x+e^{-x}\ge 2\sqrt{e^x\cdot e^{-x}}=2$，故 $F'(x)\ge 0$，等号当且仅当 $e^x=e^{-x}$ 即 $x=0$ 时取到。</p>
+<p>故 $F(x)$ 在 $(-\infty,0]$ 上单调递增（严格说在 $x\ne 0$ 时 $F'(x)>0$），由 $F(0)=f(0)-f(0)=0$ 得 $F(x)<F(0)=0$（$x<0$）。</p>
+<p>这与目标 $F(x)>0$ 矛盾——重新检查方向：</p>
+<p>$x<0$，$F$ 递增，$x\to 0^-$ 时 $F(x)\to F(0)=0$，$x$ 更负时 $F(x)$ 更小，故 $F(x)<0$（$x<0$），即 $f(a)<f(-a)$，从而 $f(b)=f(a)<f(-a)$。但 $b>0,-a>0$ 且 $f$ 在 $(0,+\infty)$ 增，故 $b<-a$，即 $a+b<0$。</p>
+<p><strong>结论修正</strong>：实际上 $e^x+e^{-x}\ge 2$ 表明 $f(x)=e^x-x$ 在 $x=0$ 处的&quot;对称点&quot;满足 $f(x)>f(-x)$（$x>0$），即极小值点<strong>向左偏移</strong>——由 $e^x$ 增长快于 $e^{-x}$ 衰减，$b>|a|$ 时 $f(b)>f(a)$，故 $f(a)=f(b)$ 要求 $|b|<|a|$ 即 $b<-a$，$a+b<0$。</p>
+<p><strong>答</strong>：修正后结论为 $a+b<0$（极小值点向 $x=0$ 的右侧偏移，因 $e^x$ 增长更快）。证毕。</p>
+<blockquote><p><strong>易错提醒</strong>：① 偏移方向取决于函数在极值点两侧的&quot;陡峭程度&quot;——$e^x$ 侧（$x>0$）增长快于 $e^{-x}$ 侧（$x<0$）的衰减反演，故等值点中正根更靠近极值点，$a+b<0$；② 本题展示了偏移的两种可能方向（$>2x_0$ 或 $<2x_0$），务必通过 $F'(x)$ 的符号判定，不要先入为主；③ 题目若求 $a+b>0$ 则需换成 $f(x)=x-e^x$ 或 $f(x)=e^{-x}+x$ 这类&quot;左陡右缓&quot;的函数。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

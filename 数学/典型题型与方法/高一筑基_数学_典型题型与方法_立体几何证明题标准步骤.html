@@ -151,6 +151,12 @@ MathJax = {
 <h3>六、记忆口诀</h3>
 <blockquote><p><strong>证明步骤口诀</strong>：<br>- &quot;线面平行：找线证平行，别忘了线在面外&quot;<br>- &quot;线面垂直：找两相交线，分别证垂直&quot;<br>- &quot;面面平行：找两相交线，都平行于另一平面&quot;<br>- &quot;面面垂直：找一垂线，它在另一平面内&quot;<br>- &quot;定理名称必须写，条件一个不能漏&quot;<br>- &quot;辅助线要描述清，中点垂线延长线&quot;</p></blockquote>
 <hr>
+<h2>自测训练（3道·覆盖线面平行·线面垂直·面面垂直）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。证明题要求写出完整的&quot;∵ ∴&quot;步骤与定理名称。</p></blockquote>
+<p><strong>第1题</strong>（检验：线面平行判定·中位线法） 在三棱锥 $P-ABC$ 中，$D$、$E$ 分别为 $PA$、$PB$ 的中点。求证：$DE\parallel$ 平面 $ABC$。</p>
+<p><strong>第2题</strong>（检验：线面垂直判定·两相交线垂直） 在三棱锥 $P-ABC$ 中，$PA\perp$ 平面 $ABC$，$AB\perp BC$，$AB=BC=1$，$PA=\sqrt{2}$。求证：$PC\perp$ 平面 $PAB$ 内的直线 $PB$。</p>
+<p><strong>第3题</strong>（检验：面面垂直判定·线面垂直推出面面垂直） 在四棱锥 $P-ABCD$ 中，底面 $ABCD$ 为矩形，$PA\perp$ 底面 $ABCD$。求证：平面 $PAB\perp$ 平面 $PBC$。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高一筑基_数学_核心知识网络_空间点线面位置关系.html">高一筑基_数学_核心知识网络_空间点线面位置关系</a> — 八大定理的完整内容</li>
@@ -167,6 +173,36 @@ MathJax = {
 </ul>
 <hr>
 <blockquote><p>🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高一筑基</code> <code>#难度3</code> <code>#立体几何</code> <code>#证明题</code> <code>#线面平行</code> <code>#线面垂直</code> <code>#面面平行</code> <code>#面面垂直</code> <code>#书写规范</code> <code>#广东名校模拟</code></p></blockquote>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>证明题答案给出完整步骤与定理名称。每题配易错提醒，重点关注&quot;易遗漏的条件&quot;。</p></blockquote>
+<details><summary>▶ 第1题详解（线面平行判定·中位线法）</summary><p><strong>证明</strong>：</p>
+<p>∵ $D$、$E$ 分别为 $PA$、$PB$ 的中点，</p>
+<p>∴ $DE$ 是 $\triangle PAB$ 的中位线，</p>
+<p>∴ $DE\parallel AB$（三角形中位线定理）。</p>
+<p>又∵ $AB\subset$ 平面 $ABC$，$DE\not\subset$ 平面 $ABC$，</p>
+<p>∴ $DE\parallel$ 平面 $ABC$（<strong>线面平行判定定理</strong>）。</p>
+<blockquote><p><strong>易错提醒</strong>：必须显式写出两个条件——①$AB\subset$ 平面 $ABC$（找到面内平行线）；②$DE\not\subset$ 平面 $ABC$（验证线在面外）。漏写&quot;线在面外&quot;是广东卷最常见扣分点，每处扣 1-2 分。</p></blockquote></details>
+<details><summary>▶ 第2题详解（线面垂直判定·勾股定理逆定理）</summary><p>∵ $PA\perp$ 平面 $ABC$，$BC\subset$ 平面 $ABC$，</p>
+<p>∴ $PA\perp BC$（线面垂直的定义）。</p>
+<p>又∵ $AB\perp BC$（已知），且 $PA\cap AB=A$（$PA$ 与 $AB$ 相交），$PA\subset$ 平面 $PAB$，$AB\subset$ 平面 $PAB$，</p>
+<p>∴ $BC\perp$ 平面 $PAB$（<strong>线面垂直判定定理</strong>）。</p>
+<p>又∵ $PB\subset$ 平面 $PAB$，</p>
+<p>∴ $BC\perp PB$（线面垂直的定义），即 $PC\perp$ ...</p>
+<p>——下面用勾股定理逆定理证 $PB\perp BC$ 的另一条思路：</p>
+<p>计算：$PB^{2}=PA^{2}+AB^{2}=2+1=3$，$PC^{2}=PA^{2}+AC^{2}$，其中 $AC^{2}=AB^{2}+BC^{2}=1+1=2$，故 $PC^{2}=2+2=4$。</p>
+<p>验证 $\triangle PBC$：$PB^{2}+BC^{2}=3+1=4=PC^{2}$，由勾股定理逆定理知 $\angle PBC=90°$，即 $PB\perp BC$。</p>
+<p><strong>结论</strong>：$PB\perp BC$。</p>
+<blockquote><p><strong>易错提醒</strong>：判定线面垂直必须验证&quot;<strong>两条相交</strong>直线&quot;都垂直——相交条件 $PA\cap AB=A$ 必须写出。本题两条思路（线面垂直判定 vs 勾股逆定理）都通，考试时选自己最熟的一条。</p></blockquote></details>
+<details><summary>▶ 第3题详解（面面垂直判定·线面垂直推面面垂直）</summary><p><strong>证明</strong>：</p>
+<p>∵ $ABCD$ 是矩形，$AB\perp BC$（矩形邻边垂直）。</p>
+<p>又∵ $PA\perp$ 底面 $ABCD$，$BC\subset$ 底面 $ABCD$，</p>
+<p>∴ $PA\perp BC$（线面垂直的定义）。</p>
+<p>∵ $PA\cap AB=A$，$PA\subset$ 平面 $PAB$，$AB\subset$ 平面 $PAB$，</p>
+<p>∴ $BC\perp$ 平面 $PAB$（<strong>线面垂直判定定理</strong>）。</p>
+<p>又∵ $BC\subset$ 平面 $PBC$，</p>
+<p>∴ 平面 $PAB\perp$ 平面 $PBC$（<strong>面面垂直判定定理</strong>）。</p>
+<blockquote><p><strong>易错提醒</strong>：面面垂直判定的关键在于——在一个平面内找到一条直线垂直于另一个平面。本题从&quot;找 $BC\perp$ 平面 $PAB$&quot;切入，每一步都标注定理名称（线面垂直判定 → 面面垂直判定），形成完整逻辑链。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

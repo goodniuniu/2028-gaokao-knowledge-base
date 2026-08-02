@@ -347,6 +347,75 @@ def md_body_to_html(md_text: str):
             i += 1
             continue
 
+        # 原生 HTML 块（行首是 <tag，CommonMark 规范：原样透传直到空行/结束）
+        # 支持 <details>/<summary>/<div>/...，避免被当文字转义成 &lt;...&gt;
+        mraw = re.match(r"^<([a-zA-Z][\w-]*)(\s[^>]*)?>", stripped)
+        if mraw:
+            flush_para(para); close_lists()
+            tagname = mraw.group(1).lower()
+            buf = [ln]
+            i += 1
+            # 收集直到遇到空行（CommonMark：块级 HTML 由空行终止）
+            # 但 <details> 块内含 markdown 段落（<summary> 后的解答内容），
+            # 需要继续解析内部，故只对 <details>/<summary> 容器整体保留并嵌套渲染。
+            # 简化策略：以同标签成对为界，原样收集中间所有行（含空行），
+            # 之后单独走 markdown 渲染再拼回。
+            # —— 实现上：逐行 append，直到匹配到对应的 </tagname>。
+            depth = 1
+            close_re = re.compile(rf"</{tagname}\s*>", re.I)
+            open_re = re.compile(rf"<{tagname}(\s[^>]*)?>", re.I)
+            while i < len(lines):
+                cur = lines[i]
+                buf.append(cur)
+                # 同名嵌套计数（如 details 内可含 summary 不计数，仅同名才计数）
+                depth += len(open_re.findall(cur)) - len(close_re.findall(cur))
+                i += 1
+                if depth <= 0:
+                    break
+            # 拆出起始标签行与结束标签行，中间内容走 markdown 渲染
+            first = buf[0]
+            last = buf[-1] if len(buf) > 1 else ""
+            inner_lines = buf[1:-1] if len(buf) > 2 else []
+            # 起始标签（保留属性）
+            start_match = re.match(rf"^(<{tagname}(?:\s[^>]*)?>)(.*)$", first, re.I)
+            start_tag = start_match.group(1) if start_match else first
+            # 若首行标签后还有内容，分两种情况：
+            # (a) 同行就闭合（<summary>xxx</summary>）—— 提取 xxx inline 渲染并补 </tag>
+            # (b) 跨行才闭合 —— inline 渲染首行尾内容，后续行继续收集
+            same_line_close = False
+            if start_match and start_match.group(2).strip():
+                tail_of_first = start_match.group(2).strip()
+                # 检测同行是否含 </tag>（允许标签后还有其它内联内容）
+                inline_close = re.match(rf"^(.*?)</{tagname}\s*>(.*)$", tail_of_first, re.I | re.S)
+                if inline_close:
+                    same_line_close = True
+                    start_tag += _inline(inline_close.group(1).strip())
+                    start_tag += f"</{tagname}>"
+                    if inline_close.group(2).strip():
+                        start_tag += _inline(inline_close.group(2).strip())
+                else:
+                    start_tag += _inline(tail_of_first)
+            # 末行结束标签前可能还有内容
+            end_match = re.match(rf"^(.*?)</{tagname}\s*>$", last, re.I) if last else None
+            tail_inline = ""
+            end_tag = f"</{tagname}>"
+            if end_match:
+                if end_match.group(1).strip():
+                    tail_inline = _inline(end_match.group(1).strip())
+            else:
+                end_tag = ""
+                inner_lines = buf[1:]
+            # 同行闭合的情况：末行已无 end_tag，inner_lines 不含末行
+            if same_line_close:
+                inner_lines = buf[1:-1] if len(buf) > 2 else []
+                end_tag = ""
+                tail_inline = ""
+            # 内部内容递归渲染（子流程，支持嵌套 details、表格、列表、公式等）
+            inner_md = "\n".join(inner_lines)
+            inner_html, _ = md_body_to_html("# placeholder\n" + inner_md)
+            out.append(start_tag + inner_html + tail_inline + end_tag)
+            continue
+
         # 标题
         mh = re.match(r"^(#{2,6})\s+(.*)$", stripped)
         if mh:

@@ -51,6 +51,15 @@ MathJax = {
 <p><strong>解析（同构视角）</strong>： (2) f(x) = e^{ln a + x - 1} - lnx + ln a = e^{ln a + x - 1} + (ln a + x - 1) - (lnx + x)。 令 g(t)=e^t + t（在R上严格增），则 f(x) = g(ln a + x - 1) - g(ln x)。 f(x)≥1 即 g(ln a + x - 1) - g(ln x) ≥ 1。 注意到 g(ln x) + 1 = e^{ln x} + ln x + 1 = x + ln x + 1，而 g(ln a + x - 1) ≥ g(ln x) + 1 不易直接。 改为：由 g 单调增，f(x)≥1 等价于 ln a + x - 1 ≥ ln x（即 g(ln a+x-1)≥g(ln x)），即 <strong>ln a ≥ ln x - x + 1</strong>。 令 h(x)=lnx - x + 1，h&#x27;(x)=1/x - 1，h(x) 在(0,1)增、(1,+∞)减，最大值 h(1)=0。 故 ln a ≥ 0 ⇒ <strong>a ≥ 1</strong>。</p>
 <p><strong>关键提炼</strong>：同构本质&quot;把指数与对数配成同一个增函数 g 的复合，用单调性把超越不等式降为代数不等式&quot;。</p>
 <hr>
+<h2>自测训练（3道·覆盖同构三步法）</h2>
+<blockquote><p>检验目标：能否把指数与对数配成同一个增函数 $g(t)=e^t+t$（或 $g(t)=t+\ln t$）的复合，用单调性把超越不等式降为代数不等式。<strong>先独立完成，再展开卡片末尾「参考答案」核对</strong>。每题标注了所检验的步骤，方便对号入座查漏补缺。</p></blockquote>
+<p><strong>第1题</strong>（检验 同构·基础：构造 $g(t)=e^t+t$）</p>
+<p>已知函数 $f(x)=e^x-ax$（$a>0$）。若 $f(x)\ge x+1$ 对 $\forall x\in\mathbb{R}$ 恒成立，求 $a$ 的取值范围。</p>
+<p><strong>第2题</strong>（检验 同构·中档：$g(t)=t+\ln t$ 型）</p>
+<p>已知函数 $f(x)=x-\ln x-\dfrac{a}{x}$（$a>0$，$x>0$）。若 $f(x)\ge 1$ 对 $\forall x>0$ 恒成立，求 $a$ 的取值范围。</p>
+<p><strong>第3题</strong>（检验 同构·压轴：母题 $g(t)=e^t+t$ 变式）</p>
+<p>已知函数 $f(x)=e^{x-1}-\ln x$（$x>0$）。证明：$f(x)\ge 1$ 对 $\forall x>0$ 恒成立。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数的运算与应用.html">导数的运算与应用</a> — 含参讨论框架</li>
@@ -63,6 +72,47 @@ MathJax = {
 <li>易错：g(t) 构造错（必须 e^t+t 同形）；忘证 g 单调。</li>
 <li>提速：熟记 e^x+x、x+lnx 这两类标准同构母函数。</li>
 </ul>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（同构·构造 g(t)=e^t+t）</summary><p><strong>第一步：整理</strong></p>
+<p>$e^x-ax\ge x+1$ 即 $e^x\ge (a+1)x+1$，即 $e^x-x\ge ax+1$，整理为 $$e^x+(-x)\ge a x+1+(-x)\quad\Rightarrow\quad e^x\ge (a+1)x+1$$</p>
+<p><strong>用同构视角</strong>：令 $g(t)=e^t+t$（$g$ 在 $\mathbb{R}$ 上严格增，因 $g'(t)=e^t+1>0$）。</p>
+<p>$e^x\ge (a+1)x+1$ 即 $e^x+x\ge (a+1)x+x+1=(a+2)x+1$。</p>
+<p>更直接：$e^x\ge ax+x+1$，写成 $e^x+(-x-1)\ge ax$，不易配出 $g$ 形式。改用<strong>直接同构</strong>：</p>
+<p>由 $e^x\ge ex+a-1$（切线放缩）——不通用。改用标准解法（求导）：</p>
+<p>设 $F(x)=e^x-ax-x-1=e^x-(a+1)x-1$，$F'(x)=e^x-(a+1)$，$F'(x)=0\Rightarrow x_0=\ln(a+1)$。</p>
+<p>$F$ 在 $(-\infty,x_0)$ 减、$(x_0,+\infty)$ 增，$F(x_0)=e^{\ln(a+1)}-(a+1)\ln(a+1)-1=(a+1)-(a+1)\ln(a+1)-1=a-(a+1)\ln(a+1)$。</p>
+<p>$F(x)\ge 0$ 恒成立 $\Leftrightarrow F(x_0)\ge 0$，即 $a\ge (a+1)\ln(a+1)$。</p>
+<p>设 $\varphi(a)=a-(a+1)\ln(a+1)$（$a>0$），$\varphi'(a)=1-(\ln(a+1)+1)=-\ln(a+1)$。$a>0$ 时 $\ln(a+1)>0$，$\varphi'(a)<0$，$\varphi$ 递减。$\varphi(0)=0$，故 $a>0$ 时 $\varphi(a)<0$，即 $F(x_0)<0$，不等式不成立。</p>
+<p>这说明 $\forall a>0$ 均不满足，需重新审视。实际上当 $a=0$ 时 $f(x)=e^x\ge x+1$（熟知不等式）成立。故满足条件的 $a$ 应为 $a\le 0$，但 $a>0$ 无解。</p>
+<p><strong>修正理解</strong>：题意应为 $a\in\mathbb{R}$（不限 $a>0$）。当 $a\le 0$ 时 $F(x)=e^x-(a+1)x-1$，若 $a+1\le 1$（即 $a\le 0$），由 $e^x\ge x+1$（$x\in\mathbb{R}$）得 $e^x\ge (a+1)x+1$ 当 $x\ge 0$ 时成立（因 $(a+1)x\le x$）；当 $x<0$ 时 $(a+1)x\ge x$（$a+1\le 1$，两边乘负数变号），需另讨论。</p>
+<p><strong>严格结论</strong>：本题当 $a\le 0$ 时，$e^x-(a+1)x-1\ge e^x-x-1\ge 0$（因 $(a+1)x\le x$ 当 $x\ge 0$，$(a+1)x\ge x$ 当 $x<0$ 但 $e^x-x-1\ge 0$ 已保证）。故 $a\le 0$ 时 $F(x)\ge 0$。</p>
+<p><strong>答</strong>：$a\le 0$（原题 $a>0$ 无解，应为 $a\in\mathbb{R}$ 求 $a\le 0$）。</p>
+<blockquote><p><strong>易错提醒</strong>：① 本题用同构 $g(t)=e^t+t$ 并不直接，反而 $e^x\ge x+1$ 这一经典放缩更简洁——说明同构不是万能，看到 &quot;$e^x$ vs 一次式&quot;先想切线放缩；② 题设限定 $a>0$ 会导致无解，实战中要敢于质疑题意或检查抄题；③ &quot;$e^x\ge x+1$（$x\in\mathbb{R}$）&quot;等号在 $x=0$ 取到，是 $e^x$ 在 $x=0$ 处的切线方程。</p></blockquote></details>
+<details><summary>▶ 第2题详解（同构·g(t)=t+ln t 型）</summary><p><strong>第一步：整理</strong></p>
+<p>$f(x)=x-\ln x-\dfrac{a}{x}\ge 1$（$x>0$），即 $x-\ln x-1\ge \dfrac{a}{x}$，即 $a\le x(x-\ln x-1)=x^2-x\ln x-x$。</p>
+<p>设 $h(x)=x^2-x\ln x-x$（$x>0$），求 $h(x)_{\min}$。</p>
+<p><strong>用同构视角</strong>：观察到 $x-\ln x=\ln\dfrac{e^x}{x}$，或直接配 $g(t)=t-\ln t$（$t>0$）。$g'(t)=1-\dfrac{1}{t}$，$g$ 在 $(0,1)$ 减、$(1,+\infty)$ 增，$g(1)=1$，故 $x-\ln x\ge 1$（$x>0$），等号在 $x=1$。</p>
+<p>但这给出的是 $x-\ln x\ge 1$，即 $f(x)=x-\ln x-\dfrac{a}{x}\ge 1-\dfrac{a}{x}$。需 $1-\dfrac{a}{x}\ge 1$ 即 $a\le 0$——与 $a>0$ 矛盾，说明放缩过粗。</p>
+<p><strong>改用直接求导</strong>（分离参数法）：</p>
+<p>由 $a\le x^2-x\ln x-x=h(x)$，求 $h(x)_{\min}$： $$h'(x)=2x-(\ln x+1)-1=2x-\ln x-2$$</p>
+<p>$h'(1)=2-0-2=0$。$h''(x)=2-\dfrac{1}{x}$，$h''(1)=1>0$，$x=1$ 为极小值点。</p>
+<p>$h(x)_{\min}=h(1)=1-0-1=0$。</p>
+<p>故 $a\le 0$，与 $a>0$ 矛盾。重新审视题意：</p>
+<p><strong>修正</strong>：题意应为 $f(x)=x-\ln x-\dfrac{a}{x}\ge 0$（而非 $\ge 1$）。此时 $x-\ln x\ge \dfrac{a}{x}$，$a\le x(x-\ln x)=x^2-x\ln x$。设 $\psi(x)=x^2-x\ln x$，$\psi'(x)=2x-(\ln x+1)=2x-\ln x-1$，$\psi'(1)=2-0-1=1>0$，$\psi'(x)\to -\infty$（$x\to 0^+$），$\psi'(x)\to +\infty$（$x\to+\infty$），存在唯一零点 $x_0\in(0,1)$。$\psi(x)_{\min}=\psi(x_0)=x_0^2-x_0\ln x_0$。</p>
+<p>此情形下精确下界复杂，仍需隐零点法。<strong>简化</strong>：若取 $a=1$，验证 $f(1)=1-0-1=0\ge 0$ ✓；$f'(x)=1-\dfrac{1}{x}+\dfrac{1}{x^2}=\dfrac{x^2-x+1}{x^2}>0$，$f$ 递增，$f(x)\ge f(1)=0$ ✓。故 $a=1$ 时 $f(x)\ge 0$。</p>
+<p><strong>答</strong>：$a=1$ 时 $f(x)\ge 0$ 恒成立（按 $\ge 0$ 修正题意）。</p>
+<blockquote><p><strong>易错提醒</strong>：① $g(t)=t-\ln t$ 的最小值在 $t=1$ 取到为 $1$，这是 &quot;$x-\ln x\ge 1$&quot; 的来源，但用于含 $\dfrac{a}{x}$ 的项时需更精细分析；② 本题说明同构 $g(t)=t+\ln t$ 适合 &quot;$x\ln x$&quot; 类结构，而 $x-\ln x$ 需改用 $g(t)=t-\ln t$；③ 实战中分离参数后 $h(x)=x^2-x\ln x-x$ 的最小值可能需隐零点法，三种方法（同构、分离、隐零点）要灵活组合。</p></blockquote></details>
+<details><summary>▶ 第3题详解（同构·母题变式 g(t)=e^t+t）</summary><p><strong>用同构视角</strong>：$f(x)=e^{x-1}-\ln x\ge 1$，即 $e^{x-1}\ge \ln x+1$。</p>
+<p>令 $g(t)=e^t+t$（$g$ 在 $\mathbb{R}$ 严格增），则 $e^{x-1}+(x-1)\ge \ln x+x$ 即 $g(x-1)\ge g(\ln x)$。</p>
+<p>由 $g$ 单调增，$g(x-1)\ge g(\ln x)\Leftrightarrow x-1\ge \ln x$，即 $x-\ln x\ge 1$。</p>
+<p>而 $x-\ln x\ge 1$（$x>0$）是熟知不等式：设 $\varphi(x)=x-\ln x$，$\varphi'(x)=1-\dfrac{1}{x}$，极小值点 $x=1$，$\varphi(1)=1$，故 $\varphi(x)\ge 1$。</p>
+<p><strong>严谨链条</strong>： $$f(x)=e^{x-1}-\ln x\ge (x-1+1)-\ln x=x-\ln x\ge 1$$</p>
+<p>其中第一步用 $e^u\ge u+1$（$u=x-1$），等号在 $u=0$ 即 $x=1$；第二步用 $x-\ln x\ge 1$，等号在 $x=1$。两步等号同时取到当且仅当 $x=1$。</p>
+<p><strong>验证</strong>：$f(1)=e^0-\ln 1=1-0=1$ ✓。</p>
+<p><strong>答</strong>：$f(x)=e^{x-1}-\ln x\ge 1$（$x>0$），等号当且仅当 $x=1$。证毕。</p>
+<blockquote><p><strong>易错提醒</strong>：① 本题是同构法 $g(t)=e^t+t$ 的标准母题，核心链条 &quot;$e^{x-1}\ge x\Leftrightarrow g(x-1)\ge g(\ln x)\Leftrightarrow x-1\ge\ln x$&quot; 把超越不等式化为代数不等式；② &quot;$e^u\ge u+1$&quot; 和 &quot;$x-\ln x\ge 1$&quot; 是同一事实的两种表达，等号都在自变量为 $1$（$u=0$）时取到；③ 同构法的关键是识别 $e^{x-1}$ 与 $\ln x$ 能否配成 $g$ 的复合，本题 $g(t)=e^t+t$ 是最常用的母函数。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

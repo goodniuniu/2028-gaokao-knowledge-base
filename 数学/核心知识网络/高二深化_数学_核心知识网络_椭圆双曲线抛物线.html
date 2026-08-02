@@ -147,6 +147,15 @@ MathJax = {
 <p><strong>第五步（解）</strong>：$S = \frac{1}{2}|PB| \cdot d = 9$ → 解得 $k = \frac{1}{2}$ 或 $k = \frac{3}{2}$</p>
 <p><strong>答案</strong>：$l: y = \frac{1}{2}x$ 或 $l: y = \frac{3}{2}x - 3$</p>
 <hr>
+<h2>自测训练（3道·覆盖标准方程与几何性质）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 椭圆标准方程与离心率）</p>
+<p>已知椭圆 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$（$a > b > 0$）的一个焦点为 $F(3, 0)$，且过点 $P\left(4, \dfrac{9}{5}\right)$。求椭圆的标准方程和离心率。</p>
+<p><strong>第2题</strong>（检验 双曲线方程与渐近线）</p>
+<p>已知双曲线 $C: \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$（$a > 0, b > 0$）的离心率 $e = \dfrac{\sqrt{5}}{2}$，焦点为 $F_1(-\sqrt{5}, 0)$、$F_2(\sqrt{5}, 0)$。 (1) 求双曲线方程； (2) 求渐近线方程。</p>
+<p><strong>第3题</strong>（检验 抛物线定义与焦点弦）</p>
+<p>已知抛物线 $C: y^2 = 4x$ 的焦点为 $F$，准线为 $l$。点 $P$ 在 $C$ 上且 $|PF| = 5$，求点 $P$ 的坐标。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高二深化_数学_核心知识网络_直线与圆的方程.html">直线与圆的方程</a> — 解析几何基础</li>
@@ -169,6 +178,32 @@ MathJax = {
 <li>广东卷解析几何大题：韦达定理联立是标准路径，注意计算准确性和分类讨论完备性</li>
 <li>离心率求法：构造 $a, b, c$ 的齐次方程，转化为关于 $e$ 的方程</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（待定系数法求椭圆方程）</summary><p>由焦点 $F(3, 0)$ 得 $c = 3$，$c^2 = a^2 - b^2 = 9$。</p>
+<p>点 $P\left(4, \dfrac{9}{5}\right)$ 在椭圆上： $$\dfrac{16}{a^2} + \dfrac{81/25}{b^2} = 1 \Rightarrow \dfrac{16}{a^2} + \dfrac{81}{25b^2} = 1$$</p>
+<p>代入 $b^2 = a^2 - 9$： $$\dfrac{16}{a^2} + \dfrac{81}{25(a^2-9)} = 1$$</p>
+<p>通分，令 $t = a^2$： $$25(t-9)\cdot 16 + 81t = 25t(t-9)$$ $$400t - 3600 + 81t = 25t^2 - 225t$$ $$25t^2 - 706t + 3600 = 0$$</p>
+<p>解得 $t = 25$ 或 $t = \dfrac{144}{25}$（舍，因 $t = a^2 > c^2 = 9$ 须 $t > 9$，$\dfrac{144}{25} < 9$ 舍去）。</p>
+<p>故 $a^2 = 25$，$b^2 = 25 - 9 = 16$。</p>
+<ul>
+<li>标准方程：$\dfrac{x^2}{25} + \dfrac{y^2}{16} = 1$</li>
+<li>离心率：$e = \dfrac{c}{a} = \dfrac{3}{5}$</li>
+</ul>
+<blockquote><p><strong>易错提醒</strong>：椭圆中 $a > b > 0$，$c^2 = a^2 - b^2$（注意是减号），$a$ 是半长轴。解出 $a^2$ 后要检验 $a^2 > c^2$，舍去不合理的根。</p></blockquote></details>
+<details><summary>▶ 第2题详解（双曲线 $a,b,c$ 关系与渐近线）</summary><p><strong>(1)</strong> 由焦点 $F_2(\sqrt{5}, 0)$ 得 $c = \sqrt{5}$，$c^2 = a^2 + b^2 = 5$。</p>
+<p>离心率 $e = \dfrac{c}{a} = \dfrac{\sqrt{5}}{2}$，故 $a = \dfrac{c}{e} = \dfrac{\sqrt{5}}{\sqrt{5}/2} = 2$，$a^2 = 4$。</p>
+<p>$b^2 = c^2 - a^2 = 5 - 4 = 1$。</p>
+<p>双曲线方程：$\dfrac{x^2}{4} - y^2 = 1$。</p>
+<p><strong>(2)</strong> 渐近线方程：$y = \pm\dfrac{b}{a}x = \pm\dfrac{1}{2}x$。</p>
+<blockquote><p><strong>易错提醒</strong>：双曲线中 $c^2 = a^2 + b^2$（加号！），与椭圆 $c^2 = a^2 - b^2$ 不同。渐近线斜率 $\pm\dfrac{b}{a}$，焦点在 $x$ 轴的双曲线渐近线过原点。</p></blockquote></details>
+<details><summary>▶ 第3题详解（抛物线定义：到焦点距离=到准线距离）</summary><p>$y^2 = 4x$，$2p = 4$，$p = 2$。焦点 $F(1, 0)$，准线 $l: x = -1$。</p>
+<p>设 $P(x_0, y_0)$，由抛物线定义 $|PF| = $ 点 $P$ 到准线距离 $= x_0 - (-1) = x_0 + 1$。</p>
+<p>由 $|PF| = 5$：$x_0 + 1 = 5 \Rightarrow x_0 = 4$。</p>
+<p>代入抛物线方程：$y_0^2 = 4\cdot 4 = 16 \Rightarrow y_0 = \pm 4$。</p>
+<p><strong>答</strong>：$P(4, 4)$ 或 $P(4, -4)$。</p>
+<blockquote><p><strong>易错提醒</strong>：抛物线定义是&quot;到焦点距离 = 到准线距离&quot;，<strong>不是</strong>两点距离公式硬算。$y^2 = 2px$ 中焦点在 $\left(\dfrac{p}{2}, 0\right)$、准线 $x = -\dfrac{p}{2}$，$p$ 的几何意义是焦点到准线的距离。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

@@ -155,18 +155,15 @@ MathJax = {
 <hr>
 <h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
 <blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
-<p>&lt;details&gt; &lt;summary&gt;▶ 第1题详解（辅助角公式 + 综合降次）&lt;/summary&gt;</p>
-<p>$f(x) = \sin^2 x - \dfrac{\sqrt{3}}{2}\sin 2x$。</p>
+<details><summary>▶ 第1题详解（辅助角公式 + 综合降次）</summary><p>$f(x) = \sin^2 x - \dfrac{\sqrt{3}}{2}\sin 2x$。</p>
 <p>降幂：$\sin^2 x = \dfrac{1-\cos 2x}{2}$，故 $$f(x) = \dfrac{1-\cos 2x}{2} - \dfrac{\sqrt{3}}{2}\sin 2x = \dfrac{1}{2} - \left(\dfrac{1}{2}\cos 2x + \dfrac{\sqrt{3}}{2}\sin 2x\right)$$</p>
 <p>对括号内用辅助角公式（$\sqrt{(1/2)^2+(\sqrt{3}/2)^2}=1$）： $$\dfrac{1}{2}\cos 2x + \dfrac{\sqrt{3}}{2}\sin 2x = \sin\!\left(2x + \dfrac{\pi}{6}\right)$$</p>
 <p>故 $f(x) = \dfrac{1}{2} - \sin\!\left(2x + \dfrac{\pi}{6}\right)$。</p>
 <p>(1) 当 $\sin\!\left(2x+\dfrac{\pi}{6}\right) = -1$ 时 $f(x)$ 取最大值 $\dfrac{1}{2}-(-1) = \dfrac{3}{2}$；最小正周期 $T = \dfrac{2\pi}{2} = \pi$。</p>
 <p>(2) $f(x)$ 递增 $\Leftrightarrow \sin\!\left(2x+\dfrac{\pi}{6}\right)$ 递减 $\Leftrightarrow \dfrac{\pi}{2}+2k\pi \le 2x+\dfrac{\pi}{6} \le \dfrac{3\pi}{2}+2k\pi$，解得 $\dfrac{\pi}{6}+k\pi \le 2x \le \dfrac{4\pi}{3}+k\pi$，即 $\dfrac{\pi}{12}+k\pi \le x \le \dfrac{2\pi}{3}+k\pi,\ k\in\mathbb{Z}$。</p>
 <p><strong>答</strong>：(1) 最大值 $\dfrac{3}{2}$，最小正周期 $\pi$；(2) 单调递增区间 $\left[\dfrac{\pi}{12}+k\pi,\ \dfrac{2\pi}{3}+k\pi\right],\ k\in\mathbb{Z}$。</p>
-<blockquote><p><strong>易错提醒</strong>：$f(x)=\dfrac{1}{2}-\sin(\cdot)$ 是<strong>减</strong>复合，递增区间对应 $\sin$ 的递减区间，符号方向别搞反——这是本题最大陷阱。</p></blockquote>
-<p>&lt;/details&gt;</p>
-<p>&lt;details&gt; &lt;summary&gt;▶ 第2题详解（配角法）&lt;/summary&gt;</p>
-<p>$\alpha$ 锐角，$\cos\alpha = \dfrac{3}{5}$，故 $\sin\alpha = \sqrt{1-\left(\dfrac{3}{5}\right)^2} = \dfrac{4}{5}$。</p>
+<blockquote><p><strong>易错提醒</strong>：$f(x)=\dfrac{1}{2}-\sin(\cdot)$ 是<strong>减</strong>复合，递增区间对应 $\sin$ 的递减区间，符号方向别搞反——这是本题最大陷阱。</p></blockquote></details>
+<details><summary>▶ 第2题详解（配角法）</summary><p>$\alpha$ 锐角，$\cos\alpha = \dfrac{3}{5}$，故 $\sin\alpha = \sqrt{1-\left(\dfrac{3}{5}\right)^2} = \dfrac{4}{5}$。</p>
 <p>$\alpha,\beta$ 均锐角 $\Rightarrow 0 < \alpha+\beta < \pi$；又 $\cos(\alpha+\beta) = -\dfrac{5}{13} < 0$，故 $\dfrac{\pi}{2} < \alpha+\beta < \pi$，于是 $\sin(\alpha+\beta) = \sqrt{1-\left(-\dfrac{5}{13}\right)^2} = \dfrac{12}{13}$。</p>
 <p>配角：$\beta = (\alpha+\beta) - \alpha$， $$\begin{aligned}
 \cos\beta &= \cos[(\alpha+\beta)-\alpha] \\
@@ -175,18 +172,15 @@ MathJax = {
 &= -\dfrac{15}{65} + \dfrac{48}{65} = \dfrac{33}{65}
 \end{aligned}$$</p>
 <p><strong>答</strong>：$\cos\beta = \dfrac{33}{65}$。</p>
-<blockquote><p><strong>易错提醒</strong>：必须先由 $\cos(\alpha+\beta)<0$ 判定 $\alpha+\beta \in (\pi/2, \pi)$，$\sin(\alpha+\beta)$ 取正；不判范围直接开方，符号会错。</p></blockquote>
-<p>&lt;/details&gt;</p>
-<p>&lt;details&gt; &lt;summary&gt;▶ 第3题详解（齐次化 + 三角方程）&lt;/summary&gt;</p>
-<p><strong>(1)</strong> 分子分母同除以 $\cos x$（$\tan x = 2$ 已隐含 $\cos x \ne 0$）： $$\dfrac{\sin x + \cos x}{\sin x - \cos x} = \dfrac{\tan x + 1}{\tan x - 1} = \dfrac{2+1}{2-1} = 3$$</p>
+<blockquote><p><strong>易错提醒</strong>：必须先由 $\cos(\alpha+\beta)<0$ 判定 $\alpha+\beta \in (\pi/2, \pi)$，$\sin(\alpha+\beta)$ 取正；不判范围直接开方，符号会错。</p></blockquote></details>
+<details><summary>▶ 第3题详解（齐次化 + 三角方程）</summary><p><strong>(1)</strong> 分子分母同除以 $\cos x$（$\tan x = 2$ 已隐含 $\cos x \ne 0$）： $$\dfrac{\sin x + \cos x}{\sin x - \cos x} = \dfrac{\tan x + 1}{\tan x - 1} = \dfrac{2+1}{2-1} = 3$$</p>
 <p><strong>答</strong>：值为 $3$。</p>
 <blockquote><p><strong>易错提醒</strong>：弦化切前要确认 $\cos x \ne 0$；本题 $\tan x = 2$ 有定义已隐含此条件，可直接除。</p></blockquote>
 <p><strong>(2)</strong> 用辅助角公式：$\sin x + \cos x = \sqrt{2}\sin\!\left(x+\dfrac{\pi}{4}\right) = \sqrt{2}$，即 $\sin\!\left(x+\dfrac{\pi}{4}\right) = 1$。</p>
 <p>令 $\theta = x+\dfrac{\pi}{4}$，则 $\theta = \dfrac{\pi}{2}+2k\pi$，即 $x = \dfrac{\pi}{4}+2k\pi\ (k\in\mathbb{Z})$。</p>
 <p>在 $[0, 2\pi]$ 内：$k=0 \Rightarrow x=\dfrac{\pi}{4}$（在区间内）；$k=-1 \Rightarrow x=-\dfrac{7\pi}{4}$（不在）；$k=1 \Rightarrow x=\dfrac{9\pi}{4}$（不在）。</p>
 <p><strong>答</strong>：$x = \dfrac{\pi}{4}$。</p>
-<blockquote><p><strong>易错提醒</strong>：三角方程务必<strong>通解 + 区间筛选</strong>两步齐走；只写 $x=\pi/4$ 而不验证 $k=\pm1$ 是否落入区间，是常见扣分点。</p></blockquote>
-<p>&lt;/details&gt;</p>
+<blockquote><p><strong>易错提醒</strong>：三角方程务必<strong>通解 + 区间筛选</strong>两步齐走；只写 $x=\pi/4$ 而不验证 $k=\pm1$ 是否落入区间，是常见扣分点。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

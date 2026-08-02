@@ -53,6 +53,15 @@ MathJax = {
 <p><strong>解析</strong>： (1) 由 A+B=3C 且 A+B+C=π，得 4C=π，故 <strong>C=π/4</strong>。 2sin(A-C)=sinB=sin(A+C) → 2sinAcosC - 2cosAsinC = sinAcosC + cosAsinC → sinAcosC = 3cosAsinC → sinA = 3cosA（因 cosC=sinC=√2/2）。 结合同角：sin²A + cos²A = 1，且 sinA&gt;0，得 <strong>sinA = 3√10/10</strong>（cosA=√10/10）。 (2) 法一：sinB = sin(A+C) = sinAcosC + cosAsinC = (3√10/10)(√2/2)+(√10/10)(√2/2) = 2√5/5。 由正弦定理 AC/sinB = AB/sinC → AC = 5·(2√5/5)/(√2/2) = 2√10。 AB 边上的高 h = AC·sinA = 2√10·(3√10/10) = <strong>6</strong>。 （法二：等面积 S=1/2·AB·h = 1/2·AC·BC·sinC，亦得 h=6。）</p>
 <p><strong>关键提炼</strong>：第一问&quot;消元→和差展开→单角平方关系&quot;是送分解法；第二问&quot;正弦定理求边→h=边×sin夹角&quot;或等面积法，二选一即可。</p>
 <hr>
+<h2>自测训练（3道·覆盖消元求角 + 三角方程化简 + 正余弦定理求边高）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 第一步·内角和消元求角）</p>
+<p>在 $\triangle ABC$ 中，已知 $A+C=2B$，$2\cos B\sin(A-C)=\sin B$。 (1) 求 $C$ 的大小； (2) 求 $\sin A$ 的值。</p>
+<p><strong>第2题</strong>（检验 第二步·三角方程化简 + 第三步·正弦定理求边）</p>
+<p>在 $\triangle ABC$ 中，内角 $A$、$B$、$C$ 的对边分别为 $a$、$b$、$c$。已知 $a=\sqrt{3}$，$b=\sqrt{2}$，$A=\dfrac{\pi}{3}$。 (1) 求 $\sin B$ 的值； (2) 若 $\triangle ABC$ 为锐角三角形，求 $c$ 的值。</p>
+<p><strong>第3题</strong>（检验 完整四步法：消元→方程→求边→求高/面积）</p>
+<p>在 $\triangle ABC$ 中，$2B=A+C$，$b=2\sqrt{2}$，且 $\sin A+\sin C=\sqrt{2}\sin B$。 (1) 求角 $B$ 和角 $A$； (2) 求 $\triangle ABC$ 的面积。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高一筑基_数学_核心知识网络_三角恒等变换与yAsinwxφ.html">三角恒等变换与 y=Asin(ωx+φ)</a> — 和差公式、同角关系</li>
@@ -65,6 +74,43 @@ MathJax = {
 <li>易错：把 sinB 写成 sin(A-C) 而非 sin(A+C)；第二问忘记 h=AC·sinA 直接求错边。</li>
 <li>提速：先锁定一个角（如 C），再把所有 B 用 A+C 展开，单角 sinA 一步到位。</li>
 </ul>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（内角和消元 + 三角方程化简）</summary><p><strong>(1)</strong> $A+B+C=\pi$，$A+C=2B$ $\Rightarrow$ $3B=\pi$，$B=\dfrac{\pi}{3}$。故 $A+C=\dfrac{2\pi}{3}$。</p>
+<p><strong>(2)</strong> 由 $A+C=\dfrac{2\pi}{3}$，$A-C$ 待定。条件 $2\cos B\sin(A-C)=\sin B$，$B=\dfrac{\pi}{3}$，$\cos B=\dfrac{1}{2}$，$\sin B=\dfrac{\sqrt{3}}{2}$：</p>
+<p>$$2\cdot\frac{1}{2}\cdot\sin(A-C)=\frac{\sqrt{3}}{2}\implies\sin(A-C)=\frac{\sqrt{3}}{2}$$</p>
+<p>故 $A-C=\dfrac{\pi}{3}$ 或 $A-C=\dfrac{2\pi}{3}$。</p>
+<p>由 $A+C=\dfrac{2\pi}{3}$ 和 $A-C=\dfrac{\pi}{3}$ 得 $A=\dfrac{\pi}{2}$，$C=\dfrac{\pi}{6}$（合理，$A,B,C>0$）。</p>
+<p>由 $A+C=\dfrac{2\pi}{3}$ 和 $A-C=\dfrac{2\pi}{3}$ 得 $A=\dfrac{2\pi}{3}$，$C=0$（舍，$C>0$）。</p>
+<p>故 $\boxed{C=\dfrac{\pi}{6}}$，$\boxed{\sin A=\sin\dfrac{\pi}{2}=1}$。</p>
+<blockquote><p><strong>易错提醒</strong>：$\sin\theta=\dfrac{\sqrt{3}}{2}$ 在 $(0,\pi)$ 内有两个解 $\dfrac{\pi}{3}$ 和 $\dfrac{2\pi}{3}$，必须逐一验证 $A,C>0$ 的条件，舍去增根。</p></blockquote></details>
+<details><summary>▶ 第2题详解（正弦定理求角 + 判定锐角三角形）</summary><p><strong>(1)</strong> 由正弦定理 $\dfrac{a}{\sin A}=\dfrac{b}{\sin B}$，故 $\sin B=\dfrac{b\sin A}{a}$。</p>
+<p>$$\sin B=\frac{\sqrt{2}\cdot\dfrac{\sqrt{3}}{2}}{\sqrt{3}}=\frac{\dfrac{\sqrt{6}}{2}}{\sqrt{3}}=\frac{\sqrt{6}}{2\sqrt{3}}=\frac{\sqrt{6}\cdot\sqrt{3}}{2\cdot3}=\frac{\sqrt{18}}{6}=\boxed{\dfrac{\sqrt{2}}{2}}$$</p>
+<p>由 $\sin B=\dfrac{\sqrt{2}}{2}$ 得 $B=\dfrac{\pi}{4}$ 或 $B=\dfrac{3\pi}{4}$。因 $b=\sqrt{2}<\sqrt{3}=a$（小边对小角），故 $B<A=\dfrac{\pi}{3}$，$\boxed{B=\dfrac{\pi}{4}}$。</p>
+<p><strong>(2)</strong> $C=\pi-A-B=\pi-\dfrac{\pi}{3}-\dfrac{\pi}{4}=\dfrac{5\pi}{12}$（$75°$，锐角）。$A=60°$、$B=45°$、$C=75°$ 均为锐角，满足条件。</p>
+<p>$$\sin C=\sin\frac{5\pi}{12}=\sin 75°=\frac{\sqrt{6}+\sqrt{2}}{4}$$</p>
+<p>由正弦定理：$c=\dfrac{a\sin C}{\sin A}=\dfrac{\sqrt{3}\cdot\dfrac{\sqrt{6}+\sqrt{2}}{4}}{\dfrac{\sqrt{3}}{2}}=\dfrac{\sqrt{6}+\sqrt{2}}{2}$</p>
+<p>$$\boxed{c=\frac{\sqrt{6}+\sqrt{2}}{2}}$$</p>
+<blockquote><p><strong>易错提醒</strong>：$\sin B=\dfrac{\sqrt{2}}{2}$ 有 $B=\dfrac{\pi}{4}$ 和 $\dfrac{3\pi}{4}$ 两解，但 $\dfrac{3\pi}{4}+\dfrac{\pi}{3}>\pi$ 不构成三角形。用&quot;大边对大角&quot;判定 $B<A$ 可快速排除钝角解。</p></blockquote></details>
+<details><summary>▶ 第3题详解（完整四步法：消元→方程→求边→面积）</summary><p><strong>(1)</strong> $2B=A+C$，$A+B+C=\pi$ $\Rightarrow$ $3B=\pi$，$\boxed{B=\dfrac{\pi}{3}}$。</p>
+<p>由 $\sin A+\sin C=\sqrt{2}\sin B=\sqrt{2}\cdot\dfrac{\sqrt{3}}{2}=\dfrac{\sqrt{6}}{2}$。</p>
+<p>$A+C=\dfrac{2\pi}{3}$。利用和差化积： $$\sin A+\sin C=2\sin\frac{A+C}{2}\cos\frac{A-C}{2}=2\sin\frac{\pi}{3}\cos\frac{A-C}{2}=\sqrt{3}\cos\frac{A-C}{2}$$</p>
+<p>故 $\sqrt{3}\cos\dfrac{A-C}{2}=\dfrac{\sqrt{6}}{2}$，$\cos\dfrac{A-C}{2}=\dfrac{\sqrt{6}}{2\sqrt{3}}=\dfrac{\sqrt{2}}{2}$。</p>
+<p>$\dfrac{A-C}{2}=\pm\dfrac{\pi}{4}$，即 $A-C=\pm\dfrac{\pi}{2}$。</p>
+<p>情况①：$A-C=\dfrac{\pi}{2}$，$A+C=\dfrac{2\pi}{3}$ $\Rightarrow$ $A=\dfrac{7\pi}{12}$，$C=\dfrac{\pi}{12}$。合理（$A,B,C>0$）。</p>
+<p>情况②：$A-C=-\dfrac{\pi}{2}$，$A+C=\dfrac{2\pi}{3}$ $\Rightarrow$ $A=\dfrac{\pi}{12}$，$C=\dfrac{7\pi}{12}$。合理。</p>
+<p>$$\boxed{B=\dfrac{\pi}{3},\quad A=\dfrac{7\pi}{12}\text{ 或 }\dfrac{\pi}{12}}$$</p>
+<p><strong>(2)</strong> 由正弦定理 $\dfrac{a}{\sin A}=\dfrac{b}{\sin B}$，$b=2\sqrt{2}$，$\sin B=\dfrac{\sqrt{3}}{2}$。</p>
+<p>情况① $A=\dfrac{7\pi}{12}$：$\sin A=\sin\dfrac{7\pi}{12}=\sin\!\left(\dfrac{\pi}{2}+\dfrac{\pi}{12}\right)=\cos\dfrac{\pi}{12}=\dfrac{\sqrt{6}+\sqrt{2}}{4}$。</p>
+<p>$a=\dfrac{b\sin A}{\sin B}=\dfrac{2\sqrt{2}\cdot\dfrac{\sqrt{6}+\sqrt{2}}{4}}{\frac{\sqrt{3}}{2}}=\dfrac{\dfrac{\sqrt{2}(\sqrt{6}+\sqrt{2})}{2}}{\frac{\sqrt{3}}{2}}=\dfrac{\sqrt{12}+2}{\sqrt{3}}=\dfrac{2\sqrt{3}+2}{\sqrt{3}}=2+\dfrac{2}{\sqrt{3}}=2+\dfrac{2\sqrt{3}}{3}$。</p>
+<p>$C=\dfrac{\pi}{12}$：$\sin C=\dfrac{\sqrt{6}-\sqrt{2}}{4}$。$c=\dfrac{2\sqrt{2}\cdot\frac{\sqrt{6}-\sqrt{2}}{4}}{\frac{\sqrt{3}}{2}}=\dfrac{\sqrt{12}-2}{\sqrt{3}}=2-\dfrac{2\sqrt{3}}{3}$。</p>
+<p>面积 $S=\dfrac{1}{2}ac\sin B=\dfrac{1}{2}\!\left(2+\dfrac{2\sqrt3}{3}\right)\!\left(2-\dfrac{2\sqrt3}{3}\right)\cdot\dfrac{\sqrt{3}}{2}$</p>
+<p>$=\dfrac{\sqrt{3}}{4}\!\left(4-\dfrac{4\cdot3}{9}\right)=\dfrac{\sqrt{3}}{4}\cdot\dfrac{36-12}{9}=\dfrac{\sqrt{3}}{4}\cdot\dfrac{24}{9}=\dfrac{2\sqrt{3}}{3}$。</p>
+<p>或用 $S=\dfrac{1}{2}ac\sin B=\dfrac{\sqrt{3}}{4}ac$，$ac=\left(2+\dfrac{2\sqrt3}{3}\right)\!\left(2-\dfrac{2\sqrt3}{3}\right)=4-\dfrac{12}{9}=4-\dfrac{4}{3}=\dfrac{8}{3}$。</p>
+<p>$$S=\frac{\sqrt{3}}{4}\cdot\frac{8}{3}=\boxed{\frac{2\sqrt{3}}{3}}$$</p>
+<p>情况② $A=\dfrac{\pi}{12}$、$C=\dfrac{7\pi}{12}$：$a$ 与 $c$ 互换，$ac$ 不变，$S=\dfrac{2\sqrt{3}}{3}$，同。</p>
+<blockquote><p><strong>易错提醒</strong>：$\sin A+\sin C$ 用和差化积 $2\sin\dfrac{A+C}{2}\cos\dfrac{A-C}{2}$ 处理最简洁。最后面积用 $S=\dfrac{1}{2}ac\sin B$，注意 $ac$ 可用平方差简化。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

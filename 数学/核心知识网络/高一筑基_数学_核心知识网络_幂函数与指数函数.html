@@ -97,6 +97,15 @@ MathJax = {
 </ul>
 <p>故选 <strong>C</strong>。</p>
 <hr>
+<h2>自测训练（3道·覆盖幂函数与指数函数性质）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 幂函数图象与单调性比较大小）</p>
+<p>比较下列各组数的大小： (1) $(-2.1)^{-2}$ 与 $(-2.5)^{-2}$； (2) $\left(\dfrac{4}{3}\right)^{-0.5}$ 与 $\left(\dfrac{4}{3}\right)^{0.5}$。</p>
+<p><strong>第2题</strong>（检验 指数运算性质）</p>
+<p>计算：$\dfrac{(2^{\frac{1}{3}} \cdot 2^{\frac{2}{3}})^6}{2^4} - (0.027)^{-\frac{2}{3}}$。</p>
+<p><strong>第3题</strong>（检验 指数函数性质 + 不等式）</p>
+<p>已知 $a^{\frac{3}{2}} > a^{\frac{5}{3}}$，求 $a$ 的取值范围。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_对数函数.html">对数函数</a> — 指数函数与对数函数互为反函数</li>
@@ -115,6 +124,27 @@ MathJax = {
 <li>广东卷常考：指数函数与对数函数的综合比较大小题</li>
 <li>注意：指数函数值域恒正，解方程时注意验根</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（幂函数与指数函数单调性比大小）</summary><p><strong>(1)</strong> 考虑 $y = x^{-2}$ 在 $(0, +\infty)$ 上单调递减（$\alpha = -2 < 0$）。</p>
+<p>取绝对值后：$2.1 < 2.5 \Rightarrow 2.1^{-2} > 2.5^{-2}$，即 $(-2.1)^{-2} = 2.1^{-2} > 2.5^{-2} = (-2.5)^{-2}$。</p>
+<p><strong>答</strong>：$(-2.1)^{-2} > (-2.5)^{-2}$。</p>
+<p><strong>(2)</strong> 考虑 $y = \left(\dfrac{4}{3}\right)^x$，底数 $a = \dfrac{4}{3} > 1$，在 $\mathbb{R}$ 上单调递增。</p>
+<p>$-0.5 < 0.5 \Rightarrow \left(\dfrac{4}{3}\right)^{-0.5} < \left(\dfrac{4}{3}\right)^{0.5}$。</p>
+<p><strong>答</strong>：$\left(\dfrac{4}{3}\right)^{-0.5} < \left(\dfrac{4}{3}\right)^{0.5}$。</p>
+<blockquote><p><strong>易错提醒</strong>：(1) 中负数的偶数次幂结果为正，可直接比较绝对值大小；(2) 底数 $>1$ 时指数越大值越大，底数 $0<a<1$ 时恰好相反。</p></blockquote></details>
+<details><summary>▶ 第2题详解（指数运算性质综合）</summary><p>$$\frac{\left(2^{1/3}\cdot 2^{2/3}\right)^6}{2^4} - (0.027)^{-2/3}$$</p>
+<p><strong>第一项</strong>：$2^{1/3}\cdot 2^{2/3} = 2^{1/3+2/3} = 2^1 = 2$，$(2)^6 = 64$，$\dfrac{64}{2^4} = \dfrac{64}{16} = 4$。</p>
+<p><strong>第二项</strong>：$0.027 = 0.3^3 = \left(\dfrac{3}{10}\right)^3$。 $$\left(\dfrac{3}{10}\right)^{-2} = \left(\dfrac{10}{3}\right)^2 = \dfrac{100}{9}$$</p>
+<p>所以原式 $= 4 - \dfrac{100}{9} = \dfrac{36 - 100}{9} = -\dfrac{64}{9}$。</p>
+<p><strong>答</strong>：$-\dfrac{64}{9}$。</p>
+<blockquote><p><strong>易错提醒</strong>：运算性质 $a^r\cdot a^s = a^{r+s}$（同底幂相乘，指数相加），$(a^r)^s = a^{rs}$（幂的幂，指数相乘）。$(0.027)^{-2/3} = \left[(0.3)^3\right]^{-2/3} = (0.3)^{-2} = \dfrac{100}{9}$。</p></blockquote></details>
+<details><summary>▶ 第3题详解（指数函数单调性 + 分类讨论）</summary><p>$a^{3/2} > a^{5/3}$ 是指数型不等式。注意指数函数 $y = a^x$ 要求 $a > 0$ 且 $a \ne 1$，分两种情况：</p>
+<p><strong>情形1</strong>：$a > 1$ 时，$y = a^x$ 单调递增，$a^{3/2} > a^{5/3} \Leftrightarrow \dfrac{3}{2} > \dfrac{5}{3}$，但 $\dfrac{3}{2} = \dfrac{9}{6} < \dfrac{10}{6} = \dfrac{5}{3}$，矛盾，无解。</p>
+<p><strong>情形2</strong>：$0 < a < 1$ 时，$y = a^x$ 单调递减，$a^{3/2} > a^{5/3} \Leftrightarrow \dfrac{3}{2} < \dfrac{5}{3}$，即 $\dfrac{9}{6} < \dfrac{10}{6}$，恒成立。</p>
+<p><strong>答</strong>：$a \in (0, 1)$。</p>
+<blockquote><p><strong>易错提醒</strong>：解指数不等式时，务必先判断底数 $a$ 的范围。$a>1$ 时单调递增、不等号方向不变；$0<a<1$ 时单调递减、不等号要反向。本题 $\dfrac{3}{2} < \dfrac{5}{3}$ 是关键事实。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">
