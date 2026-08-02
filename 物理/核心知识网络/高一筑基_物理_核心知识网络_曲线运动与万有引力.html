@@ -154,6 +154,12 @@ MathJax = {
 <p><strong>答</strong>：选 <strong>BC</strong>。</p>
 <blockquote><p>💡 关键：平抛&quot;时间看高度&quot;是首要结论；重力瞬时功率用 $P=mgv_y$（竖直分量），不是 $mgv$；机械能守恒前提是&quot;只有重力做功&quot;。</p></blockquote>
 <hr>
+<h2>自测训练（3道·覆盖平抛·圆周临界·天体运动）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验：平抛运动——分解与合成） 从高度 $h=20\,\mathrm{m}$ 处以 $v_0=15\,\mathrm{m/s}$ 水平抛出一个小球，$g$ 取 $10\,\mathrm{m/s^2}$，空气阻力不计。求： (1) 小球在空中的运动时间 $t$； (2) 小球落地时的水平距离 $x$； (3) 小球落地时的速度大小 $v$（保留 2 位有效数字）。</p>
+<p><strong>第2题</strong>（检验：圆周运动——轻绳模型最高点临界） 长度 $L=0.4\,\mathrm{m}$ 的轻绳一端固定，另一端系质量 $m=0.5\,\mathrm{kg}$ 的小球，小球在竖直平面内做圆周运动。$g$ 取 $10\,\mathrm{m/s^2}$。求： (1) 小球通过最高点时的最小速度 $v_{\min}$（绳子恰好不被拉断且不松弛）； (2) 小球通过最低点时速度 $v=5\,\mathrm{m/s}$，求绳的拉力 $T$。</p>
+<p><strong>第3题</strong>（检验：万有引力——卫星绕行参数与黄金代换） 已知地球半径 $R=6.4\times10^6\,\mathrm{m}$，地球表面重力加速度 $g=9.8\,\mathrm{m/s^2}$，一颗卫星在距地面高 $h=3.2\times10^6\,\mathrm{m}$ 的圆形轨道运行。求： (1) 卫星的线速度 $v$（保留 2 位有效数字）； (2) 卫星的运行周期 $T$（保留 2 位有效数字）。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_物理_核心知识网络_牛顿三定律与受力分析.html">高一筑基_物理_核心知识网络_牛顿三定律与受力分析</a> — 圆周运动向心力由牛顿定律分析，万有引力提供天体向心力</li>
@@ -202,6 +208,28 @@ MathJax = {
 </ol>
 <li><strong>等级赋分提示</strong>：万有引力选择题常考&quot;轨道比较&quot;，掌握&quot;高轨低速长周期&quot;口诀可快速解题；圆周运动临界条件需结合能量守恒分析，注意绳/杆模型的区别</li>
 </ul>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（平抛运动分解）</summary><p><strong>(1) 竖直方向自由落体</strong> $$t=\sqrt{\frac{2h}{g}}=\sqrt{\frac{2\times20}{10}}=2\,\mathrm{s}$$</p>
+<p><strong>(2) 水平方向匀速</strong> $$x=v_0t=15\times2=30\,\mathrm{m}$$</p>
+<p><strong>(3) 落地速度合成</strong></p>
+<p>竖直分速度 $v_y=gt=10\times2=20\,\mathrm{m/s}$： $$v=\sqrt{v_0^2+v_y^2}=\sqrt{15^2+20^2}=\sqrt{625}=25\,\mathrm{m/s}$$</p>
+<p><strong>答</strong>：(1) $t=2\,\mathrm{s}$；(2) $x=30\,\mathrm{m}$；(3) $v=25\,\mathrm{m/s}$。</p>
+<blockquote><p><strong>易错提醒</strong>：平抛运动时间只由高度决定（$t=\sqrt{2h/g}$），与初速度无关；速度合成用勾股定理。</p></blockquote></details>
+<details><summary>▶ 第2题详解（圆周运动轻绳临界）</summary><p><strong>(1) 最高点最小速度</strong></p>
+<p>绳模型最高点临界条件：绳拉力为零，仅重力提供向心力： $$mg=\frac{mv_{\min}^2}{L}\Rightarrow v_{\min}=\sqrt{gL}=\sqrt{10\times0.4}=2\,\mathrm{m/s}$$</p>
+<p><strong>(2) 最低点绳拉力</strong></p>
+<p>最低点向心加速度向上，绳拉力与重力之差提供向心力： $$T-mg=\frac{mv^2}{L}$$ $$T=mg+\frac{mv^2}{L}=0.5\times10+\frac{0.5\times5^2}{0.4}=5+\frac{12.5}{0.4}=5+31.25=36.25\,\mathrm{N}$$</p>
+<p><strong>答</strong>：(1) $v_{\min}=2\,\mathrm{m/s}$；(2) $T=36.25\,\mathrm{N}$。</p>
+<blockquote><p><strong>易错提醒</strong>：绳模型最高点 $v_{\min}=\sqrt{gr}$（绳拉力恰好为零）；杆模型最高点 $v_{\min}=0$（杆可提供支持力）。</p></blockquote></details>
+<details><summary>▶ 第3题详解（万有引力+黄金代换）</summary><p><strong>用黄金代换 $GM=gR^2$</strong></p>
+<p>轨道半径 $r=R+h=6.4\times10^6+3.2\times10^6=9.6\times10^6\,\mathrm{m}$。</p>
+<p><strong>(1) 线速度</strong></p>
+<p>由 $G\dfrac{Mm}{r^2}=m\dfrac{v^2}{r}$，得 $v=\sqrt{\dfrac{GM}{r}}=\sqrt{\dfrac{gR^2}{r}}$： $$v=\sqrt{\frac{9.8\times(6.4\times10^6)^2}{9.6\times10^6}}=\sqrt{\frac{9.8\times4.096\times10^{13}}{9.6\times10^6}}$$ $$=\sqrt{4.0\times10^7}\approx6.3\times10^3\,\mathrm{m/s}$$</p>
+<p><strong>(2) 周期</strong> $$T=\frac{2\pi r}{v}=\frac{2\pi\times9.6\times10^6}{6.3\times10^3}\approx9.6\times10^3\,\mathrm{s}$$</p>
+<p><strong>答</strong>：(1) $v\approx6.3\times10^3\,\mathrm{m/s}$；(2) $T\approx9.6\times10^3\,\mathrm{s}$。</p>
+<blockquote><p><strong>易错提醒</strong>：卫星模型公式 $v=\sqrt{GM/r}$，轨道半径 $r=R+h$（从地心算起，不是高度）；黄金代换 $GM=gR^2$ 仅适用于忽略自转的表面。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

@@ -192,6 +192,42 @@ A1: ____  A2: ____  A3: ____
 
 ---
 
+## 自测训练（3道·覆盖三问速构·五答信息捕捉·礼貌句型）
+
+> 先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。
+
+**第1题**（检验：特殊疑问句速构 —— 疑问词+助动词+主语+动词原形）
+
+将以下中文提示译为英语特殊疑问句，注意助动词后动词回原形。
+
+```
+(1) 你是什么时候开始学英语的？
+(2) 你通常怎样去上学？
+(3) 你在那里待了多久？
+```
+
+**第2题**（检验：一般疑问句速构 + 礼貌句型）
+
+将以下中文提示译为英语一般疑问句（含礼貌提问句型），注意时态。
+
+```
+(1) 你明天有空吗？（用 Could you...? / Are you...? 均可）
+(2) 你能告诉我怎么去图书馆吗？
+```
+
+**第3题**（检验：五答策略 —— 简短准确作答）
+
+假设电脑向你提问，请根据以下信息用简短准确的英语回答。
+
+```
+情景信息：Tom 每周三下午 3:30 在图书馆参加读书会，每周一次。
+
+(1) Q: When does Tom attend the reading club?
+(2) Q: How often does Tom go to the club?
+```
+
+---
+
 ## 关联卡片
 
 - [高一筑基_英语_典型题型与方法_广东听说考试Part A模仿朗读技巧](高一筑基_英语_典型题型与方法_广东听说考试Part A模仿朗读技巧.md) — Part A模仿朗读，打好语音语调基础
@@ -219,3 +255,61 @@ A1: ____  A2: ____  A3: ____
 ---
 
 > 🏷️ 标签：`#英语` `#典型题型与方法` `#高一筑基` `#难度3` `#广东听说` `#Part B` `#角色扮演` `#三问五答` `#疑问句` `#听力速记` `#广东省自主命题`
+
+---
+
+## 参考答案（请先独立完成自测训练，再展开核对）
+
+> 答案与题目分板块呈现，便于"先做后对"。每题给出规范解答 + 易错提醒，做完一题对一题。
+
+<details>
+<summary>▶ 第1题详解（特殊疑问句速构）</summary>
+
+```
+(1) When did you start learning English?
+(2) How do you usually go to school?
+(3) How long did you stay there?
+```
+
+解析：
+- (1) "什么时候"→ When；过去时用 did；start 后接 learning（start doing）。
+- (2) "怎样"→ How；注意"通常"usually 不能漏译；一般现在时用 do。
+- (3) "多久"→ How long；过去时用 did。
+
+> **易错提醒**：助动词 did 后动词必须回原形（start 而非 started）；中文提示中的副词（usually/那里）是采分点，漏译扣分。
+
+</details>
+
+<details>
+<summary>▶ 第2题详解（一般疑问句 + 礼貌句型）</summary>
+
+参考答案（两种句型均可）：
+
+```
+(1) Are you free tomorrow? / Could you tell me if you are free tomorrow?
+(2) Could you tell me how to get to the library?
+```
+
+解析：
+- (1) 一般疑问句用升调 ↗；明天→tomorrow 用一般将来或一般现在时表将来均可。
+- (2) Could you tell me...? 是高频礼貌提问句型，后接 how to get to...
+
+> **易错提醒**：礼貌句型 Could you tell me 后接 how/what/when + to do 结构，不接完整疑问句（不说 Could you tell me how can I get...）。
+
+</details>
+
+<details>
+<summary>▶ 第3题详解（五答简短作答）</summary>
+
+```
+(1) At 3:30 every Wednesday afternoon. / He attends it at 3:30 every Wednesday afternoon.
+(2) Once a week. / He goes to the club once a week.
+```
+
+解析：
+- (1) 问时间 → 用 At + 时间短语即可得分，完整句更稳。
+- (2) 问频率 → Once a week 直接回答，对齐问句的人称时态。
+
+> **易错提醒**：五答不需要完整长句，先给答案关键词再补一句解释即可；沉默=0分，没听清也要按笔记猜一个最可能的答案。
+
+</details>

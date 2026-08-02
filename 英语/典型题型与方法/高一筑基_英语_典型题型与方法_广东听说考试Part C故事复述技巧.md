@@ -218,6 +218,37 @@
 
 ---
 
+## 自测训练（3道·覆盖四要素笔记法·速记符号·复述框架）
+
+> 先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。
+
+**第1题**（检验：四要素笔记法 —— 第一遍听抓主线）
+
+阅读以下故事梗概，用"四要素"模板（人物+动词链+主线+情感）写出第一遍笔记。
+
+```
+故事梗概：Mary 的生日快到了，她的朋友们秘密筹备了一场惊喜派对。
+当天 Mary 被朋友以"一起吃饭"为由带到家里，推开门看到气球和蛋糕，
+感动得流下了眼泪。
+关键词：Mary, birthday, surprise party, friends, balloons, cake, moved to tears
+```
+
+**第2题**（检验：速记符号体系应用）
+
+请用速记符号（→ ↑ ↓ ! ? √ 等）将下面这段故事压缩成笔记（不超过5行）。
+
+```
+Tom 想给妈妈买一个漂亮的花瓶作生日礼物，但钱不够。店长帮他打折，
+他终于买下了。回家路上花瓶摔碎了，他很伤心。但妈妈说心意最重要，
+Tom 最终露出了笑容。
+```
+
+**第3题**（检验：复述逻辑框架 —— 过渡词 + 时态 + 人称）
+
+用第三人称、一般过去时，写一段约60词的故事复述（基于第1题或第2题的故事），要求包含开头、发展、转折、结局四类过渡词至少各一个。
+
+---
+
 ## 关联卡片
 
 - [高一筑基_英语_典型题型与方法_广东听说考试Part A模仿朗读技巧](高一筑基_英语_典型题型与方法_广东听说考试Part A模仿朗读技巧.md) — 听说Part A
@@ -248,3 +279,60 @@
 ---
 
 > 🏷️ 标签：`#英语` `#典型题型与方法` `#高一筑基` `#难度3` `#广东听说` `#Part C` `#故事复述` `#速记` `#笔记法` `#广东省自主命题`
+
+---
+
+## 参考答案（请先独立完成自测训练，再展开核对）
+
+> 答案与题目分板块呈现，便于"先做后对"。每题给出规范解答 + 易错提醒，做完一题对一题。
+
+<details>
+<summary>▶ 第1题详解（四要素笔记法）</summary>
+
+参考笔记：
+
+```
+人物：Mary(M), friends(fr)
+动词：want → plan → bring → open → see → cry
+主线：friends plan surprise party → bring M home → M opens door → sees balloons/cake → moved
+情感：? curious → ! surprised → ↓ moved to tears → ↑ happy
+```
+
+> **易错提醒**：第一遍听只抓核心动词链和人物，不要纠结细节；情感标注用 ↑/↓ 符号即可，节省书写时间。
+
+</details>
+
+<details>
+<summary>▶ 第2题详解（速记符号应用）</summary>
+
+参考笔记（可用更少行数）：
+
+```
+T → buy vase for mo's b-day
+but no $ → manager √ discount → bought
+home: dropped → broken → T ↓ sad
+mo: "thought matters" → T ↑ smile
+```
+
+> **易错提醒**：速记只要自己看得懂即可，不必写完整单词；用 √ 表示解决、↑/↓ 表示情感是最省时间的记法。
+
+</details>
+
+<details>
+<summary>▶ 第3题详解（复述逻辑框架）</summary>
+
+参考复述（约60词）：
+
+```
+One day, Tom wanted to buy a beautiful vase for his mother's birthday.
+However, he didn't have enough money. Fortunately, the manager gave him a
+discount and he bought it. Suddenly, the vase slipped and broke on the way
+home. To his surprise, his mother said the thought was what mattered. In the
+end, Tom smiled, understanding that love was the best gift of all.
+```
+
+过渡词检查：One day（开头）/ However（转折）/ Fortunately（发展）/ Suddenly（高潮）/ In the end（结局）—— 四类齐全。
+
+> **易错提醒**：人称统一用 he/第三人称，全文用一般过去时（wanted/bought/broke/said）；卡壳时用 "And then..." 缓冲，不要停顿回头纠正。
+
+</details>

@@ -411,7 +411,15 @@ def md_body_to_html(md_text: str):
                 end_tag = ""
                 tail_inline = ""
             # 内部内容递归渲染（子流程，支持嵌套 details、表格、列表、公式等）
-            inner_md = "\n".join(inner_lines)
+            # 注意：父级已提取 code/math 占位符，递归前需还原为原文，否则子调用
+            # 的 code_blocks 为空导致索引越界。
+            inner_lines_restored = []
+            for il in inner_lines:
+                rl = il
+                for idx, cb in enumerate(code_blocks):
+                    rl = rl.replace(f"\x00CODE{idx}\x00", cb)
+                inner_lines_restored.append(rl)
+            inner_md = "\n".join(inner_lines_restored)
             inner_html, _ = md_body_to_html("# placeholder\n" + inner_md)
             out.append(start_tag + inner_html + tail_inline + end_tag)
             continue

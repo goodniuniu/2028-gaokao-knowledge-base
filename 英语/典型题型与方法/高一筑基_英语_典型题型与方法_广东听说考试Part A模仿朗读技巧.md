@@ -192,6 +192,41 @@
 
 ---
 
+## 自测训练（3道·覆盖意群停顿·连读失爆·语调判断）
+
+> 先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。
+
+**第1题**（检验：意群停顿划分 —— Sense Group Pausing）
+
+请用 `/` 为下面句子标注意群停顿（至少切分4处），并说明每处切分依据。
+
+```
+When I got to the station, the train had already left, and I had to wait for the next one.
+```
+
+**第2题**（检验：连读与失爆识别 —— Liaison & Incomplete Plosion）
+
+下面短语中，找出所有"辅音+元音连读"和"爆破音失爆"位置（标出连读符号 `~` 或括出失爆字母）。
+
+```
+(a) take it easy
+(b) a big cake
+(c) first of all
+(d) good morning
+```
+
+**第3题**（检验：语调判断 —— Intonation Rules）
+
+判断下列句子的语调（升调 ↗ / 降调 ↘ / 前升后降），并说明理由。
+
+```
+(a) Are you free this afternoon?
+(b) Where do you usually go to school?
+(c) Do you want tea or coffee?
+```
+
+---
+
 ## 关联卡片
 
 - [高一筑基_英语_典型题型与方法_广东听说考试Part B角色扮演技巧](高一筑基_英语_典型题型与方法_广东听说考试Part B角色扮演技巧.md) — Part B三问五答，听说的"中场核心"
@@ -215,3 +250,54 @@
 ---
 
 > 🏷️ 标签：`#英语` `#典型题型与方法` `#高一筑基` `#难度2` `#广东听说` `#Part A` `#模仿朗读` `#语音语调` `#连读失爆` `#意群停顿` `#广东省自主命题`
+
+---
+
+## 参考答案（请先独立完成自测训练，再展开核对）
+
+> 答案与题目分板块呈现，便于"先做后对"。每题给出规范解答 + 易错提醒，做完一题对一题。
+
+<details>
+<summary>▶ 第1题详解（意群停顿划分）</summary>
+
+参考切分：
+
+```
+When I got to the station / , the train had already left / , and I had to wait / for the next one.
+```
+
+切分依据：
+- 从句在前、主句在后 → 主从句之间切分（station 后）
+- and 连词前切分（left 后）
+- 介词短语前可切分（for the next one 独立为一意群）
+
+> **易错提醒**：逗号位置≠意群停顿的唯一依据，真正的切分在"意思单元"边界；连读短语（got~to）内部不能切断。
+
+</details>
+
+<details>
+<summary>▶ 第2题详解（连读与失爆识别）</summary>
+
+```
+(a) take~it~easy       → 辅音+元音连读（take→it，it→easy）
+(b) a bi(g) cake        → 爆破音+爆破音失爆，g 只做口型不爆破
+(c) first~of~all        → 辅音+元音连读（first→of，of→all）
+(d) goo(d) morning     → 爆破音+鼻音失爆，d 憋住不爆
+```
+
+> **易错提醒**：失爆不是"吞音"，被括出的字母仍要做口型，只是不送气爆破；漏读整个辅音会被机评判为"完整度"扣分。
+
+</details>
+
+<details>
+<summary>▶ 第3题详解（语调判断）</summary>
+
+```
+(a) Are you free this afternoon?  → ↗ 升调（一般疑问句，用升调）
+(b) Where do you usually go to school?  → ↘ 降调（特殊疑问句，用降调）
+(c) Do you want tea or coffee?  → 前升后降（选择疑问句，or 前升、末项降）
+```
+
+> **易错提醒**：一般疑问句用升调、特殊疑问句用降调是铁律；选择疑问句切勿全程升调或全程降调，or 连接的两部分语调相反。
+
+</details>

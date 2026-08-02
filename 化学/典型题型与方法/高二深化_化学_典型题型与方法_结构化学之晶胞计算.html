@@ -67,6 +67,12 @@ MathJax = {
 <blockquote><p>补充：若需求最简比与密度，用均摊法数Al、O原子数后化简得 x:y:O比，再代入 $\rho=\dfrac{Z\cdot M_r}{N_A a^3}$。</p></blockquote>
 <blockquote><p>💡 <strong>关键技巧</strong>：晶胞位置&quot;顶点/面心/体心&quot;直接由粒子数判定（体心时该原子在晶胞内计1个）；最近邻配位数靠晶胞几何对称性数，勿漏上下前后左右。</p></blockquote>
 <hr>
+<h2>自测训练（3道·覆盖均摊法与密度计算）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验：均摊法 + 化学式推断） 某立方晶胞中，X 原子位于 8 个顶点，Y 原子位于 6 个面心，Z 原子位于体心。用均摊法求晶胞中 X、Y、Z 的粒子数，并写出最简化学式。</p>
+<p><strong>第2题</strong>（检验：配位数 + 晶胞几何） NaCl 晶体中每个 Na⁺ 周围有 6 个 Cl⁻ 紧邻（正八面体配位）。若某立方晶胞中 Co 位于体心，O 原子位于 12 条棱的中点，求一个 Co 周围最近邻 O 的个数。</p>
+<p><strong>第3题</strong>（检验：密度公式 + 单位换算） 某面心立方金属晶胞参数 $a = 4.05\times10^{-8}\ \mathrm{cm}$，摩尔质量 $M = 27\ \mathrm{g/mol}$（$N_A = 6.02\times10^{23}\ \mathrm{mol^{-1}}$）。晶胞中含 4 个原子。求晶体的密度 $\rho$（$\mathrm{g/cm^3}$，保留 2 位小数）。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高二深化_化学_核心知识网络_结构化学基础.html">结构化学基础</a> — 晶胞、均摊法、配位数</li>
@@ -83,6 +89,27 @@ MathJax = {
 <li>广东卷晶胞计算常与流程/结构题融合，分值虽小但&quot;位置+配位数+密度&quot;三步固定。</li>
 <li>易错：①均摊法计错（顶点1/8漏乘）；②配位数数错（体心周围应为12而非8或6）；③密度单位未把nm³换算为cm³（×10⁻²¹）。</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（均摊法 + 化学式推断）</summary><ul>
+<li>X（顶点 8 个）：$8\times\dfrac{1}{8} = 1$</li>
+<li>Y（面心 6 个）：$6\times\dfrac{1}{2} = 3$</li>
+<li>Z（体心 1 个）：$1\times1 = 1$</li>
+</ul>
+<p>最简比 $X:Y:Z = 1:3:1$，化学式为 <strong>$\mathrm{XY_3Z}$</strong>。</p>
+<blockquote><p><strong>易错提醒</strong>：均摊规则必须牢记——顶点 1/8、棱 1/4、面心 1/2、体心 1；最简比要约到互质整数。</p></blockquote></details>
+<details><summary>▶ 第2题详解（配位数 + 晶胞几何）</summary><p>Co 位于体心，O 位于 12 条棱的中点。</p>
+<p>每条棱的中点与体心的距离 $d = \dfrac{\sqrt{2}}{2}\cdot\dfrac{a}{2}\cdot\sqrt{2} = \dfrac{a\sqrt{2}}{2}\cdot\dfrac{\sqrt{2}}{\sqrt{2}}$（用空间几何）。</p>
+<p>实际上，体心到任一棱中点的距离相同（由晶胞对称性保证），12 条棱对应 12 个 O，全部为最近邻。</p>
+<p><strong>答</strong>：一个 Co 周围最近 O 的个数为 <strong>12</strong>。</p>
+<blockquote><p><strong>易错提醒</strong>：体心到 12 条棱中点的距离均相等（等于 $\dfrac{\sqrt{2}}{2}\cdot\dfrac{a}{2}\times\sqrt{2}=\dfrac{a\sqrt{2}}{2}$），不会遗漏。常错答 6（面心数）或 8（顶点数）。</p></blockquote></details>
+<details><summary>▶ 第3题详解（密度公式 + 单位换算）</summary><p>公式：$\rho = \dfrac{Z\cdot M}{N_A\cdot a^3}$</p>
+<p>代入：$Z = 4$，$M = 27\ \mathrm{g/mol}$，$a = 4.05\times10^{-8}\ \mathrm{cm}$，$N_A = 6.02\times10^{23}$</p>
+<p>$a^3 = (4.05\times10^{-8})^3 = 6.643\times10^{-23}\ \mathrm{cm^3}$</p>
+<p>$$\rho = \frac{4\times27}{6.02\times10^{23}\times6.643\times10^{-23}} = \frac{108}{39.99} \approx 2.70\ \mathrm{g/cm^3}$$</p>
+<p><strong>答</strong>：$\rho \approx 2.70\ \mathrm{g/cm^3}$（铝的密度，与实验值吻合）。</p>
+<blockquote><p><strong>易错提醒</strong>：晶胞参数单位换算——1 nm = $10^{-7}$ cm，1 pm = $10^{-10}$ cm；本题已给 cm，无需换算；计算时注意 $a^3$ 的指数运算。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">
