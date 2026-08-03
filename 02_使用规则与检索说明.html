@@ -32,6 +32,7 @@ MathJax = {
 <h1 class="kb-title">⚙️ 使用规则与检索说明</h1>
 
 <div class="kb-note"><strong>语文</strong>：新高考Ⅰ卷 | 教育部统一命题 | 思辨性强、贴近时代<br><strong>数学</strong>：新高考Ⅰ卷 | 教育部统一命题 | 综合性强、创新思维<br><strong>英语</strong>：新高考Ⅰ卷 | 教育部统一命题 | 笔试不含听力；广东单独听说考试（人机对话，20分）<br><strong>物理</strong>：广东省卷 | 自主命题 | 等级赋分，情境化命题<br><strong>化学</strong>：广东省卷 | 自主命题 | 等级赋分，工艺流程、实验探究<br><strong>生物</strong>：广东省卷 | 自主命题 | 等级赋分，长句表达、实验设计</div>
+
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
 <blockquote><p>本文件定义知识库的使用规范、检索方式、入库规则及维护规则，请在使用前仔细阅读。</p></blockquote>
@@ -107,6 +108,15 @@ MathJax = {
 <li><strong>⚠️ 待强化</strong>：基本理解，但做题时偶有失误或速度较慢，需要定期复习</li>
 <li><strong>❌ 未理解</strong>：概念模糊，无法独立解题，需要重新学习或请教老师</li>
 </ul>
+<h3>网页端「我的掌握」标记（每用户进度，2026-08 新增）</h3>
+<ul>
+<li><strong>卡片页三键标记</strong>：每张知识卡片顶部有 <code>[❌未理解][⚠️待强化][✅已掌握]</code> 按钮，点击即记录；再点一次当前状态 = 取消标记。</li>
+<li><strong>每用户独立</strong>：进度存在浏览器本地（localStorage），同一浏览器可建多个用户（右上角 👤 菜单切换）。</li>
+<li><strong>云同步（多设备）</strong>：右上角 👤 →「注册同步码」获得 6 位同步码；在其它设备的 👤 菜单选「输入同步码恢复」，或打开 Worker 的 <code>/sync</code> 恢复页，即可合并进度。同步码即钥匙，请妥善保存。</li>
+<li><strong>进度可视化</strong>：索引页已标记卡片显示状态角标；<a href="复盘追踪/index.html">复盘追踪</a> 页顶部有个人仪表盘（六科掌握度、最近 7 天标记动态）。</li>
+<li><strong>与静态状态表的关系</strong>：<code>知识掌握状态表.md</code> 是内容维护者视角的默认标记（由 md 元信息生成）；网页端三键标记是每个用户自己的进度，两者互不影响。</li>
+<li><strong>注意</strong>：卡片 md 改名/移动目录会使该卡的进度失联（进度以文件路径为 ID）。</li>
+</ul>
 <hr>
 <h2>五、维护规则</h2>
 <h3>卡片更新</h3>
@@ -175,5 +185,6 @@ MathJax = {
 <footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
 <a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
 </div>
+<script src="assets/kb-progress.js" defer></script>
 </body>
 </html>

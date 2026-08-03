@@ -446,3 +446,105 @@ a.kb-btn:hover { filter: brightness(1.08); text-decoration: none; }
   .kb-content table, .kb-table { font-size: 13px; }
   .kb-item { flex-wrap: wrap; }
 }
+
+/* ---------- 每用户学习进度（kb-progress.js） ---------- */
+/* 卡片页三键标记 */
+.kb-progress {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 4px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.kb-progress__label { font-size: 13px; color: var(--text-2); font-weight: 600; }
+.kb-progress__btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text-2);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.kb-progress__btn:hover { border-color: var(--accent); color: var(--accent-ink); }
+.kb-progress__btn.is-active[data-s="0"] { background: #fef2f2; border-color: #ef4444; color: #b91c1c; font-weight: 600; }
+.kb-progress__btn.is-active[data-s="1"] { background: #fffbeb; border-color: #f59e0b; color: #b45309; font-weight: 600; }
+.kb-progress__btn.is-active[data-s="2"] { background: #f0fdf4; border-color: #22c55e; color: #15803d; font-weight: 600; }
+
+/* 索引页掌握角标 */
+.kb-item-status { margin-left: auto; font-size: 15px; padding-left: 8px; }
+
+/* 导航栏用户入口 */
+a.kb-user-btn { cursor: pointer; }
+
+/* 用户弹层 */
+.kb-user-panel {
+  position: absolute;
+  z-index: 100;
+  min-width: 260px;
+  max-width: 320px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .12);
+  padding: 14px;
+  font-size: 14px;
+}
+.kb-user-panel__sec { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.kb-user-panel__sec:last-child { border-bottom: none; }
+.kb-user-panel__title { font-size: 12px; color: var(--text-3, #94a3b8); font-weight: 600; margin-bottom: 6px; }
+.kb-user-panel__stats { display: flex; gap: 14px; font-size: 15px; font-weight: 600; }
+.kb-user-panel__hint { font-size: 12px; color: var(--text-2); margin-top: 4px; line-height: 1.6; }
+.kb-user-panel__code { letter-spacing: 2px; color: var(--accent-ink); }
+.kb-user-panel__user { padding: 5px 6px; border-radius: 6px; cursor: pointer; }
+.kb-user-panel__user:hover { background: var(--accent-soft); }
+.kb-user-panel__user.is-current { color: var(--accent-ink); font-weight: 600; }
+.kb-user-panel__btn {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--accent-ink);
+  font-size: 13px;
+  text-align: center;
+  cursor: pointer;
+}
+.kb-user-panel__btn:hover { background: var(--accent-soft); }
+
+/* 复盘追踪页仪表盘 */
+.kb-dash {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 18px 0;
+}
+.kb-dash__head { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.kb-dash__pct { font-size: 34px; font-weight: 800; color: var(--accent-ink); }
+.kb-dash__meta { font-size: 13px; color: var(--text-2); line-height: 1.6; }
+.kb-dash__row { display: flex; align-items: center; gap: 10px; margin: 8px 0; }
+.kb-dash__subj { width: 48px; font-size: 13px; font-weight: 600; }
+.kb-dash__bar {
+  flex: 1;
+  height: 10px;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.kb-dash__fill { display: block; height: 100%; background: var(--accent); border-radius: 999px; transition: width .3s; }
+.kb-dash__num { width: 64px; text-align: right; font-size: 13px; color: var(--text-2); font-variant-numeric: tabular-nums; }
+.kb-dash__foot { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-2); }
+
+@media (max-width: 640px) {
+  .kb-progress { padding: 8px 10px; }
+  .kb-progress__btn { padding: 5px 10px; font-size: 12px; }
+  .kb-user-panel { min-width: 220px; }
+}

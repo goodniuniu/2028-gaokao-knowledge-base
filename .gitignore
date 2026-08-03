@@ -10,3 +10,7 @@ __pycache__/
 # 临时产物
 *.tmp
 ~$*
+
+# Node（worker/ 的 wrangler 依赖与本地开发产物）
+node_modules/
+worker/.wrangler/

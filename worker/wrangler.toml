@@ -1,0 +1,18 @@
+name = "gaokao-kb-sync"
+main = "src/index.js"
+compatibility_date = "2024-09-01"
+
+# KV Namespace 绑定
+# 部署前先运行: npx wrangler kv namespace create KB_KV
+# 然后将返回的 id 填到下面
+[[kv_namespaces]]
+binding = "KB_KV"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+# preview_id = "预览环境ID"       # 可选：本地开发用
+
+# 环境变量
+[vars]
+# Origin 白名单（逗号分隔）：只有名单内的网站能从浏览器调用 API
+# localhost/127.0.0.1 始终放行（本地开发）；设为 "*" 则不限制
+# 注意：Origin = scheme + host + port，不含路径，严格区分 http/https 和 www/裸域
+ALLOWED_ORIGINS = "https://goodniuniu.github.io,http://www.goodniuniu.com,https://www.goodniuniu.com,http://goodniuniu.com,https://goodniuniu.com"
