@@ -209,6 +209,18 @@ MathJax = {
 <p><strong>正解</strong>：由 $b^2=ac$，当 $c=3a$ 时 $b^2=3a^2$，$\cos B=\dfrac{a^2+9a^2-3a^2}{6a^2}=\dfrac{7}{6}$ <strong>$>1$，不可能为内角余弦，舍去</strong>；当 $c=\dfrac{2a}{3}$ 时 $b^2=\dfrac{2a^2}{3}$，$\cos B=\dfrac{a^2+\frac{4a^2}{9}-\frac{2a^2}{3}}{\frac{4a^2}{3}}=\dfrac{\frac{7a^2}{9}}{\frac{4a^2}{3}}=\dfrac{7}{12}\in(-1,1)$，成立。故 $\cos\angle ABC=\boxed{\dfrac{7}{12}}$。</p>
 <p><strong>避错要点</strong>：本题精准命中本卡<strong>陷阱7（角的范围与内角和约束）</strong>——解三角形求得 $\cos B$ 后，必须先验证 $\lvert\cos B\rvert\le 1$（更严格地，结合三角形内角范围判断符号）。$\cos B=\dfrac{7}{6}>1$ 明显越界，是&quot;根取舍&quot;类高频失分点；许多考生列对方程却漏掉范围检验，把增根当答案。养成&quot;求出三角函数值先判范围&quot;的习惯，可避免此类硬伤。</p>
 <hr>
+<h2>自测训练（3道·覆盖向量夹角、投影向量、SSA多解）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 向量夹角&quot;同起点&quot;原则）</p>
+<p>下述解法是否正确？若错误请指出并改正。</p>
+<blockquote><p>在 $\triangle ABC$ 中，$\angle B = 60°$，求向量 $\vec{AB}$ 与 $\vec{BC}$ 的夹角。<br>某生解答：两向量在三角形中以 $B$ 为公共点，夹角就是 $\angle B = 60°$。</p></blockquote>
+<p><strong>第2题</strong>（检验 投影向量与投影数量的区分）</p>
+<p>下述解法是否正确？若错误请指出并改正。</p>
+<blockquote><p>已知 $\vec{a}=(1,2)$，$|\vec{b}|=3$，且 $\vec{a}\cdot\vec{b}=6$，求 $\vec{b}$ 在 $\vec{a}$ 方向上的投影向量。<br>某生解答：投影为 $\dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}|}=\dfrac{6}{\sqrt{5}}=\dfrac{6\sqrt{5}}{5}$。</p></blockquote>
+<p><strong>第3题</strong>（检验 SSA 多解取舍）</p>
+<p>下述解法是否正确？若错误请指出并改正。</p>
+<blockquote><p>在 $\triangle ABC$ 中，$a=2$，$b=3$，$A=30°$，判断三角形解的个数。<br>某生解答：由正弦定理 $\dfrac{a}{\sin A}=\dfrac{b}{\sin B}$ 得 $\sin B=\dfrac{3}{4}$，所以 $B$ 为锐角，三角形只有一解。</p></blockquote>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高一筑基_数学_核心知识网络_平面向量体系.html">高一筑基_数学_核心知识网络_平面向量体系</a> — 向量概念与公式的体系化整理</li>
@@ -245,6 +257,24 @@ MathJax = {
 </ul>
 <hr>
 <blockquote><p>🏷️ 标签：<code>#数学</code> <code>#易错警示与辨析</code> <code>#高一筑基</code> <code>#难度3</code> <code>#平面向量</code> <code>#解三角形</code> <code>#向量夹角</code> <code>#投影</code> <code>#SSA多解</code> <code>#钝角余弦</code> <code>#基本不等式取等</code> <code>#广东名校模拟</code></p></blockquote>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（向量夹角&quot;同起点&quot;原则）</summary><p><strong>结论</strong>：该生解答错误，正确夹角为 $120°$。</p>
+<p><strong>改正</strong>：向量夹角必须将两向量平移到<strong>同一起点</strong>。$\vec{AB}$ 与 $\vec{BC}$ 在点 $B$ 处相接，但 $\vec{AB}$ 指向 $B$，$\vec{BC}$ 离开 $B$，它们之间的夹角是 $\angle B$ 的补角。</p>
+<p>$$\angle(\vec{AB},\vec{BC}) = 180° - \angle B = 180° - 60° = 120°$$</p>
+<p><strong>易错提醒</strong>：在三角形中求两个向量的夹角，常把&quot;向量夹角&quot;与&quot;三角形内角&quot;混淆。记住：首尾相接时夹角为补角，同起点时夹角才等于内角。</p></details>
+<details><summary>▶ 第2题详解（投影向量公式）</summary><p><strong>结论</strong>：该生解答错误，混淆了投影数量与投影向量。</p>
+<p><strong>改正</strong>：投影数量（标量）为 $$\frac{\vec{a}\cdot\vec{b}}{|\vec{a}|}=\frac{6}{\sqrt{5}}=\frac{6\sqrt{5}}{5}$$</p>
+<p>投影向量（向量）为 $$\frac{\vec{a}\cdot\vec{b}}{|\vec{a}|^2}\vec{a}=\frac{6}{1^2+2^2}(1,2)=\frac{6}{5}(1,2)=\left(\frac{6}{5},\frac{12}{5}\right)$$</p>
+<p><strong>答</strong>：投影向量为 $\left(\dfrac{6}{5},\dfrac{12}{5}\right)$。</p>
+<p><strong>易错提醒</strong>：看到&quot;投影&quot;先确认问的是数量还是向量。投影数量是标量，投影向量是向量，公式差一个 $|\vec{a}|$。</p></details>
+<details><summary>▶ 第3题详解（SSA 多解判断）</summary><p><strong>结论</strong>：该生解答错误，忽略钝角解，实际有两解。</p>
+<p><strong>改正</strong>：由正弦定理 $$\frac{2}{\sin 30°}=\frac{3}{\sin B}\Rightarrow \sin B=\frac{3}{4}$$</p>
+<p>因为 $b\sin A = 3\times \dfrac12 = 1.5$，且 $1.5 < a = 2 < b = 3$，满足&quot;两解&quot;条件。</p>
+<p>所以 $B$ 有锐角、钝角两个可能值，只要 $A+B<180°$ 都成立。</p>
+<p><strong>答</strong>：三角形有两解。</p>
+<p><strong>易错提醒</strong>：SSA 问题算出 $\sin B$ 后，必须用&quot;大边对大角&quot;判断解的个数，不能只取锐角解。</p></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

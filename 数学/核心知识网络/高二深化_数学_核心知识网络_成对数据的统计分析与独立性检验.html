@@ -88,6 +88,17 @@ MathJax = {
 =\frac{P(A|B)P(\overline A|\overline B)}{P(A|\overline B)P(\overline A|B)}.$$</p>
 <p>(ii) 估计值：$P(A|B)=\frac{40}{100}=0.4$，$P(A|\overline B)=\frac{10}{100}=0.1$， $P(\overline A|B)=\frac{60}{100}=0.6$，$P(\overline A|\overline B)=\frac{90}{100}=0.9$。 $$R\text{ 的估计值}=\frac{0.4\times0.9}{0.1\times0.6}=6.$$</p>
 <hr>
+<h2>自测训练（3道·覆盖回归直线、相关系数、独立性检验）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 一元线性回归方程）</p>
+<p>已知 $5$ 组数据 $(1,2)$、$(2,3)$、$(3,5)$、$(4,6)$、$(5,7)$，求经验回归方程 $\hat y=\hat b x+\hat a$。</p>
+<p><strong>第2题</strong>（检验 独立性检验）</p>
+<p>某校调查学生参加社团与性别是否有关，得到 $2\times2$ 列联表如下：</p>
+<div class="table-wrap"><table><tr><th></th><th>参加社团</th><th>未参加社团</th><th>合计</th></tr><tr><td>男生</td><td>$20$</td><td>$30$</td><td>$50$</td></tr><tr><td>女生</td><td>$10$</td><td>$40$</td><td>$50$</td></tr><tr><td>合计</td><td>$30$</td><td>$70$</td><td>$100$</td></tr></table></div>
+<p>能否有 $95\%$ 的把握认为参加社团与性别有关？（参考：$\chi^2_{0.05}=3.841$）</p>
+<p><strong>第3题</strong>（检验 相关系数意义）</p>
+<p>某班学生数学成绩与物理成绩的样本相关系数 $r=0.85$，简述两者的相关关系。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_统计与概率基础.html">统计与概率基础</a> — 统计基础概念</li>
@@ -100,6 +111,23 @@ MathJax = {
 <li>独立性检验：注意 $\chi^2$ 公式中 $n$ 是总样本量，不是自由度</li>
 <li>广东卷统计大题：常结合实际问题背景，注意单位、精确度要求和文字表述规范</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（回归直线）</summary><p>$$\bar x=\dfrac{1+2+3+4+5}{5}=3,\quad \bar y=\dfrac{2+3+5+6+7}{5}=\dfrac{23}{5}.$$</p>
+<p>$$\sum_{i=1}^5(x_i-\bar x)(y_i-\bar y)=(-2)(-\frac{13}{5})+(-1)(-\frac{8}{5})+0(\frac{2}{5})+1(\frac{7}{5})+2(\frac{12}{5})$$ $$=\dfrac{26+8+0+7+24}{5}=\dfrac{65}{5}=13.$$</p>
+<p>$$\sum_{i=1}^5(x_i-\bar x)^2=4+1+0+1+4=10.$$</p>
+<p>所以 $$\hat b=\dfrac{13}{10}=1.3,\quad \hat a=\bar y-\hat b\bar x=\dfrac{23}{5}-\dfrac{13}{10}\times3=\dfrac{46-39}{10}=\dfrac{7}{10}.$$</p>
+<p>回归方程为 $$\hat y=1.3x+0.7.$$</p>
+<p><strong>答</strong>：$\hat y=1.3x+0.7$。</p>
+<blockquote><p><strong>易错提醒</strong>：求 $\hat a$ 时必须用 $\hat a=\bar y-\hat b\bar x$；计算分子时 $(x_i-\bar x)(y_i-\bar y)$ 的符号易出错。</p></blockquote></details>
+<details><summary>▶ 第2题详解（独立性检验）</summary><p>$$\chi^2=\dfrac{n(ad-bc)^2}{(a+b)(c+d)(a+c)(b+d)}$$ $$=\dfrac{100\times(20\times40-30\times10)^2}{50\times50\times30\times70}$$ $$=\dfrac{100\times(800-300)^2}{5\,250\,000}=\dfrac{100\times250\,000}{5\,250\,000}=\dfrac{100}{21}\approx4.762.$$</p>
+<p>因为 $4.762>3.841$，所以有 $95\%$ 的把握认为参加社团与性别有关。</p>
+<p><strong>答</strong>：有 $95\%$ 的把握认为两者有关。</p>
+<blockquote><p><strong>易错提醒</strong>：$\chi^2$ 公式中 $n$ 是总样本量；临界值 $3.841$ 对应 $95\%$ 把握，$6.635$ 对应 $99\%$ 把握，不要记混。</p></blockquote></details>
+<details><summary>▶ 第3题详解（相关系数意义）</summary><p>因为 $r=0.85>0$，说明数学成绩与物理成绩呈<strong>正相关</strong>；又因为 $|r|=0.85$ 接近 $1$，说明两者的<strong>线性相关程度较强</strong>。</p>
+<p><strong>答</strong>：数学成绩与物理成绩呈较强的正线性相关关系。</p>
+<blockquote><p><strong>易错提醒</strong>：$r$ 的符号表示相关方向，$|r|$ 的大小表示相关强弱；$|r|$ 越接近 $1$，线性相关越强。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

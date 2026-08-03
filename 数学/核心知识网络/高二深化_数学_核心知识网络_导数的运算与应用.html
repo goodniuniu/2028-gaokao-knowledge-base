@@ -121,6 +121,15 @@ MathJax = {
 <p><strong>答</strong>：$b \in \left[-\frac{2}{3}, +\infty\right)$</p>
 <blockquote><p>💡 <strong>关键技巧</strong>：(3)问中先求必要性（$x=1$ 处等号成立 + 导数符号）缩小参数范围，再证充分性——这是导数压轴求参的标准策略。</p></blockquote>
 <hr>
+<h2>自测训练（3道·覆盖求导法则、单调区间、极值）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 导数四则运算法则）</p>
+<p>求函数 $f(x)=x^2e^x$ 的导数 $f'(x)$。</p>
+<p><strong>第2题</strong>（检验 利用导数求单调区间）</p>
+<p>求函数 $f(x)=x^3-3x$ 的单调递增区间和单调递减区间。</p>
+<p><strong>第3题</strong>（检验 利用导数求极值）</p>
+<p>求函数 $f(x)=x^3-3x^2$ 的极大值与极小值。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_恒成立与存在性问题通法.html">恒成立与存在性问题通法</a> — 导数与不等式综合</li>
@@ -155,6 +164,33 @@ MathJax = {
 <li>极值点与导数零点的关系：$f'(x_0) = 0$ 且 $f'(x)$ 在 $x_0$ 两侧变号</li>
 <li>广东卷导数压轴：关注跨模块综合、新定义题型、反套路化趋势</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（导数四则运算）</summary><p>由乘法法则： $$f'(x)=(x^2)'e^x+x^2(e^x)'=2xe^x+x^2e^x=xe^x(x+2).$$</p>
+<p><strong>答</strong>：$f'(x)=xe^x(x+2)$。</p>
+<blockquote><p><strong>易错提醒</strong>：乘积求导法则是&quot;前导后不导加前不导后导&quot;；$e^x$ 求导不变，不要漏项。</p></blockquote></details>
+<details><summary>▶ 第2题详解（单调区间）</summary><p>$$f'(x)=3x^2-3=3(x-1)(x+1).$$</p>
+<p>令 $f'(x)=0$ 得 $x=-1$ 或 $x=1$。</p>
+<p>列表分析：</p>
+<ul>
+<li>当 $x<-1$ 时，$f'(x)>0$，$f(x)$ 单调递增；</li>
+<li>当 $-1<x<1$ 时，$f'(x)<0$，$f(x)$ 单调递减；</li>
+<li>当 $x>1$ 时，$f'(x)>0$，$f(x)$ 单调递增。</li>
+</ul>
+<p><strong>答</strong>：单调递增区间为 $(-\infty,-1)$ 和 $(1,+\infty)$，单调递减区间为 $(-1,1)$。</p>
+<blockquote><p><strong>易错提醒</strong>：写单调区间时，多个递增区间不能用&quot;$\cup$&quot;连接，应写成&quot;和&quot;或&quot;，&quot;；端点开闭均可（导数零点处不影响单调性）。</p></blockquote></details>
+<details><summary>▶ 第3题详解（极值）</summary><p>$$f'(x)=3x^2-6x=3x(x-2).$$</p>
+<p>令 $f'(x)=0$ 得 $x=0$ 或 $x=2$。</p>
+<p>列表：</p>
+<ul>
+<li>当 $x<0$ 时，$f'(x)>0$；</li>
+<li>当 $0<x<2$ 时，$f'(x)<0$；</li>
+<li>当 $x>2$ 时，$f'(x)>0$。</li>
+</ul>
+<p>所以 $x=0$ 为极大值点，极大值 $f(0)=0$；$x=2$ 为极小值点，极小值 $f(2)=8-12=-4$。</p>
+<p><strong>答</strong>：极大值为 $0$，极小值为 $-4$。</p>
+<blockquote><p><strong>易错提醒</strong>：$f'(x_0)=0$ 只是极值点的必要条件，必须结合导数两侧符号变化判断；本题也可用二阶导数 $f''(x)=6x-6$ 判断符号。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

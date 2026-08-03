@@ -98,6 +98,15 @@ MathJax = {
 <p>上下同除以 $\cos^2\theta$ 得 $$\frac{\tan^2\theta+\tan\theta}{\tan^2\theta+1}=\frac{4-2}{4+1}=\frac{2}{5}$$</p>
 <p><strong>答</strong>：选 C。</p>
 <hr>
+<h2>自测训练（3道·覆盖三角函数定义、同角关系、诱导公式）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 三角函数定义与同角关系）</p>
+<p>已知 $\sin\alpha=\dfrac{3}{5}$，且 $\alpha$ 是第二象限角，求 $\cos\alpha$ 与 $\tan\alpha$。</p>
+<p><strong>第2题</strong>（检验 诱导公式化简）</p>
+<p>化简：$\dfrac{\sin(\pi+\alpha)\cos(2\pi-\alpha)}{\cos\left(\dfrac{\pi}{2}+\alpha\right)\sin(-\alpha)}$。</p>
+<p><strong>第3题</strong>（检验 齐次式求值）</p>
+<p>已知 $\tan\theta=-2$，求 $\dfrac{\sin\theta+\cos\theta}{\sin\theta-\cos\theta}$ 的值。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_三角函数的图象与性质.html">三角函数的图象与性质</a> — 诱导公式是图象分析的基础</li>
@@ -110,6 +119,27 @@ MathJax = {
 <li>给值求角问题时注意角的范围讨论，这是广东卷三角大题的第一问常考点</li>
 <li>化简原则：负化正、大化小、化到锐角</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（三角函数定义与同角关系）</summary><p>由 $\sin^2\alpha+\cos^2\alpha=1$，得 $$\cos^2\alpha=1-\left(\dfrac{3}{5}\right)^2=\dfrac{16}{25}.$$ 因为 $\alpha$ 在第二象限，$\cos\alpha<0$，所以 $\cos\alpha=-\dfrac{4}{5}$。</p>
+<p>于是 $$\tan\alpha=\dfrac{\sin\alpha}{\cos\alpha}=\dfrac{\frac{3}{5}}{-\frac{4}{5}}=-\dfrac{3}{4}.$$</p>
+<p><strong>答</strong>：$\cos\alpha=-\dfrac{4}{5}$，$\tan\alpha=-\dfrac{3}{4}$。</p>
+<blockquote><p><strong>易错提醒</strong>：由 $\sin\alpha$ 求 $\cos\alpha$ 时，必须根据象限定正负；第二象限余弦为负，易漏负号。</p></blockquote></details>
+<details><summary>▶ 第2题详解（诱导公式）</summary><p>逐项化简：</p>
+<ul>
+<li>$\sin(\pi+\alpha)=-\sin\alpha$；</li>
+<li>$\cos(2\pi-\alpha)=\cos\alpha$；</li>
+<li>$\cos\left(\dfrac{\pi}{2}+\alpha\right)=-\sin\alpha$；</li>
+<li>$\sin(-\alpha)=-\sin\alpha$。</li>
+</ul>
+<p>代入得 $$\text{原式}=\dfrac{(-\sin\alpha)\cos\alpha}{(-\sin\alpha)(-\sin\alpha)}=-\dfrac{\cos\alpha}{\sin\alpha}=-\cot\alpha.$$</p>
+<p><strong>答</strong>：$-\cot\alpha$。</p>
+<blockquote><p><strong>易错提醒</strong>：&quot;奇变偶不变，符号看象限&quot;中，&quot;符号&quot;是把 $\alpha$ 看成锐角后判断原函数值的符号；$\cos\left(\dfrac{\pi}{2}+\alpha\right)$ 变名为 $-\sin\alpha$。</p></blockquote></details>
+<details><summary>▶ 第3题详解（齐次式求值）</summary><p>分子分母同除以 $\cos\theta$（$\cos\theta\ne0$，因 $\tan\theta$ 存在）： $$\dfrac{\sin\theta+\cos\theta}{\sin\theta-\cos\theta}=\dfrac{\tan\theta+1}{\tan\theta-1}.$$</p>
+<p>代入 $\tan\theta=-2$： $$\dfrac{-2+1}{-2-1}=\dfrac{-1}{-3}=\dfrac{1}{3}.$$</p>
+<p><strong>答</strong>：$\dfrac{1}{3}$。</p>
+<blockquote><p><strong>易错提醒</strong>：齐次式化切时，分子分母必须同次；本题分子分母都是一次，可直接同除 $\cos\theta$。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

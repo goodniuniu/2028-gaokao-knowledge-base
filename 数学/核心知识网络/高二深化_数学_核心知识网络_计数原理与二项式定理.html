@@ -90,6 +90,15 @@ MathJax = {
 <p>合计系数：$28+(-56)=-28$。</p>
 <p>故填空为 <strong>$-28$</strong>。</p>
 <hr>
+<h2>自测训练（3道·覆盖组合数、二项展开式特定项、排列组合应用）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 组合数与排列数计算）</p>
+<p>计算 $C_6^2+A_4^2$ 的值。</p>
+<p><strong>第2题</strong>（检验 二项展开式特定项系数）</p>
+<p>求 $(1+x)^6$ 展开式中 $x^3$ 项的系数。</p>
+<p><strong>第3题</strong>（检验 排列组合·捆绑法）</p>
+<p>$5$ 个人排成一排照相，其中甲、乙两人必须相邻，共有多少种不同的排法？</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高二深化_数学_核心知识网络_条件概率与离散型随机变量.html">条件概率与离散型随机变量</a> — 计数原理是概率计算的基础</li>
@@ -101,6 +110,22 @@ MathJax = {
 <li>二项式展开中注意区分&quot;二项式系数&quot;和&quot;项的系数&quot;</li>
 <li>广东卷常考：二项式展开特定项系数、赋值法求系数和</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（组合数与排列数）</summary><p>$$C_6^2=\dfrac{6\times5}{2\times1}=15,\quad A_4^2=4\times3=12.$$</p>
+<p>所以 $$C_6^2+A_4^2=15+12=27.$$</p>
+<p><strong>答</strong>：$27$。</p>
+<blockquote><p><strong>易错提醒</strong>：$C_n^m$ 是无序选取，$A_n^m$ 是有序排列；$C_6^2=15$ 不要误算为 $30$。</p></blockquote></details>
+<details><summary>▶ 第2题详解（二项展开式特定项）</summary><p>$(1+x)^6$ 展开式的通项为 $$T_{k+1}=C_6^k1^{6-k}x^k=C_6^kx^k.$$</p>
+<p>要求 $x^3$ 的系数，令 $k=3$，系数为 $$C_6^3=\dfrac{6\times5\times4}{3\times2\times1}=20.$$</p>
+<p><strong>答</strong>：$20$。</p>
+<blockquote><p><strong>易错提醒</strong>：二项式系数 $C_n^k$ 与项的系数在本题中相同，但遇到 $(a+bx)^n$ 时，项的系数会包含 $a,b$ 的幂，需注意区分。</p></blockquote></details>
+<details><summary>▶ 第3题详解（捆绑法）</summary><p>将甲、乙两人&quot;捆绑&quot;看作一个整体，与其余 $3$ 人一起共 $4$ 个元素全排列，有 $A_4^4=24$ 种排法。</p>
+<p>甲、乙两人在捆绑内部可互换位置，有 $A_2^2=2$ 种排法。</p>
+<p>由分步乘法计数原理，共有 $$24\times2=48$$ 种不同排法。</p>
+<p><strong>答</strong>：$48$ 种。</p>
+<blockquote><p><strong>易错提醒</strong>：&quot;相邻&quot;问题常用捆绑法，不要忘记捆绑内部元素的排列；&quot;不相邻&quot;问题常用插空法。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

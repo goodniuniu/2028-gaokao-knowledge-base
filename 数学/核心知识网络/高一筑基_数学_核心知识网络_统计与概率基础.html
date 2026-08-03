@@ -103,6 +103,15 @@ MathJax = {
 <div class="table-wrap"><table><tr><th>$X$</th><th>$0$</th><th>$20$</th><th>$100$</th></tr><tr><td>$P$</td><td>$0.2$</td><td>$0.32$</td><td>$0.48$</td></tr></table></div>
 <p>(2) 若先答 $B$ 类，记累计得分为 $Y$，可能取值 $0,80,100$： $$P(Y=0)=1-0.6=0.4,\quad P(Y=80)=0.6\times(1-0.8)=0.12,\quad P(Y=100)=0.6\times0.8=0.48.$$ $$E(X)=0\times0.2+20\times0.32+100\times0.48=54.4,$$ $$E(Y)=0\times0.4+80\times0.12+100\times0.48=57.6.$$ 因为 $E(Y)>E(X)$，所以小明应选择<strong>先回答 $B$ 类问题</strong>。</p>
 <hr>
+<h2>自测训练（3道·覆盖分层抽样、频率分布直方图、古典概型）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 分层抽样）</p>
+<p>某校高一 $800$ 人、高二 $700$ 人、高三 $500$ 人，现按分层抽样抽取 $100$ 人进行调研，求各年级应抽取的人数。</p>
+<p><strong>第2题</strong>（检验 频率分布直方图读图）</p>
+<p>某次测试成绩的频率分布直方图分组为 $[50,60)$、$[60,70)$、$[70,80)$、$[80,90)$、$[90,100]$，对应的 $\dfrac{\text{频率}}{\text{组距}}$ 分别为 $0.02$、$0.03$、$0.03$、$0.015$、$0.005$。估计本次测试成绩的平均数。</p>
+<p><strong>第3题</strong>（检验 古典概型）</p>
+<p>袋中有 $3$ 个红球、$2$ 个白球，大小相同。从中随机摸出 $2$ 个球，求至少摸到一个红球的概率。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../典型题型与方法/高一筑基_数学_典型题型与方法_频率分布直方图与概率计算.html">高一筑基_数学_典型题型与方法_频率分布直方图与概率计算</a> — 统计大题的详细解题模板</li>
@@ -125,6 +134,27 @@ MathJax = {
 </ul>
 <hr>
 <blockquote><p>🏷️ 标签：<code>#数学</code> <code>#核心知识网络</code> <code>#高一筑基</code> <code>#难度3</code> <code>#统计</code> <code>#概率</code> <code>#频率分布直方图</code> <code>#古典概型</code> <code>#独立事件</code> <code>#分层抽样</code> <code>#广东名校模拟</code></p></blockquote>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（分层抽样）</summary><p>总人数 $N=800+700+500=2000$，抽样比为 $$\dfrac{100}{2000}=\dfrac{1}{20}.$$</p>
+<p>各年级抽取人数：</p>
+<ul>
+<li>高一：$800\times\dfrac{1}{20}=40$ 人；</li>
+<li>高二：$700\times\dfrac{1}{20}=35$ 人；</li>
+<li>高三：$500\times\dfrac{1}{20}=25$ 人。</li>
+</ul>
+<p><strong>答</strong>：高一 $40$ 人，高二 $35$ 人，高三 $25$ 人。</p>
+<blockquote><p><strong>易错提醒</strong>：分层抽样按比例分配，要先算总体抽样比，再乘以各层人数；最后核对总和是否等于样本容量。</p></blockquote></details>
+<details><summary>▶ 第2题详解（频率分布直方图）</summary><p>组距为 $10$，各区间的频率分别为 $$0.02\times10=0.2,\quad 0.03\times10=0.3,\quad 0.03\times10=0.3,$$ $$0.015\times10=0.15,\quad 0.005\times10=0.05.$$</p>
+<p>取各组中点 $55,65,75,85,95$，估计平均数为 $$55\times0.2+65\times0.3+75\times0.3+85\times0.15+95\times0.05$$ $$=11+19.5+22.5+12.75+4.75=70.5.$$</p>
+<p><strong>答</strong>：平均数估计为 $70.5$。</p>
+<blockquote><p><strong>易错提醒</strong>：频率分布直方图的纵坐标是&quot;频率/组距&quot;，不是频率；计算平均数要用&quot;中点 $\times$ 频率&quot;再求和。</p></blockquote></details>
+<details><summary>▶ 第3题详解（古典概型）</summary><p>从 $5$ 个球中摸出 $2$ 个，样本空间总数 $$n(\Omega)=C_5^2=10.$$</p>
+<p>&quot;至少一个红球&quot;的对立事件是&quot;两个都是白球&quot;，其基本事件数为 $$C_2^2=1.$$</p>
+<p>所以 $$P(\text{至少一个红球})=1-\dfrac{1}{10}=\dfrac{9}{10}.$$</p>
+<p><strong>答</strong>：$\dfrac{9}{10}$。</p>
+<blockquote><p><strong>易错提醒</strong>：&quot;至少&quot;问题常考虑用对立事件简化计算；古典概型要确认每个基本事件等可能。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

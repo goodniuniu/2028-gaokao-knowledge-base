@@ -68,6 +68,19 @@ MathJax = {
 <h3>记忆口诀</h3>
 <blockquote><p><strong>创新题</strong>：&quot;慢读定义特例探，归纳规律再攻关；第(1)问必拿分，压轴抢步不抢完。&quot;<br><strong>建模题</strong>：&quot;抽象建立求解答，检验回归四步化；定义域里藏陷阱，实际意义最后查。&quot;</p></blockquote>
 <hr>
+<h2>自测训练（3道·覆盖数学建模四步法、新定义运算、结构不良题选择）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 数学建模：Logistic 模型）</p>
+<p>某病毒传播满足 Logistic 模型 $N(t)=\dfrac{K}{1+a e^{-bt}}$，其中 $N(t)$ 为第 $t$ 天感染人数（单位：人）。已知环境容纳量 $K=10000$，初始感染 $N(0)=100$，第 $1$ 天 $N(1)=500$。求第 $2$ 天的感染人数 $N(2)$。</p>
+<p><strong>第2题</strong>（检验 新定义运算：即时理解）</p>
+<p>定义运算 $x\oplus y=xy+x+y$。若 $x\oplus2=8$，求实数 $x$。</p>
+<p><strong>第3题</strong>（检验 结构不良题：选择条件使解唯一）</p>
+<p>已知 $\{a_n\}$ 为等比数列，$a_3=8$。从以下两个条件中选择一个，使问题&quot;求前 $4$ 项和 $S_4$&quot;有唯一解，并求出 $S_4$：</p>
+<ul>
+<li>① $a_2=4$；</li>
+<li>② $a_1=2$。</li>
+</ul>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向.html">高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向</a> — 创新压轴题的导数方向延伸</li>
@@ -85,6 +98,35 @@ MathJax = {
 <li>备考节奏：高二阶段每周精做1道创新题+1道建模题，重点训练&quot;慢读定义&quot;和&quot;四步法书写规范&quot;；高三再用限时训练适应压轴位置随机性。</li>
 <li>教材溯源：人教A版必修一&quot;数学建模活动&quot;、选择性必修二&quot;探究与发现&quot;栏目是新定义题的&quot;母题库&quot;，2024年新课标Ⅰ卷有多题直接源于教材，务必回归教材。</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（Logistic 模型）</summary><p><strong>建模四步</strong>：</p>
+<ol>
+<li><strong>抽象</strong>：变量为时间 $t$ 与感染人数 $N(t)$，模型类型为 Logistic 函数。</li>
+<li><strong>建立</strong>：$N(t)=\dfrac{10000}{1+a e^{-bt}}$。</li>
+<li><strong>求解</strong>：</li>
+<ul>
+<li>由 $N(0)=100$ 得 $100=\dfrac{10000}{1+a}$，解得 $a=99$。</li>
+<li>由 $N(1)=500$ 得 $500=\dfrac{10000}{1+99e^{-b}}$，即 $1+99e^{-b}=20$，$e^{-b}=\dfrac{19}{99}$。</li>
+<li>所以</li>
+<p>$$N(2)=\frac{10000}{1+99e^{-2b}}=\frac{10000}{1+99\left(\frac{19}{99}\right)^2}=\frac{10000}{1+\frac{361}{99}}=\frac{990000}{460}=\frac{49500}{23}\approx2152$$</p>
+</ul>
+<li><strong>检验回归</strong>：$N(2)$ 在 $[100,10000]$ 内，符合实际意义。</li>
+</ol>
+<p><strong>答</strong>：第 $2$ 天感染人数约为 $2152$ 人（精确值为 $\dfrac{49500}{23}$ 人）。</p>
+<p><strong>易错提醒</strong>：Logistic 模型中参数 $a$、$b$ 要由实际数据确定，计算时注意 $e^{-2b}=(e^{-b})^2$，避免指数运算错误。</p></details>
+<details><summary>▶ 第2题详解（新定义运算）</summary><p><strong>解答</strong>：按定义 $$x\oplus2=x\cdot2+x+2=3x+2$$</p>
+<p>由 $x\oplus2=8$ 得 $$3x+2=8\Rightarrow x=2$$</p>
+<p><strong>答</strong>：$x=2$。</p>
+<p><strong>易错提醒</strong>：新定义运算要&quot;逐字代入&quot;，不要凭感觉。本题 $x\oplus y=xy+x+y$ 可变形为 $(x+1)(y+1)-1$，有助于快速理解运算律。</p></details>
+<details><summary>▶ 第3题详解（结构不良题）</summary><p><strong>分析两个条件</strong>：</p>
+<ul>
+<li>若选 ① $a_2=4$：由 $a_3=a_2q$ 得 $8=4q$，$q=2$，$a_1=\dfrac{a_2}{q}=2$。解唯一，$S_4=\dfrac{2(1-2^4)}{1-2}=30$。</li>
+<li>若选 ② $a_1=2$：由 $a_3=a_1q^2$ 得 $8=2q^2$，$q^2=4$，$q=\pm2$。$S_4$ 有两个可能值（$30$ 或 $-10$），解不唯一。</li>
+</ul>
+<p><strong>答</strong>：应选择条件 ①，此时 $S_4=30$。</p>
+<p><strong>易错提醒</strong>：结构不良题要果断选择&quot;计算量小、条件充分&quot;的选项。本题 ① 直接确定公比，② 公比有正负两种可能，选择 ① 更稳妥。</p></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

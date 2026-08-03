@@ -63,6 +63,15 @@ MathJax = {
 <p><strong>解析要点</strong>： (1) $a=1$ 时 $f'(x)=e^x-\frac1{x+1}$。当 $x\ge0$，$e^x\ge1$ 且 $\frac1{x+1}\le1$ ⇒ $f'(x)\ge0$ 增；当 $-1<x<0$，分类得在 $(-1,0)$ 减。故 $x<0$ 减、$x>0$ 增。 (2) 切线放缩思路：由 $\ln(1+x)\le x$（取等 $x=0$）与 $e^x\ge1+x$，可构造 $g(x)=a e^x-x-1\ge a(1+x)-x-1=(a-1)x+(a-1)$，当 $a\ge1$ 时 $g(x)\ge0$ 且 $\ln(1+x)\le x$ ⇒ $f(x)=a e^x-\ln(1+x)-1\ge a e^x-x-1\ge0$。严格论证配合单调性可得 $a\ge\frac12$（经典答案）。</p>
 <p><strong>关键提炼</strong>：切线不等式链是&quot;放缩证明&quot;的速攻武器，2023T19、2024T18(3)的符号分析都隐含凸凹性思想。</p>
 <hr>
+<h2>自测训练（3道·覆盖切线不等式链与凸凹性放缩运用）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 $e^x\ge1+x$ 的证明）</p>
+<p>用导数方法证明：对任意 $x\in\mathbb{R}$，都有 $e^x\ge1+x$。</p>
+<p><strong>第2题</strong>（检验 $\ln x\le x-1$ 的运用）</p>
+<p>证明：对任意 $x>0$，都有 $\ln x\le x-1$。</p>
+<p><strong>第3题</strong>（检验 二阶放缩：$e^x\ge1+x+\dfrac{x^2}{2}$）</p>
+<p>利用第 1 题的结论，证明：当 $x\ge0$ 时，$e^x\ge1+x+\dfrac{x^2}{2}$。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向.html">高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向</a> — 压轴新动向总览（前置）</li>
@@ -78,6 +87,27 @@ MathJax = {
 <li>训练建议：默写切线不等式链；做5道&quot;放缩证明&quot;压轴，重点练&quot;取等点对齐&quot;。</li>
 </ul>
 <blockquote><p>🏷️ 标签：<code>#数学</code> <code>#素材与拓展</code> <code>#高三冲刺</code> <code>#难度5</code> <code>#泰勒展开</code> <code>#切线放缩</code> <code>#凸凹性</code> <code>#不等式证明</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（$e^x\ge1+x$）</summary><p><strong>证明</strong>：设 $f(x)=e^x-1-x$，则 $f'(x)=e^x-1$。</p>
+<ul>
+<li>当 $x<0$ 时，$f'(x)<0$，$f(x)$ 单调递减；</li>
+<li>当 $x>0$ 时，$f'(x)>0$，$f(x)$ 单调递增。</li>
+</ul>
+<p>所以 $f(x)$ 在 $x=0$ 处取得最小值 $f(0)=0$。故对任意 $x\in\mathbb{R}$，$f(x)\ge0$，即 $$e^x\ge1+x$$ 当且仅当 $x=0$ 时取等号。</p>
+<p><strong>易错提醒</strong>：$e^x\ge1+x$ 是最常用的切线放缩，取等点在 $x=0$。证明时注意 $f'(x)$ 在 $x=0$ 处变号，$x=0$ 是极小值点也是最小值点。</p></details>
+<details><summary>▶ 第2题详解（$\ln x\le x-1$）</summary><p><strong>证明</strong>：设 $g(x)=\ln x-x+1$（$x>0$），则 $g'(x)=\dfrac{1}{x}-1=\dfrac{1-x}{x}$。</p>
+<ul>
+<li>当 $0<x<1$ 时，$g'(x)>0$，$g(x)$ 单调递增；</li>
+<li>当 $x>1$ 时，$g'(x)<0$，$g(x)$ 单调递减。</li>
+</ul>
+<p>所以 $g(x)$ 在 $x=1$ 处取得最大值 $g(1)=0$。故对任意 $x>0$，$g(x)\le0$，即 $$\ln x\le x-1$$ 当且仅当 $x=1$ 时取等号。</p>
+<p><strong>易错提醒</strong>：$\ln x\le x-1$ 的取等点在 $x=1$，不是 $x=0$（$\ln x$ 在 $x=0$ 无定义）。放缩时要注意取等点与目标不等式是否一致。</p></details>
+<details><summary>▶ 第3题详解（$e^x\ge1+x+\dfrac{x^2}{2}$）</summary><p><strong>证明</strong>：设 $h(x)=e^x-1-x-\dfrac{x^2}{2}$（$x\ge0$），则 $$h'(x)=e^x-1-x$$</p>
+<p>由第 1 题结论，$e^x\ge1+x$，所以 $h'(x)\ge0$ 对 $x\ge0$ 恒成立。因此 $h(x)$ 在 $[0,+\infty)$ 上单调递增。</p>
+<p>又 $h(0)=0$，故对 $x\ge0$，$h(x)\ge0$，即 $$e^x\ge1+x+\frac{x^2}{2}$$ 当且仅当 $x=0$ 时取等号。</p>
+<p><strong>易错提醒</strong>：二阶放缩 $e^x\ge1+x+\dfrac{x^2}{2}$ 常用于需要更紧估计的场合。证明时不需要直接展开泰勒级数，只需用一阶不等式 $e^x\ge1+x$ 作为中间结论，体现&quot;层层递进&quot;的放缩思想。</p></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

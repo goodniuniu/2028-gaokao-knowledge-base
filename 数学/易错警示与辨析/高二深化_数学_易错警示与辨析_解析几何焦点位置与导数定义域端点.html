@@ -183,6 +183,18 @@ MathJax = {
 <p><strong>正解</strong>：双曲线满足 $c^2=a^2+b^2$（<strong>双加</strong>）。由 $\lvert AB\rvert=2\dfrac{b^2}{a}=10$ 得 $b^2=5a$；又 $\lvert F_2A\rvert=\dfrac{b^2}{a}=5$，由双曲线定义 $\lvert F_1A\rvert-\lvert F_2A\rvert=2a\Rightarrow 13-5=2a\Rightarrow a=4$；于是 $b^2=20$，$c^2=a^2+b^2=16+20=36\Rightarrow c=6$；故离心率 $e=\dfrac{c}{a}=\dfrac{6}{4}=\boxed{\dfrac{3}{2}}$。</p>
 <p><strong>避错要点</strong>：本题命中本卡<strong>陷阱2（$a,b,c$ 关系：椭减双加）</strong>——椭圆与双曲线的 $c^2$ 关系式恰好相反，错用&quot;椭减&quot;会得到 $c^2<0$ 的荒谬结果。动笔写关系式前，先口头确认&quot;这是椭圆还是双曲线&quot;，把&quot;椭减双加&quot;四个字念一遍，可杜绝此类公式张冠李戴。此外本题焦点已在 x轴（方程明确），未触发陷阱1的分类讨论，但&quot;先定位置&quot;的习惯仍应保留，莫因一题不分类而松懈。</p>
 <hr>
+<h2>自测训练（3道·覆盖焦点轴讨论、定义域优先、抛物线标准化）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 椭圆焦点位置未限定需分类）</p>
+<p>下述解法是否完整？若不完整请补充。</p>
+<blockquote><p>已知椭圆离心率 $e=\dfrac{1}{2}$，短半轴 $b=\sqrt{3}$，求椭圆方程。<br>某生解答：由 $c=\dfrac{a}{2}$ 及 $c^2=a^2-b^2$，得 $\dfrac{a^2}{4}=a^2-3$，$a^2=4$。故椭圆方程为 $\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$。</p></blockquote>
+<p><strong>第2题</strong>（检验 导数题先写定义域）</p>
+<p>下述解法是否正确？若错误请指出并改正。</p>
+<blockquote><p>讨论函数 $f(x)=\ln x-ax$（$a>0$）的单调性。<br>某生解答：$f'(x)=\dfrac{1}{x}-a$。令 $f'(x)>0$ 得 $x<\dfrac{1}{a}$；令 $f'(x)<0$ 得 $x>\dfrac{1}{a}$。所以 $f(x)$ 在 $\left(-\infty,\dfrac{1}{a}\right)$ 上单调递增，在 $\left(\dfrac{1}{a},+\infty\right)$ 上单调递减。</p></blockquote>
+<p><strong>第3题</strong>（检验 抛物线标准方程与焦点坐标）</p>
+<p>下述解法是否正确？若错误请指出并改正。</p>
+<blockquote><p>求抛物线 $y=2x^2$ 的焦点坐标。<br>某生解答：方程化为 $x^2=\dfrac{1}{2}y$，故 $2p=\dfrac{1}{2}$，$p=\dfrac{1}{2}$，焦点为 $\left(0,\dfrac{1}{2}\right)$。</p></blockquote>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高二深化_数学_核心知识网络_椭圆双曲线抛物线.html">高二深化_数学_核心知识网络_椭圆双曲线抛物线</a> — 三大圆锥曲线定义、标准方程与几何性质的体系化整理</li>
@@ -201,6 +213,29 @@ MathJax = {
 </ul>
 <hr>
 <blockquote><p>🏷️ 标签：<code>#数学</code> <code>#易错警示与辨析</code> <code>#高二深化</code> <code>#难度4</code> <code>#解析几何</code> <code>#焦点位置</code> <code>#离心率</code> <code>#抛物线标准方程</code> <code>#导数</code> <code>#定义域</code> <code>#端点效应</code> <code>#恒成立</code> <code>#新高考Ⅰ卷·广东</code></p></blockquote>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（焦点轴讨论）</summary><p><strong>结论</strong>：该生解答不完整，漏掉焦点在 $y$ 轴上的情形。</p>
+<p><strong>改正</strong>：题目只说&quot;椭圆&quot;，未限定焦点轴，需分两种情况：</p>
+<ul>
+<li>焦点在 $x$ 轴：$\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$；</li>
+<li>焦点在 $y$ 轴：$\dfrac{y^2}{4}+\dfrac{x^2}{3}=1$。</li>
+</ul>
+<p><strong>答</strong>：椭圆方程为 $\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$ 或 $\dfrac{y^2}{4}+\dfrac{x^2}{3}=1$。</p>
+<p><strong>易错提醒</strong>：看到&quot;焦点在坐标轴上&quot;但没有&quot;焦点在 $x$ 轴&quot;字样，必须分类讨论。$a^2$ 是较大分母，焦点随较大分母走。</p></details>
+<details><summary>▶ 第2题详解（定义域优先）</summary><p><strong>结论</strong>：该生解答错误，单调区间超出定义域。</p>
+<p><strong>改正</strong>：函数 $f(x)=\ln x-ax$ 的定义域为 $(0,+\infty)$。因此单调区间必须是 $(0,+\infty)$ 的子集。</p>
+<p>$$f'(x)=\frac{1}{x}-a=\frac{1-ax}{x}$$</p>
+<p>当 $a>0$ 时，$f'(x)>0$ 即 $1-ax>0$，得 $0<x<\dfrac{1}{a}$；$f'(x)<0$ 即 $x>\dfrac{1}{a}$。</p>
+<p><strong>答</strong>：$f(x)$ 在 $\left(0,\dfrac{1}{a}\right)$ 上单调递增，在 $\left(\dfrac{1}{a},+\infty\right)$ 上单调递减。</p>
+<p><strong>易错提醒</strong>：任何导数题第一步先写定义域。含 $\ln x$ 时定义域为 $(0,+\infty)$，单调区间不能出现负数。</p></details>
+<details><summary>▶ 第3题详解（抛物线标准化）</summary><p><strong>结论</strong>：该生解答错误，误把 $2p$ 当 $p$。</p>
+<p><strong>改正</strong>：将 $y=2x^2$ 化为标准形： $$x^2=\frac{1}{2}y$$</p>
+<p>标准形为 $x^2=2py$，故 $$2p=\frac{1}{2}\Rightarrow p=\frac{1}{4}$$</p>
+<p>焦点坐标为 $\left(0,\dfrac{p}{2}\right)=\left(0,\dfrac{1}{8}\right)$。</p>
+<p><strong>答</strong>：焦点坐标为 $\left(0,\dfrac{1}{8}\right)$。</p>
+<p><strong>易错提醒</strong>：抛物线焦点坐标是 $\dfrac{p}{2}$ 不是 $p$。先把方程化为&quot;二次项系数为 1&quot;的标准形，再读 $2p$。</p></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

@@ -87,6 +87,17 @@ MathJax = {
 <blockquote><p>💡 关键：圆周运动临界先判<strong>模型</strong>（本题 $Q$ 点为圆弧末端切线水平，按轨道内侧处理），再用向心力方程求压力/加速度；有阻力的圆弧段用动能定理求能量损失。</p></blockquote>
 <p><strong>拓展母题</strong>：2024广东卷T5（卷轴插销做匀速圆周运动，弹簧弹力提供向心力，求不卡死的最大拉动速度 $v$）——典型&quot;向心力来源&quot;情境题。</p>
 <hr>
+<h2>自测训练（3道·覆盖绳、杆、拱桥三种临界模型）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 绳模型最高点临界速度）</p>
+<p>用长 $L=0.5\,\text{m}$ 的轻绳系住一质量 $m=0.1\,\text{kg}$ 的小球，在竖直面内做圆周运动，$g=10\,\text{m/s}^2$。小球恰好能通过最高点时的速度大小为（　　）</p>
+<p>A. $1\,\text{m/s}$　　B. $\sqrt{5}\,\text{m/s}$　　C. $2\,\text{m/s}$　　D. $\sqrt{10}\,\text{m/s}$</p>
+<p><strong>第2题</strong>（检验 拱桥模型最大不飞离速度）</p>
+<p>汽车以速度 $v$ 驶过半径 $R=20\,\text{m}$ 的凸形桥顶部，$g=10\,\text{m/s}^2$。为保证汽车不脱离桥面，最大速度不得超过（　　）</p>
+<p>A. $10\,\text{m/s}$　　B. $10\sqrt{2}\,\text{m/s}$　　C. $20\,\text{m/s}$　　D. $20\sqrt{2}\,\text{m/s}$</p>
+<p><strong>第3题</strong>（检验 圆周运动 + 机械能守恒综合）</p>
+<p>一光滑圆弧轨道半径为 $R$，最低点切线水平。一小球从轨道顶端由静止释放，滑至最低点时对轨道的压力大小为 $7mg$。求圆弧轨道的半径 $R$ 与小球释放点相对最低点的高度 $H$ 之比 $R:H$。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../易错警示与辨析/高一筑基_物理_易错警示与辨析_动能定理错题分析.html">高一筑基_物理_易错警示与辨析_动能定理错题分析</a> — 圆弧轨道最高点临界与动能定理综合（斜面往返/圆弧模型错题）</li>
@@ -105,6 +116,19 @@ MathJax = {
 </ol>
 <li><strong>等级赋分提示</strong>：该类题属中档，临界条件判断失误会连环失分；先写&quot;供=需&quot;方程再代入临界，过程分稳拿。</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（绳模型最高点临界）</summary><p>绳模型最高点临界条件为绳拉力 $T=0$，仅重力提供向心力： $$mg=m\frac{v^2}{L}\Rightarrow v=\sqrt{gL}.$$ 代入 $L=0.5\,\text{m}$，$g=10\,\text{m/s}^2$： $$v=\sqrt{10\times0.5}=\sqrt{5}\,\text{m/s}\approx2.24\,\text{m/s}.$$</p>
+<p><strong>答</strong>：选 <strong>B</strong>。</p>
+<p><strong>易错提醒</strong>：绳模型最高点“恰好通过”时 $T=0$，$v_{\min}=\sqrt{gL}$；若速度小于此值，小球到不了最高点。轻杆模型则不同，最高点速度可以为零。</p></details>
+<details><summary>▶ 第2题详解（拱桥最大速度）</summary><p>汽车在凸形桥顶部，受力为重力 $mg$ 向下、支持力 $N$ 向上。向心力向下： $$mg-N=m\frac{v^2}{R}.$$ 不脱离桥面的临界为 $N=0$，此时 $$mg=m\frac{v_{\max}^2}{R}\Rightarrow v_{\max}=\sqrt{gR}.$$ 代入 $R=20\,\text{m}$： $$v_{\max}=\sqrt{10\times20}=\sqrt{200}=10\sqrt{2}\,\text{m/s}\approx14.1\,\text{m/s}.$$</p>
+<p><strong>答</strong>：选 <strong>B</strong>。</p>
+<p><strong>易错提醒</strong>：拱桥是“外轨”模型，临界是 $N=0$ 飞离桥面，与绳模型“恰好通过最高点”的临界本质相同，但要注意向心力方向与压力方向。</p></details>
+<details><summary>▶ 第3题详解（圆周运动 + 机械能守恒）</summary><p>小球从释放点到最低点，机械能守恒： $$mgH=\frac12mv^2\Rightarrow v^2=2gH.$$</p>
+<p>在最低点，轨道对小球支持力 $N$ 向上，由牛顿第二定律： $$N-mg=m\frac{v^2}{R}.$$ 已知 $N=7mg$，代入得 $$7mg-mg=m\frac{2gH}{R}\Rightarrow 6g=\frac{2gH}{R},$$ $$\frac{H}{R}=3\Rightarrow R:H=\boxed{1:3}.$$</p>
+<p><strong>答</strong>：$R:H=1:3$。</p>
+<p><strong>易错提醒</strong>：最低点向心力方程中支持力 $N$ 向上、重力 $mg$ 向下，不要写成 $N+mg$；机械能守恒只适用于光滑轨道，有摩擦时必须用动能定理。</p></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

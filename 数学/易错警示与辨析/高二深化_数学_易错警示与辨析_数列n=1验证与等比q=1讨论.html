@@ -96,6 +96,17 @@ MathJax = {
 </ul>
 <p><strong>避错要点</strong>：本题 n=1 恰好满足，属&quot;验证通过&quot;型；但书写上必须显式写出&quot;当 n=1 时，上式=a₁，成立&quot;，否则按广东卷评分细则扣步骤分。若遇 n=1 不满足（如 Sₙ−Sₙ₋₁ 化简后 n=1 不成立），则必须写分段通项——这正是本卡&quot;三步法&quot;第三步的意义。</p>
 <hr>
+<h2>自测训练（3道·覆盖已知Sₙ求aₙ的n=1验证、等比q=1分类讨论）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 已知 $S_n$ 求 $a_n$ 必须验证 $n=1$）</p>
+<p>下述解法是否正确？若错误请指出并改正。</p>
+<blockquote><p>已知数列 $\{a_n\}$ 的前 $n$ 项和 $S_n=n^2+n+1$，求通项 $a_n$。<br>某生解答：当 $n\ge2$ 时，$a_n=S_n-S_{n-1}=2n$，所以 $a_n=2n$。</p></blockquote>
+<p><strong>第2题</strong>（检验 等比数列求和须讨论 $q=1$）</p>
+<p>下述解法是否正确？若错误请指出并改正。</p>
+<blockquote><p>已知等比数列 $\{a_n\}$ 中，$a_1=2$，$S_3=6$，求公比 $q$。<br>某生解答：由 $S_3=\dfrac{2(1-q^3)}{1-q}=6$ 得 $1+q+q^2=3$，解得 $q=1$ 或 $q=-2$。</p></blockquote>
+<p><strong>第3题</strong>（检验 通项求法综合）</p>
+<p>已知数列 $\{a_n\}$ 的前 $n$ 项和 $S_n=2^n-1$，求通项 $a_n$（要求写出完整验证过程）。</p>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高二深化_数学_核心知识网络_等差数列与等比数列.html">高二深化_数学_核心知识网络_等差数列与等比数列</a> — 两大基本数列的定义、公式与性质体系，本卡片的公式前提即来源于此</li>
@@ -111,6 +122,37 @@ MathJax = {
 </ul>
 <hr>
 <blockquote><p>🏷️ 标签：<code>#数学</code> <code>#易错警示与辨析</code> <code>#高二深化</code> <code>#难度3</code> <code>#数列</code> <code>#n=1验证</code> <code>#等比数列q=1</code> <code>#分段通项</code> <code>#错位相减</code> <code>#分类讨论</code> <code>#新高考Ⅰ卷·广东</code></p></blockquote>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（n=1 验证）</summary><p><strong>结论</strong>：该生解答错误，漏算 $a_1$ 且未验证 $n=1$。</p>
+<p><strong>改正</strong>：</p>
+<ul>
+<li>当 $n=1$ 时，$a_1=S_1=1^2+1+1=3$。</li>
+<li>当 $n\ge2$ 时，</li>
+<p>$$a_n=S_n-S_{n-1}=(n^2+n+1)-[(n-1)^2+(n-1)+1]=2n$$</p>
+<li>检验：当 $n=1$ 时，$2n=2\ne a_1=3$，故不能合并。</li>
+</ul>
+<p><strong>答</strong>： $$a_n=\begin{cases} 3, & n=1 \\ 2n, & n\ge2 \end{cases}$$</p>
+<p><strong>易错提醒</strong>：$a_n=S_n-S_{n-1}$ 只对 $n\ge2$ 成立，$a_1$ 必须单独算并代回检验。本题 $n=1$ 不满足 $2n$，必须写分段通项。</p></details>
+<details><summary>▶ 第2题详解（q=1 讨论）</summary><p><strong>结论</strong>：该生答案碰巧正确，但过程不严谨——未先单独讨论 $q=1$ 就直接套用求和公式。</p>
+<p><strong>规范写法</strong>：</p>
+<ul>
+<li>当 $q=1$ 时，$\{a_n\}$ 为常数列，$S_3=3a_1=6$，满足题意，$q=1$ 成立。</li>
+<li>当 $q\ne1$ 时，</li>
+<p>$$S_3=\frac{2(1-q^3)}{1-q}=6$$ 即 $1+q+q^2=3$，解得 $q=1$（舍去，因假设 $q\ne1$）或 $q=-2$。</p>
+</ul>
+<p><strong>综上</strong>，$q=1$ 或 $q=-2$。</p>
+<p><strong>易错提醒</strong>：等比求和公式 $\dfrac{a_1(1-q^n)}{1-q}$ 只在 $q\ne1$ 时成立。规范答题必须先讨论 $q=1$，否则广东卷会扣步骤分。</p></details>
+<details><summary>▶ 第3题详解（通项求法综合）</summary><p><strong>解答</strong>：</p>
+<ul>
+<li>当 $n=1$ 时，$a_1=S_1=2^1-1=1$。</li>
+<li>当 $n\ge2$ 时，</li>
+<p>$$a_n=S_n-S_{n-1}=(2^n-1)-(2^{n-1}-1)=2^{n-1}$$</p>
+<li>检验：当 $n=1$ 时，$2^{1-1}=1=a_1$，成立。</li>
+</ul>
+<p><strong>答</strong>：$a_n=2^{n-1}$（$n\in\mathbb{N}^*$）。</p>
+<p><strong>易错提醒</strong>：本题 $n=1$ 恰好满足 $2^{n-1}$，可以合并；但&quot;检验&quot;步骤必须显式写出，否则按广东卷评分细则扣 1~2 分。</p></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

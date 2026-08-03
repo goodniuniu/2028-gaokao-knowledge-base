@@ -199,6 +199,18 @@ PA ⊂ 面 PAB
 <p><strong>正解</strong>：棱台体积 $V=\dfrac{h}{3}(S_1+S_2+\sqrt{S_1S_2})$。高 $h=157.5-148.5=9\,\text{m}$，$S_1=140\times10^6\,\text{m}^2$，$S_2=180\times10^6\,\text{m}^2$。 $$V=\frac{9}{3}\times\bigl[140+180+\sqrt{140\times180}\bigr]\times10^6=3\times(320+60\sqrt7)\times10^6\approx3\times(320+159)\times10^6=1437\times10^6\approx1.4\times10^9\,\text{m}^3$$ 故选 <strong>C</strong>。</p>
 <p><strong>避错要点</strong>：本题直接命中本卡<strong>失误3（圆台/棱台体积公式漏中间项）</strong>——台体体积是&quot;三项和&quot;：上底面积 + 下底面积 + 上下底面积几何平均 $\sqrt{S_1S_2}$，$1/3$ 系数与中间项缺一不可。2022 年新高考Ⅰ卷把它放在第 4 题（5 分基础题），正是检验&quot;冷门公式是否记全&quot;。计算类失误属于&quot;会做但丢分&quot;，建议把台体体积、圆锥侧面积、球直径转半径等作成&quot;计算自查卡&quot;，考前一眼扫过即可排雷。</p>
 <hr>
+<h2>自测训练（3道·覆盖线面平行条件、台体体积、圆锥母线高关系）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 线面平行判定定理条件完整性）</p>
+<p>下述证明是否正确？若错误请指出并改正。</p>
+<blockquote><p>如图，在四棱锥 $P-ABCD$ 中，$E,F$ 分别是 $PC,PB$ 的中点。某生证明 $EF \parallel$ 平面 $PAB$：<br>&quot;$\because EF \parallel AB$，$AB \subset$ 平面 $PAB$，$\therefore EF \parallel$ 平面 $PAB$。&quot;</p></blockquote>
+<p><strong>第2题</strong>（检验 圆台/棱台体积公式的中间项）</p>
+<p>下述计算是否正确？若错误请指出并改正。</p>
+<blockquote><p>一个圆台的上底面积为 $4$，下底面积为 $9$，高为 $6$。某生求体积：<br>$$V=\frac{6}{3}(4+9)=2\times 13=26$$</p></blockquote>
+<p><strong>第3题</strong>（检验 圆锥母线、高、半径关系）</p>
+<p>下述计算是否正确？若错误请指出并改正。</p>
+<blockquote><p>已知圆锥底面半径 $r=3$，母线长 $l=5$。某生求体积：<br>$$V=\frac{1}{3}\pi r^2 l=\frac{1}{3}\pi\times 9\times 5=15\pi$$</p></blockquote>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高一筑基_数学_核心知识网络_空间点线面位置关系.html">高一筑基_数学_核心知识网络_空间点线面位置关系</a> — 八大定理的完整内容</li>
@@ -217,6 +229,29 @@ PA ⊂ 面 PAB
 </ul>
 <hr>
 <blockquote><p>🏷️ 标签：<code>#数学</code> <code>#易错警示与辨析</code> <code>#高一筑基</code> <code>#难度3</code> <code>#立体几何</code> <code>#证明题</code> <code>#条件遗漏</code> <code>#定理名称</code> <code>#表面积侧面积</code> <code>#母线高混淆</code> <code>#圆台体积</code> <code>#符号规范</code> <code>#广东名校模拟</code></p></blockquote>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（线面平行判定定理）</summary><p><strong>结论</strong>：该生证明不正确，漏写&quot;线在面外&quot;条件。</p>
+<p><strong>改正</strong>：线面平行判定定理要求：平面外一条直线与平面内一条直线平行，则线面平行。必须同时满足：</p>
+<ol>
+<li>$EF \parallel AB$；</li>
+<li>$AB \subset$ 平面 $PAB$；</li>
+<li>$EF \not\subset$ 平面 $PAB$。</li>
+</ol>
+<p>正确书写： $$\because EF \parallel AB,\ AB \subset \text{平面 }PAB,\ \text{且 }EF \not\subset \text{平面 }PAB$$ $$\therefore EF \parallel \text{平面 }PAB\quad(\text{线面平行判定定理})$$</p>
+<p><strong>易错提醒</strong>：证明线面平行时，&quot;$l \not\subset \alpha$&quot;是最容易被遗漏的条件，广东卷常因此扣 1~2 分。</p></details>
+<details><summary>▶ 第2题详解（台体体积公式）</summary><p><strong>结论</strong>：该生计算错误，漏掉中间项 $\sqrt{S_1S_2}$。</p>
+<p><strong>改正</strong>：台体体积公式为 $$V=\frac{h}{3}\left(S_1+S_2+\sqrt{S_1S_2}\right)$$</p>
+<p>代入 $S_1=4$，$S_2=9$，$h=6$： $$\sqrt{S_1S_2}=\sqrt{4\times 9}=6$$ $$V=\frac{6}{3}(4+9+6)=2\times 19=38$$</p>
+<p><strong>答</strong>：圆台体积为 $38$。</p>
+<p><strong>易错提醒</strong>：台体体积是&quot;三项和&quot;：上底 + 下底 + 上下底几何平均，中间项不可漏。本题可正算验证：$V=\dfrac{h}{3}(S_1+S_2+\sqrt{S_1S_2})=\dfrac{6}{3}(4+9+6)=38$。</p></details>
+<details><summary>▶ 第3题详解（圆锥高与母线）</summary><p><strong>结论</strong>：该生计算错误，把母线 $l$ 误作高 $h$。</p>
+<p><strong>改正</strong>：圆锥的母线、高、底面半径满足 $$l^2=r^2+h^2$$</p>
+<p>所以 $$h=\sqrt{l^2-r^2}=\sqrt{25-9}=4$$</p>
+<p>体积为 $$V=\frac{1}{3}\pi r^2 h=\frac{1}{3}\pi\times 9\times 4=12\pi$$</p>
+<p><strong>答</strong>：圆锥体积为 $12\pi$。</p>
+<p><strong>易错提醒</strong>：圆锥体积公式中的 $h$ 是高，不是母线。看到&quot;母线&quot;求体积，先用勾股定理求高。</p></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

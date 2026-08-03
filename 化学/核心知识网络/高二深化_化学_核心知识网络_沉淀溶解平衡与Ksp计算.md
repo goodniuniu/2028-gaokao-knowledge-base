@@ -77,6 +77,21 @@ Step 5：代温度条件（25℃常用），检查单位与数量级
 
 ---
 
+## 自测训练（3道·覆盖Ksp与溶解度、分步沉淀、竞争沉淀临界）
+
+> 先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。
+
+**第1题**（检验 Ksp与溶解度换算）
+
+25 ℃时Ksp(AgCl)=1.8×10⁻¹⁰，计算AgCl在纯水中的溶解度s（mol·L⁻¹）。
+
+**第2题**（检验 分步沉淀判断）
+
+某溶液中c(Cl⁻)=c(Br⁻)=0.010 mol·L⁻¹，Ksp(AgCl)=1.8×10⁻¹⁰，Ksp(AgBr)=5.0×10⁻¹³。逐滴加入AgNO₃溶液，哪种离子先沉淀？计算开始沉淀时所需c(Ag⁺)。
+
+**第3题**（检验 竞争沉淀临界计算）
+
+某工艺用BaCl₂“沉钼”。25 ℃、pH=7.0时，Ksp(BaMoO₄)=3.5×10⁻⁸，Ksp(BaCO₃)=2.6×10⁻⁹，H₂CO₃的Ka₂=4.7×10⁻¹¹。为避免BaMoO₄中混入BaCO₃，当BaMoO₄开始沉淀时，溶液中c(HCO₃⁻)/c(MoO₄²⁻)应满足什么关系？（列出算式并算出结果）
 ## 关联卡片
 
 - [广东化学工艺流程题通用框架](../典型题型与方法/高二深化_化学_典型题型与方法_广东化学工艺流程题通用框架.md) — 流程中pH调控与分步沉淀
@@ -93,3 +108,50 @@ Step 5：代温度条件（25℃常用），检查单位与数量级
 - 广东卷Ksp计算多嵌在工艺流程题(第18题)中，与"调pH分步沉淀"紧密结合。
 - 易错：① 忽略离子浓度系数幂次(如Fe(OH)₃的Ksp=[Fe³⁺][OH⁻]³)；② 误以为Ksp小就一定先沉淀；③ 忘记沉淀完全判据<10⁻⁵ mol/L。
 - 等级赋分提示：Ksp计算是"拉分区"，掌握竞争沉淀临界列式可从B冲A。
+
+---
+
+## 参考答案
+
+> 答案与题目分板块呈现，便于"先做后对"。每题给出规范解答 + 易错提醒，做完一题对一题。
+
+<details>
+<summary>▶ 第1题详解（AB型沉淀溶解度）</summary>
+
+对AgCl(s)⇌Ag⁺(aq)+Cl⁻(aq)，Ksp=s²，故
+$$s=\sqrt{1.8\times10^{-10}}\approx1.34\times10^{-5}\ \text{mol·L}^{-1}$$
+
+**易错提醒**：AB型沉淀s=√Ksp；若含系数幂次如Fe(OH)₃，则须用Ksp=[Fe³⁺][OH⁻]³求解。
+
+</details>
+
+<details>
+<summary>▶ 第2题详解（分步沉淀的先后判断）</summary>
+
+开始沉淀AgBr所需c(Ag⁺)：
+$$c(\mathrm{Ag^+})=\dfrac{K_{sp}(\mathrm{AgBr})}{c(\mathrm{Br^-})}=\dfrac{5.0\times10^{-13}}{0.010}=5.0\times10^{-11}\ \text{mol·L}^{-1}$$
+
+开始沉淀AgCl所需c(Ag⁺)：
+$$c(\mathrm{Ag^+})=\dfrac{1.8\times10^{-10}}{0.010}=1.8\times10^{-8}\ \text{mol·L}^{-1}$$
+
+因为5.0×10⁻¹¹ < 1.8×10⁻⁸，所以**Br⁻先沉淀**。
+
+**易错提醒**：Ksp小的不一定先沉淀，必须结合离子浓度计算实际所需的共同离子浓度。
+
+</details>
+
+<details>
+<summary>▶ 第3题详解（竞争沉淀临界）</summary>
+
+当BaMoO₄开始沉淀时：
+$$c(\mathrm{Ba^{2+}})=\dfrac{K_{sp}(\mathrm{BaMoO_4})}{c(\mathrm{MoO_4^{2-}})}$$
+
+不生成BaCO₃需：
+$$c(\mathrm{Ba^{2+}})\,c(\mathrm{CO_3^{2-}})\le K_{sp}(\mathrm{BaCO_3})$$
+
+结合 $$K_{a2}=\dfrac{c(\mathrm{CO_3^{2-}})\,c(\mathrm{H^+})}{c(\mathrm{HCO_3^-}})$$，pH=7.0时c(H⁺)=10⁻⁷，整理得
+$$\dfrac{c(\mathrm{HCO_3^-})}{c(\mathrm{MoO_4^{2-}})}\le \dfrac{K_{sp}(\mathrm{BaCO_3})\,c(\mathrm{H^+})}{K_{sp}(\mathrm{BaMoO_4})\,K_{a2}}=\dfrac{2.6\times10^{-9}\times10^{-7}}{3.5\times10^{-8}\times4.7\times10^{-11}}\approx1.58\times10^{2}$$
+
+**易错提醒**：竞争沉淀用共同离子搭桥；注意Ka₂把CO₃²⁻换算成HCO₃⁻，pH对应c(H⁺)数量级要对齐。
+
+</details>
