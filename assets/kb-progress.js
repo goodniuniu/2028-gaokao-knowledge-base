@@ -17,7 +17,7 @@
 
   // ============ 配置 ============
   // 部署 Worker 后填入实际地址，例如 'https://gaokao-kb-sync.<account>.workers.dev'
-  var API_BASE = 'https://gaokao-kb-sync.YOUR_SUBDOMAIN.workers.dev';
+  var API_BASE = 'https://gaokao-kb-sync.goodniuniu.workers.dev';
   var AUTO_SYNC_INTERVAL = 2 * 60 * 1000; // 2分钟
   var PREFIX = 'kb_';
   var USERS_KEY = PREFIX + 'users';

@@ -7,7 +7,7 @@ compatibility_date = "2024-09-01"
 # 然后将返回的 id 填到下面
 [[kv_namespaces]]
 binding = "KB_KV"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "22d584be95fc46028cc426355412996a"
 # preview_id = "预览环境ID"       # 可选：本地开发用
 
 # 环境变量
