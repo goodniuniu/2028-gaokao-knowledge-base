@@ -22,15 +22,33 @@
 ├── 方法/                         # 学习方法/考试策略/心理建设/生理管理
 ├── 复盘追踪/                      # 知识掌握状态表（_scan_result.json 为审计产物，不入库）
 ├── 图形库/                        # 知识点示意图（png + matplotlib 绘制脚本）
-└── assets/kb.css                 # 全站共享样式
+├── worker/                       # 每用户进度云同步后端（Cloudflare Worker + KV，部署见 worker/DEPLOY.md）
+└── assets/
+    ├── kb.css                    # 全站共享样式（含进度组件样式）
+    ├── kb-progress.js            # 每用户学习进度前端（三键标记/本地多用户/云同步/仪表盘）
+    └── kb-cards.js               # 卡片清单（build_site.py 生成物，复盘追踪页仪表盘数据源）
 ```
+
+## 每用户学习进度（2026-08 新增）
+
+- **架构**：纯静态站 + Cloudflare Worker（`worker/`）+ KV，复刻自 `~/Github/gaokao-english-vocab`；本地优先（localStorage 前缀 `kb_`），可选 6 位同步码云同步多设备。
+- **cardId = md 相对根目录路径去 `.md` 后缀**（如 `数学/核心知识网络/高一筑基_数学_核心知识网络_xxx`）。**卡片 md 改名/移动目录 = cardId 变化 = 该卡的每用户进度（含云端）失联**，改名前请知悉此代价。
+- **md 元信息「状态」字段口径不变**：仍是内容维护者视角的默认标记，`kb_audit.py` / `build_status_table.py` 统计照旧；网页端每用户状态由 JS 覆盖显示，不改动任何 md。
+- **Worker 部署后**：把 URL 填入 `assets/kb-progress.js` 顶部 `API_BASE`。
+- 数据模型：`data:<同步码>` → `{ cards: { cardId: { s: 0|1|2, t } }, lastSync }`（0❌/1⚠️/2✅，多端按 t 取新合并）。
 
 ## 二、脚本职责
 
 | 脚本 | 用途 | 何时运行 |
 |------|------|----------|
-| `build_site.py` | 一键重建：卡片换肤、文档页 md→HTML、全部 index.html、断链校验 | **每次改动任何 md 后必跑** |
+| `build_site.py` | 一键重建：卡片换肤、文档页 md→HTML、全部 index.html、断链校验；全站注入 `assets/kb-progress.js`，卡片页注入 `data-card-id` 与三键标记占位，生成 `assets/kb-cards.js`。**`card_page` 已由 md 重新生成卡片正文（md 是唯一源，不再从旧 HTML 提取）** | **每次改动任何 md 后必跑** |
+| `worker/`（`src/index.js`） | 每用户进度云同步 API（注册/拉取/同步/校验码 + `/sync` 恢复页），Cloudflare Worker + KV | 改动后 `cd worker && npx wrangler deploy`（部署步骤见 `worker/DEPLOY.md`） |
+| `check_html_md_consistency.py` | HTML 与 MD 一致性校验：确认每张卡片 HTML 正文均可由 MD 生成（图片/标题/文本长度比对），退出码 0=一致、1=不一致 | 改动大量卡片后、CI 接入前复查；发现"标题/图片缺失"说明有内容只存在于 HTML，需回填 md |
 | `kb_audit.py` | 全库审计：卡片数/状态/分维度统计，写 `复盘追踪/_scan_result.json` | 更新统计数字时 |
+| `check_backlinks.py` | 关联卡片引用完整性检测：真断链/路径不规范/单向引用/双向/自引用，写 `复盘追踪/_backlinks_report.txt`；`--fix-paths` 自动修正路径不规范链接（可逆）。链接正已放宽为匹配「关联卡片」段内全部 `[..](..)`（同一行多条链接也能解析） | 改关联卡片链接后、阶段2.3 |
+| `fix_backlinks_phase2.py` | 阶段2.3余量修复：**(1) TYPE_X 真断链改链**——目标卡实际存在但链接名（漏前缀/时间标签错）写法不对，改为正确全名+正确相对路径；**(2) 单向→双向**——在目标卡「关联卡片」段补反向链接。安全机械、可逆（git 可回溯）；TYPE_Y（目标卡真缺失）不动，留待建卡或删链决策 | 阶段2.3 收尾 |
+| `analyze_broken.py` | 一次性分析：把真断链分为 TYPE_X（可改链）/ TYPE_Y（真缺失），不改文件 | 阶段2.3 诊断 |
+| `gd_kaotiqing_audit.py` | 广东考情标注现状审计：分类 A已锚定年份+题号 / B年份无题号 / C频率无年份 / D笼统，写 `复盘追踪/_gd_kaotiqing_audit.txt` | 阶段2.2 精确化前/后 |
 | `build_status_table.py` | 生成 `复盘追踪/知识掌握状态表.md` | 复盘、批量改掌握状态后 |
 | `图形库/draw_*.py` | 绘制知识点示意图（matplotlib） | 需要新图时 |
 | `英语/单词复习/生成每日小测.py`、`批量生成假期复习材料.py` | 单词复习系统的词表/小测卷生成器 | 维护单词复习系统时 |

@@ -32,6 +32,7 @@ MathJax = {
 <h1 class="kb-title">⚙️ 使用规则与检索说明</h1>
 
 <div class="kb-note"><strong>语文</strong>：新高考Ⅰ卷 | 教育部统一命题 | 思辨性强、贴近时代<br><strong>数学</strong>：新高考Ⅰ卷 | 教育部统一命题 | 综合性强、创新思维<br><strong>英语</strong>：新高考Ⅰ卷 | 教育部统一命题 | 笔试不含听力；广东单独听说考试（人机对话，20分）<br><strong>物理</strong>：广东省卷 | 自主命题 | 等级赋分，情境化命题<br><strong>化学</strong>：广东省卷 | 自主命题 | 等级赋分，工艺流程、实验探究<br><strong>生物</strong>：广东省卷 | 自主命题 | 等级赋分，长句表达、实验设计</div>
+
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
 <blockquote><p>本文件定义知识库的使用规范、检索方式、入库规则及维护规则，请在使用前仔细阅读。</p></blockquote>
@@ -90,22 +91,36 @@ MathJax = {
 <li><code>查生物+典型题型与方法+高二深化+广东长句</code> — 生物高二长句表达类卡片</li>
 </ul>
 <hr>
-<h2>四、复盘规则</h2>
-<h3>每周复盘流程</h3>
+<h2>四、复盘规则（周复盘标准流程 · 2026-08 固化）</h2>
+<h3>周复盘七步流程</h3>
 <ol>
-<li><strong>打开</strong> <a href="复盘追踪/知识掌握状态表.html">复盘追踪/知识掌握状态表.md</a></li>
-<li><strong>浏览</strong> 本周新增/复习的卡片</li>
-<li><strong>标记状态</strong>：每张卡片标记为 ✅已掌握 / ⚠️待强化 / ❌未理解</li>
-<li><strong>关注广东特色</strong>：重点检查 <code>#广东特色</code> 和 <code>#广东卷</code> 来源的卡片掌握情况</li>
-<li><strong>更新统计</strong>：在总索引中更新各科状态统计数字</li>
-<li><strong>制定计划</strong>：针对 ❌未理解 和 ⚠️待强化 的卡片制定下周复习计划</li>
-<li><strong>英语听说</strong>：英语科目额外关注广东听说考试专项卡片</li>
+<li><strong>收集材料</strong>：本周错题（拍照/文字均可）、感觉模糊的知识点、测验/练习成绩（注明来源：广东卷 / 新高考Ⅰ卷 / 校内练习）。</li>
+<li><strong>错题四分类</strong>：每道错题必须归入以下一类，处置动作不同——</li>
+</ol>
+<div class="table-wrap"><table><tr><th>错误类型</th><th>判定标准</th><th>处置动作</th></tr><tr><td><strong>知识性错误</strong></td><td>概念/公式/定理本身没掌握</td><td>匹配或新建「核心知识网络」卡片，状态标 ❌未理解</td></tr><tr><td><strong>方法性错误</strong></td><td>知识会，但解题路径/题型通法不对</td><td>匹配或新建「典型题型与方法」卡片，状态标 ⚠️待强化</td></tr><tr><td><strong>审题性错误</strong></td><td>看错条件、漏隐含条件、答非所问</td><td>匹配或新建「易错警示与辨析」卡片</td></tr><tr><td><strong>计算性错误</strong></td><td>思路对但算错（符号/运算/抄写）</td><td>不新建卡片，记入错题本&quot;计算失误高发区&quot;，做限时计算训练</td></tr></table></div>
+<ol>
+<li><strong>匹配知识库</strong>：用 <code>查[科目]+[关键词]</code> 检索已有卡片；检索不到的错因当场入库（走第二节入库规则），实现&quot;错题即卡片&quot;。</li>
+<li><strong>标记状态</strong>：更新卡片元信息表的 状态 字段（✅/⚠️/❌），并同步 <code>复盘追踪/知识掌握状态表.md</code>；批量改状态后可运行 <code>python build_status_table.py</code> 重新生成状态表。</li>
+<li><strong>广东特色检查</strong>：重点核对 <code>#广东特色</code> 和 <code>#广东卷</code> 来源卡片的掌握情况；物化生错题额外回答一句：&quot;这道题是否符合广东卷命题风格？&quot;</li>
+<li><strong>生成薄弱点清单</strong>：让 AI 输出「本周薄弱点清单 + 下周针对性补漏建议 + 推荐变式练习」（用下方模板四）。</li>
+<li><strong>重建与校准</strong>：改过任何 md 后运行 <code>python build_site.py</code>（重建 HTML + 断链校验）；统计数字有变时运行 <code>python kb_audit.py</code> 校准总索引。</li>
 </ol>
 <h3>状态标记规范</h3>
 <ul>
 <li><strong>✅ 已掌握</strong>：能独立、准确、快速完成相关题目，无知识盲区</li>
 <li><strong>⚠️ 待强化</strong>：基本理解，但做题时偶有失误或速度较慢，需要定期复习</li>
 <li><strong>❌ 未理解</strong>：概念模糊，无法独立解题，需要重新学习或请教老师</li>
+</ul>
+<h3>首次复盘启动（当前待办：全库掌握状态尚未破零）</h3>
+<blockquote><p>现状：262张卡片全部为 ⚠️/❌，尚无一张 ✅。对 AI 说 <strong>「启动首次全库复盘」</strong>，按以下方式配合：<br>1. AI 逐科列出卡片清单（每次一科，避免一次过多）；<br>2. 自评标记有两条路，任选其一：<br>- <strong>网页自助（推荐）</strong>：直接在卡片页点三键按钮 <code>[❌][⚠️][✅]</code> 标记，手机/电脑进度云同步（见下方&quot;网页端「我的掌握」标记&quot;）；<br>- <strong>口述代标</strong>：你口述自评（能独立做题/偶有失误/不会），AI 负责改卡片状态字段和状态表；<br>3. 拿不准的卡片，AI 现场出1道快测题，做对了才标 ✅（防止&quot;看懂了&quot;误判为&quot;掌握了&quot;）；<br>4. 全部过完后 AI 运行 <code>kb_audit.py</code> + <code>build_site.py</code> 校准重建。<br>目标：2026.9 高二开学前，✅ 已掌握卡片 ≥10 张（650分计划关键成功指标）。</p></blockquote>
+<h3>网页端「我的掌握」标记（每用户进度，2026-08 新增）</h3>
+<ul>
+<li><strong>卡片页三键标记</strong>：每张知识卡片顶部有 <code>[❌未理解][⚠️待强化][✅已掌握]</code> 按钮，点击即记录；再点一次当前状态 = 取消标记。</li>
+<li><strong>每用户独立</strong>：进度存在浏览器本地（localStorage），同一浏览器可建多个用户（右上角 👤 菜单切换）。</li>
+<li><strong>云同步（多设备）</strong>：右上角 👤 →「注册同步码」获得 6 位同步码；在其它设备的 👤 菜单选「输入同步码恢复」，或打开 Worker 的 <code>/sync</code> 恢复页，即可合并进度。同步码即钥匙，请妥善保存。</li>
+<li><strong>进度可视化</strong>：索引页已标记卡片显示状态角标；<a href="复盘追踪/index.html">复盘追踪</a> 页顶部有个人仪表盘（六科掌握度、最近 7 天标记动态）。</li>
+<li><strong>与静态状态表的关系</strong>：<code>知识掌握状态表.md</code> 是内容维护者视角的默认标记（由 md 元信息生成）；网页端三键标记是每个用户自己的进度，两者互不影响。</li>
+<li><strong>注意</strong>：卡片 md 改名/移动目录会使该卡的进度失联（进度以文件路径为 ID）。</li>
 </ul>
 <hr>
 <h2>五、维护规则</h2>
@@ -165,7 +180,44 @@ MathJax = {
 <div class="table-wrap"><table><tr><th>使用场景</th><th>示例指令</th><th>AI 返回</th></tr><tr><td>基础巩固</td><td><code>帮我出物理的板块模型练习题，要求：3道选择题+2道计算题，难度中等，附答案解析</code></td><td>原创/改编练习题+详细解析</td></tr><tr><td>专题突破</td><td><code>帮我出化学的氧化还原方程式配平练习题，要求：10道缺项配平，含广东卷风格</code></td><td>针对性练习题+配平步骤</td></tr><tr><td>真题演练</td><td><code>帮我出生物的长句表达练习题，要求：5道原因类+3道依据类，仿2024广东卷风格</code></td><td>仿真题+评分标准+参考答案</td></tr><tr><td>错题变式</td><td><code>帮我出数学的恒成立问题变式题，要求：基于卡片内容，难度递增，每题标注考点</code></td><td>变式题串+考点对应卡片</td></tr></table></div>
 <blockquote><p><strong>进阶用法</strong>：出题后可要求 <code>将上述练习题也作为知识卡片入库</code>，实现&quot;练习即积累&quot;。</p></blockquote>
 <hr>
-<blockquote><p>💡 <strong>提示</strong>：三个模板可组合使用。例如先 <code>查物理+力学三大模型</code> 复习，再 <code>帮我出物理的力学三大模型练习题</code> 巩固，最后 <code>将错题整理入库</code> 形成闭环。</p></blockquote>
+<h3>模板四：周复盘（错题四分类）</h3>
+<pre><code>请帮我复盘本周[科目]学习情况。我将提供：
+1. 本周学校讲授的章节/专题：
+2. 我整理的错题（拍照/文字）：
+3. 我感觉模糊的知识点：
+4. 本周测验/练习及其来源（广东卷/新高考Ⅰ卷/校内）：
+
+请按以下步骤执行：
+- 将错题按「知识性/方法性/审题性/计算性」四类分类，统计各类占比
+- 逐题匹配知识库已有卡片（查[科目]+关键词），缺失的错因当场建卡入库
+- 标注错题来源，物化生错题额外分析&quot;是否符合广东卷命题风格&quot;
+- 生成本周「薄弱点清单」和「下周针对性补漏建议」
+- 为薄弱点各出1道变式练习题（标注考点和对应卡片）
+- 复盘结束后更新卡片状态字段与掌握状态表，并重跑 build_site.py
+</code></pre>
+<div class="table-wrap"><table><tr><th>使用场景</th><th>示例指令</th></tr><tr><td>单科周复盘</td><td><code>请帮我复盘本周物理学习情况...</code></td></tr><tr><td>全科周末大盘点</td><td><code>请帮我复盘本周六科学习情况，先数学后物理...</code>（分科逐次执行）</td></tr></table></div>
+<hr>
+<h3>模板五：考前冲刺（考前必看20点）</h3>
+<pre><code>距离[科目][考试名]还有X天，请基于知识库中「易错警示与辨析」和「典型题型与方法」两个维度，
+为我生成一份&quot;考前必看20点&quot;，按优先级排序。要求：
+- 物化生：优先广东卷高频考点和特色题型（#广东特色/#广东工艺/#广东长句/#广东情境）
+- 语数英：兼顾新高考Ⅰ卷共通规律和广东考区特点（#广东思辨/#广东听说）
+- 每一点标注对应的知识卡片名称和最近真题出处（近5年）
+- 最后附「考场时间分配建议」和「抢分优先级」（先保基础题，再抢中档题）
+</code></pre>
+<div class="table-wrap"><table><tr><th>使用场景</th><th>示例指令</th></tr><tr><td>月考冲刺</td><td><code>距离物理月考还有5天，请生成考前必看20点</code></td></tr><tr><td>大型模拟考</td><td><code>距离广州一模还有14天，请生成六科考前必看清单（逐科生成）</code></td></tr></table></div>
+<hr>
+<h3>模板六：广东卷命题趋势分析</h3>
+<pre><code>请帮我整理「[科目]广东选择性考试近3年命题趋势分析」，包括：
+- 各板块分值分布变化（列表对比）
+- 新题型/新情境的出现规律（情境化、生活化、科技前沿）
+- 与新高考Ⅰ卷（语数英）或全国卷风格的差异对比
+- 结合650分目标，给出2028年可能的命题方向预测和备考重点排序
+- 输出建议入库的卡片清单（按优先级）
+</code></pre>
+<div class="table-wrap"><table><tr><th>使用场景</th><th>示例指令</th></tr><tr><td>物化生专项</td><td><code>请整理化学广东选择性考试近3年命题趋势分析</code></td></tr><tr><td>语数英对照</td><td><code>请分析数学新高考Ⅰ卷近3年命题趋势（2024结构改革后）</code></td></tr></table></div>
+<hr>
+<blockquote><p>💡 <strong>提示</strong>：六个模板可组合使用。例如先 <code>查物理+力学三大模型</code> 复习，再 <code>帮我出物理的力学三大模型练习题</code> 巩固，周末用模板四 <code>将错题整理入库</code> 形成闭环，考前用模板五集中冲刺，每学期用模板六校准备考方向。</p></blockquote>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">
@@ -175,5 +227,6 @@ MathJax = {
 <footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
 <a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
 </div>
+<script src="assets/kb-progress.js" defer></script>
 </body>
 </html>

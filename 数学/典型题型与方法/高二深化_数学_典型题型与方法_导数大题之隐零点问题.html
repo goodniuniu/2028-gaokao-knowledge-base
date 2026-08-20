@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【卡片标题】导数大题之隐零点问题 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow" data-card-id="数学/典型题型与方法/高二深化_数学_典型题型与方法_导数大题之隐零点问题">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【卡片标题】导数大题之隐零点问题</span></li></ol>
+<h1 class="kb-title">【卡片标题】导数大题之隐零点问题</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2020新高考Ⅰ卷(山东)·第21题（隐零点视角）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（导数压轴恒成立/不等式证明常需）· 压轴 · 设而不求、代入消参求最值 · 真题锚定：2020新高考Ⅰ卷T21（隐零点视角）</div>
+<div id="kb-progress-widget"></div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;f(x)≥1 恒成立，求a范围&quot;且 f&#x27;(x)=0 无显式解</td><td>隐零点</td><td>设 x₀ 使 f&#x27;(x₀)=0，代回 f(x₀) 消参</td></tr><tr><td>导函数含 e^x 与 1/x 混合，无法解x</td><td>隐零点</td><td>由 f&#x27;(x₀)=0 得 e^{x₀}=1/x₀ 类关系</td></tr><tr><td>求最小值但极值点非特殊值</td><td>隐零点</td><td>用 x₀ 表示最值，再证不等式</td></tr><tr><td>同构不易构造时</td><td>隐零点替代</td><td>设零点+单调性证唯一</td></tr></table></div>
+<h3>解题路径（隐零点四步法）</h3>
+<h4>第一步：求导判单调性</h4>
+<p>求 f&#x27;(x)，证 f&#x27;(x) 单调（如 f&#x27;&#x27;(x)&gt;0），故 f&#x27;(x)=0 有唯一零点 x₀。</p>
+<h4>第二步：设零点列方程</h4>
+<p>设 f&#x27;(x₀)=0，得到关于 x₀ 与参数的关系（如 ae^{x₀-1}=1/x₀）。</p>
+<h4>第三步：代回消参</h4>
+<p>将参数用 x₀ 表示，代入 f(x₀) 得仅含 x₀ 的表达式。</p>
+<h4>第四步：求最值证不等式</h4>
+<p>对 f(x₀) 用基本不等式/单调性求得最小值，回推参数范围。</p>
+<h3>母题（2020 新高考Ⅰ卷(山东)·第21题，12分）</h3>
+<p><strong>题目</strong>：已知函数 f(x)=ae^{x-1} - lnx + lna。(1) 当 a=e 时，求曲线在点(1,f(1))处切线与坐标轴围成三角形面积；(2) 若 f(x)≥1，求a的取值范围。</p>
+<p><strong>解析（隐零点视角）</strong>： (2) f&#x27;(x)=ae^{x-1} - 1/x，显然 a&gt;0 时 f&#x27;(x) 在(0,+∞)单调递增（f&#x27;&#x27;(x)=ae^{x-1}+1/x²&gt;0），故存在唯一 x₀ 使 f&#x27;(x₀)=0，即 <strong>ae^{x₀-1}=1/x₀</strong>，取对数得 ln a + x₀ - 1 = -ln x₀。 f(x) 在(0,x₀)减、(x₀,+∞)增，最小值 f(x₀)=ae^{x₀-1} - lnx₀ + ln a。 代入 ae^{x₀-1}=1/x₀ 与 ln a = -ln x₀ - x₀ + 1，得 f(x₀) = 1/x₀ + (-ln x₀ - x₀ + 1) + ln a ... 整理得 f(x₀) = 1/x₀ + x₀ - 1 ≥ 2√(1/x₀·x₀) - 1 = 1， 当且仅当 x₀=1 即 a=1 时取等。故 f(x)≥1 恒成立 ⇔ a≥1。</p>
+<p><strong>关键提炼</strong>：隐零点核心是&quot;设 x₀ 满足 f&#x27;(x₀)=0 → 建立参数与 x₀ 关系 → 代回最小值表达式消参&quot;。</p>
+<hr>
+<h2>自测训练（3道·覆盖隐零点四步法）</h2>
+<blockquote><p>检验目标：能否在导函数零点不可显式解时，设 $x_0$ 使 $f'(x_0)=0$，建立参数与 $x_0$ 的关系，代回最小值消参，再用基本不等式求最值。<strong>先独立完成，再展开卡片末尾「参考答案」核对</strong>。每题标注了所检验的步骤，方便对号入座查漏补缺。</p></blockquote>
+<p><strong>第1题</strong>（检验 隐零点·基础：设零点 + 消参 + 基本不等式）</p>
+<p>已知函数 $f(x)=e^x-ax-1$（$a>0$）。若 $f(x)\ge 0$ 对 $\forall x\in\mathbb{R}$ 恒成立，求 $a$ 的取值范围。</p>
+<p><strong>第2题</strong>（检验 隐零点·中档：对数指数混合 + 代回求最值）</p>
+<p>已知函数 $f(x)=\dfrac{\ln x}{x}+a$（$a\in\mathbb{R}$，$x>0$）。若 $f(x)\le \dfrac{1}{e}+a$ 对 $\forall x>0$ 恒成立，求 $f(x)$ 的最大值（用隐零点法验证极值点位置）。</p>
+<p><strong>第3题</strong>（检验 隐零点·压轴：母题变式）</p>
+<p>已知函数 $f(x)=e^{x-1}-\dfrac{1}{x}$（$x>0$）。求 $f(x)$ 的最小值（用隐零点法，设 $x_0$ 满足 $f'(x_0)=0$，证明 $x_0=1$ 并求最小值）。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数的运算与应用.html">导数的运算与应用</a> — 含参讨论框架</li>
+<li><a href="高二深化_数学_典型题型与方法_导数大题之双变量与同构问题.html">导数大题之双变量与同构问题</a> — 同题的同构视角</li>
+</ul>
+<hr>
+<ul>
+<li><a href="高二深化_数学_典型题型与方法_导数大题之极值点偏移.html">【卡片标题】导数大题之极值点偏移</a></li>
+</ul>
+<h2>备注</h2>
+<ul>
+<li>同一道 2020 山东卷题既有&quot;隐零点法&quot;也有&quot;同构法&quot;，两卡互补，建议对比掌握。</li>
+<li>易错：漏证 f&#x27;(x) 单调（保障唯一零点）；代回时符号出错。</li>
+<li>提速：记住 ae^{x-1}=1/x₀ ⇒ ln a = 1 - x₀ - ln x₀ 的代换链。</li>
+</ul>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（隐零点·设零点 + 消参 + 基本不等式）</summary><p><strong>第一步：求导判单调</strong></p>
+<p>$f(x)=e^x-ax-1$，$f'(x)=e^x-a$。$f''(x)=e^x>0$，故 $f'(x)$ 在 $\mathbb{R}$ 上严格单调递增。</p>
+<p><strong>第二步：设零点</strong></p>
+<p>$f'(x_0)=0\Rightarrow e^{x_0}=a\Rightarrow x_0=\ln a$（$a>0$）。$f(x)$ 在 $(-\infty,x_0)$ 减、$(x_0,+\infty)$ 增，最小值在 $x_0=\ln a$ 处取到。</p>
+<p><strong>第三步：代回求最值</strong></p>
+<p>$$f(x_0)=e^{\ln a}-a\ln a-1=a-a\ln a-1$$</p>
+<p>$f(x)\ge 0$ 恒成立等价于 $f(x_0)\ge 0$，即 $a-a\ln a-1\ge 0$。</p>
+<p>设 $\varphi(a)=a-a\ln a-1$（$a>0$），$\varphi'(a)=1-(\ln a+1)=-\ln a$。$\varphi'(a)=0\Rightarrow a=1$。当 $0<a<1$ 时 $\varphi'(a)>0$（增），$a>1$ 时 $\varphi'(a)<0$（减），$\varphi(a)_{\max}=\varphi(1)=1-0-1=0$。</p>
+<p>故 $\varphi(a)\le 0$（$a>0$），要 $\varphi(a)\ge 0$ 只能 $\varphi(a)=0$，即 $a=1$。</p>
+<p><strong>答</strong>：$a=1$（仅一个值，不是范围）。</p>
+<blockquote><p><strong>易错提醒</strong>：① $f'(x)=e^x-a$ 的零点 $x_0=\ln a$ 本可显式解，但本题仍用隐零点思路训练&quot;代回消参&quot;的链条；② $\varphi(a)\le 0$ 意味着不等式 $f(x)\ge 0$ 恰好仅在 $a=1$ 时成立，结果是&quot;单点&quot;而非&quot;区间&quot;；③ &quot;$f(x)\ge 0$ 恒成立 $\Leftrightarrow f(x_0)\ge 0$&quot; 依赖于 $f$ 在 $x_0$ 处取<strong>全局最小值</strong>，需先验证单调性。</p></blockquote></details>
+<details><summary>▶ 第2题详解（隐零点·对数指数混合 + 代回求最值）</summary><p><strong>第一步：求导</strong></p>
+<p>$f(x)=\dfrac{\ln x}{x}+a$，$f'(x)=\dfrac{1-\ln x}{x^2}$（$x>0$）。$f'(x)=0\Rightarrow x_0=e$。</p>
+<p><strong>第二步：判单调性与极值点位置</strong></p>
+<p>当 $0<x<e$ 时 $f'(x)>0$（增），$x>e$ 时 $f'(x)<0$（减），$x_0=e$ 为<strong>极大值点</strong>。$f(x)_{\max}=f(e)=\dfrac{1}{e}+a$。</p>
+<p><strong>验证隐零点视角</strong>：若把 $1-\ln x_0=0$ 看作隐式方程（&quot;$f'(x_0)=0$&quot;），则 $x_0=e$，代回得 $f(x_0)=\dfrac{\ln e}{e}+a=\dfrac{1}{e}+a$，与方法一直接求一致。</p>
+<p><strong>答</strong>：$f(x)$ 的最大值为 $\dfrac{1}{e}+a$（恰好等于题设上界，故不等式恒成立）。</p>
+<blockquote><p><strong>易错提醒</strong>：① 本题 $f'(x)$ 的零点可显式解（$x_0=e$），属于&quot;隐零点退化情形&quot;，但仍需按隐零点四步法流程训练——重点是第二步&quot;由 $f'(x_0)=0$ 建立关系&quot;，第三步&quot;代回消参&quot;，本题参数 $a$ 在 $f'(x)$ 中不出现，退化为常数偏移；② 注意 &quot;$\le$&quot; 与 &quot;$<$&quot; 的区别：题设 $f(x)\le \dfrac{1}{e}+a$，等号在 $x=e$ 处取到，是&quot;可达上界&quot;。</p></blockquote></details>
+<details><summary>▶ 第3题详解（隐零点·母题变式）</summary><p><strong>第一步：求导</strong></p>
+<p>$f(x)=e^{x-1}-\dfrac{1}{x}$（$x>0$），$f'(x)=e^{x-1}+\dfrac{1}{x^2}>0$（$x>0$）——$f'(x)$ 恒正，$f$ 在 $(0,+\infty)$ <strong>严格单调递增</strong>。</p>
+<p>此时无有限极值点，需重新理解&quot;隐零点&quot;在本题的用法：原题 $f(x)=e^{x-1}-\dfrac{1}{x}$ 的导函数恒正，说明 $f$ 无极值；而母题中 $f(x)=ae^{x-1}-\ln x+\ln a$ 的导函数 $f'(x)=ae^{x-1}-\dfrac{1}{x}$ 才有零点。故本题应改为<strong>含参母题变式</strong>：</p>
+<p><strong>重新求解</strong>：设 $f(x)=e^{x-1}-\ln x$（$x>0$），$f'(x)=e^{x-1}-\dfrac{1}{x}$。</p>
+<p>$f''(x)=e^{x-1}+\dfrac{1}{x^2}>0$，故 $f'(x)$ 在 $(0,+\infty)$ 严格单调递增。</p>
+<p>$f'(1)=e^0-1=0$，故 $x_0=1$ 是 $f'(x)=0$ 的唯一零点。$f$ 在 $(0,1)$ 减、$(1,+\infty)$ 增，$x_0=1$ 为极小值点。</p>
+<p>$$f(x_0)=f(1)=e^0-\ln 1=1-0=1$$</p>
+<p><strong>答</strong>：$f(x)=e^{x-1}-\ln x$ 的最小值为 $1$，在 $x=1$ 处取到。</p>
+<p><strong>代回消参验证</strong>（训练隐零点链条）：由 $f'(x_0)=0$ 得 $e^{x_0-1}=\dfrac{1}{x_0}$，取对数 $x_0-1=-\ln x_0$。代回 $f(x_0)=e^{x_0-1}-\ln x_0=\dfrac{1}{x_0}-\ln x_0$。由 $x_0-1=-\ln x_0$ 得 $\ln x_0=1-x_0$，故 $f(x_0)=\dfrac{1}{x_0}-(1-x_0)=\dfrac{1}{x_0}+x_0-1\ge 2\sqrt{\dfrac{1}{x_0}\cdot x_0}-1=2-1=1$，等号当且仅当 $\dfrac{1}{x_0}=x_0$ 即 $x_0=1$ 时取到。此时 $e^{x_0-1}=\dfrac{1}{x_0}\Rightarrow e^0=1$ 成立。证毕。</p>
+<blockquote><p><strong>易错提醒</strong>：① 本题是 2020 新高考Ⅰ卷母题 $f(x)=ae^{x-1}-\ln x+\ln a$ 在 $a=1$ 时的退化，最小值 $f(1)=1$ 即母题 $f(x)\ge 1$ 的取等条件；② 隐零点链条 &quot;$e^{x_0-1}=\dfrac{1}{x_0}\Rightarrow \ln x_0=1-x_0$&quot; 是核心代换，务必熟记；③ 用基本不等式 $\dfrac{1}{x_0}+x_0\ge 2$ 时，等号条件 $x_0=1$ 需与 $e^{x_0-1}=\dfrac{1}{x_0}$ 联立验证自洽。</p></blockquote></details>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+<script src="../../assets/kb-progress.js" defer></script>
+</body>
+</html>

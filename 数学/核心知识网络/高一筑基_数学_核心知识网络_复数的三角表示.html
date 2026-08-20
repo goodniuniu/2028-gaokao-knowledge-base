@@ -27,43 +27,42 @@ MathJax = {
     <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
   </div>
 </nav>
-<div class="kb-wrap kb-wrap--narrow">
+<div class="kb-wrap kb-wrap--narrow" data-card-id="数学/核心知识网络/高一筑基_数学_核心知识网络_复数的三角表示">
 <ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">复数的三角表示</span></li></ol>
 <h1 class="kb-title">复数的三角表示</h1>
 <div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★☆☆</span><span class="kb-badge kb-badge--tag">#高一筑基</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第二册第七章</span></div>
 <div class="kb-note"><strong>广东考情</strong>：考查频率：低频；难度：基础；选填基础题，主要考查三角形式与代数形式的互化及几何意义</div>
+<div id="kb-progress-widget"></div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
 <h3>一、复数的三角形式</h3>
 <p>设 $z = a + bi$（$a, b \in \mathbb{R}$），则 $a = r\cos\theta$，$b = r\sin\theta$，$r = \sqrt{a^2 + b^2}$。</p>
-
 <p>$$z = r(\cos\theta + i\sin\theta)$$</p>
-
 <p>其中：</p>
 <ul>
 <li>$r = |z| = \sqrt{a^2 + b^2}$：复数的模</li>
 <li>$\theta$：辐角，满足 $\tan\theta = \frac{b}{a}$</li>
 <li><strong>辐角主值</strong>：$0 \leq \theta < 2\pi$</li>
 </ul>
-
 <h3>二、代数形式与三角形式的互化</h3>
 <ul>
 <li><strong>代数 $\rightarrow$ 三角</strong>：求模 $r = \sqrt{a^2 + b^2}$，求辐角 $\tan\theta = \frac{b}{a}$（根据象限确定）</li>
 <li><strong>三角 $\rightarrow$ 代数</strong>：$a = r\cos\theta$，$b = r\sin\theta$</li>
 </ul>
-
 <h3>三、复数乘除法的三角表示</h3>
 <p>设 $z_1 = r_1(\cos\theta_1 + i\sin\theta_1)$，$z_2 = r_2(\cos\theta_2 + i\sin\theta_2)$：</p>
-
 <ul>
 <li><strong>乘法</strong>：$z_1 z_2 = r_1 r_2[\cos(\theta_1 + \theta_2) + i\sin(\theta_1 + \theta_2)]$</li>
+<ul>
 <li>模相乘，辐角相加</li>
+</ul>
 <li><strong>除法</strong>：$\frac{z_1}{z_2} = \frac{r_1}{r_2}[\cos(\theta_1 - \theta_2) + i\sin(\theta_1 - \theta_2)]$</li>
+<ul>
 <li>模相除，辐角相减</li>
 </ul>
-
+</ul>
 <h3>四、几何意义</h3>
 <ul>
 <li>复数乘法：对应向量旋转和伸缩</li>
@@ -71,23 +70,62 @@ MathJax = {
 <li>乘以 $i$：逆时针旋转 $90°$</li>
 <li>乘以 $-i$：顺时针旋转 $90°$</li>
 </ul>
-
 <hr>
-
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;求复数乘除结果（尤其旋转、伸缩）&quot;</td><td>三角形式</td><td>模相乘、辐角相加；除法模相除、辐角相减</td></tr><tr><td>&quot;复数乘以 $i$&quot;</td><td>旋转</td><td>逆时针旋转 $90^\circ$</td></tr><tr><td>&quot;已知 $z=r(\cos\theta+i\sin\theta)$，求 $z^n$&quot;</td><td>棣莫弗</td><td>$z^n=r^n(\cos n\theta+i\sin n\theta)$</td></tr><tr><td>&quot;化代数→三角&quot;</td><td>互化</td><td>$r=\sqrt{a^2+b^2},\tan\theta=b/a$ 按象限定 $\theta$</td></tr><tr><td>&quot;求 $z_1z_2$ 辐角&quot;</td><td>几何</td><td>辐角相加（模 $r_1r_2$）</td></tr><tr><td>&quot;复数方程的轨迹&quot;</td><td>几何意义</td><td>$\|z\|=r$ 为圆，$\|z-z_0\|=r$ 为圆</td></tr></table></div>
+<h2>解题路径（复数三角形式乘除三步法）</h2>
+<blockquote><p>650分导向：三角形式是复数运算的&quot;几何化&quot;利器，处理旋转、开方、乘方尤其简洁。</p></blockquote>
+<h3>第一步：取模定角</h3>
+<p>将每个复数写成 $r(\cos\theta+i\sin\theta)$，确定模 $r$ 与辐角 $\theta$（按象限）。</p>
+<h3>第二步：模角运算</h3>
+<p>乘法：$r_1r_2$、角 $\theta_1+\theta_2$；除法：$r_1/r_2$、角 $\theta_1-\theta_2$。</p>
+<h3>第三步：回代数（如需）</h3>
+<p>由 $a=r\cos\theta,\;b=r\sin\theta$ 写回 $a+bi$。</p>
+<h2>母题（[代表性示例·待核实：需替换为真实真题]，拟 新课标Ⅰ卷·复数三角形式，5分）</h2>
+<blockquote><p>⚠️ <strong>说明</strong>：新课标Ⅰ卷（2021–2024）复数题均以代数运算（四则、共轭、模）为主，直接考查&quot;三角形式&quot;的真题罕见。以下为代表性强化示例，用于掌握&quot;模相乘、辐角相加&quot;的通法。<br><strong>TODO</strong>：核实此题为真实真题并补全年份题号（建议从教材习题或权威模拟中替换为真实三角形式题）。</p></blockquote>
+<p><strong>题目（代表性）</strong>：设复数 $z_1=2\left(\cos\dfrac{\pi}{6}+i\sin\dfrac{\pi}{6}\right)$，$z_2=\sqrt2\left(\cos\dfrac{\pi}{4}+i\sin\dfrac{\pi}{4}\right)$，求 $z_1z_2$ 的代数形式。</p>
+<p><strong>解</strong>： 由三角形式乘法， $$z_1z_2=2\sqrt2\left[\cos\left(\frac{\pi}{6}+\frac{\pi}{4}\right)+i\sin\left(\frac{\pi}{6}+\frac{\pi}{4}\right)\right]
+=2\sqrt2\left(\cos\frac{5\pi}{12}+i\sin\frac{5\pi}{12}\right)$$</p>
+<p>其中 $\cos\frac{5\pi}{12}=\cos75^\circ=\frac{\sqrt6-\sqrt2}{4}$，$\sin\frac{5\pi}{12}=\sin75^\circ=\frac{\sqrt6+\sqrt2}{4}$，故 $$z_1z_2=2\sqrt2\cdot\frac{\sqrt6-\sqrt2}{4}+i\cdot2\sqrt2\cdot\frac{\sqrt6+\sqrt2}{4}
+=(\sqrt3-1)+i(\sqrt3+1)$$</p>
+<hr>
+<h2>自测训练（3道·覆盖三角形式、复数乘除法、旋转几何意义）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 代数形式化为三角形式）</p>
+<p>将复数 $z=1+i$ 化为三角形式 $r(\cos\theta+i\sin\theta)$。</p>
+<p><strong>第2题</strong>（检验 复数乘法的三角表示）</p>
+<p>设 $z_1=2\left(\cos\dfrac{\pi}{6}+i\sin\dfrac{\pi}{6}\right)$，$z_2=3\left(\cos\dfrac{\pi}{3}+i\sin\dfrac{\pi}{3}\right)$，求 $z_1z_2$ 的代数形式。</p>
+<p><strong>第3题</strong>（检验 复数乘法的几何意义·旋转）</p>
+<p>将复数 $z=\sqrt{3}-i$ 对应的向量绕原点逆时针旋转 $60^\circ$，求所得复数。</p>
+<hr>
 <h2>关联卡片</h2>
-
 <ul>
-<li><span class="kb-deadlink" title="关联内容尚未创建">复数概念与运算</span> — 代数形式基础（如存在则链接）</li>
+<li><a href="高一筑基_数学_核心知识网络_复数的概念与运算.html">复数概念与运算</a> — 代数形式基础（如存在则链接）</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
 <ul>
 <li>易错点：求辐角时必须结合复数所在象限，不能仅由 $\tan\theta = \frac{b}{a}$ 确定</li>
-<li>复数三角形式的标准形式：$r(\cos\theta + i\sin\theta)$，注意中间是 "$+$"，不是 "$-$"</li>
+<li>复数三角形式的标准形式：$r(\cos\theta + i\sin\theta)$，注意中间是 &quot;$+$&quot;，不是 &quot;$-$&quot;</li>
 <li>新教材新增内容，广东卷目前考查较基础，以概念理解和简单计算为主</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（代数→三角形式）</summary><p>模 $r=\sqrt{1^2+1^2}=\sqrt{2}$。</p>
+<p>复数 $1+i$ 对应点在第一象限，辐角主值 $\theta=\dfrac{\pi}{4}$。</p>
+<p>所以 $$z=\sqrt{2}\left(\cos\dfrac{\pi}{4}+i\sin\dfrac{\pi}{4}\right).$$</p>
+<p><strong>答</strong>：$z=\sqrt{2}\left(\cos\dfrac{\pi}{4}+i\sin\dfrac{\pi}{4}\right)$。</p>
+<blockquote><p><strong>易错提醒</strong>：求辐角不能只看 $\tan\theta=1$，必须结合复数所在象限；$1+i$ 在第一象限，所以 $\theta=\dfrac{\pi}{4}$ 而非 $\dfrac{5\pi}{4}$。</p></blockquote></details>
+<details><summary>▶ 第2题详解（三角形式乘法）</summary><p>由&quot;模相乘，辐角相加&quot;： $$z_1z_2=2\cdot3\left[\cos\left(\dfrac{\pi}{6}+\dfrac{\pi}{3}\right)+i\sin\left(\dfrac{\pi}{6}+\dfrac{\pi}{3}\right)\right]$$ $$=6\left(\cos\dfrac{\pi}{2}+i\sin\dfrac{\pi}{2}\right)=6i.$$</p>
+<p><strong>答</strong>：$z_1z_2=6i$。</p>
+<blockquote><p><strong>易错提醒</strong>：复数三角形式相乘时，模相乘、辐角相加；最后常需化为代数形式 $a+bi$。</p></blockquote></details>
+<details><summary>▶ 第3题详解（旋转的几何意义）</summary><p>先将 $z=\sqrt{3}-i$ 化为三角形式： $$r=\sqrt{(\sqrt{3})^2+(-1)^2}=2,\quad \theta=-\dfrac{\pi}{6}.$$</p>
+<p>所以 $z=2\left[\cos\left(-\dfrac{\pi}{6}\right)+i\sin\left(-\dfrac{\pi}{6}\right)\right]$。</p>
+<p>逆时针旋转 $60^\circ=\dfrac{\pi}{3}$，所得复数为 $$2\left[\cos\left(-\dfrac{\pi}{6}+\dfrac{\pi}{3}\right)+i\sin\left(-\dfrac{\pi}{6}+\dfrac{\pi}{3}\right)\right]$$ $$=2\left(\cos\dfrac{\pi}{6}+i\sin\dfrac{\pi}{6}\right)=2\left(\dfrac{\sqrt{3}}{2}+\dfrac{1}{2}i\right)=\sqrt{3}+i.$$</p>
+<p><strong>答</strong>：所得复数为 $\sqrt{3}+i$。</p>
+<blockquote><p><strong>易错提醒</strong>：乘以 $i$ 是逆时针旋转 $90^\circ$；旋转任意角度 $\varphi$ 时，用三角形式&quot;辐角相加&quot;最直观。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">
@@ -97,5 +135,6 @@ MathJax = {
 <footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
 <a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
 </div>
+<script src="../../assets/kb-progress.js" defer></script>
 </body>
 </html>

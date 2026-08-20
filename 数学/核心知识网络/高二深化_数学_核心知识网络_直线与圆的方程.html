@@ -27,15 +27,16 @@ MathJax = {
     <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
   </div>
 </nav>
-<div class="kb-wrap kb-wrap--narrow">
+<div class="kb-wrap kb-wrap--narrow" data-card-id="数学/核心知识网络/高二深化_数学_核心知识网络_直线与圆的方程">
 <ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">直线与圆的方程</span></li></ol>
 <h1 class="kb-title">直线与圆的方程</h1>
 <div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★☆☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：53科学备考《高中知识清单》数学知识图谱 / 人教A版选择性必修第一册第二章</span></div>
 <div class="kb-note"><strong>广东考情</strong>：考查频率：中频；难度：中档；直线与圆常以选填形式出现，圆与圆锥曲线的综合是解析几何大题的前置基础</div>
+<div id="kb-progress-widget"></div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
 <h3>一、直线的交点坐标与距离公式</h3>
 <ul>
 <li><strong>两直线交点</strong>：联立 $A_1 x + B_1 y + C_1 = 0$ 与 $A_2 x + B_2 y + C_2 = 0$ 求解</li>
@@ -43,14 +44,14 @@ MathJax = {
 <li><strong>点到直线距离</strong>：点 $P(x_0, y_0)$ 到直线 $Ax + By + C = 0$ 的距离 $d = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$</li>
 <li><strong>两平行线距离</strong>：$Ax + By + C_1 = 0$ 与 $Ax + By + C_2 = 0$ 的距离 $d = \frac{|C_1 - C_2|}{\sqrt{A^2 + B^2}}$（$C_1 \neq C_2$）</li>
 </ul>
-
 <h3>二、圆的方程</h3>
 <ul>
 <li><strong>标准方程</strong>：$(x - a)^2 + (y - b)^2 = r^2$（$r > 0$），圆心 $(a, b)$，半径 $r$</li>
 <li><strong>一般方程</strong>：$x^2 + y^2 + Dx + Ey + F = 0$（$D^2 + E^2 - 4F > 0$）</li>
+<ul>
 <li>圆心：$(-\frac{D}{2}, -\frac{E}{2})$，半径：$r = \frac{\sqrt{D^2 + E^2 - 4F}}{2}$</li>
 </ul>
-
+</ul>
 <h3>三、点与圆的位置关系</h3>
 <p>点 $M(x_0, y_0)$ 与圆 $C: (x - a)^2 + (y - b)^2 = r^2$：</p>
 <ul>
@@ -58,7 +59,6 @@ MathJax = {
 <li>点在圆上：$(x_0 - a)^2 + (y_0 - b)^2 = r^2$</li>
 <li>点在圆外：$(x_0 - a)^2 + (y_0 - b)^2 > r^2$</li>
 </ul>
-
 <h3>四、直线与圆的位置关系</h3>
 <p>设圆心到直线距离为 $d$，半径为 $r$：</p>
 <ul>
@@ -66,7 +66,6 @@ MathJax = {
 <li>$d = r$：相切</li>
 <li>$d > r$：相离</li>
 </ul>
-
 <h3>五、圆与圆的位置关系</h3>
 <p>设两圆圆心距为 $d$，半径分别为 $r_1, r_2$：</p>
 <ul>
@@ -76,24 +75,72 @@ MathJax = {
 <li>$d = |r_1 - r_2|$：内切</li>
 <li>$d < |r_1 - r_2|$：内含</li>
 </ul>
-
 <hr>
-
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>圆上点到定直线的距离最值</td><td>距离范围</td><td>圆心到直线距离 $d\pm r$</td></tr><tr><td>圆方程已知</td><td>标准式</td><td>$(x-a)^2+(y-b)^2=r^2$</td></tr><tr><td>过定点作圆的切线</td><td>切线长</td><td>切线长 $=\sqrt{|PM|^2-r^2}$</td></tr><tr><td>视角（如 $\angle PBA$）最值</td><td>切线位置</td><td>过 $B$ 作圆的两条切线时取极值</td></tr><tr><td>弦长</td><td>垂径定理</td><td>弦长 $=2\sqrt{r^2-d^2}$</td></tr><tr><td>点与圆/直线与圆位置</td><td>比较距离</td><td>与 $r$ 比较判定</td></tr></table></div>
+<h2>解题路径（圆上点与直线·数形结合五步）</h2>
+<h3>第一步：写圆与直线方程</h3>
+<p>写出圆心 $M$、半径 $r$；直线化为一般式 $Ax+By+C=0$。</p>
+<h3>第二步：求圆心到直线距离</h3>
+<p>$$d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}.$$</p>
+<h3>第三步：定距离范围</h3>
+<p>圆上点到该直线的距离 $\in[d-r,\ d+r]$，据此判断最值选项。</p>
+<h3>第四步：角的极值</h3>
+<p>过定点 $B$ 作圆的切线，切点处 $\angle PBA$ 取得最小或最大。</p>
+<h3>第五步：勾股定理求切线长</h3>
+<p>$$|PB|=\sqrt{|BM|^2-r^2}.$$</p>
+<blockquote><p><strong>易错提醒</strong>：把圆心到直线距离当成了点到直线距离的最值；忘记切线长公式而直接猜；未判断选项是否&quot;一定成立&quot;。</p></blockquote>
+<h2>母题（2021 新课标Ⅰ卷·第11题，5分）</h2>
+<p><strong>题目</strong>：已知点 $P$ 在圆 $(x-5)^2+(y-5)^2=16$ 上，点 $A(4,0)$，$B(0,2)$，则（　） A. 点 $P$ 到直线 $AB$ 的距离小于 $10$ B. 点 $P$ 到直线 $AB$ 的距离大于 $2$ C. 当 $\angle PBA$ 最小时，$|PB|=3\sqrt2$ D. 当 $\angle PBA$ 最大时，$|PB|=3\sqrt2$</p>
+<p><strong>解答</strong>： 直线 $AB$：$\frac{x}{4}+\frac{y}{2}=1$，即 $x+2y-4=0$。 圆心 $M(5,5)$，半径 $r=4$，圆心到直线距离 $$d=\frac{|5+10-4|}{\sqrt{1^2+2^2}}=\frac{11}{\sqrt5}>4.$$ 故圆上点到 $AB$ 的距离范围为 $\left[\frac{11}{\sqrt5}-4,\ \frac{11}{\sqrt5}+4\right]$。 因 $\frac{11}{\sqrt5}<5$，所以 $\frac{11}{\sqrt5}-4<1$，$\frac{11}{\sqrt5}+4<10$，故 A 正确、B 错误。</p>
+<p>当 $PB$ 与圆相切时，$\angle PBA$ 取得最小或最大。此时 $$|BM|=\sqrt{(5-0)^2+(5-2)^2}=\sqrt{34},\quad |PB|=\sqrt{|BM|^2-r^2}=\sqrt{34-16}=3\sqrt2,$$ 故 C、D 正确。</p>
+<p>综上选 <strong>ACD</strong>。</p>
+<hr>
+<h2>自测训练（3道·覆盖直线与圆的核心性质）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 点到直线距离 + 平行线距离）</p>
+<p>(1) 求点 $P(1, -2)$ 到直线 $3x + 4y - 5 = 0$ 的距离； (2) 求两平行线 $2x - y + 1 = 0$ 与 $2x - y - 5 = 0$ 的距离。</p>
+<p><strong>第2题</strong>（检验 圆的方程 + 直线与圆位置关系）</p>
+<p>已知圆 $C: x^2 + y^2 - 4x + 2y + 1 = 0$。 (1) 求圆心和半径； (2) 判断直线 $l: 3x + 4y - 5 = 0$ 与圆 $C$ 的位置关系。</p>
+<p><strong>第3题</strong>（检验 切线问题）</p>
+<p>已知点 $P(3, 4)$ 和圆 $C: x^2 + y^2 = 4$。 (1) 判断点 $P$ 与圆 $C$ 的位置关系； (2) 求过点 $P$ 的圆 $C$ 的切线方程。</p>
+<hr>
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="高二深化_数学_核心知识网络_椭圆双曲线抛物线.html">椭圆双曲线抛物线</a> — 圆锥曲线综合</li>
 <li><a href="高二深化_数学_核心知识网络_空间向量与立体几何.html">空间向量与立体几何</a> — 坐标法思想</li>
 </ul>
-
 <hr>
-
+<ul>
+<li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_解析几何大题之弦长与面积最值.html">【卡片标题】解析几何大题之弦长与面积最值</a></li>
+</ul>
 <h2>备注</h2>
 <ul>
 <li>直线与圆相切问题：利用圆心到直线距离等于半径，或联立方程判别式等于0</li>
 <li>弦长问题：弦长 $= 2\sqrt{r^2 - d^2}$，其中 $d$ 为圆心到直线距离</li>
 <li>广东卷常考：圆的切线方程、切点弦方程、两圆公共弦方程</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（距离公式应用）</summary><p><strong>(1)</strong> 点 $P(1, -2)$ 到直线 $3x + 4y - 5 = 0$ 的距离： $$d = \dfrac{|3\cdot 1 + 4\cdot(-2) - 5|}{\sqrt{3^2+4^2}} = \dfrac{|3 - 8 - 5|}{5} = \dfrac{|-10|}{5} = 2$$</p>
+<p><strong>(2)</strong> 两平行线 $2x - y + 1 = 0$ 与 $2x - y - 5 = 0$（$A, B$ 系数已相同），距离： $$d = \dfrac{|C_1 - C_2|}{\sqrt{A^2+B^2}} = \dfrac{|1-(-5)|}{\sqrt{4+1}} = \dfrac{6}{\sqrt{5}} = \dfrac{6\sqrt{5}}{5}$$</p>
+<p><strong>答</strong>：(1) $d = 2$；(2) $d = \dfrac{6\sqrt{5}}{5}$。</p>
+<blockquote><p><strong>易错提醒</strong>：点到直线距离公式中分子带<strong>绝对值</strong>。两平行线距离公式要求两方程的 $A, B$ 系数相同（若不同先化为相同）。</p></blockquote></details>
+<details><summary>▶ 第2题详解（圆的一般方程与位置关系判定）</summary><p><strong>(1)</strong> 配方法化一般方程为标准方程： $$x^2 + y^2 - 4x + 2y + 1 = 0$$ $$(x^2 - 4x + 4) + (y^2 + 2y + 1) = -1 + 4 + 1$$ $$(x-2)^2 + (y+1)^2 = 4$$</p>
+<p>圆心 $C(2, -1)$，半径 $r = 2$。</p>
+<p><strong>(2)</strong> 圆心 $C(2, -1)$ 到直线 $3x + 4y - 5 = 0$ 的距离： $$d = \dfrac{|3\cdot 2 + 4\cdot(-1) - 5|}{\sqrt{9+16}} = \dfrac{|6 - 4 - 5|}{5} = \dfrac{3}{5}$$</p>
+<p>因 $d = \dfrac{3}{5} < 2 = r$，直线与圆<strong>相交</strong>。</p>
+<p><strong>答</strong>：(1) 圆心 $(2, -1)$，半径 $2$；(2) 相交。</p>
+<blockquote><p><strong>易错提醒</strong>：一般方程配方法要&quot;两边同时加常数&quot;。位置关系判定用&quot;圆心到直线距离 $d$&quot; 与半径 $r$ 比较：$d < r$ 相交、$d = r$ 相切、$d > r$ 相离。</p></blockquote></details>
+<details><summary>▶ 第3题详解（点与圆位置 + 过外点切线）</summary><p><strong>(1)</strong> 圆 $C: x^2 + y^2 = 4$，圆心 $O(0,0)$，半径 $r = 2$。</p>
+<p>$|OP| = \sqrt{3^2 + 4^2} = \sqrt{25} = 5 > 2 = r$，故点 $P$ 在圆外。</p>
+<p><strong>(2)</strong> 设切线方程为 $y - 4 = k(x - 3)$，即 $kx - y + (4 - 3k) = 0$。</p>
+<p>圆心 $O(0,0)$ 到切线距离等于半径： $$\dfrac{|0 - 0 + 4 - 3k|}{\sqrt{k^2 + 1}} = 2$$ $$|4 - 3k| = 2\sqrt{k^2+1}$$ $$(4-3k)^2 = 4(k^2+1)$$ $$16 - 24k + 9k^2 = 4k^2 + 4$$ $$5k^2 - 24k + 12 = 0$$ $$k = \dfrac{24 \pm \sqrt{576 - 240}}{10} = \dfrac{24 \pm \sqrt{336}}{10} = \dfrac{24 \pm 4\sqrt{21}}{10} = \dfrac{12 \pm 2\sqrt{21}}{5}$$</p>
+<p>需检验斜率不存在（$x = 3$）是否为切线：$O$ 到 $x = 3$ 距离为 $3 \ne 2$，不是切线。</p>
+<p><strong>答</strong>：(1) 点 $P$ 在圆外；(2) 切线方程为 $y - 4 = \dfrac{12 \pm 2\sqrt{21}}{5}(x-3)$。</p>
+<blockquote><p><strong>易错提醒</strong>：过圆外一点有<strong>两条</strong>切线。用待定系数法设斜率 $k$ 时，需<strong>单独验证斜率不存在</strong>（即 $x = x_0$ 形式）是否为切线，否则可能漏解。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">
@@ -103,5 +150,6 @@ MathJax = {
 <footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
 <a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
 </div>
+<script src="../../assets/kb-progress.js" defer></script>
 </body>
 </html>

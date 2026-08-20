@@ -27,73 +27,107 @@ MathJax = {
     <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
   </div>
 </nav>
-<div class="kb-wrap kb-wrap--narrow">
+<div class="kb-wrap kb-wrap--narrow" data-card-id="数学/核心知识网络/高二深化_数学_核心知识网络_成对数据的统计分析与独立性检验">
 <ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">成对数据的统计分析与独立性检验</span></li></ol>
 <h1 class="kb-title">成对数据的统计分析与独立性检验</h1>
 <div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★☆☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：53科学备考《高中知识清单》数学知识图谱 / 人教A版选择性必修第三册第八章</span></div>
 <div class="kb-note"><strong>广东考情</strong>：考查频率：中频；难度：中档；回归分析和独立性检验是概率统计大题的另一大方向，近年广东卷中交替出现，计算量大但套路固定</div>
+<div id="kb-progress-widget"></div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
 <h3>一、成对数据的统计相关性</h3>
 <ul>
 <li><strong>变量的相关关系</strong>：正相关（$r > 0$）、负相关（$r < 0$）</li>
 <li><strong>样本相关系数</strong>：</li>
-</ul>
 <p>$$r = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^n (x_i - \bar{x})^2} \sqrt{\sum_{i=1}^n (y_i - \bar{y})^2}}$$</p>
-<ul>
 <li>$|r| \in [0, 1]$：$|r|$ 越接近1，线性相关程度越强；越接近0，越弱</li>
 </ul>
-
 <h3>二、一元线性回归模型及其应用</h3>
 <ul>
 <li><strong>模型</strong>：$Y = bx + a + e$，其中 $E(e) = 0$，$D(e) = \sigma^2$</li>
 <li><strong>最小二乘估计</strong>（经验回归方程 $\hat{y} = \hat{b}x + \hat{a}$）：</li>
-</ul>
 <p>$$\hat{b} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2}, \quad \hat{a} = \bar{y} - \hat{b}\bar{x}$$</p>
-<ul>
 <li><strong>拟合效果评价</strong>：</li>
+<ul>
 <li>残差平方和：越小越好</li>
 <li>决定系数：$R^2 = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{\sum_{i=1}^n (y_i - \bar{y})^2}$，$R^2$ 越接近1，拟合效果越好</li>
 </ul>
-
+</ul>
 <h3>三、列联表与独立性检验</h3>
-<p>#### $2 \times 2$ 列联表</p>
-<div class="table-wrap">
-<table>
-<tr><th>$Y = 0$</th><th>$Y = 1$</th><th>合计</th></tr>
-<tr><td>$X = 0$</td><td>$a$</td><td>$b$</td><td>$a + b$</td></tr>
-<tr><td>$X = 1$</td><td>$c$</td><td>$d$</td><td>$c + d$</td></tr>
-<tr><td>合计</td><td>$a + c$</td><td>$b + d$</td><td>$n = a + b + c + d$</td></tr>
-</table>
-</div>
-
-<p>#### 独立性检验（$\chi^2$ 检验）</p>
+<h4>$2 \times 2$ 列联表</h4>
+<div class="table-wrap"><table><tr><th></th><th>$Y = 0$</th><th>$Y = 1$</th><th>合计</th></tr><tr><td>$X = 0$</td><td>$a$</td><td>$b$</td><td>$a + b$</td></tr><tr><td>$X = 1$</td><td>$c$</td><td>$d$</td><td>$c + d$</td></tr><tr><td>合计</td><td>$a + c$</td><td>$b + d$</td><td>$n = a + b + c + d$</td></tr></table></div>
+<h4>独立性检验（$\chi^2$ 检验）</h4>
 <p>$$\chi^2 = \frac{n(ad - bc)^2}{(a+b)(c+d)(a+c)(b+d)}$$</p>
-
 <ul>
 <li>将计算得到的 $\chi^2$ 与临界值比较，判断独立性</li>
 <li>等高堆积条形图：直观判断两个分类变量是否相关</li>
 </ul>
-
 <hr>
-
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>给 $2\times2$ 列联表，问&quot;是否有把握认为有关&quot;</td><td>独立性检验</td><td>算 $\chi^2$ 与临界值比较</td></tr><tr><td>问&quot;有 $99\%$ 把握&quot;</td><td>取临界值</td><td>查表 $k_{0.010}=6.635$</td></tr><tr><td>求经验回归方程 $\hat y=\hat b x+\hat a$</td><td>回归分析</td><td>最小二乘 $\hat b=\frac{\sum(x_i-\bar x)(y_i-\bar y)}{\sum(x_i-\bar x)^2}$</td></tr><tr><td>判断线性相关强弱</td><td>相关系数</td><td>看 $|r|$ 接近 $1$ 的程度、正负表方向</td></tr><tr><td>给条件概率比值 $R$</td><td>比值化简</td><td>用 $P(B|A)=\frac{P(AB)}{P(A)}$ 展开为比值式</td></tr><tr><td>&quot;正相关/负相关&quot;</td><td>方向判断</td><td>$r>0$ 正，$r<0$ 负</td></tr></table></div>
+<h2>解题路径（独立性检验四步）</h2>
+<h3>第一步：列出 $2\times2$ 列联表</h3>
+<p>整理 $a,b,c,d$ 及各行、列合计与总计 $n$。</p>
+<h3>第二步：套 $\chi^2$ 公式</h3>
+<p>$$\chi^2=\frac{n(ad-bc)^2}{(a+b)(c+d)(a+c)(b+d)}.$$</p>
+<h3>第三步：与临界值比较</h3>
+<p>$\chi^2>6.635$ 有 $99\%$ 把握有关；$\chi^2>3.841$ 有 $95\%$ 把握有关。</p>
+<h3>第四步：条件概率比值 $R$</h3>
+<p>用条件概率定义把 $R$ 化为列联表比值，代入频率估计值计算。</p>
+<blockquote><p><strong>易错提醒</strong>：$\chi^2$ 中 $n$ 是总样本量；临界值记错（99% 对应 6.635）；比值 $R$ 的方向与分子分母别颠倒。</p></blockquote>
+<h2>母题（2022 新课标Ⅰ卷·第20题，12分）</h2>
+<p><strong>题目</strong>：一医疗队为研究某地一种地方性疾病与当地居民卫生习惯（分为良好和不够良好两类）的关系，在已患该疾病的人群中随机调查了 $100$ 例（病例组），在未患该疾病的人群中随机调查了 $100$ 人（对照组），得到如下数据：</p>
+<div class="table-wrap"><table><tr><th></th><th>不够良好</th><th>良好</th></tr><tr><td>病例组</td><td>$40$</td><td>$60$</td></tr><tr><td>对照组</td><td>$10$</td><td>$90$</td></tr></table></div>
+<p>(1) 能否有 $99\%$ 的把握认为患该疾病群体与未患该疾病群体的卫生习惯有差异？ (2) 从该地人群中随机选一人，$A$ 表示&quot;选到的人卫生习惯不够良好&quot;，$B$ 表示&quot;选到的人患有该疾病&quot;。记 $$R=\frac{P(B|A)/P(\overline B|A)}{P(B|\overline A)/P(\overline B|\overline A)}$$ 为卫生习惯不够良好对患该疾病风险程度的度量指标。 (i) 证明：$R=\dfrac{P(A|B)P(\overline A|\overline B)}{P(A|\overline B)P(\overline A|B)}$； (ii) 利用调查数据，给出 $P(A|B),P(A|\overline B)$ 的估计值，并利用 (i) 的结果给出 $R$ 的估计值。 附：$\chi^2$ 临界值 $k_{0.05}=3.841,\ k_{0.01}=6.635,\ k_{0.001}=10.828$。</p>
+<p><strong>解答</strong>： (1) 列联表合计：不够良好 $50$、良好 $150$、总计 $200$。 $$\chi^2=\frac{200\times(40\times90-60\times10)^2}{100\times100\times50\times150}=\frac{200\times3000^2}{75\,000\,000}=24.$$ 因为 $24>6.635$，所以有 $99\%$ 的把握认为两者卫生习惯有差异。</p>
+<p>(2)(i) 由 $P(B|A)=\dfrac{P(AB)}{P(A)}$ 等， $$R=\frac{P(AB)P(\overline A\,\overline B)}{P(A\overline B)P(\overline A B)}
+=\frac{P(A|B)P(B)\cdot P(\overline A|\overline B)P(\overline B)}{P(A|\overline B)P(\overline B)\cdot P(\overline A|B)P(B)}
+=\frac{P(A|B)P(\overline A|\overline B)}{P(A|\overline B)P(\overline A|B)}.$$</p>
+<p>(ii) 估计值：$P(A|B)=\frac{40}{100}=0.4$，$P(A|\overline B)=\frac{10}{100}=0.1$， $P(\overline A|B)=\frac{60}{100}=0.6$，$P(\overline A|\overline B)=\frac{90}{100}=0.9$。 $$R\text{ 的估计值}=\frac{0.4\times0.9}{0.1\times0.6}=6.$$</p>
+<hr>
+<h2>自测训练（3道·覆盖回归直线、相关系数、独立性检验）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 一元线性回归方程）</p>
+<p>已知 $5$ 组数据 $(1,2)$、$(2,3)$、$(3,5)$、$(4,6)$、$(5,7)$，求经验回归方程 $\hat y=\hat b x+\hat a$。</p>
+<p><strong>第2题</strong>（检验 独立性检验）</p>
+<p>某校调查学生参加社团与性别是否有关，得到 $2\times2$ 列联表如下：</p>
+<div class="table-wrap"><table><tr><th></th><th>参加社团</th><th>未参加社团</th><th>合计</th></tr><tr><td>男生</td><td>$20$</td><td>$30$</td><td>$50$</td></tr><tr><td>女生</td><td>$10$</td><td>$40$</td><td>$50$</td></tr><tr><td>合计</td><td>$30$</td><td>$70$</td><td>$100$</td></tr></table></div>
+<p>能否有 $95\%$ 的把握认为参加社团与性别有关？（参考：$\chi^2_{0.05}=3.841$）</p>
+<p><strong>第3题</strong>（检验 相关系数意义）</p>
+<p>某班学生数学成绩与物理成绩的样本相关系数 $r=0.85$，简述两者的相关关系。</p>
+<hr>
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_统计与概率基础.html">统计与概率基础</a> — 统计基础概念</li>
 <li><a href="../典型题型与方法/高一筑基_数学_典型题型与方法_频率分布直方图与概率计算.html">频率分布直方图与概率计算</a> — 统计大题答题规范</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
 <ul>
 <li>回归分析计算：注意公式中分子分母的对应关系，计算 $\hat{b}$ 后再算 $\hat{a} = \bar{y} - \hat{b}\bar{x}$</li>
 <li>独立性检验：注意 $\chi^2$ 公式中 $n$ 是总样本量，不是自由度</li>
 <li>广东卷统计大题：常结合实际问题背景，注意单位、精确度要求和文字表述规范</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（回归直线）</summary><p>$$\bar x=\dfrac{1+2+3+4+5}{5}=3,\quad \bar y=\dfrac{2+3+5+6+7}{5}=\dfrac{23}{5}.$$</p>
+<p>$$\sum_{i=1}^5(x_i-\bar x)(y_i-\bar y)=(-2)(-\frac{13}{5})+(-1)(-\frac{8}{5})+0(\frac{2}{5})+1(\frac{7}{5})+2(\frac{12}{5})$$ $$=\dfrac{26+8+0+7+24}{5}=\dfrac{65}{5}=13.$$</p>
+<p>$$\sum_{i=1}^5(x_i-\bar x)^2=4+1+0+1+4=10.$$</p>
+<p>所以 $$\hat b=\dfrac{13}{10}=1.3,\quad \hat a=\bar y-\hat b\bar x=\dfrac{23}{5}-\dfrac{13}{10}\times3=\dfrac{46-39}{10}=\dfrac{7}{10}.$$</p>
+<p>回归方程为 $$\hat y=1.3x+0.7.$$</p>
+<p><strong>答</strong>：$\hat y=1.3x+0.7$。</p>
+<blockquote><p><strong>易错提醒</strong>：求 $\hat a$ 时必须用 $\hat a=\bar y-\hat b\bar x$；计算分子时 $(x_i-\bar x)(y_i-\bar y)$ 的符号易出错。</p></blockquote></details>
+<details><summary>▶ 第2题详解（独立性检验）</summary><p>$$\chi^2=\dfrac{n(ad-bc)^2}{(a+b)(c+d)(a+c)(b+d)}$$ $$=\dfrac{100\times(20\times40-30\times10)^2}{50\times50\times30\times70}$$ $$=\dfrac{100\times(800-300)^2}{5\,250\,000}=\dfrac{100\times250\,000}{5\,250\,000}=\dfrac{100}{21}\approx4.762.$$</p>
+<p>因为 $4.762>3.841$，所以有 $95\%$ 的把握认为参加社团与性别有关。</p>
+<p><strong>答</strong>：有 $95\%$ 的把握认为两者有关。</p>
+<blockquote><p><strong>易错提醒</strong>：$\chi^2$ 公式中 $n$ 是总样本量；临界值 $3.841$ 对应 $95\%$ 把握，$6.635$ 对应 $99\%$ 把握，不要记混。</p></blockquote></details>
+<details><summary>▶ 第3题详解（相关系数意义）</summary><p>因为 $r=0.85>0$，说明数学成绩与物理成绩呈<strong>正相关</strong>；又因为 $|r|=0.85$ 接近 $1$，说明两者的<strong>线性相关程度较强</strong>。</p>
+<p><strong>答</strong>：数学成绩与物理成绩呈较强的正线性相关关系。</p>
+<blockquote><p><strong>易错提醒</strong>：$r$ 的符号表示相关方向，$|r|$ 的大小表示相关强弱；$|r|$ 越接近 $1$，线性相关越强。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">
@@ -103,5 +137,6 @@ MathJax = {
 <footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
 <a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
 </div>
+<script src="../../assets/kb-progress.js" defer></script>
 </body>
 </html>

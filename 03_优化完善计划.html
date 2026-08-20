@@ -32,6 +32,7 @@ MathJax = {
 <h1 class="kb-title">🔧 知识库优化完善计划（工程 + 内容）</h1>
 
 <div class="kb-note"><strong>学科失衡</strong>：数学36 / 物理15 / 语文11 / 化学11 / 生物11 / 方法6 / **英语仅2张** | 英语是最严重短板（另有独立单词复习系统：77个 Day 词表 + 小测卷 + 生成脚本）<br><strong>易错警示</strong>：全库仅5张（数学2、物理1） | 语/英/化/生四科为 **0**<br><strong>素材与拓展</strong>：语文2、数学1 | 英/物/化/生为 **0**<br><strong>掌握状态</strong>：0 已掌握 / 91 待强化 / 1 未理解 | 复盘机制尚未真正运转，掌握度未破零<br><strong>与650分计划差距</strong>：第一阶段目标110+张 | 现有92张且结构偏离计划清单</div>
+
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
 <blockquote><p><strong>制定时间</strong>：2026年7月20日（基于全库审计与工程调研）<br><strong>定位</strong>：本文件是 <code>00_知识库完善计划（650分目标）.md</code> 的执行层补充——650分计划回答&quot;补什么内容&quot;，本计划回答&quot;按什么顺序、用什么机制、如何交接执行&quot;。<br><strong>交接说明</strong>：后续完善工作由 AI 助手按本计划逐阶段执行；开始前请先阅读本文件与 <code>AGENTS.md</code>（阶段0第1步创建）。</p></blockquote>
@@ -72,17 +73,27 @@ MathJax = {
 <li>[x] <strong>1.4 物化生核心知识网络对照勾选</strong>：对照650分计划第一阶段清单，核对电场/磁场公式体系、化学计量、元素周期律、细胞结构、代谢体系等是否已入库（部分已完成），补缺漏。✅ 2026-07-21 重新核对确认：650分计划第一阶段物化生核心知识网络18张全部已入库，无缺漏。其中物理6张（电场/磁场/电磁感应/动量/功能关系/热光原）、化学6张（化学计量/元素周期律/反应速率与平衡/水溶液离子平衡/电化学/有机官能团）、生物6张（细胞结构/酶与ATP及细胞代谢/遗传定律/变异与进化/神经-体液-免疫调节/生态系统与能量流动）。</li>
 <li>[x] <strong>1.5 每批新卡完成后</strong>：更新对应 <code>索引_*.md</code>、跑 <code>kb_audit.py</code> 校准总索引统计、跑 <code>build_site.py</code> 重建站点。✅ 2026-07-21 执行：语文/方法/数学三科索引更新，<code>kb_audit.py</code> 校准总索引 147 张，<code>build_site.py</code> 重建无断链。</li>
 <li>[x] <strong>1.6 650分计划第一阶段剩余缺口补全</strong>：语文典型题型6张、方法4张、数学易错2张+素材3张。✅ 2026-07-21 完成：全库 138→147 张。语文典型题型破零（6张）；方法 6→10 张；数学易错 2→4 张、素材 1→4 张。</li>
+<li>[x] <strong>1.7 语文素材与拓展补齐</strong>：650分计划第一阶段要求4张、实际仅2张（均为广东特色向）。✅ 2026-08-20 完成：新增人物素材（时代楷模篇）+ 金句素材分类整理，语文素材 2→4 张（与远程7-22~8-03快照合并后，语文素材共8张、全库262张）；同步修复科技人文篇卡片3处失效关联链接。</li>
 </ul>
 <h2>四、阶段2：复盘机制运转</h2>
 <ul>
-<li>[ ] <strong>2.1 首次正式复盘</strong>：用 <code>build_status_table.py</code> + <code>kb_audit.py</code> 梳理全部92张卡片，按实际掌握情况重新标记，掌握状态&quot;破零&quot;（目标10+张 ✅）。</li>
-<li>[ ] <strong>2.2 固化周复盘流程</strong>：错题四分类（知识性/方法性/审题性/计算性）→ 匹配或新建卡片 → 更新 <code>复盘追踪/知识掌握状态表.md</code> → <code>build_site.py</code> 重建。</li>
-<li>[ ] <strong>2.3 使用场景提示词化</strong>：把 <code>广东高考知识库指令.md</code> 第三节的&quot;周复盘/考前冲刺20点/广东卷趋势分析&quot;落成可直接复用的提示词模板（放入 <code>02_使用规则与检索说明.md</code> 或 AGENTS.md）。</li>
+<li>[ ] <strong>2.1 首次正式复盘</strong>：用 <code>build_status_table.py</code> + <code>kb_audit.py</code> 梳理全部卡片，按实际掌握情况重新标记，掌握状态&quot;破零&quot;（目标2026.9高二开学前 ✅≥10张）。⚠️ 需用户配合自评，启动方式已就绪——对 AI 说&quot;启动首次全库复盘&quot;（见 <code>02_使用规则与检索说明.md</code> 第四节&quot;首次复盘启动&quot;）。</li>
+<li>[x] <strong>2.2 固化周复盘流程</strong>：错题四分类（知识性/方法性/审题性/计算性）→ 匹配或新建卡片 → 更新 <code>复盘追踪/知识掌握状态表.md</code> → <code>build_site.py</code> 重建。✅ 2026-08-20 完成：<code>02_使用规则与检索说明.md</code> 第四节升级为&quot;周复盘七步流程&quot;（含错题四分类处置表、脚本联动、广东特色检查点）。</li>
+<li>[x] <strong>2.3 使用场景提示词化</strong>：把 <code>广东高考知识库指令.md</code> 第三节的&quot;周复盘/考前冲刺20点/广东卷趋势分析&quot;落成可直接复用的提示词模板（放入 <code>02_使用规则与检索说明.md</code> 或 AGENTS.md）。✅ 2026-08-20 完成：<code>02_使用规则与检索说明.md</code> 第七节新增模板四（周复盘·错题四分类）、模板五（考前冲刺20点）、模板六（广东卷命题趋势分析），均为可复制即用的完整指令。</li>
+</ul>
+<blockquote><p><strong>实际执行口径说明</strong>：对话推进中阶段2按&quot;质量提升&quot;展开，子项编号与上述原版计划不同。已对齐的实际子项（截至 2026-07-22）：</p></blockquote>
+<ul>
+<li>[x] <strong>2.1 核心知识网络卡补解题路径</strong>（题型识别标志 + 标准化解题路径 + 真题母题）：✅ 已完成（数学/物理/化学/生物/语文/英语共 71 张核心卡）</li>
+<li>[x] <strong>2.2 广东考情标注精确化</strong>：✅ 已完成（六科「典型题型与方法」维度 86 张全量精确化；全库 A类 35→63，典型题型维度 A类 19→47、D类归零；核心/素材维度保持&quot;频率+难度+特色&quot;规范）</li>
+<li>[x] <strong>2.3 关联卡片单向引用检测</strong>：✅ 已完成（<code>check_backlinks.py</code> 脚本 + 89 条路径不规范链接自动修复 <code>--fix-paths</code>；真断链 64 / 单向 461 留作后续内容补全）</li>
+<li>[ ] <strong>2.4 复盘机制运转</strong>（对应原版 2.1/2.2：掌握状态破零、周复盘流程固化）— 流程固化半项已于2026-08-20完成（原版2.2/2.3落地：周复盘七步流程+六大提示词模板+网页三键自评入口，见 <code>02_使用规则与检索说明.md</code> 第四、七节）；剩掌握状态破零需本人口述自评或网页三键标记。</li>
+<li>[x] <strong>2.5 卡片自测/训练计划模板</strong> ✅ 2026-08-03 完成（commit 7babff8/167d745/2cee5e9：数学34张+五科116张+补99张，六科自测训练全覆盖）</li>
+<li>[x] <strong>2.6 易错警示与辨析维度补解题路径</strong> ✅ 2026-07-23 完成（commit d921d4f：35张易错卡补全易错三件套——题型识别+纠错路径+真题母题）</li>
 </ul>
 <h2>五、阶段3：可选增强（高三前完成即可）</h2>
 <ul>
 <li>[ ] <strong>3.1 GitHub Actions CI</strong>：push 时自动跑 <code>build_site.py</code> + 断链校验，防止 HTML 与 md 再脱节。</li>
-<li>[ ] <strong>3.2 Day 词表 HTML 口径</strong>：补齐 <code>英语/单词复习/分组词表/</code> 77 个词表的 HTML，或在 AGENTS.md 中明确声明该目录 md-only。</li>
+<li>[x] <strong>3.2 Day 词表 HTML 口径</strong>：补齐 <code>英语/单词复习/分组词表/</code> 77 个词表的 HTML，或在 AGENTS.md 中明确声明该目录 md-only。✅ 已解决：AGENTS.md 四、口径与约定 明确声明 <code>分组词表/</code> 为 md-only（正常设计，不生成 HTML）；<code>日期词表/</code> md 为内容源、配套助记版 HTML 已建成。</li>
 <li>[ ] <strong>3.3 站点搜索/标签聚合页</strong>：静态生成，按 <code>#标签</code>（时间轴/难度/试卷来源/广东特色）聚合卡片。</li>
 <li>[ ] <strong>3.4 图形库扩充</strong>：继续按科目补示意图并嵌入卡片（现有32张：物理/化学/生物/数学各8张）。</li>
 </ul>
@@ -104,5 +115,6 @@ MathJax = {
 <footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
 <a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
 </div>
+<script src="assets/kb-progress.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【滑块木板模型综合】相对滑动·共速·分离·叠加场讨论 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="物理">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow" data-card-id="物理/典型题型与方法/高二深化_物理_典型题型与方法_滑块木板模型综合">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【滑块木板模型综合】相对滑动·共速·分离·叠加场讨论</span></li></ol>
+<h1 class="kb-title">【滑块木板模型综合】相对滑动·共速·分离·叠加场讨论</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广州一模</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2024广州市高三一模·第15题（15分）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（广东卷力学压轴基本盘）· 压轴 · 生活/科技情境+电场叠加包装，需提取标准板块模型 · [待补真题]</div>
+<div id="kb-progress-widget"></div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;质量 m 的滑块滑上质量 M 的长木板&quot; + 两者动摩擦因数</td><td>滑块—木板（板块）模型</td><td>先判&quot;滑不滑&quot;，再隔离/整体列方程</td></tr><tr><td>给出 v-t 图（两物体斜率不同后趋于共速）</td><td>已发生相对滑动且达共速</td><td>由斜率读 $a_m,a_M$，直接求 $\mu$</td></tr><tr><td>&quot;始终未脱离木板 / 最大静摩擦力=滑动摩擦力&quot;</td><td>共速后需重新判临界</td><td>共速瞬间复核 $f_{需}$ 与 $f_{max}$</td></tr><tr><td>木板在粗糙地面（或叠加电场/磁场）</td><td>多对象多过程 + 叠加场</td><td>对&quot;整体&quot;判共速，对&quot;滑块&quot;单独受力</td></tr><tr><td>&quot;讨论停止位置与某参量 E 的关系&quot;</td><td>分段函数（分类讨论）</td><td>按临界条件 $E$ 分成几段分别列式</td></tr><tr><td>&quot;摩擦生热 Q&quot;</td><td>求相对位移 $\Delta x$</td><td>$Q=f_{滑}\cdot|\Delta x_{相对}|$（非对地位移）</td></tr></table></div>
+<h3>解题路径（滑块木板五步法）</h3>
+<h4>第一步：判滑不滑（求临界力）</h4>
+<p>假设相对静止，整体加速度 $a=\dfrac{F}{m+M}$；对滑块隔离得所需摩擦 $f_{需}=ma$。</p>
+<ul>
+<li>若 $f_{需}\le \mu mg$ → 一起加速（整体法）</li>
+<li>若 $f_{需}> \mu mg$ → 相对滑动，分别隔离</li>
+</ul>
+<h4>第二步：隔离/整体列方程</h4>
+<div class="table-wrap"><table><tr><th>对象</th><th>受力</th><th>方程</th></tr><tr><td>滑块 m</td><td>滑动摩擦 $f=\mu_1 m g$（与相对运动反向）</td><td>$a_m=\mu_1 g$（本文 $a_1=4\,\mathrm{m/s^2}$）</td></tr><tr><td>木板 M</td><td>滑块给的摩擦 $\mu_1 m g$ + 地面摩擦 $\mu_2(m+M)g$</td><td>$a_M=\dfrac{\mu_1 m g-\mu_2(m+M)g}{M}$（本文 $a_2=2\,\mathrm{m/s^2}$）</td></tr></table></div>
+<blockquote><p><strong>易错</strong>：地面有摩擦时，木板方程要算上&quot;地面对 M 的摩擦&quot;；方向由相对运动决定。</p></blockquote>
+<h4>第三步：共速与分段</h4>
+<p>共速条件 $v_m=v_M$。共速后<strong>必须重新判断</strong>是否会再次相对滑动（尤其外力/电场仍在作用时）。</p>
+<h4>第四步：摩擦生热与相对位移</h4>
+<p>$Q=f_{滑}\cdot|\Delta x_{相对}|$，其中 $\Delta x_{相对}=x_{木板}-x_{滑块}$（参考系取地，取绝对值）。</p>
+<h4>第五步：叠加场/电场分类讨论（本题特色）</h4>
+<p>滑块带电进入电场后，若 $qE\le \mu_1 m g$ 则<strong>不发生相对滑动</strong>，整体用动能定理讨论停止位置；按临界值把 $E$ 分段，每段对应一段位移表达式。</p>
+<h3>母题（2024 广州市高三一模·第15题，15分）</h3>
+<blockquote><p>2024 届广州市普通高中毕业班综合测试（一）物理第15题，真实模考原题，已核实答案。</p></blockquote>
+<p><strong>题目</strong>：如图甲，当 $t=0$ 时，带电量 $q=1.0\times10^{-2}\,\mathrm{C}$、质量 $m_1=0.1\,\mathrm{kg}$ 的滑块以速度 $v_0=6\,\mathrm{m/s}$ 滑上质量 $m_2=0.05\,\mathrm{kg}$ 的绝缘木板，在 $0\sim1\,\mathrm{s}$ 内滑块和木板的 $v\text{-}t$ 图像如图乙。当 $t=1\,\mathrm{s}$ 时滑块刚好进入宽度 $d=0.6\,\mathrm{m}$ 的匀强电场区域，电场强度大小为 $E\,(0<E<40\,\mathrm{N/C})$，方向水平向左。滑块可视为质点且电量不变，始终未脱离木板；最大静摩擦力等于滑动摩擦力，重力加速度 $g=10\,\mathrm{m/s^2}$。 (1) 求滑块与木板间的动摩擦因数 $\mu_1$、木板与地面间的动摩擦因数 $\mu_2$； (2) 试讨论滑块停止运动时距电场左边界的距离 $s$ 与场强 $E$ 的关系。</p>
+<p><strong>解</strong>： <strong>(1)</strong> 由图乙，在 $0\sim1\,\mathrm{s}$ 内滑块加速度 $a_1=4\,\mathrm{m/s^2}$，木板加速度 $a_2=2\,\mathrm{m/s^2}$。 对滑块：$\mu_1 m_1 g=m_1 a_1 \Rightarrow \mu_1=0.4$。 对木板：$\mu_1 m_1 g-\mu_2(m_1+m_2)g=m_2 a_2$ $\Rightarrow 0.4\times0.1\times10- \mu_2\times0.15\times10 = 0.05\times2$ $\Rightarrow 0.4-1.5\mu_2=0.1 \Rightarrow \mu_2=0.2$。</p>
+<p><strong>(2)</strong> 由题意知 $qE<\mu_1 m_1 g$（即 $E<40\,\mathrm{N/C}$ 已保证），滑块进入电场后与木板不发生相对滑动，整体减速。 共速时共同速度 $v$：由 $v_0-a_1 t=0+a_2 t$ 得 $t=1\,\mathrm{s}$ 时 $v=2\,\mathrm{m/s}$（或直接读图乙 $t=1\,\mathrm{s}$ 共速 $v=2\,\mathrm{m/s}$）。 整体初动能 $\frac12(m_1+m_2)v^2=\frac12\times0.15\times4=0.3\,\mathrm{J}$。 临界：若整体靠摩擦即可停下需 $qE\le \mu_2(m_1+m_2)g \Rightarrow E\le 30\,\mathrm{N/C}$。</p>
+<ul>
+<li><strong>(i) 当 $20<E<30\,\mathrm{N/C}$</strong>：在电场内停下，$s<\!d=0.6\,\mathrm{m}$</li>
+<p>由 $qEs+\mu_2(m_1+m_2)gs=0-\frac12(m_1+m_2)v^2$（动能定理，取初速方向为正，末速0）： $(E+30)s=30 \Rightarrow s=\dfrac{30}{E+30}\,(\mathrm{m})$。</p>
+<li><strong>(ii) 当 $0<E<20\,\mathrm{N/C}$</strong>：$s>0.6\,\mathrm{m}$，滑块会离开电场后再停下</li>
+<p>$-qEd-\mu_2(m_1+m_2)g s=0-\frac12(m_1+m_2)v^2$ $\Rightarrow s=\dfrac{0.3-qEd}{1.5}=\dfrac{50-E}{50}\,(\mathrm{m})$（其中 $qE=0.01E$，单位 J/m 换算是 $qEd=0.01E\times0.6=0.006E$，代入整理即得）。</p>
+<li><strong>(iii) 当 $30<E<40\,\mathrm{N/C}$</strong>：先在电场中向右减速到0（位移 $s_{右}=\frac{30}{E+30}$），后因 $qE>\mu_2(m_1+m_2)g$ 整体向左运动离开电场：</li>
+<p>$qE s_{右}-\mu_2(m_1+m_2)g(s+s_{右})=0 \Rightarrow s=\dfrac{E-30}{E+30}\,(\mathrm{m})$。</p>
+</ul>
+<blockquote><p>答：(1) $\mu_1=0.4,\;\mu_2=0.2$；(2) 分段函数如上。</p></blockquote>
+<hr>
+<h2>自测训练（3道·覆盖判滑→隔离列方程→共速分段→摩擦生热）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验：v-t 图读加速度 + 动摩擦因数反推） 质量 $m_1=1\,\mathrm{kg}$ 的滑块以 $v_0=4\,\mathrm{m/s}$ 滑上静置于光滑地面的木板 $m_2=1\,\mathrm{kg}$，两者间动摩擦因数为 $\mu$。运动的前 $1\,\mathrm{s}$ 内，滑块与木板的 $v$-$t$ 图像均为斜直线，$t=1\,\mathrm{s}$ 时两者达到共速 $v=2\,\mathrm{m/s}$，此后一起匀速运动。$g$ 取 $10\,\mathrm{m/s^2}$。求： (1) 滑块与木板的加速度大小 $a_1$、$a_2$； (2) 动摩擦因数 $\mu$； (3) 前 $1\,\mathrm{s}$ 内摩擦产生的热量 $Q$。</p>
+<p><strong>第2题</strong>（检验：相对滑动判断 + 共速后再判断） 质量 $m=3\,\mathrm{kg}$ 的物块放在质量 $M=2\,\mathrm{kg}$ 的木板上，物块与木板间 $\mu_1=0.4$，木板与地面间 $\mu_2=0.1$。现对物块施加水平向右的恒力 $F=15\,\mathrm{N}$，$g$ 取 $10\,\mathrm{m/s^2}$。求： (1) 物块与木板是否发生相对滑动？请通过计算说明； (2) 物块和木板加速度分别为多大。</p>
+<p><strong>第3题</strong>（检验：叠加电场的板块模型——分类讨论） 绝缘长木板 $M=0.5\,\mathrm{kg}$ 静置于光滑绝缘水平面上，其左端恰为匀强电场左边界，电场水平向右，宽度 $d=0.4\,\mathrm{m}$。一带正电 $q=2\times10^{-3}\,\mathrm{C}$、质量 $m=0.1\,\mathrm{kg}$ 的滑块以 $v_0=3\,\mathrm{m/s}$ 从木板右端滑上木板（电场外），两者间 $\mu=0.2$。$g$ 取 $10\,\mathrm{m/s^2}$。已知滑块进入电场前后木板均足够长，滑块始终未脱离木板。讨论：当电场强度 $E$ 取不同值时滑块相对木板的运动情况，并求 $E=5\,\mathrm{N/C}$ 时滑块进入电场后的共同加速度。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="高二深化_物理_典型题型与方法_力学三大模型通法.html">高二深化_物理_典型题型与方法_力学三大模型通法</a> — 板块模型通法、临界力判断、v-t 图分段</li>
+<li><a href="../核心知识网络/高一筑基_物理_核心知识网络_牛顿三定律与受力分析.html">高二深化_物理_核心知识网络_牛顿三定律与受力分析</a> — 隔离法/整体法、摩擦力方向判定</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_动量定理与动量守恒定律.html">高二深化_物理_核心知识网络_动量定理与动量守恒定律</a> — 木板叠加场中动量是否守恒的判定</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_电场公式体系.html">高二深化_物理_核心知识网络_电场公式体系</a> — 匀强电场力 $F=qE$、电场做功与路径无关</li>
+</ul>
+<hr>
+<ul>
+<li><a href="../易错警示与辨析/高二深化_物理_易错警示与辨析_能量与动量综合易错.html">【能量与动量综合易错】守恒条件·碰撞类型·多过程衔接</a></li>
+</ul>
+<h2>备注</h2>
+<ul>
+<li><strong>广东卷情境提取</strong>：本题把&quot;滑块木板&quot;包装成&quot;绝缘木板+匀强电场&quot;，本质是常规板块模型叠加一个水平恒力。做题时先拆掉情境外衣：木板受&quot;滑块摩擦+地面摩擦+电场力&quot;，滑块受&quot;摩擦+电场力&quot;。</li>
+<li><strong>分类讨论不重不漏</strong>：第(2)问临界值为 $E=20$（是否出电场）与 $E=30$（是否反向），按区间写清每段物理过程。</li>
+<li><strong>等级赋分</strong>：即使算不出分段函数，写出第(1)问两个方程 + 第(2)问动能定理列式即可拿 8~10 分过程分。</li>
+</ul>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（v-t 图读加速度 + 动摩擦因数反推）</summary><p><strong>(1)</strong> 由 $v$-$t$ 图斜率： $$a_1=\frac{|v-v_0|}{t}=\frac{|2-4|}{1}=2\,\mathrm{m/s^2}\quad(\text{减速，方向向左})$$ $$a_2=\frac{v-0}{t}=\frac{2-0}{1}=2\,\mathrm{m/s^2}\quad(\text{加速，方向向右})$$</p>
+<p><strong>(2)</strong> 地面光滑，木板仅受滑块给的摩擦力 $\mu m_1g$ 加速： $$\mu m_1g=m_2a_2\Rightarrow\mu=\frac{m_2a_2}{m_1g}=\frac{1\times2}{1\times10}=0.2$$</p>
+<p><strong>(3)</strong> 前 $1\,\mathrm{s}$ 内，滑块位移 $x_1=\dfrac{v_0+v}{2}\cdot t=\dfrac{4+2}{2}\times1=3\,\mathrm{m}$，木板位移 $x_2=\dfrac{0+v}{2}\cdot t=\dfrac{2}{2}\times1=1\,\mathrm{m}$。</p>
+<p>相对位移 $|\Delta x|=x_1-x_2=2\,\mathrm{m}$，摩擦生热： $$Q=f\cdot|\Delta x|=\mu m_1g\cdot|\Delta x|=0.2\times1\times10\times2=4\,\mathrm{J}$$</p>
+<p><strong>答</strong>：(1) $a_1=a_2=2\,\mathrm{m/s^2}$；(2) $\mu=0.2$；(3) $Q=4\,\mathrm{J}$。</p>
+<blockquote><p><strong>易错提醒</strong>：$v$-$t$ 图斜率=加速度，共速点是分段的临界；摩擦生热用<strong>相对位移</strong>而非对地位移。</p></blockquote></details>
+<details><summary>▶ 第2题详解（相对滑动判断——整体隔离对比）</summary><p><strong>(1) 假设相对静止，整体法求共同加速度</strong> $$F-\mu_2(m+M)g=(m+M)a$$ $$15-0.1\times5\times10=5a\Rightarrow a=2\,\mathrm{m/s^2}$$</p>
+<p>隔离物块，所需静摩擦力： $$f_需=ma=3\times2=6\,\mathrm{N}$$</p>
+<p>最大静摩擦力（按等于滑动摩擦力）： $$f_{\max}=\mu_1mg=0.4\times3\times10=12\,\mathrm{N}$$</p>
+<p>因 $f_需=6\,\mathrm{N}<f_{\max}=12\,\mathrm{N}$，故<strong>未发生相对滑动</strong>，整体一起加速。</p>
+<p><strong>(2)</strong> 物块与木板加速度相同，均为 $a=2\,\mathrm{m/s^2}$。</p>
+<p><strong>答</strong>：(1) 未相对滑动；(2) $a_m=a_M=2\,\mathrm{m/s^2}$。</p>
+<blockquote><p><strong>易错提醒</strong>：判断&quot;滑不滑&quot;的关键是&quot;假设相对静止求 $f_需$，与 $f_{\max}=\mu_1mg$ 比较&quot;；地面有摩擦时整体法要扣除地面摩擦 $\mu_2(m+M)g$。</p></blockquote></details>
+<details><summary>▶ 第3题详解（叠加电场的板块模型——临界分析）</summary><p><strong>核心通法</strong>：滑块进入电场后额外受向右电场力 $qE$。判断是否相对滑动，比较&quot;电场力使滑块减速（或加速）的变化量与最大静摩擦力能否提供&quot;。</p>
+<p><strong>滑块在电场外段</strong>：滑块受向左摩擦力 $\mu mg=0.2\times0.1\times10=0.2\,\mathrm{N}$，减速 $a_1=\mu g=2\,\mathrm{m/s^2}$。木板受向右摩擦力 $0.2\,\mathrm{N}$ 加速 $a_2=0.2/0.5=0.4\,\mathrm{m/s^2}$。</p>
+<p><strong>进入电场后的临界判断</strong>：滑块进入电场后受电场力 $qE$（向右）+ 摩擦力。若 $qE\le\mu_1mg=0.2\,\mathrm{N}$，即 $E\le100\,\mathrm{N/C}$，滑块不会因电场力额外加速而再次与木板相对滑动（本题条件已满足）。</p>
+<p><strong>当 $E=5\,\mathrm{N/C}$ 时</strong>：$qE=2\times10^{-3}\times5=0.01\,\mathrm{N}<0.2\,\mathrm{N}$，两者共速后整体运动。</p>
+<p>整体共同加速度（设已共速，对整体应用牛顿第二定律，电场力是唯一外力）： $$qE=(m+M)a_{共}\Rightarrow a_{共}=\frac{qE}{m+M}=\frac{0.01}{0.6}\approx0.017\,\mathrm{m/s^2}$$</p>
+<p>方向水平向右（电场方向）。</p>
+<p><strong>答</strong>：$E=5\,\mathrm{N/C}$ 时，$a_{共}\approx0.017\,\mathrm{m/s^2}$，方向向右。</p>
+<blockquote><p><strong>易错提醒</strong>：叠加电场后需重新判断是否相对滑动，临界条件是 $qE$ 与最大静摩擦力的比较；整体法应用条件是&quot;两者已共速且未再相对滑动&quot;。</p></blockquote></details>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+<script src="../../assets/kb-progress.js" defer></script>
+</body>
+</html>

@@ -27,11 +27,12 @@ MathJax = {
     <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
   </div>
 </nav>
-<div class="kb-wrap kb-wrap--narrow">
+<div class="kb-wrap kb-wrap--narrow" data-card-id="数学/易错警示与辨析/高二深化_数学_易错警示与辨析_解析几何焦点位置与导数定义域端点">
 <ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">易错警示与辨析</a></li><li><span aria-current="page">解析几何焦点位置与导数定义域端点易错警示（焦点轴讨论·离心率公式混用·定义域优先·端点取舍）</span></li></ol>
 <h1 class="kb-title">解析几何焦点位置与导数定义域端点易错警示（焦点轴讨论·离心率公式混用·定义域优先·端点取舍）</h1>
 <div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：人教A版选择性必修第一册第三章（圆锥曲线）+ 选择性必修第二册第五章（导数）/ 2021~2025新高考Ⅰ卷解析几何与导数真题错题归纳</span></div>
-<div class="kb-note"><strong>广东考情</strong>：解析几何与导数是新高考Ⅰ卷（广东考区）**两大压轴支柱**：近5年（2021-2025）每年各至少1道大题，合计约24-29分。2024年结构改革后（8单选+3多选+3填空+5解答），圆锥曲线常居第18题、导数或新定义压轴第19题；多选题中&quot;焦点位置&quot;&quot;定义域限制&quot;常作为干扰项设置点，**少选得部分分**的规则下，漏判焦点轴等于主动放弃分数。焦点位置错、定义域端点错属于&quot;一步错全题崩&quot;的致命失误，是中等生冲击120+的第一道门槛。<br><strong>椭圆</strong>：$c^2 = a^2 - b^2$ | $e = \frac{c}{a} \in (0,1)$ | 误用$c^2 = a^2 + b^2$<br><strong>双曲线</strong>：$c^2 = a^2 + b^2$ | $e = \frac{c}{a} \in (1,+\infty)$ | 误用$c^2 = a^2 - b^2$<br><strong>抛物线</strong>：无$c$，焦点到准线距离$p$ | $e = 1$ | 把抛物线也套离心率公式</div>
+<div class="kb-note"><strong>广东考情</strong>：解析几何与导数是新高考Ⅰ卷（广东考区）**两大压轴支柱**：近5年（2021-2025）每年各至少1道大题，合计约24-29分。2024年结构改革后（8单选+3多选+3填空+5解答），圆锥曲线常居第18题、导数或新定义压轴第19题；多选题中&quot;焦点位置&quot;&quot;定义域限制&quot;常作为干扰项设置点，**少选得部分分**的规则下，漏判焦点轴等于主动放弃分数。焦点位置错、定义域端点错属于&quot;一步错全题崩&quot;的致命失误，是中等生冲击120+的第一道门槛。</div>
+<div id="kb-progress-widget"></div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
 <hr>
@@ -161,6 +162,39 @@ MathJax = {
 <blockquote><p><strong>焦点位置口诀</strong>：<br>- &quot;焦点轴不明，两轴都要行&quot;<br>- &quot;椭减双加记心间，$a$随大分母走&quot;<br>- &quot;抛物线先标准化，焦点是$\frac{p}{2}$不是$p$&quot;<br>- &quot;设线先问斜率无，$x$轴点用$x=my+t$&quot;</p></blockquote>
 <blockquote><p><strong>定义域端点口诀</strong>：<br>- &quot;求导先定域，区间不出界&quot;<br>- &quot;含参看零点，在域内才分层&quot;<br>- &quot;端点非极值，最值要比齐&quot;<br>- &quot;恒成立问等号，取到取不到先断&quot;<br>- &quot;端点效应必要不充分，回代验证才闭环&quot;</p></blockquote>
 <hr>
+<h3>题型识别标志（陷阱信号）</h3>
+<div class="table-wrap"><table><tr><th>题干/选项信号</th><th>触发陷阱</th><th>立即动作</th></tr><tr><td>&quot;椭圆/双曲线焦点在坐标轴上&quot;（未限定轴）</td><td>陷阱1：焦点轴未讨论</td><td>题目没写&quot;焦点在×轴&quot;，x轴、y轴两种情况都要讨论</td></tr><tr><td>&quot;求离心率 / 写 $a,b,c$ 关系&quot;</td><td>陷阱2：椭减双加混淆</td><td>椭圆 $c^2=a^2-b^2$，双曲线 $c^2=a^2+b^2$，先念&quot;椭减双加&quot;</td></tr><tr><td>&quot;方程 $\dfrac{x^2}{m}+\dfrac{y^2}{n}=1$&quot;</td><td>陷阱3：$a^2$ 归属随轴走</td><td>$a^2$ 取较大分母；异号则为双曲线，正分母对应实轴</td></tr><tr><td>&quot;$y=2x^2$ 等求焦点&quot;</td><td>陷阱4：抛物线未标准化</td><td>化标准形 $x^2=2py$，焦点是 $p/2$ 不是 $p$</td></tr><tr><td>&quot;过焦点设直线&quot;</td><td>陷阱5：斜率不存在</td><td>x轴点用 $x=my+t$ 规避讨论；y轴点用 $y=kx+t$</td></tr><tr><td>&quot;$f(x)=\ln x-ax$ 求单调&quot;</td><td>陷阱6：漏写定义域</td><td>第一步写定义域 $x>0$，单调区间必为定义域子集</td></tr><tr><td>&quot;含参讨论零点&quot;</td><td>陷阱7：零点在定义域内</td><td>先判导数零点是否存在、是否 $\in$ 定义域，再分层</td></tr><tr><td>&quot;闭区间最值&quot;</td><td>陷阱8：端点当极值点</td><td>最值比端点函数值与极值；极值点须是内点</td></tr><tr><td>&quot;恒成立 $f(x)>0$&quot;</td><td>陷阱9：等号取得到/取不到</td><td>标注能否取等：取到写 $\ge$，取不到写 $>$</td></tr><tr><td>&quot;端点效应求参&quot;</td><td>陷阱10：必要非充分</td><td>求出参数后回代验证充分性，不能只写必要条件</td></tr></table></div>
+<h3>标准化纠错路径（「先定位置·先圈范围」纠错法）</h3>
+<p><strong>一、解析几何纠错路径（动笔前先定&quot;位置&quot;）</strong></p>
+<ol>
+<li><strong>定轴</strong>：题目未限定焦点轴 → 椭圆/双曲线 x轴、y轴两种情况都要讨论。</li>
+<li><strong>定关系</strong>：先判曲线类型，写对 $a,b,c$ 关系（椭圆 $c^2=a^2-b^2$，双曲线 $c^2=a^2+b^2$，抛物线 $e=1$）。</li>
+<li><strong>定直线</strong>：过 x轴上点设 $x=my+t$（规避斜率不存在）；抛物线先化标准形再读 $p/2$。</li>
+</ol>
+<p><strong>二、导数纠错路径（动笔前先圈&quot;范围&quot;）</strong></p>
+<ol>
+<li><strong>写定义域</strong>：任何导数题第一步写定义域（$\ln$ 严格 $>0$、根号 $\ge0$、分母 $\ne0$），单调区间必为定义域子集。</li>
+<li><strong>判零点</strong>：含参讨论先判导数零点是否存在、是否在定义域内，再分层。</li>
+<li><strong>比端点</strong>：闭区间最值比较端点函数值与极值；端点不是极值点；恒成立先问&quot;等号取得到吗&quot;，端点效应求出参数后回代验证充分性。</li>
+</ol>
+<h3>真题母题（2024 新高考Ⅰ卷 T12）</h3>
+<p><strong>题</strong>：设双曲线 $C:\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\ (a>0,b>0)$ 的左、右焦点分别为 $F_1,F_2$，过 $F_2$ 作平行于 $y$ 轴的直线交 $C$ 于 $A,B$ 两点，若 $\lvert F_1A\rvert=13$，$\lvert AB\rvert=10$，则 $C$ 的离心率为 \_\_\_\_\_。</p>
+<p><strong>错解</strong>：看到&quot;双曲线&quot;求离心率，下意识套用椭圆关系式 $c^2=a^2-b^2$（椭减），由 $b^2=5a$ 与 $a=4$ 得 $c^2=16-20=-4<0$，出现矛盾仍硬算，或由此得出错误离心率。</p>
+<p><strong>正解</strong>：双曲线满足 $c^2=a^2+b^2$（<strong>双加</strong>）。由 $\lvert AB\rvert=2\dfrac{b^2}{a}=10$ 得 $b^2=5a$；又 $\lvert F_2A\rvert=\dfrac{b^2}{a}=5$，由双曲线定义 $\lvert F_1A\rvert-\lvert F_2A\rvert=2a\Rightarrow 13-5=2a\Rightarrow a=4$；于是 $b^2=20$，$c^2=a^2+b^2=16+20=36\Rightarrow c=6$；故离心率 $e=\dfrac{c}{a}=\dfrac{6}{4}=\boxed{\dfrac{3}{2}}$。</p>
+<p><strong>避错要点</strong>：本题命中本卡<strong>陷阱2（$a,b,c$ 关系：椭减双加）</strong>——椭圆与双曲线的 $c^2$ 关系式恰好相反，错用&quot;椭减&quot;会得到 $c^2<0$ 的荒谬结果。动笔写关系式前，先口头确认&quot;这是椭圆还是双曲线&quot;，把&quot;椭减双加&quot;四个字念一遍，可杜绝此类公式张冠李戴。此外本题焦点已在 x轴（方程明确），未触发陷阱1的分类讨论，但&quot;先定位置&quot;的习惯仍应保留，莫因一题不分类而松懈。</p>
+<hr>
+<h2>自测训练（3道·覆盖焦点轴讨论、定义域优先、抛物线标准化）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 椭圆焦点位置未限定需分类）</p>
+<p>下述解法是否完整？若不完整请补充。</p>
+<blockquote><p>已知椭圆离心率 $e=\dfrac{1}{2}$，短半轴 $b=\sqrt{3}$，求椭圆方程。<br>某生解答：由 $c=\dfrac{a}{2}$ 及 $c^2=a^2-b^2$，得 $\dfrac{a^2}{4}=a^2-3$，$a^2=4$。故椭圆方程为 $\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$。</p></blockquote>
+<p><strong>第2题</strong>（检验 导数题先写定义域）</p>
+<p>下述解法是否正确？若错误请指出并改正。</p>
+<blockquote><p>讨论函数 $f(x)=\ln x-ax$（$a>0$）的单调性。<br>某生解答：$f'(x)=\dfrac{1}{x}-a$。令 $f'(x)>0$ 得 $x<\dfrac{1}{a}$；令 $f'(x)<0$ 得 $x>\dfrac{1}{a}$。所以 $f(x)$ 在 $\left(-\infty,\dfrac{1}{a}\right)$ 上单调递增，在 $\left(\dfrac{1}{a},+\infty\right)$ 上单调递减。</p></blockquote>
+<p><strong>第3题</strong>（检验 抛物线标准方程与焦点坐标）</p>
+<p>下述解法是否正确？若错误请指出并改正。</p>
+<blockquote><p>求抛物线 $y=2x^2$ 的焦点坐标。<br>某生解答：方程化为 $x^2=\dfrac{1}{2}y$，故 $2p=\dfrac{1}{2}$，$p=\dfrac{1}{2}$，焦点为 $\left(0,\dfrac{1}{2}\right)$。</p></blockquote>
+<hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高二深化_数学_核心知识网络_椭圆双曲线抛物线.html">高二深化_数学_核心知识网络_椭圆双曲线抛物线</a> — 三大圆锥曲线定义、标准方程与几何性质的体系化整理</li>
@@ -179,6 +213,29 @@ MathJax = {
 </ul>
 <hr>
 <blockquote><p>🏷️ 标签：<code>#数学</code> <code>#易错警示与辨析</code> <code>#高二深化</code> <code>#难度4</code> <code>#解析几何</code> <code>#焦点位置</code> <code>#离心率</code> <code>#抛物线标准方程</code> <code>#导数</code> <code>#定义域</code> <code>#端点效应</code> <code>#恒成立</code> <code>#新高考Ⅰ卷·广东</code></p></blockquote>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（焦点轴讨论）</summary><p><strong>结论</strong>：该生解答不完整，漏掉焦点在 $y$ 轴上的情形。</p>
+<p><strong>改正</strong>：题目只说&quot;椭圆&quot;，未限定焦点轴，需分两种情况：</p>
+<ul>
+<li>焦点在 $x$ 轴：$\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$；</li>
+<li>焦点在 $y$ 轴：$\dfrac{y^2}{4}+\dfrac{x^2}{3}=1$。</li>
+</ul>
+<p><strong>答</strong>：椭圆方程为 $\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$ 或 $\dfrac{y^2}{4}+\dfrac{x^2}{3}=1$。</p>
+<p><strong>易错提醒</strong>：看到&quot;焦点在坐标轴上&quot;但没有&quot;焦点在 $x$ 轴&quot;字样，必须分类讨论。$a^2$ 是较大分母，焦点随较大分母走。</p></details>
+<details><summary>▶ 第2题详解（定义域优先）</summary><p><strong>结论</strong>：该生解答错误，单调区间超出定义域。</p>
+<p><strong>改正</strong>：函数 $f(x)=\ln x-ax$ 的定义域为 $(0,+\infty)$。因此单调区间必须是 $(0,+\infty)$ 的子集。</p>
+<p>$$f'(x)=\frac{1}{x}-a=\frac{1-ax}{x}$$</p>
+<p>当 $a>0$ 时，$f'(x)>0$ 即 $1-ax>0$，得 $0<x<\dfrac{1}{a}$；$f'(x)<0$ 即 $x>\dfrac{1}{a}$。</p>
+<p><strong>答</strong>：$f(x)$ 在 $\left(0,\dfrac{1}{a}\right)$ 上单调递增，在 $\left(\dfrac{1}{a},+\infty\right)$ 上单调递减。</p>
+<p><strong>易错提醒</strong>：任何导数题第一步先写定义域。含 $\ln x$ 时定义域为 $(0,+\infty)$，单调区间不能出现负数。</p></details>
+<details><summary>▶ 第3题详解（抛物线标准化）</summary><p><strong>结论</strong>：该生解答错误，误把 $2p$ 当 $p$。</p>
+<p><strong>改正</strong>：将 $y=2x^2$ 化为标准形： $$x^2=\frac{1}{2}y$$</p>
+<p>标准形为 $x^2=2py$，故 $$2p=\frac{1}{2}\Rightarrow p=\frac{1}{4}$$</p>
+<p>焦点坐标为 $\left(0,\dfrac{p}{2}\right)=\left(0,\dfrac{1}{8}\right)$。</p>
+<p><strong>答</strong>：焦点坐标为 $\left(0,\dfrac{1}{8}\right)$。</p>
+<p><strong>易错提醒</strong>：抛物线焦点坐标是 $\dfrac{p}{2}$ 不是 $p$。先把方程化为&quot;二次项系数为 1&quot;的标准形，再读 $2p$。</p></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">
@@ -188,5 +245,6 @@ MathJax = {
 <footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
 <a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
 </div>
+<script src="../../assets/kb-progress.js" defer></script>
 </body>
 </html>

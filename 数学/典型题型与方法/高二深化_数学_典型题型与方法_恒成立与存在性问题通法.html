@@ -27,206 +27,175 @@ MathJax = {
     <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
   </div>
 </nav>
-<div class="kb-wrap kb-wrap--narrow">
+<div class="kb-wrap kb-wrap--narrow" data-card-id="数学/典型题型与方法/高二深化_数学_典型题型与方法_恒成立与存在性问题通法">
 <ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">恒成立与存在性问题的题型通法</span></li></ol>
 <h1 class="kb-title">恒成立与存在性问题的题型通法</h1>
 <div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东 / #新高考Ⅰ卷·江苏</span><span class="kb-badge kb-badge--src">来源：人教A版选择性必修二 / 新高考Ⅰ卷近5年解答题真题归纳 / 2024新课标Ⅰ卷第18题（导数压轴）</span></div>
-<div class="kb-note"><strong>广东考情</strong>：新高考Ⅰ卷（广东卷）解答题15-19题（77分）中，函数与导数题几乎必考恒成立或存在性问题；2024年新课标Ⅰ卷第18题导数压轴考查&quot;当且仅当&quot;型恒成立，2023年新课标Ⅰ卷第20题考查双变量存在性。此类题目是区分高分段与顶尖分段的关键，占17分压轴题中的8-12分。<br><strong>混淆量词</strong>：将&quot;存在&quot;当作&quot;恒成立&quot;处理，最值取反 | 写出∀/∃符号，对照转化表确认<br><strong>忽略定义域</strong>：分离参数后未考虑x的范围限制 | 每一步标注定义域，最后取交集<br><strong>端点效应漏用</strong>：未利用区间端点值缩小参数范围 | 先代入端点，获取必要条件<br><strong>分类讨论遗漏</strong>：导函数零点与区间位置关系未穷尽 | 画数轴，标注零点与区间端点<br><strong>最值点不可达</strong>：函数在开区间上无最值，仅有确界 | 用极限值代替，注意等号是否可取<br><strong>&quot;当且仅当&quot;型</strong>：2024新课标Ⅰ卷新考法，需证充要性 | 必要性探路+充分性证明</div>
+<div class="kb-note"><strong>广东考情</strong>：高频（新高考Ⅰ卷导数压轴核心）· 压轴 · &quot;当且仅当&quot;型充要证明+双变量存在性 · 真题锚定：2024新高考Ⅰ卷T18（恒成立）、2023新高考Ⅰ卷T20（双变量存在性）</div>
+<div id="kb-progress-widget"></div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
-<blockquote>
-<strong>本质理解</strong>：恒成立与存在性问题，是<strong>全称量词∀</strong>与<strong>存在量词∃</strong>在函数最值上的翻译。核心口诀：恒成立求"最值边界"，存在性求"最值可达"。
-</blockquote>
-
+<blockquote><p><strong>本质理解</strong>：恒成立与存在性问题，是<strong>全称量词∀</strong>与<strong>存在量词∃</strong>在函数最值上的翻译。核心口诀：恒成立求&quot;最值边界&quot;，存在性求&quot;最值可达&quot;。</p></blockquote>
 <hr>
-
 <h3>一、单变量问题：最值转化对照表</h3>
-
-<div class="table-wrap">
-<table>
-<tr><th>题干表述</th><th>数学翻译</th><th>转化目标</th><th>记忆口诀</th></tr>
-<tr><td>∀x∈D, f(x) < a <strong>恒成立</strong></td><td>全称量词</td><td>f(x)ₘₐₓ < a</td><td><strong>大值小于a</strong>（所有值都小）</td></tr>
-<tr><td>∀x∈D, f(x) ≤ a <strong>恒成立</strong></td><td>全称量词</td><td>f(x)ₘₐₓ ≤ a</td><td><strong>大值不大于a</strong></td></tr>
-<tr><td>∀x∈D, f(x) > a <strong>恒成立</strong></td><td>全称量词</td><td>f(x)ₘᵢₙ > a</td><td><strong>小值大于a</strong>（所有值都大）</td></tr>
-<tr><td>∀x∈D, f(x) ≥ a <strong>恒成立</strong></td><td>全称量词</td><td>f(x)ₘᵢₙ ≥ a</td><td><strong>小值不小于a</strong></td></tr>
-<tr><td>∃x∈D, f(x) < a <strong>有解</strong></td><td>存在量词</td><td>f(x)ₘᵢₙ < a</td><td><strong>小值小于a</strong>（至少有一个小）</td></tr>
-<tr><td>∃x∈D, f(x) ≤ a <strong>有解</strong></td><td>存在量词</td><td>f(x)ₘᵢₙ ≤ a</td><td><strong>小值不大于a</strong></td></tr>
-<tr><td>∃x∈D, f(x) > a <strong>有解</strong></td><td>存在量词</td><td>f(x)ₘₐₓ > a</td><td><strong>大值大于a</strong>（至少有一个大）</td></tr>
-<tr><td>∃x∈D, f(x) ≥ a <strong>有解</strong></td><td>存在量词</td><td>f(x)ₘₐₓ ≥ a</td><td><strong>大值不小于a</strong></td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>关键提醒</strong>：恒成立与存在性问题的最值取法<strong>恰好相反</strong>！这是考生最容易混淆的地方。
-</blockquote>
-
+<div class="table-wrap"><table><tr><th>题干表述</th><th>数学翻译</th><th>转化目标</th><th>记忆口诀</th></tr><tr><td>∀x∈D, f(x) &lt; a <strong>恒成立</strong></td><td>全称量词</td><td>f(x)ₘₐₓ &lt; a</td><td><strong>大值小于a</strong>（所有值都小）</td></tr><tr><td>∀x∈D, f(x) ≤ a <strong>恒成立</strong></td><td>全称量词</td><td>f(x)ₘₐₓ ≤ a</td><td><strong>大值不大于a</strong></td></tr><tr><td>∀x∈D, f(x) &gt; a <strong>恒成立</strong></td><td>全称量词</td><td>f(x)ₘᵢₙ &gt; a</td><td><strong>小值大于a</strong>（所有值都大）</td></tr><tr><td>∀x∈D, f(x) ≥ a <strong>恒成立</strong></td><td>全称量词</td><td>f(x)ₘᵢₙ ≥ a</td><td><strong>小值不小于a</strong></td></tr><tr><td>∃x∈D, f(x) &lt; a <strong>有解</strong></td><td>存在量词</td><td>f(x)ₘᵢₙ &lt; a</td><td><strong>小值小于a</strong>（至少有一个小）</td></tr><tr><td>∃x∈D, f(x) ≤ a <strong>有解</strong></td><td>存在量词</td><td>f(x)ₘᵢₙ ≤ a</td><td><strong>小值不大于a</strong></td></tr><tr><td>∃x∈D, f(x) &gt; a <strong>有解</strong></td><td>存在量词</td><td>f(x)ₘₐₓ &gt; a</td><td><strong>大值大于a</strong>（至少有一个大）</td></tr><tr><td>∃x∈D, f(x) ≥ a <strong>有解</strong></td><td>存在量词</td><td>f(x)ₘₐₓ ≥ a</td><td><strong>大值不小于a</strong></td></tr></table></div>
+<blockquote><p><strong>关键提醒</strong>：恒成立与存在性问题的最值取法<strong>恰好相反</strong>！这是考生最容易混淆的地方。</p></blockquote>
 <hr>
-
 <h3>二、三大解题通法</h3>
-
-<p>#### 方法1：分离参数法（首选，避免讨论）</p>
-
-<blockquote>
-<strong>适用条件</strong>：参数易分离，且分离后的函数最值可求。
-</blockquote>
-
+<h4>方法1：分离参数法（首选，避免讨论）</h4>
+<blockquote><p><strong>适用条件</strong>：参数易分离，且分离后的函数最值可求。</p></blockquote>
 <p><strong>操作步骤</strong>：</p>
 <ol>
 <li>将不等式整理为：参数 ≤ g(x) 或 参数 ≥ g(x)</li>
 <li>求g(x)在定义域上的最值</li>
-<li>参数范围 = 最值的"边界值"</li>
+<li>参数范围 = 最值的&quot;边界值&quot;</li>
 </ol>
-
 <p><strong>典型例题</strong>（2024新课标Ⅰ卷风格）：</p>
-<blockquote>
-已知f(x)=eˣ-ax，若∀x>0, f(x)≥0恒成立，求a的范围。
-</blockquote>
-
+<blockquote><p>已知f(x)=eˣ-ax，若∀x&gt;0, f(x)≥0恒成立，求a的范围。</p></blockquote>
 <p><strong>解析</strong>：</p>
 <ul>
-<li>分离参数：a ≤ eˣ/x （x>0）</li>
+<li>分离参数：a ≤ eˣ/x （x&gt;0）</li>
 <li>设g(x)=eˣ/x，求g(x)ₘᵢₙ</li>
-<li>g'(x)=eˣ(x-1)/x²，极小值点x=1</li>
+<li>g&#x27;(x)=eˣ(x-1)/x²，极小值点x=1</li>
 <li>g(x)ₘᵢₙ=g(1)=e</li>
 <li><strong>∴ a ≤ e</strong></li>
 </ul>
-
-<blockquote>
-<strong>可直接使用</strong>：分离参数法的结论可直接用于解答题，无需额外证明。
-</blockquote>
-
+<blockquote><p><strong>可直接使用</strong>：分离参数法的结论可直接用于解答题，无需额外证明。</p></blockquote>
 <hr>
-
-<p>#### 方法2：不分离参数法（直接构造函数）</p>
-
-<blockquote>
-<strong>适用条件</strong>：参数不易分离，或区间端点代入后不等式两边相等。
-</blockquote>
-
+<h4>方法2：不分离参数法（直接构造函数）</h4>
+<blockquote><p><strong>适用条件</strong>：参数不易分离，或区间端点代入后不等式两边相等。</p></blockquote>
 <p><strong>操作步骤</strong>：</p>
 <ol>
 <li>构造F(x)=f(x)-目标值（使不等式变为F(x)≥0或F(x)≤0）</li>
-<li>求F'(x)，分析F(x)的单调性</li>
+<li>求F&#x27;(x)，分析F(x)的单调性</li>
 <li>求F(x)的最值，确保F(x)ₘᵢₙ≥0（或F(x)ₘₐₓ≤0）</li>
 <li>若含参数，对参数分类讨论</li>
 </ol>
-
 <p><strong>典型例题</strong>：</p>
-<blockquote>
-已知f(x)=eˣ-1-x-ax²，若∀x≥0, f(x)≥0恒成立，求a的范围。
-</blockquote>
-
+<blockquote><p>已知f(x)=eˣ-1-x-ax²，若∀x≥0, f(x)≥0恒成立，求a的范围。</p></blockquote>
 <p><strong>解析</strong>：</p>
 <ul>
 <li>观察：f(0)=0，不等式两边在x=0处相等 → <strong>不分离参数</strong></li>
 <li>构造F(x)=eˣ-1-x-ax²，需F(x)ₘᵢₙ≥0</li>
-<li>F'(x)=eˣ-1-2ax，F'(0)=0</li>
-<li>再求F''(x)=eˣ-2a，需对a分类讨论：</li>
-<li>若a≤1/2：F''(x)≥e⁰-2a=1-2a≥0，F'(x)单调增，F'(x)≥F'(0)=0，F(x)单调增，F(x)≥F(0)=0 ✓</li>
-<li>若a>1/2：存在x₀使F''(x₀)=0，F'(x)先减后增，可能F'(x)<0，导致F(x)<0 ✗</li>
+<li>F&#x27;(x)=eˣ-1-2ax，F&#x27;(0)=0</li>
+<li>再求F&#x27;&#x27;(x)=eˣ-2a，需对a分类讨论：</li>
+<ul>
+<li>若a≤1/2：F&#x27;&#x27;(x)≥e⁰-2a=1-2a≥0，F&#x27;(x)单调增，F&#x27;(x)≥F&#x27;(0)=0，F(x)单调增，F(x)≥F(0)=0 ✓</li>
+<li>若a&gt;1/2：存在x₀使F&#x27;&#x27;(x₀)=0，F&#x27;(x)先减后增，可能F&#x27;(x)&lt;0，导致F(x)&lt;0 ✗</li>
+</ul>
 <li><strong>∴ a ≤ 1/2</strong></li>
 </ul>
-
-<blockquote>
-<strong>可直接使用</strong>：不分离参数法是新高考Ⅰ卷标准解法，可直接使用。
-</blockquote>
-
+<blockquote><p><strong>可直接使用</strong>：不分离参数法是新高考Ⅰ卷标准解法，可直接使用。</p></blockquote>
 <hr>
-
-<p>#### 方法3：必要性探路法（减少讨论范围）</p>
-
-<blockquote>
-<strong>适用条件</strong>：含参函数在区间端点或特殊点有必然约束。
-</blockquote>
-
+<h4>方法3：必要性探路法（减少讨论范围）</h4>
+<blockquote><p><strong>适用条件</strong>：含参函数在区间端点或特殊点有必然约束。</p></blockquote>
 <p><strong>操作步骤</strong>：</p>
 <ol>
 <li>找到必要条件（如端点值满足不等式）</li>
 <li>缩小参数范围</li>
 <li>在该范围内证明充分性</li>
 </ol>
-
 <p><strong>典型例题</strong>：</p>
-<blockquote>
-已知f(x)=eˣ-ax²-x-1，若∀x≥0, f(x)≥0，求a的范围。
-</blockquote>
-
+<blockquote><p>已知f(x)=eˣ-ax²-x-1，若∀x≥0, f(x)≥0，求a的范围。</p></blockquote>
 <p><strong>解析</strong>：</p>
 <ul>
-<li>必要性：f(0)=0，f'(0)=0，f''(0)=1-2a</li>
-<li>若f''(0)<0（即a>1/2），则在0附近f(x)<0，不满足 ✗</li>
+<li>必要性：f(0)=0，f&#x27;(0)=0，f&#x27;&#x27;(0)=1-2a</li>
+<li>若f&#x27;&#x27;(0)&lt;0（即a&gt;1/2），则在0附近f(x)&lt;0，不满足 ✗</li>
 <li>∴ 必要条件：a≤1/2</li>
-<li>充分性：当a≤1/2时，f''(x)=eˣ-2a≥1-2a≥0，f'(x)单调增，f'(x)≥f'(0)=0，f(x)单调增，f(x)≥f(0)=0 ✓</li>
+<li>充分性：当a≤1/2时，f&#x27;&#x27;(x)=eˣ-2a≥1-2a≥0，f&#x27;(x)单调增，f&#x27;(x)≥f&#x27;(0)=0，f(x)单调增，f(x)≥f(0)=0 ✓</li>
 <li><strong>∴ a ≤ 1/2</strong></li>
 </ul>
-
-<blockquote>
-<strong>可直接使用</strong>：必要性探路法在解答题中可直接使用，是减少分类讨论的高效策略。
-</blockquote>
-
+<blockquote><p><strong>可直接使用</strong>：必要性探路法在解答题中可直接使用，是减少分类讨论的高效策略。</p></blockquote>
 <hr>
-
 <h3>三、双变量问题：分步转化策略</h3>
-
-<div class="table-wrap">
-<table>
-<tr><th>题干表述</th><th>数学翻译</th><th>转化结果</th><th>记忆口诀</th></tr>
-<tr><td>∀x₁,∀x₂, f(x₁)≥g(x₂)</td><td>两个全称</td><td>f(x)ₘᵢₙ ≥ g(x)ₘₐₓ</td><td><strong>最值交叉比</strong></td></tr>
-<tr><td>∀x₁,∃x₂, f(x₁)≥g(x₂)</td><td>全称+存在</td><td>f(x)ₘᵢₙ ≥ g(x)ₘᵢₙ</td><td><strong>小对小</strong></td></tr>
-<tr><td>∃x₁,∀x₂, f(x₁)≥g(x₂)</td><td>存在+全称</td><td>f(x)ₘₐₓ ≥ g(x)ₘₐₓ</td><td><strong>大对大</strong></td></tr>
-<tr><td>∃x₁,∃x₂, f(x₁)≥g(x₂)</td><td>两个存在</td><td>f(x)ₘₐₓ ≥ g(x)ₘᵢₙ</td><td><strong>大对小</strong></td></tr>
-</table>
-</div>
-
-<blockquote>
-<strong>双变量核心逻辑</strong>：先固定一个变量，再处理另一个变量；或转化为两个函数最值的比较。
-</blockquote>
-
+<div class="table-wrap"><table><tr><th>题干表述</th><th>数学翻译</th><th>转化结果</th><th>记忆口诀</th></tr><tr><td>∀x₁,∀x₂, f(x₁)≥g(x₂)</td><td>两个全称</td><td>f(x)ₘᵢₙ ≥ g(x)ₘₐₓ</td><td><strong>最值交叉比</strong></td></tr><tr><td>∀x₁,∃x₂, f(x₁)≥g(x₂)</td><td>全称+存在</td><td>f(x)ₘᵢₙ ≥ g(x)ₘᵢₙ</td><td><strong>小对小</strong></td></tr><tr><td>∃x₁,∀x₂, f(x₁)≥g(x₂)</td><td>存在+全称</td><td>f(x)ₘₐₓ ≥ g(x)ₘₐₓ</td><td><strong>大对大</strong></td></tr><tr><td>∃x₁,∃x₂, f(x₁)≥g(x₂)</td><td>两个存在</td><td>f(x)ₘₐₓ ≥ g(x)ₘᵢₙ</td><td><strong>大对小</strong></td></tr></table></div>
+<blockquote><p><strong>双变量核心逻辑</strong>：先固定一个变量，再处理另一个变量；或转化为两个函数最值的比较。</p></blockquote>
 <hr>
-
 <h3>四、高频陷阱与避坑指南</h3>
-
-<div class="table-wrap">
-<table>
-<tr><th>陷阱</th><th>说明</th><th>避坑方法</th></tr>
-<tr><td><strong>混淆量词</strong></td><td>将"存在"当作"恒成立"处理，最值取反</td><td>写出∀/∃符号，对照转化表确认</td></tr>
-<tr><td><strong>忽略定义域</strong></td><td>分离参数后未考虑x的范围限制</td><td>每一步标注定义域，最后取交集</td></tr>
-<tr><td><strong>端点效应漏用</strong></td><td>未利用区间端点值缩小参数范围</td><td>先代入端点，获取必要条件</td></tr>
-<tr><td><strong>分类讨论遗漏</strong></td><td>导函数零点与区间位置关系未穷尽</td><td>画数轴，标注零点与区间端点</td></tr>
-<tr><td><strong>最值点不可达</strong></td><td>函数在开区间上无最值，仅有确界</td><td>用极限值代替，注意等号是否可取</td></tr>
-<tr><td><strong>"当且仅当"型</strong></td><td>2024新课标Ⅰ卷新考法，需证充要性</td><td>必要性探路+充分性证明</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>陷阱</th><th>说明</th><th>避坑方法</th></tr><tr><td><strong>混淆量词</strong></td><td>将&quot;存在&quot;当作&quot;恒成立&quot;处理，最值取反</td><td>写出∀/∃符号，对照转化表确认</td></tr><tr><td><strong>忽略定义域</strong></td><td>分离参数后未考虑x的范围限制</td><td>每一步标注定义域，最后取交集</td></tr><tr><td><strong>端点效应漏用</strong></td><td>未利用区间端点值缩小参数范围</td><td>先代入端点，获取必要条件</td></tr><tr><td><strong>分类讨论遗漏</strong></td><td>导函数零点与区间位置关系未穷尽</td><td>画数轴，标注零点与区间端点</td></tr><tr><td><strong>最值点不可达</strong></td><td>函数在开区间上无最值，仅有确界</td><td>用极限值代替，注意等号是否可取</td></tr><tr><td><strong>&quot;当且仅当&quot;型</strong></td><td>2024新课标Ⅰ卷新考法，需证充要性</td><td>必要性探路+充分性证明</td></tr></table></div>
 <hr>
-
+<h2>自测训练（3道·覆盖三大通法 + 双变量转化）</h2>
+<blockquote><p>检验目标：能否在动笔前先判断&quot;该分离参数还是不分离&quot;，以及双变量问题能否正确翻成最值比较。<strong>先独立完成，再展开卡片末尾「参考答案」核对</strong>。每题标注了所检验的方法，方便对号入座查漏补缺。</p></blockquote>
+<p><strong>第1题</strong>（检验 方法1·分离参数法 + 单变量恒成立转化）</p>
+<p>已知函数 $f(x)=\ln x - ax$（$a\in\mathbb{R}$）。若 $\forall x>0$，$f(x)\le 0$ 恒成立，求实数 $a$ 的取值范围。</p>
+<p><strong>第2题</strong>（检验 方法2/3·不分离参数 + 必要性探路）</p>
+<p>已知函数 $f(x)=e^x - 1 - x - ax^2$。若 $\forall x\ge 0$，$f(x)\ge 0$ 恒成立，求实数 $a$ 的取值范围。</p>
+<p><strong>第3题</strong>（检验 双变量最值转化表 + 存在性量词）</p>
+<p>已知函数 $f(x)=x^2-2x$，$g(x)=\dfrac{1}{2}x^2-mx+2$（$x\in[0,2]$）。若 $\forall x_1\in[0,2]$，$\exists x_2\in[0,2]$，使得 $f(x_1)\ge g(x_2)$ 成立，求实数 $m$ 的取值范围。</p>
+<hr>
 <h2>关联卡片</h2>
-
 <ul>
-<li><span class="kb-deadlink" title="关联内容尚未创建">高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系</span> — 前置基础</li>
-<li><span class="kb-deadlink" title="关联内容尚未创建">高二深化_数学_典型题型与方法_导数零点问题分类讨论框架</span> — 后续进阶</li>
-<li><span class="kb-deadlink" title="关联内容尚未创建">高三冲刺_数学_典型题型与方法_2024新课标Ⅰ卷第18题（导数压轴）精析</span> — 真题实战</li>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系.html">高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系</a> — 前置基础</li>
+<li><a href="高二深化_数学_典型题型与方法_导数零点问题分类讨论框架.html">高二深化_数学_典型题型与方法_导数零点问题分类讨论框架</a> — 后续进阶</li>
+<li><a href="高三冲刺_数学_典型题型与方法_2024新课标Ⅰ卷第18题（导数压轴）精析.html">高三冲刺_数学_典型题型与方法_2024新课标Ⅰ卷第18题（导数压轴）精析</a> — 真题实战</li>
 </ul>
-
 <hr>
-
+<ul>
+<li><a href="高二深化_数学_典型题型与方法_不等式证明的多方向拆解思维：代数·分析·几何.html">不等式证明的多方向拆解思维：以一题贯通代数·分析·几何</a></li>
+</ul>
+<ul>
+<li><a href="../易错警示与辨析/高二深化_数学_易错警示与辨析_数列n=1验证与等比q=1讨论.html">数列n=1验证与等比q=1讨论易错警示（通项求法·分段通项·分类讨论）</a></li>
+</ul>
+<ul>
+<li><a href="../易错警示与辨析/高二深化_数学_易错警示与辨析_解析几何焦点位置与导数定义域端点.html">解析几何焦点位置与导数定义域端点易错警示（焦点轴讨论·离心率公式混用·定义域优先·端点取舍）</a></li>
+</ul>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数的运算与应用.html">导数的运算与应用</a></li>
+</ul>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_椭圆双曲线抛物线.html">椭圆、双曲线与抛物线</a></li>
+</ul>
+<ul>
+<li><a href="../素材与拓展/高一筑基_数学_素材与拓展_数学思想方法（数形结合与分类讨论）.html">【数学思想方法（数形结合与分类讨论）】</a></li>
+</ul>
+<ul>
+<li><a href="../素材与拓展/高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向.html">2024-2025新高考Ⅰ卷导数压轴题新动向</a></li>
+</ul>
+<ul>
+<li><a href="../素材与拓展/高二深化_数学_素材与拓展_高考压轴中的竞赛思维.html">【高考压轴中的竞赛思维】构造·放缩·特殊化：降维打击压轴题的六种竞赛思维</a></li>
+</ul>
+<ul>
+<li><a href="../../方法/方法_通用方法_21天高考数学自救计划：流程化·加分制·真题训练.html">21天高考数学自救计划：流程化·加分制·真题训练</a></li>
+</ul>
 <h2>备注</h2>
-
 <ul>
 <li>恒成立与存在性问题是新高考Ⅰ卷导数压轴题的<strong>核心考点</strong>，2020-2025年几乎每年必考。</li>
-<li>2024年新课标Ⅰ卷改革后，解答题分值增加（77分），压轴题（17分）更强调思维深度，恒成立问题的"当且仅当"型成为新热点。</li>
+<li>2024年新课标Ⅰ卷改革后，解答题分值增加（77分），压轴题（17分）更强调思维深度，恒成立问题的&quot;当且仅当&quot;型成为新热点。</li>
 <li>广东考生（新高考Ⅰ卷）需特别注意：此类题目是区分130分与140分的关键，建议在<strong>高二下学期</strong>完成通法训练，<strong>高三</strong>进行真题限时训练。</li>
 <li>解题策略优先级：分离参数法（首选）→ 必要性探路法（减少讨论）→ 不分离参数法（直接构造）。</li>
-<li>训练建议：先做单变量恒成立/存在性各10题，再做双变量5题，最后做"当且仅当"型3题。</li>
+<li>训练建议：先做单变量恒成立/存在性各10题，再做双变量5题，最后做&quot;当且仅当&quot;型3题。</li>
 </ul>
-
 <hr>
-
-<blockquote>
-🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高二深化</code> <code>#难度4</code> <code>#函数与导数</code> <code>#恒成立</code> <code>#存在性</code> <code>#分离参数</code> <code>#必要性探路</code> <code>#新高考Ⅰ卷</code> <code>#广东</code>
-</blockquote>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高二深化</code> <code>#难度4</code> <code>#函数与导数</code> <code>#恒成立</code> <code>#存在性</code> <code>#分离参数</code> <code>#必要性探路</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（分离参数法 + 恒成立转化）</summary><p>$f(x)=\ln x - ax\le 0$ 恒成立，即 $a\ge \dfrac{\ln x}{x}$（$x>0$）恒成立。</p>
+<p>设 $g(x)=\dfrac{\ln x}{x}$（$x>0$），求 $g(x)$ 的最大值： $$g'(x)=\dfrac{\dfrac{1}{x}\cdot x - \ln x\cdot 1}{x^2}=\dfrac{1-\ln x}{x^2}$$</p>
+<p>令 $g'(x)=0$ 得 $x=e$。当 $0<x<e$ 时 $g'(x)>0$（增），当 $x>e$ 时 $g'(x)<0$（减），故 $g(x)_{\max}=g(e)=\dfrac{1}{e}$。</p>
+<p>由 $a\ge g(x)$ 恒成立，得 $a\ge g(x)_{\max}=\dfrac{1}{e}$。</p>
+<p><strong>答</strong>：$a$ 的取值范围为 $\left[\dfrac{1}{e},\,+\infty\right)$。</p>
+<blockquote><p><strong>易错提醒</strong>：① &quot;$f(x)\le 0$ 恒成立&quot;翻译为 $f(x)_{\max}\le 0$，不要翻译成最小值；② 分离后 $\dfrac{\ln x}{x}$ 在 $x\to 0^+$ 时趋于 $-\infty$、$x\to+\infty$ 时趋于 $0$，最大值唯一，结论干净；③ 别漏验证 $g'(x)$ 的符号变化对应&quot;先增后减&quot;。</p></blockquote></details>
+<details><summary>▶ 第2题详解（不分离参数 + 必要性探路）</summary><p>$f(x)=e^x-1-x-ax^2\ge 0$ 恒成立。注意 $f(0)=e^0-1-0-0=0$，端点等号成立，<strong>不宜分离参数</strong>，改用直接构造 + 必要性探路。</p>
+<p>$f'(x)=e^x-1-2ax$，$f'(0)=1-1-0=0$；$f''(x)=e^x-2a$。</p>
+<p><strong>必要性</strong>：若 $f''(0)<0$ 即 $a>\dfrac{1}{2}$，则 $f'(x)$ 在 $x=0$ 附近为减，结合 $f'(0)=0$ 得 $f'(x)<0$（$x$ 小正数），进而 $f(x)<f(0)=0$，不满足。故必要条件为 $a\le \dfrac{1}{2}$。</p>
+<p><strong>充分性</strong>：当 $a\le \dfrac{1}{2}$ 时，$f''(x)=e^x-2a\ge e^0-2a=1-2a\ge 0$（$x\ge 0$），故 $f'(x)$ 在 $[0,+\infty)$ 单调递增；由 $f'(0)=0$ 得 $f'(x)\ge 0$，故 $f(x)$ 在 $[0,+\infty)$ 单调递增；由 $f(0)=0$ 得 $f(x)\ge 0$，成立。</p>
+<p><strong>答</strong>：$a$ 的取值范围为 $\left(-\infty,\,\dfrac{1}{2}\right]$。</p>
+<blockquote><p><strong>易错提醒</strong>：① 端点 $f(0)=0$ 是用&quot;必要性探路&quot;的信号，不是巧合；② 必要条件 $a\le \dfrac{1}{2}$ 缩范围后必须<strong>回头证充分性</strong>，二者缺一不可；③ $f''(x)\ge 0$ 用的是 &quot;$e^x\ge 1$（$x\ge 0$）&quot;，而不是 $e^x\ge 2a$。</p></blockquote></details>
+<details><summary>▶ 第3题详解（双变量最值转化 + 存在性量词）</summary><p>题意 &quot;$\forall x_1$，$\exists x_2$，$f(x_1)\ge g(x_2)$&quot; 即&quot;任意一个 $f(x_1)$ 都要大于等于某个 $g(x_2)$&quot;——把 $f$ 的<strong>最小值</strong>固定下来，要求 $g$ 能取到比它更小的值。</p>
+<p>翻译：$\forall x_1,\exists x_2,\ f(x_1)\ge g(x_2)\ \Leftrightarrow\ f(x)_{\min}\ge g(x)_{\min}$。</p>
+<p>先求 $f(x)=x^2-2x$（$x\in[0,2]$）的最小值：对称轴 $x=1$，$f(1)=1-2=-1$，故 $f(x)_{\min}=-1$。</p>
+<p>再求 $g(x)=\dfrac{1}{2}x^2-mx+2$（$x\in[0,2]$）的最小值，对称轴 $x=m$：</p>
+<ul>
+<li>若 $m<0$：$g$ 在 $[0,2]$ 递增，$g(x)_{\min}=g(0)=2\ge -1$ ✓；</li>
+<li>若 $0\le m\le 2$：$g(x)_{\min}=g(m)=\dfrac{1}{2}m^2-m^2+2=2-\dfrac{1}{2}m^2\ge 2-\dfrac{1}{2}\cdot 4=0\ge -1$ ✓；</li>
+<li>若 $m>2$：$g$ 在 $[0,2]$ 递减，$g(x)_{\min}=g(2)=2-2m+2=4-2m$，需 $4-2m\ge -1$，即 $m\le \dfrac{5}{2}$。</li>
+</ul>
+<p>综合三种情况，$m\in\left(-\infty,\dfrac{5}{2}\right]$。</p>
+<p><strong>答</strong>：实数 $m$ 的取值范围为 $\left(-\infty,\,\dfrac{5}{2}\right]$。</p>
+<blockquote><p><strong>易错提醒</strong>：① &quot;$\forall x_1,\exists x_2$&quot;属&quot;全称+存在&quot;，按转化表是 <strong>$f_{\min}\ge g_{\min}$（小对小）</strong>，不要错写成 $f_{\min}\ge g_{\max}$；② $g(x)$ 在 $[0,2]$ 上的最小值要按对称轴 $x=m$ 与区间位置<strong>分三类</strong>讨论，漏掉中间情形是常见扣分点；③ 区间闭，最值可达，等号可以取到。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">
@@ -236,5 +205,6 @@ MathJax = {
 <footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
 <a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
 </div>
+<script src="../../assets/kb-progress.js" defer></script>
 </body>
 </html>

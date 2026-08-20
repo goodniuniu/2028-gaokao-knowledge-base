@@ -11,7 +11,11 @@ build_site.py — 2028高考知识库 一键站点重建脚本
      做简单 Markdown → HTML 转换生成页面。
   3. 重新生成全部 index.html（根、六科、各维度、方法、图形库、复盘追踪、
      英语、英语/单词复习及其子目录）。
-  4. 链接校验：扫描所有生成/既有 HTML 的内部 href/src，输出断链清单。
+  4. 每用户学习进度：全站页面注入 assets/kb-progress.js，知识卡片页注入
+     data-card-id 与三键标记占位；生成 assets/kb-cards.js 卡片清单
+     （复盘追踪页个人仪表盘数据源）。cardId = md 相对根目录路径去 .md 后缀，
+     卡片改名/移动会使该卡的每用户进度失联。
+  5. 链接校验：扫描所有生成/既有 HTML 的内部 href/src，输出断链清单。
 
 用法：  python build_site.py
 说明：  本脚本取代旧 generate_index.py；不修改任何 .md 文件。
@@ -20,6 +24,7 @@ import sys
 sys.stdout.reconfigure(encoding="utf-8")
 
 import html as html_mod
+import json
 import re
 from pathlib import Path
 from urllib.parse import unquote
@@ -219,6 +224,7 @@ def page_template(*, title, prefix, body_inner, subject=None, head_extra="", bod
 <body {attr}>
 {nav_html(prefix)}
 {body_inner}
+<script src="{prefix}assets/kb-progress.js" defer></script>
 </body>
 </html>'''
 
@@ -276,7 +282,10 @@ def _inline(text: str) -> str:
         raw = spans[int(m.group(1))]
         if raw.startswith("!["):
             mm = re.match(r"!\[([^\]]*)\]\(([^)]+)\)", raw)
-            return f'<img src="{esc(mm.group(2))}" alt="{esc(mm.group(1))}">'
+            alt = mm.group(1)
+            src = mm.group(2)
+            return (f'<div class="figure"><img src="{esc(src)}" alt="{esc(alt)}">'
+                    f'<div class="figure-caption">{esc(alt)}</div></div>')
         if raw.startswith("["):
             mm = re.match(r"\[([^\]]*)\]\(([^)]+)\)", raw)
             return f'<a href="{esc(mm.group(2))}">{esc(mm.group(1))}</a>'
@@ -344,6 +353,83 @@ def md_body_to_html(md_text: str):
         if not stripped:
             flush_para(para); close_lists()
             i += 1
+            continue
+
+        # 原生 HTML 块（行首是 <tag，CommonMark 规范：原样透传直到空行/结束）
+        # 支持 <details>/<summary>/<div>/...，避免被当文字转义成 &lt;...&gt;
+        mraw = re.match(r"^<([a-zA-Z][\w-]*)(\s[^>]*)?>", stripped)
+        if mraw:
+            flush_para(para); close_lists()
+            tagname = mraw.group(1).lower()
+            buf = [ln]
+            i += 1
+            # 收集直到遇到空行（CommonMark：块级 HTML 由空行终止）
+            # 但 <details> 块内含 markdown 段落（<summary> 后的解答内容），
+            # 需要继续解析内部，故只对 <details>/<summary> 容器整体保留并嵌套渲染。
+            # 简化策略：以同标签成对为界，原样收集中间所有行（含空行），
+            # 之后单独走 markdown 渲染再拼回。
+            # —— 实现上：逐行 append，直到匹配到对应的 </tagname>。
+            depth = 1
+            close_re = re.compile(rf"</{tagname}\s*>", re.I)
+            open_re = re.compile(rf"<{tagname}(\s[^>]*)?>", re.I)
+            while i < len(lines):
+                cur = lines[i]
+                buf.append(cur)
+                # 同名嵌套计数（如 details 内可含 summary 不计数，仅同名才计数）
+                depth += len(open_re.findall(cur)) - len(close_re.findall(cur))
+                i += 1
+                if depth <= 0:
+                    break
+            # 拆出起始标签行与结束标签行，中间内容走 markdown 渲染
+            first = buf[0]
+            last = buf[-1] if len(buf) > 1 else ""
+            inner_lines = buf[1:-1] if len(buf) > 2 else []
+            # 起始标签（保留属性）
+            start_match = re.match(rf"^(<{tagname}(?:\s[^>]*)?>)(.*)$", first, re.I)
+            start_tag = start_match.group(1) if start_match else first
+            # 若首行标签后还有内容，分两种情况：
+            # (a) 同行就闭合（<summary>xxx</summary>）—— 提取 xxx inline 渲染并补 </tag>
+            # (b) 跨行才闭合 —— inline 渲染首行尾内容，后续行继续收集
+            same_line_close = False
+            if start_match and start_match.group(2).strip():
+                tail_of_first = start_match.group(2).strip()
+                # 检测同行是否含 </tag>（允许标签后还有其它内联内容）
+                inline_close = re.match(rf"^(.*?)</{tagname}\s*>(.*)$", tail_of_first, re.I | re.S)
+                if inline_close:
+                    same_line_close = True
+                    start_tag += _inline(inline_close.group(1).strip())
+                    start_tag += f"</{tagname}>"
+                    if inline_close.group(2).strip():
+                        start_tag += _inline(inline_close.group(2).strip())
+                else:
+                    start_tag += _inline(tail_of_first)
+            # 末行结束标签前可能还有内容
+            end_match = re.match(rf"^(.*?)</{tagname}\s*>$", last, re.I) if last else None
+            tail_inline = ""
+            end_tag = f"</{tagname}>"
+            if end_match:
+                if end_match.group(1).strip():
+                    tail_inline = _inline(end_match.group(1).strip())
+            else:
+                end_tag = ""
+                inner_lines = buf[1:]
+            # 同行闭合的情况：末行已无 end_tag，inner_lines 不含末行
+            if same_line_close:
+                inner_lines = buf[1:-1] if len(buf) > 2 else []
+                end_tag = ""
+                tail_inline = ""
+            # 内部内容递归渲染（子流程，支持嵌套 details、表格、列表、公式等）
+            # 注意：父级已提取 code/math 占位符，递归前需还原为原文，否则子调用
+            # 的 code_blocks 为空导致索引越界。
+            inner_lines_restored = []
+            for il in inner_lines:
+                rl = il
+                for idx, cb in enumerate(code_blocks):
+                    rl = rl.replace(f"\x00CODE{idx}\x00", cb)
+                inner_lines_restored.append(rl)
+            inner_md = "\n".join(inner_lines_restored)
+            inner_html, _ = md_body_to_html("# placeholder\n" + inner_md)
+            out.append(start_tag + inner_html + tail_inline + end_tag)
             continue
 
         # 标题
@@ -576,21 +662,26 @@ def ensure_tables_wrapped(content: str) -> str:
 
 
 def card_page(html_path: Path, md_path: Path, crumbs, subject: str, back_label: str,
-              idx: dict):
-    """换肤保留内容：重写单个卡片 HTML"""
-    old = read_text(html_path) if html_path.exists() else ""
-    content = extract_card_content(old)
+              idx: dict, card_id: str = None):
+    """md 为唯一源：由 md 重新生成卡片正文（不再从旧 HTML 提取，避免内容漂移）"""
+    text = read_text(md_path)
+    content, meta = md_body_to_html(text)
     content = ensure_tables_wrapped(content)
     content = fix_content_links(content, html_path.parent, idx)
     title = md_title(md_path)
-    meta = parse_md_meta(md_path)
+    if not meta:
+        meta = parse_md_meta(md_path)
     prefix = rel_prefix(html_path)
+    # 每用户进度：data-card-id + 三键标记占位（仅知识卡片，文档页不传 card_id）
+    card_attr = f' data-card-id="{esc(card_id)}"' if card_id else ""
+    widget = '<div id="kb-progress-widget"></div>' if card_id else ""
 
-    body = f'''<div class="kb-wrap kb-wrap--narrow">
+    body = f'''<div class="kb-wrap kb-wrap--narrow"{card_attr}>
 {breadcrumb_html(crumbs)}
 <h1 class="kb-title">{esc(title)}</h1>
 {badges_html(meta)}
 {extra_meta_note(meta)}
+{widget}
 <article class="kb-content">
 {CONTENT_START}
 {content}
@@ -608,7 +699,7 @@ def card_page(html_path: Path, md_path: Path, crumbs, subject: str, back_label: 
 
 
 def generate_card_from_md(md_path: Path, html_path: Path, crumbs, subject: str,
-                          back_label: str, idx: dict):
+                          back_label: str, idx: dict, card_id: str = None):
     """md → 新卡片页（无既有 HTML 的方法卡片 / 文档页）"""
     text = read_text(md_path)
     content, meta = md_body_to_html(text)
@@ -617,12 +708,16 @@ def generate_card_from_md(md_path: Path, html_path: Path, crumbs, subject: str,
     if not meta:  # 文档页：再试一次元信息（保险）
         meta = parse_md_meta(md_path)
     prefix = rel_prefix(html_path)
+    # 每用户进度：data-card-id + 三键标记占位（仅知识卡片，文档页不传 card_id）
+    card_attr = f' data-card-id="{esc(card_id)}"' if card_id else ""
+    widget = '<div id="kb-progress-widget"></div>' if card_id else ""
 
-    body = f'''<div class="kb-wrap kb-wrap--narrow">
+    body = f'''<div class="kb-wrap kb-wrap--narrow"{card_attr}>
 {breadcrumb_html(crumbs)}
 <h1 class="kb-title">{esc(title)}</h1>
 {badges_html(meta)}
 {extra_meta_note(meta)}
+{widget}
 <article class="kb-content">
 {CONTENT_START}
 {content}
@@ -861,6 +956,8 @@ def build_review_index():
 {breadcrumb_html([("首页", prefix + "index.html"), ("复盘追踪", None)])}
 <h1 class="kb-title">📊 复盘追踪</h1>
 <p style="color:var(--text-2);margin:0 0 20px">知识掌握状态表 · 学习进度追踪</p>
+<div id="kb-progress-dashboard"></div>
+<h2 class="kb-section-title">📋 静态状态表（md 口径）</h2>
 <div class="kb-list">
 {"".join(items)}
 </div>
@@ -1139,6 +1236,11 @@ def main():
     generated_cards = 0
     generated_docs = 0
     idx = build_file_index()
+    cards_manifest = {}  # cardId -> {"s": 科目, "d": 维度}，供 assets/kb-cards.js
+
+    def card_id_of(md_path: Path) -> str:
+        """每用户进度的卡片 ID：md 相对仓库根目录路径去 .md 后缀（POSIX 分隔符）"""
+        return md_path.relative_to(ROOT).with_suffix("").as_posix()
 
     # ---- 1. 六科卡片：换肤保留内容 ----
     for subject in SUBJECTS:
@@ -1146,15 +1248,17 @@ def main():
             dim_dir = ROOT / subject / dim
             for md_path in list_cards(dim_dir):
                 html_path = md_path.with_suffix(".html")
+                cid = card_id_of(md_path)
+                cards_manifest[cid] = {"s": subject, "d": dim}
                 crumbs = [("首页", rel_prefix(html_path) + "index.html"),
                           (subject, "../index.html"),
                           (dim, "./index.html"),
                           (md_title(md_path), None)]
                 if html_path.exists():
-                    card_page(html_path, md_path, crumbs, subject, dim, idx)
+                    card_page(html_path, md_path, crumbs, subject, dim, idx, card_id=cid)
                     rebuilt_cards += 1
                 else:
-                    generate_card_from_md(md_path, html_path, crumbs, subject, dim, idx)
+                    generate_card_from_md(md_path, html_path, crumbs, subject, dim, idx, card_id=cid)
                     generated_cards += 1
 
     # ---- 2. 方法卡片（含 6 张无 HTML 的） ----
@@ -1163,27 +1267,31 @@ def main():
         if md_path.name.startswith("索引_"):
             continue
         html_path = md_path.with_suffix(".html")
+        cid = card_id_of(md_path)
+        cards_manifest[cid] = {"s": "方法", "d": "通用方法"}
         crumbs = [("首页", rel_prefix(html_path) + "index.html"),
                   ("方法", "./index.html"),
                   (md_title(md_path), None)]
         if html_path.exists():
-            card_page(html_path, md_path, crumbs, "方法", "方法体系", idx)
+            card_page(html_path, md_path, crumbs, "方法", "方法体系", idx, card_id=cid)
             rebuilt_cards += 1
         else:
-            generate_card_from_md(md_path, html_path, crumbs, "方法", "方法体系", idx)
+            generate_card_from_md(md_path, html_path, crumbs, "方法", "方法体系", idx, card_id=cid)
             generated_cards += 1
     for cat in METHOD_CATS:
         for md_path in list_cards(mdir / cat):
             html_path = md_path.with_suffix(".html")
+            cid = card_id_of(md_path)
+            cards_manifest[cid] = {"s": "方法", "d": cat}
             crumbs = [("首页", rel_prefix(html_path) + "index.html"),
                       ("方法", "../index.html"),
                       (cat, "./index.html"),
                       (md_title(md_path), None)]
             if html_path.exists():
-                card_page(html_path, md_path, crumbs, "方法", cat, idx)
+                card_page(html_path, md_path, crumbs, "方法", cat, idx, card_id=cid)
                 rebuilt_cards += 1
             else:
-                generate_card_from_md(md_path, html_path, crumbs, "方法", cat, idx)
+                generate_card_from_md(md_path, html_path, crumbs, "方法", cat, idx, card_id=cid)
                 generated_cards += 1
 
     # ---- 3. 文档页：根目录管理文档 / 各科索引 / 复盘状态表 ----
@@ -1240,6 +1348,11 @@ def main():
 
     # ---- 5. 假期复习总入口换肤 ----
     reskin_holiday_entry()
+
+    # ---- 5.5 每用户进度：卡片清单（复盘追踪页仪表盘数据源） ----
+    cards_js = "window.KB_CARDS = " + json.dumps(
+        cards_manifest, ensure_ascii=False, sort_keys=True) + ";\n"
+    write_text(ROOT / "assets" / "kb-cards.js", cards_js)
 
     # ---- 6. 链接校验 ----
     broken = check_links()

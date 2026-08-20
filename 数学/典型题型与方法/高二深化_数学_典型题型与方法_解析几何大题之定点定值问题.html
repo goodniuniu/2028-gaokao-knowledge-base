@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【卡片标题】解析几何大题之定点定值问题 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow" data-card-id="数学/典型题型与方法/高二深化_数学_典型题型与方法_解析几何大题之定点定值问题">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【卡片标题】解析几何大题之定点定值问题</span></li></ol>
+<h1 class="kb-title">【卡片标题】解析几何大题之定点定值问题</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2021新高考Ⅰ卷·第21题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（新高考Ⅰ卷解析几何常考）· 压轴 · 设参→韦达→消参得斜率和为定值 · 真题锚定：2021新高考Ⅰ卷T21（定点定值/双曲线）</div>
+<div id="kb-progress-widget"></div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;</td><td>TA</td><td>·</td><td>TB</td><td>=</td><td>TP</td><td>·</td><td>TQ</td><td>&quot;等乘积相等</td><td>定值（斜率和/积）</td><td>设两直线斜率k₁,k₂，韦达表示后令其和为常数</td></tr><tr><td>&quot;证明直线过定点&quot;</td><td>定点问题</td><td>写出直线系 y-y₀=k(x-x₀)，证与k无关</td></tr><tr><td>&quot;求两斜率之和/积&quot;</td><td>定值问题</td><td>用韦达定理表示斜率，化简消参</td></tr><tr><td>点在定直线上运动（如 x=1/2）</td><td>参数化该点</td><td>设 T(t₀, y₀) 减少变量</td></tr><tr><td>双曲线/椭圆+两割线</td><td>联立两组韦达</td><td>分别求 k₁,k₂ 表达式再比较</td></tr></table></div>
+<h3>解题路径（定点定值四步法）</h3>
+<h4>第一步：设参</h4>
+<p>设动直线斜率 k₁,k₂（或定点坐标），写出直线方程。</p>
+<h4>第二步：联立韦达</h4>
+<p>分别联立两组直线与曲线，写出各组 x₁+x₂、x₁x₂ 及斜率表达式。</p>
+<h4>第三步：列式</h4>
+<p>依题设等式（如 |TA|·|TB|=|TP|·|TQ|）转化为关于 k₁,k₂ 的代数关系。</p>
+<h4>第四步：消参定值</h4>
+<p>利用韦达定理消去交点坐标，化简得 k₁+k₂（或 k₁k₂）为常数，或直线过定点。</p>
+<h3>母题（2021 新高考Ⅰ卷·第21题，12分）</h3>
+<p><strong>题目</strong>：已知点F₁(-√7,0), F₂(√7,0)，点M满足 |MF₁|-|MF₂|=2，记M的轨迹为C。 (1) 求C的方程；(2) 设点T在直线 x=1/2 上，过T的两条直线分别交C于A,B两点和P,Q两点，且 |TA|·|TB|=|TP|·|TQ|，求直线AB的斜率与直线PQ的斜率之和。</p>
+<p><strong>解析</strong>： (1) 由双曲线定义，C为焦点在x轴的双曲线右支，c=√7, a=1，b²=6，故 <strong>C: x² - y²/6 = 1 (x≥1)</strong>。 (2) 设 T(1/2, t)，直线AB: y-t=k₁(x-1/2)，联立C得 (6-k₁²)x² - k₁(2t-k₁)x - (t-k₁/2)² - 6 = 0（整理略）。 由弦的性质 |TA|·|TB| 可用韦达定理表示；同理对PQ（斜率k₂）。 由 |TA|·|TB|=|TP|·|TQ| 化简得关于 k₁,k₂ 的关系，最终推出 <strong>k₁ + k₂ = 0</strong>（定值）。 即直线AB与PQ的斜率之和恒为 0。</p>
+<p><strong>关键提炼</strong>：乘积相等类条件，经韦达转化后往往消参得到&quot;斜率和为0&quot;的对称定值。</p>
+<hr>
+<h2>自测训练（3道·覆盖韦达消参 + 斜率积定值 + 距离定值）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 第二步·联立韦达 + 第四步·消参证斜率积定值）</p>
+<p>已知抛物线 $C: y^2=4x$，过点 $P(2,0)$ 的直线 $l$ 交 $C$ 于 $A(x_1,y_1)$、$B(x_2,y_2)$ 两点。记 $OA$、$OB$ 的斜率分别为 $k_{OA}$、$k_{OB}$。 (1) 用 $x_1$、$x_2$ 表示 $k_{OA}\cdot k_{OB}$； (2) 证明：$k_{OA}\cdot k_{OB}$ 为定值，并求该定值。</p>
+<p><strong>第2题</strong>（检验 第三步·列等式 + 第四步·消参证距离定值）</p>
+<p>已知椭圆 $E: \dfrac{x^2}{4}+y^2=1$，点 $A(x_1,y_1)$、$B(x_2,y_2)$ 在椭圆上，且 $OA\perp OB$（$O$ 为原点）。设直线 $AB$ 的方程为 $y=kx+t$。 (1) 设直线 $AB$ 与椭圆交于 $A$、$B$，用 $k$、$t$ 表示 $x_1x_2+y_1y_2$； (2) 由 $OA\perp OB$ 推出 $k$ 与 $t$ 的关系，并求原点 $O$ 到直线 $AB$ 的距离 $d$（用 $k$、$t$ 表示），证明 $d$ 为定值。</p>
+<p><strong>第3题</strong>（检验 韦达消参 + 倒数和定值综合）</p>
+<p>已知椭圆 $E: \dfrac{x^2}{2}+y^2=1$，$O$ 为原点，$A$、$B$ 在椭圆上且 $OA\perp OB$（即 $k_{OA}\cdot k_{OB}=-1$）。 (1) 用 $k_{OA}$ 表示 $|OA|^2$； (2) 证明：$\dfrac{1}{|OA|^2}+\dfrac{1}{|OB|^2}$ 为定值，并求该定值。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_椭圆双曲线抛物线.html">椭圆双曲线抛物线</a> — 双曲线定义与标准方程</li>
+<li><a href="高二深化_数学_典型题型与方法_解析几何大题之弦长与面积最值.html">解析几何大题之弦长与面积最值</a> — 同模块最值问题</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>定值问题核心：&quot;设参→韦达→列等式→消参得常数&quot;，切莫猜定点。</li>
+<li>易错：双曲线只取右支（x≥1），交点存在性需 Δ&gt;0 且 x&gt;0。</li>
+<li>广东卷偏好&quot;生活/科技情境包装&quot;，但模型仍是标准韦达联立。</li>
+</ul>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（联立韦达 + 消参证斜率积定值）</summary><p><strong>(1)</strong> 直线 $l$ 过 $P(2,0)$，设 $l\!:\ x=my+2$（$m$ 为参数，含斜率不存在情形）。代入 $y^2=4x$： $$y^2=4(my+2)\implies y^2-4my-8=0$$</p>
+<p>由韦达定理：$y_1+y_2=4m$，$y_1y_2=-8$。</p>
+<p>因 $A$ 在抛物线上，$x_1=\dfrac{y_1^2}{4}$；同理 $x_2=\dfrac{y_2^2}{4}$。故 $$k_{OA}=\frac{y_1}{x_1}=\frac{4}{y_1},\qquad k_{OB}=\frac{y_2}{x_2}=\frac{4}{y_2}$$ $$k_{OA}\cdot k_{OB}=\frac{16}{y_1y_2}=\frac{16}{-8}=\boxed{-2}$$</p>
+<p><strong>(2)</strong> 由(1)已得 $k_{OA}\cdot k_{OB}=-2$，与参数 $m$ 无关（只要直线 $l$ 与抛物线有两个交点，即 $\Delta=16m^2+32>0$ 恒成立）。$\boxed{\text{定值为 }-2}$。</p>
+<blockquote><p><strong>易错提醒</strong>：抛物线上一点 $(x_0,y_0)$ 的 $k_{OP}=\dfrac{y_0}{x_0}=\dfrac{4}{y_0}$（用 $y_0^2=4x_0$ 代换），斜率乘积 $k_{OA}\cdot k_{OB}=\dfrac{16}{y_1y_2}$ 直接由韦达得出，不必逐点算。</p></blockquote></details>
+<details><summary>▶ 第2题详解（韦达消参证距离定值）</summary><p><strong>(1)</strong> 直线 $AB\!:\ y=kx+t$，代入 $\dfrac{x^2}{4}+y^2=1$： $$\frac{x^2}{4}+(kx+t)^2=1\implies(1+4k^2)x^2+8ktx+4t^2-4=0$$</p>
+<p>由韦达定理：$x_1+x_2=\dfrac{-8kt}{1+4k^2}$，$x_1x_2=\dfrac{4t^2-4}{1+4k^2}$。</p>
+<p>$$y_1y_2=(kx_1+t)(kx_2+t)=k^2x_1x_2+kt(x_1+x_2)+t^2$$</p>
+<p>代入韦达结果： $$y_1y_2=\frac{k^2(4t^2-4)}{1+4k^2}+\frac{-8k^2t^2}{1+4k^2}+t^2=\frac{4k^2t^2-4k^2-8k^2t^2+t^2+4k^2t^2}{1+4k^2}=\frac{t^2-4k^2}{1+4k^2}$$</p>
+<p>因此 $$\boxed{x_1x_2+y_1y_2=\frac{4t^2-4+t^2-4k^2}{1+4k^2}=\frac{5t^2-4k^2-4}{1+4k^2}}$$</p>
+<p><strong>(2)</strong> 由 $OA\perp OB$ 得 $x_1x_2+y_1y_2=0$，即 $5t^2-4k^2-4=0$，故 $t^2=\dfrac{4(1+k^2)}{5}$。</p>
+<p>原点 $O$ 到直线 $kx-y+t=0$（即 $y=kx+t$）的距离： $$d=\frac{|t|}{\sqrt{1+k^2}}=\frac{\sqrt{\dfrac{4(1+k^2)}{5}}}{\sqrt{1+k^2}}=\frac{2}{\sqrt5}=\boxed{\dfrac{2\sqrt5}{5}}$$</p>
+<p>与 $k$、$t$ 无关，为定值。</p>
+<blockquote><p><strong>易错提醒</strong>：椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ 上 $A$、$B$ 满足 $OA\perp OB$ 时，原点 $O$ 到直线 $AB$ 的距离 $d=\dfrac{ab}{\sqrt{a^2+b^2}}$（定值）。本题 $a=2,b=1$，$d=\dfrac{2}{\sqrt5}=\dfrac{2\sqrt5}{5}$，记住这个经典结论可秒杀此类题。</p></blockquote></details>
+<details><summary>▶ 第3题详解（韦达消参 + 倒数和定值）</summary><p><strong>(1)</strong> 设 $k_{OA}=k_1$，直线 $OA\!:\ y=k_1x$ 代入 $\dfrac{x^2}{2}+y^2=1$： $$\frac{x^2}{2}+k_1^2x^2=1\implies x^2=\frac{2}{1+2k_1^2}$$</p>
+<p>$$|OA|^2=x^2+y^2=x^2(1+k_1^2)=\frac{2(1+k_1^2)}{1+2k_1^2}$$ $$\boxed{|OA|^2=\frac{2(1+k_1^2)}{1+2k_1^2}}$$</p>
+<p><strong>(2)</strong> 设 $k_{OB}=k_2$。$OA\perp OB$ 即 $k_1k_2=-1$，故 $k_2=-\dfrac{1}{k_1}$，$k_2^2=\dfrac{1}{k_1^2}$。</p>
+<p>$$|OB|^2=\frac{2(1+k_2^2)}{1+2k_2^2}=\frac{2\!\left(1+\dfrac{1}{k_1^2}\right)}{1+\dfrac{2}{k_1^2}}=\frac{2(k_1^2+1)}{k_1^2+2}$$</p>
+<p>$$\frac{1}{|OA|^2}+\frac{1}{|OB|^2}=\frac{1+2k_1^2}{2(1+k_1^2)}+\frac{k_1^2+2}{2(k_1^2+1)}=\frac{(1+2k_1^2)+(k_1^2+2)}{2(1+k_1^2)}=\frac{3+3k_1^2}{2(1+k_1^2)}$$ $$\boxed{\frac{1}{|OA|^2}+\frac{1}{|OB|^2}=\frac{3}{2}}$$</p>
+<blockquote><p><strong>易错提醒</strong>：椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ 中，$OA\perp OB$（即 $k_1k_2=-1$）时 $\dfrac{1}{|OA|^2}+\dfrac{1}{|OB|^2}=\dfrac{1}{a^2}+\dfrac{1}{b^2}$ 为定值。本题 $a^2=2$，$b^2=1$，定值 $=\dfrac{1}{2}+1=\dfrac{3}{2}$，记住这个经典结论可秒杀此类题。</p></blockquote></details>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+<script src="../../assets/kb-progress.js" defer></script>
+</body>
+</html>

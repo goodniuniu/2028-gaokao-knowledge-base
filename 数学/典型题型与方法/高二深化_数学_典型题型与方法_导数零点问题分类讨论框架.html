@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>导数零点问题分类讨论框架 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow" data-card-id="数学/典型题型与方法/高二深化_数学_典型题型与方法_导数零点问题分类讨论框架">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">导数零点问题分类讨论框架</span></li></ol>
+<h1 class="kb-title">导数零点问题分类讨论框架</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东 / #新高考Ⅰ卷·江苏</span><span class="kb-badge kb-badge--src">来源：2024年新课标Ⅰ卷第18题(3) / 2020-2024新高考Ⅰ卷导数零点类真题归纳</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（导数压轴核心子问题）· 中档偏难 · &quot;讨论零点个数/符号区间&quot;需按导数零点与参数分类 · 真题锚定：2024新高考Ⅰ卷T18(3)（f(x)&gt;-2当且仅当1&lt;x&lt;2，求b）</div>
+<div id="kb-progress-widget"></div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<blockquote><p><strong>本质理解</strong>：导数零点问题 = 分析&quot;导函数符号如何随参数变化&quot;，进而确定原函数单调性、极值、零点/符号区间。核心口诀：<strong>先找导函数零点，再按零点位置分类</strong>。</p></blockquote>
+<hr>
+<h3>题型识别标志</h3>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;讨论 $f(x)$ 的零点个数&quot;</td><td>零点个数讨论</td><td>求导→分类→极值正负定个数</td></tr><tr><td>&quot; $f(x)>c$ 当且仅当 $m<x<n$ &quot;</td><td>符号区间+充要</td><td>边界即解/端点效应定参，再证单调性</td></tr><tr><td>&quot;有且仅有一个零点&quot;</td><td>唯一零点</td><td>极值=0 或单调穿过</td></tr><tr><td>含参 $b$ 且导函数含 $(x-x_0)^2$ 因子</td><td>分类讨论 $b$</td><td>看 $b$ 对导函数符号的影响</td></tr></table></div>
+<hr>
+<h3>标准化解题路径（导函零点分类五步法）</h3>
+<h4>第一步：求导并因式分解</h4>
+<p>如 $g'(x)=\frac{2}{x(2-x)}+3b(x-1)^2=(x-1)^2\left[\frac{2}{x(2-x)(x-1)^2}+3b\right]$，提取公因式看&quot;不变号因子&quot;。</p>
+<h4>第二步：确定不变量</h4>
+<p>$(x-1)^2\ge0$ 恒非负，故符号由方括号内 $h(x)=\frac{2}{x(2-x)}+3b$ 决定。</p>
+<h4>第三步：分析 $h(x)$ 单调性</h4>
+<p>$h'(x)$ 判得 $h(x)$ 在 $(1,2)$ 单调增，故只需看端点 $h(1)=2+3b$。</p>
+<h4>第四步：按参数分类</h4>
+<ul>
+<li>$b<-\frac23$ ⇒ $h(1)<0$ ⇒ 存在零点使 $g$ 递减 ⇒ 不符；</li>
+<li>$b\ge-\frac23$ ⇒ $g'(x)\ge0$ ⇒ $g$ 单调增 ⇒ 符号区间唯一。</li>
+</ul>
+<h4>第五步：回扣充要条件</h4>
+<p>结合边界 $g(1)=0$，得 $g(x)>0\Leftrightarrow 1<x<2$，从而 $b\in[-\frac23,+\infty)$。</p>
+<hr>
+<h3>真题母题（2024 新课标Ⅰ卷·第18题(3)，6分）</h3>
+<p><strong>题目</strong>：已知函数 $f(x)=\ln\frac{x}{2-x}+ax+b(x-1)^3$，若 $f(x)>-2$ 当且仅当 $1<x<2$，求 $b$ 的取值范围。</p>
+<p><strong>解析</strong>：令 $g(x)=f(x)+2$，题意即 $g(x)>0\Leftrightarrow x\in(1,2)$。 由边界 $x=1$ 是解且为端点得 $g(1)=0\Rightarrow a=-2$。 $$g'(x)=\frac{2}{x(2-x)}+3b(x-1)^2=(x-1)^2\left[\frac{2}{x(2-x)(x-1)^2}+3b\right]$$ 方括号内 $h(x)=\frac{2}{x(2-x)}+3b$ 在 $(1,2)$ 单调增，$h(1)=2+3b$。</p>
+<ul>
+<li>若 $b<-\frac23$：$h(1)<0$，存在 $x_0\in(1,2)$ 使 $g$ 在 $(1,x_0)$ 递减，$g(x)<g(1)=0$，不符；</li>
+<li>若 $b\ge-\frac23$：$g'(x)\ge0$（仅 $x=1$ 取等），$g$ 在 $(1,2)$ 单调增，由 $g(1)=0$ 得 $g(x)>0\Leftrightarrow1<x<2$，符合。</li>
+</ul>
+<p>故 <strong>$b\in[-\frac23,+\infty)$</strong>。</p>
+<p><strong>关键提炼</strong>：分类的&quot;分水岭&quot;是导函数零点是否落在区间内；遇到 $(x-x_0)^2$ 因子先提公因子，可大幅简化讨论。</p>
+<hr>
+<h2>自测训练（3道·覆盖分类讨论五步法）</h2>
+<blockquote><p>检验目标：能否在求导后正确提取&quot;不变号因子&quot;，再按参数对&quot;变号部分&quot;进行分类，最后回扣充要条件。<strong>先独立完成，再展开卡片末尾「参考答案」核对</strong>。每题标注了所检验的步骤，方便对号入座查漏补缺。</p></blockquote>
+<p><strong>第1题</strong>（检验 零点个数讨论·基础）</p>
+<p>已知函数 $f(x)=\dfrac{1}{3}x^3-x^2+a$（$a\in\mathbb{R}$）。讨论 $f(x)$ 的零点个数。</p>
+<p><strong>第2题</strong>（检验 因式分解 + 参数分类·中档）</p>
+<p>已知函数 $f(x)=x\ln x-\dfrac{a}{2}x^2$（$a\in\mathbb{R}$，$x>0$）。讨论 $f(x)$ 的单调性。</p>
+<p><strong>第3题</strong>（检验 当且仅当型充要·压轴，2024 新课标Ⅰ卷风格）</p>
+<p>已知函数 $f(x)=e^{x}-ax-b$（$a,b\in\mathbb{R}$）。若 $f(x)>0$ 当且仅当 $x>0$，求 $a$、$b$ 的值。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="高二深化_数学_典型题型与方法_恒成立与存在性问题通法.html">高二深化_数学_典型题型与方法_恒成立与存在性问题通法</a> — 恒成立/存在性（前置基础）</li>
+<li><a href="高三冲刺_数学_典型题型与方法_2024新课标Ⅰ卷第18题（导数压轴）精析.html">高三冲刺_数学_典型题型与方法_2024新课标Ⅰ卷第18题（导数压轴）精析</a> — 同真题T18完整精析</li>
+<li><a href="../素材与拓展/高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向.html">高三冲刺_数学_素材与拓展_2024-2025新高考Ⅰ卷导数压轴题新动向</a> — 导数压轴新动向总览</li>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系.html">高二深化_数学_核心知识网络_导数与函数单调性、极值最值体系</a> — 单调性/极值理论体系</li>
+</ul>
+<hr>
+<ul>
+<li><a href="../素材与拓展/高三冲刺_数学_素材与拓展_泰勒展开与凸凹性放缩技巧.html">泰勒展开与凸凹性放缩技巧</a></li>
+</ul>
+<h2>备注</h2>
+<ul>
+<li>导数零点分类讨论是压轴题&quot;标配子能力&quot;，与极值点偏移、隐零点同属&quot;导数工具性&quot;考查。</li>
+<li>常见漏讨论点：① 导函数零点恰为区间端点；② $(x-x_0)^2$ 型因子的非负性；③ 参数使导函数恒非负（退化为单调）。</li>
+<li>训练建议：先做&quot;求零点个数&quot;10题，再做&quot;当且仅当&quot;型充要讨论5题。</li>
+</ul>
+<blockquote><p>🏷️ 标签：<code>#数学</code> <code>#典型题型与方法</code> <code>#高二深化</code> <code>#难度4</code> <code>#导数</code> <code>#零点</code> <code>#分类讨论</code> <code>#符号区间</code> <code>#新高考Ⅰ卷</code> <code>#广东</code></p></blockquote>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（零点个数讨论·基础）</summary><p><strong>第一步：求导</strong></p>
+<p>$f(x)=\dfrac{1}{3}x^3-x^2+a$，$f'(x)=x^2-2x=x(x-2)$。$f'(x)=0\Rightarrow x=0$ 或 $x=2$。</p>
+<p><strong>第二步：列表判单调性与极值</strong></p>
+<div class="table-wrap"><table><tr><th>$x$</th><th>$(-\infty,0)$</th><th>$0$</th><th>$(0,2)$</th><th>$2$</th><th>$(2,+\infty)$</th></tr><tr><td>$f'(x)$</td><td>$+$</td><td>$0$</td><td>$-$</td><td>$0$</td><td>$+$</td></tr><tr><td>$f(x)$</td><td>↗</td><td>极大</td><td>↘</td><td>极小</td><td>↗</td></tr></table></div>
+<p>$f(0)=a$（极大值），$f(2)=\dfrac{8}{3}-4+a=a-\dfrac{4}{3}$（极小值）。</p>
+<p><strong>第三步：按极值正负分类</strong></p>
+<p>由于 $\lim_{x\to-\infty}f(x)=-\infty$，$\lim_{x\to+\infty}f(x)=+\infty$，结合两个极值点：</p>
+<ul>
+<li><strong>情形①</strong>：$f(0)<0$（即 $a<0$）——极大值在 $x$ 轴下方。$f$ 从 $-\infty$ 增到 $f(0)<0$（不过零），再减到 $f(2)<f(0)<0$（不过零），再增到 $+\infty$（过一次零）。<strong>1 个零点</strong>。</li>
+<li><strong>情形②</strong>：$f(0)=0$（即 $a=0$）——极大值恰在 $x$ 轴上。$f$ 从 $-\infty$ 增到 $f(0)=0$（切零点 $x=0$），再减到 $f(2)=-\dfrac{4}{3}<0$，再增到 $+\infty$。$x=0$ 是二重根（切），右侧再过一次零。<strong>2 个零点</strong>（$x=0$ 与另一正根）。</li>
+<li><strong>情形③</strong>：$f(2)<0<f(0)$（即 $0<a<\dfrac{4}{3}$）——极大值正、极小值负。$f$ 从 $-\infty$ 增到 $f(0)>0$（过一次零），减到 $f(2)<0$（过一次零），增到 $+\infty$（过一次零）。<strong>3 个零点</strong>。</li>
+<li><strong>情形④</strong>：$f(2)=0$（即 $a=\dfrac{4}{3}$）——极小值恰在 $x$ 轴上。$f$ 从 $-\infty$ 增到 $f(0)=\dfrac{4}{3}>0$（过一次零），减到 $f(2)=0$（切零点 $x=2$），增到 $+\infty$。<strong>2 个零点</strong>（$x=2$ 二重切与一负根）。</li>
+<li><strong>情形⑤</strong>：$f(2)>0$（即 $a>\dfrac{4}{3}$）——两个极值都在 $x$ 轴上方。$f$ 从 $-\infty$ 增到 $f(0)>0$（过一次零），再两个极值均在上方（不过零），增到 $+\infty$。<strong>1 个零点</strong>。</li>
+</ul>
+<p><strong>答</strong>：</p>
+<ul>
+<li>$a<0$ 或 $a>\dfrac{4}{3}$：1 个零点；</li>
+<li>$a=0$ 或 $a=\dfrac{4}{3}$：2 个零点；</li>
+<li>$0<a<\dfrac{4}{3}$：3 个零点。</li>
+</ul>
+<blockquote><p><strong>易错提醒</strong>：① 极值恰在 $x$ 轴上时（$f(0)=0$ 或 $f(2)=0$），该点为二重根（切而非穿），零点个数要单独计；② 分类的关键是&quot;极大值与极小值的正负&quot;，用 $f(0)$ 和 $f(2)$ 作为分水岭；③ 三次函数两端 $\to\mp\infty$，故至少 1 个零点，不会出现&quot;0 个零点&quot;情形。</p></blockquote></details>
+<details><summary>▶ 第2题详解（因式分解 + 参数分类·中档）</summary><p><strong>第一步：求导并因式分解</strong></p>
+<p>$f(x)=x\ln x-\dfrac{a}{2}x^2$（$x>0$）， $$f'(x)=\ln x+1-ax$$</p>
+<p>无法直接因式分解，但可提取结构：$f'(x)=\ln x+1-ax$。</p>
+<p><strong>第二步：按 $a$ 的符号分类</strong></p>
+<ul>
+<li><strong>情形① $a\le 0$</strong>：$-ax\ge 0$，$f'(x)=\ln x+1+(-ax)\ge \ln x+1$。当 $x\ge e^{-1}$ 时 $\ln x+1\ge 0$，$f'(x)\ge 0$；当 $0<x<e^{-1}$ 时 $\ln x+1<0$，需看 $-ax$ 能否补偿。若 $a=0$，$f'(x)=\ln x+1$，$f$ 在 $(0,e^{-1})$ 减、$(e^{-1},+\infty)$ 增。若 $a<0$，$-ax>0$ 且随 $x\to 0^+$ 趋于 $0$（$-ax\to 0$），但 $\ln x\to-\infty$，故 $f'(x)\to-\infty$（$x\to 0^+$）；$x\to+\infty$ 时 $-ax\to+\infty$ 主导，$f'(x)\to+\infty$。$f''(x)=\dfrac{1}{x}-a>0$（$a\le 0$，$x>0$），$f'(x)$ 单调增，唯一零点，$f$ 先减后增。</li>
+<li><strong>情形② $a>0$</strong>：$f'(x)=\ln x+1-ax$。$f''(x)=\dfrac{1}{x}-a$，$f''(x)=0\Rightarrow x=\dfrac{1}{a}$。当 $0<x<\dfrac{1}{a}$ 时 $f''>0$（$f'$ 增），$x>\dfrac{1}{a}$ 时 $f''<0$（$f'$ 减），$f'(x)$ 在 $x=\dfrac{1}{a}$ 取最大值 $f'\!\left(\dfrac{1}{a}\right)=\ln\dfrac{1}{a}+1-1=-\ln a$。</li>
+<ul>
+<li><strong>子情形②a $a<1$</strong>（即 $-\ln a>0$）：$f'(x)_{\max}=-\ln a>0$。又 $f'(x)\to-\infty$（$x\to 0^+$，因 $\ln x\to-\infty$），$f'(x)\to-\infty$（$x\to+\infty$，因 $-ax$ 主导），$f'$ 有两个零点 $x_1<\dfrac{1}{a}<x_2$。$f$ 在 $(0,x_1)$ 减、$(x_1,x_2)$ 增、$(x_2,+\infty)$ 减。</li>
+<li><strong>子情形②b $a=1$</strong>：$f'(x)_{\max}=0$，$f'(x)\le 0$（仅 $x=1$ 取等），$f$ 在 $(0,+\infty)$ 单调递减。</li>
+<li><strong>子情形②c $a>1$</strong>：$f'(x)_{\max}=-\ln a<0$，$f'(x)<0$ 恒成立，$f$ 在 $(0,+\infty)$ 单调递减。</li>
+</ul>
+</ul>
+<p><strong>答</strong>：</p>
+<ul>
+<li>$a\le 0$：$f$ 在 $(0,e^{-1})$ 减（$a=0$）或先减后增（$a<0$，唯一极小值点）；</li>
+<li>$0<a<1$：$f$ 在 $(0,x_1)$ 减、$(x_1,x_2)$ 增、$(x_2,+\infty)$ 减（两零点 $x_1<x_2$）；</li>
+<li>$a\ge 1$：$f$ 在 $(0,+\infty)$ 单调递减。</li>
+</ul>
+<blockquote><p><strong>易错提醒</strong>：① $f'(x)=\ln x+1-ax$ 虽无法因式分解，但可通过 $f''(x)$ 分析 $f'$ 的单调性，再由 $f'$ 的极值正负定零点个数；② $a$ 的分类分水岭是 $f'(x)_{\max}=-\ln a$ 的符号，即 $a=1$（不是 $a=0$）；③ $a\le 0$ 时 $f''(x)>0$ 保证 $f'$ 单调增，$a>0$ 时 $f'$ 先增后减，结构不同。</p></blockquote></details>
+<details><summary>▶ 第3题详解（当且仅当型充要·压轴）</summary><p><strong>第一步：边界代入（端点效应）。</strong></p>
+<p>&quot;$f(x)>0$ 当且仅当 $x>0$&quot; 意味着 $x=0$ 是解集的唯一边界，且是 $f(x)=0$ 的根：</p>
+<p>$$f(0)=e^{0}-a\cdot 0-b=1-b=0\Rightarrow b=1$$</p>
+<p><strong>第二步：分析 $f(x)=e^{x}-ax-1$ 的符号。</strong></p>
+<p>$f'(x)=e^{x}-a$。</p>
+<ul>
+<li>若 $a\le 0$：$f'(x)=e^{x}-a>0$ 恒成立，$f$ 在 $\mathbb{R}$ 上严格递增。由 $f(0)=0$，故 $x>0$ 时 $f(x)>0$，$x<0$ 时 $f(x)<0$。<strong>符合&quot;$f(x)>0$ 当且仅当 $x>0$&quot;。</strong> ✓</li>
+</ul>
+<ul>
+<li>若 $a>0$：$f'(x)=0$ 有唯一解 $x_{0}=\ln a$。</li>
+<ul>
+<li>当 $0<a<1$ 时，$x_{0}=\ln a<0$，$f$ 在 $(x_{0},+\infty)$ 递增、$(-\infty,x_{0})$ 递减。$f(x_{0})=a-a\ln a-1$。由 $a-a\ln a-1<0$（$0<a<1$ 时易证），$f$ 在 $x_{0}$ 处取负值，且 $\lim_{x\to-\infty}f(x)=+\infty$，故 $f$ 在 $(-\infty,x_{0})$ 上必有一零点 $x_{1}<x_{0}<0$，此时 $x_{1}<x<0$ 段 $f(x)<0$ 但 $x<x_{1}$ 段 $f(x)>0$——出现 $x<0$ 时 $f(x)>0$ 的解，<strong>不符合题意</strong>。✗</li>
+<li>当 $a=1$ 时，$x_{0}=0$，$f$ 在 $\mathbb{R}$ 上递增（$f'(x)=e^{x}-1\ge 0$），退化为第一种情形，$b=1,a=1$ 也符合 ✓。</li>
+<li>当 $a>1$ 时，$x_{0}=\ln a>0$，$f$ 在 $x_{0}$ 处取极小值 $f(x_{0})=a(1-\ln a)-1$，类似分析可得 $f$ 在 $x<0$ 段仍有 $f(x)>0$ 的解（$f$ 在 $(-\infty,x_{0})$ 递减、$f(0)=0$、$x_{0}>0$，故 $x<0$ 时 $f(x)>f(0)=0$），<strong>不符合题意</strong>。✗</li>
+</ul>
+</ul>
+<p><strong>第三步：综合。</strong></p>
+<p>符合题意的条件是 $a\le 1$（含 $a\le 0$ 与 $a=1$ 两种），且 $b=1$。</p>
+<p>但题目进一步要求 $f(x)>0$ <strong>当且仅当</strong> $x>0$，即 $x\le 0$ 时 $f(x)\le 0$。再检验 $a\le 0$ 时 $x<0$ 段 $f(x)<0$ ✓；$a=1$ 时 $x<0$ 段 $f(x)<0$ ✓（$f$ 严格递增）。</p>
+<p><strong>答</strong>：$b=1$，$a\le 1$（即 $a\in(-\infty,1]$）。若题目进一步要求唯一答案，取 $a=1,b=1$（此时 $f(x)=e^{x}-x-1$ 是经典的 $e^{x}\ge 1+x$ 等号成立的函数）。</p>
+<blockquote><p><strong>易错提醒</strong>：① &quot;$f(x)>0$ 当且仅当 $x>0$&quot; 的核心是<strong>边界即根</strong>（$f(0)=0$ 定 $b$），再用<strong>导数符号分析</strong>确定 $a$ 的范围；② $a\le 0$ 与 $0<a\le 1$ 都要讨论，不能只取 $a=1$——这是&quot;端点效应定必要条件 + 单调性证充分性&quot;的典型流程；③ $f(x)=e^{x}-x-1$ 是 $e^{x}\ge 1+x$ 的标准构造，建议熟记。</p></blockquote></details>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+<script src="../../assets/kb-progress.js" defer></script>
+</body>
+</html>

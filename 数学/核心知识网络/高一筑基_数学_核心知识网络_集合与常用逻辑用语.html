@@ -27,26 +27,28 @@ MathJax = {
     <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
   </div>
 </nav>
-<div class="kb-wrap kb-wrap--narrow">
+<div class="kb-wrap kb-wrap--narrow" data-card-id="数学/核心知识网络/高一筑基_数学_核心知识网络_集合与常用逻辑用语">
 <ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">集合与常用逻辑用语</span></li></ol>
 <h1 class="kb-title">集合与常用逻辑用语</h1>
 <div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★☆☆☆</span><span class="kb-badge kb-badge--tag">#高一筑基</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第一册第一章</span></div>
 <div class="kb-note"><strong>广东考情</strong>：考查频率：中频（选填基础题）；难度：基础；常以集合运算与不等式解集结合命题</div>
+<div id="kb-progress-widget"></div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
 <h2>核心内容</h2>
-
 <h3>一、集合的概念与表示</h3>
 <ul>
 <li><strong>定义</strong>：研究对象称为元素，元素组成的总体叫做集合</li>
 <li><strong>元素特性</strong>：确定性、互异性、无序性</li>
 <li><strong>表示法</strong>：</li>
+<ul>
 <li>列举法：$\{a_1, a_2, a_3, \dots\}$</li>
 <li>描述法：$\{x \in A \mid P(x)\}$</li>
 <li>图示法：Venn图</li>
+</ul>
 <li><strong>常用数集</strong>：$\mathbb{N}^*$（正整数）$\subset \mathbb{N}$（自然数）$\subset \mathbb{Z}$（整数）$\subset \mathbb{Q}$（有理数）$\subset \mathbb{R}$（实数）$\subset \mathbb{C}$（复数）</li>
 </ul>
-
 <h3>二、集合间的基本关系</h3>
 <ul>
 <li><strong>子集</strong>：$A \subseteq B$（$\forall x \in A, x \in B$）</li>
@@ -55,17 +57,8 @@ MathJax = {
 <li><strong>空集</strong>：$\varnothing$ 是任何集合的子集；是任何非空集合的真子集</li>
 <li><strong>含 $n$ 个元素的集合</strong>：子集个数 $2^n$，真子集个数 $2^n-1$，非空真子集 $2^n-2$</li>
 </ul>
-
 <h3>三、集合的基本运算</h3>
-<div class="table-wrap">
-<table>
-<tr><th>运算</th><th>定义</th><th>Venn图特征</th></tr>
-<tr><td>并集 $A \cup B$</td><td>$\{x \mid x \in A$ 或 $x \in B\}$</td><td>两圆覆盖的全部区域</td></tr>
-<tr><td>交集 $A \cap B$</td><td>$\{x \mid x \in A$ 且 $x \in B\}$</td><td>两圆重叠区域</td></tr>
-<tr><td>补集 $\complement_U A$</td><td>$\{x \mid x \in U$ 且 $x \notin A\}$</td><td>全集中圆外区域</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>运算</th><th>定义</th><th>Venn图特征</th></tr><tr><td>并集 $A \cup B$</td><td>$\{x \mid x \in A$ 或 $x \in B\}$</td><td>两圆覆盖的全部区域</td></tr><tr><td>交集 $A \cap B$</td><td>$\{x \mid x \in A$ 且 $x \in B\}$</td><td>两圆重叠区域</td></tr><tr><td>补集 $\complement_U A$</td><td>$\{x \mid x \in U$ 且 $x \notin A\}$</td><td>全集中圆外区域</td></tr></table></div>
 <p><strong>运算律</strong>：</p>
 <ul>
 <li>$A \cup B = B \cup A$；$A \cap B = B \cap A$</li>
@@ -74,44 +67,70 @@ MathJax = {
 <li>$\complement_U(A \cup B) = \complement_U A \cap \complement_U B$（德摩根律）</li>
 <li>$\complement_U(A \cap B) = \complement_U A \cup \complement_U B$</li>
 </ul>
-
 <h3>四、充分条件与必要条件</h3>
 <p>设 $A = \{x \mid p(x)\}$，$B = \{x \mid q(x)\}$：</p>
-
-<div class="table-wrap">
-<table>
-<tr><th>条件关系</th><th>集合关系</th><th>口诀</th></tr>
-<tr><td>$p$ 是 $q$ 的充分不必要条件</td><td>$A \subsetneqq B$</td><td>小推大</td></tr>
-<tr><td>$p$ 是 $q$ 的必要不充分条件</td><td>$B \subsetneqq A$</td><td>大推小</td></tr>
-<tr><td>$p$ 是 $q$ 的充要条件</td><td>$A = B$</td><td>等价</td></tr>
-<tr><td>$p$ 是 $q$ 的既不充分也不必要条件</td><td>$A \not\subseteq B$ 且 $B \not\subseteq A$</td><td>无关</td></tr>
-</table>
-</div>
-
+<div class="table-wrap"><table><tr><th>条件关系</th><th>集合关系</th><th>口诀</th></tr><tr><td>$p$ 是 $q$ 的充分不必要条件</td><td>$A \subsetneqq B$</td><td>小推大</td></tr><tr><td>$p$ 是 $q$ 的必要不充分条件</td><td>$B \subsetneqq A$</td><td>大推小</td></tr><tr><td>$p$ 是 $q$ 的充要条件</td><td>$A = B$</td><td>等价</td></tr><tr><td>$p$ 是 $q$ 的既不充分也不必要条件</td><td>$A \not\subseteq B$ 且 $B \not\subseteq A$</td><td>无关</td></tr></table></div>
 <h3>五、全称量词与存在量词</h3>
 <ul>
 <li><strong>全称量词命题</strong>：$\forall x \in M, p(x)$，否定为 $\exists x \in M, \neg p(x)$</li>
 <li><strong>存在量词命题</strong>：$\exists x \in M, p(x)$，否定为 $\forall x \in M, \neg p(x)$</li>
 <li><strong>规律</strong>：全称 $\leftrightarrow$ 存在互换，结论取反</li>
 </ul>
-
 <hr>
-
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>集合交并补运算</td><td>集合运算</td><td>画数轴/Venn 图，注意端点开闭</td></tr><tr><td>含不等式解集的集合</td><td>先化简</td><td>解不等式写出区间再运算</td></tr><tr><td>充分必要条件</td><td>集合法</td><td>$A\subsetneqq B\Leftrightarrow p\Rightarrow q$（小推大）</td></tr><tr><td>全称/特称命题否定</td><td>量词互换</td><td>$\forall\leftrightarrow\exists$，结论取反</td></tr><tr><td>元素与集合、集合与集合</td><td>关系区分</td><td>区分 $\in$ 与 $\subseteq$</td></tr><tr><td>含参数的集合</td><td>空集优先</td><td>空集是任何集合子集，勿遗漏</td></tr></table></div>
+<h2>解题路径（集合运算三步）</h2>
+<h3>第一步：化简集合</h3>
+<p>解不等式、写出区间或列举元素；含参数时先分类讨论。</p>
+<h3>第二步：数形结合</h3>
+<p>在数轴上标出各集合：交集取重叠、并集取覆盖、补集取外部。</p>
+<h3>第三步：核对端点</h3>
+<p>开闭区间端点是否取到；元素是否属于要逐点验证（尤其整数集）。</p>
+<blockquote><p><strong>易错提醒</strong>：忽略区间开闭导致端点误判；混淆 $\in$ 与 $\subseteq$；含参集合漏掉空集情形。</p></blockquote>
+<h2>母题（2021 新课标Ⅰ卷·第1题，5分）</h2>
+<p><strong>题目</strong>：设集合 $A=\{x\mid -2<x<4\},\ B=\{2,3,4,5\}$，则 $A\cap B=$（　） A. $\{2\}$　B. $\{2,3\}$　C. $\{3,4\}$　D. $\{2,3,4\}$</p>
+<p><strong>解答</strong>： $A=(-2,4)$ 为开区间，$B=\{2,3,4,5\}$。 逐一检验：$2\in A$，$3\in A$，$4\notin A$（开区间不含 $4$），$5\notin A$。 故 $A\cap B=\{2,3\}$。</p>
+<p>故选 <strong>B</strong>。</p>
+<hr>
+<h2>自测训练（3道·覆盖集合运算、充分必要条件、量词否定）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 集合的交并运算）</p>
+<p>设集合 $A=\{x\mid x^2-3x+2\le0\}$，$B=\{x\mid x>1\}$，求 $A\cap B$ 和 $A\cup B$。</p>
+<p><strong>第2题</strong>（检验 充分必要条件）</p>
+<p>判断：$p:x>2$ 是 $q:x>1$ 的什么条件？（填&quot;充分不必要&quot;&quot;必要不充分&quot;&quot;充要&quot;或&quot;既不充分也不必要&quot;）</p>
+<p><strong>第3题</strong>（检验 全称量词命题的否定）</p>
+<p>写出命题&quot;$\forall x\in\mathbb{R}$，$x^2+x+1>0$&quot;的否定。</p>
+<hr>
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_函数的定义与三要素.html">函数的定义与三要素</a> — 集合是函数定义域、值域的基础</li>
 <li><a href="高一筑基_数学_核心知识网络_一元二次函数方程与不等式.html">一元二次函数方程与不等式</a> — 集合运算常与不等式解集结合</li>
 </ul>
-
 <hr>
-
 <h2>备注</h2>
 <ul>
 <li>易错点：空集是任何集合的子集，但 $\varnothing \subseteq \varnothing$ 成立，$\varnothing \in \varnothing$ 不成立</li>
 <li>广东卷常考：集合与不等式解集的综合运算，注意端点检验</li>
 <li>充分必要条件判断优先用<strong>集合法</strong>，直观不易错</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（集合运算）</summary><p>解不等式 $x^2-3x+2\le0$ 得 $(x-1)(x-2)\le0$，所以 $A=[1,2]$。</p>
+<p>$B=(1,+\infty)$。</p>
+<p>因此 $$A\cap B=(1,2],\quad A\cup B=[1,+\infty).$$</p>
+<p><strong>答</strong>：$A\cap B=(1,2]$，$A\cup B=[1,+\infty)$。</p>
+<blockquote><p><strong>易错提醒</strong>：集合运算前先化简集合；注意区间端点开闭，$B$ 中 $x>1$ 不含 $1$，所以 $A\cap B$ 不含 $1$。</p></blockquote></details>
+<details><summary>▶ 第2题详解（充分必要条件）</summary><p>若 $x>2$，则必有 $x>1$，所以 $p\Rightarrow q$，$p$ 是 $q$ 的充分条件。</p>
+<p>但 $x>1$ 时不一定有 $x>2$（如 $x=1.5$），所以 $q\nRightarrow p$。</p>
+<p>故 $p$ 是 $q$ 的<strong>充分不必要条件</strong>。</p>
+<p><strong>答</strong>：充分不必要条件。</p>
+<blockquote><p><strong>易错提醒</strong>：判断充分必要条件可用集合法：$p$ 对应集合 $A$，$q$ 对应集合 $B$，$A\subsetneqq B$ 则 $p$ 是 $q$ 的充分不必要条件。</p></blockquote></details>
+<details><summary>▶ 第3题详解（量词否定）</summary><p>全称量词命题的否定规则：$\forall$ 变 $\exists$，结论取反。</p>
+<p>所以否定为 $$\exists x\in\mathbb{R},\ x^2+x+1\le0.$$</p>
+<p><strong>答</strong>：$\exists x\in\mathbb{R}$，$x^2+x+1\le0$。</p>
+<blockquote><p><strong>易错提醒</strong>：量词否定时，&quot;$\forall$&quot;与&quot;$\exists$&quot;互换，同时结论中的不等号也要取反（$>$ 变 $\le$）。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">
@@ -121,5 +140,6 @@ MathJax = {
 <footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
 <a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
 </div>
+<script src="../../assets/kb-progress.js" defer></script>
 </body>
 </html>

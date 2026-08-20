@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【生态系统能量流动计算】四步拆表与传递效率速算 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="生物">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow" data-card-id="生物/典型题型与方法/高二深化_生物_典型题型与方法_生态系统能量流动计算">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">生物</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【生态系统能量流动计算】四步拆表与传递效率速算</span></li></ol>
+<h1 class="kb-title">【生态系统能量流动计算】四步拆表与传递效率速算</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广州一模</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2023-2024 广州市高三调研考试（广州一模层级）·第15题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频·中档·表格数据考同化量换算与传递效率·真题锚定：2024广东选择性考试T17、T20，2023广东选择性考试T13，2021广东选择性考试T17（生态能量计算）</div>
+<div id="kb-progress-widget"></div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>表格列出&quot;摄入量、同化量、呼吸消耗、粪便量&quot;</td><td>能量流动计算</td><td>同化量 = 摄入量 − 粪便量；生长繁殖 = 同化量 − 呼吸消耗</td></tr><tr><td>求&quot;第 n 营养级到第 n+1 营养级的传递效率&quot;</td><td>传递效率</td><td>下一营养级<strong>同化量</strong> ÷ 上一营养级<strong>同化量</strong> × 100%</td></tr><tr><td>问&quot;流经生态系统的总能量&quot;</td><td>总能量</td><td>生产者固定 + <strong>人工输入</strong>（鱼塘/农田有饵料、肥料）</td></tr><tr><td>问&quot;粪便中的能量属于谁、流向哪&quot;</td><td>能量归属</td><td>粪便属于<strong>上一营养级</strong>同化量，流向<strong>分解者</strong></td></tr><tr><td>&quot;至少/至多消耗生产者多少&quot;</td><td>极值计算</td><td>最短食物链 × 20% / 最长食物链 × 10%</td></tr><tr><td>&quot;某鱼增重 1kg 至少消耗第一营养级&quot;</td><td>食物链极值递推</td><td>逆向用最高效 20% 连乘</td></tr><tr><td>&quot;人工生态系统（虾池/稻田养鸭）&quot;</td><td>总能量含人工输入</td><td>千万别漏加饵料、肥料能量</td></tr></table></div>
+<h3>解题路径（能量流动计算四步法）</h3>
+<h4>第一步：厘清概念关系（必背）</h4>
+<ul>
+<li>摄入量 = 同化量 + 粪便量（粪便量<strong>未同化</strong>）</li>
+<li>同化量 = 呼吸消耗 + 用于生长、发育和繁殖的能量</li>
+<li>某营养级同化量的去向：①自身呼吸散失 ②流入下一营养级 ③被分解者分解 ④（最高营养级）无②</li>
+</ul>
+<h4>第二步：定位&quot;同化量&quot;</h4>
+<ul>
+<li>表格直接给同化量 → 直接用。</li>
+<li>只给摄入量与粪便量 → 先算：同化量 = 摄入量 − 粪便量。</li>
+<li>给示意图（方框+箭头数值）→ 框内数值 = 该营养级同化量；箭头进出要&quot;进=出+储存+呼吸&quot;。</li>
+</ul>
+<h4>第三步：算传递效率（相邻营养级，用同化量比）</h4>
+<p>$$\text{传递效率} = \frac{\text{下一营养级同化量}}{\text{上一营养级同化量}} \times 100\%$$</p>
+<blockquote><p>⚠️ 严禁用&quot;摄入量&quot;代替&quot;同化量&quot;；严禁跨营养级相除。</p></blockquote>
+<h4>第四步：极值与总能量</h4>
+<ul>
+<li>&quot;至少消耗&quot; → 选<strong>最短</strong>食物链、传递效率取 <strong>20%</strong>；&quot;至多消耗&quot; → 选<strong>最长</strong>食物链、取 <strong>10%</strong>。</li>
+<li>流经人工生态系统的总能量 = 生产者固定量 + 人工输入有机物中的能量（饵料、肥料、注入污水有机物等）。</li>
+</ul>
+<h3>母题（2023-2024 广州市高三调研考试·第15题，单选，约 2 分）</h3>
+<blockquote><p>广州调研（广州一模层级）真题，表格数据完整，是能量流动计算的经典母题。</p></blockquote>
+<p>某河流生态系统中能量情况如下表所示。下列有关叙述，正确的是（ ）</p>
+<div class="table-wrap"><table><tr><th>项目</th><th>第一营养级固定</th><th>第一营养级呼吸消耗</th><th>第二营养级摄入</th><th>第二营养级同化</th><th>第二营养级呼吸消耗</th></tr><tr><td>能量值 /(J·cm⁻²·a⁻¹)</td><td>900</td><td>580</td><td>200</td><td>72</td><td>38</td></tr></table></div>
+<p>A. 第二营养级摄入的能量来自第一营养级用于生长、发育和繁殖的能量 B. 第一营养级和第二营养级的传递效率为 22.22% C. 第二营养级用于生长、发育和繁殖等生命活动的能量为 72 J·cm⁻²·a⁻¹ D. 第二营养级排出的粪便中的能量为 128 J·cm⁻²·a⁻¹，由第二营养级流向分解者</p>
+<p><strong>解</strong>：</p>
+<ul>
+<li><strong>B 错</strong>：传递效率 = 第二营养级同化量 ÷ 第一营养级同化量 = $72 \div 900 \approx 8\%$，并非 22.22%（22.22% 是误用摄入量 200 当同化量算出的 $200/900$）。</li>
+<li><strong>C 错</strong>：用于生长、发育和繁殖的能量 = 同化量 − 呼吸消耗 = $72 - 38 = 34$ J·cm⁻²·a⁻¹，72 是同化量不是生长繁殖量。</li>
+<li><strong>D 错</strong>：粪便量 = 摄入量 − 同化量 = $200 - 72 = 128$ J·cm⁻²·a⁻¹，但粪便中的能量<strong>未被第二营养级同化</strong>，属于<strong>第一营养级</strong>同化量的一部分，应由第一营养级流向分解者，而非&quot;由第二营养级流向分解者&quot;。</li>
+<li><strong>A 对</strong>：第二营养级摄入的能量来自第一营养级现存量（即第一营养级同化量中用于生长、发育和繁殖、可被捕食积累的部分），呼吸消耗的能量不会被下一营养级摄入。</li>
+</ul>
+<p><strong>答</strong>：A</p>
+<blockquote><p>💡 <strong>关键技巧</strong>：做能量表题，先默写&quot;摄入量=同化+粪便&quot;&quot;同化=呼吸+生长繁殖&quot;两个等式，再逐项核对选项数值，八成陷阱都在&quot;把同化当摄入&quot;或&quot;粪便归属错&quot;。</p></blockquote>
+<hr>
+<h2>自测训练（3道·覆盖同化量换算/传递效率/极值计算）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验：同化量换算——摄入/同化/呼吸/粪便关系） 某生态系统中，第二营养级的数据如下：摄入量 $200\,\text{J·cm}^{-2}\text{·a}^{-1}$，粪便量 $128\,\text{J·cm}^{-2}\text{·a}^{-1}$，呼吸消耗 $38\,\text{J·cm}^{-2}\text{·a}^{-1}$。求：（1）第二营养级的同化量；（2）第二营养级用于生长、发育和繁殖的能量；（3）粪便中的能量属于哪个营养级？流向哪里？</p>
+<p><strong>第2题</strong>（检验：传递效率——相邻营养级同化量之比） 某食物链&quot;草→兔→鹰&quot;，已知草（第一营养级）固定的太阳能为 $900\,\text{J·cm}^{-2}\text{·a}^{-1}$，兔（第二营养级）同化量为 $72\,\text{J·cm}^{-2}\text{·a}^{-1}$，鹰（第三营养级）同化量为 $7.2\,\text{J·cm}^{-2}\text{·a}^{-1}$。求：（1）第一营养级到第二营养级的传递效率；（2）第二营养级到第三营养级的传递效率。</p>
+<p><strong>第3题</strong>（检验：极值计算——至少/至多消耗生产者） 在&quot;草→兔→鹰&quot;食物链中，鹰增重 $1\,\text{kg}$ 至少需要消耗多少草？至多需要消耗多少草？（传递效率按10%~20%计算）</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_生物_核心知识网络_生态系统与环境保护.html">生态系统与环境保护</a> — 能量流动、碳循环、种群群落的知识底座</li>
+<li><a href="高二深化_生物_典型题型与方法_广东长句表达之生态与调节类.html">广东长句表达之生态与调节类</a> — 生态题长句表达（原因/依据类）的答题框架</li>
+<li><a href="高二深化_生物_典型题型与方法_广东生物实验设计题答题框架.html">广东生物实验设计题答题框架</a> — 生态实验（如验证黑藻碳浓缩优势）的设计思路</li>
+</ul>
+<hr>
+<h2>备注</h2>
+<ul>
+<li>广东卷生态计算最爱考三件事：<strong>同化与摄入的换算、传递效率、粪便归属</strong>。训练时把这三件事做成&quot;肌肉记忆&quot;。</li>
+<li>易错：① 把&quot;摄入量&quot;直接当&quot;同化量&quot;算传递效率；② 忘记人工生态系统总能量要加&quot;人工输入&quot;；③ 把粪便量算作该营养级流向分解者（应属上一营养级）；④ 极值题搞反 10%/20% 与最长/最短链。</li>
+<li>等级赋分提醒：生态计算属于&quot;不该丢的分&quot;，一旦算错在赋分制下差距会被放大，务必做完用等式回验。</li>
+</ul>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（同化量换算——概念关系）</summary><p><strong>（1）第二营养级同化量</strong>： $$\text{同化量} = \text{摄入量} - \text{粪便量} = 200 - 128 = 72\,\text{J·cm}^{-2}\text{·a}^{-1}$$</p>
+<p><strong>（2）生长、发育和繁殖的能量</strong>： $$\text{生长繁殖能量} = \text{同化量} - \text{呼吸消耗} = 72 - 38 = 34\,\text{J·cm}^{-2}\text{·a}^{-1}$$</p>
+<p><strong>（3）粪便能量归属</strong>：粪便中的能量属于<strong>第一营养级</strong>（上一营养级）的同化量，因为粪便是第二营养级未消化吸收的部分，其能量来自第一营养级被摄入但未被同化的部分；这部分能量流向<strong>分解者</strong>（被分解者分解利用）。</p>
+<blockquote><p><strong>易错提醒</strong>：粪便能量属&quot;上一营养级&quot;是广东卷高频陷阱——粪便未被该营养级同化，不属于该营养级；&quot;同化量=摄入−粪便&quot;和&quot;生长繁殖=同化−呼吸&quot;两个等式要背熟。</p></blockquote></details>
+<details><summary>▶ 第2题详解（传递效率——同化量之比）</summary><p><strong>（1）第一→第二营养级传递效率</strong>： $$\eta_{1\to2} = \dfrac{\text{第二营养级同化量}}{\text{第一营养级同化量}}\times100\%=\dfrac{72}{900}\times100\%=8\%$$</p>
+<p><strong>（2）第二→第三营养级传递效率</strong>： $$\eta_{2\to3}=\dfrac{\text{第三营养级同化量}}{\text{第二营养级同化量}}\times100\%=\dfrac{7.2}{72}\times100\%=10\%$$</p>
+<blockquote><p><strong>易错提醒</strong>：传递效率必须用&quot;同化量÷同化量&quot;，<strong>不能用摄入量代替同化量</strong>；本例中若误用摄入量200/900=22.2%即误判；传递效率通常在10%~20%之间，本题第一→二偏低（8%），说明该生态系统该营养级传递效率较低。</p></blockquote></details>
+<details><summary>▶ 第3题详解（极值计算——至少/至多消耗）</summary><p><strong>至少消耗草（最高效率20%，最短食物链）</strong>： $$m_{\text{草}} = \dfrac{1\,\text{kg}}{20\%\times20\%}=\dfrac{1}{0.04}=25\,\text{kg}$$</p>
+<p><strong>至多消耗草（最低效率10%，最长食物链）</strong>： $$m_{\text{草}}=\dfrac{1\,\text{kg}}{10\%\times10\%}=\dfrac{1}{0.01}=100\,\text{kg}$$</p>
+<p><strong>答</strong>：鹰增重 $1\,\text{kg}$ 至少需要消耗草 $25\,\text{kg}$，至多需要消耗草 $100\,\text{kg}$。</p>
+<blockquote><p><strong>易错提醒</strong>：&quot;至少消耗&quot;=传递效率取最高（20%）+最短食物链；&quot;至多消耗&quot;=传递效率取最低（10%）+最长食物链；本题食物链只有两级传递（草→兔→鹰），若有多条食物链可选，需选最短或最长的。除法易算错，务必回验：$25\times0.2\times0.2=1$，$100\times0.1\times0.1=1$。</p></blockquote></details>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+<script src="../../assets/kb-progress.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【电磁感应导轨综合题】电学量+动力学双分析 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="物理">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow" data-card-id="物理/典型题型与方法/高二深化_物理_典型题型与方法_电磁感应导轨综合题">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">物理</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【电磁感应导轨综合题】电学量+动力学双分析</span></li></ol>
+<h1 class="kb-title">【电磁感应导轨综合题】电学量+动力学双分析</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#广东选择性考试</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2023广东选择性考试·第14题（13分）</span></div>
+<div class="kb-note"><strong>广东考情</strong>：高频（电磁感应广东卷计算题常客）· 压轴 · 导轨+金属棒/线框+变化磁场，空间/时间分段 · 真题锚定：2023广东选择性考试T14（线框在分区变化磁场中运动）</div>
+<div id="kb-progress-widget"></div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;金属棒在导轨上切割磁感线&quot;</td><td>动生电动势（导轨模型）</td><td>$E=BLv$，电流 $I=E/R_{总}$</td></tr><tr><td>&quot;磁场随时间线性变化&quot;</td><td>感生电动势（线框模型）</td><td>$E=\dfrac{\Delta\Phi}{\Delta t}=\dfrac{\Delta B}{\Delta t}S$</td></tr><tr><td>&quot;求安培力/加速度&quot;</td><td>动力学</td><td>$F_{安}=BIL$，牛顿第二定律</td></tr><tr><td>&quot;最终匀速 / 共速&quot;</td><td>动态平衡或动量守恒</td><td>导轨单杆 $F=F_{安}$；双杆系统动量守恒</td></tr><tr><td>&quot;求产生热量 Q&quot;</td><td>能量/焦耳热</td><td>$Q=I^2 R t$ 或能量守恒 $\Delta E_{其他}=Q$</td></tr><tr><td>&quot;通过某截面的电荷量 q&quot;</td><td>电量微元</td><td>$q=\dfrac{\Delta\Phi}{R_{总}}$（与速度无关）</td></tr></table></div>
+<h3>解题路径（电磁感应双分析 + 导轨通法）</h3>
+<h4>第一步：电学分析（先求 E、I）</h4>
+<ul>
+<li>动生（切割）：$E=BLv$</li>
+<li>感生（磁场变）：$E=n\dfrac{\Delta\Phi}{\Delta t}=nS\dfrac{\Delta B}{\Delta t}$</li>
+<li>电流：$I=\dfrac{E}{R_{总}}$，注意多棒/多区域电流叠加方向（右手/楞次定则）</li>
+</ul>
+<h4>第二步：动力学分析（求 F_安、a、v 变化）</h4>
+<p>$$F_{安}=BIL\quad(\text{或 }F_{安}=BIL\text{ 对每边分别算，再合成})$$</p>
+<ul>
+<li>单杆受恒外力：$a=\dfrac{F-F_{安}}{m}$，最终 $F=F_{安}$ 时匀速</li>
+<li>双杆：系统不受外水平力 → 动量守恒，最终共速</li>
+</ul>
+<h4>第三步：导轨模型两大结论</h4>
+<ul>
+<li><strong>电荷量</strong>：$q=\displaystyle\int I\,dt=\dfrac{\Delta\Phi}{R_{总}}$</li>
+<li><strong>动量定理</strong>（单杆受变力）：$\sum F_{外}\cdot t - \overline{F}_{安}\cdot t = \Delta p$，其中 $\overline{F}_{安}t=B L q$</li>
+</ul>
+<h4>第四步：能量/热量</h4>
+<p>$$Q=I^2 R t\quad\text{或}\quad W_{外}-Q=\Delta E_k$$</p>
+<h4>第五步：线框在变化磁场（广东卷偏好）</h4>
+<p>分段求各时段 $E$、$I$，再 $Q=I^2Rt$；磁通量 $\Phi$ 注意&quot;方向&quot;取代数和。</p>
+<h3>母题（2023 广东选择性考试·第14题，13分）</h3>
+<blockquote><p>2023 年广东省普通高中学业水平选择性考试物理第14题，真实原题，官方答案已核实。</p></blockquote>
+<p><strong>题目</strong>：光滑绝缘水平面上有垂直纸面的匀强磁场，磁场被分成区域Ⅰ和Ⅱ，宽度均为 $h$，俯视图如图。两区域磁感应强度随时间 $t$ 变化如图（乙）：$0\sim\tau$ 内两区域磁场恒定、方向相反，大小分别为 $2B_0$ 和 $B_0$。一电阻为 $R$、边长为 $h$ 的刚性正方形金属框 $abcd$ 平放在水平面上，$ab$、$cd$ 边与磁场边界平行。$t=0$ 时线框 $ab$ 边刚好跨过区域Ⅰ左边界以速度 $v$ 向右运动；在 $\tau$ 时刻 $ab$ 边运动到距区域Ⅰ左边界 $h/2$ 处，线框速度近似为零并被固定。随后 $\tau\sim2\tau$ 内Ⅰ区磁场线性减到0，Ⅱ区不变；$2\tau\sim3\tau$ 内Ⅱ区也线性减到0。求： (1) $t=0$ 时线框所受的安培力 $F$； (2) $t=1.2\tau$ 时穿过线框的磁通量 $\Phi$； (3) $2\tau\sim3\tau$ 时间内线框中产生的热量 $Q$。</p>
+<p><strong>解</strong>： <strong>(1) $t=0$ 安培力</strong> $ab$、$cd$ 边同时切割，电动势同向（右手定则均顺时针）： $$E=2B_0 h v + B_0 h v = 3B_0 h v,\qquad I=\frac{E}{R}=\frac{3B_0 h v}{R}$$ $ab$ 边安培力 $F_1=2B_0 I h$（向左），$cd$ 边 $F_2=B_0 I h$（向左），$bc,ad$ 边合力为0： $$F=F_1+F_2=3B_0 I h=\frac{9B_0^2 h^2 v}{R}\quad\text{方向水平向左}$$</p>
+<p><strong>(2) $t=1.2\tau$ 磁通量</strong> 此时Ⅰ区 $B=2B_0+\dfrac{0-2B_0}{2\tau}\cdot0.2\tau=1.6B_0$，Ⅱ区 $B_0$。 线框在Ⅰ区占 $h/2$、在Ⅱ区占 $h/2$： $$\Phi=1.6B_0\cdot\frac{h^2}{2}-B_0\cdot\frac{h^2}{2}=0.3B_0 h^2\quad\text{（方向垂直纸面向里）}$$</p>
+<p><strong>(3) $2\tau\sim3\tau$ 热量</strong> 此间仅Ⅱ区磁场变化：$\dfrac{\Delta B}{\Delta t}=\dfrac{-B_0}{\tau}$，有效面积 $S=h^2/2$： $$E'=\frac{\Delta\Phi}{\Delta t}=\frac{B_0\cdot h^2/2}{\tau}=\frac{B_0 h^2}{2\tau},\qquad I'=\frac{E'}{R}=\frac{B_0 h^2}{2\tau R}$$ $$Q=I'^2 R\tau=\frac{B_0^2 h^4}{4\tau R}$$</p>
+<blockquote><p>答：(1) $F=\dfrac{9B_0^2 h^2 v}{R}$，向左；(2) $\Phi=0.3B_0 h^2$（向里）；(3) $Q=\dfrac{B_0^2 h^4}{4\tau R}$。</p></blockquote>
+<hr>
+<h2>自测训练（3道·覆盖动生电动势→安培力→能量/热量）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验：导轨单杆——动生电动势与安培力） 光滑平行金属导轨间距 $L=0.5\,\mathrm{m}$，电阻不计，导轨左端接电阻 $R=2\,\Omega$，匀强磁场 $B=0.4\,\mathrm{T}$ 垂直导轨平面。质量 $m=0.1\,\mathrm{kg}$、电阻 $r=0.5\,\Omega$ 的导体棒跨接在导轨上，在恒定水平外力 $F=0.5\,\mathrm{N}$ 作用下从静止开始运动（棒始终与导轨垂直且接触良好）。求： (1) 当棒速度为 $v=2\,\mathrm{m/s}$ 时的感应电流 $I$； (2) 棒最终匀速运动时的最大速度 $v_m$。</p>
+<p><strong>第2题</strong>（检验：感生电动势——磁场变化 + 焦耳热） 匝数 $N=50$ 匝、面积 $S=0.01\,\mathrm{m^2}$ 的圆形闭合线圈，总电阻 $R=5\,\Omega$。穿过线圈的匀强磁场方向不变，$0\sim0.2\,\mathrm{s}$ 内磁感应强度从 $B_1=0.6\,\mathrm{T}$ 均匀减小到 $B_2=0.2\,\mathrm{T}$。求： (1) $0\sim0.2\,\mathrm{s}$ 内感应电动势 $E$ 与电流 $I$； (2) $0\sim0.2\,\mathrm{s}$ 内产生的焦耳热 $Q$。</p>
+<p><strong>第3题</strong>（检验：导轨双杆——动量守恒求共速 + 能量守恒求热量） 光滑平行金属导轨间距 $L=1\,\mathrm{m}$，两根导体棒 $A$、$B$ 跨接其上，质量 $m_A=m_B=0.2\,\mathrm{kg}$，电阻 $R_A=R_B=1\,\Omega$，匀强磁场 $B=1\,\mathrm{T}$ 垂直导轨。$A$ 以初速 $v_0=4\,\mathrm{m/s}$ 向右运动，$B$ 静止。两棒在磁场中运动最终达到共速（导轨电阻不计）。求： (1) 两棒最终共同速度 $v_{共}$； (2) 从开始到共速过程中回路产生的总焦耳热 $Q$。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_电磁感应定律.html">高二深化_物理_核心知识网络_电磁感应定律</a> — 法拉第定律、楞次定律、动生/感生电动势</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_磁场公式体系.html">高二深化_物理_核心知识网络_磁场公式体系</a> — 安培力 $F=BIL$、左手定则</li>
+<li><a href="../核心知识网络/高二深化_物理_核心知识网络_动量定理与动量守恒定律.html">高二深化_物理_核心知识网络_动量定理与动量守恒定律</a> — 双杆共速、动量定理求电荷量</li>
+<li><a href="高二深化_物理_典型题型与方法_力学三大模型通法.html">高二深化_物理_典型题型与方法_力学三大模型通法</a> — 导轨单杆最终匀速的动力学处理</li>
+</ul>
+<hr>
+<ul>
+<li><a href="高二深化_物理_典型题型与方法_电学实验专题.html">【电学实验专题】多用电表·伏安法·替代法与图像法</a></li>
+</ul>
+<h2>备注</h2>
+<ul>
+<li><strong>导轨 vs 线框</strong>：本题为&quot;线框+变化磁场&quot;型（广东卷近年偏好）；经典&quot;导轨单杆&quot;通法（$E=BLv\to I\to F_{安}\to a\to$ 最终匀速）同样适用，二者共用&quot;电学+动力学&quot;双分析框架。</li>
+<li><strong>方向叠加</strong>：多导体同时切割时，先判各边电动势方向（右手/楞次），再代数叠加求总 $I$；安培力逐边算后合成。</li>
+<li><strong>求 Q 的通法</strong>：$Q=I^2Rt$，感生情形先由 $\Delta\Phi/\Delta t$ 求 $E$。</li>
+<li><strong>等级赋分</strong>：三步各值方程分；即便第(3)问记错系数，写出 $E'=\Delta\Phi/\Delta t$ 与 $Q=I'^2Rt$ 即可拿大部分分。</li>
+</ul>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（导轨单杆——动生电动势与最终匀速）</summary><p><strong>(1)</strong> $v=2\,\mathrm{m/s}$ 时： $$E=BLv=0.4\times0.5\times2=0.4\,\mathrm{V}$$ $$I=\frac{E}{R+r}=\frac{0.4}{2+0.5}=0.16\,\mathrm{A}$$</p>
+<p><strong>(2)</strong> 最终匀速时 $F=F_{安}$： $$F=\frac{B^2L^2v_m}{R+r}\Rightarrow v_m=\frac{F(R+r)}{B^2L^2}=\frac{0.5\times2.5}{0.4^2\times0.5^2}=\frac{1.25}{0.04}=31.25\,\mathrm{m/s}$$</p>
+<p><strong>答</strong>：(1) $I=0.16\,\mathrm{A}$；(2) $v_m=31.25\,\mathrm{m/s}$。</p>
+<blockquote><p><strong>易错提醒</strong>：安培力公式 $F_{安}=BIL=\dfrac{B^2L^2v}{R_{总}}$，总电阻 $R_{总}=R+r$；最终匀速条件是外力=安培力。</p></blockquote></details>
+<details><summary>▶ 第2题详解（感生电动势 + 焦耳热）</summary><p><strong>(1) 感生电动势与电流</strong> $$\left|\frac{\Delta B}{\Delta t}\right|=\frac{0.6-0.2}{0.2}=2\,\mathrm{T/s}$$ $$E=N\frac{\Delta\Phi}{\Delta t}=N\cdot S\cdot\frac{\Delta B}{\Delta t}=50\times0.01\times2=1\,\mathrm{V}$$ $$I=\frac{E}{R}=\frac{1}{5}=0.2\,\mathrm{A}$$</p>
+<p><strong>(2) 焦耳热</strong> $$Q=I^2Rt=0.2^2\times5\times0.2=0.04\times1=0.04\,\mathrm{J}$$</p>
+<p><strong>答</strong>：(1) $E=1\,\mathrm{V}$，$I=0.2\,\mathrm{A}$；(2) $Q=0.04\,\mathrm{J}$。</p>
+<blockquote><p><strong>易错提醒</strong>：感生电动势公式 $E=N\dfrac{\Delta\Phi}{\Delta t}=NS\dfrac{\Delta B}{\Delta t}$，注意匝数 $N$ 不能遗漏；焦耳热公式 $Q=I^2Rt$。</p></blockquote></details>
+<details><summary>▶ 第3题详解（双杆动量守恒 + 能量守恒）</summary><p><strong>(1) 共同速度（动量守恒）</strong></p>
+<p>两棒组成的系统水平方向合外力为零（安培力是内力，大小相等方向相反）： $$m_Av_0=(m_A+m_B)v_{共}$$ $$0.2\times4=0.4v_{共}\Rightarrow v_{共}=2\,\mathrm{m/s}$$</p>
+<p><strong>(2) 焦耳热（能量守恒）</strong></p>
+<p>系统动能减少量 = 产生的焦耳热： $$Q=\frac12m_Av_0^2-\frac12(m_A+m_B)v_{共}^2$$ $$=\frac12\times0.2\times16-\frac12\times0.4\times4=1.6-0.8=0.8\,\mathrm{J}$$</p>
+<p><strong>答</strong>：(1) $v_{共}=2\,\mathrm{m/s}$；(2) $Q=0.8\,\mathrm{J}$。</p>
+<blockquote><p><strong>易错提醒</strong>：双杆系统光滑导轨时，水平方向动量守恒（安培力为内力）；热量由能量守恒求（系统初末动能差），比用 $Q=I^2Rt$ 更简洁（因电流随时间变化不易积分）。</p></blockquote></details>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+<script src="../../assets/kb-progress.js" defer></script>
+</body>
+</html>

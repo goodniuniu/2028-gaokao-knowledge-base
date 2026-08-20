@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【卡片标题】新定义压轴题突破 | 2028高考知识库</title>
+<link rel="stylesheet" href="../../assets/kb.css">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body data-subject="数学">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../../index.html">🏠 首页</a>
+    <a href="../../图形库/index.html">🖼️ 图形库</a>
+    <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap kb-wrap--narrow" data-card-id="数学/典型题型与方法/高二深化_数学_典型题型与方法_新定义压轴题突破">
+<ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">典型题型与方法</a></li><li><span aria-current="page">【卡片标题】新定义压轴题突破</span></li></ol>
+<h1 class="kb-title">【卡片标题】新定义压轴题突破</h1>
+<div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★★</span><span class="kb-badge kb-badge--tag">#高二深化</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：专题归纳 / 2024新课标Ⅰ卷·第19题</span></div>
+<div class="kb-note"><strong>广东考情</strong>：中频（2024起压轴第19题新结构）· 压轴 · 阅读理解→特殊到一般→构造归纳 · 真题锚定：2024新高考Ⅰ卷T19（新定义压轴）</div>
+<div id="kb-progress-widget"></div>
+<article class="kb-content">
+<!-- KB-CONTENT-START -->
+<hr>
+<h2>核心内容</h2>
+<h3>题型识别标志</h3>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>给出全新术语（如&quot;可分数列&quot;）并定义</td><td>新定义阅读题</td><td>先翻译定义、举小例子</td></tr><tr><td>&quot;写出所有满足条件的 (i,j)&quot;</td><td>枚举特例</td><td>从小到大枚举 m=1 验证</td></tr><tr><td>&quot;证明当 m≥某值时成立&quot;</td><td>数学归纳/递推构造</td><td>先证最小 m，再证加4项仍可分</td></tr><tr><td>&quot;任取两个，记概率为 Pₘ，证 Pₘ&gt;1/8&quot;</td><td>组合计数+概率</td><td>算总对数 C、满足对数 d，证 d/C&gt;1/8</td></tr><tr><td>定义涉及&quot;删去两项后分组等差&quot;</td><td>结构化分组</td><td>按公差/模4分类构造</td></tr></table></div>
+<h3>解题路径（新定义压轴五步法）</h3>
+<h4>第一步：翻译定义</h4>
+<p>用自己的话重述定义，举 m=1、m=2 的小例子验证理解。</p>
+<h4>第二步：枚举特例（第1问）</h4>
+<p>对最小情形逐一枚举，列出所有满足条件的参数，切忌跳步。</p>
+<h4>第三步：找递推/构造（第2问）</h4>
+<p>观察&quot;m 增加→多4项&quot;，证明新增的连续4项可自成一组，从而由小 m 推大 m。</p>
+<h4>第四步：组合计数（第3问）</h4>
+<p>算&quot;任取两数&quot;的总对数 C(n,2)，分类数出满足&quot;可分数列&quot;的对数 d，化为关于 m 的表达式。</p>
+<h4>第五步：放缩证不等式</h4>
+<p>对 d/C 用 m 的单调性/下界放缩，证 &gt; 目标值（如 1/8）。</p>
+<h3>母题（2024 新课标Ⅰ卷·第19题，17分）</h3>
+<p><strong>题目</strong>：设 m 为正整数，数列 a₁,…,a_{4m+2} 是公差不为0的等差数列。若从中删去两项 aᵢ、aⱼ 后剩余项可分 m 组、每组4个数成等差，则称 (i,j)-可分数列。 (1) 写出所有使数列为 (i,j)-可分数列的 (i,j)； (2) 当 m≥3 时，证明数列是 (2,13)-可分数列； (3) 任取 i&lt;j，记概率为 Pₘ，证明：Pₘ &gt; 1/8。</p>
+<p><strong>解析</strong>： (1) 枚举得 <strong>(i,j) = (1,2)、(1,6)、(5,6)</strong>（删后剩余可4项一组等差）。 (2) m=3 时，a₁..a₁₄ 删去 a₂、a₁₃，分三组：{a₁,a₄,a₇,a₁₀}、{a₃,a₆,a₉,a₁₂}、{a₅,a₈,a₁₁,a₁₄}（公差3d）。 当 m&gt;3，前12项同法分组，之后每连续4项 {a_{4k+3},…,a_{4k+6}} 自成一组，故 m≥3 时恒为 (2,13)-可分数列。 (3) 设满足条件的 (i,j) 对数为 dₘ。由(2)知 m≥3 至少含 (2,13) 一组；总对数为 C(4m+2,2)，组合计数得满足对数随 m 单调增长，可证 <strong>Pₘ = dₘ/C(4m+2,2) &gt; 1/8</strong>（m=1,2 直接验证，m≥3 由构造保下界）。</p>
+<p><strong>关键提炼</strong>：新定义题&quot;先小后大&quot;——第1问枚举探路，第2问找&quot;+4项自成组&quot;的递推结构，第3问转为组合概率计数。</p>
+<hr>
+<hr>
+<h2>自测训练（3道·覆盖新定义：读定义 → 枚举特例 → 递推构造）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。三题共用同一新定义（改编自&quot;(i,j)-可分数列&quot;思路，将&quot;每组4项等差&quot;改为&quot;每组3项等差&quot;，便于练习&quot;读定义→枚举→构造&quot;全流程）。</p></blockquote>
+<p><strong>新定义</strong>：设 $m$ 为正整数，数列 $a_1,a_2,\dots,a_{3m+1}$ 是公差 $d\ne0$ 的等差数列。若从中删去一项 $a_k$ 后，剩余 $3m$ 项可平均分为 $m$ 组，且每组的 3 个数按原顺序仍构成等差数列，则称原数列为 <strong>$k$-可分数列</strong>。</p>
+<p><strong>第1题</strong>（检验 第一步·翻译定义 + 第二步·枚举最小情形）</p>
+<p>当 $m=1$ 时，数列 $a_1,a_2,a_3,a_4$ 公差 $d\ne0$。写出所有使数列为 $k$-可分数列的 $k$ 值（$1\le k\le 4$），并说明理由。</p>
+<p><strong>第2题</strong>（检验 第三步·递推构造 + 构造规律）</p>
+<p>当 $m\ge2$ 时，证明：数列 $a_1,\dots,a_{3m+1}$ 是 $1$-可分数列（即删去 $a_1$ 后可分），并说明使数列为 $k$-可分数列的 $k$ 值至少有 $m+1$ 个。</p>
+<p><strong>第3题</strong>（检验 第四步·组合计数 + 第五步·放缩与极限）</p>
+<p>记 $c_m$ 为使数列为 $k$-可分数列的 $k$ 的个数，$Q_m=\dfrac{c_m}{3m+1}$。利用第2题的结论，证明：$Q_m\ge\dfrac{m+1}{3m+1}$，并求 $\lim_{m\to\infty}Q_m$ 的下界。</p>
+<hr>
+<h2>关联卡片</h2>
+<ul>
+<li><a href="../核心知识网络/高二深化_数学_核心知识网络_等差数列与等比数列.html">等差数列与等比数列</a> — 公差、分组等差的底层概念</li>
+<li><a href="高二深化_数学_典型题型与方法_概率统计大题之分布列与期望.html">概率统计大题之分布列与期望</a> — 第3问概率计数的同款思路</li>
+</ul>
+<hr>
+<ul>
+<li><a href="高三冲刺_数学_典型题型与方法_新定义题型破题策略.html">新定义题型破题策略</a></li>
+</ul>
+<h2>备注</h2>
+<ul>
+<li>广东卷新定义题&quot;读得懂就赢一半&quot;：务必先用小例子把定义跑通，再谈证明。</li>
+<li>易错：第1问枚举遗漏 (1,6)/(5,6)；第3问忘算总对数直接放缩。</li>
+<li>提速：先证最小 m 的构造，再用&quot;每+4项增一组&quot;递推到一般 m，避免逐 m 重证。</li>
+</ul>
+<hr>
+<h2>参考答案（请先独立完成自测训练，再展开核对）</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（翻译定义 + 枚举最小情形）</summary><p><strong>翻译定义</strong>：$m=1$ 时共 4 项 $a_1,a_2,a_3,a_4$，删去一项后剩 3 项，需分成 1 组且这 3 项成等差。由于只有 1 组，即要求<strong>剩余 3 项本身成等差数列</strong>。</p>
+<p>设 $a_n=a_1+(n-1)d$，$d\ne0$。逐一枚举：</p>
+<ul>
+<li><strong>$k=1$</strong>：剩 $a_2,a_3,a_4$，下标 $2,3,4$ 连续 $\Rightarrow$ 等差，<strong>可分</strong>。</li>
+<li><strong>$k=2$</strong>：剩 $a_1,a_3,a_4$，需 $a_1,a_3,a_4$ 等差，即 $2a_3=a_1+a_4$。代入 $a_n=a_1+(n-1)d$：$2(a_1+2d)=a_1+(a_1+3d)\Leftrightarrow 4d=3d\Leftrightarrow d=0$，与 $d\ne0$ 矛盾，<strong>不可分</strong>。</li>
+<li><strong>$k=3$</strong>：剩 $a_1,a_2,a_4$，需 $2a_2=a_1+a_4$，即 $2(a_1+d)=a_1+(a_1+3d)\Leftrightarrow 2d=3d\Leftrightarrow d=0$，矛盾，<strong>不可分</strong>。</li>
+<li><strong>$k=4$</strong>：剩 $a_1,a_2,a_3$，下标 $1,2,3$ 连续 $\Rightarrow$ 等差，<strong>可分</strong>。</li>
+</ul>
+<p><strong>答案</strong>：$k\in\{1,4\}$。</p>
+<blockquote><p><strong>易错提醒</strong>：&quot;m=1 时只分 1 组&quot;容易误读为&quot;任意删一项都可分&quot;。务必回到定义&quot;每组 3 项成等差&quot;逐项验证；$k=2,3$ 时下标不连续，必须用代数条件 $2b=a+c$ 检验而非凭感觉。</p></blockquote></details>
+<details><summary>▶ 第2题详解（递推构造 + 构造规律）</summary><p><strong>目标</strong>：$m\ge2$ 时，删去 $a_1$ 后剩余 $a_2,a_3,\dots,a_{3m+1}$（共 $3m$ 项，下标 $2$ 到 $3m+1$ 连续）。</p>
+<p><strong>构造</strong>：第 $j$ 组取 $a_{3j-1},a_{3j},a_{3j+1}$（$j=1,2,\dots,m$），即 $$\{a_2,a_3,a_4\},\ \{a_5,a_6,a_7\},\ \dots,\ \{a_{3m-1},a_{3m},a_{3m+1}\}$$</p>
+<p>每组下标连续（公差 1），故每组 3 项成等差（公差 $d$）。共 $m$ 组，覆盖下标 $2$ 到 $3m+1$ 全部 $3m$ 项。故数列是 $1$-可分数列。</p>
+<p><strong>$k$ 值个数</strong>：上述构造的关键是&quot;删后剩余下标连续&quot;。满足此条件的 $k$ 为 $k\in\{1,4,7,\dots,3m+1\}$（即 $k=3j+1$，$j=0,1,\dots,m$）。</p>
+<p>验证：删 $a_{3j+1}$ 后剩余下标 $\{1,\dots,3j\}\cup\{3j+2,\dots,3m+1\}$，前段每连续 3 项一组（$j$ 组），后段每连续 3 项一组（$m-j$ 组），共 $m$ 组。故这 $m+1$ 个 $k$ 值都使数列可分。</p>
+<p><strong>结论</strong>：数列是 $1$-可分数列；合格 $k$ 至少有 $m+1$ 个。$\square$</p>
+<blockquote><p><strong>易错提醒</strong>：构造规律是&quot;删端点或下标为 $3j+1$ 的项，使剩余下标可按连续 3 项分组&quot;——这正是真题&quot;(i,j)-可分数列&quot;里&quot;掐头/去尾&quot;规律的迁移。注意&quot;$m+1$ 个&quot;是下界（充分条件），实际合格 $k$ 可能更多。</p></blockquote></details>
+<details><summary>▶ 第3题详解（组合计数 + 放缩与极限）</summary><p><strong>调用结论</strong>：由第2题，$k\in\{1,4,7,\dots,3m+1\}$（共 $m+1$ 个）均使数列为 $k$-可分数列，故 $$c_m\ge m+1,\qquad Q_m=\dfrac{c_m}{3m+1}\ge\dfrac{m+1}{3m+1}$$</p>
+<p><strong>求极限下界</strong>： $$\lim_{m\to\infty}Q_m\ge\lim_{m\to\infty}\dfrac{m+1}{3m+1}=\lim_{m\to\infty}\dfrac{1+\frac{1}{m}}{3+\frac{1}{m}}=\dfrac{1}{3}$$</p>
+<p><strong>结论</strong>：$Q_m\ge\dfrac{m+1}{3m+1}$，$\lim_{m\to\infty}Q_m\ge\dfrac{1}{3}$。$\square$</p>
+<blockquote><p><strong>易错提醒</strong>：(1) 总分母是 $3m+1$（本题只删 1 项，与真题&quot;删 2 项、总数 $\binom{4m+2}{2}$&quot;不同，勿混淆）；(2) 证下界只需&quot;给出一类充分构造&quot;，不需求精确 $c_m$；(3) &quot;$\ge$&quot;方向别写反——$c_m$ 可能大于 $m+1$（存在其他合格 $k$），故用 $\ge$ 而非 $=$。</p></blockquote></details>
+<!-- KB-CONTENT-END -->
+</article>
+<div class="kb-cardnav">
+  <a class="kb-btn" href="./">← 返回典型题型与方法</a>
+  <a class="kb-btn kb-btn--ghost" href="../../index.html">🏠 返回首页</a>
+</div>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+<script src="../../assets/kb-progress.js" defer></script>
+</body>
+</html>

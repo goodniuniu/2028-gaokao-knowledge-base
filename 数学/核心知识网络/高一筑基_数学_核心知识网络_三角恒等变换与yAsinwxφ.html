@@ -27,15 +27,17 @@ MathJax = {
     <a href="../../复盘追踪/index.html">📊 复盘追踪</a>
   </div>
 </nav>
-<div class="kb-wrap kb-wrap--narrow">
+<div class="kb-wrap kb-wrap--narrow" data-card-id="数学/核心知识网络/高一筑基_数学_核心知识网络_三角恒等变换与yAsinwxφ">
 <ol class="kb-breadcrumb"><li><a href="../../index.html">首页</a></li><li><a href="../index.html">数学</a></li><li><a href="./index.html">核心知识网络</a></li><li><span aria-current="page">三角恒等变换与 $y = A\sin(\omega x + \varphi)$</span></li></ol>
 <h1 class="kb-title">三角恒等变换与 $y = A\sin(\omega x + \varphi)$</h1>
 <div class="kb-badges"><span class="kb-badge kb-badge--warn">⚠️待强化</span><span class="kb-badge kb-badge--diff">★★★★☆</span><span class="kb-badge kb-badge--tag">#高一筑基</span><span class="kb-badge kb-badge--tag">#新高考Ⅰ卷·广东</span><span class="kb-badge kb-badge--src">来源：53科学备考《高中知识清单》数学知识图谱 / 人教A版必修第一册第五章</span></div>
 <div class="kb-note"><strong>广东考情</strong>：考查频率：高频；难度：中档~中高档；三角恒等变换是三角大题第一问的标配，辅助角公式是化简的核心工具</div>
+<div id="kb-progress-widget"></div>
 <article class="kb-content">
 <!-- KB-CONTENT-START -->
+<hr>
+<p><div class="figure"><img src="../../图形库/数学/三角函数变换.png" alt="三角函数变换"><div class="figure-caption">三角函数变换</div></div></p>
 <h2>核心内容</h2>
-
 <h3>一、两角和与差的三角函数公式</h3>
 <ul>
 <li>$\sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta$（$S_{(\alpha+\beta)}$）</li>
@@ -45,61 +47,108 @@ MathJax = {
 <li>$\tan(\alpha + \beta) = \frac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta}$（$T_{(\alpha+\beta)}$）</li>
 <li>$\tan(\alpha - \beta) = \frac{\tan\alpha - \tan\beta}{1 + \tan\alpha\tan\beta}$（$T_{(\alpha-\beta)}$）</li>
 </ul>
-
 <h3>二、二倍角公式</h3>
 <ul>
 <li>$\sin 2\alpha = 2\sin\alpha\cos\alpha = \frac{2\tan\alpha}{1 + \tan^2\alpha}$</li>
 <li>$\cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha$</li>
 <li>$\tan 2\alpha = \frac{2\tan\alpha}{1 - \tan^2\alpha}$</li>
 </ul>
-
 <h3>三、降幂公式（升角公式）</h3>
 <ul>
 <li>$\sin^2\alpha = \frac{1 - \cos 2\alpha}{2}$</li>
 <li>$\cos^2\alpha = \frac{1 + \cos 2\alpha}{2}$</li>
 </ul>
-
 <h3>四、辅助角公式</h3>
-<div class="figure">
-  <img src="../../图形库/数学/三角函数变换.png" alt="三角函数图象变换示意图">
-  <div class="figure-caption">图：y=Asin(ωx+φ)图象变换（振幅A、周期2π/ω、相位φ）</div>
-</div>
-
-<p>$$a\sin x + b\cos x = \sqrt{a^2 + b^2}\sin(x + \varphi)$$</p>
-<p>其中 $\tan\varphi = \frac{b}{a}$（注意 $a, b$ 符号决定 $\varphi$ 所在象限）</p>
-
+<p>$$a\sin x + b\cos x = \sqrt{a^2 + b^2}\sin(x + \varphi)$$ 其中 $\tan\varphi = \frac{b}{a}$（注意 $a, b$ 符号决定 $\varphi$ 所在象限）</p>
 <p><strong>常见形式</strong>：</p>
 <ul>
 <li>$\sin x \pm \cos x = \sqrt{2}\sin(x \pm \frac{\pi}{4})$</li>
 <li>$\sqrt{3}\sin x \pm \cos x = 2\sin(x \pm \frac{\pi}{6})$</li>
 <li>$\sin x \pm \sqrt{3}\cos x = 2\sin(x \pm \frac{\pi}{3})$</li>
 </ul>
-
 <h3>五、三角恒等变换策略</h3>
 <ol>
 <li><strong>角的关系</strong>：拆角、凑角、倍角、半角</li>
 <li><strong>名的关系</strong>：弦化切、切化弦（齐次式）</li>
 <li><strong>式的关系</strong>：降幂、升幂、辅助角公式统一</li>
-<li><strong>"1"的代换</strong>：$1 = \sin^2\alpha + \cos^2\alpha = \tan\frac{\pi}{4}$</li>
+<li><strong>&quot;1&quot;的代换</strong>：$1 = \sin^2\alpha + \cos^2\alpha = \tan\frac{\pi}{4}$</li>
 </ol>
-
 <hr>
-
+<h2>题型识别标志</h2>
+<blockquote><p><strong>看到什么条件 → 立刻想到什么方法</strong></p></blockquote>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;已知 $\sin(\alpha-\beta)$、$\cos\alpha\sin\beta$，求 $\cos(2\alpha+2\beta)$&quot;</td><td>和差角+倍角</td><td>先求 $\sin(\alpha+\beta)$，再用 $\cos2x=1-2\sin^2x$</td></tr><tr><td>&quot;化简三角式求值&quot;</td><td>恒等变换</td><td>和差、倍角、降幂、辅助角依次使用</td></tr><tr><td>&quot;出现 $\sin A\cos B\pm\cos A\sin B$&quot;</td><td>和差公式</td><td>逆用 $\sin(A\pm B)$</td></tr><tr><td>&quot;已知两角和与差的正弦/余弦&quot;</td><td>配角</td><td>用 $\alpha=(\alpha-\beta)+\beta$ 等关系配角</td></tr><tr><td>&quot;化简到 $A\sin(\omega x+\varphi)$&quot;</td><td>辅助角</td><td>$\sqrt{a^2+b^2}\sin(x+\varphi)$</td></tr><tr><td>&quot;求周期/单调区间/最值&quot;</td><td>图象性质</td><td>先化简成标准型，再整体代入</td></tr></table></div>
+<h2>解题路径（三角恒等变换求值四步法）</h2>
+<blockquote><p>650分导向：给值求值的核心是&quot;变角&quot;——把所求角用已知角表示，避免硬算。</p></blockquote>
+<h3>第一步：看所求</h3>
+<p>明确目标角与已知角的关系，确定配角路线（如 $\alpha+\beta=(\alpha-\beta)+2\beta$ 等）。</p>
+<h3>第二步：选公式</h3>
+<p>和差角、倍角、降幂、辅助角按需组合。</p>
+<h3>第三步：代已知</h3>
+<p>将已知数值代入，求出中间量（如 $\sin(\alpha+\beta)$）。</p>
+<h3>第四步：得结论</h3>
+<p>用二倍角等收口，注意符号与取值范围。</p>
+<h2>母题（2023 新课标Ⅰ卷·第8题，5分）</h2>
+<blockquote><p>广东考生真题。由和差角求中间量、再用二倍角收口，是三角恒等变换的标准流程。</p></blockquote>
+<p><strong>题目</strong>：已知 $\sin(\alpha-\beta)=\dfrac{1}{3}$，$\cos\alpha\sin\beta=\dfrac{1}{6}$，则 $\cos(2\alpha+2\beta)=$（ ）</p>
+<p>A. $\dfrac{7}{9}$　B. $\dfrac{1}{9}$　C. $-\dfrac{1}{9}$　D. $-\dfrac{7}{9}$</p>
+<p><strong>解</strong>： 由 $\sin(\alpha-\beta)=\sin\alpha\cos\beta-\cos\alpha\sin\beta=\frac{1}{3}$，且 $\cos\alpha\sin\beta=\frac{1}{6}$，得 $$\sin\alpha\cos\beta=\frac{1}{3}+\frac{1}{6}=\frac{1}{2}$$</p>
+<p>于是 $$\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta=\frac{1}{2}+\frac{1}{6}=\frac{2}{3}$$</p>
+<p>故 $$\cos(2\alpha+2\beta)=1-2\sin^2(\alpha+\beta)=1-2\times\frac{4}{9}=\frac{1}{9}$$</p>
+<p><strong>答</strong>：选 B。</p>
+<hr>
+<h2>自测训练（3道·覆盖恒等变换核心公式）</h2>
+<blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的知识点，方便对号查漏。</p></blockquote>
+<p><strong>第1题</strong>（检验 二倍角公式 + 半角公式）</p>
+<p>已知 $\cos\alpha = -\dfrac{3}{5}$，$\alpha \in \left(\dfrac{\pi}{2}, \pi\right)$，求 $\cos 2\alpha$ 和 $\sin\dfrac{\alpha}{2}$ 的值。</p>
+<p><strong>第2题</strong>（检验 和差角公式 + 配角法）</p>
+<p>已知 $\alpha,\beta$ 均为锐角，$\cos\alpha = \dfrac{4}{5}$，$\cos(\alpha+\beta) = \dfrac{5}{13}$，求 $\cos\beta$ 的值。</p>
+<p><strong>第3题</strong>（检验 辅助角公式 + 标准型性质）</p>
+<p>化简 $f(x) = \sin 2x - \sqrt{3}\cos 2x$ 为 $A\sin(\omega x+\varphi)$ 的形式，并求其最小正周期和值域。</p>
+<hr>
 <h2>关联卡片</h2>
-
 <ul>
 <li><a href="高一筑基_数学_核心知识网络_三角函数的概念与诱导公式.html">三角函数的概念与诱导公式</a> — 恒等变换的基础工具</li>
 <li><a href="高一筑基_数学_核心知识网络_三角函数的图象与性质.html">三角函数的图象与性质</a> — 化简后分析图象性质</li>
 </ul>
-
 <hr>
-
+<ul>
+<li><a href="../典型题型与方法/高二深化_数学_典型题型与方法_三角函数与解三角形大题.html">【卡片标题】三角函数与解三角形大题</a></li>
+</ul>
+<ul>
+<li><a href="高一筑基_数学_核心知识网络_三角的概念与诱导公式.html">三角的概念与诱导公式</a></li>
+</ul>
 <h2>备注</h2>
 <ul>
 <li>易错点：辅助角公式中 $\tan\varphi = \frac{b}{a}$，注意 $\varphi$ 的象限由 $a, b$ 共同决定，不是仅由 $\frac{b}{a}$ 决定</li>
 <li>三角大题化简的标准路径：诱导公式 $\rightarrow$ 和差/倍角展开 $\rightarrow$ 降幂 $\rightarrow$ 辅助角公式 $\rightarrow$ $y = A\sin(\omega x + \varphi)$ 形式</li>
 <li>广东卷常考：给定三角函数式化简后求周期、单调区间、最值</li>
 </ul>
+<hr>
+<h2>参考答案</h2>
+<blockquote><p>答案与题目分板块呈现，便于&quot;先做后对&quot;。每题给出规范解答 + 易错提醒，做完一题对一题。</p></blockquote>
+<details><summary>▶ 第1题详解（二倍角公式 + 半角符号判定）</summary><p><strong>(1)</strong> 由二倍角公式： $$\cos 2\alpha = 2\cos^2\alpha - 1 = 2\cdot\dfrac{9}{25} - 1 = \dfrac{18}{25} - 1 = -\dfrac{7}{25}$$</p>
+<p><strong>(2)</strong> $\alpha \in \left(\dfrac{\pi}{2}, \pi\right)$，故 $\dfrac{\alpha}{2} \in \left(\dfrac{\pi}{4}, \dfrac{\pi}{2}\right)$（第一象限），$\sin\dfrac{\alpha}{2} > 0$。</p>
+<p>$$\sin\dfrac{\alpha}{2} = \sqrt{\dfrac{1-\cos\alpha}{2}} = \sqrt{\dfrac{1-(-\frac{3}{5})}{2}} = \sqrt{\dfrac{\frac{8}{5}}{2}} = \sqrt{\dfrac{4}{5}} = \dfrac{2\sqrt{5}}{5}$$</p>
+<p><strong>答</strong>：$\cos 2\alpha = -\dfrac{7}{25}$，$\sin\dfrac{\alpha}{2} = \dfrac{2\sqrt{5}}{5}$。</p>
+<blockquote><p><strong>易错提醒</strong>：半角公式必须先判 $\dfrac{\alpha}{2}$ 所在象限以定符号——$\alpha$ 在第二象限时 $\dfrac{\alpha}{2}$ 在第一象限，$\sin\dfrac{\alpha}{2}$ 取正。</p></blockquote></details>
+<details><summary>▶ 第2题详解（配角法 + 象限符号判定）</summary><p>$\alpha$ 锐角，$\cos\alpha = \dfrac{4}{5}$，故 $\sin\alpha = \sqrt{1-\dfrac{16}{25}} = \dfrac{3}{5}$。</p>
+<p>$\alpha,\beta$ 均锐角 $\Rightarrow 0 < \alpha+\beta < \pi$；又 $\cos(\alpha+\beta) = \dfrac{5}{13} > 0$，故 $\alpha+\beta \in \left(0, \dfrac{\pi}{2}\right)$，$\sin(\alpha+\beta) = \sqrt{1-\dfrac{25}{169}} = \dfrac{12}{13}$。</p>
+<p>配角：$\beta = (\alpha+\beta) - \alpha$， $$\begin{aligned}
+\cos\beta &= \cos[(\alpha+\beta)-\alpha] \\
+&= \cos(\alpha+\beta)\cos\alpha + \sin(\alpha+\beta)\sin\alpha \\
+&= \dfrac{5}{13}\cdot\dfrac{4}{5} + \dfrac{12}{13}\cdot\dfrac{3}{5} \\
+&= \dfrac{20}{65} + \dfrac{36}{65} = \dfrac{56}{65}
+\end{aligned}$$</p>
+<p><strong>答</strong>：$\cos\beta = \dfrac{56}{65}$。</p>
+<blockquote><p><strong>易错提醒</strong>：必须先判定 $\alpha+\beta$ 落在第几象限（此处 $\cos(\alpha+\beta)>0$ 说明在第一象限），否则 $\sin(\alpha+\beta)$ 的符号会错。</p></blockquote></details>
+<details><summary>▶ 第3题详解（辅助角公式 + 标准型性质）</summary><p>提取系数 $1$ 和 $-\sqrt{3}$： $$f(x) = \sin 2x - \sqrt{3}\cos 2x = 2\!\left(\dfrac{1}{2}\sin 2x - \dfrac{\sqrt{3}}{2}\cos 2x\right)$$</p>
+<p>由辅助角公式（$\tan\varphi = \dfrac{-\sqrt{3}}{1} = -\sqrt{3}$，$a=1>0, b=-\sqrt{3}<0$，$\varphi$ 在第四象限）： $$f(x) = 2\sin\!\left(2x - \dfrac{\pi}{3}\right)$$</p>
+<ul>
+<li>最小正周期：$T = \dfrac{2\pi}{2} = \pi$</li>
+<li>值域：$[-2, 2]$</li>
+</ul>
+<p><strong>答</strong>：$f(x) = 2\sin\!\left(2x - \dfrac{\pi}{3}\right)$，$T = \pi$，值域 $[-2, 2]$。</p>
+<blockquote><p><strong>易错提醒</strong>：辅助角公式中 $\varphi$ 的象限由 $a, b$ 共同决定。此处 $a=1>0, b=-\sqrt{3}<0$，$\varphi = -\dfrac{\pi}{3}$（不能直接写成 $+\dfrac{\pi}{3}$）。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">
@@ -109,5 +158,6 @@ MathJax = {
 <footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
 <a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
 </div>
+<script src="../../assets/kb-progress.js" defer></script>
 </body>
 </html>
