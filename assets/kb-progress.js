@@ -487,12 +487,123 @@
     });
   }
 
+  // ============ 女儿专区：每日一句 / 连续天数 / 成就徽章 ============
+  // 仅在 build_site.py 注入的容器（#kb-daily-boost / #kb-streak / #kb-achievements）存在时渲染；
+  // 全部数据由既有每用户进度（cards 的 s/t 字段）现场推导，不新增存储。
+  var Boost = {
+    QUOTES: [
+      '你不需要很厉害才能开始，但你需要开始才能很厉害。',
+      '错的每一道题，都是高考前替你挡的枪。',
+      '慢慢来，比较快。',
+      '每天进步1%，一年后是现在的37.8倍——数学不会骗人。',
+      '苏炳添32岁才跑出9秒83，你的高二急什么。',
+      '先做5分钟，不想做了再停。通常你会做下去。',
+      '累了就休息，休息不是放弃，是充电。',
+      '你唯一的对手是昨天的自己。',
+      '睡觉也是一种复习——大脑在梦里替你归档。',
+      '平台期是骗人的：积累会在某一天突然跳起来。',
+      '今天不想努力也没关系，看一眼这句话就算你赢了。',
+      '我生来就是高山而非溪流。——华坪女高誓词',
+      '此生属于祖国，此生无怨无悔。——黄旭华',
+      '人就像种子，要做一粒好种子。——袁隆平',
+      '美丽的宇宙太空，以它的神秘和绚丽，召唤我们踏过平庸。——南仁东',
+      '清澈的爱，只为中国。',
+      '问渠那得清如许？为有源头活水来。',
+      '操千曲而后晓声，观千剑而后识器。',
+      '苟日新，日日新，又日新。',
+      '允许今天不完美。',
+      '错题是免费的情报。',
+      '半山腰总是最挤的，你得去山顶看看。',
+      '你现在多看的每一页，都是未来的底气。',
+      '别慌，月亮也正在大海某处迷茫。',
+    ],
+
+    // 从进度数据推导统计
+    stats: function () {
+      var cards = Storage.getCards();
+      var n = { total: 0, ok: 0, warn: 0, bad: 0, subj: {}, days: {} };
+      Object.keys(cards).forEach(function (k) {
+        var c = cards[k];
+        if (!c || (c.s !== 0 && c.s !== 1 && c.s !== 2)) return;
+        n.total++;
+        n[['bad', 'warn', 'ok'][c.s]]++;
+        var subj = k.split('/')[0];
+        n.subj[subj] = true;
+        var d = new Date(c.t || 0);
+        n.days[d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate()] = true;
+      });
+      var sixSubj = ['语文', '数学', '英语', '物理', '化学', '生物'].filter(function (s) { return n.subj[s]; }).length;
+      // 连续天数：从今天往回数；今天还没标记则从昨天起算（早晨访问不归零）
+      var dayMs = 24 * 3600 * 1000;
+      function keyOf(ts) {
+        var d = new Date(ts);
+        return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+      }
+      var today = new Date();
+      var todayKey = keyOf(today);
+      var start = n.days[todayKey] ? today.getTime() : today.getTime() - dayMs;
+      var streak = 0;
+      while (n.days[keyOf(start - streak * dayMs)]) streak++;
+      n.sixSubj = sixSubj;
+      n.dayCount = Object.keys(n.days).length;
+      n.streak = streak;
+      return n;
+    },
+
+    init: function () {
+      var quote = $('kb-daily-boost');
+      if (quote) {
+        var dayIdx = Math.floor(Date.now() / 86400000);
+        quote.textContent = '「' + this.QUOTES[dayIdx % this.QUOTES.length] + '」';
+      }
+      var st = $('kb-streak');
+      if (st) {
+        var n = this.stats();
+        if (n.total > 0) {
+          st.textContent = n.streak >= 1 ? ('🔥 连续 ' + n.streak + ' 天') : '🌱 今天是新的开始';
+          st.title = '已标记 ' + n.total + ' 张卡片';
+        }
+      }
+      this.renderAchievements();
+    },
+
+    ACHIEVEMENTS: [
+      { icon: '🌱', name: '迈出第一步', desc: '标记第1张卡片', test: function (s) { return s.total >= 1; } },
+      { icon: '🦁', name: '诚实的勇气', desc: '标出第1个「❌不会」', test: function (s) { return s.bad >= 1; } },
+      { icon: '✨', name: '小有所成', desc: '第1张「✅已掌握」', test: function (s) { return s.ok >= 1; } },
+      { icon: '🌈', name: '六科开花', desc: '六科都有标记', test: function (s) { return s.sixSubj >= 6; } },
+      { icon: '🔟', name: '十全十美', desc: '10张✅已掌握', test: function (s) { return s.ok >= 10; } },
+      { icon: '🔥', name: '七日之约', desc: '连续7天有标记', test: function (s) { return s.streak >= 7; } },
+      { icon: '🏔️', name: '五十张里程', desc: '累计标记50张', test: function (s) { return s.total >= 50; } },
+      { icon: '🌙', name: '细水长流', desc: '累计30天有标记', test: function (s) { return s.dayCount >= 30; } },
+    ],
+
+    renderAchievements: function () {
+      var host = $('kb-achievements');
+      if (!host) return;
+      var n = this.stats();
+      if (n.total === 0) return; // 未开始不显示，保持零压力
+      var lit = 0;
+      var html = this.ACHIEVEMENTS.map(function (a) {
+        var on = a.test(n);
+        if (on) lit++;
+        return '<div class="gz-badge-item ' + (on ? 'is-lit' : 'is-dim') + '" title="' + (on ? '已点亮' : '继续探索即可点亮') + '">'
+          + '<div class="gz-badge-item__icon">' + a.icon + '</div>'
+          + '<div class="gz-badge-item__name">' + a.name + '</div>'
+          + '<div class="gz-badge-item__desc">' + a.desc + '</div></div>';
+      }).join('');
+      host.innerHTML = '<div style="grid-column:1/-1;font-size:12.5px;color:#9d174d;font-weight:700;margin-bottom:0">'
+        + '🏅 我的小成就（' + lit + '/' + this.ACHIEVEMENTS.length + ' 点亮）——标记卡片就会亮，纯属好玩</div>' + html;
+    },
+  };
+
   // ============ 启动 ============
   function init() {
     UI.initUserMenu();
     UI.initCardWidget();
     UI.initIndexBadges();
     UI.initDashboard();
+    Boost.init();
     Sync.startAutoSync();
   }
   if (document.readyState === 'loading') {

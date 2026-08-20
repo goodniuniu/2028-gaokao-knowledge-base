@@ -58,6 +58,7 @@ ROOT_DOCS = [
     "00_当前状态记录.md",
     "03_优化完善计划.md",
     "04_给女儿的使用说明.md",
+    "05_能量补给站.md",
 ]
 ROOT_DOC_ICONS = {
     "00_知识库总索引.md": "📋",
@@ -67,6 +68,30 @@ ROOT_DOC_ICONS = {
     "00_当前状态记录.md": "📌",
     "03_优化完善计划.md": "🔧",
     "04_给女儿的使用说明.md": "🌟",
+    "05_能量补给站.md": "🔋",
+}
+
+# 女儿专区文档：注入每日一句/连续天数/成就徽章容器（由 assets/kb-progress.js 填充；
+# JS 不可用时容器保持空白，页面退化为普通文档页，无功能损失）
+GIRL_ZONE_WIDGETS = {
+    "04_给女儿的使用说明.md": """<div class="gz-hero">
+  <div class="gz-hero__emoji">🌟</div>
+  <div class="gz-hero__main">
+    <div class="gz-hero__hi">今天也辛苦啦</div>
+    <div class="gz-quote" id="kb-daily-boost"></div>
+  </div>
+  <div class="gz-streak" id="kb-streak"></div>
+</div>
+<div class="gz-achievements" id="kb-achievements"></div>""",
+    "05_能量补给站.md": """<div class="gz-hero">
+  <div class="gz-hero__emoji">🔋</div>
+  <div class="gz-hero__main">
+    <div class="gz-hero__hi">先深呼吸，再往下看</div>
+    <div class="gz-quote" id="kb-daily-boost"></div>
+  </div>
+  <div class="gz-streak" id="kb-streak"></div>
+</div>
+<div class="gz-achievements" id="kb-achievements"></div>""",
 }
 
 MATHJAX_HEAD = """<script>
@@ -711,6 +736,9 @@ def generate_card_from_md(md_path: Path, html_path: Path, crumbs, subject: str,
     # 每用户进度：data-card-id + 三键标记占位（仅知识卡片，文档页不传 card_id）
     card_attr = f' data-card-id="{esc(card_id)}"' if card_id else ""
     widget = '<div id="kb-progress-widget"></div>' if card_id else ""
+    # 女儿专区文档：注入组件容器并给 body 加 class
+    girl = GIRL_ZONE_WIDGETS.get(md_path.name, "")
+    girl_attrs = 'class="girl-zone"' if girl else ""
 
     body = f'''<div class="kb-wrap kb-wrap--narrow"{card_attr}>
 {breadcrumb_html(crumbs)}
@@ -718,6 +746,7 @@ def generate_card_from_md(md_path: Path, html_path: Path, crumbs, subject: str,
 {badges_html(meta)}
 {extra_meta_note(meta)}
 {widget}
+{girl}
 <article class="kb-content">
 {CONTENT_START}
 {content}
@@ -731,7 +760,7 @@ def generate_card_from_md(md_path: Path, html_path: Path, crumbs, subject: str,
 </div>'''
     write_text(html_path, page_template(
         title=title, prefix=prefix, body_inner=body,
-        subject=subject, head_extra=MATHJAX_HEAD))
+        subject=subject, head_extra=MATHJAX_HEAD, body_attrs=girl_attrs))
 
 
 # ---------------------------------------------------------------- 索引页构建

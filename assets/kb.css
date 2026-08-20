@@ -548,3 +548,135 @@ a.kb-user-btn { cursor: pointer; }
   .kb-progress__btn { padding: 5px 10px; font-size: 12px; }
   .kb-user-panel { min-width: 220px; }
 }
+
+/* ============================================================
+   女儿专区（body.girl-zone，由 build_site.py 对 04/05 文档注入）
+   治愈系暖色渐变 / 圆角卡片 / 轻量动效；JS 不可用时容器留白无副作用
+   ============================================================ */
+
+body.girl-zone {
+  --gz-pink: #ec4899;
+  --gz-purple: #8b5cf6;
+  --gz-peach: #fda4af;
+  background:
+    radial-gradient(1100px 500px at 8% -8%, #fde8f1 0%, transparent 60%),
+    radial-gradient(900px 460px at 96% 4%, #ede9fe 0%, transparent 55%),
+    radial-gradient(800px 520px at 50% 108%, #fff1eb 0%, transparent 60%),
+    #faf7fb;
+}
+body.girl-zone .kb-title {
+  background: linear-gradient(100deg, #db2777, #7c3aed 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---- 顶部 hero：问候 + 每日一句 + 连续天数 ---- */
+.gz-hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 18px 0 6px;
+  padding: 20px 22px;
+  border-radius: 20px;
+  background: linear-gradient(115deg, #fdf2f8 0%, #f5f3ff 55%, #fff7ed 100%);
+  border: 1px solid #fbcfe8;
+  box-shadow: 0 10px 30px rgba(236, 72, 153, .10);
+}
+.gz-hero__emoji {
+  font-size: 44px;
+  line-height: 1;
+  flex: none;
+  animation: gz-float 3.2s ease-in-out infinite;
+}
+.gz-hero__main { min-width: 0; flex: 1; }
+.gz-hero__hi {
+  font-size: 15px;
+  font-weight: 700;
+  color: #9d174d;
+  letter-spacing: .5px;
+}
+.gz-quote {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6d28d9;
+  min-height: 1.6em;
+}
+.gz-quote:empty { display: none; }
+.gz-streak {
+  flex: none;
+  align-self: flex-start;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #b45309;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  white-space: nowrap;
+}
+.gz-streak:empty { display: none; }
+
+@keyframes gz-float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-7px) rotate(4deg); }
+}
+
+/* ---- 成就徽章墙 ---- */
+.gz-achievements {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+  gap: 10px;
+  margin: 12px 0 6px;
+}
+.gz-achievements:empty { display: none; }
+.gz-badge-item {
+  padding: 12px 8px 10px;
+  text-align: center;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform .15s ease;
+}
+.gz-badge-item:hover { transform: translateY(-3px); }
+.gz-badge-item__icon { font-size: 26px; line-height: 1.2; }
+.gz-badge-item__name {
+  margin-top: 4px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text);
+}
+.gz-badge-item__desc { margin-top: 2px; font-size: 11px; color: var(--text-3); line-height: 1.4; }
+.gz-badge-item.is-lit {
+  background: linear-gradient(160deg, #fdf4ff, #fef9c3);
+  border-color: #f9a8d4;
+  box-shadow: 0 6px 18px rgba(168, 85, 247, .18);
+}
+.gz-badge-item.is-dim { filter: grayscale(.9); opacity: .55; }
+
+/* ---- 正文微调：分区呼吸感 ---- */
+body.girl-zone .kb-content { padding-top: 4px; }
+body.girl-zone .kb-content h2 {
+  padding-left: 12px;
+  border-left: 4px solid var(--gz-pink);
+}
+body.girl-zone .kb-content blockquote {
+  border-left-color: #f9a8d4;
+  background: #fdf4ff;
+  border-radius: 0 12px 12px 0;
+}
+body.girl-zone .kb-cardnav { margin-top: 22px; }
+
+@media (max-width: 640px) {
+  .gz-hero { padding: 16px; gap: 12px; }
+  .gz-hero__emoji { font-size: 34px; }
+  .gz-hero__hi { font-size: 14px; }
+  .gz-quote { font-size: 13px; }
+  .gz-streak { align-self: center; padding: 5px 11px; font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gz-hero__emoji { animation: none; }
+  .gz-badge-item { transition: none; }
+}
