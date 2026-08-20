@@ -1074,9 +1074,13 @@ def build_vocab_sub_index(sub: str):
 
 
 def build_root_index():
-    """站点根首页：hero + 统计 + 快速导航 + 六科卡片网格 + 专区"""
+    """站点根首页（编辑部式编排）：墨蓝 hero → 女儿专区 → 六科 → 方法与工具 → 管理文档"""
     out_path = ROOT / "index.html"
-    prefix = ""
+
+    SUBJECT_TAGLINES = {
+        "语文": "思辨与积累", "数学": "思维与方法", "英语": "语用与听说",
+        "物理": "情境与模型", "化学": "工艺与探究", "生物": "长句与实验",
+    }
 
     total_cards = 0
     subject_cards = []
@@ -1090,17 +1094,18 @@ def build_root_index():
             if cards:
                 count += len(cards)
                 links.append(
-                    f'<a href="{subject}/{dim}/index.html">{dim}</a> <span class="cnt">({len(cards)})</span>')
-        total_cards += count
-        extra = ""
+                    f'<a class="kb-card__link" href="{subject}/{dim}/index.html">{dim}'
+                    f' <span class="cnt">{len(cards)}</span></a>')
         if subject == "英语":
-            extra = ('<br><a href="英语/单词复习/index.html">🔤 单词复习专区</a> '
-                     '<span class="cnt">(假期49天)</span>')
+            links.append('<a class="kb-card__link kb-card__link--more" '
+                         'href="英语/单词复习/index.html">🔤 单词复习专区'
+                         ' <span class="cnt">假期49天</span></a>')
+        total_cards += count
         subject_cards.append(f'''<a class="kb-card" href="{subject}/index.html" style="--card-accent:{color}">
   <div class="kb-card__icon">{icon}</div>
-  <div class="kb-card__title">{subject}</div>
-  <div class="kb-card__meta">{count} 张卡片</div>
-  <div class="kb-card__links">{"<br>".join(links)}{extra}</div>
+  <div class="kb-card__title">{subject}<span class="kb-card__count">{count} 卡</span></div>
+  <div class="kb-card__meta">{SUBJECT_TAGLINES[subject]}</div>
+  <div class="kb-card__links">{" ".join(links)}</div>
 </a>''')
 
     # 方法卡片数
@@ -1110,60 +1115,85 @@ def build_root_index():
         method_count += len(list_cards(ROOT / "方法" / cat))
     total_cards += method_count
 
-    quick = "".join(
+    # 管理文档（女儿专区 04/05 已提升为专区卡片，不在此重复）
+    girl_docs = set(GIRL_ZONE_WIDGETS.keys())
+    doc_chips = "".join(
         f'<a class="kb-chip" href="{Path(d).with_suffix(".html").name}">{ROOT_DOC_ICONS[d]} {esc(md_title(ROOT / d))}</a>'
-        for d in ROOT_DOCS if (ROOT / d).exists())
-    quick += '<a class="kb-chip" href="图形库/index.html">🖼️ 图形索引</a>'
+        for d in ROOT_DOCS if (ROOT / d).exists() and d not in girl_docs)
 
     method_links = " ".join(
         f'<a class="kb-chip" href="方法/{cat}/index.html">{DIM_ICONS[cat]} {cat}</a>'
         for cat in METHOD_CATS if list_cards(ROOT / "方法" / cat))
 
+    girl_cards = f'''<a class="kb-card" href="04_给女儿的使用说明.html" style="--card-accent:#ec4899">
+  <div class="kb-card__icon">🌟</div>
+  <div class="kb-card__title">给我的使用说明</div>
+  <div class="kb-card__meta">三句"咒语"：考前一页纸 · 想练题 · 错题拍照。零任务零打卡，随需随用。</div>
+</a>
+<a class="kb-card" href="05_能量补给站.html" style="--card-accent:#8b5cf6">
+  <div class="kb-card__icon">🔋</div>
+  <div class="kb-card__title">能量补给站</div>
+  <div class="kb-card__meta">撑不住时进来坐坐：真实的低谷故事、能念出声的句子、5分钟急救包。</div>
+</a>'''
+
     body = f'''<div class="kb-wrap">
-<div class="kb-hero">
-  <h1>📚 {SITE_NAME}</h1>
-  <p>2028年广东新高考六科学习知识库 · 选科：语文 / 数学 / 英语 / 物理 / 化学 / 生物</p>
+<section class="kb-hero">
+  <div class="kb-hero__eyebrow">2028 广东新高考 · 家学知识库</div>
+  <h1>六科知识，一库沉淀</h1>
+  <p>语文 · 数学 · 英语 · 物理 · 化学 · 生物 ｜ 广东考情锚定 ｜ 随需取用，不必通读</p>
+  <div class="kb-hero__actions">
+    <a class="kb-btn kb-btn--hero" href="04_给女儿的使用说明.html">🌟 女儿专区</a>
+    <a class="kb-btn kb-btn--hero2" href="05_能量补给站.html">🔋 能量补给站</a>
+    <a class="kb-btn kb-btn--hero2" href="#subjects">📚 六科知识库</a>
+  </div>
   <div class="kb-stats">
     <div class="kb-stat"><span class="num">{total_cards}</span><span class="label">知识卡片</span></div>
     <div class="kb-stat"><span class="num">6</span><span class="label">覆盖科目</span></div>
     <div class="kb-stat"><span class="num">4</span><span class="label">知识维度</span></div>
     <div class="kb-stat"><span class="num">650</span><span class="label">目标分数</span></div>
   </div>
+</section>
+
+<h2 class="kb-section-title" id="girl">🌟 女儿专区</h2>
+<p class="kb-section-sub">不要求看，只在你需要时被用。</p>
+<div class="kb-grid kb-grid--duo">
+{girl_cards}
 </div>
 
-<h2 class="kb-section-title">快速导航</h2>
-<div class="kb-chips">{quick}</div>
-
-<h2 class="kb-section-title">六科知识库</h2>
+<h2 class="kb-section-title" id="subjects">📚 六科知识库</h2>
+<p class="kb-section-sub">按科目进入，或沿每张卡片的「关联卡片」跳转。</p>
 <div class="kb-grid kb-grid--wide">
 {"".join(subject_cards)}
 </div>
 
-<h2 class="kb-section-title">🎯 方法体系</h2>
-<div class="kb-card" style="--card-accent:{SUBJECT_COLORS["方法"]}">
-  <div class="kb-card__title">学习方法 · 心理建设 · 生理管理 · 考试策略（{method_count} 篇）</div>
-  <div class="kb-chips" style="margin-top:12px">{method_links}
-  <a class="kb-chip" href="方法/index.html">→ 进入方法体系</a></div>
-</div>
-
-<h2 class="kb-section-title">📌 学习管理</h2>
+<h2 class="kb-section-title" id="tools">🧰 方法与工具</h2>
 <div class="kb-grid">
-  <a class="kb-card" href="复盘追踪/index.html" style="--card-accent:#475569">
+  <a class="kb-card" href="方法/index.html" style="--card-accent:{SUBJECT_COLORS["方法"]}">
+    <div class="kb-card__icon">🎯</div>
+    <div class="kb-card__title">方法体系<span class="kb-card__count">{method_count} 篇</span></div>
+    <div class="kb-card__links">{method_links}</div>
+  </a>
+  <a class="kb-card" href="复盘追踪/index.html" style="--card-accent:#45506a">
     <div class="kb-card__icon">📊</div>
     <div class="kb-card__title">复盘追踪</div>
-    <div class="kb-card__meta">知识掌握状态表 · 学习进度追踪</div>
+    <div class="kb-card__meta">掌握状态表 · 个人仪表盘 · 每用户进度</div>
   </a>
-  <a class="kb-card" href="图形库/index.html" style="--card-accent:#0891b2">
+  <a class="kb-card" href="图形库/index.html" style="--card-accent:#0d7490">
     <div class="kb-card__icon">🖼️</div>
     <div class="kb-card__title">图形库</div>
     <div class="kb-card__meta">32 张知识点示意图（物理 / 化学 / 生物 / 数学）</div>
   </a>
 </div>
 
+<h2 class="kb-section-title" id="docs">🗂 管理文档</h2>
+<div class="kb-chips">
+{doc_chips}
+</div>
+
 {footer_html()}
 </div>'''
     write_text(out_path, page_template(
-        title="首页", prefix=prefix, body_inner=body))
+        title="首页", prefix="", body_inner=body))
 
 
 # ---------------------------------------------------------------- 假期复习总入口换肤

@@ -284,6 +284,14 @@ MathJax = {
 <li>✅ 技术实现：<code>build_site.py</code> 新增 <code>GIRL_ZONE_WIDGETS</code> 注入（md转换器会转义原生HTML，故由构建层注入）；<code>kb-progress.js</code> 新增 <code>Boost</code> 模块；<code>kb.css</code> 末尾追加girl-zone样式段；首页 <code>index.md</code> 增加女儿专区入口表</li>
 <li>✅ 验证：build 16个文档页/262卡/无断链，<code>node --check</code> JS语法通过，04/05 零 deadlink，组件容器注入确认</li>
 </ul>
+<h3>2026-08-20（深夜） 整站视觉 v2 重设计：编辑部纸感风格 + 首页重排</h3>
+<ul>
+<li>✅ 设计系统重写（<code>assets/kb.css</code> 全量 v2）：暖纸底/发丝线/墨蓝主色/字重分级，去除渐变大色块、彩色顶边卡、常态阴影等&quot;模板感&quot;元素；hero 改为墨蓝编辑部式（内嵌细线相框、奶油色按钮层次、发丝线统计行）；全部类名保持兼容（262张卡片页/43个索引页/进度组件/女儿专区主题无损迁移）</li>
+<li>✅ 首页重排（<code>build_root_index</code> 重写）：墨蓝hero（大标题&quot;六科知识，一库沉淀&quot;+三按钮）→ 🌟女儿专区（2卡，首次真正上首页）→ 📚六科知识库（6科卡片：学科标语+卡片数+四维度两列链接）→ 🧰方法与工具（方法/复盘/图形库）→ 🗂管理文档（安静chips，与女儿向内容分层）</li>
+<li>✅ 发现并修正：<code>index.md</code> 从未驱动首页（首页由模板生成），已删除该僵尸文件；上一轮&quot;index.md加女儿专区入口&quot;实际未上站，本次由 build_root_index 落实</li>
+<li>✅ AGENTS.md 同步：目录结构改为 index.html（模板生成）、统计口径注解更新</li>
+<li>✅ 验证：build 无断链 + MD一致性校验通过 + 浏览器实测（首屏截图视觉确认：墨蓝hero/按钮层次/统计行正常无溢出；四区块DOM结构齐全）；六科卡片链接12条维度入口确认</li>
+</ul>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">
