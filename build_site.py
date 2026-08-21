@@ -1186,8 +1186,8 @@ def build_root_index():
   </a>
   <a class="kb-card" href="图形库/index.html" style="--card-accent:#0d7490">
     <div class="kb-card__icon">🖼️</div>
-    <div class="kb-card__title">图形库</div>
-    <div class="kb-card__meta">32 张知识点示意图（物理 / 化学 / 生物 / 数学）</div>
+    <div class="kb-card__title">图形库<span class="kb-card__count">{len(list((ROOT / "图形库").glob("*/*.png")))} 图</span></div>
+    <div class="kb-card__meta">知识点示意图（物理 / 化学 / 生物 / 数学）</div>
   </a>
 </div>
 

@@ -40,7 +40,7 @@ MathJax = {
 <h2>核心内容</h2>
 <h3>题型识别标志</h3>
 <blockquote><p><strong>看到什么条件 → 立刻想到什么方法/模型</strong></p></blockquote>
-<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;扩增目标基因/设计一对__&quot;</td><td>PCR</td><td>答<strong>引物</strong>（一对特异性引物）</td></tr><tr><td>&quot;筛选含载体的受体细胞&quot;</td><td>标记基因</td><td>抗生素抗性基因作<strong>标记基因</strong></td></tr><tr><td>&quot;使转录在需要处停止&quot;</td><td>终止子</td><td>终止子=<strong>终止转录</strong></td></tr><tr><td>&quot;用限制酶切割质粒和目的基因&quot;</td><td>载体构建</td><td>同种/双酶切+DNA连接酶</td></tr><tr><td>&quot;工程菌生长迟缓/产物积累毒害&quot;</td><td>表达与代谢平衡</td><td>能量分配/产物反馈抑制</td></tr><tr><td>&quot;工业废气→高附加值产品&quot;</td><td>循环经济/碳中和</td><td>废物资源化、固碳减排</td></tr></table></div>
+<div class="table-wrap"><table><tr><th>题干关键条件</th><th>识别为</th><th>首选方法</th></tr><tr><td>&quot;扩增目标基因/设计一对__&quot;</td><td>PCR</td><td>答<strong>引物</strong>（一对特异性引物）</td></tr><tr><td>&quot;筛选含载体的受体细胞&quot;</td><td>标记基因</td><td>抗生素抗性基因作<strong>标记基因</strong></td></tr><tr><td>&quot;使转录在需要处停止&quot;</td><td>终止子</td><td>终止子=<strong>终止转录</strong></td></tr><tr><td>&quot;用限制酶切割质粒和目的基因&quot;</td><td>载体构建</td><td>同种/双酶切+DNA连接酶</td></tr><tr><td>&quot;工程菌生长迟缓/产物积累毒害&quot;</td><td>表达与代谢平衡</td><td>能量分配/产物反馈抑制</td></tr><tr><td>&quot;工业废气→高附加值产品&quot;</td><td>循环经济/碳中和</td><td>废物资源化、固碳减排</td></tr><tr><td>&quot;电泳/条带/片段大小&quot;</td><td>电泳图判读</td><td>三看一对照：条带数→大小→位置</td></tr></table></div>
 <h3>解题路径（基因工程五步法）</h3>
 <h4>第一步：获取目的基因</h4>
 <ul>
@@ -65,27 +65,49 @@ MathJax = {
 <li>若&quot;生长迟缓&quot;：大量表达外源蛋白消耗能量/原料，代谢供能不足。</li>
 <li>若&quot;产物积累毒害&quot;：需优化发酵工艺（补料、分离产物）。</li>
 </ul>
+<h3>专题突破一：限制酶怎么选？——五步选酶法</h3>
+<blockquote><p>口诀：<strong>看基因 → 对载体 → 选双切 → 护标记 → 验方向</strong></p></blockquote>
+<ol>
+<li><strong>看基因</strong>：目的基因<strong>内部</strong>不能有所选酶的切点——别把自己的货物切碎。</li>
+<li><strong>对载体</strong>：载体多克隆位点上得有这两种酶的&quot;座位&quot;，没座位就切不开。</li>
+<li><strong>选双切</strong>：两种酶 → 两种不同黏性末端 → 一把钥匙一把锁，<strong>防自身环化 + 防反向插入</strong>。</li>
+<li><strong>护标记</strong>：酶切位点不能落在标记基因、复制原点上——门票撕坏了，后面没法筛选。</li>
+<li><strong>验方向</strong>：目的基因的箭头要顺着启动子——电池装反了，灯不会亮（无法表达）。</li>
+</ol>
+<p><strong>微型情境演练</strong>：质粒（4.0 kb）含 Ampᴿ 与 Tetᴿ 两种抗性基因，多克隆位点（BamHⅠ / EcoRⅠ / HindⅢ）位于 Tetᴿ 内部；目的基因（1.0 kb）内部含一个 EcoRⅠ 识别位点。 → 应选 <strong>BamHⅠ + HindⅢ</strong>：EcoRⅠ 会把目的基因切碎（第1步直接排除）；插入破坏 Tetᴿ 属于&quot;插入失活&quot;的设计，Ampᴿ 完整保留用于筛选（第4步想清楚：这是设计，不是事故）。</p>
+<h3>专题突破二：电泳图怎么读？——三看一对照</h3>
+<blockquote><p>原理一句话：DNA 带负电，从加样孔往正极方向跑；凝胶像迷宫，<strong>片段越小跑得越远</strong>（越靠下）。</p></blockquote>
+<div class="table-wrap"><table><tr><th>三看</th><th>看什么</th><th>回答什么问题</th></tr><tr><td>一看<strong>条带数</strong></td><td>出现几条带</td><td>环状质粒切一刀 = 1条线型带；重组质粒双酶切 = 载体+插入 <strong>2条</strong></td></tr><tr><td>二看<strong>条带大小</strong></td><td>对照 Marker&quot;梯子&quot;读 kb</td><td>切出的片段多大？有没有预期外的带（=没切干净/酶选错了）</td></tr><tr><td>三看<strong>位置</strong></td><td>大片段在上（跑得慢），小片段在下</td><td>未知片段大约多少 kb</td></tr></table></div>
+<p><strong>判读演练</strong>（接上题情境：重组质粒 4.0+1.0 = 5.0 kb，用 BamHⅠ+HindⅢ 完全酶切）：</p>
+<pre><code>（加样孔在上方，DNA 往下跑； ─ 表示一条带）
+大小 ↓     M(梯子)   ① 空质粒双切   ② 重组质粒双切   ③ 重组质粒单切
+5.0 kb       ─                          ─                 ─
+4.0 kb       ─            ─             ─
+3.0 kb       ─
+2.0 kb       ─
+1.0 kb       ─                          ─
+</code></pre>
+<blockquote><p><strong>结论句</strong>：泳道②出现 4.0 + 1.0 <strong>两条带</strong>，说明目的基因成功插入并被完整切下；而单酶切（泳道③）只有一条 5.0 kb，无法证明&quot;插没插、插得对不对&quot;——这就是鉴定实验要选<strong>双酶切 + 电泳</strong>的原因。</p></blockquote>
 <h3>母题（2022 广东选择性考试（选考）·第22题，12分）</h3>
 <blockquote><p>基于某些梭菌的特殊代谢能力，以工业废气（含CO₂等）为原料，通过厌氧发酵生产丙酮。<br>（1）针对每个需扩增的酶基因设计一对______，利用PCR扩增得到目标酶基因。<br>（2）构建表达载体pMTL80k，含启动子、终止子及抗生素抗性基因等。抗生素抗性基因的作用是______；终止子的作用是______。<br>（3）培养中发现重组梭菌大量表达酶蛋白时生长迟缓，推测原因可能是______；此外丙酮积累伤害细胞，需优化菌株和工艺。<br>（4）该技术实现了______，体现循环经济特点；从&quot;碳中和&quot;看优势在于______。</p></blockquote>
 <p><strong>解</strong>： <strong>（1）引物（一对特异性引物）</strong>。 <strong>（2）</strong> 抗生素抗性基因：<strong>作为标记基因，筛选含有基因表达载体的受体细胞</strong>；终止子：<strong>终止转录，使转录在需要的地方停下来</strong>。 <strong>（3）</strong> 酶蛋白大量表达需要消耗大量能量/原料，而厌氧代谢供能不足（或CO₂等气体大量用于合成丙酮而非用于菌体生长）。 <strong>（4）</strong> 实现了<strong>工业废气（废物）资源化</strong>；从碳中和看，该技术<strong>不仅不排放CO₂，还消耗工业废气中的CO₂（固碳减排）</strong>。</p>
 <blockquote><p>💡 <strong>关键技巧</strong>：载体&quot;三元件&quot;功能口诀——启动子&quot;开转录&quot;、终止子&quot;停转录&quot;、标记基因&quot;选细胞&quot;；PCR必答&quot;一对引物&quot;而非&quot;酶&quot;。</p></blockquote>
 <hr>
-<h2>自测训练（3道·覆盖五步法/载体元件/PCR）</h2>
+<h2>自测训练（4道·覆盖五步法/载体元件/PCR/选酶与电泳）</h2>
 <blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。</p></blockquote>
 <p><strong>第1题</strong>（检验：载体元件功能——启动子/终止子/标记基因） 构建基因表达载体时，除了目的基因外，还需哪些核心元件？请写出启动子、终止子、标记基因三个元件的功能。</p>
 <p><strong>第2题</strong>（检验：PCR技术——引物设计与温度步骤） 在PCR技术扩增目的基因时： （1）需要设计什么？数量是多少？从模板的哪一端延伸？ （2）PCR包括哪三个基本步骤？各步骤的作用是什么？为什么PCR不需要解旋酶？</p>
 <p><strong>第3题</strong>（检验：表达分析——&quot;生长迟缓&quot;原因） 某重组梭菌在大量表达外源酶蛋白时出现生长迟缓现象。请从能量和物质分配角度，分析其生长迟缓的原因，并提出一条优化策略。</p>
+<p><strong>第4题</strong>（检验：五步选酶法 + 电泳判读——情境综合） 某质粒（4.0 kb）含氨苄青霉素抗性基因（Ampᴿ）和四环素抗性基因（Tetᴿ），多克隆位点（BamHⅠ / EcoRⅠ / HindⅢ）位于 Tetᴿ 内部；目的基因长 1.0 kb，其内部含一个 EcoRⅠ 识别位点。 （1）构建表达载体应选哪两种限制酶？为什么不选 EcoRⅠ？ （2）用这两种酶完全酶切重组质粒后电泳，预期出现几条带？大小分别约为多少？ （3）有人图省事只用 BamHⅠ 单酶切构建，后续会遇到哪两个麻烦？</p>
 <hr>
 <h2>关联卡片</h2>
 <ul>
 <li><a href="../核心知识网络/高二深化_生物_核心知识网络_基因工程与生物技术.html">基因工程与生物技术</a> — 基因工程/PCR/载体系统知识</li>
 <li><a href="高二深化_生物_典型题型与方法_细胞工程与胚胎工程.html">细胞工程与胚胎工程</a> — 现代生物科技专题对照</li>
 <li><a href="../核心知识网络/高二深化_生物_核心知识网络_生态系统与环境保护.html">生态系统与环境保护</a> — 碳中和/循环经济背景</li>
+<li><a href="../核心知识网络/高二深化_生物_核心知识网络_基因工程基本操作.html">基因工程基本操作（工具酶·四步流程）</a> — 工具酶、同尾酶与载体组件细节</li>
 </ul>
 <hr>
-<ul>
-<li><a href="../核心知识网络/高二深化_生物_核心知识网络_基因工程基本操作.html">基因工程基本操作（工具酶·四步流程）</a></li>
-</ul>
 <h2>备注</h2>
 <ul>
 <li>广东卷基因工程常把&quot;环保情境+五步操作&quot;打包，审题先圈出&quot;引物/载体/转化/筛选/表达&quot;对应哪一步。</li>
@@ -120,6 +142,18 @@ MathJax = {
 <li>调节培养基碳氮比，补充能量物质。</li>
 </ul>
 <blockquote><p><strong>易错提醒</strong>：答题要写&quot;能量/原料消耗 + 厌氧供能不足&quot;两个维度；优化策略要具体可操作（补料、分离产物、调启动子），不能写&quot;改良菌种&quot;这种笼统答案。</p></blockquote></details>
+<details><summary>▶ 第4题详解（五步选酶法 + 电泳判读——情境综合）</summary><p><strong>（1）选 BamHⅠ + HindⅢ</strong>。</p>
+<ul>
+<li>排除 EcoRⅠ：它在目的基因<strong>内部</strong>有识别位点，会把目的基因切断（五步选酶法第1步&quot;看基因&quot;直接排除）；</li>
+<li>选双酶切：两种不同黏性末端，防自身环化、保证目的基因定向插入（第3步&quot;选双切&quot;）。</li>
+</ul>
+<p><strong>（2）两条带：约 4.0 kb（载体骨架）+ 1.0 kb（目的基因）</strong>。 重组质粒总长 4.0 + 1.0 = 5.0 kb；用 BamHⅠ + HindⅢ 完全酶切，目的基因被完整切下，两种片段按大小分开——大片段（4.0）在上方，小片段（1.0）在下方。</p>
+<p><strong>（3）单酶切的两个麻烦</strong>：</p>
+<ul>
+<li><strong>自身环化</strong>：质粒两端黏性末端相同，可自行连接成空质粒——含空质粒的菌也能在含氨苄青霉素的平板上存活，真正含目的基因的菌比例大降；</li>
+<li><strong>插入方向随机</strong>：目的基因可能反向插入，与启动子方向相反，无法正常转录表达。</li>
+</ul>
+<blockquote><p><strong>易错提醒</strong>：①题干&quot;多克隆位点位于 Tetᴿ 内部&quot;意味着插入会破坏四环素抗性——这是<strong>插入失活</strong>筛选设计，不是事故；②电泳答&quot;两条带&quot;必须带上大小（4.0 + 1.0），只答数量会丢分。</p></blockquote></details>
 <!-- KB-CONTENT-END -->
 </article>
 <div class="kb-cardnav">

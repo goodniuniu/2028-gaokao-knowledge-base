@@ -46,9 +46,10 @@ MathJax = {
 </code></pre>
 <h3>二、核心工具酶</h3>
 <div class="table-wrap"><table><tr><th>工具酶</th><th>功能</th><th>易错点</th></tr><tr><td><strong>限制性内切核酸酶（限制酶）</strong></td><td>识别特定序列，在特定位点切割DNA，产生黏性/平末端</td><td>一种酶识别一种特定序列；自身DNA被甲基化保护不被切</td></tr><tr><td><strong>DNA连接酶</strong></td><td>连接双链DNA片段，恢复磷酸二酯键</td><td>E·coli连接酶连黏性末端；T4连接酶连黏性/平末端</td></tr><tr><td><strong>Taq DNA聚合酶</strong></td><td>PCR中催化DNA延伸</td><td>热稳定；PCR<strong>不需解旋酶</strong>（高温变性代替）</td></tr></table></div>
-<blockquote><p>工具酶选择策略：双酶切（两种不同限制酶）→ 不同黏性末端 → 防自身环化与反向连接；不破坏目的基因与标记基因。</p></blockquote>
+<blockquote><p>工具酶选择策略：双酶切（两种不同限制酶）→ 不同黏性末端 → 防自身环化与反向连接；不破坏目的基因与标记基因。<br><strong>同尾酶</strong>：门牌不同、锁孔相同——识别序列不同，却切出相同的黏性末端（如 BamHⅠ 与 BglⅡ），所以切出的片段可以互相连接。真题考法：&quot;载体和目的基因的酶切位点对不上，怎么接？&quot;答案常是<strong>同尾酶</strong>。（顺带认识&quot;同裂酶&quot;=识别同一序列、切割位点可不同，考频低，见到不慌即可。）</p></blockquote>
 <h3>三、基因表达载体的核心组件</h3>
 <div class="table-wrap"><table><tr><th>组件</th><th>功能</th><th>易错</th></tr><tr><td>目的基因</td><td>需要表达的基因</td><td>—</td></tr><tr><td>启动子</td><td>RNA聚合酶识别结合，<strong>驱动转录</strong></td><td>≠起始密码子（后者在mRNA上）</td></tr><tr><td>终止子</td><td>终止转录</td><td>使转录在需要处停止</td></tr><tr><td>标记基因</td><td>筛选含质粒的受体细胞（如抗生素抗性）</td><td>还用于维持筛选压力、抑制杂菌</td></tr><tr><td>复制原点</td><td>质粒在宿主中自我复制</td><td>必备，否则不能稳定遗传</td></tr></table></div>
+<p><div class="figure"><img src="../../图形库/生物/基因表达载体与双酶切.png" alt="基因表达载体模式图与双酶切定向插入"><div class="figure-caption">基因表达载体模式图与双酶切定向插入</div></div></p>
 <h3>四、四步操作流程与要点</h3>
 <ol>
 <li><strong>获取目的基因</strong>：PCR（需设计一对引物，从3&#x27;端延伸）、从基因文库获取、人工合成。</li>
@@ -66,6 +67,9 @@ MathJax = {
 </ul>
 <p><strong>分析与答案要点</strong>：本题精准覆盖&quot;工具酶(PCR引物)+表达载体组件功能(启动子/终止子/标记基因)&quot;两大核心，是基因工程基本操作的典型母题。</p>
 <blockquote><p>另可参照 <strong>2024 广东卷 T21</strong>（驹形杆菌细菌纤维素膜光控表达载体，启动子PBAD/PT7选择与筛选）。</p></blockquote>
+<h3>七、一句话辨析：基因工程 vs 蛋白质工程</h3>
+<div class="table-wrap"><table><tr><th></th><th>基因工程</th><th>蛋白质工程</th></tr><tr><td><strong>打个比方</strong></td><td>搬运工：把现成的天然基因搬进细胞</td><td>改图纸的人：先改造基因，再让细胞照图施工</td></tr><tr><td><strong>产物</strong></td><td>天然蛋白质</td><td>改造过的（新）蛋白质</td></tr><tr><td><strong>题目识别信号</strong></td><td>&quot;转入现有基因 / 生产天然产物&quot;</td><td>&quot;定点突变 / 改造结构 / 预期新功能&quot;</td></tr></table></div>
+<blockquote><p>考场一句话：看到&quot;预期功能→设计基因&quot;就是蛋白质工程——<strong>从产物倒推图纸</strong>，方向和基因工程正好相反。</p></blockquote>
 <h2>自测训练（3道·覆盖工具酶/四步流程/PCR）</h2>
 <blockquote><p>先独立完成，再展开卡片末尾「参考答案」核对。每题标注所检验的题型，方便对号查漏。</p></blockquote>
 <p><strong>第1题</strong>（检验：工具酶与载体——限制酶选择策略） 构建基因表达载体时，为什么通常使用<strong>两种不同的限制酶</strong>对目的基因和质粒进行双酶切，而不是只用一种限制酶？请从&quot;自身环化&quot;和&quot;定向连接&quot;两个角度说明。</p>
