@@ -78,7 +78,7 @@
 - 提交前检查清单：开工已 fetch 无分叉 → 索引数字已更新 → 审计已跑 → build 无断链。
 - **多会话协作约定**：任何会话开工先执行第三节第0步；不要基于旧快照写统计结论（以 `kb_audit.py` 现场输出为准）；推送前再 fetch 一次确认远程无新提交；自己的工作尽量当天提交推送，减少分叉窗口。
 - **女儿专区（04/05 两个文档）**：治愈系视觉+每日一句+连续天数+成就徽章由三层机制组成——`build_site.py` 的 `GIRL_ZONE_WIDGETS` 注入组件容器并给 body 加 `class="girl-zone"`，`assets/kb.css` 末尾 girl-zone 段提供样式，`assets/kb-progress.js` 的 `Boost` 模块从每用户进度现场推导数据填充。改这两个页面只需改 md；新增同类页面时在 `ROOT_DOCS`+`GIRL_ZONE_WIDGETS` 各加一条。徽章/每日一句文案在 kb-progress.js 的 `Boost.ACHIEVEMENTS`/`Boost.QUOTES` 中维护。
-- **思维导图（`思维导图/` 专区）**：数据与页面均由 `build_site.py` 的 `build_mindmaps()` 每次构建自动再生（卡片「关联卡片」段互链 → `assets/kb-maps.js` → hub/7棵知识树/关联图谱页），**不手工编辑这些页面**；echarts 已本地化（`assets/echarts.min.js`），勿改成 CDN 引用（国内不可靠）；节点点击跳转卡片页，cardId 口径与进度系统一致。
+- **思维导图（`思维导图/` 专区）**：数据与页面均由 `build_site.py` 的 `build_mindmaps()` 每次构建自动再生，**不手工编辑这些页面**。四种视图：hub、7棵知识树、考前速览树（关键卡=来源锚定题号，无锚定科目回退"真题来源+高频"前15张）、全库关联图谱（实线=「关联卡片」互链；**紫色虚线=隐性关联**：共同标签[2-4张卡的特异标签，跨科优先，≤36条] + 同卷跨科[≤12条]，总量≤48）；另在**六科索引页顶部嵌迷你树**（`_MAP_SUBTREE_JS`）。echarts 已本地化（`assets/echarts.min.js`），勿改 CDN 引用；节点点击跳转卡片页，cardId 口径与进度系统一致；改筛选阈值/文案在 `collect_map_data()` 与 `_MAP_*_JS` 模板。
 
 ## 五、环境
 

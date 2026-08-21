@@ -525,7 +525,13 @@ a.kb-btn:hover { filter: brightness(1.12); text-decoration: none; }
   border-radius: var(--radius);
   background: var(--surface);
 }
-@media (max-width: 640px) { .kb-map { height: 62vh; min-height: 380px; } }
+.kb-map--mini { height: 300px; min-height: 260px; margin-top: 8px; }
+.kb-map--quick { height: 440px; min-height: 340px; }
+@media (max-width: 640px) {
+  .kb-map { height: 62vh; min-height: 380px; }
+  .kb-map--mini { height: 240px; min-height: 220px; }
+  .kb-map--quick { height: 56vh; min-height: 320px; }
+}
 
 /* ---------- 页脚 ---------- */
 .kb-footer {

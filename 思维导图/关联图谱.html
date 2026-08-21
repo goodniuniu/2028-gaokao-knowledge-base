@@ -21,7 +21,7 @@
 <div class="kb-wrap">
 <ol class="kb-breadcrumb"><li><a href="../index.html">首页</a></li><li><a href="./index.html">思维导图</a></li><li><span aria-current="page">关联图谱</span></li></ol>
 <h1 class="kb-title">🕸 全库关联图谱</h1>
-<p class="kb-section-sub">262 张卡片 · 1422 条互链 · 连线颜色跟随来源科目。悬停点亮相邻卡片，单击打开，顶部图例可按科目筛选，拖拽/滚轮缩放平移。首次打开布局动画约数秒。</p>
+<p class="kb-section-sub">262 张卡片 · 1422 条互链（实线，颜色随来源科目）+ 33 条隐性关联（紫色虚线：同标签 / 同卷跨科，悬停看缘由）。悬停点亮相邻卡片，单击打开，顶部图例筛科目，拖拽/滚轮缩放。首次打开布局动画约数秒。</p>
 <div class="kb-map" id="kb-map"></div>
 <script>
 
@@ -29,11 +29,18 @@
   var el = document.getElementById('kb-map');
   if (!el || typeof echarts === 'undefined' || !window.KB_MAPS) return;
   var g = window.KB_MAPS.graph;
+  // 隐性关联边（共同标签/共同真题来源）→ 紫色虚线
+  var extra = (g.extraLinks || []).map(function (e) {
+    return { source: e.source, target: e.target, label: e.label,
+             lineStyle: { type: 'dashed', color: '#8172b2', opacity: .55,
+                          curveness: 0.25, width: 1 } };
+  });
   var chart = echarts.init(el);
   chart.setOption({
     tooltip: { trigger: 'item', formatter: function (p) {
       if (p.dataType === 'edge') {
-        return p.data.source.split('/').pop() + '<br/>⇄<br/>' + p.data.target.split('/').pop();
+        var head = p.data.label ? ('隐性关联 · ' + p.data.label + '<br/>') : '';
+        return head + p.data.source.split('/').pop() + ' ⇄ ' + p.data.target.split('/').pop();
       }
       var d = p.data || {};
       return '<b>' + d.name + '</b><br/>关联卡片：' + d.value + ' 张<br/>单击打开卡片';
@@ -42,7 +49,7 @@
                textStyle: { fontSize: 12 } }],
     series: [{ type: 'graph', layout: 'force', roam: true, draggable: true,
       categories: g.categories.map(function (s) { return { name: s }; }),
-      data: g.nodes, links: g.links,
+      data: g.nodes, links: g.links.concat(extra),
       force: { repulsion: 95, edgeLength: [14, 70], gravity: 0.10 },
       label: { show: false },
       emphasis: { focus: 'adjacency',

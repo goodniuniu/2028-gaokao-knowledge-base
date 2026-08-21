@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>英语知识库 | 2028高考知识库</title>
 <link rel="stylesheet" href="../assets/kb.css">
-
+<script src="../assets/echarts.min.js"></script>
+<script src="../assets/kb-maps.js"></script>
 </head>
 <body data-subject="英语">
 <nav class="kb-nav">
@@ -22,6 +23,47 @@
 <h1 class="kb-title">🌍 英语知识库</h1>
 <p style="color:var(--text-2);margin:0 0 16px">共 41 张知识卡片 · 四大知识维度</p>
 <div class="kb-chips" style="margin-bottom:8px"><a class="kb-chip" href="索引_英语.html">📋 英语总索引</a></div>
+<p class="kb-section-sub" style="margin-top:18px">🌲 全科知识树（单击展开维度 → 卡片；或直接下拉浏览清单）</p>
+<div class="kb-map kb-map--mini" id="kb-submap"></div>
+<script>
+
+(function () {
+  var el = document.getElementById('kb-submap');
+  if (!el || typeof echarts === 'undefined' || !window.KB_MAPS) return;
+  var subj = '英语';
+  var tree = window.KB_MAPS.trees[subj];
+  var chart = echarts.init(el);
+  chart.setOption({
+    tooltip: { trigger: 'item', formatter: function (p) {
+      var d = p.data || {}, s = d.name;
+      if (d.diff) s += '<br/>难度：' + d.diff;
+      if (d.status) s += '<br/>状态：' + d.status;
+      if (d.href) s += '<br/><i>单击打开卡片</i>';
+      else s += '<br/><i>单击展开/折叠</i>';
+      return s;
+    } },
+    series: [{ type: 'tree', data: [tree], left: '3%', right: '26%',
+      top: '2%', bottom: '2%', symbol: 'circle', symbolSize: 7, roam: true,
+      expandAndCollapse: true, initialTreeDepth: 2,
+      itemStyle: { color: '#2f4a87', borderColor: '#fff', borderWidth: 1 },
+      lineStyle: { color: '#c9c4b8' },
+      label: { position: 'left', verticalAlign: 'middle', align: 'right',
+               fontSize: 12, color: '#23262c' },
+      leaves: { label: { position: 'right', verticalAlign: 'middle', align: 'left' },
+                itemStyle: { color: '#8b5cf6' } },
+      animationDuration: 220 }]
+  });
+  chart.on('click', function (p) {
+    if (p.data && p.data.href) {
+      var h = p.data.href;
+      if (h.indexOf(subj + '/') === 0) h = h.slice(subj.length + 1);
+      location.href = h;
+    }
+  });
+  window.addEventListener('resize', function () { chart.resize(); });
+})();
+
+</script>
 <h2 class="kb-section-title">🧠 核心知识网络（8）</h2>
 <div class="kb-list">
 <a class="kb-item" href="核心知识网络/高一筑基_英语_核心知识网络_三大从句连词辨析.html">

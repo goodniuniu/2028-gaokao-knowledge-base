@@ -862,16 +862,28 @@ def build_subject_index(subject: str):
     if (subj_dir / f"索引_{subject}.md").exists():
         index_doc = f'<a class="kb-chip" href="索引_{subject}.html">📋 {esc(subject)}总索引</a>'
 
+    # 迷你知识树（顶部）：进科目即见结构，单击维度展开卡片，叶子直达
+    sub_head = (f'<script src="{prefix}assets/echarts.min.js"></script>\n'
+                f'<script src="{prefix}assets/kb-maps.js"></script>')
+    sub_js = _MAP_SUBTREE_JS.replace("__SUBJECT__", subject)
+    subtree = f'''<p class="kb-section-sub" style="margin-top:18px">🌲 全科知识树（单击展开维度 → 卡片；或直接下拉浏览清单）</p>
+<div class="kb-map kb-map--mini" id="kb-submap"></div>
+<script>
+{sub_js}
+</script>'''
+
     body = f'''<div class="kb-wrap">
 {breadcrumb_html([("首页", prefix + "index.html"), (subject, None)])}
 <h1 class="kb-title">{icon} {esc(subject)}知识库</h1>
 <p style="color:var(--text-2);margin:0 0 16px">共 {total} 张知识卡片 · 四大知识维度</p>
 <div class="kb-chips" style="margin-bottom:8px">{index_doc}</div>
+{subtree}
 {"".join(sections)}
 {footer_html()}
 </div>'''
     write_text(out_path, page_template(
-        title=f"{subject}知识库", prefix=prefix, body_inner=body, subject=subject))
+        title=f"{subject}知识库", prefix=prefix, body_inner=body, subject=subject,
+        head_extra=sub_head))
 
 
 def build_method_index():
@@ -1211,7 +1223,7 @@ _MAP_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+?\.md)\)")
 
 
 def collect_map_data():
-    """提取全部卡片的知识树与关联图谱数据。cardId 与进度系统一致（md 路径去后缀）。"""
+    """提取全部卡片的知识树、关联图谱与隐性关联数据。cardId 与进度系统一致。"""
     card_dirs = []
     for subject in SUBJECTS:
         for dim in DIMS:
@@ -1226,6 +1238,7 @@ def collect_map_data():
                   if not p.name.startswith("索引_")]
 
     nodes, targets_by_id = [], {}
+    tags_by_id, exam_by_id, key_by_id, relax_by_id = {}, {}, {}, {}
     for subject, dim, p in card_dirs:
         card_id = p.relative_to(ROOT).as_posix()[:-3]
         text = read_text(p)
@@ -1250,6 +1263,21 @@ def collect_map_data():
             "phase": meta.get("时间标签", ""),
         })
         targets_by_id[card_id] = targets
+        # 尾部 🏷️ 标签行（用于隐性关联）
+        tags_by_id[card_id] = re.findall(r"`#([^`]+)`", text)
+        # 来源字段的真题锚点（如 2022广东卷T22）
+        src_field = meta.get("来源", "")
+        exam_by_id[card_id] = [
+            y + ex for y, ex in re.findall(
+                r"(20\d{2})\s*年?\s*(广东(?:选择性考试|卷)?|新高考[ⅠI]卷)", src_field)]
+        # 关键卡 = 来源锚定到具体题号（A类真题锚定卡，考前速览用）
+        key_by_id[card_id] = bool(
+            re.search(r"20\d{2}", src_field)
+            and re.search(r"(T\s?\d+|第\s?\d+\s*题)", src_field))
+        # 回退口径：真题来源标签 + 考情"高频"（个别科目如英语无题号锚定时启用）
+        relax_by_id[card_id] = (
+            meta.get("试卷来源", "").strip() not in ("无", "无（素材积累）", "—", "")
+            and "高频" in meta.get("广东考情", ""))
 
     id_set = {n["id"] for n in nodes}
     links, degree = [], {}
@@ -1259,6 +1287,60 @@ def collect_map_data():
                 links.append({"source": n["id"], "target": t})
                 degree[n["id"]] = degree.get(n["id"], 0) + 1
                 degree[t] = degree.get(t, 0) + 1
+
+    # ---- 隐性关联边（虚线）：共同标签 + 共同真题来源 ----
+    subject_by_id = {n["id"]: n["subject"] for n in nodes}
+    manual_pairs = {frozenset((e["source"], e["target"])) for e in links}
+    seen_extra = set()
+    extra_links = []
+
+    def add_extra(a, b, kind, label):
+        if a == b or a not in id_set or b not in id_set:
+            return False
+        k = frozenset((a, b))
+        if k in manual_pairs or k in seen_extra:
+            return False
+        seen_extra.add(k)
+        extra_links.append({"source": a, "target": b, "kind": kind, "label": label})
+        return True
+
+    # 共同标签：仅 2~4 张卡的特异标签；跨科组优先；>2 张用星形连法
+    _GENERIC_TAGS = (set(SUBJECTS) | set(DIMS) | {"方法", "高一筑基", "高二深化",
+                     "高三冲刺", "广东特色", "广东卷", "广东听说", "已掌握", "待强化",
+                     "未理解", "作文素材", "素材"})
+    tag_groups = {}
+    for n in nodes:
+        for tg in set(tags_by_id[n["id"]]):
+            if tg in _GENERIC_TAGS or re.fullmatch(r"难度\d", tg):
+                continue
+            tag_groups.setdefault(tg, []).append(n["id"])
+    tag_items = [(tg, ids) for tg, ids in tag_groups.items() if 2 <= len(ids) <= 4]
+    tag_items.sort(key=lambda x: (-len({subject_by_id[i] for i in x[1]}), len(x[1])))
+    for tg, ids in tag_items:
+        if len(extra_links) >= 36:
+            break
+        pairs = [(ids[0], ids[1])] if len(ids) == 2 else [(ids[0], x) for x in ids[1:]]
+        for a, b in pairs:
+            add_extra(a, b, "tag", f"同标签 #{tg}")
+
+    # 共同真题来源：只连"跨科"的代表卡（同科同卷太常见，无信息量）
+    exam_groups = {}
+    for n in nodes:
+        for anchor in set(exam_by_id[n["id"]]):
+            exam_groups.setdefault(anchor, []).append(n["id"])
+    exam_edges = 0
+    for anchor, ids in sorted(exam_groups.items(), key=lambda x: -len(x[1])):
+        if exam_edges >= 12 or len(extra_links) >= 48:
+            break
+        reps = {}
+        for i in ids:
+            reps.setdefault(subject_by_id[i], i)
+        if len(reps) < 2:
+            continue
+        rep_list = list(reps.values())
+        for b in rep_list[1:]:
+            if add_extra(rep_list[0], b, "exam", f"同卷 {anchor}"):
+                exam_edges += 1
 
     categories = SUBJECTS + ["方法"]
     cat_idx = {s: i for i, s in enumerate(categories)}
@@ -1272,24 +1354,38 @@ def collect_map_data():
         })
 
     # 知识树：科目 → 维度 → 卡片
-    trees = {}
-    for subject in categories:
+    def build_tree(subject, only=None):
         root = {"name": subject, "children": {}}
         for n in nodes:
             if n["subject"] != subject:
                 continue
+            if only is not None and n["id"] not in only:
+                continue
             leaf = {"name": n["name"], "href": n["id"] + ".html",
                     "diff": n["diff"], "status": n["status"], "phase": n["phase"]}
             root["children"].setdefault(n["dim"], []).append(leaf)
-        root["children"] = [{"name": dim, "collapsed": False,
-                             "children": leaves}
+        root["children"] = [{"name": dim, "children": leaves}
                             for dim, leaves in root["children"].items()]
-        trees[subject] = root
+        return root
+
+    trees = {s: build_tree(s) for s in categories}
+    quick = {}
+    for s in categories:
+        ids = {n["id"] for n in nodes if n["subject"] == s and key_by_id[n["id"]]}
+        if not ids:  # 回退：真题来源+高频，取前15张
+            ids = {n["id"] for n in nodes
+                   if n["subject"] == s and relax_by_id[n["id"]]} 
+            ids = set(sorted(ids)[:15])
+        quick[s] = build_tree(s, only=ids) if ids else {"name": s, "children": []}
+    quick_count = sum(len(d["children"]) for s in quick for d in quick[s]["children"])
 
     return {
         "trees": trees,
-        "graph": {"nodes": graph_nodes, "links": links, "categories": categories},
-        "meta": {"nodeCount": len(nodes), "linkCount": len(links)},
+        "quick": quick,
+        "graph": {"nodes": graph_nodes, "links": links,
+                  "extraLinks": extra_links, "categories": categories},
+        "meta": {"nodeCount": len(nodes), "linkCount": len(links),
+                 "extraCount": len(extra_links), "quickCount": quick_count},
     }
 
 
@@ -1331,11 +1427,18 @@ _MAP_GRAPH_JS = """
   var el = document.getElementById('kb-map');
   if (!el || typeof echarts === 'undefined' || !window.KB_MAPS) return;
   var g = window.KB_MAPS.graph;
+  // 隐性关联边（共同标签/共同真题来源）→ 紫色虚线
+  var extra = (g.extraLinks || []).map(function (e) {
+    return { source: e.source, target: e.target, label: e.label,
+             lineStyle: { type: 'dashed', color: '#8172b2', opacity: .55,
+                          curveness: 0.25, width: 1 } };
+  });
   var chart = echarts.init(el);
   chart.setOption({
     tooltip: { trigger: 'item', formatter: function (p) {
       if (p.dataType === 'edge') {
-        return p.data.source.split('/').pop() + '<br/>⇄<br/>' + p.data.target.split('/').pop();
+        var head = p.data.label ? ('隐性关联 · ' + p.data.label + '<br/>') : '';
+        return head + p.data.source.split('/').pop() + ' ⇄ ' + p.data.target.split('/').pop();
       }
       var d = p.data || {};
       return '<b>' + d.name + '</b><br/>关联卡片：' + d.value + ' 张<br/>单击打开卡片';
@@ -1344,7 +1447,7 @@ _MAP_GRAPH_JS = """
                textStyle: { fontSize: 12 } }],
     series: [{ type: 'graph', layout: 'force', roam: true, draggable: true,
       categories: g.categories.map(function (s) { return { name: s }; }),
-      data: g.nodes, links: g.links,
+      data: g.nodes, links: g.links.concat(extra),
       force: { repulsion: 95, edgeLength: [14, 70], gravity: 0.10 },
       label: { show: false },
       emphasis: { focus: 'adjacency',
@@ -1360,6 +1463,83 @@ _MAP_GRAPH_JS = """
     }
   });
   window.__kbMap = chart;  // 调试/维护钩子：echarts 实例
+  window.addEventListener('resize', function () { chart.resize(); });
+})();
+"""
+
+_MAP_QUICK_JS = """
+(function () {
+  if (typeof echarts === 'undefined' || !window.KB_MAPS) return;
+  var charts = [];
+  Object.keys(window.KB_MAPS.quick).forEach(function (subj) {
+    var el = document.getElementById('kb-quick-' + subj);
+    if (!el) return;
+    var tree = window.KB_MAPS.quick[subj];
+    var chart = echarts.init(el);
+    chart.setOption({
+      tooltip: { trigger: 'item', formatter: function (p) {
+        var d = p.data || {}, s = d.name;
+        if (d.diff) s += '<br/>难度：' + d.diff;
+        if (d.status) s += '<br/>状态：' + d.status;
+        if (d.href) s += '<br/><i>单击打开卡片</i>';
+        return s;
+      } },
+      series: [{ type: 'tree', data: [tree], left: '3%', right: '22%',
+        top: '2%', bottom: '2%', symbol: 'circle', symbolSize: 8, roam: true,
+        expandAndCollapse: true, initialTreeDepth: 3,
+        itemStyle: { color: '#2f4a87', borderColor: '#fff', borderWidth: 1 },
+        lineStyle: { color: '#c9c4b8' },
+        label: { position: 'left', verticalAlign: 'middle', align: 'right',
+                 fontSize: 12.5, color: '#23262c' },
+        leaves: { label: { position: 'right', verticalAlign: 'middle', align: 'left' },
+                  itemStyle: { color: '#c44e52' } },
+        animationDuration: 220 }]
+    });
+    chart.on('click', function (p) {
+      if (p.data && p.data.href) location.href = '../' + p.data.href;
+    });
+    charts.push(chart);
+  });
+  window.addEventListener('resize', function () {
+    charts.forEach(function (c) { c.resize(); });
+  });
+})();
+"""
+
+_MAP_SUBTREE_JS = """
+(function () {
+  var el = document.getElementById('kb-submap');
+  if (!el || typeof echarts === 'undefined' || !window.KB_MAPS) return;
+  var subj = '__SUBJECT__';
+  var tree = window.KB_MAPS.trees[subj];
+  var chart = echarts.init(el);
+  chart.setOption({
+    tooltip: { trigger: 'item', formatter: function (p) {
+      var d = p.data || {}, s = d.name;
+      if (d.diff) s += '<br/>难度：' + d.diff;
+      if (d.status) s += '<br/>状态：' + d.status;
+      if (d.href) s += '<br/><i>单击打开卡片</i>';
+      else s += '<br/><i>单击展开/折叠</i>';
+      return s;
+    } },
+    series: [{ type: 'tree', data: [tree], left: '3%', right: '26%',
+      top: '2%', bottom: '2%', symbol: 'circle', symbolSize: 7, roam: true,
+      expandAndCollapse: true, initialTreeDepth: 2,
+      itemStyle: { color: '#2f4a87', borderColor: '#fff', borderWidth: 1 },
+      lineStyle: { color: '#c9c4b8' },
+      label: { position: 'left', verticalAlign: 'middle', align: 'right',
+               fontSize: 12, color: '#23262c' },
+      leaves: { label: { position: 'right', verticalAlign: 'middle', align: 'left' },
+                itemStyle: { color: '#8b5cf6' } },
+      animationDuration: 220 }]
+  });
+  chart.on('click', function (p) {
+    if (p.data && p.data.href) {
+      var h = p.data.href;
+      if (h.indexOf(subj + '/') === 0) h = h.slice(subj.length + 1);
+      location.href = h;
+    }
+  });
   window.addEventListener('resize', function () { chart.resize(); });
 })();
 """
@@ -1390,15 +1570,20 @@ def build_mindmaps():
     body = f'''<div class="kb-wrap">
 {breadcrumb_html([("首页", "../index.html"), ("思维导图", None)])}
 <h1 class="kb-title">🧭 思维导图</h1>
-<p class="kb-section-sub">两种视角看全库 {data["meta"]["nodeCount"]} 张卡片、{data["meta"]["linkCount"]} 条关联：结构看「知识怎么组织」，图谱看「知识怎么互相勾连」。</p>
+<p class="kb-section-sub">三种视角看全库 {data["meta"]["nodeCount"]} 张卡片、{data["meta"]["linkCount"]} 条关联：速览看「考前该扫什么」，结构看「知识怎么组织」，图谱看「知识怎么互相勾连」。</p>
 
-<h2 class="kb-section-title">🕸 全库关联图谱</h2>
-<p class="kb-section-sub">每个圆点是一张卡片，连线来自卡片间的「关联卡片」互链。悬停一张卡，与它相关的卡片会一起点亮——单击直接打开卡片。</p>
+<h2 class="kb-section-title">⚡ 考前速览 × 全库图谱</h2>
+<p class="kb-section-sub">速览树只保留真题锚定的关键卡（{data["meta"]["quickCount"]} 张，来源带年份+题号），考前扫一眼心里有底；图谱中实线是卡片互链，紫色虚线是隐性关联（同标签/同卷跨科）。</p>
 <div class="kb-grid kb-grid--duo">
+  <a class="kb-card" href="考前速览.html" style="--card-accent:#c44e52">
+    <div class="kb-card__icon">⚡</div>
+    <div class="kb-card__title">考前速览树<span class="kb-card__count">{data["meta"]["quickCount"]} 关键卡</span></div>
+    <div class="kb-card__meta">每科浓缩版：只放真题考过的卡 · 按维度分组 · 叶子单击直达</div>
+  </a>
   <a class="kb-card" href="关联图谱.html" style="--card-accent:#5562b0">
     <div class="kb-card__icon">🕸</div>
-    <div class="kb-card__title">关联图谱<span class="kb-card__count">{data["meta"]["nodeCount"]} 节点 · {data["meta"]["linkCount"]} 连线</span></div>
-    <div class="kb-card__meta">按科目着色 · 悬停点亮相邻 · 图例筛选科目 · 单击打开卡片</div>
+    <div class="kb-card__title">全库关联图谱<span class="kb-card__count">{data["meta"]["nodeCount"]} 节点 · {data["meta"]["linkCount"]}+{data["meta"]["extraCount"]} 连线</span></div>
+    <div class="kb-card__meta">按科目着色 · 悬停点亮相邻 · 虚线=隐性关联（同标签/同卷） · 单击打开卡片</div>
   </a>
 </div>
 
@@ -1438,7 +1623,7 @@ def build_mindmaps():
     body = f'''<div class="kb-wrap">
 {breadcrumb_html([("首页", "../index.html"), ("思维导图", "./index.html"), ("关联图谱", None)])}
 <h1 class="kb-title">🕸 全库关联图谱</h1>
-<p class="kb-section-sub">{data["meta"]["nodeCount"]} 张卡片 · {data["meta"]["linkCount"]} 条互链 · 连线颜色跟随来源科目。悬停点亮相邻卡片，单击打开，顶部图例可按科目筛选，拖拽/滚轮缩放平移。首次打开布局动画约数秒。</p>
+<p class="kb-section-sub">{data["meta"]["nodeCount"]} 张卡片 · {data["meta"]["linkCount"]} 条互链（实线，颜色随来源科目）+ {data["meta"]["extraCount"]} 条隐性关联（紫色虚线：同标签 / 同卷跨科，悬停看缘由）。悬停点亮相邻卡片，单击打开，顶部图例筛科目，拖拽/滚轮缩放。首次打开布局动画约数秒。</p>
 <div class="kb-map" id="kb-map"></div>
 <script>
 {js}
@@ -1447,6 +1632,33 @@ def build_mindmaps():
 </div>'''
     write_text(mdir / "关联图谱.html", page_template(
         title="关联图谱", prefix="../", body_inner=body,
+        subject="思维导图", head_extra=head))
+
+    # ---- 考前速览页（浓缩知识树：维度 + 真题锚定关键卡） ----
+    nav_chips = "".join(
+        f'<a class="kb-chip" href="#kb-quick-{s}">{SUBJECT_ICONS.get(s, "🎯")} {s}</a>'
+        for s in data["graph"]["categories"])
+    quick_sections = []
+    for s in data["graph"]["categories"]:
+        n = sum(len(d["children"]) for d in data["quick"][s]["children"])
+        if not n:
+            continue
+        quick_sections.append(f'''<h2 class="kb-section-title" id="kb-quick-{s}">{SUBJECT_ICONS.get(s, "🎯")} {s}<span class="kb-card__count">{n} 关键卡</span></h2>
+<div class="kb-map kb-map--quick" id="kb-quick-{s}"></div>''')
+    js = _MAP_QUICK_JS
+    body = f'''<div class="kb-wrap">
+{breadcrumb_html([("首页", "../index.html"), ("思维导图", "./index.html"), ("考前速览", None)])}
+<h1 class="kb-title">⚡ 考前速览树</h1>
+<p class="kb-section-sub">每科只保留「来源锚定到真题题号」的关键卡（全库共 {data["meta"]["quickCount"]} 张），按维度分组。考前扫一眼，先让大脑见到全部重点；叶子单击直达卡片。不要求全记住——见过，考场上就认得。</p>
+<div class="kb-chips" style="margin-bottom:6px">{nav_chips}</div>
+{"".join(quick_sections)}
+<script>
+{js}
+</script>
+{footer_html()}
+</div>'''
+    write_text(mdir / "考前速览.html", page_template(
+        title="考前速览", prefix="../", body_inner=body,
         subject="思维导图", head_extra=head))
 
 

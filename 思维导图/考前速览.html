@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>考前速览 | 2028高考知识库</title>
+<link rel="stylesheet" href="../assets/kb.css">
+<script src="../assets/echarts.min.js"></script>
+<script src="../assets/kb-maps.js"></script>
+</head>
+<body data-subject="思维导图">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../index.html">🏠 首页</a>
+    <a href="../思维导图/index.html">🧭 思维导图</a>
+    <a href="../图形库/index.html">🖼️ 图形库</a>
+    <a href="../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap">
+<ol class="kb-breadcrumb"><li><a href="../index.html">首页</a></li><li><a href="./index.html">思维导图</a></li><li><span aria-current="page">考前速览</span></li></ol>
+<h1 class="kb-title">⚡ 考前速览树</h1>
+<p class="kb-section-sub">每科只保留「来源锚定到真题题号」的关键卡（全库共 98 张），按维度分组。考前扫一眼，先让大脑见到全部重点；叶子单击直达卡片。不要求全记住——见过，考场上就认得。</p>
+<div class="kb-chips" style="margin-bottom:6px"><a class="kb-chip" href="#kb-quick-语文">📖 语文</a><a class="kb-chip" href="#kb-quick-数学">📐 数学</a><a class="kb-chip" href="#kb-quick-英语">🌍 英语</a><a class="kb-chip" href="#kb-quick-物理">⚛️ 物理</a><a class="kb-chip" href="#kb-quick-化学">⚗️ 化学</a><a class="kb-chip" href="#kb-quick-生物">🧬 生物</a><a class="kb-chip" href="#kb-quick-方法">🎯 方法</a></div>
+<h2 class="kb-section-title" id="kb-quick-语文">📖 语文<span class="kb-card__count">11 关键卡</span></h2>
+<div class="kb-map kb-map--quick" id="kb-quick-语文"></div><h2 class="kb-section-title" id="kb-quick-数学">📐 数学<span class="kb-card__count">25 关键卡</span></h2>
+<div class="kb-map kb-map--quick" id="kb-quick-数学"></div><h2 class="kb-section-title" id="kb-quick-英语">🌍 英语<span class="kb-card__count">15 关键卡</span></h2>
+<div class="kb-map kb-map--quick" id="kb-quick-英语"></div><h2 class="kb-section-title" id="kb-quick-物理">⚛️ 物理<span class="kb-card__count">12 关键卡</span></h2>
+<div class="kb-map kb-map--quick" id="kb-quick-物理"></div><h2 class="kb-section-title" id="kb-quick-化学">⚗️ 化学<span class="kb-card__count">19 关键卡</span></h2>
+<div class="kb-map kb-map--quick" id="kb-quick-化学"></div><h2 class="kb-section-title" id="kb-quick-生物">🧬 生物<span class="kb-card__count">16 关键卡</span></h2>
+<div class="kb-map kb-map--quick" id="kb-quick-生物"></div>
+<script>
+
+(function () {
+  if (typeof echarts === 'undefined' || !window.KB_MAPS) return;
+  var charts = [];
+  Object.keys(window.KB_MAPS.quick).forEach(function (subj) {
+    var el = document.getElementById('kb-quick-' + subj);
+    if (!el) return;
+    var tree = window.KB_MAPS.quick[subj];
+    var chart = echarts.init(el);
+    chart.setOption({
+      tooltip: { trigger: 'item', formatter: function (p) {
+        var d = p.data || {}, s = d.name;
+        if (d.diff) s += '<br/>难度：' + d.diff;
+        if (d.status) s += '<br/>状态：' + d.status;
+        if (d.href) s += '<br/><i>单击打开卡片</i>';
+        return s;
+      } },
+      series: [{ type: 'tree', data: [tree], left: '3%', right: '22%',
+        top: '2%', bottom: '2%', symbol: 'circle', symbolSize: 8, roam: true,
+        expandAndCollapse: true, initialTreeDepth: 3,
+        itemStyle: { color: '#2f4a87', borderColor: '#fff', borderWidth: 1 },
+        lineStyle: { color: '#c9c4b8' },
+        label: { position: 'left', verticalAlign: 'middle', align: 'right',
+                 fontSize: 12.5, color: '#23262c' },
+        leaves: { label: { position: 'right', verticalAlign: 'middle', align: 'left' },
+                  itemStyle: { color: '#c44e52' } },
+        animationDuration: 220 }]
+    });
+    chart.on('click', function (p) {
+      if (p.data && p.data.href) location.href = '../' + p.data.href;
+    });
+    charts.push(chart);
+  });
+  window.addEventListener('resize', function () {
+    charts.forEach(function (c) { c.resize(); });
+  });
+})();
+
+</script>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+<script src="../assets/kb-progress.js" defer></script>
+</body>
+</html>
