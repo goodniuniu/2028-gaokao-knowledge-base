@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>知识树 · 语文 | 2028高考知识库</title>
+<link rel="stylesheet" href="../assets/kb.css">
+<script src="../assets/echarts.min.js"></script>
+<script src="../assets/kb-maps.js"></script>
+</head>
+<body data-subject="思维导图">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../index.html">🏠 首页</a>
+    <a href="../思维导图/index.html">🧭 思维导图</a>
+    <a href="../图形库/index.html">🖼️ 图形库</a>
+    <a href="../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap">
+<ol class="kb-breadcrumb"><li><a href="../index.html">首页</a></li><li><a href="./index.html">思维导图</a></li><li><span aria-current="page">知识树 · 语文</span></li></ol>
+<h1 class="kb-title">📖 语文知识树</h1>
+<p class="kb-section-sub">单击展开/折叠分支；叶子节点是卡片，单击打开；空白处拖拽平移、滚轮缩放。</p>
+<div class="kb-map" id="kb-map"></div>
+<script>
+
+(function () {
+  var el = document.getElementById('kb-map');
+  if (!el || typeof echarts === 'undefined' || !window.KB_MAPS) return;
+  var tree = window.KB_MAPS.trees['语文'];
+  var chart = echarts.init(el);
+  chart.setOption({
+    tooltip: { trigger: 'item', formatter: function (p) {
+      var d = p.data || {}, s = d.name;
+      if (d.diff) s += '<br/>难度：' + d.diff;
+      if (d.status) s += '<br/>状态：' + d.status;
+      if (d.phase) s += '<br/>' + d.phase;
+      if (d.href) s += '<br/><i>单击打开卡片</i>';
+      return s;
+    } },
+    series: [{ type: 'tree', data: [tree], left: '4%', right: '18%', top: '4%', bottom: '4%',
+      symbol: 'circle', symbolSize: 9, roam: true,
+      expandAndCollapse: true, initialTreeDepth: 2,
+      itemStyle: { color: '#2f4a87', borderColor: '#fff', borderWidth: 1 },
+      lineStyle: { color: '#c9c4b8' },
+      label: { position: 'left', verticalAlign: 'middle', align: 'right',
+               fontSize: 13, color: '#23262c' },
+      leaves: { label: { position: 'right', verticalAlign: 'middle', align: 'left' },
+                itemStyle: { color: '#8b5cf6' } },
+      animationDuration: 260 }]
+  });
+  chart.on('click', function (p) {
+    if (p.data && p.data.href) location.href = '../' + p.data.href;
+  });
+  window.addEventListener('resize', function () { chart.resize(); });
+})();
+
+</script>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+<script src="../assets/kb-progress.js" defer></script>
+</body>
+</html>

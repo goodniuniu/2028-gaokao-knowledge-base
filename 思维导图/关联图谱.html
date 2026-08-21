@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关联图谱 | 2028高考知识库</title>
+<link rel="stylesheet" href="../assets/kb.css">
+<script src="../assets/echarts.min.js"></script>
+<script src="../assets/kb-maps.js"></script>
+</head>
+<body data-subject="思维导图">
+<nav class="kb-nav">
+  <a class="kb-nav__brand" href="../index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
+  <div class="kb-nav__links">
+    <a href="../index.html">🏠 首页</a>
+    <a href="../思维导图/index.html">🧭 思维导图</a>
+    <a href="../图形库/index.html">🖼️ 图形库</a>
+    <a href="../复盘追踪/index.html">📊 复盘追踪</a>
+  </div>
+</nav>
+<div class="kb-wrap">
+<ol class="kb-breadcrumb"><li><a href="../index.html">首页</a></li><li><a href="./index.html">思维导图</a></li><li><span aria-current="page">关联图谱</span></li></ol>
+<h1 class="kb-title">🕸 全库关联图谱</h1>
+<p class="kb-section-sub">262 张卡片 · 1422 条互链 · 连线颜色跟随来源科目。悬停点亮相邻卡片，单击打开，顶部图例可按科目筛选，拖拽/滚轮缩放平移。首次打开布局动画约数秒。</p>
+<div class="kb-map" id="kb-map"></div>
+<script>
+
+(function () {
+  var el = document.getElementById('kb-map');
+  if (!el || typeof echarts === 'undefined' || !window.KB_MAPS) return;
+  var g = window.KB_MAPS.graph;
+  var chart = echarts.init(el);
+  chart.setOption({
+    tooltip: { trigger: 'item', formatter: function (p) {
+      if (p.dataType === 'edge') {
+        return p.data.source.split('/').pop() + '<br/>⇄<br/>' + p.data.target.split('/').pop();
+      }
+      var d = p.data || {};
+      return '<b>' + d.name + '</b><br/>关联卡片：' + d.value + ' 张<br/>单击打开卡片';
+    } },
+    legend: [{ data: g.categories, top: 6, selectedMode: 'multiple',
+               textStyle: { fontSize: 12 } }],
+    series: [{ type: 'graph', layout: 'force', roam: true, draggable: true,
+      categories: g.categories.map(function (s) { return { name: s }; }),
+      data: g.nodes, links: g.links,
+      force: { repulsion: 95, edgeLength: [14, 70], gravity: 0.10 },
+      label: { show: false },
+      emphasis: { focus: 'adjacency',
+                  label: { show: true, fontSize: 12, color: '#23262c' } },
+      labelLayout: { hideOverlap: true },
+      lineStyle: { color: 'source', curveness: 0.12, opacity: 0.32, width: 1 },
+      itemStyle: { borderColor: '#fff', borderWidth: 0.6 },
+      animationDuration: 400 }]
+  });
+  chart.on('click', function (p) {
+    if (p.dataType === 'node' && p.data && p.data.href) {
+      location.href = '../' + p.data.href;
+    }
+  });
+  window.__kbMap = chart;  // 调试/维护钩子：echarts 实例
+  window.addEventListener('resize', function () { chart.resize(); });
+})();
+
+</script>
+<footer class="kb-footer">📝 本知识库持续更新中，目标：2028 高考 650 分<br>
+<a href="https://github.com/goodniuniu/2028-gaokao-knowledge-base">GitHub 仓库</a> · <a href="https://goodniuniu.github.io/2028-gaokao-knowledge-base">GitHub Pages</a></footer>
+</div>
+<script src="../assets/kb-progress.js" defer></script>
+</body>
+</html>

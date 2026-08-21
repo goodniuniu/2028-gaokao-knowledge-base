@@ -210,6 +210,7 @@ def nav_html(prefix: str) -> str:
   <a class="kb-nav__brand" href="{prefix}index.html"><span class="kb-nav__dot"></span>📚 {SITE_NAME}</a>
   <div class="kb-nav__links">
     <a href="{prefix}index.html">🏠 首页</a>
+    <a href="{prefix}思维导图/index.html">🧭 思维导图</a>
     <a href="{prefix}图形库/index.html">🖼️ 图形库</a>
     <a href="{prefix}复盘追踪/index.html">📊 复盘追踪</a>
   </div>
@@ -1168,6 +1169,11 @@ def build_root_index():
 
 <h2 class="kb-section-title" id="tools">🧰 方法与工具</h2>
 <div class="kb-grid">
+  <a class="kb-card" href="思维导图/index.html" style="--card-accent:#5562b0">
+    <div class="kb-card__icon">🧭</div>
+    <div class="kb-card__title">思维导图</div>
+    <div class="kb-card__meta">六科知识树 + 全库关联图谱（悬停点亮相邻卡片）</div>
+  </a>
   <a class="kb-card" href="方法/index.html" style="--card-accent:{SUBJECT_COLORS["方法"]}">
     <div class="kb-card__icon">🎯</div>
     <div class="kb-card__title">方法体系<span class="kb-card__count">{method_count} 篇</span></div>
@@ -1194,6 +1200,254 @@ def build_root_index():
 </div>'''
     write_text(out_path, page_template(
         title="首页", prefix="", body_inner=body))
+
+
+# ---------------------------------------------------------------- 思维导图
+# 数据源：卡片 md 的「关联卡片」段互链（人工维护）+ 元信息表；
+# 产物：assets/kb-maps.js（树+图数据）与 思维导图/ 专区页面（hub + 7棵知识树 + 全库关联图谱）
+# 渲染：assets/echarts.min.js（已本地化，避免 CDN 在国内不可达）
+
+_MAP_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+?\.md)\)")
+
+
+def collect_map_data():
+    """提取全部卡片的知识树与关联图谱数据。cardId 与进度系统一致（md 路径去后缀）。"""
+    card_dirs = []
+    for subject in SUBJECTS:
+        for dim in DIMS:
+            d = ROOT / subject / dim
+            if d.exists():
+                card_dirs += [(subject, dim, p) for p in list_cards(d)]
+    for cat in METHOD_CATS:
+        d = ROOT / "方法" / cat
+        if d.exists():
+            card_dirs += [("方法", cat, p) for p in list_cards(d)]
+    card_dirs += [("方法", "通用方法", p) for p in (ROOT / "方法").glob("*.md")
+                  if not p.name.startswith("索引_")]
+
+    nodes, targets_by_id = [], {}
+    for subject, dim, p in card_dirs:
+        card_id = p.relative_to(ROOT).as_posix()[:-3]
+        text = read_text(p)
+        meta = parse_md_meta(p)
+        targets = []
+        m = re.search(r"##\s*关联卡片(.*?)(?=\n##\s|\Z)", text, re.S)
+        if m:
+            for _label, href in _MAP_LINK_RE.findall(m.group(1)):
+                t = (p.parent / href).resolve()
+                try:
+                    t.relative_to(ROOT)
+                except ValueError:
+                    continue
+                targets.append(t.relative_to(ROOT).as_posix()[:-3])
+        nodes.append({
+            "id": card_id,
+            "name": md_title(p),
+            "subject": subject,
+            "dim": dim,
+            "status": meta.get("状态", ""),
+            "diff": meta.get("难度", ""),
+            "phase": meta.get("时间标签", ""),
+        })
+        targets_by_id[card_id] = targets
+
+    id_set = {n["id"] for n in nodes}
+    links, degree = [], {}
+    for n in nodes:
+        for t in targets_by_id[n["id"]]:
+            if t in id_set and t != n["id"]:
+                links.append({"source": n["id"], "target": t})
+                degree[n["id"]] = degree.get(n["id"], 0) + 1
+                degree[t] = degree.get(t, 0) + 1
+
+    categories = SUBJECTS + ["方法"]
+    cat_idx = {s: i for i, s in enumerate(categories)}
+    graph_nodes = []
+    for n in nodes:
+        deg = degree.get(n["id"], 0)
+        graph_nodes.append({
+            "id": n["id"], "name": n["name"], "category": cat_idx[n["subject"]],
+            "symbolSize": 7 + min(deg, 18), "value": deg,
+            "href": n["id"] + ".html",
+        })
+
+    # 知识树：科目 → 维度 → 卡片
+    trees = {}
+    for subject in categories:
+        root = {"name": subject, "children": {}}
+        for n in nodes:
+            if n["subject"] != subject:
+                continue
+            leaf = {"name": n["name"], "href": n["id"] + ".html",
+                    "diff": n["diff"], "status": n["status"], "phase": n["phase"]}
+            root["children"].setdefault(n["dim"], []).append(leaf)
+        root["children"] = [{"name": dim, "collapsed": False,
+                             "children": leaves}
+                            for dim, leaves in root["children"].items()]
+        trees[subject] = root
+
+    return {
+        "trees": trees,
+        "graph": {"nodes": graph_nodes, "links": links, "categories": categories},
+        "meta": {"nodeCount": len(nodes), "linkCount": len(links)},
+    }
+
+
+_MAP_TREE_JS = """
+(function () {
+  var el = document.getElementById('kb-map');
+  if (!el || typeof echarts === 'undefined' || !window.KB_MAPS) return;
+  var tree = window.KB_MAPS.trees['__SUBJECT__'];
+  var chart = echarts.init(el);
+  chart.setOption({
+    tooltip: { trigger: 'item', formatter: function (p) {
+      var d = p.data || {}, s = d.name;
+      if (d.diff) s += '<br/>难度：' + d.diff;
+      if (d.status) s += '<br/>状态：' + d.status;
+      if (d.phase) s += '<br/>' + d.phase;
+      if (d.href) s += '<br/><i>单击打开卡片</i>';
+      return s;
+    } },
+    series: [{ type: 'tree', data: [tree], left: '4%', right: '18%', top: '4%', bottom: '4%',
+      symbol: 'circle', symbolSize: 9, roam: true,
+      expandAndCollapse: true, initialTreeDepth: 2,
+      itemStyle: { color: '#2f4a87', borderColor: '#fff', borderWidth: 1 },
+      lineStyle: { color: '#c9c4b8' },
+      label: { position: 'left', verticalAlign: 'middle', align: 'right',
+               fontSize: 13, color: '#23262c' },
+      leaves: { label: { position: 'right', verticalAlign: 'middle', align: 'left' },
+                itemStyle: { color: '#8b5cf6' } },
+      animationDuration: 260 }]
+  });
+  chart.on('click', function (p) {
+    if (p.data && p.data.href) location.href = '__PREFIX__' + p.data.href;
+  });
+  window.addEventListener('resize', function () { chart.resize(); });
+})();
+"""
+
+_MAP_GRAPH_JS = """
+(function () {
+  var el = document.getElementById('kb-map');
+  if (!el || typeof echarts === 'undefined' || !window.KB_MAPS) return;
+  var g = window.KB_MAPS.graph;
+  var chart = echarts.init(el);
+  chart.setOption({
+    tooltip: { trigger: 'item', formatter: function (p) {
+      if (p.dataType === 'edge') {
+        return p.data.source.split('/').pop() + '<br/>⇄<br/>' + p.data.target.split('/').pop();
+      }
+      var d = p.data || {};
+      return '<b>' + d.name + '</b><br/>关联卡片：' + d.value + ' 张<br/>单击打开卡片';
+    } },
+    legend: [{ data: g.categories, top: 6, selectedMode: 'multiple',
+               textStyle: { fontSize: 12 } }],
+    series: [{ type: 'graph', layout: 'force', roam: true, draggable: true,
+      categories: g.categories.map(function (s) { return { name: s }; }),
+      data: g.nodes, links: g.links,
+      force: { repulsion: 95, edgeLength: [14, 70], gravity: 0.10 },
+      label: { show: false },
+      emphasis: { focus: 'adjacency',
+                  label: { show: true, fontSize: 12, color: '#23262c' } },
+      labelLayout: { hideOverlap: true },
+      lineStyle: { color: 'source', curveness: 0.12, opacity: 0.32, width: 1 },
+      itemStyle: { borderColor: '#fff', borderWidth: 0.6 },
+      animationDuration: 400 }]
+  });
+  chart.on('click', function (p) {
+    if (p.dataType === 'node' && p.data && p.data.href) {
+      location.href = '__PREFIX__' + p.data.href;
+    }
+  });
+  window.__kbMap = chart;  // 调试/维护钩子：echarts 实例
+  window.addEventListener('resize', function () { chart.resize(); });
+})();
+"""
+
+
+def build_mindmaps():
+    """生成 assets/kb-maps.js + 思维导图/ 专区（hub、7棵知识树、全库关联图谱）"""
+    data = collect_map_data()
+    (ROOT / "assets" / "kb-maps.js").write_text(
+        "window.KB_MAPS = " + json.dumps(data, ensure_ascii=False) + ";\n",
+        encoding="utf-8")
+
+    mdir = ROOT / "思维导图"
+    mdir.mkdir(exist_ok=True)
+
+    # ---- hub ----
+    tree_cards = []
+    for subject in data["graph"]["categories"]:
+        icon = SUBJECT_ICONS.get(subject, "🎯")
+        n = sum(len(d["children"]) for d in data["trees"][subject]["children"])
+        tree_cards.append(
+            f'<a class="kb-card" href="知识树_{subject}.html" '
+            f'style="--card-accent:{SUBJECT_COLORS.get(subject, "#5562b0")}">\n'
+            f'  <div class="kb-card__icon">{icon}</div>\n'
+            f'  <div class="kb-card__title">{subject}知识树<span class="kb-card__count">{n} 卡</span></div>\n'
+            f'  <div class="kb-card__meta">科目 → 维度 → 卡片，可折叠展开</div>\n'
+            f'</a>')
+    body = f'''<div class="kb-wrap">
+{breadcrumb_html([("首页", "../index.html"), ("思维导图", None)])}
+<h1 class="kb-title">🧭 思维导图</h1>
+<p class="kb-section-sub">两种视角看全库 {data["meta"]["nodeCount"]} 张卡片、{data["meta"]["linkCount"]} 条关联：结构看「知识怎么组织」，图谱看「知识怎么互相勾连」。</p>
+
+<h2 class="kb-section-title">🕸 全库关联图谱</h2>
+<p class="kb-section-sub">每个圆点是一张卡片，连线来自卡片间的「关联卡片」互链。悬停一张卡，与它相关的卡片会一起点亮——单击直接打开卡片。</p>
+<div class="kb-grid kb-grid--duo">
+  <a class="kb-card" href="关联图谱.html" style="--card-accent:#5562b0">
+    <div class="kb-card__icon">🕸</div>
+    <div class="kb-card__title">关联图谱<span class="kb-card__count">{data["meta"]["nodeCount"]} 节点 · {data["meta"]["linkCount"]} 连线</span></div>
+    <div class="kb-card__meta">按科目着色 · 悬停点亮相邻 · 图例筛选科目 · 单击打开卡片</div>
+  </a>
+</div>
+
+<h2 class="kb-section-title">🌲 六科知识树</h2>
+<div class="kb-grid kb-grid--wide">
+{''.join(tree_cards)}
+</div>
+
+{footer_html()}
+</div>'''
+    write_text(mdir / "index.html", page_template(
+        title="思维导图", prefix="../", body_inner=body, subject="思维导图"))
+
+    # ---- 知识树页（六科 + 方法） ----
+    for subject in data["graph"]["categories"]:
+        head = (f'<script src="../assets/echarts.min.js"></script>\n'
+                f'<script src="../assets/kb-maps.js"></script>')
+        js = _MAP_TREE_JS.replace("__SUBJECT__", subject).replace("__PREFIX__", "../")
+        body = f'''<div class="kb-wrap">
+{breadcrumb_html([("首页", "../index.html"), ("思维导图", "./index.html"), (f"知识树 · {subject}", None)])}
+<h1 class="kb-title">{SUBJECT_ICONS.get(subject, "🎯")} {subject}知识树</h1>
+<p class="kb-section-sub">单击展开/折叠分支；叶子节点是卡片，单击打开；空白处拖拽平移、滚轮缩放。</p>
+<div class="kb-map" id="kb-map"></div>
+<script>
+{js}
+</script>
+{footer_html()}
+</div>'''
+        write_text(mdir / f"知识树_{subject}.html", page_template(
+            title=f"知识树 · {subject}", prefix="../", body_inner=body,
+            subject="思维导图", head_extra=head))
+
+    # ---- 关联图谱页 ----
+    head = ('<script src="../assets/echarts.min.js"></script>\n'
+            '<script src="../assets/kb-maps.js"></script>')
+    js = _MAP_GRAPH_JS.replace("__PREFIX__", "../")
+    body = f'''<div class="kb-wrap">
+{breadcrumb_html([("首页", "../index.html"), ("思维导图", "./index.html"), ("关联图谱", None)])}
+<h1 class="kb-title">🕸 全库关联图谱</h1>
+<p class="kb-section-sub">{data["meta"]["nodeCount"]} 张卡片 · {data["meta"]["linkCount"]} 条互链 · 连线颜色跟随来源科目。悬停点亮相邻卡片，单击打开，顶部图例可按科目筛选，拖拽/滚轮缩放平移。首次打开布局动画约数秒。</p>
+<div class="kb-map" id="kb-map"></div>
+<script>
+{js}
+</script>
+{footer_html()}
+</div>'''
+    write_text(mdir / "关联图谱.html", page_template(
+        title="关联图谱", prefix="../", body_inner=body,
+        subject="思维导图", head_extra=head))
 
 
 # ---------------------------------------------------------------- 假期复习总入口换肤
@@ -1404,6 +1658,9 @@ def main():
         if (ROOT / "英语" / "单词复习" / sub).exists():
             build_vocab_sub_index(sub); index_count += 1
     build_root_index(); index_count += 1
+
+    # ---- 5.5 思维导图（assets/kb-maps.js + 思维导图/ 专区） ----
+    build_mindmaps()
 
     # ---- 5. 假期复习总入口换肤 ----
     reskin_holiday_entry()

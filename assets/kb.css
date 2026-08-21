@@ -35,6 +35,7 @@ body[data-subject="物理"]   { --accent: #4643c8; --accent-soft: #eeedfa; --acc
 body[data-subject="化学"]   { --accent: #c24f0e; --accent-soft: #fbf2ea; --accent-ink: #a0420c; }
 body[data-subject="生物"]   { --accent: #0d7c72; --accent-soft: #edf6f5; --accent-ink: #0a645c; }
 body[data-subject="方法"]   { --accent: #6d3fc0; --accent-soft: #f3effa; --accent-ink: #5a33a2; }
+body[data-subject="思维导图"] { --accent: #5562b0; --accent-soft: #eff0f8; --accent-ink: #46508f; }
 body[data-subject="复盘追踪"] { --accent: #45506a; --accent-soft: #f0f2f6; --accent-ink: #38425a; }
 body[data-subject="图形库"] { --accent: #0d7490; --accent-soft: #edf5f8; --accent-ink: #0a5f77; }
 
@@ -513,6 +514,18 @@ a.kb-chip:hover { background: var(--accent); border-color: var(--accent); color:
 }
 a.kb-btn:hover { filter: brightness(1.12); text-decoration: none; }
 .kb-btn--ghost { background: var(--surface); color: var(--accent-ink); border: 1px solid var(--line-strong); }
+
+/* ---------- 思维导图容器 ---------- */
+.kb-map {
+  width: 100%;
+  height: calc(100vh - 250px);
+  min-height: 460px;
+  margin-top: 14px;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+@media (max-width: 640px) { .kb-map { height: 62vh; min-height: 380px; } }
 
 /* ---------- 页脚 ---------- */
 .kb-footer {

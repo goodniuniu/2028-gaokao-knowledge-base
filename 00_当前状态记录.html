@@ -23,6 +23,7 @@ MathJax = {
   <a class="kb-nav__brand" href="index.html"><span class="kb-nav__dot"></span>📚 2028高考知识库</a>
   <div class="kb-nav__links">
     <a href="index.html">🏠 首页</a>
+    <a href="思维导图/index.html">🧭 思维导图</a>
     <a href="图形库/index.html">🖼️ 图形库</a>
     <a href="复盘追踪/index.html">📊 复盘追踪</a>
   </div>
@@ -291,6 +292,15 @@ MathJax = {
 <li>✅ 发现并修正：<code>index.md</code> 从未驱动首页（首页由模板生成），已删除该僵尸文件；上一轮&quot;index.md加女儿专区入口&quot;实际未上站，本次由 build_root_index 落实</li>
 <li>✅ AGENTS.md 同步：目录结构改为 index.html（模板生成）、统计口径注解更新</li>
 <li>✅ 验证：build 无断链 + MD一致性校验通过 + 浏览器实测（首屏截图视觉确认：墨蓝hero/按钮层次/统计行正常无溢出；四区块DOM结构齐全）；六科卡片链接12条维度入口确认</li>
+</ul>
+<h3>2026-08-21 思维导图专区上线（交接任务当日实施）</h3>
+<ul>
+<li>✅ 新增 <code>思维导图/</code> 专区 9 个页面：hub（两种视角导航）+ 7 棵知识树（六科+方法，科目→维度→卡片，可折叠/拖拽/缩放，叶子单击开卡）+ 全库关联图谱（262 节点 / 1419 条互链，力导向布局，按科目着色，<strong>悬停点亮相邻卡片</strong>——&quot;从知识点细节找关联&quot;的核心交互，单击打开卡片，图例筛科目）</li>
+<li>✅ 数据管线：<code>build_site.py</code> 新增 <code>collect_map_data()</code> + <code>build_mindmaps()</code>——每次构建自动从卡片 md 的「关联卡片」段提取互链、生成 <code>assets/kb-maps.js</code> 并再生全部导图页面（卡片改动自动反映，无手工维护）</li>
+<li>✅ echarts 5.5.0 本地化到 <code>assets/echarts.min.js</code>（约1MB，避免 CDN 在国内不可达）</li>
+<li>✅ 入口：全站导航新增 🧭 思维导图；首页「方法与工具」区新增入口卡；<code>kb.css</code> 新增 <code>.kb-map</code> 容器与主题色（body[data-subject=思维导图]）</li>
+<li>✅ 验证：build 无断链（曾发现树页 ../../ 前缀错误已修）；kb_audit 262 张 0 缺 HTML 不变；浏览器实测——图谱 canvas 渲染+数据 262 节点、知识树 canvas+数学 63 叶、用户实点验证&quot;节点点击→跳转卡片页&quot;链路</li>
+<li>✅ 交接文档 <code>思维导图任务交接.md</code> 已标注完成，留档可删</li>
 </ul>
 <!-- KB-CONTENT-END -->
 </article>
